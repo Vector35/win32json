@@ -6253,6 +6253,76 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"fNDIS_GUID_TO_OID"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"fNDIS_GUID_TO_STATUS"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2
+		,"Attrs":[]
+	}
+	,{
+		"Name":"fNDIS_GUID_ANSI_STRING"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":4
+		,"Attrs":[]
+	}
+	,{
+		"Name":"fNDIS_GUID_UNICODE_STRING"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":8
+		,"Attrs":[]
+	}
+	,{
+		"Name":"fNDIS_GUID_ARRAY"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":16
+		,"Attrs":[]
+	}
+	,{
+		"Name":"fNDIS_GUID_ALLOW_READ"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":32
+		,"Attrs":[]
+	}
+	,{
+		"Name":"fNDIS_GUID_ALLOW_WRITE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":64
+		,"Attrs":[]
+	}
+	,{
+		"Name":"fNDIS_GUID_METHOD"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":128
+		,"Attrs":[]
+	}
+	,{
+		"Name":"fNDIS_GUID_NDIS_RESERVED"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":256
+		,"Attrs":[]
+	}
+	,{
+		"Name":"fNDIS_GUID_SUPPORT_COMMON_HEADER"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":512
+		,"Attrs":[]
+	}
+	,{
 		"Name":"NDIS_PACKET_TYPE_DIRECTED"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -11202,6 +11272,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"DD_NDIS_DEVICE_NAME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"\\Device\\NDIS"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"NDIS_MAXIMUM_PORTS"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -12795,6 +12872,27 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"IHV_VERSION_FUNCTION_NAME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Dot11ExtIhvGetVersionInfo"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"IHV_INIT_FUNCTION_NAME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Dot11ExtIhvInitService"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"IHV_INIT_VS_FUNCTION_NAME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Dot11ExtIhvInitVirtualStation"
 		,"Attrs":[]
 	}
 	,{
@@ -15783,7 +15881,9 @@
 		"Name":"DOT11EXT_ALLOCATE_BUFFER"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -15797,7 +15897,9 @@
 		"Name":"DOT11EXT_FREE_BUFFER"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -15810,7 +15912,9 @@
 		"Name":"DOT11EXT_SET_PROFILE_CUSTOM_USER_DATA"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -15827,7 +15931,9 @@
 		"Name":"DOT11EXT_GET_PROFILE_CUSTOM_USER_DATA"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -15844,7 +15950,9 @@
 		"Name":"DOT11EXT_SET_CURRENT_PROFILE"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -15860,7 +15968,9 @@
 		"Name":"DOT11EXT_SEND_UI_REQUEST"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -15874,7 +15984,9 @@
 		"Name":"DOT11EXT_PRE_ASSOCIATE_COMPLETION"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -15890,7 +16002,9 @@
 		"Name":"DOT11EXT_POST_ASSOCIATE_COMPLETION"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -15907,7 +16021,9 @@
 		"Name":"DOT11EXT_SEND_NOTIFICATION"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -15921,7 +16037,9 @@
 		"Name":"DOT11EXT_SEND_PACKET"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -15937,7 +16055,9 @@
 		"Name":"DOT11EXT_SET_ETHERTYPE_HANDLING"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -15955,7 +16075,9 @@
 		"Name":"DOT11EXT_SET_AUTH_ALGORITHM"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -15969,7 +16091,9 @@
 		"Name":"DOT11EXT_SET_UNICAST_CIPHER_ALGORITHM"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -15983,7 +16107,9 @@
 		"Name":"DOT11EXT_SET_MULTICAST_CIPHER_ALGORITHM"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -15997,7 +16123,9 @@
 		"Name":"DOT11EXT_SET_DEFAULT_KEY"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16012,7 +16140,9 @@
 		"Name":"DOT11EXT_SET_KEY_MAPPING_KEY"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16026,7 +16156,9 @@
 		"Name":"DOT11EXT_SET_DEFAULT_KEY_ID"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16040,7 +16172,9 @@
 		"Name":"DOT11EXT_SET_EXCLUDE_UNENCRYPTED"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16054,7 +16188,9 @@
 		"Name":"DOT11EXT_NIC_SPECIFIC_EXTENSION"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16071,7 +16207,9 @@
 		"Name":"DOT11EXT_ONEX_START"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16085,7 +16223,9 @@
 		"Name":"DOT11EXT_ONEX_STOP"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16098,7 +16238,9 @@
 		"Name":"DOT11EXT_PROCESS_ONEX_PACKET"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16113,7 +16255,9 @@
 		"Name":"DOT11EXT_REQUEST_VIRTUAL_STATION"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16127,7 +16271,9 @@
 		"Name":"DOT11EXT_RELEASE_VIRTUAL_STATION"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16141,7 +16287,9 @@
 		"Name":"DOT11EXT_QUERY_VIRTUAL_STATION_PROPERTIES"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16157,7 +16305,9 @@
 		"Name":"DOT11EXT_SET_VIRTUAL_STATION_AP_PROPERTIES"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16174,7 +16324,9 @@
 		"Name":"DOT11EXTIHV_GET_VERSION_INFO"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16187,7 +16339,9 @@
 		"Name":"DOT11EXTIHV_INIT_SERVICE"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16203,7 +16357,9 @@
 		"Name":"DOT11EXTIHV_INIT_VIRTUAL_STATION"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16217,7 +16373,9 @@
 		"Name":"DOT11EXTIHV_DEINIT_SERVICE"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -16229,7 +16387,9 @@
 		"Name":"DOT11EXTIHV_INIT_ADAPTER"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16244,7 +16404,9 @@
 		"Name":"DOT11EXTIHV_DEINIT_ADAPTER"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -16257,7 +16419,9 @@
 		"Name":"DOT11EXTIHV_PERFORM_PRE_ASSOCIATE"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16276,7 +16440,9 @@
 		"Name":"DOT11EXTIHV_ADAPTER_RESET"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16289,7 +16455,9 @@
 		"Name":"DOT11EXTIHV_PERFORM_POST_ASSOCIATE"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16306,7 +16474,9 @@
 		"Name":"DOT11EXTIHV_STOP_POST_ASSOCIATE"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16321,7 +16491,9 @@
 		"Name":"DOT11EXTIHV_VALIDATE_PROFILE"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16338,7 +16510,9 @@
 		"Name":"DOT11EXTIHV_PERFORM_CAPABILITY_MATCH"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16356,7 +16530,9 @@
 		"Name":"DOT11EXTIHV_CREATE_DISCOVERY_PROFILES"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16374,7 +16550,9 @@
 		"Name":"DOT11EXTIHV_PROCESS_SESSION_CHANGE"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16388,7 +16566,9 @@
 		"Name":"DOT11EXTIHV_RECEIVE_INDICATION"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16404,7 +16584,9 @@
 		"Name":"DOT11EXTIHV_RECEIVE_PACKET"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16419,7 +16601,9 @@
 		"Name":"DOT11EXTIHV_SEND_PACKET_COMPLETION"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16432,7 +16616,9 @@
 		"Name":"DOT11EXTIHV_IS_UI_REQUEST_PENDING"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16446,7 +16632,9 @@
 		"Name":"DOT11EXTIHV_PROCESS_UI_RESPONSE"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16461,7 +16649,9 @@
 		"Name":"DOT11EXTIHV_QUERY_UI_REQUEST"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16476,7 +16666,9 @@
 		"Name":"DOT11EXTIHV_ONEX_INDICATE_RESULT"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16491,7 +16683,9 @@
 		"Name":"DOT11EXTIHV_CONTROL"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]

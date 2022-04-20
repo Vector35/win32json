@@ -2,10 +2,87 @@
 
 "Constants":[
 	{
+		"Name":"IDENTITY_KEYWORD_ASSOCIATED"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"associated"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"IDENTITY_KEYWORD_LOCAL"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"local"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"IDENTITY_KEYWORD_HOMEGROUP"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"homegroup"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"IDENTITY_KEYWORD_CONNECTED"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"connected"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"OID_OAssociatedIdentityProviderObject"
 		,"Type":{"Kind":"Native","Name":"Guid"}
 		,"ValueType":"String"
 		,"Value":"98c5a3dd-db68-4f1a-8d2b-9079cdfeaf61"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"STR_OUT_OF_BOX_EXPERIENCE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"OutOfBoxExperience"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"STR_MODERN_SETTINGS_ADD_USER"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"ModernSettingsAddUser"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"STR_OUT_OF_BOX_UPGRADE_EXPERIENCE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"OutOfBoxUpgradeExperience"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"STR_COMPLETE_ACCOUNT"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"CompleteAccount"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"STR_NTH_USER_FIRST_AUTH"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"NthUserFirstAuth"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"STR_USER_NAME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Username"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"STR_PROPERTY_STORE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"PropertyStore"
 		,"Attrs":[]
 	}
 ]
@@ -53,6 +130,7 @@
 		,"Methods":[
 			{
 				"Name":"IdentityUpdated"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -76,6 +154,7 @@
 		,"Methods":[
 			{
 				"Name":"Begin_IdentityUpdated"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -89,6 +168,7 @@
 			}
 			,{
 				"Name":"Finish_IdentityUpdated"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -110,6 +190,7 @@
 		,"Methods":[
 			{
 				"Name":"GetIdentityEnum"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -120,11 +201,12 @@
 					{"Name":"eIdentityType","Type":{"Kind":"ApiRef","Name":"IDENTITY_TYPE","TargetKind":"Default","Api":"Security.Authentication.Identity.Provider","Parents":[]},"Attrs":["In","Const"]}
 					,{"Name":"pFilterkey","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PROPERTYKEY","TargetKind":"Default","Api":"UI.Shell.PropertiesSystem","Parents":[]}},"Attrs":["In","Optional","Const"]}
 					,{"Name":"pFilterPropVarValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PROPVARIANT","TargetKind":"Default","Api":"System.Com.StructuredStorage","Parents":[]}},"Attrs":["In","Optional","Const"]}
-					,{"Name":"ppIdentityEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppIdentityEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
 				"Name":"Create"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -133,12 +215,13 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"lpszUserName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-					,{"Name":"ppPropertyStore","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPropertyStore","TargetKind":"Com","Api":"UI.Shell.PropertiesSystem","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppPropertyStore","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPropertyStore","TargetKind":"Com","Api":"UI.Shell.PropertiesSystem","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"pKeywordsToAdd","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PROPVARIANT","TargetKind":"Default","Api":"System.Com.StructuredStorage","Parents":[]}},"Attrs":["In","Const"]}
 				]
 			}
 			,{
 				"Name":"Import"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -151,6 +234,7 @@
 			}
 			,{
 				"Name":"Delete"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -164,6 +248,7 @@
 			}
 			,{
 				"Name":"FindByUniqueID"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -172,11 +257,12 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"lpszUniqueID","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-					,{"Name":"ppPropertyStore","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPropertyStore","TargetKind":"Com","Api":"UI.Shell.PropertiesSystem","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppPropertyStore","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPropertyStore","TargetKind":"Com","Api":"UI.Shell.PropertiesSystem","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
 				"Name":"GetProviderPropertyStore"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -184,11 +270,12 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppPropertyStore","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPropertyStore","TargetKind":"Com","Api":"UI.Shell.PropertiesSystem","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppPropertyStore","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPropertyStore","TargetKind":"Com","Api":"UI.Shell.PropertiesSystem","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
 				"Name":"Advise"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -203,6 +290,7 @@
 			}
 			,{
 				"Name":"UnAdvise"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -225,6 +313,7 @@
 		,"Methods":[
 			{
 				"Name":"Begin_GetIdentityEnum"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -239,6 +328,7 @@
 			}
 			,{
 				"Name":"Finish_GetIdentityEnum"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -246,11 +336,12 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppIdentityEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppIdentityEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
 				"Name":"Begin_Create"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -264,6 +355,7 @@
 			}
 			,{
 				"Name":"Finish_Create"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -271,11 +363,12 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppPropertyStore","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPropertyStore","TargetKind":"Com","Api":"UI.Shell.PropertiesSystem","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppPropertyStore","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPropertyStore","TargetKind":"Com","Api":"UI.Shell.PropertiesSystem","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
 				"Name":"Begin_Import"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -288,6 +381,7 @@
 			}
 			,{
 				"Name":"Finish_Import"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -299,6 +393,7 @@
 			}
 			,{
 				"Name":"Begin_Delete"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -312,6 +407,7 @@
 			}
 			,{
 				"Name":"Finish_Delete"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -323,6 +419,7 @@
 			}
 			,{
 				"Name":"Begin_FindByUniqueID"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -335,6 +432,7 @@
 			}
 			,{
 				"Name":"Finish_FindByUniqueID"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -342,11 +440,12 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppPropertyStore","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPropertyStore","TargetKind":"Com","Api":"UI.Shell.PropertiesSystem","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppPropertyStore","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPropertyStore","TargetKind":"Com","Api":"UI.Shell.PropertiesSystem","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
 				"Name":"Begin_GetProviderPropertyStore"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -358,6 +457,7 @@
 			}
 			,{
 				"Name":"Finish_GetProviderPropertyStore"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -365,11 +465,12 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppPropertyStore","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPropertyStore","TargetKind":"Com","Api":"UI.Shell.PropertiesSystem","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppPropertyStore","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPropertyStore","TargetKind":"Com","Api":"UI.Shell.PropertiesSystem","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
 				"Name":"Begin_Advise"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -383,6 +484,7 @@
 			}
 			,{
 				"Name":"Finish_Advise"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -395,6 +497,7 @@
 			}
 			,{
 				"Name":"Begin_UnAdvise"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -407,6 +510,7 @@
 			}
 			,{
 				"Name":"Finish_UnAdvise"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -428,6 +532,7 @@
 		,"Methods":[
 			{
 				"Name":"AssociateIdentity"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -436,11 +541,12 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"hwndParent","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"ppPropertyStore","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPropertyStore","TargetKind":"Com","Api":"UI.Shell.PropertiesSystem","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppPropertyStore","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPropertyStore","TargetKind":"Com","Api":"UI.Shell.PropertiesSystem","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
 				"Name":"DisassociateIdentity"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -454,6 +560,7 @@
 			}
 			,{
 				"Name":"ChangeCredential"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -477,6 +584,7 @@
 		,"Methods":[
 			{
 				"Name":"Begin_AssociateIdentity"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -489,6 +597,7 @@
 			}
 			,{
 				"Name":"Finish_AssociateIdentity"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -496,11 +605,12 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppPropertyStore","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPropertyStore","TargetKind":"Com","Api":"UI.Shell.PropertiesSystem","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppPropertyStore","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPropertyStore","TargetKind":"Com","Api":"UI.Shell.PropertiesSystem","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
 				"Name":"Begin_DisassociateIdentity"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -514,6 +624,7 @@
 			}
 			,{
 				"Name":"Finish_DisassociateIdentity"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -525,6 +636,7 @@
 			}
 			,{
 				"Name":"Begin_ChangeCredential"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -538,6 +650,7 @@
 			}
 			,{
 				"Name":"Finish_ChangeCredential"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -591,6 +704,7 @@
 		,"Methods":[
 			{
 				"Name":"ConnectIdentity"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -604,6 +718,7 @@
 			}
 			,{
 				"Name":"DisconnectIdentity"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -615,6 +730,7 @@
 			}
 			,{
 				"Name":"IsConnected"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -627,6 +743,7 @@
 			}
 			,{
 				"Name":"GetUrl"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -637,11 +754,12 @@
 					{"Name":"Identifier","Type":{"Kind":"ApiRef","Name":"IDENTITY_URL","TargetKind":"Default","Api":"Security.Authentication.Identity.Provider","Parents":[]},"Attrs":["In"]}
 					,{"Name":"Context","Type":{"Kind":"ApiRef","Name":"IBindCtx","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In","Optional"]}
 					,{"Name":"PostData","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
-					,{"Name":"Url","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"Url","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
 				"Name":"GetAccountState"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -664,6 +782,7 @@
 		,"Methods":[
 			{
 				"Name":"Begin_ConnectIdentity"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -677,6 +796,7 @@
 			}
 			,{
 				"Name":"Finish_ConnectIdentity"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -688,6 +808,7 @@
 			}
 			,{
 				"Name":"Begin_DisconnectIdentity"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -699,6 +820,7 @@
 			}
 			,{
 				"Name":"Finish_DisconnectIdentity"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -710,6 +832,7 @@
 			}
 			,{
 				"Name":"Begin_IsConnected"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -721,6 +844,7 @@
 			}
 			,{
 				"Name":"Finish_IsConnected"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -733,6 +857,7 @@
 			}
 			,{
 				"Name":"Begin_GetUrl"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -746,6 +871,7 @@
 			}
 			,{
 				"Name":"Finish_GetUrl"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -754,11 +880,12 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"PostData","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
-					,{"Name":"Url","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"Url","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
 				"Name":"Begin_GetAccountState"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -770,6 +897,7 @@
 			}
 			,{
 				"Name":"Finish_GetAccountState"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -792,6 +920,7 @@
 		,"Methods":[
 			{
 				"Name":"SetIdentityCredential"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -805,6 +934,7 @@
 			}
 			,{
 				"Name":"ValidateIdentityCredential"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -829,6 +959,7 @@
 		,"Methods":[
 			{
 				"Name":"Begin_SetIdentityCredential"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -842,6 +973,7 @@
 			}
 			,{
 				"Name":"Finish_SetIdentityCredential"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -853,6 +985,7 @@
 			}
 			,{
 				"Name":"Begin_ValidateIdentityCredential"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -867,6 +1000,7 @@
 			}
 			,{
 				"Name":"Finish_ValidateIdentityCredential"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -903,6 +1037,7 @@
 		,"Methods":[
 			{
 				"Name":"GetCount"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -915,6 +1050,7 @@
 			}
 			,{
 				"Name":"GetAt"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -924,11 +1060,12 @@
 				,"Params":[
 					{"Name":"dwProvider","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Const"]}
 					,{"Name":"pProvGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Out","Optional"]}
-					,{"Name":"ppIdentityProvider","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppIdentityProvider","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
 				"Name":"AddToCache"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -942,6 +1079,7 @@
 			}
 			,{
 				"Name":"ConvertToSid"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -958,6 +1096,7 @@
 			}
 			,{
 				"Name":"EnumerateIdentities"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -968,11 +1107,12 @@
 					{"Name":"eIdentityType","Type":{"Kind":"ApiRef","Name":"IDENTITY_TYPE","TargetKind":"Default","Api":"Security.Authentication.Identity.Provider","Parents":[]},"Attrs":["In","Const"]}
 					,{"Name":"pFilterkey","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PROPERTYKEY","TargetKind":"Default","Api":"UI.Shell.PropertiesSystem","Parents":[]}},"Attrs":["In","Optional","Const"]}
 					,{"Name":"pFilterPropVarValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PROPVARIANT","TargetKind":"Default","Api":"System.Com.StructuredStorage","Parents":[]}},"Attrs":["In","Optional","Const"]}
-					,{"Name":"ppIdentityEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppIdentityEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
 				"Name":"Reset"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -994,6 +1134,7 @@
 		,"Methods":[
 			{
 				"Name":"Begin_GetCount"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1005,6 +1146,7 @@
 			}
 			,{
 				"Name":"Finish_GetCount"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1017,6 +1159,7 @@
 			}
 			,{
 				"Name":"Begin_GetAt"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1030,6 +1173,7 @@
 			}
 			,{
 				"Name":"Finish_GetAt"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1038,11 +1182,12 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pProvGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Out","Optional"]}
-					,{"Name":"ppIdentityProvider","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppIdentityProvider","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
 				"Name":"Begin_AddToCache"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1056,6 +1201,7 @@
 			}
 			,{
 				"Name":"Finish_AddToCache"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1067,6 +1213,7 @@
 			}
 			,{
 				"Name":"Begin_ConvertToSid"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1082,6 +1229,7 @@
 			}
 			,{
 				"Name":"Finish_ConvertToSid"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1095,6 +1243,7 @@
 			}
 			,{
 				"Name":"Begin_EnumerateIdentities"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1109,6 +1258,7 @@
 			}
 			,{
 				"Name":"Finish_EnumerateIdentities"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1116,11 +1266,12 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppIdentityEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"ppIdentityEnum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IEnumUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
 				"Name":"Begin_Reset"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1132,6 +1283,7 @@
 			}
 			,{
 				"Name":"Finish_Reset"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1153,6 +1305,7 @@
 		,"Methods":[
 			{
 				"Name":"CreateConnectedIdentity"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1167,6 +1320,7 @@
 			}
 			,{
 				"Name":"DeleteConnectedIdentity"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1190,6 +1344,7 @@
 		,"Methods":[
 			{
 				"Name":"Begin_CreateConnectedIdentity"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1204,6 +1359,7 @@
 			}
 			,{
 				"Name":"Finish_CreateConnectedIdentity"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1215,6 +1371,7 @@
 			}
 			,{
 				"Name":"Begin_DeleteConnectedIdentity"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1228,6 +1385,7 @@
 			}
 			,{
 				"Name":"Finish_DeleteConnectedIdentity"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]

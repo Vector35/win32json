@@ -37,6 +37,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"WCN_QUERY_CONSTRAINT_USE_SOFTAP"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"WCN.Discovery.SoftAP"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"WCN_VALUE_DT_CATEGORY_COMPUTER"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -589,6 +596,34 @@
 		,"Value":"c100beca-d33a-4a4b-bf23-bbef4663d017"
 		,"Attrs":[]
 	}
+	,{
+		"Name":"PKEY_WCN_DeviceType_Category"
+		,"Type":{"Kind":"ApiRef","Name":"PROPERTYKEY","TargetKind":"Default","Api":"UI.Shell.PropertiesSystem","Parents":[]}
+		,"ValueType":"PropertyKey"
+		,"Value":{"Fmtid":"88190b8b-4684-11da-a26a-0002b3988e81","Pid":16}
+		,"Attrs":[]
+	}
+	,{
+		"Name":"PKEY_WCN_DeviceType_SubCategoryOUI"
+		,"Type":{"Kind":"ApiRef","Name":"PROPERTYKEY","TargetKind":"Default","Api":"UI.Shell.PropertiesSystem","Parents":[]}
+		,"ValueType":"PropertyKey"
+		,"Value":{"Fmtid":"88190b8b-4684-11da-a26a-0002b3988e81","Pid":17}
+		,"Attrs":[]
+	}
+	,{
+		"Name":"PKEY_WCN_DeviceType_SubCategory"
+		,"Type":{"Kind":"ApiRef","Name":"PROPERTYKEY","TargetKind":"Default","Api":"UI.Shell.PropertiesSystem","Parents":[]}
+		,"ValueType":"PropertyKey"
+		,"Value":{"Fmtid":"88190b8b-4684-11da-a26a-0002b3988e81","Pid":18}
+		,"Attrs":[]
+	}
+	,{
+		"Name":"PKEY_WCN_SSID"
+		,"Type":{"Kind":"ApiRef","Name":"PROPERTYKEY","TargetKind":"Default","Api":"UI.Shell.PropertiesSystem","Parents":[]}
+		,"ValueType":"PropertyKey"
+		,"Value":{"Fmtid":"88190b8b-4684-11da-a26a-0002b3988e81","Pid":32}
+		,"Attrs":[]
+	}
 ]
 
 ,"Types":[
@@ -1029,6 +1064,7 @@
 		,"Methods":[
 			{
 				"Name":"SetPassword"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1043,6 +1079,7 @@
 			}
 			,{
 				"Name":"Connect"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1055,6 +1092,7 @@
 			}
 			,{
 				"Name":"GetAttribute"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1070,6 +1108,7 @@
 			}
 			,{
 				"Name":"GetIntegerAttribute"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1083,6 +1122,7 @@
 			}
 			,{
 				"Name":"GetStringAttribute"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1097,6 +1137,7 @@
 			}
 			,{
 				"Name":"GetNetworkProfile"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1110,6 +1151,7 @@
 			}
 			,{
 				"Name":"SetNetworkProfile"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1122,6 +1164,7 @@
 			}
 			,{
 				"Name":"GetVendorExtension"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1137,6 +1180,7 @@
 			}
 			,{
 				"Name":"SetVendorExtension"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1151,6 +1195,7 @@
 			}
 			,{
 				"Name":"Unadvise"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1162,6 +1207,7 @@
 			}
 			,{
 				"Name":"SetNFCPasswordParams"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1191,6 +1237,7 @@
 		,"Methods":[
 			{
 				"Name":"ConnectSucceeded"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1202,6 +1249,7 @@
 			}
 			,{
 				"Name":"ConnectFailed"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]

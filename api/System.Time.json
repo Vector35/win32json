@@ -2,6 +2,48 @@
 
 "Constants":[
 	{
+		"Name":"wszW32TimeRegKeyTimeProviders"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"System\\CurrentControlSet\\Services\\W32Time\\TimeProviders"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"wszW32TimeRegKeyPolicyTimeProviders"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Software\\Policies\\Microsoft\\W32Time\\TimeProviders"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"wszW32TimeRegValueEnabled"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Enabled"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"wszW32TimeRegValueDllName"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"DllName"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"wszW32TimeRegValueInputProvider"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"InputProvider"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"wszW32TimeRegValueMetaDataProvider"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MetaDataProvider"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"TSF_Hardware"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -77,6 +119,7 @@
 ,"Functions":[
 	{
 		"Name":"SystemTimeToTzSpecificLocalTime"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -92,6 +135,7 @@
 	}
 	,{
 		"Name":"TzSpecificLocalTimeToSystemTime"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -107,6 +151,7 @@
 	}
 	,{
 		"Name":"FileTimeToSystemTime"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -121,6 +166,7 @@
 	}
 	,{
 		"Name":"SystemTimeToFileTime"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -135,6 +181,7 @@
 	}
 	,{
 		"Name":"GetTimeZoneInformation"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -148,6 +195,7 @@
 	}
 	,{
 		"Name":"SetTimeZoneInformation"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -161,6 +209,7 @@
 	}
 	,{
 		"Name":"SetDynamicTimeZoneInformation"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -174,6 +223,7 @@
 	}
 	,{
 		"Name":"GetDynamicTimeZoneInformation"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -187,6 +237,7 @@
 	}
 	,{
 		"Name":"GetTimeZoneInformationForYear"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -202,6 +253,7 @@
 	}
 	,{
 		"Name":"EnumDynamicTimeZoneInformation"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"ADVAPI32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -216,6 +268,7 @@
 	}
 	,{
 		"Name":"GetDynamicTimeZoneInformationEffectiveYears"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"ADVAPI32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -231,6 +284,7 @@
 	}
 	,{
 		"Name":"SystemTimeToTzSpecificLocalTimeEx"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -246,6 +300,7 @@
 	}
 	,{
 		"Name":"TzSpecificLocalTimeToSystemTimeEx"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -261,6 +316,7 @@
 	}
 	,{
 		"Name":"LocalFileTimeToLocalSystemTime"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -276,6 +332,7 @@
 	}
 	,{
 		"Name":"LocalSystemTimeToLocalFileTime"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}

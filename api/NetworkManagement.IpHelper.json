@@ -3281,20 +3281,6 @@
 
 ,"Types":[
 	{
-		"Name":"ADDRESS_FAMILY"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Enum"
-		,"Flags":false
-		,"Scoped":false
-		,"Values":[
-			{"Name":"AF_INET","Value":2}
-			,{"Name":"AF_INET6","Value":23}
-			,{"Name":"AF_UNSPEC","Value":0}
-		]
-		,"IntegerBase":"UInt32"
-	}
-	,{
 		"Name":"GET_ADAPTERS_ADDRESSES_FLAGS"
 		,"Architectures":[]
 		,"Platform":null
@@ -4127,7 +4113,9 @@
 		"Name":"PIPINTERFACE_CHANGE_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -4194,7 +4182,9 @@
 		"Name":"PUNICAST_IPADDRESS_CHANGE_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -4209,7 +4199,9 @@
 		"Name":"PSTABLE_UNICAST_IPADDRESS_TABLE_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -4338,7 +4330,9 @@
 		"Name":"PIPFORWARD_CHANGE_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -4480,7 +4474,9 @@
 		"Name":"PTEREDO_PORT_CHANGE_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -4488,7 +4484,7 @@
 		,"Params":[
 			{"Name":"CallerContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
 			,{"Name":"Port","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":["In"]}
-			,{"Name":"NotificationType","Type":{"Kind":"ApiRef","Name":"MIB_NOTIFICATION_TYPE","TargetKind":"Default","Api":"NetworkManagement.IpHelper","Parents":[]},"Attrs":["In","Out"]}
+			,{"Name":"NotificationType","Type":{"Kind":"ApiRef","Name":"MIB_NOTIFICATION_TYPE","TargetKind":"Default","Api":"NetworkManagement.IpHelper","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -4651,7 +4647,9 @@
 		"Name":"PNETWORK_CONNECTIVITY_HINT_CHANGE_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -7645,7 +7643,9 @@
 		"Name":"PINTERFACE_TIMESTAMP_CONFIG_CHANGE_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -7831,6 +7831,7 @@
 ,"Functions":[
 	{
 		"Name":"GetIfEntry2"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7844,6 +7845,7 @@
 	}
 	,{
 		"Name":"GetIfEntry2Ex"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7858,6 +7860,7 @@
 	}
 	,{
 		"Name":"GetIfTable2"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7871,6 +7874,7 @@
 	}
 	,{
 		"Name":"GetIfTable2Ex"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7885,6 +7889,7 @@
 	}
 	,{
 		"Name":"GetIfStackTable"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7898,6 +7903,7 @@
 	}
 	,{
 		"Name":"GetInvertedIfStackTable"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7911,6 +7917,7 @@
 	}
 	,{
 		"Name":"GetIpInterfaceEntry"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7924,6 +7931,7 @@
 	}
 	,{
 		"Name":"GetIpInterfaceTable"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7938,6 +7946,7 @@
 	}
 	,{
 		"Name":"InitializeIpInterfaceEntry"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -7951,6 +7960,7 @@
 	}
 	,{
 		"Name":"NotifyIpInterfaceChange"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7968,6 +7978,7 @@
 	}
 	,{
 		"Name":"SetIpInterfaceEntry"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7981,6 +7992,7 @@
 	}
 	,{
 		"Name":"GetIpNetworkConnectionBandwidthEstimates"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7996,6 +8008,7 @@
 	}
 	,{
 		"Name":"CreateUnicastIpAddressEntry"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8009,6 +8022,7 @@
 	}
 	,{
 		"Name":"DeleteUnicastIpAddressEntry"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8022,6 +8036,7 @@
 	}
 	,{
 		"Name":"GetUnicastIpAddressEntry"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8035,6 +8050,7 @@
 	}
 	,{
 		"Name":"GetUnicastIpAddressTable"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8049,6 +8065,7 @@
 	}
 	,{
 		"Name":"InitializeUnicastIpAddressEntry"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -8062,6 +8079,7 @@
 	}
 	,{
 		"Name":"NotifyUnicastIpAddressChange"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8079,6 +8097,7 @@
 	}
 	,{
 		"Name":"NotifyStableUnicastIpAddressTable"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8096,6 +8115,7 @@
 	}
 	,{
 		"Name":"SetUnicastIpAddressEntry"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8109,6 +8129,7 @@
 	}
 	,{
 		"Name":"CreateAnycastIpAddressEntry"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8122,6 +8143,7 @@
 	}
 	,{
 		"Name":"DeleteAnycastIpAddressEntry"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8135,6 +8157,7 @@
 	}
 	,{
 		"Name":"GetAnycastIpAddressEntry"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8148,6 +8171,7 @@
 	}
 	,{
 		"Name":"GetAnycastIpAddressTable"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8162,6 +8186,7 @@
 	}
 	,{
 		"Name":"GetMulticastIpAddressEntry"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8175,6 +8200,7 @@
 	}
 	,{
 		"Name":"GetMulticastIpAddressTable"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8189,6 +8215,7 @@
 	}
 	,{
 		"Name":"CreateIpForwardEntry2"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8202,6 +8229,7 @@
 	}
 	,{
 		"Name":"DeleteIpForwardEntry2"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8215,6 +8243,7 @@
 	}
 	,{
 		"Name":"GetBestRoute2"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8234,6 +8263,7 @@
 	}
 	,{
 		"Name":"GetIpForwardEntry2"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8247,6 +8277,7 @@
 	}
 	,{
 		"Name":"GetIpForwardTable2"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8261,6 +8292,7 @@
 	}
 	,{
 		"Name":"InitializeIpForwardEntry"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -8274,6 +8306,7 @@
 	}
 	,{
 		"Name":"NotifyRouteChange2"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8291,6 +8324,7 @@
 	}
 	,{
 		"Name":"SetIpForwardEntry2"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8304,6 +8338,7 @@
 	}
 	,{
 		"Name":"FlushIpPathTable"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8317,6 +8352,7 @@
 	}
 	,{
 		"Name":"GetIpPathEntry"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8330,6 +8366,7 @@
 	}
 	,{
 		"Name":"GetIpPathTable"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8344,6 +8381,7 @@
 	}
 	,{
 		"Name":"CreateIpNetEntry2"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8357,6 +8395,7 @@
 	}
 	,{
 		"Name":"DeleteIpNetEntry2"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8370,6 +8409,7 @@
 	}
 	,{
 		"Name":"FlushIpNetTable2"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8384,6 +8424,7 @@
 	}
 	,{
 		"Name":"GetIpNetEntry2"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8397,6 +8438,7 @@
 	}
 	,{
 		"Name":"GetIpNetTable2"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8411,6 +8453,7 @@
 	}
 	,{
 		"Name":"ResolveIpNetEntry2"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8425,6 +8468,7 @@
 	}
 	,{
 		"Name":"SetIpNetEntry2"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8438,6 +8482,7 @@
 	}
 	,{
 		"Name":"NotifyTeredoPortChange"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8454,6 +8499,7 @@
 	}
 	,{
 		"Name":"GetTeredoPort"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8467,6 +8513,7 @@
 	}
 	,{
 		"Name":"CancelMibChangeNotify2"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8480,6 +8527,7 @@
 	}
 	,{
 		"Name":"FreeMibTable"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -8493,6 +8541,7 @@
 	}
 	,{
 		"Name":"CreateSortedAddressPairs"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8512,6 +8561,7 @@
 	}
 	,{
 		"Name":"ConvertCompartmentGuidToId"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8526,6 +8576,7 @@
 	}
 	,{
 		"Name":"ConvertCompartmentIdToGuid"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8540,6 +8591,7 @@
 	}
 	,{
 		"Name":"ConvertInterfaceNameToLuidA"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8554,6 +8606,7 @@
 	}
 	,{
 		"Name":"ConvertInterfaceNameToLuidW"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8568,6 +8621,7 @@
 	}
 	,{
 		"Name":"ConvertInterfaceLuidToNameA"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8583,6 +8637,7 @@
 	}
 	,{
 		"Name":"ConvertInterfaceLuidToNameW"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8598,6 +8653,7 @@
 	}
 	,{
 		"Name":"ConvertInterfaceLuidToIndex"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8612,6 +8668,7 @@
 	}
 	,{
 		"Name":"ConvertInterfaceIndexToLuid"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8626,6 +8683,7 @@
 	}
 	,{
 		"Name":"ConvertInterfaceLuidToAlias"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8641,6 +8699,7 @@
 	}
 	,{
 		"Name":"ConvertInterfaceAliasToLuid"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8655,6 +8714,7 @@
 	}
 	,{
 		"Name":"ConvertInterfaceLuidToGuid"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8669,6 +8729,7 @@
 	}
 	,{
 		"Name":"ConvertInterfaceGuidToLuid"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8683,6 +8744,7 @@
 	}
 	,{
 		"Name":"if_nametoindex"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -8696,6 +8758,7 @@
 	}
 	,{
 		"Name":"if_indextoname"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8710,6 +8773,7 @@
 	}
 	,{
 		"Name":"GetCurrentThreadCompartmentId"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -8722,6 +8786,7 @@
 	}
 	,{
 		"Name":"SetCurrentThreadCompartmentId"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8735,6 +8800,7 @@
 	}
 	,{
 		"Name":"GetCurrentThreadCompartmentScope"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -8749,6 +8815,7 @@
 	}
 	,{
 		"Name":"SetCurrentThreadCompartmentScope"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8762,6 +8829,7 @@
 	}
 	,{
 		"Name":"GetJobCompartmentId"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -8775,6 +8843,7 @@
 	}
 	,{
 		"Name":"SetJobCompartmentId"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8789,6 +8858,7 @@
 	}
 	,{
 		"Name":"GetSessionCompartmentId"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -8802,6 +8872,7 @@
 	}
 	,{
 		"Name":"SetSessionCompartmentId"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8816,6 +8887,7 @@
 	}
 	,{
 		"Name":"GetDefaultCompartmentId"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -8828,6 +8900,7 @@
 	}
 	,{
 		"Name":"GetNetworkInformation"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8845,6 +8918,7 @@
 	}
 	,{
 		"Name":"SetNetworkInformation"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8860,6 +8934,7 @@
 	}
 	,{
 		"Name":"ConvertLengthToIpv4Mask"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8874,6 +8949,7 @@
 	}
 	,{
 		"Name":"ConvertIpv4MaskToLength"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8888,6 +8964,7 @@
 	}
 	,{
 		"Name":"GetDnsSettings"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8901,6 +8978,7 @@
 	}
 	,{
 		"Name":"FreeDnsSettings"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -8914,6 +8992,7 @@
 	}
 	,{
 		"Name":"SetDnsSettings"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8927,6 +9006,7 @@
 	}
 	,{
 		"Name":"GetInterfaceDnsSettings"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8941,6 +9021,7 @@
 	}
 	,{
 		"Name":"FreeInterfaceDnsSettings"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -8954,6 +9035,7 @@
 	}
 	,{
 		"Name":"SetInterfaceDnsSettings"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8968,6 +9050,7 @@
 	}
 	,{
 		"Name":"GetNetworkConnectivityHint"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8981,6 +9064,7 @@
 	}
 	,{
 		"Name":"GetNetworkConnectivityHintForInterface"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8995,6 +9079,7 @@
 	}
 	,{
 		"Name":"NotifyNetworkConnectivityHintChange"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9011,6 +9096,7 @@
 	}
 	,{
 		"Name":"IcmpCreateFile"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"IcmpHandle","TargetKind":"Default","Api":"NetworkManagement.IpHelper","Parents":[]}
@@ -9023,6 +9109,7 @@
 	}
 	,{
 		"Name":"Icmp6CreateFile"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"IcmpHandle","TargetKind":"Default","Api":"NetworkManagement.IpHelper","Parents":[]}
@@ -9035,6 +9122,7 @@
 	}
 	,{
 		"Name":"IcmpCloseHandle"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9048,6 +9136,7 @@
 	}
 	,{
 		"Name":"IcmpSendEcho"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9068,6 +9157,7 @@
 	}
 	,{
 		"Name":"IcmpSendEcho2"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9091,6 +9181,7 @@
 	}
 	,{
 		"Name":"IcmpSendEcho2Ex"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9115,6 +9206,7 @@
 	}
 	,{
 		"Name":"Icmp6SendEcho2"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9139,6 +9231,7 @@
 	}
 	,{
 		"Name":"IcmpParseReplies"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9153,6 +9246,7 @@
 	}
 	,{
 		"Name":"Icmp6ParseReplies"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9167,6 +9261,7 @@
 	}
 	,{
 		"Name":"GetNumberOfInterfaces"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9180,6 +9275,7 @@
 	}
 	,{
 		"Name":"GetIfEntry"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9193,6 +9289,7 @@
 	}
 	,{
 		"Name":"GetIfTable"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9208,6 +9305,7 @@
 	}
 	,{
 		"Name":"GetIpAddrTable"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9223,6 +9321,7 @@
 	}
 	,{
 		"Name":"GetIpNetTable"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9238,6 +9337,7 @@
 	}
 	,{
 		"Name":"GetIpForwardTable"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9253,6 +9353,7 @@
 	}
 	,{
 		"Name":"GetTcpTable"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9268,6 +9369,7 @@
 	}
 	,{
 		"Name":"GetExtendedTcpTable"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9286,6 +9388,7 @@
 	}
 	,{
 		"Name":"GetOwnerModuleFromTcpEntry"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9302,6 +9405,7 @@
 	}
 	,{
 		"Name":"GetUdpTable"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9317,6 +9421,7 @@
 	}
 	,{
 		"Name":"GetExtendedUdpTable"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9335,6 +9440,7 @@
 	}
 	,{
 		"Name":"GetOwnerModuleFromUdpEntry"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9351,6 +9457,7 @@
 	}
 	,{
 		"Name":"GetTcpTable2"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9366,6 +9473,7 @@
 	}
 	,{
 		"Name":"GetTcp6Table"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9381,6 +9489,7 @@
 	}
 	,{
 		"Name":"GetTcp6Table2"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9396,6 +9505,7 @@
 	}
 	,{
 		"Name":"GetPerTcpConnectionEStats"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9419,6 +9529,7 @@
 	}
 	,{
 		"Name":"SetPerTcpConnectionEStats"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9437,6 +9548,7 @@
 	}
 	,{
 		"Name":"GetPerTcp6ConnectionEStats"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9460,6 +9572,7 @@
 	}
 	,{
 		"Name":"SetPerTcp6ConnectionEStats"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9478,6 +9591,7 @@
 	}
 	,{
 		"Name":"GetOwnerModuleFromTcp6Entry"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9494,6 +9608,7 @@
 	}
 	,{
 		"Name":"GetUdp6Table"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9509,6 +9624,7 @@
 	}
 	,{
 		"Name":"GetOwnerModuleFromUdp6Entry"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9525,6 +9641,7 @@
 	}
 	,{
 		"Name":"GetOwnerModuleFromPidAndInfo"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9542,6 +9659,7 @@
 	}
 	,{
 		"Name":"GetIpStatistics"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9555,6 +9673,7 @@
 	}
 	,{
 		"Name":"GetIcmpStatistics"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9568,6 +9687,7 @@
 	}
 	,{
 		"Name":"GetTcpStatistics"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9581,6 +9701,7 @@
 	}
 	,{
 		"Name":"GetUdpStatistics"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9594,6 +9715,7 @@
 	}
 	,{
 		"Name":"SetIpStatisticsEx"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9608,6 +9730,7 @@
 	}
 	,{
 		"Name":"GetIpStatisticsEx"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9617,11 +9740,12 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"Statistics","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MIB_IPSTATS_LH","TargetKind":"Default","Api":"NetworkManagement.IpHelper","Parents":[]}},"Attrs":["Out"]}
-			,{"Name":"Family","Type":{"Kind":"ApiRef","Name":"ADDRESS_FAMILY","TargetKind":"Default","Api":"NetworkManagement.IpHelper","Parents":[]},"Attrs":["In"]}
+			,{"Name":"Family","Type":{"Kind":"ApiRef","Name":"ADDRESS_FAMILY","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"GetIcmpStatisticsEx"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9636,6 +9760,7 @@
 	}
 	,{
 		"Name":"GetTcpStatisticsEx"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9645,11 +9770,12 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"Statistics","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MIB_TCPSTATS_LH","TargetKind":"Default","Api":"NetworkManagement.IpHelper","Parents":[]}},"Attrs":["Out"]}
-			,{"Name":"Family","Type":{"Kind":"ApiRef","Name":"ADDRESS_FAMILY","TargetKind":"Default","Api":"NetworkManagement.IpHelper","Parents":[]},"Attrs":["In"]}
+			,{"Name":"Family","Type":{"Kind":"ApiRef","Name":"ADDRESS_FAMILY","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"GetUdpStatisticsEx"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9659,11 +9785,12 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"Statistics","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MIB_UDPSTATS","TargetKind":"Default","Api":"NetworkManagement.IpHelper","Parents":[]}},"Attrs":["Out"]}
-			,{"Name":"Family","Type":{"Kind":"ApiRef","Name":"ADDRESS_FAMILY","TargetKind":"Default","Api":"NetworkManagement.IpHelper","Parents":[]},"Attrs":["In"]}
+			,{"Name":"Family","Type":{"Kind":"ApiRef","Name":"ADDRESS_FAMILY","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"GetTcpStatisticsEx2"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9673,11 +9800,12 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"Statistics","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MIB_TCPSTATS2","TargetKind":"Default","Api":"NetworkManagement.IpHelper","Parents":[]}},"Attrs":["Out"]}
-			,{"Name":"Family","Type":{"Kind":"ApiRef","Name":"ADDRESS_FAMILY","TargetKind":"Default","Api":"NetworkManagement.IpHelper","Parents":[]},"Attrs":["In"]}
+			,{"Name":"Family","Type":{"Kind":"ApiRef","Name":"ADDRESS_FAMILY","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"GetUdpStatisticsEx2"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9687,11 +9815,12 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"Statistics","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MIB_UDPSTATS2","TargetKind":"Default","Api":"NetworkManagement.IpHelper","Parents":[]}},"Attrs":["Out"]}
-			,{"Name":"Family","Type":{"Kind":"ApiRef","Name":"ADDRESS_FAMILY","TargetKind":"Default","Api":"NetworkManagement.IpHelper","Parents":[]},"Attrs":["In"]}
+			,{"Name":"Family","Type":{"Kind":"ApiRef","Name":"ADDRESS_FAMILY","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"SetIfEntry"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9705,6 +9834,7 @@
 	}
 	,{
 		"Name":"CreateIpForwardEntry"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9718,6 +9848,7 @@
 	}
 	,{
 		"Name":"SetIpForwardEntry"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9731,6 +9862,7 @@
 	}
 	,{
 		"Name":"DeleteIpForwardEntry"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9744,6 +9876,7 @@
 	}
 	,{
 		"Name":"SetIpStatistics"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9757,6 +9890,7 @@
 	}
 	,{
 		"Name":"SetIpTTL"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9770,6 +9904,7 @@
 	}
 	,{
 		"Name":"CreateIpNetEntry"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9783,6 +9918,7 @@
 	}
 	,{
 		"Name":"SetIpNetEntry"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9796,6 +9932,7 @@
 	}
 	,{
 		"Name":"DeleteIpNetEntry"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9809,6 +9946,7 @@
 	}
 	,{
 		"Name":"FlushIpNetTable"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9822,6 +9960,7 @@
 	}
 	,{
 		"Name":"CreateProxyArpEntry"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9837,6 +9976,7 @@
 	}
 	,{
 		"Name":"DeleteProxyArpEntry"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9852,6 +9992,7 @@
 	}
 	,{
 		"Name":"SetTcpEntry"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9865,6 +10006,7 @@
 	}
 	,{
 		"Name":"GetInterfaceInfo"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9879,6 +10021,7 @@
 	}
 	,{
 		"Name":"GetUniDirectionalAdapterInfo"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9893,6 +10036,7 @@
 	}
 	,{
 		"Name":"NhpAllocateAndGetInterfaceInfoFromStack"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9910,6 +10054,7 @@
 	}
 	,{
 		"Name":"GetBestInterface"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9924,6 +10069,7 @@
 	}
 	,{
 		"Name":"GetBestInterfaceEx"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9938,6 +10084,7 @@
 	}
 	,{
 		"Name":"GetBestRoute"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9953,6 +10100,7 @@
 	}
 	,{
 		"Name":"NotifyAddrChange"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9967,6 +10115,7 @@
 	}
 	,{
 		"Name":"NotifyRouteChange"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9981,6 +10130,7 @@
 	}
 	,{
 		"Name":"CancelIPChangeNotify"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9994,6 +10144,7 @@
 	}
 	,{
 		"Name":"GetAdapterIndex"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10008,6 +10159,7 @@
 	}
 	,{
 		"Name":"AddIPAddress"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10025,6 +10177,7 @@
 	}
 	,{
 		"Name":"DeleteIPAddress"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10038,6 +10191,7 @@
 	}
 	,{
 		"Name":"GetNetworkParams"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10052,6 +10206,7 @@
 	}
 	,{
 		"Name":"GetAdaptersInfo"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10066,6 +10221,7 @@
 	}
 	,{
 		"Name":"GetAdapterOrderMap"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IP_ADAPTER_ORDER_MAP","TargetKind":"Default","Api":"NetworkManagement.IpHelper","Parents":[]}}
@@ -10078,6 +10234,7 @@
 	}
 	,{
 		"Name":"GetAdaptersAddresses"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10086,7 +10243,7 @@
 		,"Platform":"windows5.1.2600"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"Family","Type":{"Kind":"ApiRef","Name":"ADDRESS_FAMILY","TargetKind":"Default","Api":"NetworkManagement.IpHelper","Parents":[]},"Attrs":["In"]}
+			{"Name":"Family","Type":{"Kind":"ApiRef","Name":"ADDRESS_FAMILY","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"GET_ADAPTERS_ADDRESSES_FLAGS","TargetKind":"Default","Api":"NetworkManagement.IpHelper","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Reserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
 			,{"Name":"AdapterAddresses","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IP_ADAPTER_ADDRESSES_LH","TargetKind":"Default","Api":"NetworkManagement.IpHelper","Parents":[]}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":4},"Optional"]}
@@ -10095,6 +10252,7 @@
 	}
 	,{
 		"Name":"GetPerAdapterInfo"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10110,6 +10268,7 @@
 	}
 	,{
 		"Name":"GetInterfaceActiveTimestampCapabilities"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10124,6 +10283,7 @@
 	}
 	,{
 		"Name":"GetInterfaceSupportedTimestampCapabilities"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10138,6 +10298,7 @@
 	}
 	,{
 		"Name":"CaptureInterfaceHardwareCrossTimestamp"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10152,6 +10313,7 @@
 	}
 	,{
 		"Name":"RegisterInterfaceTimestampConfigChange"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10167,6 +10329,7 @@
 	}
 	,{
 		"Name":"UnregisterInterfaceTimestampConfigChange"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -10180,6 +10343,7 @@
 	}
 	,{
 		"Name":"IpReleaseAddress"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10193,6 +10357,7 @@
 	}
 	,{
 		"Name":"IpRenewAddress"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10206,6 +10371,7 @@
 	}
 	,{
 		"Name":"SendARP"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10222,6 +10388,7 @@
 	}
 	,{
 		"Name":"GetRTTAndHopCount"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10238,6 +10405,7 @@
 	}
 	,{
 		"Name":"GetFriendlyIfIndex"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10251,6 +10419,7 @@
 	}
 	,{
 		"Name":"EnableRouter"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10265,6 +10434,7 @@
 	}
 	,{
 		"Name":"UnenableRouter"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10279,6 +10449,7 @@
 	}
 	,{
 		"Name":"DisableMediaSense"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10293,6 +10464,7 @@
 	}
 	,{
 		"Name":"RestoreMediaSense"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10307,6 +10479,7 @@
 	}
 	,{
 		"Name":"GetIpErrorString"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10322,6 +10495,7 @@
 	}
 	,{
 		"Name":"ResolveNeighbor"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10337,6 +10511,7 @@
 	}
 	,{
 		"Name":"CreatePersistentTcpPortReservation"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10352,6 +10527,7 @@
 	}
 	,{
 		"Name":"CreatePersistentUdpPortReservation"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10367,6 +10543,7 @@
 	}
 	,{
 		"Name":"DeletePersistentTcpPortReservation"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10381,6 +10558,7 @@
 	}
 	,{
 		"Name":"DeletePersistentUdpPortReservation"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10395,6 +10573,7 @@
 	}
 	,{
 		"Name":"LookupPersistentTcpPortReservation"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10410,6 +10589,7 @@
 	}
 	,{
 		"Name":"LookupPersistentUdpPortReservation"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10425,6 +10605,7 @@
 	}
 	,{
 		"Name":"PfCreateInterface"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10443,6 +10624,7 @@
 	}
 	,{
 		"Name":"PfDeleteInterface"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10456,6 +10638,7 @@
 	}
 	,{
 		"Name":"PfAddFiltersToInterface"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10474,6 +10657,7 @@
 	}
 	,{
 		"Name":"PfRemoveFiltersFromInterface"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10491,6 +10675,7 @@
 	}
 	,{
 		"Name":"PfRemoveFilterHandles"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10506,6 +10691,7 @@
 	}
 	,{
 		"Name":"PfUnBindInterface"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10519,6 +10705,7 @@
 	}
 	,{
 		"Name":"PfBindInterfaceToIndex"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10535,6 +10722,7 @@
 	}
 	,{
 		"Name":"PfBindInterfaceToIPAddress"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10550,6 +10738,7 @@
 	}
 	,{
 		"Name":"PfRebindFilters"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10564,6 +10753,7 @@
 	}
 	,{
 		"Name":"PfAddGlobalFilterToInterface"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10578,6 +10768,7 @@
 	}
 	,{
 		"Name":"PfRemoveGlobalFilterFromInterface"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10592,6 +10783,7 @@
 	}
 	,{
 		"Name":"PfMakeLog"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10605,6 +10797,7 @@
 	}
 	,{
 		"Name":"PfSetLogBuffer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10624,6 +10817,7 @@
 	}
 	,{
 		"Name":"PfDeleteLog"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10636,6 +10830,7 @@
 	}
 	,{
 		"Name":"PfGetInterfaceStatistics"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10652,6 +10847,7 @@
 	}
 	,{
 		"Name":"PfTestPacket"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IPHLPAPI"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}

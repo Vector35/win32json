@@ -46,6 +46,23 @@
 		]
 	}
 	,{
+		"Name":"HSTRING_HEADER"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"padding1","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"padding2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"data","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
 		"Name":"HSTRING"
 		,"Architectures":[]
 		,"Platform":null
@@ -108,6 +125,7 @@
 		,"Methods":[
 			{
 				"Name":"Resolve"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -116,7 +134,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"riid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
-					,{"Name":"ppvObjectReference","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["In","Out"]}
+					,{"Name":"ppvObjectReference","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","ComOutPtr"]}
 				]
 			}
 		]
@@ -131,6 +149,7 @@
 		,"Methods":[
 			{
 				"Name":"OnUninitialize"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"Native","Name":"Void"}
 				,"ReturnAttrs":[]
@@ -181,6 +200,7 @@
 		,"Methods":[
 			{
 				"Name":"GetForWindow"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -205,6 +225,7 @@
 		,"Methods":[
 			{
 				"Name":"CreateForWindow"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -215,33 +236,6 @@
 					{"Name":"window","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"riid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
 					,{"Name":"holographicSpace","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","ComOutPtr","RetVal"]}
-				]
-			}
-		]
-	}
-	,{
-		"Name":"HSTRING_HEADER"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"Reserved","Type":{"Kind":"ApiRef","Name":"_Reserved_e__Union","TargetKind":"Default","Api":"System.WinRT","Parents":[]},"Attrs":[]}
-		]
-		,"NestedTypes":[
-			{
-				"Name":"_Reserved_e__Union"
-				,"Architectures":[]
-				,"Platform":null
-				,"Kind":"Union"
-				,"Size":0
-				,"PackingSize":0
-				,"Fields":[
-					{"Name":"Reserved1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-					,{"Name":"Reserved2","Type":{"Kind":"Array","Shape":{"Size":24},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
-				]
-				,"NestedTypes":[
 				]
 			}
 		]
@@ -270,6 +264,7 @@
 		,"Methods":[
 			{
 				"Name":"GetIids"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -278,11 +273,12 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"iidCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-					,{"Name":"iids","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}}},"Attrs":["Out","Optional"]}
+					,{"Name":"iids","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}}},"Attrs":["Out"]}
 				]
 			}
 			,{
 				"Name":"GetRuntimeClassName"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -290,11 +286,12 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"className","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HSTRING","TargetKind":"Default","Api":"System.WinRT","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"className","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HSTRING","TargetKind":"Default","Api":"System.WinRT","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
 				"Name":"GetTrustLevel"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -311,7 +308,9 @@
 		"Name":"PINSPECT_HSTRING_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -327,7 +326,9 @@
 		"Name":"PINSPECT_HSTRING_CALLBACK2"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -391,6 +392,7 @@
 		,"Methods":[
 			{
 				"Name":"GetForWindow"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -405,6 +407,7 @@
 			}
 			,{
 				"Name":"ShowManageAccountsForWindowAsync"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -419,6 +422,7 @@
 			}
 			,{
 				"Name":"ShowAddAccountForWindowAsync"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -443,6 +447,7 @@
 		,"Methods":[
 			{
 				"Name":"OpenForExtendedExecutionAsync"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -466,6 +471,7 @@
 		,"Methods":[
 			{
 				"Name":"get_CorrelationVector"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -524,6 +530,7 @@
 		,"Methods":[
 			{
 				"Name":"OnStateChanged"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -536,6 +543,7 @@
 			}
 			,{
 				"Name":"OnError"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -559,6 +567,7 @@
 		,"Methods":[
 			{
 				"Name":"Initialize"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -572,6 +581,7 @@
 			}
 			,{
 				"Name":"Connect"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -583,6 +593,7 @@
 			}
 			,{
 				"Name":"Disconnect"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -594,6 +605,7 @@
 			}
 			,{
 				"Name":"Advise"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -607,6 +619,7 @@
 			}
 			,{
 				"Name":"UnAdvise"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -629,6 +642,7 @@
 		,"Methods":[
 			{
 				"Name":"GetController"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -641,6 +655,7 @@
 			}
 			,{
 				"Name":"GetProperties"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -663,6 +678,7 @@
 		,"Methods":[
 			{
 				"Name":"GetForWindow"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -687,6 +703,7 @@
 		,"Methods":[
 			{
 				"Name":"GetForWindow"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -711,6 +728,7 @@
 		,"Methods":[
 			{
 				"Name":"GetForWindow"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -725,6 +743,7 @@
 			}
 			,{
 				"Name":"ShowPlayToUIForWindow"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -747,6 +766,7 @@
 		,"Methods":[
 			{
 				"Name":"get_LastCorrelationVectorForThread"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -761,6 +781,7 @@
 			}
 			,{
 				"Name":"get_NextCorrelationVectorForThread"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -775,6 +796,7 @@
 			}
 			,{
 				"Name":"put_NextCorrelationVectorForThread"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -799,6 +821,7 @@
 		,"Methods":[
 			{
 				"Name":"GetForWindow"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -823,6 +846,7 @@
 		,"Methods":[
 			{
 				"Name":"CreateSessionForWindow"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -847,6 +871,7 @@
 		,"Methods":[
 			{
 				"Name":"SetActivitySourceHost"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -869,6 +894,7 @@
 		,"Methods":[
 			{
 				"Name":"GetForWindow"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -893,6 +919,7 @@
 		,"Methods":[
 			{
 				"Name":"RequestVerificationForWindowAsync"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -918,6 +945,7 @@
 		,"Methods":[
 			{
 				"Name":"RequestTokenForWindowAsync"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -933,6 +961,7 @@
 			}
 			,{
 				"Name":"RequestTokenWithWebAccountForWindowAsync"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -959,6 +988,7 @@
 		,"Methods":[
 			{
 				"Name":"GetErrorDetails"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -974,6 +1004,7 @@
 			}
 			,{
 				"Name":"GetReference"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -996,6 +1027,7 @@
 		,"Methods":[
 			{
 				"Name":"GetLanguageException"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1018,6 +1050,7 @@
 		,"Methods":[
 			{
 				"Name":"GetTransformedRestrictedErrorInfo"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1040,6 +1073,7 @@
 		,"Methods":[
 			{
 				"Name":"GetStackBackTrace"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1064,6 +1098,7 @@
 		,"Methods":[
 			{
 				"Name":"GetPreviousLanguageExceptionErrorInfo"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1076,6 +1111,7 @@
 			}
 			,{
 				"Name":"CapturePropagationContext"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1088,6 +1124,7 @@
 			}
 			,{
 				"Name":"GetPropagationContextHead"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1110,6 +1147,7 @@
 		,"Methods":[
 			{
 				"Name":"ActivateInstance"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1117,7 +1155,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"instance","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IInspectable","TargetKind":"Com","Api":"System.WinRT","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"instance","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IInspectable","TargetKind":"Com","Api":"System.WinRT","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -1157,6 +1195,7 @@
 		,"Methods":[
 			{
 				"Name":"Buffer"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1189,7 +1228,9 @@
 		"Name":"PINSPECT_MEMORY_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -1211,6 +1252,7 @@
 		,"Methods":[
 			{
 				"Name":"SetWinRtInterface"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1223,6 +1265,7 @@
 			}
 			,{
 				"Name":"SetDelegate"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1235,6 +1278,7 @@
 			}
 			,{
 				"Name":"SetInterfaceGroupSimpleDefault"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1249,6 +1293,7 @@
 			}
 			,{
 				"Name":"SetInterfaceGroupParameterizedDefault"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1263,6 +1308,7 @@
 			}
 			,{
 				"Name":"SetRuntimeClassSimpleDefault"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1277,6 +1323,7 @@
 			}
 			,{
 				"Name":"SetRuntimeClassParameterizedDefault"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1291,6 +1338,7 @@
 			}
 			,{
 				"Name":"SetStruct"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1305,6 +1353,7 @@
 			}
 			,{
 				"Name":"SetEnum"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1318,6 +1367,7 @@
 			}
 			,{
 				"Name":"SetParameterizedInterface"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1331,6 +1381,7 @@
 			}
 			,{
 				"Name":"SetParameterizedDelegate"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1354,6 +1405,7 @@
 		,"Methods":[
 			{
 				"Name":"Locate"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1390,6 +1442,7 @@
 		,"Methods":[
 			{
 				"Name":"GetBuffer"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1413,6 +1466,7 @@
 		,"Methods":[
 			{
 				"Name":"Resolve"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1436,6 +1490,7 @@
 		,"Methods":[
 			{
 				"Name":"GetWeakReference"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1443,7 +1498,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"weakReference","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IWeakReference","TargetKind":"Com","Api":"System.WinRT","Parents":[]}},"Attrs":["Out","Optional"]}
+					{"Name":"weakReference","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IWeakReference","TargetKind":"Com","Api":"System.WinRT","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -1458,6 +1513,7 @@
 		,"Methods":[
 			{
 				"Name":"GetForWindow"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1482,6 +1538,7 @@
 		,"Methods":[
 			{
 				"Name":"GetWindow"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1504,6 +1561,7 @@
 		,"Methods":[
 			{
 				"Name":"GetForWindow"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1528,6 +1586,7 @@
 		,"Methods":[
 			{
 				"Name":"PumpMessages"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1539,11 +1598,256 @@
 			}
 		]
 	}
+	,{
+		"Name":"ICoreWindowInterop"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"45d64a29-a63e-4cb6-b498-5781d298cb4f"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"get_WindowHandle"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[
+					"SpecialName"
+				]
+				,"Params":[
+					{"Name":"hwnd","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"put_MessageHandled"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[
+					"SpecialName"
+				]
+				,"Params":[
+					{"Name":"value","Type":{"Kind":"Native","Name":"Byte"},"Attrs":["In"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"ICoreInputInterop"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"40bfe3e3-b75a-4479-ac96-475365749bb8"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"SetInputSource"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"value","Type":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In","Optional"]}
+				]
+			}
+			,{
+				"Name":"put_MessageHandled"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[
+					"SpecialName"
+				]
+				,"Params":[
+					{"Name":"value","Type":{"Kind":"Native","Name":"Byte"},"Attrs":["In"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"ICoreWindowComponentInterop"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"0576ab31-a310-4c40-ba31-fd37e0298dfa"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"ConfigureComponentInput"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"hostViewInstanceId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"hwndHost","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+					,{"Name":"inputSourceVisual","Type":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In","Optional"]}
+				]
+			}
+			,{
+				"Name":"GetViewInstanceId"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"componentViewInstanceId","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"ICoreWindowAdapterInterop"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"7a5b6fd1-cd73-4b6c-9cf4-2e869eaf470a"
+		,"Interface":{"Kind":"ApiRef","Name":"IInspectable","TargetKind":"Com","Api":"System.WinRT","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"get_AppActivationClientAdapter"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[
+					"SpecialName"
+				]
+				,"Params":[
+					{"Name":"value","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"get_ApplicationViewClientAdapter"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[
+					"SpecialName"
+				]
+				,"Params":[
+					{"Name":"value","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"get_CoreApplicationViewClientAdapter"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[
+					"SpecialName"
+				]
+				,"Params":[
+					{"Name":"value","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"get_HoloViewClientAdapter"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[
+					"SpecialName"
+				]
+				,"Params":[
+					{"Name":"value","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"get_PositionerClientAdapter"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[
+					"SpecialName"
+				]
+				,"Params":[
+					{"Name":"value","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"get_SystemNavigationClientAdapter"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[
+					"SpecialName"
+				]
+				,"Params":[
+					{"Name":"value","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"get_TitleBarClientAdapter"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[
+					"SpecialName"
+				]
+				,"Params":[
+					{"Name":"value","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"SetWindowClientAdapter"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"value","Type":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In","Optional"]}
+				]
+			}
+		]
+	}
 ]
 
 ,"Functions":[
 	{
 		"Name":"CoDecodeProxy"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"OLE32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1559,6 +1863,7 @@
 	}
 	,{
 		"Name":"RoGetAgileReference"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"OLE32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1575,6 +1880,7 @@
 	}
 	,{
 		"Name":"HSTRING_UserSize"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -1590,6 +1896,7 @@
 	}
 	,{
 		"Name":"HSTRING_UserMarshal"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
@@ -1605,6 +1912,7 @@
 	}
 	,{
 		"Name":"HSTRING_UserUnmarshal"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
@@ -1620,6 +1928,7 @@
 	}
 	,{
 		"Name":"HSTRING_UserFree"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -1634,6 +1943,7 @@
 	}
 	,{
 		"Name":"HSTRING_UserSize64"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -1649,6 +1959,7 @@
 	}
 	,{
 		"Name":"HSTRING_UserMarshal64"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
@@ -1664,6 +1975,7 @@
 	}
 	,{
 		"Name":"HSTRING_UserUnmarshal64"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}
@@ -1679,6 +1991,7 @@
 	}
 	,{
 		"Name":"HSTRING_UserFree64"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -1693,6 +2006,7 @@
 	}
 	,{
 		"Name":"WindowsCreateString"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1708,6 +2022,7 @@
 	}
 	,{
 		"Name":"WindowsCreateStringReference"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1724,6 +2039,7 @@
 	}
 	,{
 		"Name":"WindowsDeleteString"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1737,6 +2053,7 @@
 	}
 	,{
 		"Name":"WindowsDuplicateString"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1751,6 +2068,7 @@
 	}
 	,{
 		"Name":"WindowsGetStringLen"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -1764,6 +2082,7 @@
 	}
 	,{
 		"Name":"WindowsGetStringRawBuffer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1778,6 +2097,7 @@
 	}
 	,{
 		"Name":"WindowsIsStringEmpty"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1791,6 +2111,7 @@
 	}
 	,{
 		"Name":"WindowsStringHasEmbeddedNull"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1805,6 +2126,7 @@
 	}
 	,{
 		"Name":"WindowsCompareStringOrdinal"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1820,6 +2142,7 @@
 	}
 	,{
 		"Name":"WindowsSubstring"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1835,6 +2158,7 @@
 	}
 	,{
 		"Name":"WindowsSubstringWithSpecifiedLength"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1851,6 +2175,7 @@
 	}
 	,{
 		"Name":"WindowsConcatString"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1866,6 +2191,7 @@
 	}
 	,{
 		"Name":"WindowsReplaceString"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1882,6 +2208,7 @@
 	}
 	,{
 		"Name":"WindowsTrimStringStart"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1897,6 +2224,7 @@
 	}
 	,{
 		"Name":"WindowsTrimStringEnd"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1912,6 +2240,7 @@
 	}
 	,{
 		"Name":"WindowsPreallocateStringBuffer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1927,6 +2256,7 @@
 	}
 	,{
 		"Name":"WindowsPromoteStringBuffer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1941,6 +2271,7 @@
 	}
 	,{
 		"Name":"WindowsDeleteStringBuffer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1954,6 +2285,7 @@
 	}
 	,{
 		"Name":"WindowsInspectString"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-string-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1972,6 +2304,7 @@
 	}
 	,{
 		"Name":"WindowsInspectString2"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-string-l1-1-1"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1990,6 +2323,7 @@
 	}
 	,{
 		"Name":"CreateDispatcherQueueController"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"CoreMessaging"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2004,6 +2338,7 @@
 	}
 	,{
 		"Name":"RoInitialize"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2017,6 +2352,7 @@
 	}
 	,{
 		"Name":"RoUninitialize"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-l1-1-0"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -2029,6 +2365,7 @@
 	}
 	,{
 		"Name":"RoActivateInstance"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2043,6 +2380,7 @@
 	}
 	,{
 		"Name":"RoRegisterActivationFactories"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2059,6 +2397,7 @@
 	}
 	,{
 		"Name":"RoRevokeActivationFactories"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-l1-1-0"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -2072,6 +2411,7 @@
 	}
 	,{
 		"Name":"RoGetActivationFactory"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2087,6 +2427,7 @@
 	}
 	,{
 		"Name":"RoRegisterForApartmentShutdown"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2102,6 +2443,7 @@
 	}
 	,{
 		"Name":"RoUnregisterForApartmentShutdown"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2115,6 +2457,7 @@
 	}
 	,{
 		"Name":"RoGetApartmentIdentifier"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2128,6 +2471,7 @@
 	}
 	,{
 		"Name":"RoGetBufferMarshaler"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-robuffer-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2141,6 +2485,7 @@
 	}
 	,{
 		"Name":"RoGetErrorReportingFlags"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2154,6 +2499,7 @@
 	}
 	,{
 		"Name":"RoSetErrorReportingFlags"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2167,6 +2513,7 @@
 	}
 	,{
 		"Name":"RoResolveRestrictedErrorInfoReference"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2181,6 +2528,7 @@
 	}
 	,{
 		"Name":"SetRestrictedErrorInfo"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2194,6 +2542,7 @@
 	}
 	,{
 		"Name":"GetRestrictedErrorInfo"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2207,6 +2556,7 @@
 	}
 	,{
 		"Name":"RoOriginateErrorW"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2222,6 +2572,7 @@
 	}
 	,{
 		"Name":"RoOriginateError"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2236,6 +2587,7 @@
 	}
 	,{
 		"Name":"RoTransformErrorW"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2252,6 +2604,7 @@
 	}
 	,{
 		"Name":"RoTransformError"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2267,6 +2620,7 @@
 	}
 	,{
 		"Name":"RoCaptureErrorContext"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2280,6 +2634,7 @@
 	}
 	,{
 		"Name":"RoFailFastWithErrorContext"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-error-l1-1-0"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -2293,6 +2648,7 @@
 	}
 	,{
 		"Name":"RoOriginateLanguageException"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-error-l1-1-1"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2308,6 +2664,7 @@
 	}
 	,{
 		"Name":"RoClearError"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-error-l1-1-1"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -2320,6 +2677,7 @@
 	}
 	,{
 		"Name":"RoReportUnhandledError"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-error-l1-1-1"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2333,6 +2691,7 @@
 	}
 	,{
 		"Name":"RoInspectThreadErrorInfo"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-error-l1-1-1"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2350,6 +2709,7 @@
 	}
 	,{
 		"Name":"RoInspectCapturedStackBackTrace"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-error-l1-1-1"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2368,6 +2728,7 @@
 	}
 	,{
 		"Name":"RoGetMatchingRestrictedErrorInfo"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-error-l1-1-1"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2382,6 +2743,7 @@
 	}
 	,{
 		"Name":"RoReportFailedDelegate"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-error-l1-1-1"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2396,6 +2758,7 @@
 	}
 	,{
 		"Name":"IsErrorPropagationEnabled"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-error-l1-1-1"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2408,6 +2771,7 @@
 	}
 	,{
 		"Name":"MetaDataGetDispenser"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"RoMetadata"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2423,6 +2787,7 @@
 	}
 	,{
 		"Name":"RoGetParameterizedTypeInstanceIID"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-roparameterizediid-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2440,6 +2805,7 @@
 	}
 	,{
 		"Name":"RoFreeParameterizedTypeExtra"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-roparameterizediid-l1-1-0"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -2453,6 +2819,7 @@
 	}
 	,{
 		"Name":"RoParameterizedTypeExtraGetTypeSignature"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-roparameterizediid-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2466,6 +2833,7 @@
 	}
 	,{
 		"Name":"RoGetServerActivatableClasses"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-winrt-registration-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2481,6 +2849,7 @@
 	}
 	,{
 		"Name":"CreateRandomAccessStreamOnFile"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-shcore-stream-winrt-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2497,6 +2866,7 @@
 	}
 	,{
 		"Name":"CreateRandomAccessStreamOverStream"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-shcore-stream-winrt-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2513,6 +2883,7 @@
 	}
 	,{
 		"Name":"CreateStreamOverRandomAccessStream"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-shcore-stream-winrt-l1-1-0"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2522,6 +2893,37 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"randomAccessStream","Type":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+			,{"Name":"riid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
+			,{"Name":"ppv","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","ComOutPtr"]}
+		]
+	}
+	,{
+		"Name":"CreateControlInput"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"Windows.UI"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"riid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
+			,{"Name":"ppv","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","ComOutPtr"]}
+		]
+	}
+	,{
+		"Name":"CreateControlInputEx"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"Windows.UI"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"pCoreWindow","Type":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
 			,{"Name":"riid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
 			,{"Name":"ppv","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","ComOutPtr"]}
 		]

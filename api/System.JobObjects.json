@@ -83,14 +83,15 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"JOB_OBJECT_CPU_RATE_CONTROL_ENABLE","Value":1}
 			,{"Name":"JOB_OBJECT_CPU_RATE_CONTROL_WEIGHT_BASED","Value":2}
 			,{"Name":"JOB_OBJECT_CPU_RATE_CONTROL_HARD_CAP","Value":4}
 			,{"Name":"JOB_OBJECT_CPU_RATE_CONTROL_NOTIFY","Value":8}
-			,{"Name":"JOB_OBJECT__CPU_RATE_CONTROL_MIN_MAX_RATE","Value":16}
+			,{"Name":"JOB_OBJECT_CPU_RATE_CONTROL_MIN_MAX_RATE","Value":16}
+			,{"Name":"JOB_OBJECT_CPU_RATE_CONTROL_VALID_FLAGS","Value":31}
 		]
 		,"IntegerBase":"UInt32"
 	}
@@ -554,7 +555,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"JOB_OBJECT_NET_RATE_CONTROL_ENABLE","Value":1}
@@ -562,7 +563,7 @@
 			,{"Name":"JOB_OBJECT_NET_RATE_CONTROL_DSCP_TAG","Value":4}
 			,{"Name":"JOB_OBJECT_NET_RATE_CONTROL_VALID_FLAGS","Value":7}
 		]
-		,"IntegerBase":"Int32"
+		,"IntegerBase":"UInt32"
 	}
 	,{
 		"Name":"JOBOBJECT_NET_RATE_CONTROL_INFORMATION"
@@ -779,6 +780,7 @@
 ,"Functions":[
 	{
 		"Name":"IsProcessInJob"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -794,6 +796,7 @@
 	}
 	,{
 		"Name":"CreateJobObjectW"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -808,6 +811,7 @@
 	}
 	,{
 		"Name":"FreeMemoryJobObject"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -821,6 +825,7 @@
 	}
 	,{
 		"Name":"OpenJobObjectW"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -836,6 +841,7 @@
 	}
 	,{
 		"Name":"AssignProcessToJobObject"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -850,6 +856,7 @@
 	}
 	,{
 		"Name":"TerminateJobObject"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -864,6 +871,7 @@
 	}
 	,{
 		"Name":"SetInformationJobObject"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -880,6 +888,7 @@
 	}
 	,{
 		"Name":"SetIoRateControlInformationJobObject"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -894,6 +903,7 @@
 	}
 	,{
 		"Name":"QueryInformationJobObject"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -911,6 +921,7 @@
 	}
 	,{
 		"Name":"QueryIoRateControlInformationJobObject"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -927,6 +938,7 @@
 	}
 	,{
 		"Name":"UserHandleGrantAccess"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"USER32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -942,6 +954,7 @@
 	}
 	,{
 		"Name":"CreateJobObjectA"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -956,6 +969,7 @@
 	}
 	,{
 		"Name":"OpenJobObjectA"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -971,6 +985,7 @@
 	}
 	,{
 		"Name":"CreateJobSet"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}

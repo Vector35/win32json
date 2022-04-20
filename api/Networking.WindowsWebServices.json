@@ -51,10 +51,38 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"WEBAUTHN_HASH_ALGORITHM_SHA_256"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"SHA-256"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WEBAUTHN_HASH_ALGORITHM_SHA_384"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"SHA-384"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WEBAUTHN_HASH_ALGORITHM_SHA_512"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"SHA-512"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"WEBAUTHN_CLIENT_DATA_CURRENT_VERSION"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WEBAUTHN_CREDENTIAL_TYPE_PUBLIC_KEY"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"public-key"
 		,"Attrs":[]
 	}
 	,{
@@ -184,6 +212,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"WEBAUTHN_EXTENSIONS_IDENTIFIER_HMAC_SECRET"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"hmac-secret"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"WEBAUTHN_USER_VERIFICATION_ANY"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -209,6 +244,27 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":3
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WEBAUTHN_EXTENSIONS_IDENTIFIER_CRED_PROTECT"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"credProtect"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WEBAUTHN_EXTENSIONS_IDENTIFIER_CRED_BLOB"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"credBlob"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WEBAUTHN_EXTENSIONS_IDENTIFIER_MIN_PIN_LENGTH"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"minPinLength"
 		,"Attrs":[]
 	}
 	,{
@@ -457,10 +513,45 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"WEBAUTHN_ATTESTATION_VER_TPM_2_0"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"2.0"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"WEBAUTHN_COMMON_ATTESTATION_CURRENT_VERSION"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WEBAUTHN_ATTESTATION_TYPE_PACKED"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"packed"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WEBAUTHN_ATTESTATION_TYPE_U2F"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"fido-u2f"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WEBAUTHN_ATTESTATION_TYPE_TPM"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"tpm"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WEBAUTHN_ATTESTATION_TYPE_NONE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"none"
 		,"Attrs":[]
 	}
 	,{
@@ -2980,7 +3071,9 @@
 		"Name":"WS_READ_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2998,7 +3091,9 @@
 		"Name":"WS_WRITE_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3015,7 +3110,9 @@
 		"Name":"WS_PUSH_BYTES_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3032,7 +3129,9 @@
 		"Name":"WS_PULL_BYTES_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3050,7 +3149,9 @@
 		"Name":"WS_DYNAMIC_STRING_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3067,7 +3168,9 @@
 		"Name":"WS_ASYNC_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -3082,7 +3185,9 @@
 		"Name":"WS_ASYNC_FUNCTION"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3100,7 +3205,9 @@
 		"Name":"WS_CREATE_CHANNEL_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3117,7 +3224,9 @@
 		"Name":"WS_FREE_CHANNEL_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -3130,7 +3239,9 @@
 		"Name":"WS_RESET_CHANNEL_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3144,7 +3255,9 @@
 		"Name":"WS_ABORT_CHANNEL_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3158,7 +3271,9 @@
 		"Name":"WS_OPEN_CHANNEL_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3174,7 +3289,9 @@
 		"Name":"WS_CLOSE_CHANNEL_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3189,7 +3306,9 @@
 		"Name":"WS_SET_CHANNEL_PROPERTY_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3206,7 +3325,9 @@
 		"Name":"WS_GET_CHANNEL_PROPERTY_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3223,7 +3344,9 @@
 		"Name":"WS_READ_MESSAGE_START_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3239,7 +3362,9 @@
 		"Name":"WS_READ_MESSAGE_END_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3255,7 +3380,9 @@
 		"Name":"WS_WRITE_MESSAGE_START_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3271,7 +3398,9 @@
 		"Name":"WS_WRITE_MESSAGE_END_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3287,7 +3416,9 @@
 		"Name":"WS_ABANDON_MESSAGE_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3302,7 +3433,9 @@
 		"Name":"WS_SHUTDOWN_SESSION_CHANNEL_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3317,7 +3450,9 @@
 		"Name":"WS_CREATE_ENCODER_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3334,7 +3469,9 @@
 		"Name":"WS_ENCODER_GET_CONTENT_TYPE_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3351,7 +3488,9 @@
 		"Name":"WS_ENCODER_START_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3366,7 +3505,9 @@
 		"Name":"WS_ENCODER_ENCODE_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3383,7 +3524,9 @@
 		"Name":"WS_ENCODER_END_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3398,7 +3541,9 @@
 		"Name":"WS_FREE_ENCODER_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -3411,7 +3556,9 @@
 		"Name":"WS_CREATE_DECODER_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3428,7 +3575,9 @@
 		"Name":"WS_DECODER_GET_CONTENT_TYPE_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3445,7 +3594,9 @@
 		"Name":"WS_DECODER_START_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3460,7 +3611,9 @@
 		"Name":"WS_DECODER_DECODE_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3478,7 +3631,9 @@
 		"Name":"WS_DECODER_END_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3493,7 +3648,9 @@
 		"Name":"WS_FREE_DECODER_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -3506,7 +3663,9 @@
 		"Name":"WS_HTTP_REDIRECT_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3521,7 +3680,9 @@
 		"Name":"WS_CREATE_LISTENER_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3538,7 +3699,9 @@
 		"Name":"WS_FREE_LISTENER_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -3551,7 +3714,9 @@
 		"Name":"WS_RESET_LISTENER_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3565,7 +3730,9 @@
 		"Name":"WS_OPEN_LISTENER_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3581,7 +3748,9 @@
 		"Name":"WS_CLOSE_LISTENER_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3596,7 +3765,9 @@
 		"Name":"WS_GET_LISTENER_PROPERTY_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3613,7 +3784,9 @@
 		"Name":"WS_SET_LISTENER_PROPERTY_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3630,7 +3803,9 @@
 		"Name":"WS_ACCEPT_CHANNEL_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3646,7 +3821,9 @@
 		"Name":"WS_ABORT_LISTENER_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3660,7 +3837,9 @@
 		"Name":"WS_CREATE_CHANNEL_FOR_LISTENER_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3677,7 +3856,9 @@
 		"Name":"WS_MESSAGE_DONE_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -3690,7 +3871,9 @@
 		"Name":"WS_CERTIFICATE_VALIDATION_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3704,7 +3887,9 @@
 		"Name":"WS_GET_CERT_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3721,7 +3906,9 @@
 		"Name":"WS_CERT_ISSUER_LIST_NOTIFICATION_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3736,7 +3923,9 @@
 		"Name":"WS_VALIDATE_PASSWORD_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3753,7 +3942,9 @@
 		"Name":"WS_VALIDATE_SAML_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3768,7 +3959,9 @@
 		"Name":"WS_DURATION_COMPARISON_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3784,7 +3977,9 @@
 		"Name":"WS_READ_TYPE_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3803,7 +3998,9 @@
 		"Name":"WS_WRITE_TYPE_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3821,7 +4018,9 @@
 		"Name":"WS_IS_DEFAULT_VALUE_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3839,7 +4038,9 @@
 		"Name":"WS_SERVICE_MESSAGE_RECEIVE_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3854,7 +4055,9 @@
 		"Name":"WS_OPERATION_CANCEL_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -3868,7 +4071,9 @@
 		"Name":"WS_OPERATION_FREE_STATE_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -3881,7 +4086,9 @@
 		"Name":"WS_SERVICE_STUB_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3898,7 +4105,9 @@
 		"Name":"WS_SERVICE_ACCEPT_CHANNEL_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3914,7 +4123,9 @@
 		"Name":"WS_SERVICE_CLOSE_CHANNEL_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3928,7 +4139,9 @@
 		"Name":"WS_SERVICE_SECURITY_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3943,7 +4156,9 @@
 		"Name":"WS_PROXY_MESSAGE_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -5586,7 +5801,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"keyHandle","Type":{"Kind":"ApiRef","Name":"WS_SECURITY_KEY_HANDLE","TargetKind":"Default","Api":"Networking.WindowsWebServices","Parents":[]},"Attrs":[]}
-			,{"Name":"asymmetricKey","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
+			,{"Name":"asymmetricKey","Type":{"Kind":"ApiRef","Name":"NCRYPT_KEY_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -7895,6 +8110,7 @@
 		,"Methods":[
 			{
 				"Name":"TriggerContentPrefetcherTask"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7907,6 +8123,7 @@
 			}
 			,{
 				"Name":"IsRegisteredForContentPrefetch"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8265,6 +8482,7 @@
 ,"Functions":[
 	{
 		"Name":"WsStartReaderCanonicalization"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8283,6 +8501,7 @@
 	}
 	,{
 		"Name":"WsEndReaderCanonicalization"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8297,6 +8516,7 @@
 	}
 	,{
 		"Name":"WsStartWriterCanonicalization"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8315,6 +8535,7 @@
 	}
 	,{
 		"Name":"WsEndWriterCanonicalization"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8329,6 +8550,7 @@
 	}
 	,{
 		"Name":"WsCreateXmlBuffer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8346,6 +8568,7 @@
 	}
 	,{
 		"Name":"WsRemoveNode"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8360,6 +8583,7 @@
 	}
 	,{
 		"Name":"WsCreateReader"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8376,6 +8600,7 @@
 	}
 	,{
 		"Name":"WsSetInput"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8394,6 +8619,7 @@
 	}
 	,{
 		"Name":"WsSetInputToBuffer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8411,6 +8637,7 @@
 	}
 	,{
 		"Name":"WsFreeReader"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -8424,6 +8651,7 @@
 	}
 	,{
 		"Name":"WsGetReaderProperty"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8441,6 +8669,7 @@
 	}
 	,{
 		"Name":"WsGetReaderNode"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8456,6 +8685,7 @@
 	}
 	,{
 		"Name":"WsFillReader"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8472,6 +8702,7 @@
 	}
 	,{
 		"Name":"WsReadStartElement"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8486,6 +8717,7 @@
 	}
 	,{
 		"Name":"WsReadToStartElement"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8503,6 +8735,7 @@
 	}
 	,{
 		"Name":"WsReadStartAttribute"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8518,6 +8751,7 @@
 	}
 	,{
 		"Name":"WsReadEndAttribute"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8532,6 +8766,7 @@
 	}
 	,{
 		"Name":"WsReadNode"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8546,6 +8781,7 @@
 	}
 	,{
 		"Name":"WsSkipNode"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8560,6 +8796,7 @@
 	}
 	,{
 		"Name":"WsReadEndElement"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8574,6 +8811,7 @@
 	}
 	,{
 		"Name":"WsFindAttribute"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8592,6 +8830,7 @@
 	}
 	,{
 		"Name":"WsReadValue"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8609,6 +8848,7 @@
 	}
 	,{
 		"Name":"WsReadChars"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8626,6 +8866,7 @@
 	}
 	,{
 		"Name":"WsReadCharsUtf8"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8643,6 +8884,7 @@
 	}
 	,{
 		"Name":"WsReadBytes"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8660,6 +8902,7 @@
 	}
 	,{
 		"Name":"WsReadArray"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8682,6 +8925,7 @@
 	}
 	,{
 		"Name":"WsGetReaderPosition"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8697,6 +8941,7 @@
 	}
 	,{
 		"Name":"WsSetReaderPosition"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8712,6 +8957,7 @@
 	}
 	,{
 		"Name":"WsMoveReader"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8728,6 +8974,7 @@
 	}
 	,{
 		"Name":"WsCreateWriter"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8744,6 +8991,7 @@
 	}
 	,{
 		"Name":"WsFreeWriter"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -8757,6 +9005,7 @@
 	}
 	,{
 		"Name":"WsSetOutput"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8775,6 +9024,7 @@
 	}
 	,{
 		"Name":"WsSetOutputToBuffer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8792,6 +9042,7 @@
 	}
 	,{
 		"Name":"WsGetWriterProperty"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8809,6 +9060,7 @@
 	}
 	,{
 		"Name":"WsFlushWriter"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8825,6 +9077,7 @@
 	}
 	,{
 		"Name":"WsWriteStartElement"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8842,6 +9095,7 @@
 	}
 	,{
 		"Name":"WsWriteEndStartElement"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8856,6 +9110,7 @@
 	}
 	,{
 		"Name":"WsWriteXmlnsAttribute"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8873,6 +9128,7 @@
 	}
 	,{
 		"Name":"WsWriteStartAttribute"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8891,6 +9147,7 @@
 	}
 	,{
 		"Name":"WsWriteEndAttribute"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8905,6 +9162,7 @@
 	}
 	,{
 		"Name":"WsWriteValue"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8922,6 +9180,7 @@
 	}
 	,{
 		"Name":"WsWriteXmlBuffer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8937,6 +9196,7 @@
 	}
 	,{
 		"Name":"WsReadXmlBuffer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8953,6 +9213,7 @@
 	}
 	,{
 		"Name":"WsWriteXmlBufferToBytes"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8974,6 +9235,7 @@
 	}
 	,{
 		"Name":"WsReadXmlBufferFromBytes"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8995,6 +9257,7 @@
 	}
 	,{
 		"Name":"WsWriteArray"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9016,6 +9279,7 @@
 	}
 	,{
 		"Name":"WsWriteQualifiedName"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9033,6 +9297,7 @@
 	}
 	,{
 		"Name":"WsWriteChars"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9049,6 +9314,7 @@
 	}
 	,{
 		"Name":"WsWriteCharsUtf8"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9065,6 +9331,7 @@
 	}
 	,{
 		"Name":"WsWriteBytes"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9081,6 +9348,7 @@
 	}
 	,{
 		"Name":"WsPushBytes"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9097,6 +9365,7 @@
 	}
 	,{
 		"Name":"WsPullBytes"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9113,6 +9382,7 @@
 	}
 	,{
 		"Name":"WsWriteEndElement"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9127,6 +9397,7 @@
 	}
 	,{
 		"Name":"WsWriteText"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9142,6 +9413,7 @@
 	}
 	,{
 		"Name":"WsWriteStartCData"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9156,6 +9428,7 @@
 	}
 	,{
 		"Name":"WsWriteEndCData"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9170,6 +9443,7 @@
 	}
 	,{
 		"Name":"WsWriteNode"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9185,6 +9459,7 @@
 	}
 	,{
 		"Name":"WsGetPrefixFromNamespace"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9202,6 +9477,7 @@
 	}
 	,{
 		"Name":"WsGetWriterPosition"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9217,6 +9493,7 @@
 	}
 	,{
 		"Name":"WsSetWriterPosition"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9232,6 +9509,7 @@
 	}
 	,{
 		"Name":"WsMoveWriter"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9248,6 +9526,7 @@
 	}
 	,{
 		"Name":"WsTrimXmlWhitespace"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9265,6 +9544,7 @@
 	}
 	,{
 		"Name":"WsVerifyXmlNCName"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9280,6 +9560,7 @@
 	}
 	,{
 		"Name":"WsXmlStringEquals"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9295,6 +9576,7 @@
 	}
 	,{
 		"Name":"WsGetNamespaceFromPrefix"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9312,6 +9594,7 @@
 	}
 	,{
 		"Name":"WsReadQualifiedName"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9330,6 +9613,7 @@
 	}
 	,{
 		"Name":"WsGetXmlAttribute"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9348,6 +9632,7 @@
 	}
 	,{
 		"Name":"WsCopyNode"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9363,6 +9648,7 @@
 	}
 	,{
 		"Name":"WsAsyncExecute"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9381,6 +9667,7 @@
 	}
 	,{
 		"Name":"WsCreateChannel"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9400,6 +9687,7 @@
 	}
 	,{
 		"Name":"WsOpenChannel"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9416,6 +9704,7 @@
 	}
 	,{
 		"Name":"WsSendMessage"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9436,6 +9725,7 @@
 	}
 	,{
 		"Name":"WsReceiveMessage"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9460,6 +9750,7 @@
 	}
 	,{
 		"Name":"WsRequestReply"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9486,6 +9777,7 @@
 	}
 	,{
 		"Name":"WsSendReplyMessage"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9507,6 +9799,7 @@
 	}
 	,{
 		"Name":"WsSendFaultMessageForError"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9527,6 +9820,7 @@
 	}
 	,{
 		"Name":"WsGetChannelProperty"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9544,6 +9838,7 @@
 	}
 	,{
 		"Name":"WsSetChannelProperty"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9561,6 +9856,7 @@
 	}
 	,{
 		"Name":"WsWriteMessageStart"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9577,6 +9873,7 @@
 	}
 	,{
 		"Name":"WsWriteMessageEnd"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9593,6 +9890,7 @@
 	}
 	,{
 		"Name":"WsReadMessageStart"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9609,6 +9907,7 @@
 	}
 	,{
 		"Name":"WsReadMessageEnd"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9625,6 +9924,7 @@
 	}
 	,{
 		"Name":"WsCloseChannel"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9640,6 +9940,7 @@
 	}
 	,{
 		"Name":"WsAbortChannel"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9654,6 +9955,7 @@
 	}
 	,{
 		"Name":"WsFreeChannel"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -9667,6 +9969,7 @@
 	}
 	,{
 		"Name":"WsResetChannel"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9681,6 +9984,7 @@
 	}
 	,{
 		"Name":"WsAbandonMessage"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9696,6 +10000,7 @@
 	}
 	,{
 		"Name":"WsShutdownSessionChannel"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9711,6 +10016,7 @@
 	}
 	,{
 		"Name":"WsGetOperationContextProperty"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9728,6 +10034,7 @@
 	}
 	,{
 		"Name":"WsGetDictionary"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9743,6 +10050,7 @@
 	}
 	,{
 		"Name":"WsReadEndpointAddressExtension"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9763,6 +10071,7 @@
 	}
 	,{
 		"Name":"WsCreateError"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9778,6 +10087,7 @@
 	}
 	,{
 		"Name":"WsAddErrorString"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9792,6 +10102,7 @@
 	}
 	,{
 		"Name":"WsGetErrorString"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9807,6 +10118,7 @@
 	}
 	,{
 		"Name":"WsCopyError"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9821,6 +10133,7 @@
 	}
 	,{
 		"Name":"WsGetErrorProperty"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9837,6 +10150,7 @@
 	}
 	,{
 		"Name":"WsSetErrorProperty"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9853,6 +10167,7 @@
 	}
 	,{
 		"Name":"WsResetError"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9866,6 +10181,7 @@
 	}
 	,{
 		"Name":"WsFreeError"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -9879,6 +10195,7 @@
 	}
 	,{
 		"Name":"WsGetFaultErrorProperty"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9895,6 +10212,7 @@
 	}
 	,{
 		"Name":"WsSetFaultErrorProperty"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9911,6 +10229,7 @@
 	}
 	,{
 		"Name":"WsCreateFaultFromError"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9928,6 +10247,7 @@
 	}
 	,{
 		"Name":"WsSetFaultErrorDetail"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9945,6 +10265,7 @@
 	}
 	,{
 		"Name":"WsGetFaultErrorDetail"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9963,6 +10284,7 @@
 	}
 	,{
 		"Name":"WsCreateHeap"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9981,6 +10303,7 @@
 	}
 	,{
 		"Name":"WsAlloc"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9997,6 +10320,7 @@
 	}
 	,{
 		"Name":"WsGetHeapProperty"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10014,6 +10338,7 @@
 	}
 	,{
 		"Name":"WsResetHeap"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10028,6 +10353,7 @@
 	}
 	,{
 		"Name":"WsFreeHeap"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -10041,6 +10367,7 @@
 	}
 	,{
 		"Name":"WsCreateListener"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10060,6 +10387,7 @@
 	}
 	,{
 		"Name":"WsOpenListener"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10076,6 +10404,7 @@
 	}
 	,{
 		"Name":"WsAcceptChannel"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10092,6 +10421,7 @@
 	}
 	,{
 		"Name":"WsCloseListener"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10107,6 +10437,7 @@
 	}
 	,{
 		"Name":"WsAbortListener"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10121,6 +10452,7 @@
 	}
 	,{
 		"Name":"WsResetListener"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10135,6 +10467,7 @@
 	}
 	,{
 		"Name":"WsFreeListener"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -10148,6 +10481,7 @@
 	}
 	,{
 		"Name":"WsGetListenerProperty"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10165,6 +10499,7 @@
 	}
 	,{
 		"Name":"WsSetListenerProperty"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10182,6 +10517,7 @@
 	}
 	,{
 		"Name":"WsCreateChannelForListener"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10199,6 +10535,7 @@
 	}
 	,{
 		"Name":"WsCreateMessage"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10217,6 +10554,7 @@
 	}
 	,{
 		"Name":"WsCreateMessageForChannel"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10234,6 +10572,7 @@
 	}
 	,{
 		"Name":"WsInitializeMessage"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10250,6 +10589,7 @@
 	}
 	,{
 		"Name":"WsResetMessage"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10264,6 +10604,7 @@
 	}
 	,{
 		"Name":"WsFreeMessage"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -10277,6 +10618,7 @@
 	}
 	,{
 		"Name":"WsGetHeaderAttributes"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10293,6 +10635,7 @@
 	}
 	,{
 		"Name":"WsGetHeader"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10313,6 +10656,7 @@
 	}
 	,{
 		"Name":"WsGetCustomHeader"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10335,6 +10679,7 @@
 	}
 	,{
 		"Name":"WsRemoveHeader"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10350,6 +10695,7 @@
 	}
 	,{
 		"Name":"WsSetHeader"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10369,6 +10715,7 @@
 	}
 	,{
 		"Name":"WsRemoveCustomHeader"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10385,6 +10732,7 @@
 	}
 	,{
 		"Name":"WsAddCustomHeader"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10404,6 +10752,7 @@
 	}
 	,{
 		"Name":"WsAddMappedHeader"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10423,6 +10772,7 @@
 	}
 	,{
 		"Name":"WsRemoveMappedHeader"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10438,6 +10788,7 @@
 	}
 	,{
 		"Name":"WsGetMappedHeader"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10460,6 +10811,7 @@
 	}
 	,{
 		"Name":"WsWriteBody"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10478,6 +10830,7 @@
 	}
 	,{
 		"Name":"WsReadBody"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10497,6 +10850,7 @@
 	}
 	,{
 		"Name":"WsWriteEnvelopeStart"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10514,6 +10868,7 @@
 	}
 	,{
 		"Name":"WsWriteEnvelopeEnd"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10528,6 +10883,7 @@
 	}
 	,{
 		"Name":"WsReadEnvelopeStart"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10545,6 +10901,7 @@
 	}
 	,{
 		"Name":"WsReadEnvelopeEnd"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10559,6 +10916,7 @@
 	}
 	,{
 		"Name":"WsGetMessageProperty"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10576,6 +10934,7 @@
 	}
 	,{
 		"Name":"WsSetMessageProperty"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10593,6 +10952,7 @@
 	}
 	,{
 		"Name":"WsAddressMessage"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10608,6 +10968,7 @@
 	}
 	,{
 		"Name":"WsCheckMustUnderstandHeaders"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10622,6 +10983,7 @@
 	}
 	,{
 		"Name":"WsMarkHeaderAsUnderstood"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10637,6 +10999,7 @@
 	}
 	,{
 		"Name":"WsFillBody"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10653,6 +11016,7 @@
 	}
 	,{
 		"Name":"WsFlushBody"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10669,6 +11033,7 @@
 	}
 	,{
 		"Name":"WsRequestSecurityToken"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10687,6 +11052,7 @@
 	}
 	,{
 		"Name":"WsGetSecurityTokenProperty"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10705,6 +11071,7 @@
 	}
 	,{
 		"Name":"WsCreateXmlSecurityToken"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10723,6 +11090,7 @@
 	}
 	,{
 		"Name":"WsFreeSecurityToken"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -10736,6 +11104,7 @@
 	}
 	,{
 		"Name":"WsRevokeSecurityContext"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10750,6 +11119,7 @@
 	}
 	,{
 		"Name":"WsGetSecurityContextProperty"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10767,6 +11137,7 @@
 	}
 	,{
 		"Name":"WsReadElement"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10786,6 +11157,7 @@
 	}
 	,{
 		"Name":"WsReadAttribute"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10805,6 +11177,7 @@
 	}
 	,{
 		"Name":"WsReadType"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10826,6 +11199,7 @@
 	}
 	,{
 		"Name":"WsWriteElement"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10844,6 +11218,7 @@
 	}
 	,{
 		"Name":"WsWriteAttribute"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10862,6 +11237,7 @@
 	}
 	,{
 		"Name":"WsWriteType"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10882,6 +11258,7 @@
 	}
 	,{
 		"Name":"WsRegisterOperationForCancel"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10899,6 +11276,7 @@
 	}
 	,{
 		"Name":"WsGetServiceHostProperty"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10916,6 +11294,7 @@
 	}
 	,{
 		"Name":"WsCreateServiceHost"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10934,6 +11313,7 @@
 	}
 	,{
 		"Name":"WsOpenServiceHost"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10949,6 +11329,7 @@
 	}
 	,{
 		"Name":"WsCloseServiceHost"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10964,6 +11345,7 @@
 	}
 	,{
 		"Name":"WsAbortServiceHost"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10978,6 +11360,7 @@
 	}
 	,{
 		"Name":"WsFreeServiceHost"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -10991,6 +11374,7 @@
 	}
 	,{
 		"Name":"WsResetServiceHost"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11005,6 +11389,7 @@
 	}
 	,{
 		"Name":"WsGetServiceProxyProperty"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11022,6 +11407,7 @@
 	}
 	,{
 		"Name":"WsCreateServiceProxy"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11043,6 +11429,7 @@
 	}
 	,{
 		"Name":"WsOpenServiceProxy"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11059,6 +11446,7 @@
 	}
 	,{
 		"Name":"WsCloseServiceProxy"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11074,6 +11462,7 @@
 	}
 	,{
 		"Name":"WsAbortServiceProxy"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11088,6 +11477,7 @@
 	}
 	,{
 		"Name":"WsFreeServiceProxy"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -11101,6 +11491,7 @@
 	}
 	,{
 		"Name":"WsResetServiceProxy"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11115,6 +11506,7 @@
 	}
 	,{
 		"Name":"WsAbandonCall"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11130,6 +11522,7 @@
 	}
 	,{
 		"Name":"WsCall"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11150,6 +11543,7 @@
 	}
 	,{
 		"Name":"WsDecodeUrl"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11167,6 +11561,7 @@
 	}
 	,{
 		"Name":"WsEncodeUrl"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11184,6 +11579,7 @@
 	}
 	,{
 		"Name":"WsCombineUrl"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11202,6 +11598,7 @@
 	}
 	,{
 		"Name":"WsDateTimeToFileTime"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11217,6 +11614,7 @@
 	}
 	,{
 		"Name":"WsFileTimeToDateTime"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11232,6 +11630,7 @@
 	}
 	,{
 		"Name":"WsCreateMetadata"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11248,6 +11647,7 @@
 	}
 	,{
 		"Name":"WsReadMetadata"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11264,6 +11664,7 @@
 	}
 	,{
 		"Name":"WsFreeMetadata"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -11277,6 +11678,7 @@
 	}
 	,{
 		"Name":"WsResetMetadata"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11291,6 +11693,7 @@
 	}
 	,{
 		"Name":"WsGetMetadataProperty"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11308,6 +11711,7 @@
 	}
 	,{
 		"Name":"WsGetMissingMetadataDocumentAddress"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11323,6 +11727,7 @@
 	}
 	,{
 		"Name":"WsGetMetadataEndpoints"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11338,6 +11743,7 @@
 	}
 	,{
 		"Name":"WsMatchPolicyAlternative"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11356,6 +11762,7 @@
 	}
 	,{
 		"Name":"WsGetPolicyProperty"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11373,6 +11780,7 @@
 	}
 	,{
 		"Name":"WsGetPolicyAlternativeCount"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11388,6 +11796,7 @@
 	}
 	,{
 		"Name":"WsCreateServiceProxyFromTemplate"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11410,6 +11819,7 @@
 	}
 	,{
 		"Name":"WsCreateServiceEndpointFromTemplate"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webservices"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11436,6 +11846,7 @@
 	}
 	,{
 		"Name":"WebAuthNGetApiVersionNumber"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webauthn"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -11448,6 +11859,7 @@
 	}
 	,{
 		"Name":"WebAuthNIsUserVerifyingPlatformAuthenticatorAvailable"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webauthn"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11461,6 +11873,7 @@
 	}
 	,{
 		"Name":"WebAuthNAuthenticatorMakeCredential"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webauthn"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11480,6 +11893,7 @@
 	}
 	,{
 		"Name":"WebAuthNAuthenticatorGetAssertion"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webauthn"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11497,6 +11911,7 @@
 	}
 	,{
 		"Name":"WebAuthNFreeCredentialAttestation"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webauthn"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -11510,6 +11925,7 @@
 	}
 	,{
 		"Name":"WebAuthNFreeAssertion"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webauthn"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -11523,6 +11939,7 @@
 	}
 	,{
 		"Name":"WebAuthNGetCancellationId"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webauthn"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11536,6 +11953,7 @@
 	}
 	,{
 		"Name":"WebAuthNCancelCurrentOperation"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webauthn"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11549,6 +11967,7 @@
 	}
 	,{
 		"Name":"WebAuthNGetErrorName"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webauthn"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11562,6 +11981,7 @@
 	}
 	,{
 		"Name":"WebAuthNGetW3CExceptionDOMError"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"webauthn"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}

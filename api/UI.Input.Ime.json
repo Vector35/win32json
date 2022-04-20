@@ -2,6 +2,34 @@
 
 "Constants":[
 	{
+		"Name":"szImeJapan"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MSIME.Japan"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"szImeKorea"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MSIME.Korea"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"szImeChina"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MSIME.China"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"szImeTaiwan"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MSIME.Taiwan"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"CLSID_VERSION_DEPENDENT_MSIME_JAPANESE"
 		,"Type":{"Kind":"Native","Name":"Guid"}
 		,"ValueType":"String"
@@ -671,6 +699,20 @@
 		,"Type":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ValueType":"Int32"
 		,"Value":-2147192053
+		,"Attrs":[]
+	}
+	,{
+		"Name":"cbCommentMax"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":256
+		,"Attrs":[]
+	}
+	,{
+		"Name":"wchPrivate1"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":57344
 		,"Attrs":[]
 	}
 	,{
@@ -1829,10 +1871,31 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"RWM_SERVICE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MSIMEService"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"FID_MSIME_VERSION"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":0
+		,"Attrs":[]
+	}
+	,{
+		"Name":"RWM_UIREADY"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MSIMEUIReady"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"RWM_MOUSE"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MSIMEMouseOperation"
 		,"Attrs":[]
 	}
 	,{
@@ -1899,6 +1962,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"RWM_RECONVERT"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MSIMEReconvert"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"FID_RECONVERT_VERSION"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -1913,6 +1983,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"RWM_RECONVERTREQUEST"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MSIMEReconvertRequest"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"VERSION_DOCUMENTFEED"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -1920,10 +1997,31 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"RWM_DOCUMENTFEED"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MSIMEDocumentFeed"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"VERSION_QUERYPOSITION"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"RWM_QUERYPOSITION"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MSIMEQueryPosition"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"RWM_MODEBIAS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MSIMEModeBias"
 		,"Attrs":[]
 	}
 	,{
@@ -1983,6 +2081,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"RWM_SHOWIMEPAD"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MSIMEShowImePad"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"SHOWIMEPAD_DEFAULT"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -2001,6 +2106,27 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":2
+		,"Attrs":[]
+	}
+	,{
+		"Name":"RWM_KEYMAP"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MSIMEKeyMap"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"RWM_CHGKEYMAP"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MSIMEChangeKeyMap"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"RWM_NTFYKEYMAP"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MSIMENotifyKeyMap"
 		,"Attrs":[]
 	}
 	,{
@@ -2134,6 +2260,13 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":7
+		,"Attrs":[]
+	}
+	,{
+		"Name":"RWM_RECONVERTOPTIONS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"MSIMEReconvertOptions"
 		,"Attrs":[]
 	}
 	,{
@@ -4747,7 +4880,9 @@
 		"Name":"IMCENUMPROC"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -4761,7 +4896,9 @@
 		"Name":"REGISTERWORDENUMPROCA"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -4777,7 +4914,9 @@
 		"Name":"REGISTERWORDENUMPROCW"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -4825,6 +4964,7 @@
 		,"Methods":[
 			{
 				"Name":"IsDefaultIME"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -4838,6 +4978,7 @@
 			}
 			,{
 				"Name":"SetDefaultIME"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -4849,6 +4990,7 @@
 			}
 			,{
 				"Name":"InvokeWordRegDialog"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -4861,6 +5003,7 @@
 			}
 			,{
 				"Name":"InvokeDictToolDialog"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -4998,6 +5141,7 @@
 		,"Methods":[
 			{
 				"Name":"Open"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -5009,6 +5153,7 @@
 			}
 			,{
 				"Name":"Close"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -5020,6 +5165,7 @@
 			}
 			,{
 				"Name":"GetJMorphResult"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -5037,6 +5183,7 @@
 			}
 			,{
 				"Name":"GetConversionModeCaps"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -5049,6 +5196,7 @@
 			}
 			,{
 				"Name":"GetPhonetic"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -5064,6 +5212,7 @@
 			}
 			,{
 				"Name":"GetConversion"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -5280,7 +5429,9 @@
 		"Name":"PFNLOG"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -5300,6 +5451,7 @@
 		,"Methods":[
 			{
 				"Name":"Open"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -5313,6 +5465,7 @@
 			}
 			,{
 				"Name":"Close"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -5324,6 +5477,7 @@
 			}
 			,{
 				"Name":"GetHeader"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -5339,6 +5493,7 @@
 			}
 			,{
 				"Name":"DisplayProperty"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -5351,6 +5506,7 @@
 			}
 			,{
 				"Name":"GetPosTable"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -5364,6 +5520,7 @@
 			}
 			,{
 				"Name":"GetWords"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -5384,6 +5541,7 @@
 			}
 			,{
 				"Name":"NextWords"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -5398,6 +5556,7 @@
 			}
 			,{
 				"Name":"Create"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -5411,6 +5570,7 @@
 			}
 			,{
 				"Name":"SetHeader"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -5423,6 +5583,7 @@
 			}
 			,{
 				"Name":"ExistWord"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -5435,6 +5596,7 @@
 			}
 			,{
 				"Name":"ExistDependency"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -5447,6 +5609,7 @@
 			}
 			,{
 				"Name":"RegisterWord"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -5460,6 +5623,7 @@
 			}
 			,{
 				"Name":"RegisterDependency"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -5473,6 +5637,7 @@
 			}
 			,{
 				"Name":"GetDependencies"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -5495,6 +5660,7 @@
 			}
 			,{
 				"Name":"NextDependencies"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -5509,6 +5675,7 @@
 			}
 			,{
 				"Name":"ConvertFromOldMSIME"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -5523,6 +5690,7 @@
 			}
 			,{
 				"Name":"ConvertFromUserToSys"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -5678,7 +5846,9 @@
 		"Name":"fpCreateIFECommonInstanceType"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -5691,7 +5861,9 @@
 		"Name":"fpCreateIFELanguageInstanceType"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -5705,7 +5877,9 @@
 		"Name":"fpCreateIFEDictionaryInstanceType"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -6097,6 +6271,7 @@
 		,"Methods":[
 			{
 				"Name":"GetAppletIIDList"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6120,6 +6295,7 @@
 		,"Methods":[
 			{
 				"Name":"Initialize"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6132,6 +6308,7 @@
 			}
 			,{
 				"Name":"Terminate"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6143,6 +6320,7 @@
 			}
 			,{
 				"Name":"GetAppletConfig"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6155,6 +6333,7 @@
 			}
 			,{
 				"Name":"CreateUI"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6168,6 +6347,7 @@
 			}
 			,{
 				"Name":"Notify"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6193,6 +6373,7 @@
 		,"Methods":[
 			{
 				"Name":"Request"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6218,6 +6399,7 @@
 		,"Methods":[
 			{
 				"Name":"GetDictionariesInUse"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6232,6 +6414,7 @@
 			}
 			,{
 				"Name":"DeleteDictionary"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6261,6 +6444,7 @@
 		,"Methods":[
 			{
 				"Name":"Clone"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6273,6 +6457,7 @@
 			}
 			,{
 				"Name":"Next"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6287,6 +6472,7 @@
 			}
 			,{
 				"Name":"Reset"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6298,6 +6484,7 @@
 			}
 			,{
 				"Name":"Skip"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6320,6 +6507,7 @@
 		,"Methods":[
 			{
 				"Name":"Clone"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6332,6 +6520,7 @@
 			}
 			,{
 				"Name":"Next"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6346,6 +6535,7 @@
 			}
 			,{
 				"Name":"Reset"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6357,6 +6547,7 @@
 			}
 			,{
 				"Name":"Skip"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6379,6 +6570,7 @@
 		,"Methods":[
 			{
 				"Name":"Clone"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6391,6 +6583,7 @@
 			}
 			,{
 				"Name":"Next"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6405,6 +6598,7 @@
 			}
 			,{
 				"Name":"Reset"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6416,6 +6610,7 @@
 			}
 			,{
 				"Name":"Skip"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6438,6 +6633,7 @@
 		,"Methods":[
 			{
 				"Name":"RegisterIME"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6453,6 +6649,7 @@
 			}
 			,{
 				"Name":"UnregisterIME"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6475,6 +6672,7 @@
 		,"Methods":[
 			{
 				"Name":"Start"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6486,6 +6684,7 @@
 			}
 			,{
 				"Name":"End"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6497,6 +6696,7 @@
 			}
 			,{
 				"Name":"OnTranslateMessage"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6509,6 +6709,7 @@
 			}
 			,{
 				"Name":"Pause"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6521,6 +6722,7 @@
 			}
 			,{
 				"Name":"Resume"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6543,6 +6745,7 @@
 		,"Methods":[
 			{
 				"Name":"AssociateContext"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6557,6 +6760,7 @@
 			}
 			,{
 				"Name":"ConfigureIMEA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6572,6 +6776,7 @@
 			}
 			,{
 				"Name":"ConfigureIMEW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6587,6 +6792,7 @@
 			}
 			,{
 				"Name":"CreateContext"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6599,6 +6805,7 @@
 			}
 			,{
 				"Name":"DestroyContext"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6611,6 +6818,7 @@
 			}
 			,{
 				"Name":"EnumRegisterWordA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6628,6 +6836,7 @@
 			}
 			,{
 				"Name":"EnumRegisterWordW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6645,6 +6854,7 @@
 			}
 			,{
 				"Name":"EscapeA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6661,6 +6871,7 @@
 			}
 			,{
 				"Name":"EscapeW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6677,6 +6888,7 @@
 			}
 			,{
 				"Name":"GetCandidateListA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6693,6 +6905,7 @@
 			}
 			,{
 				"Name":"GetCandidateListW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6709,6 +6922,7 @@
 			}
 			,{
 				"Name":"GetCandidateListCountA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6723,6 +6937,7 @@
 			}
 			,{
 				"Name":"GetCandidateListCountW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6737,6 +6952,7 @@
 			}
 			,{
 				"Name":"GetCandidateWindow"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6751,6 +6967,7 @@
 			}
 			,{
 				"Name":"GetCompositionFontA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6764,6 +6981,7 @@
 			}
 			,{
 				"Name":"GetCompositionFontW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6777,6 +6995,7 @@
 			}
 			,{
 				"Name":"GetCompositionStringA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6793,6 +7012,7 @@
 			}
 			,{
 				"Name":"GetCompositionStringW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6809,6 +7029,7 @@
 			}
 			,{
 				"Name":"GetCompositionWindow"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6822,6 +7043,7 @@
 			}
 			,{
 				"Name":"GetContext"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6835,6 +7057,7 @@
 			}
 			,{
 				"Name":"GetConversionListA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6853,6 +7076,7 @@
 			}
 			,{
 				"Name":"GetConversionListW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6871,6 +7095,7 @@
 			}
 			,{
 				"Name":"GetConversionStatus"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6885,6 +7110,7 @@
 			}
 			,{
 				"Name":"GetDefaultIMEWnd"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6898,6 +7124,7 @@
 			}
 			,{
 				"Name":"GetDescriptionA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6913,6 +7140,7 @@
 			}
 			,{
 				"Name":"GetDescriptionW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6928,6 +7156,7 @@
 			}
 			,{
 				"Name":"GetGuideLineA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6944,6 +7173,7 @@
 			}
 			,{
 				"Name":"GetGuideLineW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6960,6 +7190,7 @@
 			}
 			,{
 				"Name":"GetIMEFileNameA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6975,6 +7206,7 @@
 			}
 			,{
 				"Name":"GetIMEFileNameW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -6990,6 +7222,7 @@
 			}
 			,{
 				"Name":"GetOpenStatus"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7002,6 +7235,7 @@
 			}
 			,{
 				"Name":"GetProperty"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7016,6 +7250,7 @@
 			}
 			,{
 				"Name":"GetRegisterWordStyleA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7031,6 +7266,7 @@
 			}
 			,{
 				"Name":"GetRegisterWordStyleW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7046,6 +7282,7 @@
 			}
 			,{
 				"Name":"GetStatusWindowPos"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7059,6 +7296,7 @@
 			}
 			,{
 				"Name":"GetVirtualKey"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7072,6 +7310,7 @@
 			}
 			,{
 				"Name":"InstallIMEA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7086,6 +7325,7 @@
 			}
 			,{
 				"Name":"InstallIMEW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7100,6 +7340,7 @@
 			}
 			,{
 				"Name":"IsIME"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7112,6 +7353,7 @@
 			}
 			,{
 				"Name":"IsUIMessageA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7127,6 +7369,7 @@
 			}
 			,{
 				"Name":"IsUIMessageW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7142,6 +7385,7 @@
 			}
 			,{
 				"Name":"NotifyIME"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7157,6 +7401,7 @@
 			}
 			,{
 				"Name":"RegisterWordA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7172,6 +7417,7 @@
 			}
 			,{
 				"Name":"RegisterWordW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7187,6 +7433,7 @@
 			}
 			,{
 				"Name":"ReleaseContext"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7200,6 +7447,7 @@
 			}
 			,{
 				"Name":"SetCandidateWindow"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7213,6 +7461,7 @@
 			}
 			,{
 				"Name":"SetCompositionFontA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7226,6 +7475,7 @@
 			}
 			,{
 				"Name":"SetCompositionFontW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7239,6 +7489,7 @@
 			}
 			,{
 				"Name":"SetCompositionStringA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7256,6 +7507,7 @@
 			}
 			,{
 				"Name":"SetCompositionStringW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7273,6 +7525,7 @@
 			}
 			,{
 				"Name":"SetCompositionWindow"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7286,6 +7539,7 @@
 			}
 			,{
 				"Name":"SetConversionStatus"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7300,6 +7554,7 @@
 			}
 			,{
 				"Name":"SetOpenStatus"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7313,6 +7568,7 @@
 			}
 			,{
 				"Name":"SetStatusWindowPos"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7326,6 +7582,7 @@
 			}
 			,{
 				"Name":"SimulateHotKey"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7339,6 +7596,7 @@
 			}
 			,{
 				"Name":"UnregisterWordA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7354,6 +7612,7 @@
 			}
 			,{
 				"Name":"UnregisterWordW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7369,6 +7628,7 @@
 			}
 			,{
 				"Name":"Activate"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7381,6 +7641,7 @@
 			}
 			,{
 				"Name":"Deactivate"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7392,6 +7653,7 @@
 			}
 			,{
 				"Name":"OnDefWindowProc"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7408,6 +7670,7 @@
 			}
 			,{
 				"Name":"FilterClientWindows"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7421,6 +7684,7 @@
 			}
 			,{
 				"Name":"GetCodePageA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7434,6 +7698,7 @@
 			}
 			,{
 				"Name":"GetLangId"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7447,6 +7712,7 @@
 			}
 			,{
 				"Name":"AssociateContextEx"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7461,6 +7727,7 @@
 			}
 			,{
 				"Name":"DisableIME"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7473,6 +7740,7 @@
 			}
 			,{
 				"Name":"GetImeMenuItemsA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7491,6 +7759,7 @@
 			}
 			,{
 				"Name":"GetImeMenuItemsW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7509,6 +7778,7 @@
 			}
 			,{
 				"Name":"EnumInputContext"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7532,6 +7802,7 @@
 		,"Methods":[
 			{
 				"Name":"AssociateContext"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7546,6 +7817,7 @@
 			}
 			,{
 				"Name":"ConfigureIMEA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7561,6 +7833,7 @@
 			}
 			,{
 				"Name":"ConfigureIMEW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7576,6 +7849,7 @@
 			}
 			,{
 				"Name":"CreateContext"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7588,6 +7862,7 @@
 			}
 			,{
 				"Name":"DestroyContext"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7600,6 +7875,7 @@
 			}
 			,{
 				"Name":"EnumRegisterWordA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7617,6 +7893,7 @@
 			}
 			,{
 				"Name":"EnumRegisterWordW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7634,6 +7911,7 @@
 			}
 			,{
 				"Name":"EscapeA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7650,6 +7928,7 @@
 			}
 			,{
 				"Name":"EscapeW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7666,6 +7945,7 @@
 			}
 			,{
 				"Name":"GetCandidateListA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7682,6 +7962,7 @@
 			}
 			,{
 				"Name":"GetCandidateListW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7698,6 +7979,7 @@
 			}
 			,{
 				"Name":"GetCandidateListCountA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7712,6 +7994,7 @@
 			}
 			,{
 				"Name":"GetCandidateListCountW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7726,6 +8009,7 @@
 			}
 			,{
 				"Name":"GetCandidateWindow"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7740,6 +8024,7 @@
 			}
 			,{
 				"Name":"GetCompositionFontA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7753,6 +8038,7 @@
 			}
 			,{
 				"Name":"GetCompositionFontW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7766,6 +8052,7 @@
 			}
 			,{
 				"Name":"GetCompositionStringA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7782,6 +8069,7 @@
 			}
 			,{
 				"Name":"GetCompositionStringW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7798,6 +8086,7 @@
 			}
 			,{
 				"Name":"GetCompositionWindow"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7811,6 +8100,7 @@
 			}
 			,{
 				"Name":"GetContext"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7824,6 +8114,7 @@
 			}
 			,{
 				"Name":"GetConversionListA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7842,6 +8133,7 @@
 			}
 			,{
 				"Name":"GetConversionListW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7860,6 +8152,7 @@
 			}
 			,{
 				"Name":"GetConversionStatus"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7874,6 +8167,7 @@
 			}
 			,{
 				"Name":"GetDefaultIMEWnd"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7887,6 +8181,7 @@
 			}
 			,{
 				"Name":"GetDescriptionA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7902,6 +8197,7 @@
 			}
 			,{
 				"Name":"GetDescriptionW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7917,6 +8213,7 @@
 			}
 			,{
 				"Name":"GetGuideLineA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7933,6 +8230,7 @@
 			}
 			,{
 				"Name":"GetGuideLineW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7949,6 +8247,7 @@
 			}
 			,{
 				"Name":"GetIMEFileNameA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7964,6 +8263,7 @@
 			}
 			,{
 				"Name":"GetIMEFileNameW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7979,6 +8279,7 @@
 			}
 			,{
 				"Name":"GetOpenStatus"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -7991,6 +8292,7 @@
 			}
 			,{
 				"Name":"GetProperty"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8005,6 +8307,7 @@
 			}
 			,{
 				"Name":"GetRegisterWordStyleA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8020,6 +8323,7 @@
 			}
 			,{
 				"Name":"GetRegisterWordStyleW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8035,6 +8339,7 @@
 			}
 			,{
 				"Name":"GetStatusWindowPos"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8048,6 +8353,7 @@
 			}
 			,{
 				"Name":"GetVirtualKey"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8061,6 +8367,7 @@
 			}
 			,{
 				"Name":"InstallIMEA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8075,6 +8382,7 @@
 			}
 			,{
 				"Name":"InstallIMEW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8089,6 +8397,7 @@
 			}
 			,{
 				"Name":"IsIME"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8101,6 +8410,7 @@
 			}
 			,{
 				"Name":"IsUIMessageA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8116,6 +8426,7 @@
 			}
 			,{
 				"Name":"IsUIMessageW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8131,6 +8442,7 @@
 			}
 			,{
 				"Name":"NotifyIME"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8146,6 +8458,7 @@
 			}
 			,{
 				"Name":"RegisterWordA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8161,6 +8474,7 @@
 			}
 			,{
 				"Name":"RegisterWordW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8176,6 +8490,7 @@
 			}
 			,{
 				"Name":"ReleaseContext"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8189,6 +8504,7 @@
 			}
 			,{
 				"Name":"SetCandidateWindow"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8202,6 +8518,7 @@
 			}
 			,{
 				"Name":"SetCompositionFontA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8215,6 +8532,7 @@
 			}
 			,{
 				"Name":"SetCompositionFontW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8228,6 +8546,7 @@
 			}
 			,{
 				"Name":"SetCompositionStringA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8245,6 +8564,7 @@
 			}
 			,{
 				"Name":"SetCompositionStringW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8262,6 +8582,7 @@
 			}
 			,{
 				"Name":"SetCompositionWindow"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8275,6 +8596,7 @@
 			}
 			,{
 				"Name":"SetConversionStatus"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8289,6 +8611,7 @@
 			}
 			,{
 				"Name":"SetOpenStatus"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8302,6 +8625,7 @@
 			}
 			,{
 				"Name":"SetStatusWindowPos"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8315,6 +8639,7 @@
 			}
 			,{
 				"Name":"SimulateHotKey"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8328,6 +8653,7 @@
 			}
 			,{
 				"Name":"UnregisterWordA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8343,6 +8669,7 @@
 			}
 			,{
 				"Name":"UnregisterWordW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8358,6 +8685,7 @@
 			}
 			,{
 				"Name":"GenerateMessage"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8370,6 +8698,7 @@
 			}
 			,{
 				"Name":"LockIMC"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8383,6 +8712,7 @@
 			}
 			,{
 				"Name":"UnlockIMC"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8395,6 +8725,7 @@
 			}
 			,{
 				"Name":"GetIMCLockCount"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8408,6 +8739,7 @@
 			}
 			,{
 				"Name":"CreateIMCC"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8421,6 +8753,7 @@
 			}
 			,{
 				"Name":"DestroyIMCC"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8433,6 +8766,7 @@
 			}
 			,{
 				"Name":"LockIMCC"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8446,6 +8780,7 @@
 			}
 			,{
 				"Name":"UnlockIMCC"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8458,6 +8793,7 @@
 			}
 			,{
 				"Name":"ReSizeIMCC"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8472,6 +8808,7 @@
 			}
 			,{
 				"Name":"GetIMCCSize"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8485,6 +8822,7 @@
 			}
 			,{
 				"Name":"GetIMCCLockCount"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8498,6 +8836,7 @@
 			}
 			,{
 				"Name":"GetHotKey"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8513,6 +8852,7 @@
 			}
 			,{
 				"Name":"SetHotKey"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8528,6 +8868,7 @@
 			}
 			,{
 				"Name":"CreateSoftKeyboard"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8544,6 +8885,7 @@
 			}
 			,{
 				"Name":"DestroySoftKeyboard"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8556,6 +8898,7 @@
 			}
 			,{
 				"Name":"ShowSoftKeyboard"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8569,6 +8912,7 @@
 			}
 			,{
 				"Name":"GetCodePageA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8582,6 +8926,7 @@
 			}
 			,{
 				"Name":"GetLangId"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8595,6 +8940,7 @@
 			}
 			,{
 				"Name":"KeybdEvent"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8611,6 +8957,7 @@
 			}
 			,{
 				"Name":"LockModal"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8622,6 +8969,7 @@
 			}
 			,{
 				"Name":"UnlockModal"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8633,6 +8981,7 @@
 			}
 			,{
 				"Name":"AssociateContextEx"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8647,6 +8996,7 @@
 			}
 			,{
 				"Name":"DisableIME"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8659,6 +9009,7 @@
 			}
 			,{
 				"Name":"GetImeMenuItemsA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8677,6 +9028,7 @@
 			}
 			,{
 				"Name":"GetImeMenuItemsW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8695,6 +9047,7 @@
 			}
 			,{
 				"Name":"EnumInputContext"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8708,6 +9061,7 @@
 			}
 			,{
 				"Name":"RequestMessageA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8723,6 +9077,7 @@
 			}
 			,{
 				"Name":"RequestMessageW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8738,6 +9093,7 @@
 			}
 			,{
 				"Name":"SendIMCA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8754,6 +9110,7 @@
 			}
 			,{
 				"Name":"SendIMCW"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8770,6 +9127,7 @@
 			}
 			,{
 				"Name":"IsSleeping"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8791,6 +9149,7 @@
 		,"Methods":[
 			{
 				"Name":"Inquire"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8806,6 +9165,7 @@
 			}
 			,{
 				"Name":"ConversionList"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8823,6 +9183,7 @@
 			}
 			,{
 				"Name":"Configure"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8838,6 +9199,7 @@
 			}
 			,{
 				"Name":"Destroy"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8850,6 +9212,7 @@
 			}
 			,{
 				"Name":"Escape"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8865,6 +9228,7 @@
 			}
 			,{
 				"Name":"SetActiveContext"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8878,6 +9242,7 @@
 			}
 			,{
 				"Name":"ProcessKey"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8893,6 +9258,7 @@
 			}
 			,{
 				"Name":"Notify"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8908,6 +9274,7 @@
 			}
 			,{
 				"Name":"Select"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8921,6 +9288,7 @@
 			}
 			,{
 				"Name":"SetCompositionString"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8938,6 +9306,7 @@
 			}
 			,{
 				"Name":"ToAsciiEx"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8956,6 +9325,7 @@
 			}
 			,{
 				"Name":"RegisterWord"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8970,6 +9340,7 @@
 			}
 			,{
 				"Name":"UnregisterWord"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8984,6 +9355,7 @@
 			}
 			,{
 				"Name":"GetRegisterWordStyle"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -8998,6 +9370,7 @@
 			}
 			,{
 				"Name":"EnumRegisterWord"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -9014,6 +9387,7 @@
 			}
 			,{
 				"Name":"GetCodePageA"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -9026,6 +9400,7 @@
 			}
 			,{
 				"Name":"GetLangId"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -9048,6 +9423,7 @@
 		,"Methods":[
 			{
 				"Name":"Sleep"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -9059,6 +9435,7 @@
 			}
 			,{
 				"Name":"Unsleep"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -9076,6 +9453,7 @@
 ,"Functions":[
 	{
 		"Name":"ImmInstallIMEA"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HKL","TargetKind":"Default","Api":"UI.TextServices","Parents":[]}
@@ -9090,6 +9468,7 @@
 	}
 	,{
 		"Name":"ImmInstallIMEW"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HKL","TargetKind":"Default","Api":"UI.TextServices","Parents":[]}
@@ -9104,6 +9483,7 @@
 	}
 	,{
 		"Name":"ImmGetDefaultIMEWnd"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9117,6 +9497,7 @@
 	}
 	,{
 		"Name":"ImmGetDescriptionA"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9132,6 +9513,7 @@
 	}
 	,{
 		"Name":"ImmGetDescriptionW"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9147,6 +9529,7 @@
 	}
 	,{
 		"Name":"ImmGetIMEFileNameA"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9162,6 +9545,7 @@
 	}
 	,{
 		"Name":"ImmGetIMEFileNameW"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9177,6 +9561,7 @@
 	}
 	,{
 		"Name":"ImmGetProperty"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9191,6 +9576,7 @@
 	}
 	,{
 		"Name":"ImmIsIME"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9204,6 +9590,7 @@
 	}
 	,{
 		"Name":"ImmSimulateHotKey"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9218,6 +9605,7 @@
 	}
 	,{
 		"Name":"ImmCreateContext"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HIMC","TargetKind":"Default","Api":"Globalization","Parents":[]}
@@ -9230,6 +9618,7 @@
 	}
 	,{
 		"Name":"ImmDestroyContext"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9243,6 +9632,7 @@
 	}
 	,{
 		"Name":"ImmGetContext"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HIMC","TargetKind":"Default","Api":"Globalization","Parents":[]}
@@ -9256,6 +9646,7 @@
 	}
 	,{
 		"Name":"ImmReleaseContext"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9270,6 +9661,7 @@
 	}
 	,{
 		"Name":"ImmAssociateContext"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HIMC","TargetKind":"Default","Api":"Globalization","Parents":[]}
@@ -9284,6 +9676,7 @@
 	}
 	,{
 		"Name":"ImmAssociateContextEx"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9299,6 +9692,7 @@
 	}
 	,{
 		"Name":"ImmGetCompositionStringA"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
@@ -9315,6 +9709,7 @@
 	}
 	,{
 		"Name":"ImmGetCompositionStringW"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
@@ -9331,6 +9726,7 @@
 	}
 	,{
 		"Name":"ImmSetCompositionStringA"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9349,6 +9745,7 @@
 	}
 	,{
 		"Name":"ImmSetCompositionStringW"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9367,6 +9764,7 @@
 	}
 	,{
 		"Name":"ImmGetCandidateListCountA"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9381,6 +9779,7 @@
 	}
 	,{
 		"Name":"ImmGetCandidateListCountW"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9395,6 +9794,7 @@
 	}
 	,{
 		"Name":"ImmGetCandidateListA"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9411,6 +9811,7 @@
 	}
 	,{
 		"Name":"ImmGetCandidateListW"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9427,6 +9828,7 @@
 	}
 	,{
 		"Name":"ImmGetGuideLineA"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9443,6 +9845,7 @@
 	}
 	,{
 		"Name":"ImmGetGuideLineW"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9459,6 +9862,7 @@
 	}
 	,{
 		"Name":"ImmGetConversionStatus"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9474,6 +9878,7 @@
 	}
 	,{
 		"Name":"ImmSetConversionStatus"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9489,6 +9894,7 @@
 	}
 	,{
 		"Name":"ImmGetOpenStatus"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9502,6 +9908,7 @@
 	}
 	,{
 		"Name":"ImmSetOpenStatus"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9516,6 +9923,7 @@
 	}
 	,{
 		"Name":"ImmGetCompositionFontA"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9530,6 +9938,7 @@
 	}
 	,{
 		"Name":"ImmGetCompositionFontW"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9544,6 +9953,7 @@
 	}
 	,{
 		"Name":"ImmSetCompositionFontA"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9558,6 +9968,7 @@
 	}
 	,{
 		"Name":"ImmSetCompositionFontW"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9572,6 +9983,7 @@
 	}
 	,{
 		"Name":"ImmConfigureIMEA"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9588,6 +10000,7 @@
 	}
 	,{
 		"Name":"ImmConfigureIMEW"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9604,6 +10017,7 @@
 	}
 	,{
 		"Name":"ImmEscapeA"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"LRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9620,6 +10034,7 @@
 	}
 	,{
 		"Name":"ImmEscapeW"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"LRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9636,6 +10051,7 @@
 	}
 	,{
 		"Name":"ImmGetConversionListA"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9654,6 +10070,7 @@
 	}
 	,{
 		"Name":"ImmGetConversionListW"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9672,6 +10089,7 @@
 	}
 	,{
 		"Name":"ImmNotifyIME"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9688,6 +10106,7 @@
 	}
 	,{
 		"Name":"ImmGetStatusWindowPos"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9702,6 +10121,7 @@
 	}
 	,{
 		"Name":"ImmSetStatusWindowPos"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9716,6 +10136,7 @@
 	}
 	,{
 		"Name":"ImmGetCompositionWindow"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9730,6 +10151,7 @@
 	}
 	,{
 		"Name":"ImmSetCompositionWindow"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9744,6 +10166,7 @@
 	}
 	,{
 		"Name":"ImmGetCandidateWindow"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9759,6 +10182,7 @@
 	}
 	,{
 		"Name":"ImmSetCandidateWindow"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9773,6 +10197,7 @@
 	}
 	,{
 		"Name":"ImmIsUIMessageA"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9789,6 +10214,7 @@
 	}
 	,{
 		"Name":"ImmIsUIMessageW"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9805,6 +10231,7 @@
 	}
 	,{
 		"Name":"ImmGetVirtualKey"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9818,6 +10245,7 @@
 	}
 	,{
 		"Name":"ImmRegisterWordA"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9834,6 +10262,7 @@
 	}
 	,{
 		"Name":"ImmRegisterWordW"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9850,6 +10279,7 @@
 	}
 	,{
 		"Name":"ImmUnregisterWordA"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9866,6 +10296,7 @@
 	}
 	,{
 		"Name":"ImmUnregisterWordW"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9882,6 +10313,7 @@
 	}
 	,{
 		"Name":"ImmGetRegisterWordStyleA"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9897,6 +10329,7 @@
 	}
 	,{
 		"Name":"ImmGetRegisterWordStyleW"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9912,6 +10345,7 @@
 	}
 	,{
 		"Name":"ImmEnumRegisterWordA"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9930,6 +10364,7 @@
 	}
 	,{
 		"Name":"ImmEnumRegisterWordW"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9948,6 +10383,7 @@
 	}
 	,{
 		"Name":"ImmDisableIME"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9961,6 +10397,7 @@
 	}
 	,{
 		"Name":"ImmEnumInputContext"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9976,6 +10413,7 @@
 	}
 	,{
 		"Name":"ImmGetImeMenuItemsA"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9994,6 +10432,7 @@
 	}
 	,{
 		"Name":"ImmGetImeMenuItemsW"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10012,6 +10451,7 @@
 	}
 	,{
 		"Name":"ImmDisableTextFrameService"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10025,6 +10465,7 @@
 	}
 	,{
 		"Name":"ImmDisableLegacyIME"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10037,6 +10478,7 @@
 	}
 	,{
 		"Name":"ImmGetHotKey"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10053,6 +10495,7 @@
 	}
 	,{
 		"Name":"ImmSetHotKey"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10069,6 +10512,7 @@
 	}
 	,{
 		"Name":"ImmGenerateMessage"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10082,6 +10526,7 @@
 	}
 	,{
 		"Name":"ImmRequestMessageA"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"LRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10097,6 +10542,7 @@
 	}
 	,{
 		"Name":"ImmRequestMessageW"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"LRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10112,6 +10558,7 @@
 	}
 	,{
 		"Name":"ImmCreateSoftKeyboard"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10128,6 +10575,7 @@
 	}
 	,{
 		"Name":"ImmDestroySoftKeyboard"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10141,6 +10589,7 @@
 	}
 	,{
 		"Name":"ImmShowSoftKeyboard"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10155,6 +10604,7 @@
 	}
 	,{
 		"Name":"ImmLockIMC"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"INPUTCONTEXT","TargetKind":"Default","Api":"UI.Input.Ime","Parents":[]}}
@@ -10168,6 +10618,7 @@
 	}
 	,{
 		"Name":"ImmUnlockIMC"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10181,6 +10632,7 @@
 	}
 	,{
 		"Name":"ImmGetIMCLockCount"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10194,6 +10646,7 @@
 	}
 	,{
 		"Name":"ImmCreateIMCC"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HIMCC","TargetKind":"Default","Api":"Globalization","Parents":[]}
@@ -10207,6 +10660,7 @@
 	}
 	,{
 		"Name":"ImmDestroyIMCC"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HIMCC","TargetKind":"Default","Api":"Globalization","Parents":[]}
@@ -10220,6 +10674,7 @@
 	}
 	,{
 		"Name":"ImmLockIMCC"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
@@ -10233,6 +10688,7 @@
 	}
 	,{
 		"Name":"ImmUnlockIMCC"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10246,6 +10702,7 @@
 	}
 	,{
 		"Name":"ImmGetIMCCLockCount"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10259,6 +10716,7 @@
 	}
 	,{
 		"Name":"ImmReSizeIMCC"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HIMCC","TargetKind":"Default","Api":"Globalization","Parents":[]}
@@ -10273,6 +10731,7 @@
 	}
 	,{
 		"Name":"ImmGetIMCCSize"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"IMM32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}

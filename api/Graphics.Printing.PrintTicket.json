@@ -85,6 +85,7 @@
 ,"Functions":[
 	{
 		"Name":"PTQuerySchemaVersionSupport"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"prntvpt"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -99,6 +100,7 @@
 	}
 	,{
 		"Name":"PTOpenProvider"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"prntvpt"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -114,6 +116,7 @@
 	}
 	,{
 		"Name":"PTOpenProviderEx"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"prntvpt"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -131,6 +134,7 @@
 	}
 	,{
 		"Name":"PTCloseProvider"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"prntvpt"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -144,6 +148,7 @@
 	}
 	,{
 		"Name":"PTReleaseMemory"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"prntvpt"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -157,6 +162,7 @@
 	}
 	,{
 		"Name":"PTGetPrintCapabilities"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"prntvpt"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -167,12 +173,13 @@
 		,"Params":[
 			{"Name":"hProvider","Type":{"Kind":"ApiRef","Name":"HPTPROVIDER","TargetKind":"Default","Api":"Storage.Xps","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pPrintTicket","Type":{"Kind":"ApiRef","Name":"IStream","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In","Optional"]}
-			,{"Name":"pCapabilities","Type":{"Kind":"ApiRef","Name":"IStream","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In","Out"]}
+			,{"Name":"pCapabilities","Type":{"Kind":"ApiRef","Name":"IStream","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pbstrErrorMessage","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
 		]
 	}
 	,{
 		"Name":"PTGetPrintDeviceCapabilities"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"prntvpt"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -183,12 +190,13 @@
 		,"Params":[
 			{"Name":"hProvider","Type":{"Kind":"ApiRef","Name":"HPTPROVIDER","TargetKind":"Default","Api":"Storage.Xps","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pPrintTicket","Type":{"Kind":"ApiRef","Name":"IStream","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In","Optional"]}
-			,{"Name":"pDeviceCapabilities","Type":{"Kind":"ApiRef","Name":"IStream","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In","Out"]}
+			,{"Name":"pDeviceCapabilities","Type":{"Kind":"ApiRef","Name":"IStream","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pbstrErrorMessage","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
 		]
 	}
 	,{
 		"Name":"PTGetPrintDeviceResources"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"prntvpt"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -200,12 +208,13 @@
 			{"Name":"hProvider","Type":{"Kind":"ApiRef","Name":"HPTPROVIDER","TargetKind":"Default","Api":"Storage.Xps","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pszLocaleName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"pPrintTicket","Type":{"Kind":"ApiRef","Name":"IStream","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In","Optional"]}
-			,{"Name":"pDeviceResources","Type":{"Kind":"ApiRef","Name":"IStream","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In","Out"]}
+			,{"Name":"pDeviceResources","Type":{"Kind":"ApiRef","Name":"IStream","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pbstrErrorMessage","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
 		]
 	}
 	,{
 		"Name":"PTMergeAndValidatePrintTicket"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"prntvpt"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -218,12 +227,13 @@
 			,{"Name":"pBaseTicket","Type":{"Kind":"ApiRef","Name":"IStream","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pDeltaTicket","Type":{"Kind":"ApiRef","Name":"IStream","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"scope","Type":{"Kind":"ApiRef","Name":"EPrintTicketScope","TargetKind":"Default","Api":"Graphics.Printing.PrintTicket","Parents":[]},"Attrs":["In"]}
-			,{"Name":"pResultTicket","Type":{"Kind":"ApiRef","Name":"IStream","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In","Out"]}
+			,{"Name":"pResultTicket","Type":{"Kind":"ApiRef","Name":"IStream","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pbstrErrorMessage","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
 		]
 	}
 	,{
 		"Name":"PTConvertPrintTicketToDevMode"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"prntvpt"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -243,6 +253,7 @@
 	}
 	,{
 		"Name":"PTConvertDevModeToPrintTicket"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"prntvpt"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -255,7 +266,7 @@
 			,{"Name":"cbDevmode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pDevmode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEVMODEA","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["In"]}
 			,{"Name":"scope","Type":{"Kind":"ApiRef","Name":"EPrintTicketScope","TargetKind":"Default","Api":"Graphics.Printing.PrintTicket","Parents":[]},"Attrs":["In"]}
-			,{"Name":"pPrintTicket","Type":{"Kind":"ApiRef","Name":"IStream","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In","Out"]}
+			,{"Name":"pPrintTicket","Type":{"Kind":"ApiRef","Name":"IStream","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
 		]
 	}
 ]

@@ -791,14 +791,14 @@
 						]
 					}
 					,{
-						"Name":"_DeleteCompletion_e__Struct"
+						"Name":"_CloseCompletion_e__Struct"
 						,"Architectures":[]
 						,"Platform":null
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
 						,"Fields":[
-							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_CALLBACK_DELETE_COMPLETION_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
+							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_CALLBACK_CLOSE_COMPLETION_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]
@@ -823,14 +823,14 @@
 						]
 					}
 					,{
-						"Name":"_CloseCompletion_e__Struct"
+						"Name":"_DeleteCompletion_e__Struct"
 						,"Architectures":[]
 						,"Platform":null
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
 						,"Fields":[
-							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_CALLBACK_CLOSE_COMPLETION_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
+							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_CALLBACK_DELETE_COMPLETION_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]
@@ -843,7 +843,9 @@
 		"Name":"CF_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -1188,22 +1190,6 @@
 						]
 					}
 					,{
-						"Name":"_AckDehydrate_e__Struct"
-						,"Architectures":[]
-						,"Platform":null
-						,"Kind":"Struct"
-						,"Size":0
-						,"PackingSize":0
-						,"Fields":[
-							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_OPERATION_ACK_DEHYDRATE_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
-							,{"Name":"CompletionStatus","Type":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-							,{"Name":"FileIdentity","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Const"]}
-							,{"Name":"FileIdentityLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-						]
-						,"NestedTypes":[
-						]
-					}
-					,{
 						"Name":"_RetrieveData_e__Struct"
 						,"Architectures":[]
 						,"Platform":null
@@ -1216,6 +1202,22 @@
 							,{"Name":"Offset","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 							,{"Name":"Length","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 							,{"Name":"ReturnedLength","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+						]
+						,"NestedTypes":[
+						]
+					}
+					,{
+						"Name":"_AckDehydrate_e__Struct"
+						,"Architectures":[]
+						,"Platform":null
+						,"Kind":"Struct"
+						,"Size":0
+						,"PackingSize":0
+						,"Fields":[
+							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_OPERATION_ACK_DEHYDRATE_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
+							,{"Name":"CompletionStatus","Type":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+							,{"Name":"FileIdentity","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Const"]}
+							,{"Name":"FileIdentityLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]
@@ -1555,6 +1557,7 @@
 ,"Functions":[
 	{
 		"Name":"CfGetPlatformInfo"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1568,6 +1571,7 @@
 	}
 	,{
 		"Name":"CfRegisterSyncRoot"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1584,6 +1588,7 @@
 	}
 	,{
 		"Name":"CfUnregisterSyncRoot"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1597,6 +1602,7 @@
 	}
 	,{
 		"Name":"CfConnectSyncRoot"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1614,6 +1620,7 @@
 	}
 	,{
 		"Name":"CfDisconnectSyncRoot"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1627,6 +1634,7 @@
 	}
 	,{
 		"Name":"CfGetTransferKey"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1641,6 +1649,7 @@
 	}
 	,{
 		"Name":"CfReleaseTransferKey"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -1655,6 +1664,7 @@
 	}
 	,{
 		"Name":"CfExecute"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1669,6 +1679,7 @@
 	}
 	,{
 		"Name":"CfUpdateSyncProviderStatus"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1683,6 +1694,7 @@
 	}
 	,{
 		"Name":"CfQuerySyncProviderStatus"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1697,6 +1709,7 @@
 	}
 	,{
 		"Name":"CfReportSyncStatus"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1711,6 +1724,7 @@
 	}
 	,{
 		"Name":"CfCreatePlaceholders"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1728,6 +1742,7 @@
 	}
 	,{
 		"Name":"CfOpenFileWithOplock"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1743,6 +1758,7 @@
 	}
 	,{
 		"Name":"CfReferenceProtectedHandle"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1756,6 +1772,7 @@
 	}
 	,{
 		"Name":"CfGetWin32HandleFromProtectedHandle"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1769,6 +1786,7 @@
 	}
 	,{
 		"Name":"CfReleaseProtectedHandle"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -1782,6 +1800,7 @@
 	}
 	,{
 		"Name":"CfCloseHandle"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -1795,6 +1814,7 @@
 	}
 	,{
 		"Name":"CfConvertToPlaceholder"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1813,6 +1833,7 @@
 	}
 	,{
 		"Name":"CfUpdatePlaceholder"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1834,6 +1855,7 @@
 	}
 	,{
 		"Name":"CfRevertPlaceholder"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1849,6 +1871,7 @@
 	}
 	,{
 		"Name":"CfHydratePlaceholder"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1866,6 +1889,7 @@
 	}
 	,{
 		"Name":"CfDehydratePlaceholder"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1883,6 +1907,7 @@
 	}
 	,{
 		"Name":"CfSetPinState"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1899,6 +1924,7 @@
 	}
 	,{
 		"Name":"CfSetInSyncState"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1915,6 +1941,7 @@
 	}
 	,{
 		"Name":"CfSetCorrelationVector"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1929,6 +1956,7 @@
 	}
 	,{
 		"Name":"CfGetCorrelationVector"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1943,6 +1971,7 @@
 	}
 	,{
 		"Name":"CfGetPlaceholderStateFromAttributeTag"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"CF_PLACEHOLDER_STATE","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]}
@@ -1957,6 +1986,7 @@
 	}
 	,{
 		"Name":"CfGetPlaceholderStateFromFileInfo"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"CF_PLACEHOLDER_STATE","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]}
@@ -1971,6 +2001,7 @@
 	}
 	,{
 		"Name":"CfGetPlaceholderStateFromFindData"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"CF_PLACEHOLDER_STATE","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]}
@@ -1984,6 +2015,7 @@
 	}
 	,{
 		"Name":"CfGetPlaceholderInfo"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2001,6 +2033,7 @@
 	}
 	,{
 		"Name":"CfGetSyncRootInfoByPath"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2018,6 +2051,7 @@
 	}
 	,{
 		"Name":"CfGetSyncRootInfoByHandle"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2035,6 +2069,7 @@
 	}
 	,{
 		"Name":"CfGetPlaceholderRangeInfo"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2054,6 +2089,7 @@
 	}
 	,{
 		"Name":"CfReportProviderProgress"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2070,6 +2106,7 @@
 	}
 	,{
 		"Name":"CfReportProviderProgress2"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"cldapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}

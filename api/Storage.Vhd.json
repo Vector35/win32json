@@ -1674,9 +1674,10 @@
 ,"Functions":[
 	{
 		"Name":"OpenVirtualDisk"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"VirtDisk"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.1"
@@ -1692,9 +1693,10 @@
 	}
 	,{
 		"Name":"CreateVirtualDisk"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"VirtDisk"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.1"
@@ -1703,7 +1705,7 @@
 			{"Name":"VirtualStorageType","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VIRTUAL_STORAGE_TYPE","TargetKind":"Default","Api":"Storage.Vhd","Parents":[]}},"Attrs":["In"]}
 			,{"Name":"Path","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"VirtualDiskAccessMask","Type":{"Kind":"ApiRef","Name":"VIRTUAL_DISK_ACCESS_MASK","TargetKind":"Default","Api":"Storage.Vhd","Parents":[]},"Attrs":["In"]}
-			,{"Name":"SecurityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"SecurityDescriptor","Type":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CREATE_VIRTUAL_DISK_FLAG","TargetKind":"Default","Api":"Storage.Vhd","Parents":[]},"Attrs":["In"]}
 			,{"Name":"ProviderSpecificFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"Parameters","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CREATE_VIRTUAL_DISK_PARAMETERS","TargetKind":"Default","Api":"Storage.Vhd","Parents":[]}},"Attrs":["In"]}
@@ -1713,16 +1715,17 @@
 	}
 	,{
 		"Name":"AttachVirtualDisk"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"VirtDisk"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"VirtualDiskHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"SecurityDescriptor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"SecurityDescriptor","Type":{"Kind":"ApiRef","Name":"PSECURITY_DESCRIPTOR","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"ATTACH_VIRTUAL_DISK_FLAG","TargetKind":"Default","Api":"Storage.Vhd","Parents":[]},"Attrs":["In"]}
 			,{"Name":"ProviderSpecificFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"Parameters","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ATTACH_VIRTUAL_DISK_PARAMETERS","TargetKind":"Default","Api":"Storage.Vhd","Parents":[]}},"Attrs":["In","Optional"]}
@@ -1731,9 +1734,10 @@
 	}
 	,{
 		"Name":"DetachVirtualDisk"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"VirtDisk"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.1"
@@ -1746,9 +1750,10 @@
 	}
 	,{
 		"Name":"GetVirtualDiskPhysicalPath"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"VirtDisk"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.1"
@@ -1761,9 +1766,10 @@
 	}
 	,{
 		"Name":"GetAllAttachedVirtualDiskPhysicalPaths"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"VirtDisk"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":null
@@ -1775,9 +1781,10 @@
 	}
 	,{
 		"Name":"GetStorageDependencyInformation"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"VirtDisk"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.1"
@@ -1792,9 +1799,10 @@
 	}
 	,{
 		"Name":"GetVirtualDiskInformation"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"VirtDisk"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.1"
@@ -1808,9 +1816,10 @@
 	}
 	,{
 		"Name":"SetVirtualDiskInformation"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"VirtDisk"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.1"
@@ -1822,9 +1831,10 @@
 	}
 	,{
 		"Name":"EnumerateVirtualDiskMetadata"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"VirtDisk"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows8.0"
@@ -1837,9 +1847,10 @@
 	}
 	,{
 		"Name":"GetVirtualDiskMetadata"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"VirtDisk"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows8.0"
@@ -1853,9 +1864,10 @@
 	}
 	,{
 		"Name":"SetVirtualDiskMetadata"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"VirtDisk"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows8.0"
@@ -1869,9 +1881,10 @@
 	}
 	,{
 		"Name":"DeleteVirtualDiskMetadata"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"VirtDisk"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows8.0"
@@ -1883,9 +1896,10 @@
 	}
 	,{
 		"Name":"GetVirtualDiskOperationProgress"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"VirtDisk"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.1"
@@ -1898,9 +1912,10 @@
 	}
 	,{
 		"Name":"CompactVirtualDisk"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"VirtDisk"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.1"
@@ -1914,9 +1929,10 @@
 	}
 	,{
 		"Name":"MergeVirtualDisk"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"VirtDisk"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.1"
@@ -1930,9 +1946,10 @@
 	}
 	,{
 		"Name":"ExpandVirtualDisk"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"VirtDisk"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.1"
@@ -1946,9 +1963,10 @@
 	}
 	,{
 		"Name":"ResizeVirtualDisk"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"VirtDisk"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows8.0"
@@ -1962,9 +1980,10 @@
 	}
 	,{
 		"Name":"MirrorVirtualDisk"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"VirtDisk"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows8.0"
@@ -1978,9 +1997,10 @@
 	}
 	,{
 		"Name":"BreakMirrorVirtualDisk"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"VirtDisk"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows8.0"
@@ -1991,9 +2011,10 @@
 	}
 	,{
 		"Name":"AddVirtualDiskParent"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"VirtDisk"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows8.0"
@@ -2005,9 +2026,10 @@
 	}
 	,{
 		"Name":"QueryChangesVirtualDisk"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"VirtDisk"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows10.0.10240"
@@ -2025,9 +2047,10 @@
 	}
 	,{
 		"Name":"TakeSnapshotVhdSet"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"VirtDisk"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows10.0.10240"
@@ -2040,9 +2063,10 @@
 	}
 	,{
 		"Name":"DeleteSnapshotVhdSet"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"VirtDisk"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows10.0.10240"
@@ -2055,9 +2079,10 @@
 	}
 	,{
 		"Name":"ModifyVhdSet"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"VirtDisk"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows10.0.10240"
@@ -2070,9 +2095,10 @@
 	}
 	,{
 		"Name":"ApplySnapshotVhdSet"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"VirtDisk"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows10.0.10240"
@@ -2085,9 +2111,10 @@
 	}
 	,{
 		"Name":"RawSCSIVirtualDisk"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"VirtDisk"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows10.0.10240"
@@ -2101,9 +2128,10 @@
 	}
 	,{
 		"Name":"ForkVirtualDisk"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"VirtDisk"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":null
@@ -2117,9 +2145,10 @@
 	}
 	,{
 		"Name":"CompleteForkVirtualDisk"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"VirtDisk"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":null

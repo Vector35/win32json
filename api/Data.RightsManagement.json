@@ -296,6 +296,20 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"DRM_DEFAULTGROUPIDTYPE_WINDOWSAUTH"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"WindowsAuthProvider"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"DRM_DEFAULTGROUPIDTYPE_PASSPORT"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"PassportAuthProvider"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"DRM_SIGN_ONLINE"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -678,7 +692,9 @@
 		"Name":"DRMCALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -695,6 +711,7 @@
 ,"Functions":[
 	{
 		"Name":"DRMSetGlobalOptions"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -710,6 +727,7 @@
 	}
 	,{
 		"Name":"DRMGetClientVersion"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -723,6 +741,7 @@
 	}
 	,{
 		"Name":"DRMInitEnvironment"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -742,6 +761,7 @@
 	}
 	,{
 		"Name":"DRMLoadLibrary"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -759,6 +779,7 @@
 	}
 	,{
 		"Name":"DRMCreateEnablingPrincipal"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -777,6 +798,7 @@
 	}
 	,{
 		"Name":"DRMCloseHandle"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -790,6 +812,7 @@
 	}
 	,{
 		"Name":"DRMCloseEnvironmentHandle"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -803,6 +826,7 @@
 	}
 	,{
 		"Name":"DRMDuplicateHandle"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -817,6 +841,7 @@
 	}
 	,{
 		"Name":"DRMDuplicateEnvironmentHandle"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -831,6 +856,7 @@
 	}
 	,{
 		"Name":"DRMRegisterRevocationList"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -845,6 +871,7 @@
 	}
 	,{
 		"Name":"DRMCheckSecurity"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -859,6 +886,7 @@
 	}
 	,{
 		"Name":"DRMRegisterContent"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -872,6 +900,7 @@
 	}
 	,{
 		"Name":"DRMEncrypt"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -890,6 +919,7 @@
 	}
 	,{
 		"Name":"DRMDecrypt"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -908,6 +938,7 @@
 	}
 	,{
 		"Name":"DRMCreateBoundLicense"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -925,6 +956,7 @@
 	}
 	,{
 		"Name":"DRMCreateEnablingBitsDecryptor"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -942,6 +974,7 @@
 	}
 	,{
 		"Name":"DRMCreateEnablingBitsEncryptor"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -959,6 +992,7 @@
 	}
 	,{
 		"Name":"DRMAttest"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -976,6 +1010,7 @@
 	}
 	,{
 		"Name":"DRMGetTime"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -991,6 +1026,7 @@
 	}
 	,{
 		"Name":"DRMGetInfo"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1008,6 +1044,7 @@
 	}
 	,{
 		"Name":"DRMGetEnvironmentInfo"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1025,6 +1062,7 @@
 	}
 	,{
 		"Name":"DRMGetProcAddress"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1040,6 +1078,7 @@
 	}
 	,{
 		"Name":"DRMGetBoundLicenseObjectCount"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1055,6 +1094,7 @@
 	}
 	,{
 		"Name":"DRMGetBoundLicenseObject"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1071,6 +1111,7 @@
 	}
 	,{
 		"Name":"DRMGetBoundLicenseAttributeCount"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1086,6 +1127,7 @@
 	}
 	,{
 		"Name":"DRMGetBoundLicenseAttribute"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1104,6 +1146,7 @@
 	}
 	,{
 		"Name":"DRMCreateClientSession"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1121,6 +1164,7 @@
 	}
 	,{
 		"Name":"DRMIsActivated"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1136,6 +1180,7 @@
 	}
 	,{
 		"Name":"DRMActivate"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1154,6 +1199,7 @@
 	}
 	,{
 		"Name":"DRMGetServiceLocation"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1172,6 +1218,7 @@
 	}
 	,{
 		"Name":"DRMCreateLicenseStorageSession"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1190,6 +1237,7 @@
 	}
 	,{
 		"Name":"DRMAddLicense"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1205,6 +1253,7 @@
 	}
 	,{
 		"Name":"DRMAcquireAdvisories"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1221,6 +1270,7 @@
 	}
 	,{
 		"Name":"DRMEnumerateLicense"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1239,6 +1289,7 @@
 	}
 	,{
 		"Name":"DRMAcquireLicense"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1258,6 +1309,7 @@
 	}
 	,{
 		"Name":"DRMDeleteLicense"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1272,6 +1324,7 @@
 	}
 	,{
 		"Name":"DRMCloseSession"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1285,6 +1338,7 @@
 	}
 	,{
 		"Name":"DRMDuplicateSession"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1299,6 +1353,7 @@
 	}
 	,{
 		"Name":"DRMGetSecurityProvider"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1316,6 +1371,7 @@
 	}
 	,{
 		"Name":"DRMEncode"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1333,6 +1389,7 @@
 	}
 	,{
 		"Name":"DRMDecode"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1349,6 +1406,7 @@
 	}
 	,{
 		"Name":"DRMConstructCertificateChain"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1365,6 +1423,7 @@
 	}
 	,{
 		"Name":"DRMParseUnboundLicense"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1379,6 +1438,7 @@
 	}
 	,{
 		"Name":"DRMCloseQueryHandle"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1392,6 +1452,7 @@
 	}
 	,{
 		"Name":"DRMGetUnboundLicenseObjectCount"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1407,6 +1468,7 @@
 	}
 	,{
 		"Name":"DRMGetUnboundLicenseObject"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1423,6 +1485,7 @@
 	}
 	,{
 		"Name":"DRMGetUnboundLicenseAttributeCount"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1438,6 +1501,7 @@
 	}
 	,{
 		"Name":"DRMGetUnboundLicenseAttribute"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1456,6 +1520,7 @@
 	}
 	,{
 		"Name":"DRMGetCertificateChainCount"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1470,6 +1535,7 @@
 	}
 	,{
 		"Name":"DRMDeconstructCertificateChain"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1486,6 +1552,7 @@
 	}
 	,{
 		"Name":"DRMVerify"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1506,6 +1573,7 @@
 	}
 	,{
 		"Name":"DRMCreateUser"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1522,6 +1590,7 @@
 	}
 	,{
 		"Name":"DRMCreateRight"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1541,6 +1610,7 @@
 	}
 	,{
 		"Name":"DRMCreateIssuanceLicense"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1561,6 +1631,7 @@
 	}
 	,{
 		"Name":"DRMAddRightWithUser"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1576,6 +1647,7 @@
 	}
 	,{
 		"Name":"DRMClearAllRights"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1589,6 +1661,7 @@
 	}
 	,{
 		"Name":"DRMSetMetaData"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1608,6 +1681,7 @@
 	}
 	,{
 		"Name":"DRMSetUsagePolicy"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1631,6 +1705,7 @@
 	}
 	,{
 		"Name":"DRMSetRevocationPoint"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1651,6 +1726,7 @@
 	}
 	,{
 		"Name":"DRMSetApplicationSpecificData"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1667,6 +1743,7 @@
 	}
 	,{
 		"Name":"DRMSetNameAndDescription"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1684,6 +1761,7 @@
 	}
 	,{
 		"Name":"DRMSetIntervalTime"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1698,6 +1776,7 @@
 	}
 	,{
 		"Name":"DRMGetIssuanceLicenseTemplate"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1713,6 +1792,7 @@
 	}
 	,{
 		"Name":"DRMGetSignedIssuanceLicense"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1735,6 +1815,7 @@
 	}
 	,{
 		"Name":"DRMGetSignedIssuanceLicenseEx"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1758,6 +1839,7 @@
 	}
 	,{
 		"Name":"DRMClosePubHandle"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1771,6 +1853,7 @@
 	}
 	,{
 		"Name":"DRMDuplicatePubHandle"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1785,6 +1868,7 @@
 	}
 	,{
 		"Name":"DRMGetUserInfo"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1804,6 +1888,7 @@
 	}
 	,{
 		"Name":"DRMGetRightInfo"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1821,6 +1906,7 @@
 	}
 	,{
 		"Name":"DRMGetRightExtendedInfo"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1839,6 +1925,7 @@
 	}
 	,{
 		"Name":"DRMGetUsers"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1854,6 +1941,7 @@
 	}
 	,{
 		"Name":"DRMGetUserRights"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1870,6 +1958,7 @@
 	}
 	,{
 		"Name":"DRMGetMetaData"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1895,6 +1984,7 @@
 	}
 	,{
 		"Name":"DRMGetApplicationSpecificData"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1913,6 +2003,7 @@
 	}
 	,{
 		"Name":"DRMGetIssuanceLicenseInfo"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1935,6 +2026,7 @@
 	}
 	,{
 		"Name":"DRMGetRevocationPoint"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1959,6 +2051,7 @@
 	}
 	,{
 		"Name":"DRMGetUsagePolicy"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1987,6 +2080,7 @@
 	}
 	,{
 		"Name":"DRMGetNameAndDescription"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2006,6 +2100,7 @@
 	}
 	,{
 		"Name":"DRMGetOwnerLicense"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2021,6 +2116,7 @@
 	}
 	,{
 		"Name":"DRMGetIntervalTime"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2035,6 +2131,7 @@
 	}
 	,{
 		"Name":"DRMRepair"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2047,6 +2144,7 @@
 	}
 	,{
 		"Name":"DRMRegisterProtectedWindow"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2061,6 +2159,7 @@
 	}
 	,{
 		"Name":"DRMIsWindowProtected"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2075,6 +2174,7 @@
 	}
 	,{
 		"Name":"DRMAcquireIssuanceLicenseTemplate"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"msdrm"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}

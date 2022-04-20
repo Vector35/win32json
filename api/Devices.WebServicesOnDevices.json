@@ -2,6 +2,27 @@
 
 "Constants":[
 	{
+		"Name":"WSD_DEFAULT_HOSTING_ADDRESS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"http://*:5357/"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WSD_DEFAULT_SECURE_HOSTING_ADDRESS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"https://*:5358/"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WSD_DEFAULT_EVENTING_ADDRESS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"http://*:5357/"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"WSDAPI_OPTION_MAX_INBOUND_MESSAGE_SIZE"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -151,8 +172,8 @@
 		,"Fields":[
 			{"Name":"certMatchArray","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CERT_CONTEXT","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":[]}
 			,{"Name":"dwCertMatchArrayCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"hCertMatchStore","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-			,{"Name":"hCertIssuerStore","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+			,{"Name":"hCertMatchStore","Type":{"Kind":"ApiRef","Name":"HCERTSTORE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
+			,{"Name":"hCertIssuerStore","Type":{"Kind":"ApiRef","Name":"HCERTSTORE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
 			,{"Name":"dwCertCheckOptions","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
@@ -168,8 +189,8 @@
 		,"Fields":[
 			{"Name":"certMatchArray","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CERT_CONTEXT","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":[]}
 			,{"Name":"dwCertMatchArrayCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"hCertMatchStore","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-			,{"Name":"hCertIssuerStore","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+			,{"Name":"hCertMatchStore","Type":{"Kind":"ApiRef","Name":"HCERTSTORE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
+			,{"Name":"hCertIssuerStore","Type":{"Kind":"ApiRef","Name":"HCERTSTORE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
 			,{"Name":"dwCertCheckOptions","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pszCNGHashAlgId","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"pbCertHash","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -188,7 +209,7 @@
 		,"Fields":[
 			{"Name":"signingCertArray","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CERT_CONTEXT","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":[]}
 			,{"Name":"dwSigningCertArrayCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"hSigningCertStore","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+			,{"Name":"hSigningCertStore","Type":{"Kind":"ApiRef","Name":"HCERTSTORE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
@@ -218,6 +239,7 @@
 		,"Methods":[
 			{
 				"Name":"Serialize"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -232,6 +254,7 @@
 			}
 			,{
 				"Name":"Deserialize"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -254,6 +277,7 @@
 		,"Methods":[
 			{
 				"Name":"GetPort"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -266,6 +290,7 @@
 			}
 			,{
 				"Name":"SetPort"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -278,6 +303,7 @@
 			}
 			,{
 				"Name":"GetTransportAddress"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -290,6 +316,7 @@
 			}
 			,{
 				"Name":"GetTransportAddressEx"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -303,6 +330,7 @@
 			}
 			,{
 				"Name":"SetTransportAddress"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -325,6 +353,7 @@
 		,"Methods":[
 			{
 				"Name":"GetLocalAddress"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -337,6 +366,7 @@
 			}
 			,{
 				"Name":"SetLocalAddress"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -349,6 +379,7 @@
 			}
 			,{
 				"Name":"GetRemoteAddress"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -361,6 +392,7 @@
 			}
 			,{
 				"Name":"SetRemoteAddress"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -373,6 +405,7 @@
 			}
 			,{
 				"Name":"GetLowerParameters"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -412,6 +445,7 @@
 		,"Methods":[
 			{
 				"Name":"SetRetransmitParams"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -424,6 +458,7 @@
 			}
 			,{
 				"Name":"GetRetransmitParams"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -459,6 +494,7 @@
 		,"Methods":[
 			{
 				"Name":"SetSockaddr"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -471,6 +507,7 @@
 			}
 			,{
 				"Name":"GetSockaddr"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -483,6 +520,7 @@
 			}
 			,{
 				"Name":"SetExclusive"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -495,6 +533,7 @@
 			}
 			,{
 				"Name":"GetExclusive"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -506,6 +545,7 @@
 			}
 			,{
 				"Name":"SetMessageType"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -518,6 +558,7 @@
 			}
 			,{
 				"Name":"GetMessageType"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -530,6 +571,7 @@
 			}
 			,{
 				"Name":"SetTTL"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -542,6 +584,7 @@
 			}
 			,{
 				"Name":"GetTTL"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -554,6 +597,7 @@
 			}
 			,{
 				"Name":"SetAlias"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -566,6 +610,7 @@
 			}
 			,{
 				"Name":"GetAlias"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -588,6 +633,7 @@
 		,"Methods":[
 			{
 				"Name":"SetInboundHttpHeaders"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -600,6 +646,7 @@
 			}
 			,{
 				"Name":"GetInboundHttpHeaders"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -612,6 +659,7 @@
 			}
 			,{
 				"Name":"SetOutboundHttpHeaders"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -624,6 +672,7 @@
 			}
 			,{
 				"Name":"GetOutboundHttpHeaders"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -636,6 +685,7 @@
 			}
 			,{
 				"Name":"SetID"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -648,6 +698,7 @@
 			}
 			,{
 				"Name":"GetID"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -660,6 +711,7 @@
 			}
 			,{
 				"Name":"SetContext"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -672,6 +724,7 @@
 			}
 			,{
 				"Name":"GetContext"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -684,6 +737,7 @@
 			}
 			,{
 				"Name":"Clear"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -705,6 +759,7 @@
 		,"Methods":[
 			{
 				"Name":"GetSecure"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -716,6 +771,7 @@
 			}
 			,{
 				"Name":"SetSecure"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -728,6 +784,7 @@
 			}
 			,{
 				"Name":"GetPath"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -740,6 +797,7 @@
 			}
 			,{
 				"Name":"SetPath"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -762,6 +820,7 @@
 		,"Methods":[
 			{
 				"Name":"GetClientCertificate"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -774,6 +833,7 @@
 			}
 			,{
 				"Name":"GetMappedAccessToken"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -796,6 +856,7 @@
 		,"Methods":[
 			{
 				"Name":"GetClientAccessToken"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -808,6 +869,7 @@
 			}
 			,{
 				"Name":"GetAuthType"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -830,6 +892,7 @@
 		,"Methods":[
 			{
 				"Name":"IsMessageSigned"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -842,6 +905,7 @@
 			}
 			,{
 				"Name":"IsMessageSignatureTrusted"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -854,6 +918,7 @@
 			}
 			,{
 				"Name":"GetKeyInfo"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -867,6 +932,7 @@
 			}
 			,{
 				"Name":"GetSignature"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -880,6 +946,7 @@
 			}
 			,{
 				"Name":"GetSignedInfoHash"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -913,6 +980,7 @@
 		,"Methods":[
 			{
 				"Name":"Write"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -927,6 +995,7 @@
 			}
 			,{
 				"Name":"Close"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -938,6 +1007,7 @@
 			}
 			,{
 				"Name":"Abort"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -959,6 +1029,7 @@
 		,"Methods":[
 			{
 				"Name":"Read"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -973,6 +1044,7 @@
 			}
 			,{
 				"Name":"Close"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1096,6 +1168,7 @@
 		,"Methods":[
 			{
 				"Name":"AddNamespace"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1110,6 +1183,7 @@
 			}
 			,{
 				"Name":"AddNameToNamespace"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1124,6 +1198,7 @@
 			}
 			,{
 				"Name":"SetNamespaces"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1138,6 +1213,7 @@
 			}
 			,{
 				"Name":"SetTypes"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -1294,7 +1370,9 @@
 		"Name":"WSD_STUB_FUNCTION"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -1354,7 +1432,9 @@
 		"Name":"PWSD_SOAP_MESSAGE_HANDLER"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2184,6 +2264,7 @@
 		,"Methods":[
 			{
 				"Name":"SetAddressFamily"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2196,6 +2277,7 @@
 			}
 			,{
 				"Name":"Attach"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2208,6 +2290,7 @@
 			}
 			,{
 				"Name":"Detach"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2219,6 +2302,7 @@
 			}
 			,{
 				"Name":"SearchById"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2232,6 +2316,7 @@
 			}
 			,{
 				"Name":"SearchByAddress"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2245,6 +2330,7 @@
 			}
 			,{
 				"Name":"SearchByType"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2260,6 +2346,7 @@
 			}
 			,{
 				"Name":"GetXMLContext"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2282,6 +2369,7 @@
 		,"Methods":[
 			{
 				"Name":"Add"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2294,6 +2382,7 @@
 			}
 			,{
 				"Name":"Remove"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2306,6 +2395,7 @@
 			}
 			,{
 				"Name":"SearchFailed"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2319,6 +2409,7 @@
 			}
 			,{
 				"Name":"SearchComplete"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2341,6 +2432,7 @@
 		,"Methods":[
 			{
 				"Name":"GetEndpointReference"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2353,6 +2445,7 @@
 			}
 			,{
 				"Name":"GetTypes"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2365,6 +2458,7 @@
 			}
 			,{
 				"Name":"GetScopes"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2377,6 +2471,7 @@
 			}
 			,{
 				"Name":"GetXAddrs"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2389,6 +2484,7 @@
 			}
 			,{
 				"Name":"GetMetadataVersion"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2401,6 +2497,7 @@
 			}
 			,{
 				"Name":"GetExtendedDiscoXML"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2414,6 +2511,7 @@
 			}
 			,{
 				"Name":"GetProbeResolveTag"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2426,6 +2524,7 @@
 			}
 			,{
 				"Name":"GetRemoteTransportAddress"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2438,6 +2537,7 @@
 			}
 			,{
 				"Name":"GetLocalTransportAddress"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2450,6 +2550,7 @@
 			}
 			,{
 				"Name":"GetLocalInterfaceGUID"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2462,6 +2563,7 @@
 			}
 			,{
 				"Name":"GetInstanceId"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2484,6 +2586,7 @@
 		,"Methods":[
 			{
 				"Name":"SetAddressFamily"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2496,6 +2599,7 @@
 			}
 			,{
 				"Name":"RegisterNotificationSink"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2508,6 +2612,7 @@
 			}
 			,{
 				"Name":"UnRegisterNotificationSink"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2520,6 +2625,7 @@
 			}
 			,{
 				"Name":"Publish"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2539,6 +2645,7 @@
 			}
 			,{
 				"Name":"UnPublish"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2555,6 +2662,7 @@
 			}
 			,{
 				"Name":"MatchProbe"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2576,6 +2684,7 @@
 			}
 			,{
 				"Name":"MatchResolve"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2597,6 +2706,7 @@
 			}
 			,{
 				"Name":"PublishEx"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2621,6 +2731,7 @@
 			}
 			,{
 				"Name":"MatchProbeEx"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2647,6 +2758,7 @@
 			}
 			,{
 				"Name":"MatchResolveEx"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2673,6 +2785,7 @@
 			}
 			,{
 				"Name":"RegisterScopeMatchingRule"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2685,6 +2798,7 @@
 			}
 			,{
 				"Name":"UnRegisterScopeMatchingRule"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2697,6 +2811,7 @@
 			}
 			,{
 				"Name":"GetXMLContext"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2719,6 +2834,7 @@
 		,"Methods":[
 			{
 				"Name":"ProbeHandler"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2732,6 +2848,7 @@
 			}
 			,{
 				"Name":"ResolveHandler"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2755,6 +2872,7 @@
 		,"Methods":[
 			{
 				"Name":"GetScopeRule"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2767,6 +2885,7 @@
 			}
 			,{
 				"Name":"MatchScopes"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2791,6 +2910,7 @@
 		,"Methods":[
 			{
 				"Name":"SendOneWayRequest"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2804,6 +2924,7 @@
 			}
 			,{
 				"Name":"SendTwoWayRequest"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2818,6 +2939,7 @@
 			}
 			,{
 				"Name":"SendTwoWayRequestAsync"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2834,6 +2956,7 @@
 			}
 			,{
 				"Name":"AbortAsyncOperation"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2846,6 +2969,7 @@
 			}
 			,{
 				"Name":"ProcessFault"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2858,6 +2982,7 @@
 			}
 			,{
 				"Name":"GetErrorInfo"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2870,6 +2995,7 @@
 			}
 			,{
 				"Name":"GetFaultInfo"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2892,6 +3018,7 @@
 		,"Methods":[
 			{
 				"Name":"GetMetadata"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2914,6 +3041,7 @@
 		,"Methods":[
 			{
 				"Name":"BeginGetMetadata"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2926,6 +3054,7 @@
 			}
 			,{
 				"Name":"EndGetMetadata"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2939,6 +3068,7 @@
 			}
 			,{
 				"Name":"GetServiceMetadata"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2951,6 +3081,7 @@
 			}
 			,{
 				"Name":"SubscribeToOperation"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2966,6 +3097,7 @@
 			}
 			,{
 				"Name":"UnsubscribeToOperation"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2978,6 +3110,7 @@
 			}
 			,{
 				"Name":"SetEventingStatusCallback"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -2990,6 +3123,7 @@
 			}
 			,{
 				"Name":"GetEndpointProxy"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3012,6 +3146,7 @@
 		,"Methods":[
 			{
 				"Name":"SubscribeToMultipleOperations"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3030,6 +3165,7 @@
 			}
 			,{
 				"Name":"BeginSubscribeToMultipleOperations"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3049,6 +3185,7 @@
 			}
 			,{
 				"Name":"EndSubscribeToMultipleOperations"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3065,6 +3202,7 @@
 			}
 			,{
 				"Name":"UnsubscribeToMultipleOperations"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3079,6 +3217,7 @@
 			}
 			,{
 				"Name":"BeginUnsubscribeToMultipleOperations"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3096,6 +3235,7 @@
 			}
 			,{
 				"Name":"EndUnsubscribeToMultipleOperations"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3110,6 +3250,7 @@
 			}
 			,{
 				"Name":"RenewMultipleOperations"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3127,6 +3268,7 @@
 			}
 			,{
 				"Name":"BeginRenewMultipleOperations"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3145,6 +3287,7 @@
 			}
 			,{
 				"Name":"EndRenewMultipleOperations"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3161,6 +3304,7 @@
 			}
 			,{
 				"Name":"GetStatusForMultipleOperations"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3177,6 +3321,7 @@
 			}
 			,{
 				"Name":"BeginGetStatusForMultipleOperations"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3194,6 +3339,7 @@
 			}
 			,{
 				"Name":"EndGetStatusForMultipleOperations"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3220,6 +3366,7 @@
 		,"Methods":[
 			{
 				"Name":"Init"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3236,6 +3383,7 @@
 			}
 			,{
 				"Name":"BeginGetMetadata"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3248,6 +3396,7 @@
 			}
 			,{
 				"Name":"EndGetMetadata"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3260,6 +3409,7 @@
 			}
 			,{
 				"Name":"GetHostMetadata"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3272,6 +3422,7 @@
 			}
 			,{
 				"Name":"GetThisModelMetadata"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3284,6 +3435,7 @@
 			}
 			,{
 				"Name":"GetThisDeviceMetadata"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3296,6 +3448,7 @@
 			}
 			,{
 				"Name":"GetAllMetadata"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3308,6 +3461,7 @@
 			}
 			,{
 				"Name":"GetServiceProxyById"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3321,6 +3475,7 @@
 			}
 			,{
 				"Name":"GetServiceProxyByType"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3334,6 +3489,7 @@
 			}
 			,{
 				"Name":"GetEndpointProxy"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3356,6 +3512,7 @@
 		,"Methods":[
 			{
 				"Name":"SetCallback"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3369,6 +3526,7 @@
 			}
 			,{
 				"Name":"SetWaitHandle"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3381,6 +3539,7 @@
 			}
 			,{
 				"Name":"HasCompleted"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3392,6 +3551,7 @@
 			}
 			,{
 				"Name":"GetAsyncState"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3404,6 +3564,7 @@
 			}
 			,{
 				"Name":"Abort"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3415,6 +3576,7 @@
 			}
 			,{
 				"Name":"GetEvent"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3427,6 +3589,7 @@
 			}
 			,{
 				"Name":"GetEndpointProxy"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3449,6 +3612,7 @@
 		,"Methods":[
 			{
 				"Name":"AsyncOperationComplete"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3472,6 +3636,7 @@
 		,"Methods":[
 			{
 				"Name":"SubscriptionRenewed"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"Native","Name":"Void"}
 				,"ReturnAttrs":[]
@@ -3484,6 +3649,7 @@
 			}
 			,{
 				"Name":"SubscriptionRenewalFailed"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"Native","Name":"Void"}
 				,"ReturnAttrs":[]
@@ -3497,6 +3663,7 @@
 			}
 			,{
 				"Name":"SubscriptionEnded"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"Native","Name":"Void"}
 				,"ReturnAttrs":[]
@@ -3519,6 +3686,7 @@
 		,"Methods":[
 			{
 				"Name":"Init"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3534,6 +3702,7 @@
 			}
 			,{
 				"Name":"Start"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3548,6 +3717,7 @@
 			}
 			,{
 				"Name":"Stop"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3559,6 +3729,7 @@
 			}
 			,{
 				"Name":"Terminate"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3570,6 +3741,7 @@
 			}
 			,{
 				"Name":"RegisterPortType"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3582,6 +3754,7 @@
 			}
 			,{
 				"Name":"SetMetadata"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3597,6 +3770,7 @@
 			}
 			,{
 				"Name":"RegisterService"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3610,6 +3784,7 @@
 			}
 			,{
 				"Name":"RetireService"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3622,6 +3797,7 @@
 			}
 			,{
 				"Name":"AddDynamicService"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3639,6 +3815,7 @@
 			}
 			,{
 				"Name":"RemoveDynamicService"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3651,6 +3828,7 @@
 			}
 			,{
 				"Name":"SetServiceDiscoverable"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3664,6 +3842,7 @@
 			}
 			,{
 				"Name":"SignalEvent"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3688,6 +3867,7 @@
 		,"Methods":[
 			{
 				"Name":"GetService"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3711,6 +3891,7 @@
 		,"Methods":[
 			{
 				"Name":"SendResponse"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3725,6 +3906,7 @@
 			}
 			,{
 				"Name":"FaultRequest"
+				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 				,"ReturnAttrs":[]
@@ -3744,6 +3926,7 @@
 ,"Functions":[
 	{
 		"Name":"WSDCreateUdpMessageParameters"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3757,6 +3940,7 @@
 	}
 	,{
 		"Name":"WSDCreateUdpAddress"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3770,6 +3954,7 @@
 	}
 	,{
 		"Name":"WSDCreateHttpMessageParameters"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3783,6 +3968,7 @@
 	}
 	,{
 		"Name":"WSDCreateHttpAddress"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3796,6 +3982,7 @@
 	}
 	,{
 		"Name":"WSDCreateOutboundAttachment"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3809,6 +3996,7 @@
 	}
 	,{
 		"Name":"WSDXMLGetNameFromBuiltinNamespace"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3824,6 +4012,7 @@
 	}
 	,{
 		"Name":"WSDXMLCreateContext"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3837,6 +4026,7 @@
 	}
 	,{
 		"Name":"WSDCreateDiscoveryProvider"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3851,6 +4041,7 @@
 	}
 	,{
 		"Name":"WSDCreateDiscoveryProvider2"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3867,6 +4058,7 @@
 	}
 	,{
 		"Name":"WSDCreateDiscoveryPublisher"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3881,6 +4073,7 @@
 	}
 	,{
 		"Name":"WSDCreateDiscoveryPublisher2"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3897,6 +4090,7 @@
 	}
 	,{
 		"Name":"WSDCreateDeviceProxy"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3913,6 +4107,7 @@
 	}
 	,{
 		"Name":"WSDCreateDeviceProxyAdvanced"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3930,6 +4125,7 @@
 	}
 	,{
 		"Name":"WSDCreateDeviceProxy2"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3948,6 +4144,7 @@
 	}
 	,{
 		"Name":"WSDCreateDeviceHost"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3963,6 +4160,7 @@
 	}
 	,{
 		"Name":"WSDCreateDeviceHostAdvanced"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3980,6 +4178,7 @@
 	}
 	,{
 		"Name":"WSDCreateDeviceHost2"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3997,6 +4196,7 @@
 	}
 	,{
 		"Name":"WSDSetConfigurationOption"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4012,6 +4212,7 @@
 	}
 	,{
 		"Name":"WSDGetConfigurationOption"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4027,6 +4228,7 @@
 	}
 	,{
 		"Name":"WSDAllocateLinkedMemory"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
@@ -4041,6 +4243,7 @@
 	}
 	,{
 		"Name":"WSDFreeLinkedMemory"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -4054,6 +4257,7 @@
 	}
 	,{
 		"Name":"WSDAttachLinkedMemory"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -4068,6 +4272,7 @@
 	}
 	,{
 		"Name":"WSDDetachLinkedMemory"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -4081,6 +4286,7 @@
 	}
 	,{
 		"Name":"WSDXMLBuildAnyForSingleElement"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4096,6 +4302,7 @@
 	}
 	,{
 		"Name":"WSDXMLGetValueFromAny"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4112,6 +4319,7 @@
 	}
 	,{
 		"Name":"WSDXMLAddSibling"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4126,6 +4334,7 @@
 	}
 	,{
 		"Name":"WSDXMLAddChild"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4140,6 +4349,7 @@
 	}
 	,{
 		"Name":"WSDXMLCleanupElement"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4153,6 +4363,7 @@
 	}
 	,{
 		"Name":"WSDGenerateFault"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4171,6 +4382,7 @@
 	}
 	,{
 		"Name":"WSDGenerateFaultEx"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4188,6 +4400,7 @@
 	}
 	,{
 		"Name":"WSDUriEncode"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4204,6 +4417,7 @@
 	}
 	,{
 		"Name":"WSDUriDecode"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"wsdapi"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}

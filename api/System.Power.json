@@ -3,7 +3,7 @@
 "Constants":[
 	{
 		"Name":"PROCESSOR_NUMBER_PKEY"
-		,"Type":{"Kind":"ApiRef","Name":"PROPERTYKEY","TargetKind":"Default","Api":"UI.Shell.PropertiesSystem","Parents":[]}
+		,"Type":{"Kind":"ApiRef","Name":"DEVPROPKEY","TargetKind":"Default","Api":"Devices.Properties","Parents":[]}
 		,"ValueType":"PropertyKey"
 		,"Value":{"Fmtid":"5724c81d-d5af-4c1f-a103-a06e28f204c6","Pid":1}
 		,"Attrs":[]
@@ -1033,7 +1033,9 @@
 		"Name":"EFFECTIVE_POWER_MODE_CALLBACK"
 		,"Architectures":[]
 		,"Platform":"windows10.0.17763"
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -1187,7 +1189,9 @@
 		"Name":"PWRSCHEMESENUMPROC_V1"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -1199,14 +1203,16 @@
 			,{"Name":"DescriptionSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"Description","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"SByte"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":3}]}
 			,{"Name":"Policy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"POWER_POLICY","TargetKind":"Default","Api":"System.Power","Parents":[]}},"Attrs":["In"]}
-			,{"Name":"Context","Type":{"Kind":"ApiRef","Name":"LPARAM","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Out","Optional"]}
+			,{"Name":"Context","Type":{"Kind":"ApiRef","Name":"LPARAM","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 		]
 	}
 	,{
 		"Name":"PWRSCHEMESENUMPROC"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -1218,7 +1224,7 @@
 			,{"Name":"DescriptionSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"Description","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":3}]}
 			,{"Name":"Policy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"POWER_POLICY","TargetKind":"Default","Api":"System.Power","Parents":[]}},"Attrs":["In"]}
-			,{"Name":"Context","Type":{"Kind":"ApiRef","Name":"LPARAM","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Out","Optional"]}
+			,{"Name":"Context","Type":{"Kind":"ApiRef","Name":"LPARAM","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 		]
 	}
 	,{
@@ -1264,7 +1270,9 @@
 		"Name":"PDEVICE_NOTIFY_CALLBACK_ROUTINE"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -2291,6 +2299,7 @@
 ,"Functions":[
 	{
 		"Name":"CallNtPowerInformation"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
@@ -2308,6 +2317,7 @@
 	}
 	,{
 		"Name":"GetPwrCapabilities"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2321,6 +2331,7 @@
 	}
 	,{
 		"Name":"PowerDeterminePlatformRoleEx"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"ApiRef","Name":"POWER_PLATFORM_ROLE","TargetKind":"Default","Api":"System.Power","Parents":[]}
@@ -2334,6 +2345,7 @@
 	}
 	,{
 		"Name":"PowerRegisterSuspendResumeNotification"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -2349,6 +2361,7 @@
 	}
 	,{
 		"Name":"PowerUnregisterSuspendResumeNotification"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -2357,11 +2370,12 @@
 		,"Platform":"windows8.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"RegistrationHandle","Type":{"Kind":"ApiRef","Name":"HPOWERNOTIFY","TargetKind":"Default","Api":"System.Power","Parents":[]},"Attrs":["In","Out"]}
+			{"Name":"RegistrationHandle","Type":{"Kind":"ApiRef","Name":"HPOWERNOTIFY","TargetKind":"Default","Api":"System.Power","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"PowerReadACValue"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -2381,6 +2395,7 @@
 	}
 	,{
 		"Name":"PowerReadDCValue"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -2400,6 +2415,7 @@
 	}
 	,{
 		"Name":"PowerWriteACValueIndex"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -2417,6 +2433,7 @@
 	}
 	,{
 		"Name":"PowerWriteDCValueIndex"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -2434,6 +2451,7 @@
 	}
 	,{
 		"Name":"PowerGetActiveScheme"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -2448,6 +2466,7 @@
 	}
 	,{
 		"Name":"PowerSetActiveScheme"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -2462,6 +2481,7 @@
 	}
 	,{
 		"Name":"PowerSettingRegisterNotification"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -2478,6 +2498,7 @@
 	}
 	,{
 		"Name":"PowerSettingUnregisterNotification"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -2486,11 +2507,12 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"RegistrationHandle","Type":{"Kind":"ApiRef","Name":"HPOWERNOTIFY","TargetKind":"Default","Api":"System.Power","Parents":[]},"Attrs":["In","Out"]}
+			{"Name":"RegistrationHandle","Type":{"Kind":"ApiRef","Name":"HPOWERNOTIFY","TargetKind":"Default","Api":"System.Power","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"PowerRegisterForEffectivePowerModeNotifications"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2507,6 +2529,7 @@
 	}
 	,{
 		"Name":"PowerUnregisterFromEffectivePowerModeNotifications"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2520,6 +2543,7 @@
 	}
 	,{
 		"Name":"GetPwrDiskSpindownRange"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2534,6 +2558,7 @@
 	}
 	,{
 		"Name":"EnumPwrSchemes"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2548,6 +2573,7 @@
 	}
 	,{
 		"Name":"ReadGlobalPwrPolicy"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2561,6 +2587,7 @@
 	}
 	,{
 		"Name":"ReadPwrScheme"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2575,6 +2602,7 @@
 	}
 	,{
 		"Name":"WritePwrScheme"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2591,6 +2619,7 @@
 	}
 	,{
 		"Name":"WriteGlobalPwrPolicy"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2604,6 +2633,7 @@
 	}
 	,{
 		"Name":"DeletePwrScheme"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2617,6 +2647,7 @@
 	}
 	,{
 		"Name":"GetActivePwrScheme"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2630,6 +2661,7 @@
 	}
 	,{
 		"Name":"SetActivePwrScheme"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2645,6 +2677,7 @@
 	}
 	,{
 		"Name":"IsPwrSuspendAllowed"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2657,6 +2690,7 @@
 	}
 	,{
 		"Name":"IsPwrHibernateAllowed"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2669,6 +2703,7 @@
 	}
 	,{
 		"Name":"IsPwrShutdownAllowed"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2681,6 +2716,7 @@
 	}
 	,{
 		"Name":"IsAdminOverrideActive"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2694,6 +2730,7 @@
 	}
 	,{
 		"Name":"SetSuspendState"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2709,6 +2746,7 @@
 	}
 	,{
 		"Name":"GetCurrentPowerPolicies"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2723,6 +2761,7 @@
 	}
 	,{
 		"Name":"CanUserWritePwrScheme"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2735,6 +2774,7 @@
 	}
 	,{
 		"Name":"ReadProcessorPwrScheme"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2749,6 +2789,7 @@
 	}
 	,{
 		"Name":"WriteProcessorPwrScheme"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2763,6 +2804,7 @@
 	}
 	,{
 		"Name":"ValidatePowerPolicies"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2777,6 +2819,7 @@
 	}
 	,{
 		"Name":"PowerIsSettingRangeDefined"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2791,6 +2834,7 @@
 	}
 	,{
 		"Name":"PowerSettingAccessCheckEx"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -2806,6 +2850,7 @@
 	}
 	,{
 		"Name":"PowerSettingAccessCheck"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -2820,6 +2865,7 @@
 	}
 	,{
 		"Name":"PowerReadACValueIndex"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -2837,6 +2883,7 @@
 	}
 	,{
 		"Name":"PowerReadDCValueIndex"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -2854,6 +2901,7 @@
 	}
 	,{
 		"Name":"PowerReadFriendlyName"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -2872,6 +2920,7 @@
 	}
 	,{
 		"Name":"PowerReadDescription"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -2890,6 +2939,7 @@
 	}
 	,{
 		"Name":"PowerReadPossibleValue"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -2909,6 +2959,7 @@
 	}
 	,{
 		"Name":"PowerReadPossibleFriendlyName"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -2927,6 +2978,7 @@
 	}
 	,{
 		"Name":"PowerReadPossibleDescription"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -2945,6 +2997,7 @@
 	}
 	,{
 		"Name":"PowerReadValueMin"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -2961,6 +3014,7 @@
 	}
 	,{
 		"Name":"PowerReadValueMax"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -2977,6 +3031,7 @@
 	}
 	,{
 		"Name":"PowerReadValueIncrement"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -2993,6 +3048,7 @@
 	}
 	,{
 		"Name":"PowerReadValueUnitsSpecifier"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3010,6 +3066,7 @@
 	}
 	,{
 		"Name":"PowerReadACDefaultIndex"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3027,6 +3084,7 @@
 	}
 	,{
 		"Name":"PowerReadDCDefaultIndex"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3044,6 +3102,7 @@
 	}
 	,{
 		"Name":"PowerReadIconResourceSpecifier"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3062,6 +3121,7 @@
 	}
 	,{
 		"Name":"PowerReadSettingAttributes"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3076,6 +3136,7 @@
 	}
 	,{
 		"Name":"PowerWriteFriendlyName"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3094,6 +3155,7 @@
 	}
 	,{
 		"Name":"PowerWriteDescription"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3112,6 +3174,7 @@
 	}
 	,{
 		"Name":"PowerWritePossibleValue"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3131,6 +3194,7 @@
 	}
 	,{
 		"Name":"PowerWritePossibleFriendlyName"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3149,6 +3213,7 @@
 	}
 	,{
 		"Name":"PowerWritePossibleDescription"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3167,6 +3232,7 @@
 	}
 	,{
 		"Name":"PowerWriteValueMin"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3183,6 +3249,7 @@
 	}
 	,{
 		"Name":"PowerWriteValueMax"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3199,6 +3266,7 @@
 	}
 	,{
 		"Name":"PowerWriteValueIncrement"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3215,6 +3283,7 @@
 	}
 	,{
 		"Name":"PowerWriteValueUnitsSpecifier"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3232,6 +3301,7 @@
 	}
 	,{
 		"Name":"PowerWriteACDefaultIndex"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3249,6 +3319,7 @@
 	}
 	,{
 		"Name":"PowerWriteDCDefaultIndex"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3266,6 +3337,7 @@
 	}
 	,{
 		"Name":"PowerWriteIconResourceSpecifier"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3284,6 +3356,7 @@
 	}
 	,{
 		"Name":"PowerWriteSettingAttributes"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3299,6 +3372,7 @@
 	}
 	,{
 		"Name":"PowerDuplicateScheme"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3314,6 +3388,7 @@
 	}
 	,{
 		"Name":"PowerImportPowerScheme"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3329,6 +3404,7 @@
 	}
 	,{
 		"Name":"PowerDeleteScheme"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3343,6 +3419,7 @@
 	}
 	,{
 		"Name":"PowerRemovePowerSetting"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3357,6 +3434,7 @@
 	}
 	,{
 		"Name":"PowerCreateSetting"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3372,6 +3450,7 @@
 	}
 	,{
 		"Name":"PowerCreatePossibleSetting"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3388,6 +3467,7 @@
 	}
 	,{
 		"Name":"PowerEnumerate"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3407,6 +3487,7 @@
 	}
 	,{
 		"Name":"PowerOpenUserPowerKey"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3422,6 +3503,7 @@
 	}
 	,{
 		"Name":"PowerOpenSystemPowerKey"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3437,6 +3519,7 @@
 	}
 	,{
 		"Name":"PowerCanRestoreIndividualDefaultPowerScheme"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3450,6 +3533,7 @@
 	}
 	,{
 		"Name":"PowerRestoreIndividualDefaultPowerScheme"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3463,6 +3547,7 @@
 	}
 	,{
 		"Name":"PowerRestoreDefaultPowerSchemes"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3475,6 +3560,7 @@
 	}
 	,{
 		"Name":"PowerReplaceDefaultPowerSchemes"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3487,6 +3573,7 @@
 	}
 	,{
 		"Name":"PowerDeterminePlatformRole"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"ApiRef","Name":"POWER_PLATFORM_ROLE","TargetKind":"Default","Api":"System.Power","Parents":[]}
@@ -3499,6 +3586,7 @@
 	}
 	,{
 		"Name":"DevicePowerEnumDevices"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3516,6 +3604,7 @@
 	}
 	,{
 		"Name":"DevicePowerSetDeviceState"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3531,6 +3620,7 @@
 	}
 	,{
 		"Name":"DevicePowerOpen"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3544,6 +3634,7 @@
 	}
 	,{
 		"Name":"DevicePowerClose"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3556,6 +3647,7 @@
 	}
 	,{
 		"Name":"PowerReportThermalEvent"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"POWRPROF"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3569,6 +3661,7 @@
 	}
 	,{
 		"Name":"RegisterPowerSettingNotification"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"USER32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HPOWERNOTIFY","TargetKind":"Default","Api":"System.Power","Parents":[]}
@@ -3584,6 +3677,7 @@
 	}
 	,{
 		"Name":"UnregisterPowerSettingNotification"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"USER32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3597,6 +3691,7 @@
 	}
 	,{
 		"Name":"RegisterSuspendResumeNotification"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"USER32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HPOWERNOTIFY","TargetKind":"Default","Api":"System.Power","Parents":[]}
@@ -3611,6 +3706,7 @@
 	}
 	,{
 		"Name":"UnregisterSuspendResumeNotification"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"USER32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3624,6 +3720,7 @@
 	}
 	,{
 		"Name":"RequestWakeupLatency"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3637,6 +3734,7 @@
 	}
 	,{
 		"Name":"IsSystemResumeAutomatic"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3649,6 +3747,7 @@
 	}
 	,{
 		"Name":"SetThreadExecutionState"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"EXECUTION_STATE","TargetKind":"Default","Api":"System.Power","Parents":[]}
@@ -3662,6 +3761,7 @@
 	}
 	,{
 		"Name":"PowerCreateRequest"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3675,6 +3775,7 @@
 	}
 	,{
 		"Name":"PowerSetRequest"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3689,6 +3790,7 @@
 	}
 	,{
 		"Name":"PowerClearRequest"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3703,6 +3805,7 @@
 	}
 	,{
 		"Name":"GetDevicePowerState"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3717,6 +3820,7 @@
 	}
 	,{
 		"Name":"SetSystemPowerState"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3731,6 +3835,7 @@
 	}
 	,{
 		"Name":"GetSystemPowerStatus"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}

@@ -207,6 +207,7 @@
 ,"Functions":[
 	{
 		"Name":"InitiateSystemShutdownA"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"ADVAPI32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -224,6 +225,7 @@
 	}
 	,{
 		"Name":"InitiateSystemShutdownW"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"ADVAPI32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -241,6 +243,7 @@
 	}
 	,{
 		"Name":"AbortSystemShutdownA"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"ADVAPI32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -254,6 +257,7 @@
 	}
 	,{
 		"Name":"AbortSystemShutdownW"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"ADVAPI32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -267,6 +271,7 @@
 	}
 	,{
 		"Name":"InitiateSystemShutdownExA"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"ADVAPI32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -285,6 +290,7 @@
 	}
 	,{
 		"Name":"InitiateSystemShutdownExW"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"ADVAPI32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -303,6 +309,7 @@
 	}
 	,{
 		"Name":"InitiateShutdownA"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"ADVAPI32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -320,6 +327,7 @@
 	}
 	,{
 		"Name":"InitiateShutdownW"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"ADVAPI32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -337,6 +345,7 @@
 	}
 	,{
 		"Name":"CheckForHiberboot"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"ADVAPI32"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -351,6 +360,7 @@
 	}
 	,{
 		"Name":"ExitWindowsEx"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"USER32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -360,11 +370,12 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"uFlags","Type":{"Kind":"ApiRef","Name":"EXIT_WINDOWS_FLAGS","TargetKind":"Default","Api":"System.Shutdown","Parents":[]},"Attrs":["In"]}
-			,{"Name":"dwReason","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"dwReason","Type":{"Kind":"ApiRef","Name":"SHUTDOWN_REASON","TargetKind":"Default","Api":"System.Shutdown","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"LockWorkStation"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"USER32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -377,6 +388,7 @@
 	}
 	,{
 		"Name":"ShutdownBlockReasonCreate"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"USER32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -391,6 +403,7 @@
 	}
 	,{
 		"Name":"ShutdownBlockReasonQuery"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"USER32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -406,6 +419,7 @@
 	}
 	,{
 		"Name":"ShutdownBlockReasonDestroy"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"USER32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}

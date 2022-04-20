@@ -23,6 +23,27 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"statusFile"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":0
+		,"Attrs":[]
+	}
+	,{
+		"Name":"statusFolder"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"statusCabinet"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2
+		,"Attrs":[]
+	}
+	,{
 		"Name":"INCLUDED_TYPES_FCI_FDI"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -65,6 +86,139 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"tcompMASK_TYPE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":15
+		,"Attrs":[]
+	}
+	,{
+		"Name":"tcompTYPE_NONE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":0
+		,"Attrs":[]
+	}
+	,{
+		"Name":"tcompTYPE_MSZIP"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"tcompTYPE_QUANTUM"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2
+		,"Attrs":[]
+	}
+	,{
+		"Name":"tcompTYPE_LZX"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":3
+		,"Attrs":[]
+	}
+	,{
+		"Name":"tcompBAD"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":15
+		,"Attrs":[]
+	}
+	,{
+		"Name":"tcompMASK_LZX_WINDOW"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":7936
+		,"Attrs":[]
+	}
+	,{
+		"Name":"tcompLZX_WINDOW_LO"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":3840
+		,"Attrs":[]
+	}
+	,{
+		"Name":"tcompLZX_WINDOW_HI"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":5376
+		,"Attrs":[]
+	}
+	,{
+		"Name":"tcompSHIFT_LZX_WINDOW"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":8
+		,"Attrs":[]
+	}
+	,{
+		"Name":"tcompMASK_QUANTUM_LEVEL"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":240
+		,"Attrs":[]
+	}
+	,{
+		"Name":"tcompQUANTUM_LEVEL_LO"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":16
+		,"Attrs":[]
+	}
+	,{
+		"Name":"tcompQUANTUM_LEVEL_HI"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":112
+		,"Attrs":[]
+	}
+	,{
+		"Name":"tcompSHIFT_QUANTUM_LEVEL"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":4
+		,"Attrs":[]
+	}
+	,{
+		"Name":"tcompMASK_QUANTUM_MEM"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":7936
+		,"Attrs":[]
+	}
+	,{
+		"Name":"tcompQUANTUM_MEM_LO"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2560
+		,"Attrs":[]
+	}
+	,{
+		"Name":"tcompQUANTUM_MEM_HI"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":5376
+		,"Attrs":[]
+	}
+	,{
+		"Name":"tcompSHIFT_QUANTUM_MEM"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":8
+		,"Attrs":[]
+	}
+	,{
+		"Name":"tcompMASK_RESERVED"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":57344
+		,"Attrs":[]
+	}
+	,{
 		"Name":"INCLUDED_FDI"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -82,10 +236,11 @@
 		,"Flags":false
 		,"Scoped":false
 		,"Values":[
-			{"Name":"cpu80286","Value":0}
+			{"Name":"cpuUNKNOWN","Value":-1}
+			,{"Name":"cpu80286","Value":0}
 			,{"Name":"cpu80386","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"ERF"
@@ -151,7 +306,9 @@
 		"Name":"PFNFCIALLOC"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"ReturnAttrs":[]
@@ -164,7 +321,9 @@
 		"Name":"PFNFCIFREE"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -177,7 +336,9 @@
 		"Name":"PFNFCIOPEN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
 		,"ReturnAttrs":[]
@@ -194,7 +355,9 @@
 		"Name":"PFNFCIREAD"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -211,7 +374,9 @@
 		"Name":"PFNFCIWRITE"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -228,7 +393,9 @@
 		"Name":"PFNFCICLOSE"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -243,7 +410,9 @@
 		"Name":"PFNFCISEEK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -260,7 +429,9 @@
 		"Name":"PFNFCIDELETE"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -275,7 +446,9 @@
 		"Name":"PFNFCIGETNEXTCABINET"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -290,7 +463,9 @@
 		"Name":"PFNFCIFILEPLACED"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -307,7 +482,9 @@
 		"Name":"PFNFCIGETOPENINFO"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
 		,"ReturnAttrs":[]
@@ -325,7 +502,9 @@
 		"Name":"PFNFCISTATUS"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -341,7 +520,9 @@
 		"Name":"PFNFCIGETTEMPFILE"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -493,7 +674,9 @@
 		"Name":"PFNALLOC"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"ReturnAttrs":[]
@@ -506,7 +689,9 @@
 		"Name":"PFNFREE"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -519,7 +704,9 @@
 		"Name":"PFNOPEN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
 		,"ReturnAttrs":[]
@@ -534,7 +721,9 @@
 		"Name":"PFNREAD"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -549,7 +738,9 @@
 		"Name":"PFNWRITE"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -564,7 +755,9 @@
 		"Name":"PFNCLOSE"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -577,7 +770,9 @@
 		"Name":"PFNSEEK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -592,7 +787,9 @@
 		"Name":"PFNFDIDECRYPT"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -647,7 +844,9 @@
 		"Name":"PFNFDINOTIFY"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
 		,"ReturnAttrs":[]
@@ -690,6 +889,7 @@
 ,"Functions":[
 	{
 		"Name":"FCICreate"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"Cabinet"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
@@ -715,6 +915,7 @@
 	}
 	,{
 		"Name":"FCIAddFile"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"Cabinet"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -735,6 +936,7 @@
 	}
 	,{
 		"Name":"FCIFlushCabinet"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"Cabinet"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -751,6 +953,7 @@
 	}
 	,{
 		"Name":"FCIFlushFolder"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"Cabinet"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -766,6 +969,7 @@
 	}
 	,{
 		"Name":"FCIDestroy"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"Cabinet"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -779,6 +983,7 @@
 	}
 	,{
 		"Name":"FDICreate"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"Cabinet"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
@@ -800,6 +1005,7 @@
 	}
 	,{
 		"Name":"FDIIsCabinet"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"Cabinet"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -815,6 +1021,7 @@
 	}
 	,{
 		"Name":"FDICopy"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"Cabinet"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -834,6 +1041,7 @@
 	}
 	,{
 		"Name":"FDIDestroy"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"Cabinet"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -847,6 +1055,7 @@
 	}
 	,{
 		"Name":"FDITruncateCabinet"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"Cabinet"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}

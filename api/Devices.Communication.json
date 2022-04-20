@@ -829,6 +829,36 @@
 		,"IntegerBase":"UInt32"
 	}
 	,{
+		"Name":"DCB_STOP_BITS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"ONESTOPBIT","Value":0}
+			,{"Name":"ONE5STOPBITS","Value":1}
+			,{"Name":"TWOSTOPBITS","Value":2}
+		]
+		,"IntegerBase":"Byte"
+	}
+	,{
+		"Name":"DCB_PARITY"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"EVENPARITY","Value":2}
+			,{"Name":"MARKPARITY","Value":3}
+			,{"Name":"NOPARITY","Value":0}
+			,{"Name":"ODDPARITY","Value":1}
+			,{"Name":"SPACEPARITY","Value":4}
+		]
+		,"IntegerBase":"Byte"
+	}
+	,{
 		"Name":"MODEMDEVCAPS"
 		,"Architectures":[]
 		,"Platform":null
@@ -944,8 +974,8 @@
 			,{"Name":"XonLim","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"XoffLim","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"ByteSize","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"Parity","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"StopBits","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"Parity","Type":{"Kind":"ApiRef","Name":"DCB_PARITY","TargetKind":"Default","Api":"Devices.Communication","Parents":[]},"Attrs":[]}
+			,{"Name":"StopBits","Type":{"Kind":"ApiRef","Name":"DCB_STOP_BITS","TargetKind":"Default","Api":"Devices.Communication","Parents":[]},"Attrs":[]}
 			,{"Name":"XonChar","Type":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"XoffChar","Type":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"ErrorChar","Type":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -998,6 +1028,7 @@
 ,"Functions":[
 	{
 		"Name":"ClearCommBreak"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1011,6 +1042,7 @@
 	}
 	,{
 		"Name":"ClearCommError"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1026,6 +1058,7 @@
 	}
 	,{
 		"Name":"SetupComm"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1041,6 +1074,7 @@
 	}
 	,{
 		"Name":"EscapeCommFunction"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1055,6 +1089,7 @@
 	}
 	,{
 		"Name":"GetCommConfig"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1070,6 +1105,7 @@
 	}
 	,{
 		"Name":"GetCommMask"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1084,6 +1120,7 @@
 	}
 	,{
 		"Name":"GetCommProperties"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1098,6 +1135,7 @@
 	}
 	,{
 		"Name":"GetCommModemStatus"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1112,6 +1150,7 @@
 	}
 	,{
 		"Name":"GetCommState"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1126,6 +1165,7 @@
 	}
 	,{
 		"Name":"GetCommTimeouts"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1140,6 +1180,7 @@
 	}
 	,{
 		"Name":"PurgeComm"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1154,6 +1195,7 @@
 	}
 	,{
 		"Name":"SetCommBreak"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1167,6 +1209,7 @@
 	}
 	,{
 		"Name":"SetCommConfig"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1182,6 +1225,7 @@
 	}
 	,{
 		"Name":"SetCommMask"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1196,6 +1240,7 @@
 	}
 	,{
 		"Name":"SetCommState"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1210,6 +1255,7 @@
 	}
 	,{
 		"Name":"SetCommTimeouts"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1224,6 +1270,7 @@
 	}
 	,{
 		"Name":"TransmitCommChar"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1238,6 +1285,7 @@
 	}
 	,{
 		"Name":"WaitCommEvent"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1253,6 +1301,7 @@
 	}
 	,{
 		"Name":"OpenCommPort"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-comm-l1-1-1"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1268,6 +1317,7 @@
 	}
 	,{
 		"Name":"GetCommPorts"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"api-ms-win-core-comm-l1-1-2"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -1283,6 +1333,7 @@
 	}
 	,{
 		"Name":"BuildCommDCBA"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1297,6 +1348,7 @@
 	}
 	,{
 		"Name":"BuildCommDCBW"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1311,6 +1363,7 @@
 	}
 	,{
 		"Name":"BuildCommDCBAndTimeoutsA"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1326,6 +1379,7 @@
 	}
 	,{
 		"Name":"BuildCommDCBAndTimeoutsW"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1341,6 +1395,7 @@
 	}
 	,{
 		"Name":"CommConfigDialogA"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1356,6 +1411,7 @@
 	}
 	,{
 		"Name":"CommConfigDialogW"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1371,6 +1427,7 @@
 	}
 	,{
 		"Name":"GetDefaultCommConfigA"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1386,6 +1443,7 @@
 	}
 	,{
 		"Name":"GetDefaultCommConfigW"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1401,6 +1459,7 @@
 	}
 	,{
 		"Name":"SetDefaultCommConfigA"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1416,6 +1475,7 @@
 	}
 	,{
 		"Name":"SetDefaultCommConfigW"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}

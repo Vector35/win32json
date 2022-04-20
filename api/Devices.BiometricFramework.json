@@ -2160,34 +2160,7 @@
 						]
 					}
 					,{
-						"Name":"_NotifyUnitStatusChange_e__Struct"
-						,"Architectures":[]
-						,"Platform":null
-						,"Kind":"Struct"
-						,"Size":0
-						,"PackingSize":0
-						,"Fields":[
-							{"Name":"ExtendedStatus","Type":{"Kind":"ApiRef","Name":"WINBIO_EXTENDED_UNIT_STATUS","TargetKind":"Default","Api":"Devices.BiometricFramework","Parents":[]},"Attrs":[]}
-						]
-						,"NestedTypes":[
-						]
-					}
-					,{
-						"Name":"_EnumServiceProviders_e__Struct"
-						,"Architectures":[]
-						,"Platform":null
-						,"Kind":"Struct"
-						,"Size":0
-						,"PackingSize":0
-						,"Fields":[
-							{"Name":"BspCount","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
-							,{"Name":"BspSchemaArray","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WINBIO_BSP_SCHEMA","TargetKind":"Default","Api":"Devices.BiometricFramework","Parents":[]}},"Attrs":[]}
-						]
-						,"NestedTypes":[
-						]
-					}
-					,{
-						"Name":"_EnrollCommit_e__Struct"
+						"Name":"_IdentifyAndReleaseTicket_e__Struct"
 						,"Architectures":[]
 						,"Platform":null
 						,"Kind":"Struct"
@@ -2195,7 +2168,9 @@
 						,"PackingSize":0
 						,"Fields":[
 							{"Name":"Identity","Type":{"Kind":"ApiRef","Name":"WINBIO_IDENTITY","TargetKind":"Default","Api":"Devices.BiometricFramework","Parents":[]},"Attrs":[]}
-							,{"Name":"IsNewTemplate","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+							,{"Name":"SubFactor","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+							,{"Name":"RejectDetail","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+							,{"Name":"Ticket","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]
@@ -2219,22 +2194,6 @@
 						]
 					}
 					,{
-						"Name":"_IdentifyAndReleaseTicket_e__Struct"
-						,"Architectures":[]
-						,"Platform":null
-						,"Kind":"Struct"
-						,"Size":0
-						,"PackingSize":0
-						,"Fields":[
-							{"Name":"Identity","Type":{"Kind":"ApiRef","Name":"WINBIO_IDENTITY","TargetKind":"Default","Api":"Devices.BiometricFramework","Parents":[]},"Attrs":[]}
-							,{"Name":"SubFactor","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-							,{"Name":"RejectDetail","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-							,{"Name":"Ticket","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-						]
-						,"NestedTypes":[
-						]
-					}
-					,{
 						"Name":"_Verify_e__Struct"
 						,"Architectures":[]
 						,"Platform":null
@@ -2248,6 +2207,47 @@
 						,"NestedTypes":[
 						]
 					}
+					,{
+						"Name":"_NotifyUnitStatusChange_e__Struct"
+						,"Architectures":[]
+						,"Platform":null
+						,"Kind":"Struct"
+						,"Size":0
+						,"PackingSize":0
+						,"Fields":[
+							{"Name":"ExtendedStatus","Type":{"Kind":"ApiRef","Name":"WINBIO_EXTENDED_UNIT_STATUS","TargetKind":"Default","Api":"Devices.BiometricFramework","Parents":[]},"Attrs":[]}
+						]
+						,"NestedTypes":[
+						]
+					}
+					,{
+						"Name":"_EnrollCommit_e__Struct"
+						,"Architectures":[]
+						,"Platform":null
+						,"Kind":"Struct"
+						,"Size":0
+						,"PackingSize":0
+						,"Fields":[
+							{"Name":"Identity","Type":{"Kind":"ApiRef","Name":"WINBIO_IDENTITY","TargetKind":"Default","Api":"Devices.BiometricFramework","Parents":[]},"Attrs":[]}
+							,{"Name":"IsNewTemplate","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+						]
+						,"NestedTypes":[
+						]
+					}
+					,{
+						"Name":"_EnumServiceProviders_e__Struct"
+						,"Architectures":[]
+						,"Platform":null
+						,"Kind":"Struct"
+						,"Size":0
+						,"PackingSize":0
+						,"Fields":[
+							{"Name":"BspCount","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
+							,{"Name":"BspSchemaArray","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WINBIO_BSP_SCHEMA","TargetKind":"Default","Api":"Devices.BiometricFramework","Parents":[]}},"Attrs":[]}
+						]
+						,"NestedTypes":[
+						]
+					}
 				]
 			}
 		]
@@ -2256,7 +2256,9 @@
 		"Name":"PWINBIO_ASYNC_COMPLETION_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -2269,7 +2271,9 @@
 		"Name":"PWINBIO_VERIFY_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -2286,7 +2290,9 @@
 		"Name":"PWINBIO_IDENTIFY_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -2304,7 +2310,9 @@
 		"Name":"PWINBIO_LOCATE_SENSOR_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -2319,7 +2327,9 @@
 		"Name":"PWINBIO_ENROLL_CAPTURE_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -2334,7 +2344,9 @@
 		"Name":"PWINBIO_EVENT_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -2349,7 +2361,9 @@
 		"Name":"PWINBIO_CAPTURE_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -2459,7 +2473,9 @@
 		"Name":"PIBIO_SENSOR_ATTACH_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2472,7 +2488,9 @@
 		"Name":"PIBIO_SENSOR_DETACH_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2485,7 +2503,9 @@
 		"Name":"PIBIO_SENSOR_CLEAR_CONTEXT_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2498,7 +2518,9 @@
 		"Name":"PIBIO_SENSOR_QUERY_STATUS_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2512,7 +2534,9 @@
 		"Name":"PIBIO_SENSOR_RESET_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2525,7 +2549,9 @@
 		"Name":"PIBIO_SENSOR_SET_MODE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2539,7 +2565,9 @@
 		"Name":"PIBIO_SENSOR_SET_INDICATOR_STATUS_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2553,7 +2581,9 @@
 		"Name":"PIBIO_SENSOR_GET_INDICATOR_STATUS_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2567,7 +2597,9 @@
 		"Name":"PIBIO_SENSOR_START_CAPTURE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2582,7 +2614,9 @@
 		"Name":"PIBIO_SENSOR_FINISH_CAPTURE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2596,7 +2630,9 @@
 		"Name":"PIBIO_SENSOR_EXPORT_SENSOR_DATA_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2611,7 +2647,9 @@
 		"Name":"PIBIO_SENSOR_CANCEL_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2624,7 +2662,9 @@
 		"Name":"PIBIO_SENSOR_PUSH_DATA_TO_ENGINE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2640,7 +2680,9 @@
 		"Name":"PIBIO_SENSOR_CONTROL_UNIT_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2660,7 +2702,9 @@
 		"Name":"PIBIO_SENSOR_CONTROL_UNIT_PRIVILEGED_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2680,7 +2724,9 @@
 		"Name":"PIBIO_SENSOR_NOTIFY_POWER_CHANGE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2694,7 +2740,9 @@
 		"Name":"PIBIO_SENSOR_PIPELINE_INIT_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2707,7 +2755,9 @@
 		"Name":"PIBIO_SENSOR_PIPELINE_CLEANUP_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2720,7 +2770,9 @@
 		"Name":"PIBIO_SENSOR_ACTIVATE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2733,7 +2785,9 @@
 		"Name":"PIBIO_SENSOR_DEACTIVATE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2746,7 +2800,9 @@
 		"Name":"PIBIO_SENSOR_QUERY_EXTENDED_INFO_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2761,7 +2817,9 @@
 		"Name":"PIBIO_SENSOR_QUERY_CALIBRATION_FORMATS_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2777,7 +2835,9 @@
 		"Name":"PIBIO_SENSOR_SET_CALIBRATION_FORMAT_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2791,7 +2851,9 @@
 		"Name":"PIBIO_SENSOR_ACCEPT_CALIBRATION_DATA_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2806,7 +2868,9 @@
 		"Name":"PIBIO_SENSOR_ASYNC_IMPORT_RAW_BUFFER_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2823,7 +2887,9 @@
 		"Name":"PIBIO_SENSOR_ASYNC_IMPORT_SECURE_BUFFER_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2841,7 +2907,9 @@
 		"Name":"PIBIO_SENSOR_QUERY_PRIVATE_SENSOR_TYPE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2857,7 +2925,9 @@
 		"Name":"PIBIO_SENSOR_CONNECT_SECURE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2872,7 +2942,9 @@
 		"Name":"PIBIO_SENSOR_START_CAPTURE_EX_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2890,7 +2962,9 @@
 		"Name":"PIBIO_SENSOR_START_NOTIFY_WAKE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2904,7 +2978,9 @@
 		"Name":"PIBIO_SENSOR_FINISH_NOTIFY_WAKE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2965,7 +3041,9 @@
 		"Name":"PWINBIO_QUERY_SENSOR_INTERFACE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2978,7 +3056,9 @@
 		"Name":"PIBIO_ENGINE_ATTACH_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2991,7 +3071,9 @@
 		"Name":"PIBIO_ENGINE_DETACH_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3004,7 +3086,9 @@
 		"Name":"PIBIO_ENGINE_CLEAR_CONTEXT_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3017,7 +3101,9 @@
 		"Name":"PIBIO_ENGINE_QUERY_PREFERRED_FORMAT_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3032,7 +3118,9 @@
 		"Name":"PIBIO_ENGINE_QUERY_INDEX_VECTOR_SIZE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3046,7 +3134,9 @@
 		"Name":"PIBIO_ENGINE_QUERY_HASH_ALGORITHMS_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3062,7 +3152,9 @@
 		"Name":"PIBIO_ENGINE_SET_HASH_ALGORITHM_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3077,7 +3169,9 @@
 		"Name":"PIBIO_ENGINE_QUERY_SAMPLE_HINT_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3091,7 +3185,9 @@
 		"Name":"PIBIO_ENGINE_ACCEPT_SAMPLE_DATA_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3108,7 +3204,9 @@
 		"Name":"PIBIO_ENGINE_EXPORT_ENGINE_DATA_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3124,7 +3222,9 @@
 		"Name":"PIBIO_ENGINE_VERIFY_FEATURE_SET_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3145,7 +3245,9 @@
 		"Name":"PIBIO_ENGINE_IDENTIFY_FEATURE_SET_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3165,7 +3267,9 @@
 		"Name":"PIBIO_ENGINE_CREATE_ENROLLMENT_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3178,7 +3282,9 @@
 		"Name":"PIBIO_ENGINE_UPDATE_ENROLLMENT_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3192,7 +3298,9 @@
 		"Name":"PIBIO_ENGINE_GET_ENROLLMENT_STATUS_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3206,7 +3314,9 @@
 		"Name":"PIBIO_ENGINE_GET_ENROLLMENT_HASH_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3221,7 +3331,9 @@
 		"Name":"PIBIO_ENGINE_CHECK_FOR_DUPLICATE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3237,7 +3349,9 @@
 		"Name":"PIBIO_ENGINE_COMMIT_ENROLLMENT_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3254,7 +3368,9 @@
 		"Name":"PIBIO_ENGINE_DISCARD_ENROLLMENT_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3267,7 +3383,9 @@
 		"Name":"PIBIO_ENGINE_CONTROL_UNIT_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3287,7 +3405,9 @@
 		"Name":"PIBIO_ENGINE_CONTROL_UNIT_PRIVILEGED_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3307,7 +3427,9 @@
 		"Name":"PIBIO_ENGINE_NOTIFY_POWER_CHANGE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3321,7 +3443,9 @@
 		"Name":"PIBIO_ENGINE_RESERVED_1_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3335,7 +3459,9 @@
 		"Name":"PIBIO_ENGINE_PIPELINE_INIT_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3348,7 +3474,9 @@
 		"Name":"PIBIO_ENGINE_PIPELINE_CLEANUP_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3361,7 +3489,9 @@
 		"Name":"PIBIO_ENGINE_ACTIVATE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3374,7 +3504,9 @@
 		"Name":"PIBIO_ENGINE_DEACTIVATE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3387,7 +3519,9 @@
 		"Name":"PIBIO_ENGINE_QUERY_EXTENDED_INFO_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3402,7 +3536,9 @@
 		"Name":"PIBIO_ENGINE_IDENTIFY_ALL_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3417,7 +3553,9 @@
 		"Name":"PIBIO_ENGINE_SET_ENROLLMENT_SELECTOR_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3431,7 +3569,9 @@
 		"Name":"PIBIO_ENGINE_SET_ENROLLMENT_PARAMETERS_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3445,7 +3585,9 @@
 		"Name":"PIBIO_ENGINE_QUERY_EXTENDED_ENROLLMENT_STATUS_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3460,7 +3602,9 @@
 		"Name":"PIBIO_ENGINE_REFRESH_CACHE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3473,7 +3617,9 @@
 		"Name":"PIBIO_ENGINE_SELECT_CALIBRATION_FORMAT_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3490,7 +3636,9 @@
 		"Name":"PIBIO_ENGINE_QUERY_CALIBRATION_DATA_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3507,7 +3655,9 @@
 		"Name":"PIBIO_ENGINE_SET_ACCOUNT_POLICY_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3522,7 +3672,9 @@
 		"Name":"PIBIO_ENGINE_CREATE_KEY_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3540,7 +3692,9 @@
 		"Name":"PIBIO_ENGINE_IDENTIFY_FEATURE_SET_SECURE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3562,7 +3716,9 @@
 		"Name":"PIBIO_ENGINE_ACCEPT_PRIVATE_SENSOR_TYPE_INFO_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3577,7 +3733,9 @@
 		"Name":"PIBIO_ENGINE_CREATE_ENROLLMENT_AUTHENTICATED_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3592,7 +3750,9 @@
 		"Name":"PIBIO_ENGINE_IDENTIFY_FEATURE_SET_AUTHENTICATED_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3669,7 +3829,9 @@
 		"Name":"PWINBIO_QUERY_ENGINE_INTERFACE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3682,7 +3844,9 @@
 		"Name":"PIBIO_STORAGE_ATTACH_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3695,7 +3859,9 @@
 		"Name":"PIBIO_STORAGE_DETACH_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3708,7 +3874,9 @@
 		"Name":"PIBIO_STORAGE_CLEAR_CONTEXT_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3721,7 +3889,9 @@
 		"Name":"PIBIO_STORAGE_CREATE_DATABASE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3741,7 +3911,9 @@
 		"Name":"PIBIO_STORAGE_ERASE_DATABASE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3757,7 +3929,9 @@
 		"Name":"PIBIO_STORAGE_OPEN_DATABASE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3773,7 +3947,9 @@
 		"Name":"PIBIO_STORAGE_CLOSE_DATABASE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3786,7 +3962,9 @@
 		"Name":"PIBIO_STORAGE_GET_DATA_FORMAT_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3801,7 +3979,9 @@
 		"Name":"PIBIO_STORAGE_GET_DATABASE_SIZE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3816,7 +3996,9 @@
 		"Name":"PIBIO_STORAGE_ADD_RECORD_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3830,7 +4012,9 @@
 		"Name":"PIBIO_STORAGE_DELETE_RECORD_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3845,7 +4029,9 @@
 		"Name":"PIBIO_STORAGE_QUERY_BY_SUBJECT_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3860,7 +4046,9 @@
 		"Name":"PIBIO_STORAGE_QUERY_BY_CONTENT_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3876,7 +4064,9 @@
 		"Name":"PIBIO_STORAGE_GET_RECORD_COUNT_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3890,7 +4080,9 @@
 		"Name":"PIBIO_STORAGE_FIRST_RECORD_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3903,7 +4095,9 @@
 		"Name":"PIBIO_STORAGE_NEXT_RECORD_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3916,7 +4110,9 @@
 		"Name":"PIBIO_STORAGE_GET_CURRENT_RECORD_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3930,7 +4126,9 @@
 		"Name":"PIBIO_STORAGE_CONTROL_UNIT_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3950,7 +4148,9 @@
 		"Name":"PIBIO_STORAGE_CONTROL_UNIT_PRIVILEGED_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3970,7 +4170,9 @@
 		"Name":"PIBIO_STORAGE_NOTIFY_POWER_CHANGE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3984,7 +4186,9 @@
 		"Name":"PIBIO_STORAGE_PIPELINE_INIT_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -3997,7 +4201,9 @@
 		"Name":"PIBIO_STORAGE_PIPELINE_CLEANUP_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -4010,7 +4216,9 @@
 		"Name":"PIBIO_STORAGE_ACTIVATE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -4023,7 +4231,9 @@
 		"Name":"PIBIO_STORAGE_DEACTIVATE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -4036,7 +4246,9 @@
 		"Name":"PIBIO_STORAGE_QUERY_EXTENDED_INFO_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -4051,7 +4263,9 @@
 		"Name":"PIBIO_STORAGE_NOTIFY_DATABASE_CHANGE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -4065,7 +4279,9 @@
 		"Name":"PIBIO_STORAGE_RESERVED_1_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -4081,7 +4297,9 @@
 		"Name":"PIBIO_STORAGE_RESERVED_2_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -4095,7 +4313,9 @@
 		"Name":"PIBIO_STORAGE_UPDATE_RECORD_BEGIN_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -4111,7 +4331,9 @@
 		"Name":"PIBIO_STORAGE_UPDATE_RECORD_COMMIT_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -4171,7 +4393,9 @@
 		"Name":"PWINBIO_QUERY_STORAGE_INTERFACE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -4184,7 +4408,9 @@
 		"Name":"PIBIO_FRAMEWORK_SET_UNIT_STATUS_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -4199,7 +4425,9 @@
 		"Name":"PIBIO_FRAMEWORK_VSM_CACHE_CLEAR_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -4212,7 +4440,9 @@
 		"Name":"PIBIO_FRAMEWORK_VSM_CACHE_IMPORT_BEGIN_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -4227,7 +4457,9 @@
 		"Name":"PIBIO_FRAMEWORK_VSM_CACHE_IMPORT_NEXT_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -4242,7 +4474,9 @@
 		"Name":"PIBIO_FRAMEWORK_VSM_CACHE_IMPORT_END_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -4255,7 +4489,9 @@
 		"Name":"PIBIO_FRAMEWORK_VSM_CACHE_EXPORT_BEGIN_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -4270,7 +4506,9 @@
 		"Name":"PIBIO_FRAMEWORK_VSM_CACHE_EXPORT_NEXT_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -4286,7 +4524,9 @@
 		"Name":"PIBIO_FRAMEWORK_VSM_CACHE_EXPORT_END_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -4299,7 +4539,9 @@
 		"Name":"PIBIO_FRAMEWORK_VSM_STORAGE_RESERVED_1_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -4314,7 +4556,9 @@
 		"Name":"PIBIO_FRAMEWORK_VSM_STORAGE_RESERVED_2_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -4329,7 +4573,9 @@
 		"Name":"PIBIO_FRAMEWORK_VSM_STORAGE_RESERVED_3_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -4342,7 +4588,9 @@
 		"Name":"PIBIO_FRAMEWORK_ALLOCATE_MEMORY_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -4357,7 +4605,9 @@
 		"Name":"PIBIO_FRAMEWORK_FREE_MEMORY_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -4371,7 +4621,9 @@
 		"Name":"PIBIO_FRAMEWORK_GET_PROPERTY_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -4390,7 +4642,9 @@
 		"Name":"PIBIO_FRAMEWORK_LOCK_AND_VALIDATE_SECURE_BUFFER_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -4406,7 +4660,9 @@
 		"Name":"PIBIO_FRAMEWORK_RELEASE_SECURE_BUFFER_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -4420,7 +4676,9 @@
 		"Name":"PIBIO_FRAMEWORK_VSM_QUERY_AUTHORIZED_ENROLLMENTS_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -4436,7 +4694,9 @@
 		"Name":"PIBIO_FRAMEWORK_VSM_DECRYPT_SAMPLE_FN"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -4740,6 +5000,7 @@
 ,"Functions":[
 	{
 		"Name":"WinBioEnumServiceProviders"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4755,6 +5016,7 @@
 	}
 	,{
 		"Name":"WinBioEnumBiometricUnits"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4770,6 +5032,7 @@
 	}
 	,{
 		"Name":"WinBioEnumDatabases"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4785,6 +5048,7 @@
 	}
 	,{
 		"Name":"WinBioAsyncOpenFramework"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4804,6 +5068,7 @@
 	}
 	,{
 		"Name":"WinBioCloseFramework"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4817,6 +5082,7 @@
 	}
 	,{
 		"Name":"WinBioAsyncEnumServiceProviders"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4831,6 +5097,7 @@
 	}
 	,{
 		"Name":"WinBioAsyncEnumBiometricUnits"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4845,6 +5112,7 @@
 	}
 	,{
 		"Name":"WinBioAsyncEnumDatabases"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4859,6 +5127,7 @@
 	}
 	,{
 		"Name":"WinBioAsyncMonitorFrameworkChanges"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4873,6 +5142,7 @@
 	}
 	,{
 		"Name":"WinBioOpenSession"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4892,6 +5162,7 @@
 	}
 	,{
 		"Name":"WinBioAsyncOpenSession"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4917,6 +5188,7 @@
 	}
 	,{
 		"Name":"WinBioCloseSession"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4930,6 +5202,7 @@
 	}
 	,{
 		"Name":"WinBioVerify"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4948,6 +5221,7 @@
 	}
 	,{
 		"Name":"WinBioVerifyWithCallback"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4965,6 +5239,7 @@
 	}
 	,{
 		"Name":"WinBioIdentify"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4982,6 +5257,7 @@
 	}
 	,{
 		"Name":"WinBioIdentifyWithCallback"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4997,6 +5273,7 @@
 	}
 	,{
 		"Name":"WinBioWait"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5010,6 +5287,7 @@
 	}
 	,{
 		"Name":"WinBioCancel"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5023,6 +5301,7 @@
 	}
 	,{
 		"Name":"WinBioLocateSensor"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5037,6 +5316,7 @@
 	}
 	,{
 		"Name":"WinBioLocateSensorWithCallback"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5052,6 +5332,7 @@
 	}
 	,{
 		"Name":"WinBioEnrollBegin"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5067,6 +5348,7 @@
 	}
 	,{
 		"Name":"WinBioEnrollSelect"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5081,6 +5363,7 @@
 	}
 	,{
 		"Name":"WinBioEnrollCapture"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5095,6 +5378,7 @@
 	}
 	,{
 		"Name":"WinBioEnrollCaptureWithCallback"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5110,6 +5394,7 @@
 	}
 	,{
 		"Name":"WinBioEnrollCommit"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5125,6 +5410,7 @@
 	}
 	,{
 		"Name":"WinBioEnrollDiscard"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5138,6 +5424,7 @@
 	}
 	,{
 		"Name":"WinBioEnumEnrollments"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5155,6 +5442,7 @@
 	}
 	,{
 		"Name":"WinBioImproveBegin"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5169,6 +5457,7 @@
 	}
 	,{
 		"Name":"WinBioImproveEnd"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5182,6 +5471,7 @@
 	}
 	,{
 		"Name":"WinBioRegisterEventMonitor"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5198,6 +5488,7 @@
 	}
 	,{
 		"Name":"WinBioUnregisterEventMonitor"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5211,6 +5502,7 @@
 	}
 	,{
 		"Name":"WinBioMonitorPresence"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5225,6 +5517,7 @@
 	}
 	,{
 		"Name":"WinBioCaptureSample"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5244,6 +5537,7 @@
 	}
 	,{
 		"Name":"WinBioCaptureSampleWithCallback"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5261,6 +5555,7 @@
 	}
 	,{
 		"Name":"WinBioDeleteTemplate"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5277,6 +5572,7 @@
 	}
 	,{
 		"Name":"WinBioLockUnit"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5291,6 +5587,7 @@
 	}
 	,{
 		"Name":"WinBioUnlockUnit"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5305,6 +5602,7 @@
 	}
 	,{
 		"Name":"WinBioControlUnit"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5327,6 +5625,7 @@
 	}
 	,{
 		"Name":"WinBioControlUnitPrivileged"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5349,6 +5648,7 @@
 	}
 	,{
 		"Name":"WinBioGetProperty"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5369,6 +5669,7 @@
 	}
 	,{
 		"Name":"WinBioSetProperty"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5389,6 +5690,7 @@
 	}
 	,{
 		"Name":"WinBioFree"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5402,6 +5704,7 @@
 	}
 	,{
 		"Name":"WinBioSetCredential"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5418,6 +5721,7 @@
 	}
 	,{
 		"Name":"WinBioRemoveCredential"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5432,6 +5736,7 @@
 	}
 	,{
 		"Name":"WinBioRemoveAllCredentials"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5444,6 +5749,7 @@
 	}
 	,{
 		"Name":"WinBioRemoveAllDomainCredentials"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5456,6 +5762,7 @@
 	}
 	,{
 		"Name":"WinBioGetCredentialState"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5471,6 +5778,7 @@
 	}
 	,{
 		"Name":"WinBioLogonIdentifiedUser"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5484,6 +5792,7 @@
 	}
 	,{
 		"Name":"WinBioGetEnrolledFactors"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5498,6 +5807,7 @@
 	}
 	,{
 		"Name":"WinBioGetEnabledSetting"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -5512,6 +5822,7 @@
 	}
 	,{
 		"Name":"WinBioGetLogonSetting"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -5526,6 +5837,7 @@
 	}
 	,{
 		"Name":"WinBioGetDomainLogonSetting"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -5540,6 +5852,7 @@
 	}
 	,{
 		"Name":"WinBioAcquireFocus"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5552,6 +5865,7 @@
 	}
 	,{
 		"Name":"WinBioReleaseFocus"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"winbio"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}

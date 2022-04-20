@@ -65,10 +65,38 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"WSZ_SCOPE_GLOBAL"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"GLOBAL"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WSZ_SCOPE_SITELOCAL"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"SITELOCAL"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WSZ_SCOPE_LINKLOCAL"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"LINKLOCAL"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"PNRP_MAX_EXTENDED_PAYLOAD_BYTES"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":4096
+		,"Attrs":[]
+	}
+	,{
+		"Name":"PEER_PNRP_ALL_LINK_CLOUDS"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"PEER_PNRP_ALL_LINKS"
 		,"Attrs":[]
 	}
 	,{
@@ -1203,7 +1231,9 @@
 		"Name":"PFNPEER_VALIDATE_RECORD"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -1219,7 +1249,9 @@
 		"Name":"PFNPEER_SECURE_RECORD"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -1236,7 +1268,9 @@
 		"Name":"PFNPEER_FREE_SECURITY_DATA"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -1251,7 +1285,9 @@
 		"Name":"PFNPEER_ON_PASSWORD_AUTH_FAILED"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -2211,7 +2247,9 @@
 		"Name":"DRT_BOOTSTRAP_RESOLVE_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
+		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -2522,6 +2560,7 @@
 ,"Functions":[
 	{
 		"Name":"PeerGraphStartup"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2536,6 +2575,7 @@
 	}
 	,{
 		"Name":"PeerGraphShutdown"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2548,6 +2588,7 @@
 	}
 	,{
 		"Name":"PeerGraphFreeData"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -2561,6 +2602,7 @@
 	}
 	,{
 		"Name":"PeerGraphGetItemCount"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2575,6 +2617,7 @@
 	}
 	,{
 		"Name":"PeerGraphGetNextItem"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2590,6 +2633,7 @@
 	}
 	,{
 		"Name":"PeerGraphEndEnumeration"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2603,6 +2647,7 @@
 	}
 	,{
 		"Name":"PeerGraphCreate"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2619,6 +2664,7 @@
 	}
 	,{
 		"Name":"PeerGraphOpen"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2638,6 +2684,7 @@
 	}
 	,{
 		"Name":"PeerGraphListen"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2654,6 +2701,7 @@
 	}
 	,{
 		"Name":"PeerGraphConnect"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2670,6 +2718,7 @@
 	}
 	,{
 		"Name":"PeerGraphClose"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2683,6 +2732,7 @@
 	}
 	,{
 		"Name":"PeerGraphDelete"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2698,6 +2748,7 @@
 	}
 	,{
 		"Name":"PeerGraphGetStatus"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2712,6 +2763,7 @@
 	}
 	,{
 		"Name":"PeerGraphGetProperties"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2726,6 +2778,7 @@
 	}
 	,{
 		"Name":"PeerGraphSetProperties"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2740,6 +2793,7 @@
 	}
 	,{
 		"Name":"PeerGraphRegisterEvent"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2757,6 +2811,7 @@
 	}
 	,{
 		"Name":"PeerGraphUnregisterEvent"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2770,6 +2825,7 @@
 	}
 	,{
 		"Name":"PeerGraphGetEventData"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2784,6 +2840,7 @@
 	}
 	,{
 		"Name":"PeerGraphGetRecord"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2799,6 +2856,7 @@
 	}
 	,{
 		"Name":"PeerGraphAddRecord"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2814,6 +2872,7 @@
 	}
 	,{
 		"Name":"PeerGraphUpdateRecord"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2828,6 +2887,7 @@
 	}
 	,{
 		"Name":"PeerGraphDeleteRecord"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2843,6 +2903,7 @@
 	}
 	,{
 		"Name":"PeerGraphEnumRecords"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2859,6 +2920,7 @@
 	}
 	,{
 		"Name":"PeerGraphSearchRecords"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2874,6 +2936,7 @@
 	}
 	,{
 		"Name":"PeerGraphExportDatabase"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2888,6 +2951,7 @@
 	}
 	,{
 		"Name":"PeerGraphImportDatabase"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2902,6 +2966,7 @@
 	}
 	,{
 		"Name":"PeerGraphValidateDeferredRecords"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2917,6 +2982,7 @@
 	}
 	,{
 		"Name":"PeerGraphOpenDirectConnection"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2933,6 +2999,7 @@
 	}
 	,{
 		"Name":"PeerGraphSendData"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2950,6 +3017,7 @@
 	}
 	,{
 		"Name":"PeerGraphCloseDirectConnection"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2964,6 +3032,7 @@
 	}
 	,{
 		"Name":"PeerGraphEnumConnections"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2979,6 +3048,7 @@
 	}
 	,{
 		"Name":"PeerGraphEnumNodes"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -2994,6 +3064,7 @@
 	}
 	,{
 		"Name":"PeerGraphSetPresence"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3008,6 +3079,7 @@
 	}
 	,{
 		"Name":"PeerGraphGetNodeInfo"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3023,6 +3095,7 @@
 	}
 	,{
 		"Name":"PeerGraphSetNodeAttributes"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3037,6 +3110,7 @@
 	}
 	,{
 		"Name":"PeerGraphPeerTimeToUniversalTime"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3052,6 +3126,7 @@
 	}
 	,{
 		"Name":"PeerGraphUniversalTimeToPeerTime"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2PGRAPH"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3067,6 +3142,7 @@
 	}
 	,{
 		"Name":"PeerFreeData"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -3080,6 +3156,7 @@
 	}
 	,{
 		"Name":"PeerGetItemCount"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3094,6 +3171,7 @@
 	}
 	,{
 		"Name":"PeerGetNextItem"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3109,6 +3187,7 @@
 	}
 	,{
 		"Name":"PeerEndEnumeration"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3122,6 +3201,7 @@
 	}
 	,{
 		"Name":"PeerGroupStartup"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3136,6 +3216,7 @@
 	}
 	,{
 		"Name":"PeerGroupShutdown"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3148,6 +3229,7 @@
 	}
 	,{
 		"Name":"PeerGroupCreate"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3162,6 +3244,7 @@
 	}
 	,{
 		"Name":"PeerGroupOpen"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3178,6 +3261,7 @@
 	}
 	,{
 		"Name":"PeerGroupJoin"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3194,6 +3278,7 @@
 	}
 	,{
 		"Name":"PeerGroupPasswordJoin"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3211,6 +3296,7 @@
 	}
 	,{
 		"Name":"PeerGroupConnect"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3224,6 +3310,7 @@
 	}
 	,{
 		"Name":"PeerGroupConnectByAddress"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3239,6 +3326,7 @@
 	}
 	,{
 		"Name":"PeerGroupClose"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3252,6 +3340,7 @@
 	}
 	,{
 		"Name":"PeerGroupDelete"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3266,6 +3355,7 @@
 	}
 	,{
 		"Name":"PeerGroupCreateInvitation"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3284,6 +3374,7 @@
 	}
 	,{
 		"Name":"PeerGroupCreatePasswordInvitation"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3298,6 +3389,7 @@
 	}
 	,{
 		"Name":"PeerGroupParseInvitation"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3312,6 +3404,7 @@
 	}
 	,{
 		"Name":"PeerGroupGetStatus"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3326,6 +3419,7 @@
 	}
 	,{
 		"Name":"PeerGroupGetProperties"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3340,6 +3434,7 @@
 	}
 	,{
 		"Name":"PeerGroupSetProperties"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3354,6 +3449,7 @@
 	}
 	,{
 		"Name":"PeerGroupEnumMembers"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3370,6 +3466,7 @@
 	}
 	,{
 		"Name":"PeerGroupOpenDirectConnection"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3386,6 +3483,7 @@
 	}
 	,{
 		"Name":"PeerGroupCloseDirectConnection"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3400,6 +3498,7 @@
 	}
 	,{
 		"Name":"PeerGroupEnumConnections"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3415,6 +3514,7 @@
 	}
 	,{
 		"Name":"PeerGroupSendData"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3432,6 +3532,7 @@
 	}
 	,{
 		"Name":"PeerGroupRegisterEvent"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3449,6 +3550,7 @@
 	}
 	,{
 		"Name":"PeerGroupUnregisterEvent"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3462,6 +3564,7 @@
 	}
 	,{
 		"Name":"PeerGroupGetEventData"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3476,6 +3579,7 @@
 	}
 	,{
 		"Name":"PeerGroupGetRecord"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3491,6 +3595,7 @@
 	}
 	,{
 		"Name":"PeerGroupAddRecord"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3506,6 +3611,7 @@
 	}
 	,{
 		"Name":"PeerGroupUpdateRecord"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3520,6 +3626,7 @@
 	}
 	,{
 		"Name":"PeerGroupDeleteRecord"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3534,6 +3641,7 @@
 	}
 	,{
 		"Name":"PeerGroupEnumRecords"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3549,6 +3657,7 @@
 	}
 	,{
 		"Name":"PeerGroupSearchRecords"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3564,6 +3673,7 @@
 	}
 	,{
 		"Name":"PeerGroupExportDatabase"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3578,6 +3688,7 @@
 	}
 	,{
 		"Name":"PeerGroupImportDatabase"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3592,6 +3703,7 @@
 	}
 	,{
 		"Name":"PeerGroupIssueCredentials"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3609,6 +3721,7 @@
 	}
 	,{
 		"Name":"PeerGroupExportConfig"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3624,6 +3737,7 @@
 	}
 	,{
 		"Name":"PeerGroupImportConfig"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3641,6 +3755,7 @@
 	}
 	,{
 		"Name":"PeerGroupPeerTimeToUniversalTime"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3656,6 +3771,7 @@
 	}
 	,{
 		"Name":"PeerGroupUniversalTimeToPeerTime"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3671,6 +3787,7 @@
 	}
 	,{
 		"Name":"PeerGroupResumePasswordAuthentication"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3685,6 +3802,7 @@
 	}
 	,{
 		"Name":"PeerIdentityCreate"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3701,6 +3819,7 @@
 	}
 	,{
 		"Name":"PeerIdentityGetFriendlyName"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3715,6 +3834,7 @@
 	}
 	,{
 		"Name":"PeerIdentitySetFriendlyName"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3729,6 +3849,7 @@
 	}
 	,{
 		"Name":"PeerIdentityGetCryptKey"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3743,6 +3864,7 @@
 	}
 	,{
 		"Name":"PeerIdentityDelete"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3756,6 +3878,7 @@
 	}
 	,{
 		"Name":"PeerEnumIdentities"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3769,6 +3892,7 @@
 	}
 	,{
 		"Name":"PeerEnumGroups"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3783,6 +3907,7 @@
 	}
 	,{
 		"Name":"PeerCreatePeerName"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3798,6 +3923,7 @@
 	}
 	,{
 		"Name":"PeerIdentityGetXML"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3812,6 +3938,7 @@
 	}
 	,{
 		"Name":"PeerIdentityExport"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3827,6 +3954,7 @@
 	}
 	,{
 		"Name":"PeerIdentityImport"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3842,6 +3970,7 @@
 	}
 	,{
 		"Name":"PeerIdentityGetDefault"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3855,6 +3984,7 @@
 	}
 	,{
 		"Name":"PeerCollabStartup"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3868,6 +3998,7 @@
 	}
 	,{
 		"Name":"PeerCollabShutdown"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3880,6 +4011,7 @@
 	}
 	,{
 		"Name":"PeerCollabSignin"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3894,6 +4026,7 @@
 	}
 	,{
 		"Name":"PeerCollabSignout"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3907,6 +4040,7 @@
 	}
 	,{
 		"Name":"PeerCollabGetSigninOptions"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3920,6 +4054,7 @@
 	}
 	,{
 		"Name":"PeerCollabAsyncInviteContact"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3937,6 +4072,7 @@
 	}
 	,{
 		"Name":"PeerCollabGetInvitationResponse"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3951,6 +4087,7 @@
 	}
 	,{
 		"Name":"PeerCollabCancelInvitation"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3964,6 +4101,7 @@
 	}
 	,{
 		"Name":"PeerCollabCloseHandle"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3977,6 +4115,7 @@
 	}
 	,{
 		"Name":"PeerCollabInviteContact"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -3993,6 +4132,7 @@
 	}
 	,{
 		"Name":"PeerCollabAsyncInviteEndpoint"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4009,6 +4149,7 @@
 	}
 	,{
 		"Name":"PeerCollabInviteEndpoint"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4024,6 +4165,7 @@
 	}
 	,{
 		"Name":"PeerCollabGetAppLaunchInfo"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4037,6 +4179,7 @@
 	}
 	,{
 		"Name":"PeerCollabRegisterApplication"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4051,6 +4194,7 @@
 	}
 	,{
 		"Name":"PeerCollabUnregisterApplication"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4065,6 +4209,7 @@
 	}
 	,{
 		"Name":"PeerCollabGetApplicationRegistrationInfo"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4080,6 +4225,7 @@
 	}
 	,{
 		"Name":"PeerCollabEnumApplicationRegistrationInfo"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4094,6 +4240,7 @@
 	}
 	,{
 		"Name":"PeerCollabGetPresenceInfo"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4108,6 +4255,7 @@
 	}
 	,{
 		"Name":"PeerCollabEnumApplications"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4123,6 +4271,7 @@
 	}
 	,{
 		"Name":"PeerCollabEnumObjects"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4138,6 +4287,7 @@
 	}
 	,{
 		"Name":"PeerCollabEnumEndpoints"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4152,6 +4302,7 @@
 	}
 	,{
 		"Name":"PeerCollabRefreshEndpointData"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4165,6 +4316,7 @@
 	}
 	,{
 		"Name":"PeerCollabDeleteEndpointData"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4178,6 +4330,7 @@
 	}
 	,{
 		"Name":"PeerCollabQueryContactData"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4192,6 +4345,7 @@
 	}
 	,{
 		"Name":"PeerCollabSubscribeEndpointData"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4205,6 +4359,7 @@
 	}
 	,{
 		"Name":"PeerCollabUnsubscribeEndpointData"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4218,6 +4373,7 @@
 	}
 	,{
 		"Name":"PeerCollabSetPresenceInfo"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4231,6 +4387,7 @@
 	}
 	,{
 		"Name":"PeerCollabGetEndpointName"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4244,6 +4401,7 @@
 	}
 	,{
 		"Name":"PeerCollabSetEndpointName"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4257,6 +4415,7 @@
 	}
 	,{
 		"Name":"PeerCollabSetObject"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4270,6 +4429,7 @@
 	}
 	,{
 		"Name":"PeerCollabDeleteObject"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4283,6 +4443,7 @@
 	}
 	,{
 		"Name":"PeerCollabRegisterEvent"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4299,6 +4460,7 @@
 	}
 	,{
 		"Name":"PeerCollabGetEventData"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4313,6 +4475,7 @@
 	}
 	,{
 		"Name":"PeerCollabUnregisterEvent"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4326,6 +4489,7 @@
 	}
 	,{
 		"Name":"PeerCollabEnumPeopleNearMe"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4339,6 +4503,7 @@
 	}
 	,{
 		"Name":"PeerCollabAddContact"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4353,6 +4518,7 @@
 	}
 	,{
 		"Name":"PeerCollabDeleteContact"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4366,6 +4532,7 @@
 	}
 	,{
 		"Name":"PeerCollabGetContact"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4380,6 +4547,7 @@
 	}
 	,{
 		"Name":"PeerCollabUpdateContact"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4393,6 +4561,7 @@
 	}
 	,{
 		"Name":"PeerCollabEnumContacts"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4406,6 +4575,7 @@
 	}
 	,{
 		"Name":"PeerCollabExportContact"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4420,6 +4590,7 @@
 	}
 	,{
 		"Name":"PeerCollabParseContact"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4434,6 +4605,7 @@
 	}
 	,{
 		"Name":"PeerNameToPeerHostName"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4448,6 +4620,7 @@
 	}
 	,{
 		"Name":"PeerHostNameToPeerName"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4462,6 +4635,7 @@
 	}
 	,{
 		"Name":"PeerPnrpStartup"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4475,6 +4649,7 @@
 	}
 	,{
 		"Name":"PeerPnrpShutdown"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4487,6 +4662,7 @@
 	}
 	,{
 		"Name":"PeerPnrpRegister"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4502,6 +4678,7 @@
 	}
 	,{
 		"Name":"PeerPnrpUpdateRegistration"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4516,6 +4693,7 @@
 	}
 	,{
 		"Name":"PeerPnrpUnregister"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4529,6 +4707,7 @@
 	}
 	,{
 		"Name":"PeerPnrpResolve"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4545,6 +4724,7 @@
 	}
 	,{
 		"Name":"PeerPnrpStartResolve"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4562,6 +4742,7 @@
 	}
 	,{
 		"Name":"PeerPnrpGetCloudInfo"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4576,6 +4757,7 @@
 	}
 	,{
 		"Name":"PeerPnrpGetEndpoint"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4590,6 +4772,7 @@
 	}
 	,{
 		"Name":"PeerPnrpEndResolve"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"P2P"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4603,6 +4786,7 @@
 	}
 	,{
 		"Name":"DrtCreatePnrpBootstrapResolver"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"drtprov"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4620,6 +4804,7 @@
 	}
 	,{
 		"Name":"DrtDeletePnrpBootstrapResolver"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"drtprov"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -4633,6 +4818,7 @@
 	}
 	,{
 		"Name":"DrtCreateDnsBootstrapResolver"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"drtprov"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4648,6 +4834,7 @@
 	}
 	,{
 		"Name":"DrtDeleteDnsBootstrapResolver"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"drtprov"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -4661,6 +4848,7 @@
 	}
 	,{
 		"Name":"DrtCreateIpv6UdpTransport"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"drttransport"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4678,6 +4866,7 @@
 	}
 	,{
 		"Name":"DrtDeleteIpv6UdpTransport"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"drttransport"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4691,6 +4880,7 @@
 	}
 	,{
 		"Name":"DrtCreateDerivedKeySecurityProvider"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"drtprov"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4706,6 +4896,7 @@
 	}
 	,{
 		"Name":"DrtCreateDerivedKey"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"drtprov"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4720,6 +4911,7 @@
 	}
 	,{
 		"Name":"DrtDeleteDerivedKeySecurityProvider"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"drtprov"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -4733,6 +4925,7 @@
 	}
 	,{
 		"Name":"DrtCreateNullSecurityProvider"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"drtprov"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4746,6 +4939,7 @@
 	}
 	,{
 		"Name":"DrtDeleteNullSecurityProvider"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"drtprov"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -4759,6 +4953,7 @@
 	}
 	,{
 		"Name":"DrtOpen"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"drt"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4775,6 +4970,7 @@
 	}
 	,{
 		"Name":"DrtClose"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"drt"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -4788,6 +4984,7 @@
 	}
 	,{
 		"Name":"DrtGetEventDataSize"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"drt"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4802,6 +4999,7 @@
 	}
 	,{
 		"Name":"DrtGetEventData"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"drt"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4817,6 +5015,7 @@
 	}
 	,{
 		"Name":"DrtRegisterKey"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"drt"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4833,6 +5032,7 @@
 	}
 	,{
 		"Name":"DrtUpdateKey"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"drt"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4847,6 +5047,7 @@
 	}
 	,{
 		"Name":"DrtUnregisterKey"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"drt"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -4860,6 +5061,7 @@
 	}
 	,{
 		"Name":"DrtStartSearch"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"drt"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4879,6 +5081,7 @@
 	}
 	,{
 		"Name":"DrtContinueSearch"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"drt"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4892,6 +5095,7 @@
 	}
 	,{
 		"Name":"DrtGetSearchResultSize"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"drt"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4906,6 +5110,7 @@
 	}
 	,{
 		"Name":"DrtGetSearchResult"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"drt"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4915,12 +5120,13 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hSearchContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
-			,{"Name":"ulSearchResultSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Out"]}
+			,{"Name":"ulSearchResultSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pSearchResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DRT_SEARCH_RESULT","TargetKind":"Default","Api":"NetworkManagement.P2P","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"DrtGetSearchPathSize"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"drt"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4935,6 +5141,7 @@
 	}
 	,{
 		"Name":"DrtGetSearchPath"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"drt"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4944,12 +5151,13 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hSearchContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
-			,{"Name":"ulSearchPathSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Out"]}
+			,{"Name":"ulSearchPathSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pSearchPath","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DRT_ADDRESS_LIST","TargetKind":"Default","Api":"NetworkManagement.P2P","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"DrtEndSearch"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"drt"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4963,6 +5171,7 @@
 	}
 	,{
 		"Name":"DrtGetInstanceName"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"drt"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4978,6 +5187,7 @@
 	}
 	,{
 		"Name":"DrtGetInstanceNameSize"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"drt"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4992,6 +5202,7 @@
 	}
 	,{
 		"Name":"PeerDistStartup"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"PeerDist"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -5007,6 +5218,7 @@
 	}
 	,{
 		"Name":"PeerDistShutdown"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"PeerDist"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -5020,6 +5232,7 @@
 	}
 	,{
 		"Name":"PeerDistGetStatus"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"PeerDist"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -5034,6 +5247,7 @@
 	}
 	,{
 		"Name":"PeerDistRegisterForStatusChangeNotification"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"PeerDist"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -5051,6 +5265,7 @@
 	}
 	,{
 		"Name":"PeerDistUnregisterForStatusChangeNotification"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"PeerDist"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -5064,6 +5279,7 @@
 	}
 	,{
 		"Name":"PeerDistServerPublishStream"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"PeerDist"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -5084,6 +5300,7 @@
 	}
 	,{
 		"Name":"PeerDistServerPublishAddToStream"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"PeerDist"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -5101,6 +5318,7 @@
 	}
 	,{
 		"Name":"PeerDistServerPublishCompleteStream"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"PeerDist"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -5116,6 +5334,7 @@
 	}
 	,{
 		"Name":"PeerDistServerCloseStreamHandle"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"PeerDist"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -5130,6 +5349,7 @@
 	}
 	,{
 		"Name":"PeerDistServerUnpublish"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"PeerDist"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -5145,6 +5365,7 @@
 	}
 	,{
 		"Name":"PeerDistServerOpenContentInformation"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"PeerDist"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -5165,6 +5386,7 @@
 	}
 	,{
 		"Name":"PeerDistServerRetrieveContentInformation"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"PeerDist"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -5182,6 +5404,7 @@
 	}
 	,{
 		"Name":"PeerDistServerCloseContentInformation"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"PeerDist"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -5196,6 +5419,7 @@
 	}
 	,{
 		"Name":"PeerDistServerCancelAsyncOperation"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"PeerDist"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -5212,6 +5436,7 @@
 	}
 	,{
 		"Name":"PeerDistClientOpenContent"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"PeerDist"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -5229,6 +5454,7 @@
 	}
 	,{
 		"Name":"PeerDistClientCloseContent"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"PeerDist"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -5243,6 +5469,7 @@
 	}
 	,{
 		"Name":"PeerDistClientAddContentInformation"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"PeerDist"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -5260,6 +5487,7 @@
 	}
 	,{
 		"Name":"PeerDistClientCompleteContentInformation"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"PeerDist"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -5275,6 +5503,7 @@
 	}
 	,{
 		"Name":"PeerDistClientAddData"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"PeerDist"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -5292,6 +5521,7 @@
 	}
 	,{
 		"Name":"PeerDistClientBlockRead"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"PeerDist"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -5310,6 +5540,7 @@
 	}
 	,{
 		"Name":"PeerDistClientStreamRead"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"PeerDist"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -5328,6 +5559,7 @@
 	}
 	,{
 		"Name":"PeerDistClientFlushContent"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"PeerDist"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -5345,6 +5577,7 @@
 	}
 	,{
 		"Name":"PeerDistClientCancelAsyncOperation"
+		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"PeerDist"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -5360,6 +5593,7 @@
 	}
 	,{
 		"Name":"PeerDistGetStatusEx"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"PeerDist"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -5374,6 +5608,7 @@
 	}
 	,{
 		"Name":"PeerDistRegisterForStatusChangeNotificationEx"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"PeerDist"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -5391,6 +5626,7 @@
 	}
 	,{
 		"Name":"PeerDistGetOverlappedResult"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"PeerDist"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5406,6 +5642,7 @@
 	}
 	,{
 		"Name":"PeerDistServerOpenContentInformationEx"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"PeerDist"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -5427,6 +5664,7 @@
 	}
 	,{
 		"Name":"PeerDistClientGetInformationByHandle"
+		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"PeerDist"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
