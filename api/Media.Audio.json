@@ -3159,115 +3159,10 @@
 		,"Attrs":[]
 	}
 	,{
-		"Name":"SND_SYNC"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":0
-		,"Attrs":[]
-	}
-	,{
-		"Name":"SND_ASYNC"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1
-		,"Attrs":[]
-	}
-	,{
-		"Name":"SND_NODEFAULT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2
-		,"Attrs":[]
-	}
-	,{
-		"Name":"SND_MEMORY"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":4
-		,"Attrs":[]
-	}
-	,{
-		"Name":"SND_LOOP"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":8
-		,"Attrs":[]
-	}
-	,{
-		"Name":"SND_NOSTOP"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":16
-		,"Attrs":[]
-	}
-	,{
-		"Name":"SND_NOWAIT"
-		,"Type":{"Kind":"Native","Name":"Int32"}
-		,"ValueType":"Int32"
-		,"Value":8192
-		,"Attrs":[]
-	}
-	,{
-		"Name":"SND_ALIAS"
-		,"Type":{"Kind":"Native","Name":"Int32"}
-		,"ValueType":"Int32"
-		,"Value":65536
-		,"Attrs":[]
-	}
-	,{
-		"Name":"SND_ALIAS_ID"
-		,"Type":{"Kind":"Native","Name":"Int32"}
-		,"ValueType":"Int32"
-		,"Value":1114112
-		,"Attrs":[]
-	}
-	,{
-		"Name":"SND_FILENAME"
-		,"Type":{"Kind":"Native","Name":"Int32"}
-		,"ValueType":"Int32"
-		,"Value":131072
-		,"Attrs":[]
-	}
-	,{
-		"Name":"SND_RESOURCE"
-		,"Type":{"Kind":"Native","Name":"Int32"}
-		,"ValueType":"Int32"
-		,"Value":262148
-		,"Attrs":[]
-	}
-	,{
-		"Name":"SND_PURGE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":64
-		,"Attrs":[]
-	}
-	,{
-		"Name":"SND_APPLICATION"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":128
-		,"Attrs":[]
-	}
-	,{
-		"Name":"SND_SENTRY"
-		,"Type":{"Kind":"Native","Name":"Int32"}
-		,"ValueType":"Int32"
-		,"Value":524288
-		,"Attrs":[]
-	}
-	,{
 		"Name":"SND_RING"
 		,"Type":{"Kind":"Native","Name":"Int32"}
 		,"ValueType":"Int32"
 		,"Value":1048576
-		,"Attrs":[]
-	}
-	,{
-		"Name":"SND_SYSTEM"
-		,"Type":{"Kind":"Native","Name":"Int32"}
-		,"ValueType":"Int32"
-		,"Value":2097152
 		,"Attrs":[]
 	}
 	,{
@@ -3405,6 +3300,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -3424,6 +3320,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -3459,6 +3356,32 @@
 			,{"Name":"WAVE_FORMAT_DIRECT_QUERY","Value":9}
 			,{"Name":"WAVE_MAPPED_DEFAULT_COMMUNICATION_DEVICE","Value":16}
 			,{"Name":"MIDI_IO_STATUS","Value":32}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
+		"Name":"SND_FLAGS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":true
+		,"Scoped":false
+		,"Values":[
+			{"Name":"SND_APPLICATION","Value":128}
+			,{"Name":"SND_ALIAS","Value":65536}
+			,{"Name":"SND_ALIAS_ID","Value":1114112}
+			,{"Name":"SND_FILENAME","Value":131072}
+			,{"Name":"SND_RESOURCE","Value":262148}
+			,{"Name":"SND_ASYNC","Value":1}
+			,{"Name":"SND_NODEFAULT","Value":2}
+			,{"Name":"SND_LOOP","Value":8}
+			,{"Name":"SND_MEMORY","Value":4}
+			,{"Name":"SND_NOSTOP","Value":16}
+			,{"Name":"SND_NOWAIT","Value":8192}
+			,{"Name":"SND_PURGE","Value":64}
+			,{"Name":"SND_SENTRY","Value":524288}
+			,{"Name":"SND_SYNC","Value":0}
+			,{"Name":"SND_SYSTEM","Value":2097152}
 		]
 		,"IntegerBase":"UInt32"
 	}
@@ -3637,6 +3560,7 @@
 		,"Methods":[
 			{
 				"Name":"HandleInComingCall"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3653,6 +3577,7 @@
 			}
 			,{
 				"Name":"RetryRejectedCall"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3668,6 +3593,7 @@
 			}
 			,{
 				"Name":"MessagePending"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -3755,6 +3681,30 @@
 			{"Name":"wfltr","Type":{"Kind":"ApiRef","Name":"WAVEFILTER","TargetKind":"Default","Api":"Media.Audio","Parents":[]},"Attrs":[]}
 			,{"Name":"dwVolume","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwDelay","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"ACMSTREAMHEADER"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"Fields":[
+			{"Name":"cbStruct","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"fdwStatus","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dwUser","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
+			,{"Name":"pbSrc","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"cbSrcLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"cbSrcLengthUsed","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dwSrcUser","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
+			,{"Name":"pbDst","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"cbDstLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"cbDstLengthUsed","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dwDstUser","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
+			,{"Name":"dwReservedDriver","Type":{"Kind":"Array","Shape":{"Size":15},"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -4917,6 +4867,7 @@
 		,"Methods":[
 			{
 				"Name":"Initialize"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4935,6 +4886,7 @@
 			}
 			,{
 				"Name":"GetBufferSize"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4948,6 +4900,7 @@
 			}
 			,{
 				"Name":"GetStreamLatency"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4961,6 +4914,7 @@
 			}
 			,{
 				"Name":"GetCurrentPadding"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4974,6 +4928,7 @@
 			}
 			,{
 				"Name":"IsFormatSupported"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -4989,6 +4944,7 @@
 			}
 			,{
 				"Name":"GetMixFormat"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5002,6 +4958,7 @@
 			}
 			,{
 				"Name":"GetDevicePeriod"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5016,6 +4973,7 @@
 			}
 			,{
 				"Name":"Start"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5028,6 +4986,7 @@
 			}
 			,{
 				"Name":"Stop"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5040,6 +4999,7 @@
 			}
 			,{
 				"Name":"Reset"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5052,6 +5012,7 @@
 			}
 			,{
 				"Name":"SetEventHandle"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5065,6 +5026,7 @@
 			}
 			,{
 				"Name":"GetService"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5089,6 +5051,7 @@
 		,"Methods":[
 			{
 				"Name":"IsOffloadCapable"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5103,6 +5066,7 @@
 			}
 			,{
 				"Name":"SetClientProperties"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5116,6 +5080,7 @@
 			}
 			,{
 				"Name":"GetBufferSizeLimits"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5155,6 +5120,7 @@
 		,"Methods":[
 			{
 				"Name":"GetSharedModeEnginePeriod"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5172,6 +5138,7 @@
 			}
 			,{
 				"Name":"GetCurrentSharedModeEnginePeriod"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5186,6 +5153,7 @@
 			}
 			,{
 				"Name":"InitializeSharedAudioStream"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5212,6 +5180,7 @@
 		,"Methods":[
 			{
 				"Name":"GetBuffer"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5226,6 +5195,7 @@
 			}
 			,{
 				"Name":"ReleaseBuffer"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5250,6 +5220,7 @@
 		,"Methods":[
 			{
 				"Name":"GetBuffer"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5267,6 +5238,7 @@
 			}
 			,{
 				"Name":"ReleaseBuffer"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5280,6 +5252,7 @@
 			}
 			,{
 				"Name":"GetNextPacketSize"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5303,6 +5276,7 @@
 		,"Methods":[
 			{
 				"Name":"GetFrequency"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5316,6 +5290,7 @@
 			}
 			,{
 				"Name":"GetPosition"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5330,6 +5305,7 @@
 			}
 			,{
 				"Name":"GetCharacteristics"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5353,6 +5329,7 @@
 		,"Methods":[
 			{
 				"Name":"GetDevicePosition"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5377,6 +5354,7 @@
 		,"Methods":[
 			{
 				"Name":"SetSampleRate"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5400,6 +5378,7 @@
 		,"Methods":[
 			{
 				"Name":"SetMasterVolume"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5414,6 +5393,7 @@
 			}
 			,{
 				"Name":"GetMasterVolume"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5427,6 +5407,7 @@
 			}
 			,{
 				"Name":"SetMute"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5441,6 +5422,7 @@
 			}
 			,{
 				"Name":"GetMute"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5477,6 +5459,7 @@
 		,"Methods":[
 			{
 				"Name":"SetDuckingOptionsForCurrentStream"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5528,6 +5511,7 @@
 		,"Methods":[
 			{
 				"Name":"OnAudioEffectsChanged"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5550,6 +5534,7 @@
 		,"Methods":[
 			{
 				"Name":"RegisterAudioEffectsChangedNotificationCallback"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5563,6 +5548,7 @@
 			}
 			,{
 				"Name":"UnregisterAudioEffectsChangedNotificationCallback"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5576,6 +5562,7 @@
 			}
 			,{
 				"Name":"GetAudioEffects"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5584,12 +5571,13 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"effects","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"AUDIO_EFFECT","TargetKind":"Default","Api":"Media.Audio","Parents":[]}}},"Attrs":["Out","Optional"]}
+					{"Name":"effects","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"AUDIO_EFFECT","TargetKind":"Default","Api":"Media.Audio","Parents":[]}}},"Attrs":["Out"]}
 					,{"Name":"numEffects","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
 				"Name":"SetAudioEffectState"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5614,6 +5602,7 @@
 		,"Methods":[
 			{
 				"Name":"GetChannelCount"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5627,6 +5616,7 @@
 			}
 			,{
 				"Name":"SetChannelVolume"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5641,6 +5631,7 @@
 			}
 			,{
 				"Name":"GetChannelVolume"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5655,6 +5646,7 @@
 			}
 			,{
 				"Name":"SetAllVolumes"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5669,6 +5661,7 @@
 			}
 			,{
 				"Name":"GetAllVolumes"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5750,6 +5743,7 @@
 		,"Methods":[
 			{
 				"Name":"SetData"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5764,6 +5758,7 @@
 			}
 			,{
 				"Name":"SetHeadTracking"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5777,6 +5772,7 @@
 			}
 			,{
 				"Name":"GetHeadTracking"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5790,6 +5786,7 @@
 			}
 			,{
 				"Name":"SetRotation"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5816,6 +5813,7 @@
 		,"Methods":[
 			{
 				"Name":"GetChannelCount"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5829,6 +5827,7 @@
 			}
 			,{
 				"Name":"SetChannelVolume"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5844,6 +5843,7 @@
 			}
 			,{
 				"Name":"GetChannelVolume"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5858,6 +5858,7 @@
 			}
 			,{
 				"Name":"SetAllVolumes"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5873,6 +5874,7 @@
 			}
 			,{
 				"Name":"GetAllVolumes"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5979,6 +5981,7 @@
 		,"Methods":[
 			{
 				"Name":"GetCount"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -5992,6 +5995,7 @@
 			}
 			,{
 				"Name":"GetFormat"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6016,6 +6020,7 @@
 		,"Methods":[
 			{
 				"Name":"GetBuffer"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6030,6 +6035,7 @@
 			}
 			,{
 				"Name":"SetEndOfStream"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6043,6 +6049,7 @@
 			}
 			,{
 				"Name":"IsActive"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6056,6 +6063,7 @@
 			}
 			,{
 				"Name":"GetAudioObjectType"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6079,6 +6087,7 @@
 		,"Methods":[
 			{
 				"Name":"SetPosition"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6094,6 +6103,7 @@
 			}
 			,{
 				"Name":"SetVolume"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6117,6 +6127,7 @@
 		,"Methods":[
 			{
 				"Name":"GetAvailableDynamicObjectCount"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6130,6 +6141,7 @@
 			}
 			,{
 				"Name":"GetService"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6144,6 +6156,7 @@
 			}
 			,{
 				"Name":"Start"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6156,6 +6169,7 @@
 			}
 			,{
 				"Name":"Stop"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6168,6 +6182,7 @@
 			}
 			,{
 				"Name":"Reset"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6180,6 +6195,7 @@
 			}
 			,{
 				"Name":"BeginUpdatingAudioObjects"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6194,6 +6210,7 @@
 			}
 			,{
 				"Name":"EndUpdatingAudioObjects"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6216,6 +6233,7 @@
 		,"Methods":[
 			{
 				"Name":"ActivateSpatialAudioObject"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6240,6 +6258,7 @@
 		,"Methods":[
 			{
 				"Name":"OnAvailableDynamicObjectCountChange"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6265,6 +6284,7 @@
 		,"Methods":[
 			{
 				"Name":"GetStaticObjectPosition"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6281,6 +6301,7 @@
 			}
 			,{
 				"Name":"GetNativeStaticObjectTypeMask"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6294,6 +6315,7 @@
 			}
 			,{
 				"Name":"GetMaxDynamicObjectCount"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6307,6 +6329,7 @@
 			}
 			,{
 				"Name":"GetSupportedAudioObjectFormatEnumerator"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6320,6 +6343,7 @@
 			}
 			,{
 				"Name":"GetMaxFrameCount"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6334,6 +6358,7 @@
 			}
 			,{
 				"Name":"IsAudioObjectFormatSupported"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6347,6 +6372,7 @@
 			}
 			,{
 				"Name":"IsSpatialAudioStreamAvailable"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6361,6 +6387,7 @@
 			}
 			,{
 				"Name":"ActivateSpatialAudioStream"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6386,6 +6413,7 @@
 		,"Methods":[
 			{
 				"Name":"IsOffloadCapable"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6400,6 +6428,7 @@
 			}
 			,{
 				"Name":"GetMaxFrameCountForCategory"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6609,6 +6638,7 @@
 		,"Methods":[
 			{
 				"Name":"SetPosition"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6624,6 +6654,7 @@
 			}
 			,{
 				"Name":"SetGain"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6637,6 +6668,7 @@
 			}
 			,{
 				"Name":"SetOrientation"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6650,6 +6682,7 @@
 			}
 			,{
 				"Name":"SetEnvironment"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6663,6 +6696,7 @@
 			}
 			,{
 				"Name":"SetDistanceDecay"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6676,6 +6710,7 @@
 			}
 			,{
 				"Name":"SetDirectivity"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6699,6 +6734,7 @@
 		,"Methods":[
 			{
 				"Name":"ActivateSpatialAudioObjectForHrtf"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6798,6 +6834,7 @@
 		,"Methods":[
 			{
 				"Name":"OnDeviceStateChanged"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6812,6 +6849,7 @@
 			}
 			,{
 				"Name":"OnDeviceAdded"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6825,6 +6863,7 @@
 			}
 			,{
 				"Name":"OnDeviceRemoved"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6838,6 +6877,7 @@
 			}
 			,{
 				"Name":"OnDefaultDeviceChanged"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6853,6 +6893,7 @@
 			}
 			,{
 				"Name":"OnPropertyValueChanged"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6877,6 +6918,7 @@
 		,"Methods":[
 			{
 				"Name":"Activate"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6893,6 +6935,7 @@
 			}
 			,{
 				"Name":"OpenPropertyStore"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6901,12 +6944,13 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"stgmAccess","Type":{"Kind":"ApiRef","Name":"STGM","TargetKind":"Default","Api":"System.Com.StructuredStorage","Parents":[]},"Attrs":["In"]}
+					{"Name":"stgmAccess","Type":{"Kind":"ApiRef","Name":"STGM","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
 					,{"Name":"ppProperties","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IPropertyStore","TargetKind":"Com","Api":"UI.Shell.PropertiesSystem","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
 				"Name":"GetId"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6920,6 +6964,7 @@
 			}
 			,{
 				"Name":"GetState"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6943,6 +6988,7 @@
 		,"Methods":[
 			{
 				"Name":"GetCount"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6956,6 +7002,7 @@
 			}
 			,{
 				"Name":"Item"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -6980,6 +7027,7 @@
 		,"Methods":[
 			{
 				"Name":"GetDataFlow"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7003,6 +7051,7 @@
 		,"Methods":[
 			{
 				"Name":"EnumAudioEndpoints"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7018,6 +7067,7 @@
 			}
 			,{
 				"Name":"GetDefaultAudioEndpoint"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7033,6 +7083,7 @@
 			}
 			,{
 				"Name":"GetDevice"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7047,6 +7098,7 @@
 			}
 			,{
 				"Name":"RegisterEndpointNotificationCallback"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7060,6 +7112,7 @@
 			}
 			,{
 				"Name":"UnregisterEndpointNotificationCallback"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7083,6 +7136,7 @@
 		,"Methods":[
 			{
 				"Name":"Activate"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7109,6 +7163,7 @@
 		,"Methods":[
 			{
 				"Name":"ActivateCompleted"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7132,6 +7187,7 @@
 		,"Methods":[
 			{
 				"Name":"GetActivateResult"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7141,7 +7197,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"activateResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
-					,{"Name":"activatedInterface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"activatedInterface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -7163,7 +7219,7 @@
 		]
 	}
 	,{
-		"Name":"__MIDL___MIDL_itf_mmdeviceapi_0000_0008_0002"
+		"Name":"AUDIO_SYSTEMEFFECTS_PROPERTYSTORE_TYPE"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
@@ -7187,6 +7243,7 @@
 		,"Methods":[
 			{
 				"Name":"OnPropertyChanged"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7195,7 +7252,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"type","Type":{"Kind":"ApiRef","Name":"__MIDL___MIDL_itf_mmdeviceapi_0000_0008_0002","TargetKind":"Default","Api":"Media.Audio","Parents":[]},"Attrs":["In"]}
+					{"Name":"type","Type":{"Kind":"ApiRef","Name":"AUDIO_SYSTEMEFFECTS_PROPERTYSTORE_TYPE","TargetKind":"Default","Api":"Media.Audio","Parents":[]},"Attrs":["In"]}
 					,{"Name":"key","Type":{"Kind":"ApiRef","Name":"PROPERTYKEY","TargetKind":"Default","Api":"UI.Shell.PropertiesSystem","Parents":[]},"Attrs":["In","Const"]}
 				]
 			}
@@ -7211,6 +7268,7 @@
 		,"Methods":[
 			{
 				"Name":"OpenDefaultPropertyStore"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7225,6 +7283,7 @@
 			}
 			,{
 				"Name":"OpenUserPropertyStore"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7239,6 +7298,7 @@
 			}
 			,{
 				"Name":"OpenVolatilePropertyStore"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7253,6 +7313,7 @@
 			}
 			,{
 				"Name":"ResetUserPropertyStore"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7265,6 +7326,7 @@
 			}
 			,{
 				"Name":"ResetVolatilePropertyStore"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7277,6 +7339,7 @@
 			}
 			,{
 				"Name":"RegisterPropertyChangeNotification"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7290,6 +7353,7 @@
 			}
 			,{
 				"Name":"UnregisterPropertyChangeNotification"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7363,6 +7427,7 @@
 		,"Methods":[
 			{
 				"Name":"GetChannelCount"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7376,6 +7441,7 @@
 			}
 			,{
 				"Name":"GetLevelRange"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7392,6 +7458,7 @@
 			}
 			,{
 				"Name":"GetLevel"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7406,6 +7473,7 @@
 			}
 			,{
 				"Name":"SetLevel"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7421,6 +7489,7 @@
 			}
 			,{
 				"Name":"SetLevelUniform"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7435,6 +7504,7 @@
 			}
 			,{
 				"Name":"SetLevelAllChannels"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7470,6 +7540,7 @@
 		,"Methods":[
 			{
 				"Name":"SetChannelConfig"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7484,6 +7555,7 @@
 			}
 			,{
 				"Name":"GetChannelConfig"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7507,6 +7579,7 @@
 		,"Methods":[
 			{
 				"Name":"GetEnabled"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7520,6 +7593,7 @@
 			}
 			,{
 				"Name":"SetEnabled"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7544,6 +7618,7 @@
 		,"Methods":[
 			{
 				"Name":"GetSelection"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7557,6 +7632,7 @@
 			}
 			,{
 				"Name":"SetSelection"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7581,6 +7657,7 @@
 		,"Methods":[
 			{
 				"Name":"GetSelection"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7594,6 +7671,7 @@
 			}
 			,{
 				"Name":"SetSelection"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7618,6 +7696,7 @@
 		,"Methods":[
 			{
 				"Name":"SetMute"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7632,6 +7711,7 @@
 			}
 			,{
 				"Name":"GetMute"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7685,6 +7765,7 @@
 		,"Methods":[
 			{
 				"Name":"GetEnabled"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7698,6 +7779,7 @@
 			}
 			,{
 				"Name":"SetEnabled"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7722,6 +7804,7 @@
 		,"Methods":[
 			{
 				"Name":"GetChannelCount"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7735,6 +7818,7 @@
 			}
 			,{
 				"Name":"GetLevel"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7759,6 +7843,7 @@
 		,"Methods":[
 			{
 				"Name":"GetType"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7772,6 +7857,7 @@
 			}
 			,{
 				"Name":"GetValue"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7786,6 +7872,7 @@
 			}
 			,{
 				"Name":"SetValue"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7801,6 +7888,7 @@
 			}
 			,{
 				"Name":"Get4BRange"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7826,6 +7914,7 @@
 		,"Methods":[
 			{
 				"Name":"GetCount"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7839,6 +7928,7 @@
 			}
 			,{
 				"Name":"GetPart"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7863,6 +7953,7 @@
 		,"Methods":[
 			{
 				"Name":"GetName"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7876,6 +7967,7 @@
 			}
 			,{
 				"Name":"GetLocalId"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7889,6 +7981,7 @@
 			}
 			,{
 				"Name":"GetGlobalId"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7902,6 +7995,7 @@
 			}
 			,{
 				"Name":"GetPartType"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7915,6 +8009,7 @@
 			}
 			,{
 				"Name":"GetSubType"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7928,6 +8023,7 @@
 			}
 			,{
 				"Name":"GetControlInterfaceCount"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7941,6 +8037,7 @@
 			}
 			,{
 				"Name":"GetControlInterface"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7955,6 +8052,7 @@
 			}
 			,{
 				"Name":"EnumPartsIncoming"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7968,6 +8066,7 @@
 			}
 			,{
 				"Name":"EnumPartsOutgoing"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7981,6 +8080,7 @@
 			}
 			,{
 				"Name":"GetTopologyObject"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -7994,6 +8094,7 @@
 			}
 			,{
 				"Name":"Activate"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8009,6 +8110,7 @@
 			}
 			,{
 				"Name":"RegisterControlChangeCallback"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8023,6 +8125,7 @@
 			}
 			,{
 				"Name":"UnregisterControlChangeCallback"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8046,6 +8149,7 @@
 		,"Methods":[
 			{
 				"Name":"GetType"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8059,6 +8163,7 @@
 			}
 			,{
 				"Name":"GetDataFlow"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8072,6 +8177,7 @@
 			}
 			,{
 				"Name":"ConnectTo"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8085,6 +8191,7 @@
 			}
 			,{
 				"Name":"Disconnect"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8097,6 +8204,7 @@
 			}
 			,{
 				"Name":"IsConnected"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8110,6 +8218,7 @@
 			}
 			,{
 				"Name":"GetConnectedTo"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8123,6 +8232,7 @@
 			}
 			,{
 				"Name":"GetConnectorIdConnectedTo"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8136,6 +8246,7 @@
 			}
 			,{
 				"Name":"GetDeviceIdConnectedTo"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8169,6 +8280,7 @@
 		,"Methods":[
 			{
 				"Name":"GetName"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8182,6 +8294,7 @@
 			}
 			,{
 				"Name":"GetIID"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8205,6 +8318,7 @@
 		,"Methods":[
 			{
 				"Name":"OnNotify"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8229,6 +8343,7 @@
 		,"Methods":[
 			{
 				"Name":"GetConnectorCount"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8242,6 +8357,7 @@
 			}
 			,{
 				"Name":"GetConnector"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8256,6 +8372,7 @@
 			}
 			,{
 				"Name":"GetSubunitCount"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8269,6 +8386,7 @@
 			}
 			,{
 				"Name":"GetSubunit"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8283,6 +8401,7 @@
 			}
 			,{
 				"Name":"GetPartById"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8297,6 +8416,7 @@
 			}
 			,{
 				"Name":"GetDeviceId"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8310,6 +8430,7 @@
 			}
 			,{
 				"Name":"GetSignalPath"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8353,6 +8474,7 @@
 		,"Methods":[
 			{
 				"Name":"OnDisplayNameChanged"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8367,6 +8489,7 @@
 			}
 			,{
 				"Name":"OnIconPathChanged"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8381,6 +8504,7 @@
 			}
 			,{
 				"Name":"OnSimpleVolumeChanged"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8396,6 +8520,7 @@
 			}
 			,{
 				"Name":"OnChannelVolumeChanged"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8412,6 +8537,7 @@
 			}
 			,{
 				"Name":"OnGroupingParamChanged"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8426,6 +8552,7 @@
 			}
 			,{
 				"Name":"OnStateChanged"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8439,6 +8566,7 @@
 			}
 			,{
 				"Name":"OnSessionDisconnected"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8462,6 +8590,7 @@
 		,"Methods":[
 			{
 				"Name":"GetState"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8475,6 +8604,7 @@
 			}
 			,{
 				"Name":"GetDisplayName"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8488,6 +8618,7 @@
 			}
 			,{
 				"Name":"SetDisplayName"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8502,6 +8633,7 @@
 			}
 			,{
 				"Name":"GetIconPath"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8515,6 +8647,7 @@
 			}
 			,{
 				"Name":"SetIconPath"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8529,6 +8662,7 @@
 			}
 			,{
 				"Name":"GetGroupingParam"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8542,6 +8676,7 @@
 			}
 			,{
 				"Name":"SetGroupingParam"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8556,6 +8691,7 @@
 			}
 			,{
 				"Name":"RegisterAudioSessionNotification"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8569,6 +8705,7 @@
 			}
 			,{
 				"Name":"UnregisterAudioSessionNotification"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8592,6 +8729,7 @@
 		,"Methods":[
 			{
 				"Name":"GetSessionIdentifier"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8605,6 +8743,7 @@
 			}
 			,{
 				"Name":"GetSessionInstanceIdentifier"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8618,6 +8757,7 @@
 			}
 			,{
 				"Name":"GetProcessId"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8631,6 +8771,7 @@
 			}
 			,{
 				"Name":"IsSystemSoundsSession"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8643,6 +8784,7 @@
 			}
 			,{
 				"Name":"SetDuckingPreference"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8666,6 +8808,7 @@
 		,"Methods":[
 			{
 				"Name":"GetAudioSessionControl"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8681,6 +8824,7 @@
 			}
 			,{
 				"Name":"GetSimpleAudioVolume"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8706,6 +8850,7 @@
 		,"Methods":[
 			{
 				"Name":"OnVolumeDuckNotification"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8720,6 +8865,7 @@
 			}
 			,{
 				"Name":"OnVolumeUnduckNotification"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8743,6 +8889,7 @@
 		,"Methods":[
 			{
 				"Name":"OnSessionCreated"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8766,6 +8913,7 @@
 		,"Methods":[
 			{
 				"Name":"GetCount"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8779,6 +8927,7 @@
 			}
 			,{
 				"Name":"GetSession"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8803,6 +8952,7 @@
 		,"Methods":[
 			{
 				"Name":"GetSessionEnumerator"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8816,6 +8966,7 @@
 			}
 			,{
 				"Name":"RegisterSessionNotification"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8829,6 +8980,7 @@
 			}
 			,{
 				"Name":"UnregisterSessionNotification"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8842,6 +8994,7 @@
 			}
 			,{
 				"Name":"RegisterDuckNotification"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8856,6 +9009,7 @@
 			}
 			,{
 				"Name":"UnregisterDuckNotification"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8969,6 +9123,7 @@
 		,"Methods":[
 			{
 				"Name":"GetFrameCount"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8982,6 +9137,7 @@
 			}
 			,{
 				"Name":"GetItemCount"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -8995,6 +9151,7 @@
 			}
 			,{
 				"Name":"GetMaxItemCount"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9008,6 +9165,7 @@
 			}
 			,{
 				"Name":"GetMaxValueBufferLength"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9021,6 +9179,7 @@
 			}
 			,{
 				"Name":"GetInfo"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9044,6 +9203,7 @@
 		,"Methods":[
 			{
 				"Name":"Open"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9057,6 +9217,7 @@
 			}
 			,{
 				"Name":"WriteNextItem"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9070,6 +9231,7 @@
 			}
 			,{
 				"Name":"WriteNextItemCommand"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9085,6 +9247,7 @@
 			}
 			,{
 				"Name":"Close"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9107,6 +9270,7 @@
 		,"Methods":[
 			{
 				"Name":"Open"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9120,6 +9284,7 @@
 			}
 			,{
 				"Name":"ReadNextItem"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9134,6 +9299,7 @@
 			}
 			,{
 				"Name":"ReadNextItemCommand"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9150,6 +9316,7 @@
 			}
 			,{
 				"Name":"Close"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9172,6 +9339,7 @@
 		,"Methods":[
 			{
 				"Name":"Open"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9185,6 +9353,7 @@
 			}
 			,{
 				"Name":"CopyMetadataForFrames"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9201,6 +9370,7 @@
 			}
 			,{
 				"Name":"Close"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9223,6 +9393,7 @@
 		,"Methods":[
 			{
 				"Name":"AttachToBuffer"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9237,6 +9408,7 @@
 			}
 			,{
 				"Name":"AttachToPopulatedBuffer"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9251,6 +9423,7 @@
 			}
 			,{
 				"Name":"DetachBuffer"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9273,6 +9446,7 @@
 		,"Methods":[
 			{
 				"Name":"ActivateSpatialAudioMetadataItems"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9289,6 +9463,7 @@
 			}
 			,{
 				"Name":"GetSpatialAudioMetadataItemsBufferLength"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9303,6 +9478,7 @@
 			}
 			,{
 				"Name":"ActivateSpatialAudioMetadataWriter"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9317,6 +9493,7 @@
 			}
 			,{
 				"Name":"ActivateSpatialAudioMetadataCopier"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9330,6 +9507,7 @@
 			}
 			,{
 				"Name":"ActivateSpatialAudioMetadataReader"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9353,6 +9531,7 @@
 		,"Methods":[
 			{
 				"Name":"WriteNextMetadataCommand"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9378,6 +9557,7 @@
 		,"Methods":[
 			{
 				"Name":"GetSpatialAudioMetadataItems"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9401,6 +9581,7 @@
 		,"Methods":[
 			{
 				"Name":"ActivateSpatialAudioObjectForMetadataCommands"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9415,6 +9596,7 @@
 			}
 			,{
 				"Name":"ActivateSpatialAudioObjectForMetadataItems"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9502,6 +9684,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -9536,6 +9719,7 @@
 		,"Methods":[
 			{
 				"Name":"RegisterCallback"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9551,6 +9735,7 @@
 			}
 			,{
 				"Name":"UnregisterCallback"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -9564,6 +9749,7 @@
 			}
 			,{
 				"Name":"GetSoundLevel"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"AudioStateMonitorSoundLevel","TargetKind":"Default","Api":"Media.Audio","Parents":[]}
@@ -9582,6 +9768,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9599,6 +9786,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"LRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9712,6 +9900,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9730,6 +9919,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9786,6 +9976,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9804,6 +9995,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9822,6 +10014,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9840,6 +10033,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -9952,6 +10146,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -9970,6 +10165,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10026,6 +10222,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10044,6 +10241,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -10062,6 +10260,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10080,6 +10279,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -10150,7 +10350,7 @@
 	}
 	,{
 		"Name":"ACMSTREAMHEADER"
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
@@ -10167,13 +10367,13 @@
 			,{"Name":"cbDstLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"cbDstLengthUsed","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwDstUser","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
-			,{"Name":"dwReservedDriver","Type":{"Kind":"Array","Shape":{"Size":15},"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			,{"Name":"dwReservedDriver","Type":{"Kind":"Array","Shape":{"Size":10},"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
 	}
 	,{
-		"Name":"tACMDRVOPENDESCA"
+		"Name":"ACMDRVOPENDESCA"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -10194,7 +10394,7 @@
 		]
 	}
 	,{
-		"Name":"tACMDRVOPENDESCW"
+		"Name":"ACMDRVOPENDESCW"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -10303,38 +10503,15 @@
 		,"NestedTypes":[
 		]
 	}
-	,{
-		"Name":"ACMSTREAMHEADER"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":1
-		,"Fields":[
-			{"Name":"cbStruct","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"fdwStatus","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"dwUser","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
-			,{"Name":"pbSrc","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
-			,{"Name":"cbSrcLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"cbSrcLengthUsed","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"dwSrcUser","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
-			,{"Name":"pbDst","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
-			,{"Name":"cbDstLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"cbDstLengthUsed","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"dwDstUser","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
-			,{"Name":"dwReservedDriver","Type":{"Kind":"Array","Shape":{"Size":10},"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
 ]
 
 ,"Functions":[
 	{
 		"Name":"CoRegisterMessageFilter"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"OLE32"
+		,"DllImport":"OLE32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10347,9 +10524,10 @@
 	}
 	,{
 		"Name":"sndPlaySoundA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10362,9 +10540,10 @@
 	}
 	,{
 		"Name":"sndPlaySoundW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10377,9 +10556,10 @@
 	}
 	,{
 		"Name":"PlaySoundA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10388,14 +10568,15 @@
 		,"Params":[
 			{"Name":"pszSound","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 			,{"Name":"hmod","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
-			,{"Name":"fdwSound","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"fdwSound","Type":{"Kind":"ApiRef","Name":"SND_FLAGS","TargetKind":"Default","Api":"Media.Audio","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"PlaySoundW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10404,14 +10585,15 @@
 		,"Params":[
 			{"Name":"pszSound","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 			,{"Name":"hmod","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
-			,{"Name":"fdwSound","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"fdwSound","Type":{"Kind":"ApiRef","Name":"SND_FLAGS","TargetKind":"Default","Api":"Media.Audio","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"waveOutGetNumDevs"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10422,9 +10604,10 @@
 	}
 	,{
 		"Name":"waveOutGetDevCapsA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10438,9 +10621,10 @@
 	}
 	,{
 		"Name":"waveOutGetDevCapsW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10454,9 +10638,10 @@
 	}
 	,{
 		"Name":"waveOutGetVolume"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10469,9 +10654,10 @@
 	}
 	,{
 		"Name":"waveOutSetVolume"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10484,9 +10670,10 @@
 	}
 	,{
 		"Name":"waveOutGetErrorTextA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10500,9 +10687,10 @@
 	}
 	,{
 		"Name":"waveOutGetErrorTextW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10516,9 +10704,10 @@
 	}
 	,{
 		"Name":"waveOutOpen"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10535,9 +10724,10 @@
 	}
 	,{
 		"Name":"waveOutClose"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10549,9 +10739,10 @@
 	}
 	,{
 		"Name":"waveOutPrepareHeader"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10565,9 +10756,10 @@
 	}
 	,{
 		"Name":"waveOutUnprepareHeader"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10581,9 +10773,10 @@
 	}
 	,{
 		"Name":"waveOutWrite"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10597,9 +10790,10 @@
 	}
 	,{
 		"Name":"waveOutPause"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10611,9 +10805,10 @@
 	}
 	,{
 		"Name":"waveOutRestart"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10625,9 +10820,10 @@
 	}
 	,{
 		"Name":"waveOutReset"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10639,9 +10835,10 @@
 	}
 	,{
 		"Name":"waveOutBreakLoop"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10653,9 +10850,10 @@
 	}
 	,{
 		"Name":"waveOutGetPosition"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10669,9 +10867,10 @@
 	}
 	,{
 		"Name":"waveOutGetPitch"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10684,9 +10883,10 @@
 	}
 	,{
 		"Name":"waveOutSetPitch"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10699,9 +10899,10 @@
 	}
 	,{
 		"Name":"waveOutGetPlaybackRate"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10714,9 +10915,10 @@
 	}
 	,{
 		"Name":"waveOutSetPlaybackRate"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10729,9 +10931,10 @@
 	}
 	,{
 		"Name":"waveOutGetID"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10744,9 +10947,10 @@
 	}
 	,{
 		"Name":"waveOutMessage"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10761,9 +10965,10 @@
 	}
 	,{
 		"Name":"waveInGetNumDevs"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10774,9 +10979,10 @@
 	}
 	,{
 		"Name":"waveInGetDevCapsA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10790,9 +10996,10 @@
 	}
 	,{
 		"Name":"waveInGetDevCapsW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10806,9 +11013,10 @@
 	}
 	,{
 		"Name":"waveInGetErrorTextA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10822,9 +11030,10 @@
 	}
 	,{
 		"Name":"waveInGetErrorTextW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10838,9 +11047,10 @@
 	}
 	,{
 		"Name":"waveInOpen"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10857,9 +11067,10 @@
 	}
 	,{
 		"Name":"waveInClose"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10871,9 +11082,10 @@
 	}
 	,{
 		"Name":"waveInPrepareHeader"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10887,9 +11099,10 @@
 	}
 	,{
 		"Name":"waveInUnprepareHeader"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10903,9 +11116,10 @@
 	}
 	,{
 		"Name":"waveInAddBuffer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10919,9 +11133,10 @@
 	}
 	,{
 		"Name":"waveInStart"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10933,9 +11148,10 @@
 	}
 	,{
 		"Name":"waveInStop"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10947,9 +11163,10 @@
 	}
 	,{
 		"Name":"waveInReset"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10961,9 +11178,10 @@
 	}
 	,{
 		"Name":"waveInGetPosition"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10977,9 +11195,10 @@
 	}
 	,{
 		"Name":"waveInGetID"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10992,9 +11211,10 @@
 	}
 	,{
 		"Name":"waveInMessage"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11009,9 +11229,10 @@
 	}
 	,{
 		"Name":"midiOutGetNumDevs"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11022,9 +11243,10 @@
 	}
 	,{
 		"Name":"midiStreamOpen"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11041,9 +11263,10 @@
 	}
 	,{
 		"Name":"midiStreamClose"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11055,9 +11278,10 @@
 	}
 	,{
 		"Name":"midiStreamProperty"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11071,9 +11295,10 @@
 	}
 	,{
 		"Name":"midiStreamPosition"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11087,9 +11312,10 @@
 	}
 	,{
 		"Name":"midiStreamOut"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11103,9 +11329,10 @@
 	}
 	,{
 		"Name":"midiStreamPause"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11117,9 +11344,10 @@
 	}
 	,{
 		"Name":"midiStreamRestart"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11131,9 +11359,10 @@
 	}
 	,{
 		"Name":"midiStreamStop"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11145,9 +11374,10 @@
 	}
 	,{
 		"Name":"midiConnect"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11161,9 +11391,10 @@
 	}
 	,{
 		"Name":"midiDisconnect"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11177,9 +11408,10 @@
 	}
 	,{
 		"Name":"midiOutGetDevCapsA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11193,9 +11425,10 @@
 	}
 	,{
 		"Name":"midiOutGetDevCapsW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11209,9 +11442,10 @@
 	}
 	,{
 		"Name":"midiOutGetVolume"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11224,9 +11458,10 @@
 	}
 	,{
 		"Name":"midiOutSetVolume"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11239,9 +11474,10 @@
 	}
 	,{
 		"Name":"midiOutGetErrorTextA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11255,9 +11491,10 @@
 	}
 	,{
 		"Name":"midiOutGetErrorTextW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11271,9 +11508,10 @@
 	}
 	,{
 		"Name":"midiOutOpen"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11289,9 +11527,10 @@
 	}
 	,{
 		"Name":"midiOutClose"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11303,9 +11542,10 @@
 	}
 	,{
 		"Name":"midiOutPrepareHeader"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11319,9 +11559,10 @@
 	}
 	,{
 		"Name":"midiOutUnprepareHeader"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11335,9 +11576,10 @@
 	}
 	,{
 		"Name":"midiOutShortMsg"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11350,9 +11592,10 @@
 	}
 	,{
 		"Name":"midiOutLongMsg"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11366,9 +11609,10 @@
 	}
 	,{
 		"Name":"midiOutReset"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11380,9 +11624,10 @@
 	}
 	,{
 		"Name":"midiOutCachePatches"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11397,9 +11642,10 @@
 	}
 	,{
 		"Name":"midiOutCacheDrumPatches"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11414,9 +11660,10 @@
 	}
 	,{
 		"Name":"midiOutGetID"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11429,9 +11676,10 @@
 	}
 	,{
 		"Name":"midiOutMessage"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11446,9 +11694,10 @@
 	}
 	,{
 		"Name":"midiInGetNumDevs"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11459,9 +11708,10 @@
 	}
 	,{
 		"Name":"midiInGetDevCapsA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11475,9 +11725,10 @@
 	}
 	,{
 		"Name":"midiInGetDevCapsW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11491,9 +11742,10 @@
 	}
 	,{
 		"Name":"midiInGetErrorTextA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11507,9 +11759,10 @@
 	}
 	,{
 		"Name":"midiInGetErrorTextW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11523,9 +11776,10 @@
 	}
 	,{
 		"Name":"midiInOpen"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11541,9 +11795,10 @@
 	}
 	,{
 		"Name":"midiInClose"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11555,9 +11810,10 @@
 	}
 	,{
 		"Name":"midiInPrepareHeader"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11571,9 +11827,10 @@
 	}
 	,{
 		"Name":"midiInUnprepareHeader"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11587,9 +11844,10 @@
 	}
 	,{
 		"Name":"midiInAddBuffer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11603,9 +11861,10 @@
 	}
 	,{
 		"Name":"midiInStart"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11617,9 +11876,10 @@
 	}
 	,{
 		"Name":"midiInStop"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11631,9 +11891,10 @@
 	}
 	,{
 		"Name":"midiInReset"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11645,9 +11906,10 @@
 	}
 	,{
 		"Name":"midiInGetID"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11660,9 +11922,10 @@
 	}
 	,{
 		"Name":"midiInMessage"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11677,9 +11940,10 @@
 	}
 	,{
 		"Name":"auxGetNumDevs"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11690,9 +11954,10 @@
 	}
 	,{
 		"Name":"auxGetDevCapsA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11706,9 +11971,10 @@
 	}
 	,{
 		"Name":"auxGetDevCapsW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11722,9 +11988,10 @@
 	}
 	,{
 		"Name":"auxSetVolume"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11737,9 +12004,10 @@
 	}
 	,{
 		"Name":"auxGetVolume"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11752,9 +12020,10 @@
 	}
 	,{
 		"Name":"auxOutMessage"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11769,9 +12038,10 @@
 	}
 	,{
 		"Name":"mixerGetNumDevs"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11782,9 +12052,10 @@
 	}
 	,{
 		"Name":"mixerGetDevCapsA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11798,9 +12069,10 @@
 	}
 	,{
 		"Name":"mixerGetDevCapsW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11814,9 +12086,10 @@
 	}
 	,{
 		"Name":"mixerOpen"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11832,9 +12105,10 @@
 	}
 	,{
 		"Name":"mixerClose"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11846,9 +12120,10 @@
 	}
 	,{
 		"Name":"mixerMessage"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11863,9 +12138,10 @@
 	}
 	,{
 		"Name":"mixerGetLineInfoA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11879,9 +12155,10 @@
 	}
 	,{
 		"Name":"mixerGetLineInfoW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11895,9 +12172,10 @@
 	}
 	,{
 		"Name":"mixerGetID"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11911,9 +12189,10 @@
 	}
 	,{
 		"Name":"mixerGetLineControlsA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11927,9 +12206,10 @@
 	}
 	,{
 		"Name":"mixerGetLineControlsW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11943,9 +12223,10 @@
 	}
 	,{
 		"Name":"mixerGetControlDetailsA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11959,9 +12240,10 @@
 	}
 	,{
 		"Name":"mixerGetControlDetailsW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11975,9 +12257,10 @@
 	}
 	,{
 		"Name":"mixerSetControlDetails"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"WINMM"
+		,"DllImport":"WINMM.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11991,9 +12274,10 @@
 	}
 	,{
 		"Name":"ActivateAudioInterfaceAsync"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MMDevAPI"
+		,"DllImport":"MMDevAPI.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12009,9 +12293,10 @@
 	}
 	,{
 		"Name":"CreateRenderAudioStateMonitor"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"Windows.Media.MediaControl"
+		,"DllImport":"Windows.Media.MediaControl.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12023,9 +12308,10 @@
 	}
 	,{
 		"Name":"CreateRenderAudioStateMonitorForCategory"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"Windows.Media.MediaControl"
+		,"DllImport":"Windows.Media.MediaControl.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12038,9 +12324,10 @@
 	}
 	,{
 		"Name":"CreateRenderAudioStateMonitorForCategoryAndDeviceRole"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"Windows.Media.MediaControl"
+		,"DllImport":"Windows.Media.MediaControl.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12054,9 +12341,10 @@
 	}
 	,{
 		"Name":"CreateRenderAudioStateMonitorForCategoryAndDeviceId"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"Windows.Media.MediaControl"
+		,"DllImport":"Windows.Media.MediaControl.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12070,9 +12358,10 @@
 	}
 	,{
 		"Name":"CreateCaptureAudioStateMonitor"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"Windows.Media.MediaControl"
+		,"DllImport":"Windows.Media.MediaControl.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12084,9 +12373,10 @@
 	}
 	,{
 		"Name":"CreateCaptureAudioStateMonitorForCategory"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"Windows.Media.MediaControl"
+		,"DllImport":"Windows.Media.MediaControl.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12099,9 +12389,10 @@
 	}
 	,{
 		"Name":"CreateCaptureAudioStateMonitorForCategoryAndDeviceRole"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"Windows.Media.MediaControl"
+		,"DllImport":"Windows.Media.MediaControl.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12115,9 +12406,10 @@
 	}
 	,{
 		"Name":"CreateCaptureAudioStateMonitorForCategoryAndDeviceId"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"Windows.Media.MediaControl"
+		,"DllImport":"Windows.Media.MediaControl.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12131,9 +12423,10 @@
 	}
 	,{
 		"Name":"acmGetVersion"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12144,9 +12437,10 @@
 	}
 	,{
 		"Name":"acmMetrics"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12160,9 +12454,10 @@
 	}
 	,{
 		"Name":"acmDriverEnum"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12176,9 +12471,10 @@
 	}
 	,{
 		"Name":"acmDriverID"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12192,9 +12488,10 @@
 	}
 	,{
 		"Name":"acmDriverAddA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12210,9 +12507,10 @@
 	}
 	,{
 		"Name":"acmDriverAddW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12228,9 +12526,10 @@
 	}
 	,{
 		"Name":"acmDriverRemove"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12243,9 +12542,10 @@
 	}
 	,{
 		"Name":"acmDriverOpen"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12259,9 +12559,10 @@
 	}
 	,{
 		"Name":"acmDriverClose"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12274,9 +12575,10 @@
 	}
 	,{
 		"Name":"acmDriverMessage"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"LRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12291,9 +12593,10 @@
 	}
 	,{
 		"Name":"acmDriverPriority"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12307,9 +12610,10 @@
 	}
 	,{
 		"Name":"acmDriverDetailsA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12323,9 +12627,10 @@
 	}
 	,{
 		"Name":"acmDriverDetailsW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12339,9 +12644,10 @@
 	}
 	,{
 		"Name":"acmFormatTagDetailsA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12355,9 +12661,10 @@
 	}
 	,{
 		"Name":"acmFormatTagDetailsW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12371,9 +12678,10 @@
 	}
 	,{
 		"Name":"acmFormatTagEnumA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12389,9 +12697,10 @@
 	}
 	,{
 		"Name":"acmFormatTagEnumW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12407,9 +12716,10 @@
 	}
 	,{
 		"Name":"acmFormatDetailsA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12423,9 +12733,10 @@
 	}
 	,{
 		"Name":"acmFormatDetailsW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12439,9 +12750,10 @@
 	}
 	,{
 		"Name":"acmFormatEnumA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12457,9 +12769,10 @@
 	}
 	,{
 		"Name":"acmFormatEnumW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12475,9 +12788,10 @@
 	}
 	,{
 		"Name":"acmFormatSuggest"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12493,9 +12807,10 @@
 	}
 	,{
 		"Name":"acmFormatChooseA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12507,9 +12822,10 @@
 	}
 	,{
 		"Name":"acmFormatChooseW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12521,9 +12837,10 @@
 	}
 	,{
 		"Name":"acmFilterTagDetailsA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12537,9 +12854,10 @@
 	}
 	,{
 		"Name":"acmFilterTagDetailsW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12553,9 +12871,10 @@
 	}
 	,{
 		"Name":"acmFilterTagEnumA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12571,9 +12890,10 @@
 	}
 	,{
 		"Name":"acmFilterTagEnumW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12589,9 +12909,10 @@
 	}
 	,{
 		"Name":"acmFilterDetailsA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12605,9 +12926,10 @@
 	}
 	,{
 		"Name":"acmFilterDetailsW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12621,9 +12943,10 @@
 	}
 	,{
 		"Name":"acmFilterEnumA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12639,9 +12962,10 @@
 	}
 	,{
 		"Name":"acmFilterEnumW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12657,9 +12981,10 @@
 	}
 	,{
 		"Name":"acmFilterChooseA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12671,9 +12996,10 @@
 	}
 	,{
 		"Name":"acmFilterChooseW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12685,9 +13011,10 @@
 	}
 	,{
 		"Name":"acmStreamOpen"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12706,9 +13033,10 @@
 	}
 	,{
 		"Name":"acmStreamClose"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12721,9 +13049,10 @@
 	}
 	,{
 		"Name":"acmStreamSize"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12738,9 +13067,10 @@
 	}
 	,{
 		"Name":"acmStreamReset"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12753,9 +13083,10 @@
 	}
 	,{
 		"Name":"acmStreamMessage"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12770,9 +13101,10 @@
 	}
 	,{
 		"Name":"acmStreamConvert"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12786,9 +13118,10 @@
 	}
 	,{
 		"Name":"acmStreamPrepareHeader"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12802,9 +13135,10 @@
 	}
 	,{
 		"Name":"acmStreamUnprepareHeader"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"MSACM32"
+		,"DllImport":"MSACM32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12847,7 +13181,7 @@
 	,"ACMFILTERENUMCB"
 	,"ACMFILTERCHOOSEHOOKPROC"
 	,"ACMFILTERCHOOSE"
-	,"tACMDRVOPENDESC"
+	,"ACMDRVOPENDESC"
 	,"sndPlaySound"
 	,"PlaySound"
 	,"waveOutGetDevCaps"

@@ -787,6 +787,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -805,6 +806,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -944,7 +946,7 @@
 		]
 	}
 	,{
-		"Name":"CMOID"
+		"Name":"CERT_FILTER_EXTENSION_MATCH"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -960,7 +962,7 @@
 		]
 	}
 	,{
-		"Name":"CMFLTR"
+		"Name":"CERT_FILTER_DATA"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -969,7 +971,7 @@
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"cExtensionChecks","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"arrayExtensionChecks","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CMOID","TargetKind":"Default","Api":"Security.Cryptography.UI","Parents":[]}},"Attrs":[]}
+			,{"Name":"arrayExtensionChecks","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CERT_FILTER_EXTENSION_MATCH","TargetKind":"Default","Api":"Security.Cryptography.UI","Parents":[]}},"Attrs":[]}
 			,{"Name":"dwCheckingFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
@@ -981,6 +983,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1019,7 +1022,7 @@
 			,{"Name":"pcChain","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
 			,{"Name":"prgChain","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CERT_CONTEXT","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}}},"Attrs":[]}
 			,{"Name":"prgdwErrors","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}}},"Attrs":[]}
-			,{"Name":"prgpbTrustInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPTOAPI_BLOB","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":[]}
+			,{"Name":"prgpbTrustInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_INTEGER_BLOB","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -1045,6 +1048,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1446,9 +1450,10 @@
 ,"Functions":[
 	{
 		"Name":"CryptUIDlgViewContext"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"CRYPTUI"
+		,"DllImport":"CRYPTUI.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1465,9 +1470,10 @@
 	}
 	,{
 		"Name":"CryptUIDlgSelectCertificateFromStore"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"CRYPTUI"
+		,"DllImport":"CRYPTUI.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CERT_CONTEXT","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1485,9 +1491,10 @@
 	}
 	,{
 		"Name":"CertSelectionGetSerializedBlob"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"CRYPTUI"
+		,"DllImport":"CRYPTUI.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1495,15 +1502,16 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"pcsi","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CERT_SELECTUI_INPUT","TargetKind":"Default","Api":"Security.Cryptography.UI","Parents":[]}},"Attrs":["In"]}
-			,{"Name":"ppOutBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","Optional"]}
+			,{"Name":"ppOutBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out"]}
 			,{"Name":"pulOutBufferSize","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"CryptUIDlgCertMgr"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"CRYPTUI"
+		,"DllImport":"CRYPTUI.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1515,9 +1523,10 @@
 	}
 	,{
 		"Name":"CryptUIWizDigitalSign"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"CRYPTUI"
+		,"DllImport":"CRYPTUI.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1533,9 +1542,10 @@
 	}
 	,{
 		"Name":"CryptUIWizFreeDigitalSignContext"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"CRYPTUI"
+		,"DllImport":"CRYPTUI.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1547,9 +1557,10 @@
 	}
 	,{
 		"Name":"CryptUIDlgViewCertificateW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"CRYPTUI"
+		,"DllImport":"CRYPTUI.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1562,9 +1573,10 @@
 	}
 	,{
 		"Name":"CryptUIDlgViewCertificateA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"CRYPTUI"
+		,"DllImport":"CRYPTUI.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1577,9 +1589,10 @@
 	}
 	,{
 		"Name":"CryptUIWizExport"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"CRYPTUI"
+		,"DllImport":"CRYPTUI.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1595,9 +1608,10 @@
 	}
 	,{
 		"Name":"CryptUIWizImport"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"CRYPTUI"
+		,"DllImport":"CRYPTUI.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

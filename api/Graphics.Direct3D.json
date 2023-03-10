@@ -435,6 +435,7 @@
 			,{"Name":"D3D_PRIMITIVE_TOPOLOGY_LINESTRIP","Value":3}
 			,{"Name":"D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST","Value":4}
 			,{"Name":"D3D_PRIMITIVE_TOPOLOGY_TRIANGLESTRIP","Value":5}
+			,{"Name":"D3D_PRIMITIVE_TOPOLOGY_TRIANGLEFAN","Value":6}
 			,{"Name":"D3D_PRIMITIVE_TOPOLOGY_LINELIST_ADJ","Value":10}
 			,{"Name":"D3D_PRIMITIVE_TOPOLOGY_LINESTRIP_ADJ","Value":11}
 			,{"Name":"D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST_ADJ","Value":12}
@@ -699,6 +700,7 @@
 		,"Methods":[
 			{
 				"Name":"GetBufferPointer"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
@@ -711,6 +713,7 @@
 			}
 			,{
 				"Name":"GetBufferSize"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"Native","Name":"UIntPtr"}
@@ -729,6 +732,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -748,6 +752,7 @@
 		,"Methods":[
 			{
 				"Name":"RegisterDestructionCallback"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -763,6 +768,7 @@
 			}
 			,{
 				"Name":"UnregisterDestructionCallback"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -802,6 +808,7 @@
 		,"Methods":[
 			{
 				"Name":"Open"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -819,6 +826,7 @@
 			}
 			,{
 				"Name":"Close"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1330,6 +1338,70 @@
 			,{"Name":"D3D_PF_IN","Value":1}
 			,{"Name":"D3D_PF_OUT","Value":2}
 			,{"Name":"D3D_PF_FORCE_DWORD","Value":2147483647}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"D3D_FORMAT_LAYOUT"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"D3DFL_STANDARD","Value":0}
+			,{"Name":"D3DFL_CUSTOM","Value":-1}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"D3D_FORMAT_TYPE_LEVEL"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"D3DFTL_NO_TYPE","Value":0}
+			,{"Name":"D3DFTL_PARTIAL_TYPE","Value":-2}
+			,{"Name":"D3DFTL_FULL_TYPE","Value":-1}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"D3D_FORMAT_COMPONENT_NAME"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"D3DFCN_R","Value":-4}
+			,{"Name":"D3DFCN_G","Value":-3}
+			,{"Name":"D3DFCN_B","Value":-2}
+			,{"Name":"D3DFCN_A","Value":-1}
+			,{"Name":"D3DFCN_D","Value":0}
+			,{"Name":"D3DFCN_S","Value":1}
+			,{"Name":"D3DFCN_X","Value":2}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"D3D_FORMAT_COMPONENT_INTERPRETATION"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"D3DFCI_TYPELESS","Value":0}
+			,{"Name":"D3DFCI_FLOAT","Value":-4}
+			,{"Name":"D3DFCI_SNORM","Value":-3}
+			,{"Name":"D3DFCI_UNORM","Value":-2}
+			,{"Name":"D3DFCI_SINT","Value":-1}
+			,{"Name":"D3DFCI_UINT","Value":1}
+			,{"Name":"D3DFCI_UNORM_SRGB","Value":2}
+			,{"Name":"D3DFCI_BIASED_FIXED_2_8","Value":3}
 		]
 		,"IntegerBase":"Int32"
 	}

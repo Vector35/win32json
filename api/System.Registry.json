@@ -72,41 +72,6 @@
 		,"Attrs":[]
 	}
 	,{
-		"Name":"RRF_SUBKEY_WOW6464KEY"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":65536
-		,"Attrs":[]
-	}
-	,{
-		"Name":"RRF_SUBKEY_WOW6432KEY"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":131072
-		,"Attrs":[]
-	}
-	,{
-		"Name":"RRF_WOW64_MASK"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":196608
-		,"Attrs":[]
-	}
-	,{
-		"Name":"RRF_NOEXPAND"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":268435456
-		,"Attrs":[]
-	}
-	,{
-		"Name":"RRF_ZEROONFAILURE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":536870912
-		,"Attrs":[]
-	}
-	,{
 		"Name":"REG_PROCESS_APPKEY"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -3330,7 +3295,7 @@
 		"Name":"REGSTR_MACHTYPE_ATT_PC"
 		,"Type":{"Kind":"Native","Name":"String"}
 		,"ValueType":"String"
-		,"Value":"AT\u0026T PC"
+		,"Value":"AT&T PC"
 		,"Attrs":[]
 	}
 	,{
@@ -6519,23 +6484,28 @@
 		,"IntegerBase":"UInt32"
 	}
 	,{
-		"Name":"RRF_RT"
+		"Name":"REG_ROUTINE_FLAGS"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
 		,"Flags":true
 		,"Scoped":false
 		,"Values":[
-			{"Name":"RRF_RT_ANY","Value":65535}
-			,{"Name":"RRF_RT_DWORD","Value":24}
+			{"Name":"RRF_RT_DWORD","Value":24}
 			,{"Name":"RRF_RT_QWORD","Value":72}
+			,{"Name":"RRF_RT_REG_NONE","Value":1}
+			,{"Name":"RRF_RT_REG_SZ","Value":2}
+			,{"Name":"RRF_RT_REG_EXPAND_SZ","Value":4}
 			,{"Name":"RRF_RT_REG_BINARY","Value":8}
 			,{"Name":"RRF_RT_REG_DWORD","Value":16}
-			,{"Name":"RRF_RT_REG_EXPAND_SZ","Value":4}
 			,{"Name":"RRF_RT_REG_MULTI_SZ","Value":32}
-			,{"Name":"RRF_RT_REG_NONE","Value":1}
 			,{"Name":"RRF_RT_REG_QWORD","Value":64}
-			,{"Name":"RRF_RT_REG_SZ","Value":2}
+			,{"Name":"RRF_RT_ANY","Value":65535}
+			,{"Name":"RRF_SUBKEY_WOW6464KEY","Value":65536}
+			,{"Name":"RRF_SUBKEY_WOW6432KEY","Value":131072}
+			,{"Name":"RRF_WOW64_MASK","Value":196608}
+			,{"Name":"RRF_NOEXPAND","Value":268435456}
+			,{"Name":"RRF_ZEROONFAILURE","Value":536870912}
 		]
 		,"IntegerBase":"UInt32"
 	}
@@ -6564,7 +6534,7 @@
 		]
 	}
 	,{
-		"Name":"pvalueA"
+		"Name":"PVALUEA"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -6580,7 +6550,7 @@
 		]
 	}
 	,{
-		"Name":"pvalueW"
+		"Name":"PVALUEW"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -6601,6 +6571,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -6616,7 +6587,7 @@
 		]
 	}
 	,{
-		"Name":"provider_info"
+		"Name":"REG_PROVIDER"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -6691,9 +6662,10 @@
 ,"Functions":[
 	{
 		"Name":"RegCloseKey"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6705,9 +6677,10 @@
 	}
 	,{
 		"Name":"RegOverridePredefKey"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6720,9 +6693,10 @@
 	}
 	,{
 		"Name":"RegOpenUserClassesRoot"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6730,16 +6704,17 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hToken","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"dwOptions","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"dwOptions","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 			,{"Name":"samDesired","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"phkResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HKEY","TargetKind":"Default","Api":"System.Registry","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"RegOpenCurrentUser"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6752,9 +6727,10 @@
 	}
 	,{
 		"Name":"RegDisablePredefinedCache"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6765,9 +6741,10 @@
 	}
 	,{
 		"Name":"RegDisablePredefinedCacheEx"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6778,9 +6755,10 @@
 	}
 	,{
 		"Name":"RegConnectRegistryA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6794,9 +6772,10 @@
 	}
 	,{
 		"Name":"RegConnectRegistryW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6810,9 +6789,10 @@
 	}
 	,{
 		"Name":"RegConnectRegistryExA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6827,9 +6807,10 @@
 	}
 	,{
 		"Name":"RegConnectRegistryExW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6844,9 +6825,10 @@
 	}
 	,{
 		"Name":"RegCreateKeyA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6860,9 +6842,10 @@
 	}
 	,{
 		"Name":"RegCreateKeyW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6876,9 +6859,10 @@
 	}
 	,{
 		"Name":"RegCreateKeyExA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6887,7 +6871,7 @@
 		,"Params":[
 			{"Name":"hKey","Type":{"Kind":"ApiRef","Name":"HKEY","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpSubKey","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 			,{"Name":"lpClass","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"dwOptions","Type":{"Kind":"ApiRef","Name":"REG_OPEN_CREATE_OPTIONS","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
 			,{"Name":"samDesired","Type":{"Kind":"ApiRef","Name":"REG_SAM_FLAGS","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
@@ -6898,9 +6882,10 @@
 	}
 	,{
 		"Name":"RegCreateKeyExW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6909,7 +6894,7 @@
 		,"Params":[
 			{"Name":"hKey","Type":{"Kind":"ApiRef","Name":"HKEY","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpSubKey","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 			,{"Name":"lpClass","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"dwOptions","Type":{"Kind":"ApiRef","Name":"REG_OPEN_CREATE_OPTIONS","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
 			,{"Name":"samDesired","Type":{"Kind":"ApiRef","Name":"REG_SAM_FLAGS","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
@@ -6920,9 +6905,10 @@
 	}
 	,{
 		"Name":"RegCreateKeyTransactedA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6931,7 +6917,7 @@
 		,"Params":[
 			{"Name":"hKey","Type":{"Kind":"ApiRef","Name":"HKEY","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpSubKey","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 			,{"Name":"lpClass","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"dwOptions","Type":{"Kind":"ApiRef","Name":"REG_OPEN_CREATE_OPTIONS","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
 			,{"Name":"samDesired","Type":{"Kind":"ApiRef","Name":"REG_SAM_FLAGS","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
@@ -6939,14 +6925,15 @@
 			,{"Name":"phkResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HKEY","TargetKind":"Default","Api":"System.Registry","Parents":[]}},"Attrs":["Out"]}
 			,{"Name":"lpdwDisposition","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"REG_CREATE_KEY_DISPOSITION","TargetKind":"Default","Api":"System.Registry","Parents":[]}},"Attrs":["Out","Optional"]}
 			,{"Name":"hTransaction","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"pExtendedParemeter","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pExtendedParemeter","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"RegCreateKeyTransactedW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6955,7 +6942,7 @@
 		,"Params":[
 			{"Name":"hKey","Type":{"Kind":"ApiRef","Name":"HKEY","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpSubKey","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 			,{"Name":"lpClass","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"dwOptions","Type":{"Kind":"ApiRef","Name":"REG_OPEN_CREATE_OPTIONS","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
 			,{"Name":"samDesired","Type":{"Kind":"ApiRef","Name":"REG_SAM_FLAGS","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
@@ -6963,14 +6950,15 @@
 			,{"Name":"phkResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HKEY","TargetKind":"Default","Api":"System.Registry","Parents":[]}},"Attrs":["Out"]}
 			,{"Name":"lpdwDisposition","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"REG_CREATE_KEY_DISPOSITION","TargetKind":"Default","Api":"System.Registry","Parents":[]}},"Attrs":["Out","Optional"]}
 			,{"Name":"hTransaction","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"pExtendedParemeter","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pExtendedParemeter","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"RegDeleteKeyA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6983,9 +6971,10 @@
 	}
 	,{
 		"Name":"RegDeleteKeyW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6998,9 +6987,10 @@
 	}
 	,{
 		"Name":"RegDeleteKeyExA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7010,14 +7000,15 @@
 			{"Name":"hKey","Type":{"Kind":"ApiRef","Name":"HKEY","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpSubKey","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"samDesired","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"RegDeleteKeyExW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7027,14 +7018,15 @@
 			{"Name":"hKey","Type":{"Kind":"ApiRef","Name":"HKEY","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpSubKey","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"samDesired","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"RegDeleteKeyTransactedA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7044,16 +7036,17 @@
 			{"Name":"hKey","Type":{"Kind":"ApiRef","Name":"HKEY","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpSubKey","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"samDesired","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 			,{"Name":"hTransaction","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"pExtendedParameter","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pExtendedParameter","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"RegDeleteKeyTransactedW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7063,16 +7056,17 @@
 			{"Name":"hKey","Type":{"Kind":"ApiRef","Name":"HKEY","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpSubKey","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"samDesired","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 			,{"Name":"hTransaction","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"pExtendedParameter","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pExtendedParameter","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"RegDisableReflectionKey"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7084,9 +7078,10 @@
 	}
 	,{
 		"Name":"RegEnableReflectionKey"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7098,9 +7093,10 @@
 	}
 	,{
 		"Name":"RegQueryReflectionKey"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7113,9 +7109,10 @@
 	}
 	,{
 		"Name":"RegDeleteValueA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7128,9 +7125,10 @@
 	}
 	,{
 		"Name":"RegDeleteValueW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7143,9 +7141,10 @@
 	}
 	,{
 		"Name":"RegEnumKeyA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7160,9 +7159,10 @@
 	}
 	,{
 		"Name":"RegEnumKeyW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7177,9 +7177,10 @@
 	}
 	,{
 		"Name":"RegEnumKeyExA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7190,7 +7191,7 @@
 			,{"Name":"dwIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"lpName","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out","Optional"]}
 			,{"Name":"lpcchName","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
-			,{"Name":"lpReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"lpReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"lpClass","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":6,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out","Optional"]}
 			,{"Name":"lpcchClass","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out","Optional"]}
 			,{"Name":"lpftLastWriteTime","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FILETIME","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
@@ -7198,9 +7199,10 @@
 	}
 	,{
 		"Name":"RegEnumKeyExW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7211,7 +7213,7 @@
 			,{"Name":"dwIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"lpName","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["Out","Optional"]}
 			,{"Name":"lpcchName","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
-			,{"Name":"lpReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"lpReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"lpClass","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":6,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["Out","Optional"]}
 			,{"Name":"lpcchClass","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out","Optional"]}
 			,{"Name":"lpftLastWriteTime","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FILETIME","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
@@ -7219,9 +7221,10 @@
 	}
 	,{
 		"Name":"RegEnumValueA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7232,7 +7235,7 @@
 			,{"Name":"dwIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"lpValueName","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out","Optional"]}
 			,{"Name":"lpcchValueName","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
-			,{"Name":"lpReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"lpReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"lpType","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
 			,{"Name":"lpData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":7},"Optional"]}
 			,{"Name":"lpcbData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out","Optional"]}
@@ -7240,9 +7243,10 @@
 	}
 	,{
 		"Name":"RegEnumValueW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7253,7 +7257,7 @@
 			,{"Name":"dwIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"lpValueName","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["Out","Optional"]}
 			,{"Name":"lpcchValueName","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
-			,{"Name":"lpReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"lpReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"lpType","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
 			,{"Name":"lpData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":7},"Optional"]}
 			,{"Name":"lpcbData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out","Optional"]}
@@ -7261,9 +7265,10 @@
 	}
 	,{
 		"Name":"RegFlushKey"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7275,9 +7280,10 @@
 	}
 	,{
 		"Name":"RegGetKeySecurity"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7292,9 +7298,10 @@
 	}
 	,{
 		"Name":"RegLoadKeyA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7308,9 +7315,10 @@
 	}
 	,{
 		"Name":"RegLoadKeyW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7324,9 +7332,10 @@
 	}
 	,{
 		"Name":"RegNotifyChangeKeyValue"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7342,9 +7351,10 @@
 	}
 	,{
 		"Name":"RegOpenKeyA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7358,9 +7368,10 @@
 	}
 	,{
 		"Name":"RegOpenKeyW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7374,9 +7385,10 @@
 	}
 	,{
 		"Name":"RegOpenKeyExA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7392,9 +7404,10 @@
 	}
 	,{
 		"Name":"RegOpenKeyExW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7410,9 +7423,10 @@
 	}
 	,{
 		"Name":"RegOpenKeyTransactedA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7425,14 +7439,15 @@
 			,{"Name":"samDesired","Type":{"Kind":"ApiRef","Name":"REG_SAM_FLAGS","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
 			,{"Name":"phkResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HKEY","TargetKind":"Default","Api":"System.Registry","Parents":[]}},"Attrs":["Out"]}
 			,{"Name":"hTransaction","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"pExtendedParemeter","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pExtendedParemeter","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"RegOpenKeyTransactedW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7445,14 +7460,15 @@
 			,{"Name":"samDesired","Type":{"Kind":"ApiRef","Name":"REG_SAM_FLAGS","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
 			,{"Name":"phkResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HKEY","TargetKind":"Default","Api":"System.Registry","Parents":[]}},"Attrs":["Out"]}
 			,{"Name":"hTransaction","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"pExtendedParemeter","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pExtendedParemeter","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"RegQueryInfoKeyA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7462,7 +7478,7 @@
 			{"Name":"hKey","Type":{"Kind":"ApiRef","Name":"HKEY","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpClass","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out","Optional"]}
 			,{"Name":"lpcchClass","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out","Optional"]}
-			,{"Name":"lpReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"lpReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"lpcSubKeys","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
 			,{"Name":"lpcbMaxSubKeyLen","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
 			,{"Name":"lpcbMaxClassLen","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
@@ -7475,9 +7491,10 @@
 	}
 	,{
 		"Name":"RegQueryInfoKeyW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7487,7 +7504,7 @@
 			{"Name":"hKey","Type":{"Kind":"ApiRef","Name":"HKEY","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpClass","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["Out","Optional"]}
 			,{"Name":"lpcchClass","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out","Optional"]}
-			,{"Name":"lpReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"lpReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"lpcSubKeys","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
 			,{"Name":"lpcbMaxSubKeyLen","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
 			,{"Name":"lpcbMaxClassLen","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
@@ -7500,9 +7517,10 @@
 	}
 	,{
 		"Name":"RegQueryValueA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7517,9 +7535,10 @@
 	}
 	,{
 		"Name":"RegQueryValueW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7534,9 +7553,10 @@
 	}
 	,{
 		"Name":"RegQueryMultipleValuesA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7552,9 +7572,10 @@
 	}
 	,{
 		"Name":"RegQueryMultipleValuesW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7570,9 +7591,10 @@
 	}
 	,{
 		"Name":"RegQueryValueExA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7581,17 +7603,18 @@
 		,"Params":[
 			{"Name":"hKey","Type":{"Kind":"ApiRef","Name":"HKEY","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpValueName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
-			,{"Name":"lpReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"lpReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"lpType","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"REG_VALUE_TYPE","TargetKind":"Default","Api":"System.Registry","Parents":[]}},"Attrs":["Out","Optional"]}
 			,{"Name":"lpData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":5},"Optional"]}
-			,{"Name":"lpcbData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
+			,{"Name":"lpcbData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out","Optional"]}
 		]
 	}
 	,{
 		"Name":"RegQueryValueExW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7600,17 +7623,18 @@
 		,"Params":[
 			{"Name":"hKey","Type":{"Kind":"ApiRef","Name":"HKEY","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpValueName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
-			,{"Name":"lpReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"lpReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"lpType","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"REG_VALUE_TYPE","TargetKind":"Default","Api":"System.Registry","Parents":[]}},"Attrs":["Out","Optional"]}
 			,{"Name":"lpData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":5},"Optional"]}
-			,{"Name":"lpcbData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
+			,{"Name":"lpcbData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out","Optional"]}
 		]
 	}
 	,{
 		"Name":"RegReplaceKeyA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7625,9 +7649,10 @@
 	}
 	,{
 		"Name":"RegReplaceKeyW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7642,9 +7667,10 @@
 	}
 	,{
 		"Name":"RegRestoreKeyA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7658,9 +7684,10 @@
 	}
 	,{
 		"Name":"RegRestoreKeyW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7674,9 +7701,10 @@
 	}
 	,{
 		"Name":"RegRenameKey"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7690,9 +7718,10 @@
 	}
 	,{
 		"Name":"RegSaveKeyA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7706,9 +7735,10 @@
 	}
 	,{
 		"Name":"RegSaveKeyW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7722,9 +7752,10 @@
 	}
 	,{
 		"Name":"RegSetKeySecurity"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7738,9 +7769,10 @@
 	}
 	,{
 		"Name":"RegSetValueA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7756,9 +7788,10 @@
 	}
 	,{
 		"Name":"RegSetValueW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7774,9 +7807,10 @@
 	}
 	,{
 		"Name":"RegSetValueExA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7785,7 +7819,7 @@
 		,"Params":[
 			{"Name":"hKey","Type":{"Kind":"ApiRef","Name":"HKEY","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpValueName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
-			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 			,{"Name":"dwType","Type":{"Kind":"ApiRef","Name":"REG_VALUE_TYPE","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":5},"Optional","Const"]}
 			,{"Name":"cbData","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -7793,9 +7827,10 @@
 	}
 	,{
 		"Name":"RegSetValueExW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7804,7 +7839,7 @@
 		,"Params":[
 			{"Name":"hKey","Type":{"Kind":"ApiRef","Name":"HKEY","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpValueName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
-			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 			,{"Name":"dwType","Type":{"Kind":"ApiRef","Name":"REG_VALUE_TYPE","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":5},"Optional","Const"]}
 			,{"Name":"cbData","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -7812,9 +7847,10 @@
 	}
 	,{
 		"Name":"RegUnLoadKeyA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7827,9 +7863,10 @@
 	}
 	,{
 		"Name":"RegUnLoadKeyW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7842,9 +7879,10 @@
 	}
 	,{
 		"Name":"RegDeleteKeyValueA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7858,9 +7896,10 @@
 	}
 	,{
 		"Name":"RegDeleteKeyValueW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7874,9 +7913,10 @@
 	}
 	,{
 		"Name":"RegSetKeyValueA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7893,9 +7933,10 @@
 	}
 	,{
 		"Name":"RegSetKeyValueW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7912,9 +7953,10 @@
 	}
 	,{
 		"Name":"RegDeleteTreeA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7927,9 +7969,10 @@
 	}
 	,{
 		"Name":"RegDeleteTreeW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7942,9 +7985,10 @@
 	}
 	,{
 		"Name":"RegCopyTreeA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7958,9 +8002,10 @@
 	}
 	,{
 		"Name":"RegGetValueA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7970,17 +8015,18 @@
 			{"Name":"hkey","Type":{"Kind":"ApiRef","Name":"HKEY","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpSubKey","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 			,{"Name":"lpValue","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
-			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"RRF_RT","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
-			,{"Name":"pdwType","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
+			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"REG_ROUTINE_FLAGS","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
+			,{"Name":"pdwType","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"REG_VALUE_TYPE","TargetKind":"Default","Api":"System.Registry","Parents":[]}},"Attrs":["Out","Optional"]}
 			,{"Name":"pvData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":6},"NullNullTerminated","Optional"]}
 			,{"Name":"pcbData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out","Optional"]}
 		]
 	}
 	,{
 		"Name":"RegGetValueW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -7990,17 +8036,18 @@
 			{"Name":"hkey","Type":{"Kind":"ApiRef","Name":"HKEY","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpSubKey","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 			,{"Name":"lpValue","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
-			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"RRF_RT","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
-			,{"Name":"pdwType","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
+			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"REG_ROUTINE_FLAGS","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":["In"]}
+			,{"Name":"pdwType","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"REG_VALUE_TYPE","TargetKind":"Default","Api":"System.Registry","Parents":[]}},"Attrs":["Out","Optional"]}
 			,{"Name":"pvData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":6},"NullNullTerminated","Optional"]}
 			,{"Name":"pcbData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out","Optional"]}
 		]
 	}
 	,{
 		"Name":"RegCopyTreeW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8014,9 +8061,10 @@
 	}
 	,{
 		"Name":"RegLoadMUIStringA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8034,9 +8082,10 @@
 	}
 	,{
 		"Name":"RegLoadMUIStringW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8054,9 +8103,10 @@
 	}
 	,{
 		"Name":"RegLoadAppKeyA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8067,14 +8117,15 @@
 			,{"Name":"phkResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HKEY","TargetKind":"Default","Api":"System.Registry","Parents":[]}},"Attrs":["Out"]}
 			,{"Name":"samDesired","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"dwOptions","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"RegLoadAppKeyW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8085,14 +8136,15 @@
 			,{"Name":"phkResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HKEY","TargetKind":"Default","Api":"System.Registry","Parents":[]}},"Attrs":["Out"]}
 			,{"Name":"samDesired","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"dwOptions","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"RegSaveKeyExA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8107,9 +8159,10 @@
 	}
 	,{
 		"Name":"RegSaveKeyExW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ADVAPI32"
+		,"DllImport":"ADVAPI32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8124,9 +8177,10 @@
 	}
 	,{
 		"Name":"GetRegistryValueWithFallbackW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-core-state-helpers-l1-1-0"
+		,"DllImport":"api-ms-win-core-state-helpers-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8140,7 +8194,7 @@
 			,{"Name":"pwszValue","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pdwType","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
-			,{"Name":"pvData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Optional"]}
+			,{"Name":"pvData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":8},"Optional"]}
 			,{"Name":"cbDataIn","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pcbDataOut","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
 		]
@@ -8148,7 +8202,7 @@
 ]
 
 ,"UnicodeAliases":[
-	"pvalue"
+	"PVALUE"
 	,"VALENT"
 	,"RegConnectRegistry"
 	,"RegConnectRegistryEx"

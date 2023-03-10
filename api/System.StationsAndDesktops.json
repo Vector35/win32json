@@ -58,11 +58,49 @@
 		,"IntegerBase":"UInt32"
 	}
 	,{
+		"Name":"DESKTOP_CONTROL_FLAGS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"DF_ALLOWOTHERACCOUNTHOOK","Value":1}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
+		"Name":"DESKTOP_ACCESS_FLAGS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"DESKTOP_DELETE","Value":65536}
+			,{"Name":"DESKTOP_READ_CONTROL","Value":131072}
+			,{"Name":"DESKTOP_WRITE_DAC","Value":262144}
+			,{"Name":"DESKTOP_WRITE_OWNER","Value":524288}
+			,{"Name":"DESKTOP_SYNCHRONIZE","Value":1048576}
+			,{"Name":"DESKTOP_READOBJECTS","Value":1}
+			,{"Name":"DESKTOP_CREATEWINDOW","Value":2}
+			,{"Name":"DESKTOP_CREATEMENU","Value":4}
+			,{"Name":"DESKTOP_HOOKCONTROL","Value":8}
+			,{"Name":"DESKTOP_JOURNALRECORD","Value":16}
+			,{"Name":"DESKTOP_JOURNALPLAYBACK","Value":32}
+			,{"Name":"DESKTOP_ENUMERATE","Value":64}
+			,{"Name":"DESKTOP_WRITEOBJECTS","Value":128}
+			,{"Name":"DESKTOP_SWITCHDESKTOP","Value":256}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
 		"Name":"WINSTAENUMPROCA"
 		,"Architectures":[]
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -79,6 +117,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -95,6 +134,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -111,6 +151,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -175,9 +216,10 @@
 ,"Functions":[
 	{
 		"Name":"CreateDesktopA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HDESK","TargetKind":"Default","Api":"System.StationsAndDesktops","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -185,18 +227,19 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"lpszDesktop","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"lpszDevice","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Reserved","Const"]}
-			,{"Name":"pDevmode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEVMODEA","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["In","Out","Reserved"]}
-			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"lpszDevice","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Reserved","Optional","Const"]}
+			,{"Name":"pDevmode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEVMODEA","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["Reserved","Optional"]}
+			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"DESKTOP_CONTROL_FLAGS","TargetKind":"Default","Api":"System.StationsAndDesktops","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwDesiredAccess","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"lpsa","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_ATTRIBUTES","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["In","Optional"]}
 		]
 	}
 	,{
 		"Name":"CreateDesktopW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HDESK","TargetKind":"Default","Api":"System.StationsAndDesktops","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -204,18 +247,19 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"lpszDesktop","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"lpszDevice","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Reserved","Const"]}
-			,{"Name":"pDevmode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEVMODEW","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["In","Out","Reserved"]}
-			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"lpszDevice","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Reserved","Optional","Const"]}
+			,{"Name":"pDevmode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEVMODEW","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["Reserved","Optional"]}
+			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"DESKTOP_CONTROL_FLAGS","TargetKind":"Default","Api":"System.StationsAndDesktops","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwDesiredAccess","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"lpsa","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_ATTRIBUTES","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["In","Optional"]}
 		]
 	}
 	,{
 		"Name":"CreateDesktopExA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HDESK","TargetKind":"Default","Api":"System.StationsAndDesktops","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -223,20 +267,21 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"lpszDesktop","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"lpszDevice","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Reserved","Const"]}
-			,{"Name":"pDevmode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEVMODEA","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["In","Out","Reserved"]}
-			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"lpszDevice","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Reserved","Optional","Const"]}
+			,{"Name":"pDevmode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEVMODEA","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["Reserved","Optional"]}
+			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"DESKTOP_CONTROL_FLAGS","TargetKind":"Default","Api":"System.StationsAndDesktops","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwDesiredAccess","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"lpsa","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_ATTRIBUTES","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["In","Optional"]}
 			,{"Name":"ulHeapSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"pvoid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pvoid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"CreateDesktopExW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HDESK","TargetKind":"Default","Api":"System.StationsAndDesktops","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -244,20 +289,21 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"lpszDesktop","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"lpszDevice","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Reserved","Const"]}
-			,{"Name":"pDevmode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEVMODEW","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["In","Out","Reserved"]}
-			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"lpszDevice","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Reserved","Optional","Const"]}
+			,{"Name":"pDevmode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEVMODEW","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["Reserved","Optional"]}
+			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"DESKTOP_CONTROL_FLAGS","TargetKind":"Default","Api":"System.StationsAndDesktops","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwDesiredAccess","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"lpsa","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_ATTRIBUTES","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["In","Optional"]}
 			,{"Name":"ulHeapSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"pvoid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pvoid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"OpenDesktopA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HDESK","TargetKind":"Default","Api":"System.StationsAndDesktops","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -265,16 +311,17 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"lpszDesktop","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"DESKTOP_CONTROL_FLAGS","TargetKind":"Default","Api":"System.StationsAndDesktops","Parents":[]},"Attrs":["In"]}
 			,{"Name":"fInherit","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwDesiredAccess","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"OpenDesktopW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HDESK","TargetKind":"Default","Api":"System.StationsAndDesktops","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -282,32 +329,34 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"lpszDesktop","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"DESKTOP_CONTROL_FLAGS","TargetKind":"Default","Api":"System.StationsAndDesktops","Parents":[]},"Attrs":["In"]}
 			,{"Name":"fInherit","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwDesiredAccess","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"OpenInputDesktop"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HDESK","TargetKind":"Default","Api":"System.StationsAndDesktops","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"DESKTOP_CONTROL_FLAGS","TargetKind":"Default","Api":"System.StationsAndDesktops","Parents":[]},"Attrs":["In"]}
 			,{"Name":"fInherit","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"dwDesiredAccess","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"dwDesiredAccess","Type":{"Kind":"ApiRef","Name":"DESKTOP_ACCESS_FLAGS","TargetKind":"Default","Api":"System.StationsAndDesktops","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"EnumDesktopsA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -321,9 +370,10 @@
 	}
 	,{
 		"Name":"EnumDesktopsW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -337,9 +387,10 @@
 	}
 	,{
 		"Name":"EnumDesktopWindows"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -353,9 +404,10 @@
 	}
 	,{
 		"Name":"SwitchDesktop"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -367,9 +419,10 @@
 	}
 	,{
 		"Name":"SetThreadDesktop"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -381,9 +434,10 @@
 	}
 	,{
 		"Name":"CloseDesktop"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -395,9 +449,10 @@
 	}
 	,{
 		"Name":"GetThreadDesktop"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HDESK","TargetKind":"Default","Api":"System.StationsAndDesktops","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -409,9 +464,10 @@
 	}
 	,{
 		"Name":"CreateWindowStationA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HWINSTA","TargetKind":"Default","Api":"System.StationsAndDesktops","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -426,9 +482,10 @@
 	}
 	,{
 		"Name":"CreateWindowStationW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HWINSTA","TargetKind":"Default","Api":"System.StationsAndDesktops","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -443,9 +500,10 @@
 	}
 	,{
 		"Name":"OpenWindowStationA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HWINSTA","TargetKind":"Default","Api":"System.StationsAndDesktops","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -459,9 +517,10 @@
 	}
 	,{
 		"Name":"OpenWindowStationW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HWINSTA","TargetKind":"Default","Api":"System.StationsAndDesktops","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -475,9 +534,10 @@
 	}
 	,{
 		"Name":"EnumWindowStationsA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -490,9 +550,10 @@
 	}
 	,{
 		"Name":"EnumWindowStationsW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -505,9 +566,10 @@
 	}
 	,{
 		"Name":"CloseWindowStation"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -519,9 +581,10 @@
 	}
 	,{
 		"Name":"SetProcessWindowStation"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -533,9 +596,10 @@
 	}
 	,{
 		"Name":"GetProcessWindowStation"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HWINSTA","TargetKind":"Default","Api":"System.StationsAndDesktops","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -546,9 +610,10 @@
 	}
 	,{
 		"Name":"GetUserObjectInformationA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -564,9 +629,10 @@
 	}
 	,{
 		"Name":"GetUserObjectInformationW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -582,9 +648,10 @@
 	}
 	,{
 		"Name":"SetUserObjectInformationA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -599,9 +666,10 @@
 	}
 	,{
 		"Name":"SetUserObjectInformationW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -616,9 +684,10 @@
 	}
 	,{
 		"Name":"BroadcastSystemMessageExA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -635,9 +704,10 @@
 	}
 	,{
 		"Name":"BroadcastSystemMessageExW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -654,9 +724,10 @@
 	}
 	,{
 		"Name":"BroadcastSystemMessageA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -672,9 +743,10 @@
 	}
 	,{
 		"Name":"BroadcastSystemMessageW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

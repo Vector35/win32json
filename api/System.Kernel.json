@@ -530,6 +530,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"EXCEPTION_DISPOSITION","TargetKind":"Default","Api":"System.Kernel","Parents":[]}
@@ -585,66 +586,6 @@
 			,{"Name":"MaxSuiteType","Value":18}
 		]
 		,"IntegerBase":"Int32"
-	}
-	,{
-		"Name":"COMPARTMENT_ID"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Enum"
-		,"Flags":false
-		,"Scoped":false
-		,"Values":[
-			{"Name":"UNSPECIFIED_COMPARTMENT_ID","Value":0}
-			,{"Name":"DEFAULT_COMPARTMENT_ID","Value":1}
-		]
-		,"IntegerBase":"Int32"
-	}
-	,{
-		"Name":"EXCEPTION_REGISTRATION_RECORD"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"Next","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"EXCEPTION_REGISTRATION_RECORD","TargetKind":"Default","Api":"System.Kernel","Parents":[]}},"Attrs":[]}
-			,{"Name":"Handler","Type":{"Kind":"ApiRef","Name":"EXCEPTION_ROUTINE","TargetKind":"FunctionPointer","Api":"System.Kernel","Parents":[]},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"NT_TIB"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"ExceptionList","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"EXCEPTION_REGISTRATION_RECORD","TargetKind":"Default","Api":"System.Kernel","Parents":[]}},"Attrs":[]}
-			,{"Name":"StackBase","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-			,{"Name":"StackLimit","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-			,{"Name":"SubSystemTib","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"System.Kernel","Parents":[]},"Attrs":[]}
-			,{"Name":"ArbitraryUserPointer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-			,{"Name":"Self","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"NT_TIB","TargetKind":"Default","Api":"System.Kernel","Parents":[]}},"Attrs":[]}
-		]
-		,"NestedTypes":[
-			{
-				"Name":"_Anonymous_e__Union"
-				,"Architectures":[]
-				,"Platform":null
-				,"Kind":"Union"
-				,"Size":0
-				,"PackingSize":0
-				,"Fields":[
-					{"Name":"FiberData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-					,{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-				]
-				,"NestedTypes":[
-				]
-			}
-		]
 	}
 	,{
 		"Name":"SLIST_HEADER"
@@ -710,6 +651,19 @@
 		]
 	}
 	,{
+		"Name":"COMPARTMENT_ID"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"UNSPECIFIED_COMPARTMENT_ID","Value":0}
+			,{"Name":"DEFAULT_COMPARTMENT_ID","Value":1}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
 		"Name":"FLOATING_SAVE_AREA"
 		,"Architectures":["X86"]
 		,"Platform":null
@@ -728,6 +682,53 @@
 			,{"Name":"Spare0","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"EXCEPTION_REGISTRATION_RECORD"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"Next","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"EXCEPTION_REGISTRATION_RECORD","TargetKind":"Default","Api":"System.Kernel","Parents":[]}},"Attrs":[]}
+			,{"Name":"Handler","Type":{"Kind":"ApiRef","Name":"EXCEPTION_ROUTINE","TargetKind":"FunctionPointer","Api":"System.Kernel","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"NT_TIB"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"ExceptionList","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"EXCEPTION_REGISTRATION_RECORD","TargetKind":"Default","Api":"System.Kernel","Parents":[]}},"Attrs":[]}
+			,{"Name":"StackBase","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+			,{"Name":"StackLimit","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+			,{"Name":"SubSystemTib","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"System.Kernel","Parents":[]},"Attrs":[]}
+			,{"Name":"ArbitraryUserPointer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+			,{"Name":"Self","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"NT_TIB","TargetKind":"Default","Api":"System.Kernel","Parents":[]}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+			{
+				"Name":"_Anonymous_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"Fields":[
+					{"Name":"FiberData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+					,{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
 		]
 	}
 	,{
@@ -764,9 +765,10 @@
 ,"Functions":[
 	{
 		"Name":"RtlInitializeSListHead"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ntdll"
+		,"DllImport":"ntdll.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -778,9 +780,10 @@
 	}
 	,{
 		"Name":"RtlFirstEntrySList"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ntdll"
+		,"DllImport":"ntdll.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SLIST_ENTRY","TargetKind":"Default","Api":"System.Kernel","Parents":[]}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -792,9 +795,10 @@
 	}
 	,{
 		"Name":"RtlInterlockedPopEntrySList"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ntdll"
+		,"DllImport":"ntdll.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SLIST_ENTRY","TargetKind":"Default","Api":"System.Kernel","Parents":[]}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -806,9 +810,10 @@
 	}
 	,{
 		"Name":"RtlInterlockedPushEntrySList"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ntdll"
+		,"DllImport":"ntdll.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SLIST_ENTRY","TargetKind":"Default","Api":"System.Kernel","Parents":[]}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -821,9 +826,10 @@
 	}
 	,{
 		"Name":"RtlInterlockedPushListSListEx"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ntdll"
+		,"DllImport":"ntdll.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SLIST_ENTRY","TargetKind":"Default","Api":"System.Kernel","Parents":[]}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -838,9 +844,10 @@
 	}
 	,{
 		"Name":"RtlInterlockedFlushSList"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ntdll"
+		,"DllImport":"ntdll.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SLIST_ENTRY","TargetKind":"Default","Api":"System.Kernel","Parents":[]}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -852,9 +859,10 @@
 	}
 	,{
 		"Name":"RtlQueryDepthSList"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ntdll"
+		,"DllImport":"ntdll.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt16"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

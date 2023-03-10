@@ -597,25 +597,6 @@
 		,"IntegerBase":"Int32"
 	}
 	,{
-		"Name":"JOBOBJECT_IO_RATE_CONTROL_INFORMATION_NATIVE"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"MaxIops","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
-			,{"Name":"MaxBandwidth","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
-			,{"Name":"ReservationIops","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
-			,{"Name":"VolumeName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"BaseIoSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"ControlFlags","Type":{"Kind":"ApiRef","Name":"JOB_OBJECT_IO_RATE_CONTROL_FLAGS","TargetKind":"Default","Api":"System.JobObjects","Parents":[]},"Attrs":[]}
-			,{"Name":"VolumeNameLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
 		"Name":"JOBOBJECT_IO_RATE_CONTROL_INFORMATION_NATIVE_V2"
 		,"Architectures":[]
 		,"Platform":null
@@ -780,9 +761,10 @@
 ,"Functions":[
 	{
 		"Name":"IsProcessInJob"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -796,9 +778,10 @@
 	}
 	,{
 		"Name":"CreateJobObjectW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -811,9 +794,10 @@
 	}
 	,{
 		"Name":"FreeMemoryJobObject"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -825,9 +809,10 @@
 	}
 	,{
 		"Name":"OpenJobObjectW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -841,9 +826,10 @@
 	}
 	,{
 		"Name":"AssignProcessToJobObject"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -856,9 +842,10 @@
 	}
 	,{
 		"Name":"TerminateJobObject"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -871,9 +858,10 @@
 	}
 	,{
 		"Name":"SetInformationJobObject"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -888,9 +876,10 @@
 	}
 	,{
 		"Name":"SetIoRateControlInformationJobObject"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -903,9 +892,10 @@
 	}
 	,{
 		"Name":"QueryInformationJobObject"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -921,9 +911,10 @@
 	}
 	,{
 		"Name":"QueryIoRateControlInformationJobObject"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -938,9 +929,10 @@
 	}
 	,{
 		"Name":"UserHandleGrantAccess"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"USER32"
+		,"DllImport":"USER32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -954,9 +946,10 @@
 	}
 	,{
 		"Name":"CreateJobObjectA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -969,9 +962,10 @@
 	}
 	,{
 		"Name":"OpenJobObjectA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -985,9 +979,10 @@
 	}
 	,{
 		"Name":"CreateJobSet"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

@@ -387,7 +387,22 @@
 				]
 				,"NestedTypes":[
 					{
-						"Name":"_Semaphore_e__Struct"
+						"Name":"_Section_e__Struct"
+						,"Architectures":[]
+						,"Platform":null
+						,"Kind":"Struct"
+						,"Size":0
+						,"PackingSize":0
+						,"Fields":[
+							{"Name":"BaseAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+							,{"Name":"AllocationAttributes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+							,{"Name":"MaximumSize","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+						]
+						,"NestedTypes":[
+						]
+					}
+					,{
+						"Name":"_Mutant_e__Struct"
 						,"Architectures":[]
 						,"Platform":null
 						,"Kind":"Struct"
@@ -395,7 +410,28 @@
 						,"PackingSize":0
 						,"Fields":[
 							{"Name":"CurrentCount","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-							,{"Name":"MaximumCount","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+							,{"Name":"Abandoned","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+							,{"Name":"OwnerProcessId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+							,{"Name":"OwnerThreadId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+						]
+						,"NestedTypes":[
+						]
+					}
+					,{
+						"Name":"_Process_e__Struct"
+						,"Architectures":[]
+						,"Platform":null
+						,"Kind":"Struct"
+						,"Size":0
+						,"PackingSize":0
+						,"Fields":[
+							{"Name":"ExitStatus","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+							,{"Name":"PebBaseAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+							,{"Name":"AffinityMask","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
+							,{"Name":"BasePriority","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+							,{"Name":"ProcessId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+							,{"Name":"ParentProcessId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+							,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]
@@ -435,41 +471,7 @@
 						]
 					}
 					,{
-						"Name":"_Section_e__Struct"
-						,"Architectures":[]
-						,"Platform":null
-						,"Kind":"Struct"
-						,"Size":0
-						,"PackingSize":0
-						,"Fields":[
-							{"Name":"BaseAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-							,{"Name":"AllocationAttributes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-							,{"Name":"MaximumSize","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-						]
-						,"NestedTypes":[
-						]
-					}
-					,{
-						"Name":"_Process_e__Struct"
-						,"Architectures":[]
-						,"Platform":null
-						,"Kind":"Struct"
-						,"Size":0
-						,"PackingSize":0
-						,"Fields":[
-							{"Name":"ExitStatus","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-							,{"Name":"PebBaseAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-							,{"Name":"AffinityMask","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
-							,{"Name":"BasePriority","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-							,{"Name":"ProcessId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-							,{"Name":"ParentProcessId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-							,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-						]
-						,"NestedTypes":[
-						]
-					}
-					,{
-						"Name":"_Mutant_e__Struct"
+						"Name":"_Semaphore_e__Struct"
 						,"Architectures":[]
 						,"Platform":null
 						,"Kind":"Struct"
@@ -477,9 +479,7 @@
 						,"PackingSize":0
 						,"Fields":[
 							{"Name":"CurrentCount","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-							,{"Name":"Abandoned","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-							,{"Name":"OwnerProcessId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-							,{"Name":"OwnerThreadId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+							,{"Name":"MaximumCount","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]
@@ -552,9 +552,10 @@
 ,"Functions":[
 	{
 		"Name":"PssCaptureSnapshot"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -569,9 +570,10 @@
 	}
 	,{
 		"Name":"PssFreeSnapshot"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -584,9 +586,10 @@
 	}
 	,{
 		"Name":"PssQuerySnapshot"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -601,9 +604,10 @@
 	}
 	,{
 		"Name":"PssWalkSnapshot"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -619,9 +623,10 @@
 	}
 	,{
 		"Name":"PssDuplicateSnapshot"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -637,9 +642,10 @@
 	}
 	,{
 		"Name":"PssWalkMarkerCreate"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -652,9 +658,10 @@
 	}
 	,{
 		"Name":"PssWalkMarkerFree"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -666,9 +673,10 @@
 	}
 	,{
 		"Name":"PssWalkMarkerGetPosition"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -681,9 +689,10 @@
 	}
 	,{
 		"Name":"PssWalkMarkerSetPosition"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -696,9 +705,10 @@
 	}
 	,{
 		"Name":"PssWalkMarkerSeekToBeginning"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"KERNEL32"
+		,"DllImport":"KERNEL32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

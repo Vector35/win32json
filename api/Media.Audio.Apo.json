@@ -403,6 +403,7 @@
 		,"Methods":[
 			{
 				"Name":"IsCompressedFormat"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -416,6 +417,7 @@
 			}
 			,{
 				"Name":"IsEqual"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -430,6 +432,7 @@
 			}
 			,{
 				"Name":"GetAudioFormat"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WAVEFORMATEX","TargetKind":"Default","Api":"Media.Audio","Parents":[]}}
@@ -442,6 +445,7 @@
 			}
 			,{
 				"Name":"GetUncompressedAudioFormat"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -626,6 +630,7 @@
 		,"Methods":[
 			{
 				"Name":"APOProcess"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -642,6 +647,7 @@
 			}
 			,{
 				"Name":"CalcInputFrames"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -655,6 +661,7 @@
 			}
 			,{
 				"Name":"CalcOutputFrames"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"Native","Name":"UInt32"}
@@ -678,6 +685,7 @@
 		,"Methods":[
 			{
 				"Name":"CalcMaxInputFrames"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -692,6 +700,7 @@
 			}
 			,{
 				"Name":"CalcMaxOutputFrames"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -716,6 +725,7 @@
 		,"Methods":[
 			{
 				"Name":"LockForProcess"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -725,13 +735,14 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"u32NumInputConnections","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"ppInputConnections","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"APO_CONNECTION_DESCRIPTOR","TargetKind":"Default","Api":"Media.Audio.Apo","Parents":[]}}},"Attrs":["In"]}
+					,{"Name":"ppInputConnections","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"APO_CONNECTION_DESCRIPTOR","TargetKind":"Default","Api":"Media.Audio.Apo","Parents":[]}}},"Attrs":["In"]}
 					,{"Name":"u32NumOutputConnections","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"ppOutputConnections","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"APO_CONNECTION_DESCRIPTOR","TargetKind":"Default","Api":"Media.Audio.Apo","Parents":[]}}},"Attrs":["In"]}
+					,{"Name":"ppOutputConnections","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"APO_CONNECTION_DESCRIPTOR","TargetKind":"Default","Api":"Media.Audio.Apo","Parents":[]}}},"Attrs":["In"]}
 				]
 			}
 			,{
 				"Name":"UnlockForProcess"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -754,6 +765,7 @@
 		,"Methods":[
 			{
 				"Name":"Reset"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -766,6 +778,7 @@
 			}
 			,{
 				"Name":"GetLatency"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -779,6 +792,7 @@
 			}
 			,{
 				"Name":"GetRegistrationProperties"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -792,6 +806,7 @@
 			}
 			,{
 				"Name":"Initialize"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -806,6 +821,7 @@
 			}
 			,{
 				"Name":"IsInputFormatSupported"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -821,6 +837,7 @@
 			}
 			,{
 				"Name":"IsOutputFormatSupported"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -836,6 +853,7 @@
 			}
 			,{
 				"Name":"GetInputChannelCount"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -859,6 +877,7 @@
 		,"Methods":[
 			{
 				"Name":"SetAudioDeviceModulesManager"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -878,6 +897,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -908,6 +928,7 @@
 		,"Methods":[
 			{
 				"Name":"GetEffectsList"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -916,7 +937,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppEffectsIds","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}}},"Attrs":["Out","Optional"]}
+					{"Name":"ppEffectsIds","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}}},"Attrs":["Out"]}
 					,{"Name":"pcEffects","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 					,{"Name":"Event","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
@@ -933,6 +954,7 @@
 		,"Methods":[
 			{
 				"Name":"GetFormatCount"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -946,6 +968,7 @@
 			}
 			,{
 				"Name":"GetFormat"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -960,6 +983,7 @@
 			}
 			,{
 				"Name":"GetFormatRepresentation"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -984,6 +1008,7 @@
 		,"Methods":[
 			{
 				"Name":"AddAuxiliaryInput"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1000,6 +1025,7 @@
 			}
 			,{
 				"Name":"RemoveAuxiliaryInput"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1013,6 +1039,7 @@
 			}
 			,{
 				"Name":"IsInputFormatSupported"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1037,6 +1064,7 @@
 		,"Methods":[
 			{
 				"Name":"AcceptInput"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -1152,6 +1180,7 @@
 		,"Methods":[
 			{
 				"Name":"GetControllableSystemEffectsList"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1160,13 +1189,14 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"effects","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"AUDIO_SYSTEMEFFECT","TargetKind":"Default","Api":"Media.Audio.Apo","Parents":[]}}},"Attrs":["Out","Optional"]}
+					{"Name":"effects","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"AUDIO_SYSTEMEFFECT","TargetKind":"Default","Api":"Media.Audio.Apo","Parents":[]}}},"Attrs":["Out"]}
 					,{"Name":"numEffects","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 					,{"Name":"event","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 				]
 			}
 			,{
 				"Name":"SetAudioSystemEffectState"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1211,6 +1241,7 @@
 		,"Methods":[
 			{
 				"Name":"GetRealTimeWorkQueue"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1251,6 +1282,7 @@
 		,"Methods":[
 			{
 				"Name":"ApoLog"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -1319,7 +1351,7 @@
 		,"Fields":[
 			{"Name":"endpoint","Type":{"Kind":"ApiRef","Name":"IMMDevice","TargetKind":"Com","Api":"Media.Audio","Parents":[]},"Attrs":[]}
 			,{"Name":"propertyStoreContext","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
-			,{"Name":"propertyStoreType","Type":{"Kind":"ApiRef","Name":"__MIDL___MIDL_itf_mmdeviceapi_0000_0008_0002","TargetKind":"Default","Api":"Media.Audio","Parents":[]},"Attrs":[]}
+			,{"Name":"propertyStoreType","Type":{"Kind":"ApiRef","Name":"AUDIO_SYSTEMEFFECTS_PROPERTYSTORE_TYPE","TargetKind":"Default","Api":"Media.Audio","Parents":[]},"Attrs":[]}
 			,{"Name":"propertyStore","Type":{"Kind":"ApiRef","Name":"IPropertyStore","TargetKind":"Com","Api":"UI.Shell.PropertiesSystem","Parents":[]},"Attrs":[]}
 			,{"Name":"propertyKey","Type":{"Kind":"ApiRef","Name":"PROPERTYKEY","TargetKind":"Default","Api":"UI.Shell.PropertiesSystem","Parents":[]},"Attrs":[]}
 		]
@@ -1434,6 +1466,7 @@
 		,"Methods":[
 			{
 				"Name":"GetApoNotificationRegistrationInfo"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -1448,6 +1481,7 @@
 			}
 			,{
 				"Name":"HandleNotification"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"Native","Name":"Void"}

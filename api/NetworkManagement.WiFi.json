@@ -5573,6 +5573,62 @@
 		,"Value":{"Fmtid":"ef1167eb-cbfc-4341-a568-a7c91a68982c","Pid":2}
 		,"Attrs":[]
 	}
+	,{
+		"Name":"DOT11EXT_PSK_MAX_LENGTH"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":64
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WDIAG_IHV_WLAN_ID_FLAG_SECURITY_ENABLED"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"IHV_VERSION_FUNCTION_NAME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Dot11ExtIhvGetVersionInfo"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"IHV_INIT_FUNCTION_NAME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Dot11ExtIhvInitService"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"IHV_INIT_VS_FUNCTION_NAME"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"Dot11ExtIhvInitVirtualStation"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"MS_MAX_PROFILE_NAME_LENGTH"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":256
+		,"Attrs":[]
+	}
+	,{
+		"Name":"MS_PROFILE_GROUP_POLICY"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"MS_PROFILE_USER"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2
+		,"Attrs":[]
+	}
 ]
 
 ,"Types":[
@@ -6707,7 +6763,7 @@
 		]
 	}
 	,{
-		"Name":"_DOT11_WME_AC_PARAMTERS_LIST"
+		"Name":"DOT11_WME_AC_PARAMETERS_LIST"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -10430,6 +10486,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -10909,6 +10966,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -11222,6 +11280,7 @@
 		,"Methods":[
 			{
 				"Name":"CreateNetwork"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11241,6 +11300,7 @@
 			}
 			,{
 				"Name":"CommitCreatedNetwork"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11256,6 +11316,7 @@
 			}
 			,{
 				"Name":"GetIEnumDot11AdHocNetworks"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11270,6 +11331,7 @@
 			}
 			,{
 				"Name":"GetIEnumDot11AdHocInterfaces"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11283,6 +11345,7 @@
 			}
 			,{
 				"Name":"GetNetwork"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11307,6 +11370,7 @@
 		,"Methods":[
 			{
 				"Name":"OnNetworkAdd"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11320,6 +11384,7 @@
 			}
 			,{
 				"Name":"OnNetworkRemove"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11333,6 +11398,7 @@
 			}
 			,{
 				"Name":"OnInterfaceAdd"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11346,6 +11412,7 @@
 			}
 			,{
 				"Name":"OnInterfaceRemove"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11369,6 +11436,7 @@
 		,"Methods":[
 			{
 				"Name":"Next"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11384,6 +11452,7 @@
 			}
 			,{
 				"Name":"Skip"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11397,6 +11466,7 @@
 			}
 			,{
 				"Name":"Reset"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11409,6 +11479,7 @@
 			}
 			,{
 				"Name":"Clone"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11432,6 +11503,7 @@
 		,"Methods":[
 			{
 				"Name":"GetStatus"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11445,6 +11517,7 @@
 			}
 			,{
 				"Name":"GetSSID"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11458,6 +11531,7 @@
 			}
 			,{
 				"Name":"HasProfile"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11471,6 +11545,7 @@
 			}
 			,{
 				"Name":"GetProfileName"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11484,6 +11559,7 @@
 			}
 			,{
 				"Name":"DeleteProfile"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11496,6 +11572,7 @@
 			}
 			,{
 				"Name":"GetSignalQuality"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11510,6 +11587,7 @@
 			}
 			,{
 				"Name":"GetSecuritySetting"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11523,6 +11601,7 @@
 			}
 			,{
 				"Name":"GetContextGuid"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11536,6 +11615,7 @@
 			}
 			,{
 				"Name":"GetSignature"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11549,6 +11629,7 @@
 			}
 			,{
 				"Name":"GetInterface"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11562,6 +11643,7 @@
 			}
 			,{
 				"Name":"Connect"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11578,6 +11660,7 @@
 			}
 			,{
 				"Name":"Disconnect"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11600,6 +11683,7 @@
 		,"Methods":[
 			{
 				"Name":"OnStatusChange"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11613,6 +11697,7 @@
 			}
 			,{
 				"Name":"OnConnectFail"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11636,6 +11721,7 @@
 		,"Methods":[
 			{
 				"Name":"GetDeviceSignature"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11649,6 +11735,7 @@
 			}
 			,{
 				"Name":"GetFriendlyName"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11662,6 +11749,7 @@
 			}
 			,{
 				"Name":"IsDot11d"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11675,6 +11763,7 @@
 			}
 			,{
 				"Name":"IsAdHocCapable"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11688,6 +11777,7 @@
 			}
 			,{
 				"Name":"IsRadioOn"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11701,6 +11791,7 @@
 			}
 			,{
 				"Name":"GetActiveNetwork"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11714,6 +11805,7 @@
 			}
 			,{
 				"Name":"GetIEnumSecuritySettings"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11727,6 +11819,7 @@
 			}
 			,{
 				"Name":"GetIEnumDot11AdHocNetworks"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11741,6 +11834,7 @@
 			}
 			,{
 				"Name":"GetStatus"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11764,6 +11858,7 @@
 		,"Methods":[
 			{
 				"Name":"Next"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11779,6 +11874,7 @@
 			}
 			,{
 				"Name":"Skip"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11792,6 +11888,7 @@
 			}
 			,{
 				"Name":"Reset"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11804,6 +11901,7 @@
 			}
 			,{
 				"Name":"Clone"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11827,6 +11925,7 @@
 		,"Methods":[
 			{
 				"Name":"Next"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11842,6 +11941,7 @@
 			}
 			,{
 				"Name":"Skip"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11855,6 +11955,7 @@
 			}
 			,{
 				"Name":"Reset"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11867,6 +11968,7 @@
 			}
 			,{
 				"Name":"Clone"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11890,6 +11992,7 @@
 		,"Methods":[
 			{
 				"Name":"GetDot11AuthAlgorithm"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11903,6 +12006,7 @@
 			}
 			,{
 				"Name":"GetDot11CipherAlgorithm"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11926,6 +12030,7 @@
 		,"Methods":[
 			{
 				"Name":"OnConnectionStatusChange"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -11939,14 +12044,1287 @@
 			}
 		]
 	}
+	,{
+		"Name":"DOT11_ADAPTER"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"gAdapterId","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
+			,{"Name":"pszDescription","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11CurrentOpMode","Type":{"Kind":"ApiRef","Name":"DOT11_CURRENT_OPERATION_MODE","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DOT11_BSS_LIST"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"uNumOfBytes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"pucBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DOT11_PORT_STATE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"PeerMacAddress","Type":{"Kind":"Array","Shape":{"Size":6},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"uSessionId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"bPortControlled","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"bPortAuthorized","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DOT11_SECURITY_PACKET_HEADER"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"Fields":[
+			{"Name":"PeerMac","Type":{"Kind":"Array","Shape":{"Size":6},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"usEtherType","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"Data","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DOT11_MSSECURITY_SETTINGS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"dot11AuthAlgorithm","Type":{"Kind":"ApiRef","Name":"DOT11_AUTH_ALGORITHM","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"dot11CipherAlgorithm","Type":{"Kind":"ApiRef","Name":"DOT11_CIPHER_ALGORITHM","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"fOneXEnabled","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"eapMethodType","Type":{"Kind":"ApiRef","Name":"EAP_METHOD_TYPE","TargetKind":"Default","Api":"Security.ExtensibleAuthenticationProtocol","Parents":[]},"Attrs":[]}
+			,{"Name":"dwEapConnectionDataLen","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"pEapConnectionData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DOT11EXT_IHV_SSID_LIST"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"ulCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"SSIDs","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"DOT11_SSID","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DOT11EXT_IHV_PROFILE_PARAMS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"pSsidList","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11EXT_IHV_SSID_LIST","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":[]}
+			,{"Name":"BssType","Type":{"Kind":"ApiRef","Name":"DOT11_BSS_TYPE","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"pMSSecuritySettings","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11_MSSECURITY_SETTINGS","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DOT11EXT_IHV_PARAMS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"dot11ExtIhvProfileParams","Type":{"Kind":"ApiRef","Name":"DOT11EXT_IHV_PROFILE_PARAMS","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"wstrProfileName","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+			,{"Name":"dwProfileTypeFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"interfaceGuid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DOT11_IHV_VERSION_INFO"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"dwVerMin","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dwVerMax","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DOT11EXT_IHV_CONNECTION_PHASE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"connection_phase_any","Value":0}
+			,{"Name":"connection_phase_initial_connection","Value":1}
+			,{"Name":"connection_phase_post_l3_connection","Value":2}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"DOT11EXT_IHV_UI_REQUEST"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"dwSessionId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"guidUIRequest","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
+			,{"Name":"UIPageClsid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
+			,{"Name":"dwByteCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"pvUIRequest","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DOT11_MSONEX_RESULT"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"DOT11_MSONEX_SUCCESS","Value":0}
+			,{"Name":"DOT11_MSONEX_FAILURE","Value":1}
+			,{"Name":"DOT11_MSONEX_IN_PROGRESS","Value":2}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"DOT11_EAP_RESULT"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"dwFailureReasonCode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"pAttribArray","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"EAP_ATTRIBUTES","TargetKind":"Default","Api":"Security.ExtensibleAuthenticationProtocol","Parents":[]}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DOT11_MSONEX_RESULT_PARAMS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"Dot11OnexAuthStatus","Type":{"Kind":"ApiRef","Name":"ONEX_AUTH_STATUS","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11OneXReasonCode","Type":{"Kind":"ApiRef","Name":"ONEX_REASON_CODE","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"pbMPPESendKey","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"dwMPPESendKeyLen","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"pbMPPERecvKey","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"dwMPPERecvKeyLen","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"pDot11EapResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11_EAP_RESULT","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DOT11EXT_IHV_CONNECTIVITY_PROFILE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"pszXmlFragmentIhvConnectivity","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DOT11EXT_IHV_SECURITY_PROFILE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"pszXmlFragmentIhvSecurity","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"bUseMSOnex","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DOT11EXT_IHV_DISCOVERY_PROFILE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"IhvConnectivityProfile","Type":{"Kind":"ApiRef","Name":"DOT11EXT_IHV_CONNECTIVITY_PROFILE","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"IhvSecurityProfile","Type":{"Kind":"ApiRef","Name":"DOT11EXT_IHV_SECURITY_PROFILE","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DOT11EXT_IHV_DISCOVERY_PROFILE_LIST"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"dwCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"pIhvDiscoveryProfiles","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11EXT_IHV_DISCOVERY_PROFILE","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DOT11EXT_IHV_INDICATION_TYPE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"IndicationTypeNicSpecificNotification","Value":0}
+			,{"Name":"IndicationTypePmkidCandidateList","Value":1}
+			,{"Name":"IndicationTypeTkipMicFailure","Value":2}
+			,{"Name":"IndicationTypePhyStateChange","Value":3}
+			,{"Name":"IndicationTypeLinkQuality","Value":4}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"DOT11EXT_VIRTUAL_STATION_AP_PROPERTY"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"dot11SSID","Type":{"Kind":"ApiRef","Name":"DOT11_SSID","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"dot11AuthAlgo","Type":{"Kind":"ApiRef","Name":"DOT11_AUTH_ALGORITHM","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"dot11CipherAlgo","Type":{"Kind":"ApiRef","Name":"DOT11_CIPHER_ALGORITHM","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"bIsPassPhrase","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"dwKeyLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ucKeyData","Type":{"Kind":"Array","Shape":{"Size":64},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"WDIAG_IHV_WLAN_ID"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"strProfileName","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+			,{"Name":"Ssid","Type":{"Kind":"ApiRef","Name":"DOT11_SSID","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"BssType","Type":{"Kind":"ApiRef","Name":"DOT11_BSS_TYPE","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dwReasonCode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DOT11EXT_ALLOCATE_BUFFER"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"dwByteCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"ppvBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXT_FREE_BUFFER"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"Void"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"pvMemory","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXT_SET_PROFILE_CUSTOM_USER_DATA"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hDot11SvcHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"hConnectSession","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"dwSessionID","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"dwDataSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"pvData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":3}]}
+		]
+	}
+	,{
+		"Name":"DOT11EXT_GET_PROFILE_CUSTOM_USER_DATA"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hDot11SvcHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"hConnectSession","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"dwSessionID","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"pdwDataSize","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+			,{"Name":"ppvData","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXT_SET_CURRENT_PROFILE"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hDot11SvcHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"hConnectSession","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"pIhvConnProfile","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11EXT_IHV_CONNECTIVITY_PROFILE","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"pIhvSecProfile","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11EXT_IHV_SECURITY_PROFILE","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In","Optional"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXT_SEND_UI_REQUEST"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hDot11SvcHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"pIhvUIRequest","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11EXT_IHV_UI_REQUEST","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXT_PRE_ASSOCIATE_COMPLETION"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hDot11SvcHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"hConnectSession","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"dwReasonCode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"dwWin32Error","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXT_POST_ASSOCIATE_COMPLETION"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hDot11SvcHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"hSecuritySessionID","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"pPeer","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["In","Optional"]}
+			,{"Name":"dwReasonCode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"dwWin32Error","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXT_SEND_NOTIFICATION"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hDot11SvcHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"pNotificationData","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"L2_NOTIFICATION_DATA","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXT_SEND_PACKET"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hDot11SvcHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"uPacketLen","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"pvPacket","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":1}]}
+			,{"Name":"hSendCompletion","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXT_SET_ETHERTYPE_HANDLING"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hDot11SvcHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"uMaxBackLog","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"uNumOfExemption","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"pExemption","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"DOT11_PRIVACY_EXEMPTION","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"uNumOfRegistration","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"pusRegistration","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":4,"Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":["In","Optional"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXT_SET_AUTH_ALGORITHM"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hDot11SvcHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"dwAuthAlgo","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXT_SET_UNICAST_CIPHER_ALGORITHM"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hDot11SvcHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"dwUnicastCipherAlgo","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXT_SET_MULTICAST_CIPHER_ALGORITHM"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hDot11SvcHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"dwMulticastCipherAlgo","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXT_SET_DEFAULT_KEY"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hDot11SvcHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"pKey","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11_CIPHER_DEFAULT_KEY_VALUE","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"dot11Direction","Type":{"Kind":"ApiRef","Name":"DOT11_DIRECTION","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXT_SET_KEY_MAPPING_KEY"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hDot11SvcHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"pKey","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11_CIPHER_KEY_MAPPING_KEY_VALUE","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXT_SET_DEFAULT_KEY_ID"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hDot11SvcHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"uDefaultKeyId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXT_SET_EXCLUDE_UNENCRYPTED"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hDot11SvcHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"bExcludeUnencrypted","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXT_NIC_SPECIFIC_EXTENSION"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hDot11SvcHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"dwInBufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"pvInBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":1}]}
+			,{"Name":"pdwOutBufferSize","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
+			,{"Name":"pvOutBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":3},"Optional"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXT_ONEX_START"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hDot11SvcHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"pEapAttributes","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"EAP_ATTRIBUTES","TargetKind":"Default","Api":"Security.ExtensibleAuthenticationProtocol","Parents":[]}},"Attrs":["In","Optional"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXT_ONEX_STOP"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hDot11SvcHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXT_PROCESS_ONEX_PACKET"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hDot11SvcHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"dwInPacketSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"pvInPacket","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":1}]}
+		]
+	}
+	,{
+		"Name":"DOT11EXT_REQUEST_VIRTUAL_STATION"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hDot11PrimaryHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXT_RELEASE_VIRTUAL_STATION"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hDot11PrimaryHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXT_QUERY_VIRTUAL_STATION_PROPERTIES"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hDot11SvcHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"pbIsVirtualStation","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"pgPrimary","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["Out"]}
+			,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXT_SET_VIRTUAL_STATION_AP_PROPERTIES"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hDot11SvcHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"hConnectSession","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"dwNumProperties","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"pProperties","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"DOT11EXT_VIRTUAL_STATION_AP_PROPERTY","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXTIHV_GET_VERSION_INFO"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"pDot11IHVVersionInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11_IHV_VERSION_INFO","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXTIHV_INIT_SERVICE"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"dwVerNumUsed","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"pDot11ExtAPI","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11EXT_APIS","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
+			,{"Name":"pDot11IHVHandlers","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11EXT_IHV_HANDLERS","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXTIHV_INIT_VIRTUAL_STATION"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"pDot11ExtVSAPI","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11EXT_VIRTUAL_STATION_APIS","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXTIHV_DEINIT_SERVICE"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"Void"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+		]
+	}
+	,{
+		"Name":"DOT11EXTIHV_INIT_ADAPTER"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"pDot11Adapter","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11_ADAPTER","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"hDot11SvcHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"phIhvExtAdapter","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXTIHV_DEINIT_ADAPTER"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"Void"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hIhvExtAdapter","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXTIHV_PERFORM_PRE_ASSOCIATE"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hIhvExtAdapter","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"hConnectSession","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"pIhvProfileParams","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11EXT_IHV_PROFILE_PARAMS","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"pIhvConnProfile","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11EXT_IHV_CONNECTIVITY_PROFILE","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pIhvSecProfile","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11EXT_IHV_SECURITY_PROFILE","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pConnectableBssid","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11_BSS_LIST","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pdwReasonCode","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXTIHV_ADAPTER_RESET"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hIhvExtAdapter","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXTIHV_PERFORM_POST_ASSOCIATE"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hIhvExtAdapter","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"hSecuritySessionID","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"pPortState","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11_PORT_STATE","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"uDot11AssocParamsBytes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"pDot11AssocParams","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11_ASSOCIATION_COMPLETION_PARAMETERS","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":3}]}
+		]
+	}
+	,{
+		"Name":"DOT11EXTIHV_STOP_POST_ASSOCIATE"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hIhvExtAdapter","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"pPeer","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["In"]}
+			,{"Name":"dot11AssocStatus","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXTIHV_VALIDATE_PROFILE"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hIhvExtAdapter","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"pIhvProfileParams","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11EXT_IHV_PROFILE_PARAMS","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"pIhvConnProfile","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11EXT_IHV_CONNECTIVITY_PROFILE","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pIhvSecProfile","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11EXT_IHV_SECURITY_PROFILE","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pdwReasonCode","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXTIHV_PERFORM_CAPABILITY_MATCH"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hIhvExtAdapter","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"pIhvProfileParams","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11EXT_IHV_PROFILE_PARAMS","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"pIhvConnProfile","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11EXT_IHV_CONNECTIVITY_PROFILE","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pIhvSecProfile","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11EXT_IHV_SECURITY_PROFILE","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pConnectableBssid","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11_BSS_LIST","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"pdwReasonCode","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXTIHV_CREATE_DISCOVERY_PROFILES"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hIhvExtAdapter","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"bInsecure","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"pIhvProfileParams","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11EXT_IHV_PROFILE_PARAMS","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"pConnectableBssid","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11_BSS_LIST","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"pIhvDiscoveryProfileList","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11EXT_IHV_DISCOVERY_PROFILE_LIST","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"pdwReasonCode","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXTIHV_PROCESS_SESSION_CHANGE"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"uEventType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"pSessionNotification","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WTSSESSION_NOTIFICATION","TargetKind":"Default","Api":"System.RemoteDesktop","Parents":[]}},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXTIHV_RECEIVE_INDICATION"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hIhvExtAdapter","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"indicationType","Type":{"Kind":"ApiRef","Name":"DOT11EXT_IHV_INDICATION_TYPE","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":["In"]}
+			,{"Name":"uBufferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"pvBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":2},"Optional"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXTIHV_RECEIVE_PACKET"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hIhvExtAdapter","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"dwInBufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"pvInBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":1}]}
+		]
+	}
+	,{
+		"Name":"DOT11EXTIHV_SEND_PACKET_COMPLETION"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hSendCompletion","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXTIHV_IS_UI_REQUEST_PENDING"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"guidUIRequest","Type":{"Kind":"Native","Name":"Guid"},"Attrs":["In"]}
+			,{"Name":"pbIsRequestPending","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXTIHV_PROCESS_UI_RESPONSE"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"guidUIRequest","Type":{"Kind":"Native","Name":"Guid"},"Attrs":["In"]}
+			,{"Name":"dwByteCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"pvResponseBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":1},"Optional"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXTIHV_QUERY_UI_REQUEST"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hIhvExtAdapter","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"connectionPhase","Type":{"Kind":"ApiRef","Name":"DOT11EXT_IHV_CONNECTION_PHASE","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":["In"]}
+			,{"Name":"ppIhvUIRequest","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11EXT_IHV_UI_REQUEST","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXTIHV_ONEX_INDICATE_RESULT"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hIhvExtAdapter","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"msOneXResult","Type":{"Kind":"ApiRef","Name":"DOT11_MSONEX_RESULT","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":["In"]}
+			,{"Name":"pDot11MsOneXResultParams","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11_MSONEX_RESULT_PARAMS","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In","Optional"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXTIHV_CONTROL"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hIhvExtAdapter","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"dwInBufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"pInBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":1},"Optional"]}
+			,{"Name":"dwOutBufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"pOutBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":3},"Optional"]}
+			,{"Name":"pdwBytesReturned","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"DOT11EXT_APIS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"Dot11ExtAllocateBuffer","Type":{"Kind":"ApiRef","Name":"DOT11EXT_ALLOCATE_BUFFER","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtFreeBuffer","Type":{"Kind":"ApiRef","Name":"DOT11EXT_FREE_BUFFER","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtSetProfileCustomUserData","Type":{"Kind":"ApiRef","Name":"DOT11EXT_SET_PROFILE_CUSTOM_USER_DATA","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtGetProfileCustomUserData","Type":{"Kind":"ApiRef","Name":"DOT11EXT_GET_PROFILE_CUSTOM_USER_DATA","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtSetCurrentProfile","Type":{"Kind":"ApiRef","Name":"DOT11EXT_SET_CURRENT_PROFILE","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtSendUIRequest","Type":{"Kind":"ApiRef","Name":"DOT11EXT_SEND_UI_REQUEST","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtPreAssociateCompletion","Type":{"Kind":"ApiRef","Name":"DOT11EXT_PRE_ASSOCIATE_COMPLETION","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtPostAssociateCompletion","Type":{"Kind":"ApiRef","Name":"DOT11EXT_POST_ASSOCIATE_COMPLETION","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtSendNotification","Type":{"Kind":"ApiRef","Name":"DOT11EXT_SEND_NOTIFICATION","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtSendPacket","Type":{"Kind":"ApiRef","Name":"DOT11EXT_SEND_PACKET","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtSetEtherTypeHandling","Type":{"Kind":"ApiRef","Name":"DOT11EXT_SET_ETHERTYPE_HANDLING","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtSetAuthAlgorithm","Type":{"Kind":"ApiRef","Name":"DOT11EXT_SET_AUTH_ALGORITHM","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtSetUnicastCipherAlgorithm","Type":{"Kind":"ApiRef","Name":"DOT11EXT_SET_UNICAST_CIPHER_ALGORITHM","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtSetMulticastCipherAlgorithm","Type":{"Kind":"ApiRef","Name":"DOT11EXT_SET_MULTICAST_CIPHER_ALGORITHM","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtSetDefaultKey","Type":{"Kind":"ApiRef","Name":"DOT11EXT_SET_DEFAULT_KEY","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtSetKeyMappingKey","Type":{"Kind":"ApiRef","Name":"DOT11EXT_SET_KEY_MAPPING_KEY","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtSetDefaultKeyId","Type":{"Kind":"ApiRef","Name":"DOT11EXT_SET_DEFAULT_KEY_ID","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtNicSpecificExtension","Type":{"Kind":"ApiRef","Name":"DOT11EXT_NIC_SPECIFIC_EXTENSION","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtSetExcludeUnencrypted","Type":{"Kind":"ApiRef","Name":"DOT11EXT_SET_EXCLUDE_UNENCRYPTED","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtStartOneX","Type":{"Kind":"ApiRef","Name":"DOT11EXT_ONEX_START","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtStopOneX","Type":{"Kind":"ApiRef","Name":"DOT11EXT_ONEX_STOP","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtProcessSecurityPacket","Type":{"Kind":"ApiRef","Name":"DOT11EXT_PROCESS_ONEX_PACKET","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DOT11EXT_IHV_HANDLERS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"Dot11ExtIhvDeinitService","Type":{"Kind":"ApiRef","Name":"DOT11EXTIHV_DEINIT_SERVICE","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtIhvInitAdapter","Type":{"Kind":"ApiRef","Name":"DOT11EXTIHV_INIT_ADAPTER","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtIhvDeinitAdapter","Type":{"Kind":"ApiRef","Name":"DOT11EXTIHV_DEINIT_ADAPTER","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtIhvPerformPreAssociate","Type":{"Kind":"ApiRef","Name":"DOT11EXTIHV_PERFORM_PRE_ASSOCIATE","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtIhvAdapterReset","Type":{"Kind":"ApiRef","Name":"DOT11EXTIHV_ADAPTER_RESET","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtIhvPerformPostAssociate","Type":{"Kind":"ApiRef","Name":"DOT11EXTIHV_PERFORM_POST_ASSOCIATE","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtIhvStopPostAssociate","Type":{"Kind":"ApiRef","Name":"DOT11EXTIHV_STOP_POST_ASSOCIATE","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtIhvValidateProfile","Type":{"Kind":"ApiRef","Name":"DOT11EXTIHV_VALIDATE_PROFILE","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtIhvPerformCapabilityMatch","Type":{"Kind":"ApiRef","Name":"DOT11EXTIHV_PERFORM_CAPABILITY_MATCH","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtIhvCreateDiscoveryProfiles","Type":{"Kind":"ApiRef","Name":"DOT11EXTIHV_CREATE_DISCOVERY_PROFILES","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtIhvProcessSessionChange","Type":{"Kind":"ApiRef","Name":"DOT11EXTIHV_PROCESS_SESSION_CHANGE","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtIhvReceiveIndication","Type":{"Kind":"ApiRef","Name":"DOT11EXTIHV_RECEIVE_INDICATION","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtIhvReceivePacket","Type":{"Kind":"ApiRef","Name":"DOT11EXTIHV_RECEIVE_PACKET","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtIhvSendPacketCompletion","Type":{"Kind":"ApiRef","Name":"DOT11EXTIHV_SEND_PACKET_COMPLETION","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtIhvIsUIRequestPending","Type":{"Kind":"ApiRef","Name":"DOT11EXTIHV_IS_UI_REQUEST_PENDING","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtIhvProcessUIResponse","Type":{"Kind":"ApiRef","Name":"DOT11EXTIHV_PROCESS_UI_RESPONSE","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtIhvQueryUIRequest","Type":{"Kind":"ApiRef","Name":"DOT11EXTIHV_QUERY_UI_REQUEST","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtIhvOnexIndicateResult","Type":{"Kind":"ApiRef","Name":"DOT11EXTIHV_ONEX_INDICATE_RESULT","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtIhvControl","Type":{"Kind":"ApiRef","Name":"DOT11EXTIHV_CONTROL","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DOT11EXT_VIRTUAL_STATION_APIS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"Dot11ExtRequestVirtualStation","Type":{"Kind":"ApiRef","Name":"DOT11EXT_REQUEST_VIRTUAL_STATION","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtReleaseVirtualStation","Type":{"Kind":"ApiRef","Name":"DOT11EXT_RELEASE_VIRTUAL_STATION","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtQueryVirtualStationProperties","Type":{"Kind":"ApiRef","Name":"DOT11EXT_QUERY_VIRTUAL_STATION_PROPERTIES","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+			,{"Name":"Dot11ExtSetVirtualStationAPProperties","Type":{"Kind":"ApiRef","Name":"DOT11EXT_SET_VIRTUAL_STATION_AP_PROPERTIES","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
 ]
 
 ,"Functions":[
 	{
 		"Name":"WlanOpenHandle"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11954,16 +13332,17 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"dwClientVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"pdwNegotiatedVersion","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 			,{"Name":"phClientHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"WlanCloseHandle"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11971,14 +13350,15 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hClientHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanEnumInterfaces"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11986,15 +13366,16 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hClientHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"ppInterfaceList","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WLAN_INTERFACE_INFO_LIST","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"WlanSetAutoConfigParameter"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12005,14 +13386,15 @@
 			,{"Name":"OpCode","Type":{"Kind":"ApiRef","Name":"WLAN_AUTOCONF_OPCODE","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwDataSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":2},"Const"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanQueryAutoConfigParameter"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12021,7 +13403,7 @@
 		,"Params":[
 			{"Name":"hClientHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"OpCode","Type":{"Kind":"ApiRef","Name":"WLAN_AUTOCONF_OPCODE","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":["In"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"pdwDataSize","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 			,{"Name":"ppData","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out"]}
 			,{"Name":"pWlanOpcodeValueType","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WLAN_OPCODE_VALUE_TYPE","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["Out","Optional"]}
@@ -12029,9 +13411,10 @@
 	}
 	,{
 		"Name":"WlanGetInterfaceCapability"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12040,15 +13423,16 @@
 		,"Params":[
 			{"Name":"hClientHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pInterfaceGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"ppCapability","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WLAN_INTERFACE_CAPABILITY","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"WlanSetInterface"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12060,14 +13444,15 @@
 			,{"Name":"OpCode","Type":{"Kind":"ApiRef","Name":"WLAN_INTF_OPCODE","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwDataSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":3},"Const"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanQueryInterface"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12077,7 +13462,7 @@
 			{"Name":"hClientHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pInterfaceGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
 			,{"Name":"OpCode","Type":{"Kind":"ApiRef","Name":"WLAN_INTF_OPCODE","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":["In"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"pdwDataSize","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 			,{"Name":"ppData","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out"]}
 			,{"Name":"pWlanOpcodeValueType","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WLAN_OPCODE_VALUE_TYPE","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["Out","Optional"]}
@@ -12085,9 +13470,10 @@
 	}
 	,{
 		"Name":"WlanIhvControl"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12106,9 +13492,10 @@
 	}
 	,{
 		"Name":"WlanScan"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12119,14 +13506,15 @@
 			,{"Name":"pInterfaceGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
 			,{"Name":"pDot11Ssid","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11_SSID","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"pIeData","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WLAN_RAW_DATA","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In","Optional","Const"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanGetAvailableNetworkList"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12136,15 +13524,16 @@
 			{"Name":"hClientHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pInterfaceGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"ppAvailableNetworkList","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WLAN_AVAILABLE_NETWORK_LIST","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"WlanGetAvailableNetworkList2"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12154,15 +13543,16 @@
 			{"Name":"hClientHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pInterfaceGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"ppAvailableNetworkList","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WLAN_AVAILABLE_NETWORK_LIST_V2","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"WlanGetNetworkBssList"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12174,15 +13564,16 @@
 			,{"Name":"pDot11Ssid","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11_SSID","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"dot11BssType","Type":{"Kind":"ApiRef","Name":"DOT11_BSS_TYPE","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":["In"]}
 			,{"Name":"bSecurityEnabled","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"ppWlanBssList","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WLAN_BSS_LIST","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"WlanConnect"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12192,14 +13583,15 @@
 			{"Name":"hClientHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pInterfaceGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
 			,{"Name":"pConnectionParameters","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WLAN_CONNECTION_PARAMETERS","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In","Const"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanConnect2"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12209,14 +13601,15 @@
 			{"Name":"hClientHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pInterfaceGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
 			,{"Name":"pConnectionParameters","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WLAN_CONNECTION_PARAMETERS_V2","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In","Const"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanDisconnect"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12225,14 +13618,15 @@
 		,"Params":[
 			{"Name":"hClientHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pInterfaceGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanRegisterNotification"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12244,15 +13638,16 @@
 			,{"Name":"bIgnoreDuplicate","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"funcCallback","Type":{"Kind":"ApiRef","Name":"WLAN_NOTIFICATION_CALLBACK","TargetKind":"FunctionPointer","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"pCallbackContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"pdwPrevNotifSource","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanGetProfile"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12262,7 +13657,7 @@
 			{"Name":"hClientHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pInterfaceGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
 			,{"Name":"strProfileName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"pstrProfileXml","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 			,{"Name":"pdwFlags","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out","Optional"]}
 			,{"Name":"pdwGrantedAccess","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
@@ -12270,9 +13665,10 @@
 	}
 	,{
 		"Name":"WlanSetProfileEapUserData"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12286,14 +13682,15 @@
 			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"WLAN_SET_EAPHOST_FLAGS","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwEapUserDataSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pbEapUserData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":5},"Optional","Const"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanSetProfileEapXmlUserData"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12305,14 +13702,15 @@
 			,{"Name":"strProfileName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"WLAN_SET_EAPHOST_FLAGS","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":["In"]}
 			,{"Name":"strEapXmlUserData","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanSetProfile"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12325,15 +13723,16 @@
 			,{"Name":"strProfileXml","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"strAllUserProfileSecurity","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 			,{"Name":"bOverwrite","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"pdwReasonCode","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"WlanDeleteProfile"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12343,14 +13742,15 @@
 			{"Name":"hClientHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pInterfaceGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
 			,{"Name":"strProfileName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanRenameProfile"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12361,14 +13761,15 @@
 			,{"Name":"pInterfaceGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
 			,{"Name":"strOldProfileName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"strNewProfileName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanGetProfileList"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12377,15 +13778,16 @@
 		,"Params":[
 			{"Name":"hClientHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pInterfaceGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"ppProfileList","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WLAN_PROFILE_INFO_LIST","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"WlanSetProfileList"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12396,14 +13798,15 @@
 			,{"Name":"pInterfaceGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
 			,{"Name":"dwItems","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"strProfileNames","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanSetProfilePosition"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12414,14 +13817,15 @@
 			,{"Name":"pInterfaceGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
 			,{"Name":"strProfileName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"dwPosition","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanSetProfileCustomUserData"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12433,14 +13837,15 @@
 			,{"Name":"strProfileName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"dwDataSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":3},"Const"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanGetProfileCustomUserData"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12450,16 +13855,17 @@
 			{"Name":"hClientHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pInterfaceGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
 			,{"Name":"strProfileName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"pdwDataSize","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 			,{"Name":"ppData","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"WlanSetFilterList"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12469,14 +13875,15 @@
 			{"Name":"hClientHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"wlanFilterListType","Type":{"Kind":"ApiRef","Name":"WLAN_FILTER_LIST_TYPE","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pNetworkList","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11_NETWORK_LIST","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In","Optional","Const"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanGetFilterList"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12485,15 +13892,16 @@
 		,"Params":[
 			{"Name":"hClientHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"wlanFilterListType","Type":{"Kind":"ApiRef","Name":"WLAN_FILTER_LIST_TYPE","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":["In"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"ppNetworkList","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DOT11_NETWORK_LIST","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"WlanSetPsdIEDataList"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12503,14 +13911,15 @@
 			{"Name":"hClientHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"strFormat","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 			,{"Name":"pPsdIEDataList","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WLAN_RAW_DATA_LIST","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["In","Optional","Const"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanSaveTemporaryProfile"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12523,14 +13932,15 @@
 			,{"Name":"strAllUserProfileSecurity","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"bOverWrite","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanDeviceServiceCommand"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12550,9 +13960,10 @@
 	}
 	,{
 		"Name":"WlanGetSupportedDeviceServices"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12566,9 +13977,10 @@
 	}
 	,{
 		"Name":"WlanRegisterDeviceServiceNotification"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12581,9 +13993,10 @@
 	}
 	,{
 		"Name":"WlanExtractPsdIEDataList"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12594,15 +14007,16 @@
 			,{"Name":"dwIeDataSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pRawIeData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":1},"Const"]}
 			,{"Name":"strFormat","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"ppPsdIEDataList","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WLAN_RAW_DATA_LIST","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"WlanReasonCodeToString"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12612,14 +14026,15 @@
 			{"Name":"dwReasonCode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"dwBufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pStringBuffer","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["In","NotNullTerminated"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanAllocateMemory"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12631,9 +14046,10 @@
 	}
 	,{
 		"Name":"WlanFreeMemory"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12645,9 +14061,10 @@
 	}
 	,{
 		"Name":"WlanSetSecuritySettings"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12661,9 +14078,10 @@
 	}
 	,{
 		"Name":"WlanGetSecuritySettings"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12679,9 +14097,10 @@
 	}
 	,{
 		"Name":"WlanUIEditProfile"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanui"
+		,"DllImport":"wlanui.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12693,15 +14112,16 @@
 			,{"Name":"pInterfaceGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In"]}
 			,{"Name":"hWnd","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"wlStartPage","Type":{"Kind":"ApiRef","Name":"WL_DISPLAY_PAGES","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]},"Attrs":["In"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"pWlanReasonCode","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanHostedNetworkStartUsing"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12710,14 +14130,15 @@
 		,"Params":[
 			{"Name":"hClientHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pFailReason","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WLAN_HOSTED_NETWORK_REASON","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanHostedNetworkStopUsing"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12726,14 +14147,15 @@
 		,"Params":[
 			{"Name":"hClientHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pFailReason","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WLAN_HOSTED_NETWORK_REASON","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanHostedNetworkForceStart"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12742,14 +14164,15 @@
 		,"Params":[
 			{"Name":"hClientHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pFailReason","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WLAN_HOSTED_NETWORK_REASON","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanHostedNetworkForceStop"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12758,14 +14181,15 @@
 		,"Params":[
 			{"Name":"hClientHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pFailReason","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WLAN_HOSTED_NETWORK_REASON","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanHostedNetworkQueryProperty"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12777,14 +14201,15 @@
 			,{"Name":"pdwDataSize","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 			,{"Name":"ppvData","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out"]}
 			,{"Name":"pWlanOpcodeValueType","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WLAN_OPCODE_VALUE_TYPE","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["Out"]}
-			,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanHostedNetworkSetProperty"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12796,14 +14221,15 @@
 			,{"Name":"dwDataSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pvData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":2}]}
 			,{"Name":"pFailReason","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WLAN_HOSTED_NETWORK_REASON","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanHostedNetworkInitSettings"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12812,14 +14238,15 @@
 		,"Params":[
 			{"Name":"hClientHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pFailReason","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WLAN_HOSTED_NETWORK_REASON","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanHostedNetworkRefreshSecuritySettings"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12828,14 +14255,15 @@
 		,"Params":[
 			{"Name":"hClientHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pFailReason","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WLAN_HOSTED_NETWORK_REASON","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanHostedNetworkQueryStatus"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12844,14 +14272,15 @@
 		,"Params":[
 			{"Name":"hClientHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"ppWlanHostedNetworkStatus","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WLAN_HOSTED_NETWORK_STATUS","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}}},"Attrs":["Out"]}
-			,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanHostedNetworkSetSecondaryKey"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12864,14 +14293,15 @@
 			,{"Name":"bIsPassPhrase","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"bPersistent","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pFailReason","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WLAN_HOSTED_NETWORK_REASON","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanHostedNetworkQuerySecondaryKey"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12884,14 +14314,15 @@
 			,{"Name":"pbIsPassPhrase","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 			,{"Name":"pbPersistent","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 			,{"Name":"pFailReason","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WLAN_HOSTED_NETWORK_REASON","TargetKind":"Default","Api":"NetworkManagement.WiFi","Parents":[]}},"Attrs":["Out","Optional"]}
-			,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"WlanRegisterVirtualStationNotification"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12900,14 +14331,15 @@
 		,"Params":[
 			{"Name":"hClientHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"bRegister","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"WFDOpenHandle"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12921,9 +14353,10 @@
 	}
 	,{
 		"Name":"WFDCloseHandle"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12935,9 +14368,10 @@
 	}
 	,{
 		"Name":"WFDStartOpenSession"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12953,9 +14387,10 @@
 	}
 	,{
 		"Name":"WFDCancelOpenSession"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12967,9 +14402,10 @@
 	}
 	,{
 		"Name":"WFDOpenLegacySession"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12984,9 +14420,10 @@
 	}
 	,{
 		"Name":"WFDCloseSession"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12998,9 +14435,10 @@
 	}
 	,{
 		"Name":"WFDUpdateDeviceVisibility"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"wlanapi"
+		,"DllImport":"wlanapi.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

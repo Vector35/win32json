@@ -3684,26 +3684,6 @@
 		,"FreeFunc":null
 	}
 	,{
-		"Name":"FLOWSPEC"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"TokenRate","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"TokenBucketSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"PeakBandwidth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Latency","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"DelayVariation","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"ServiceType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"MaxSduSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"MinimumPolicedSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
 		"Name":"QOS_OBJECT_HDR"
 		,"Architectures":[]
 		,"Platform":null
@@ -4297,7 +4277,7 @@
 		]
 	}
 	,{
-		"Name":"flow_desc"
+		"Name":"FLOW_DESC"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -4441,7 +4421,7 @@
 			,{"Name":"pResvStyle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RESV_STYLE","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]}},"Attrs":[]}
 			,{"Name":"pRsvpScope","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RSVP_SCOPE","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]}},"Attrs":[]}
 			,{"Name":"FlowDescCount","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"pFlowDescs","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"flow_desc","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]}},"Attrs":[]}
+			,{"Name":"pFlowDescs","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FLOW_DESC","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]}},"Attrs":[]}
 			,{"Name":"PdObjectCount","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"ppPdObjects","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"POLICY_DATA","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]}}},"Attrs":[]}
 			,{"Name":"pErrorSpec","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ERROR_SPEC","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]}},"Attrs":[]}
@@ -4456,6 +4436,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
@@ -4471,6 +4452,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -4481,7 +4463,7 @@
 		]
 	}
 	,{
-		"Name":"policy_decision"
+		"Name":"POLICY_DECISION"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -4501,6 +4483,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}}
@@ -4512,7 +4495,7 @@
 			,{"Name":"ulPcmActionFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"LpmError","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"PolicyDecisionsCount","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-			,{"Name":"pPolicyDecisions","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"policy_decision","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"pPolicyDecisions","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"POLICY_DECISION","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]}},"Attrs":["In","Out"]}
 		]
 	}
 	,{
@@ -4521,6 +4504,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}}
@@ -4554,7 +4538,7 @@
 		]
 	}
 	,{
-		"Name":"lpmiptable"
+		"Name":"LPMIPTABLE"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -4814,6 +4798,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -4834,6 +4819,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -4850,6 +4836,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -4866,6 +4853,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -4962,8 +4950,8 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"SendingFlowspec","Type":{"Kind":"ApiRef","Name":"FLOWSPEC","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]},"Attrs":[]}
-			,{"Name":"ReceivingFlowspec","Type":{"Kind":"ApiRef","Name":"FLOWSPEC","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]},"Attrs":[]}
+			{"Name":"SendingFlowspec","Type":{"Kind":"ApiRef","Name":"FLOWSPEC","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":[]}
+			,{"Name":"ReceivingFlowspec","Type":{"Kind":"ApiRef","Name":"FLOWSPEC","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":[]}
 			,{"Name":"TcObjectsLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"TcObjects","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"QOS_OBJECT_HDR","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]}},"Attrs":[]}
 		]
@@ -5001,6 +4989,20 @@
 				]
 				,"NestedTypes":[
 					{
+						"Name":"_S_un_ports_e__Struct"
+						,"Architectures":[]
+						,"Platform":null
+						,"Kind":"Struct"
+						,"Size":0
+						,"PackingSize":0
+						,"Fields":[
+							{"Name":"s_srcport","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+							,{"Name":"s_dstport","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+						]
+						,"NestedTypes":[
+						]
+					}
+					,{
 						"Name":"_S_un_icmp_e__Struct"
 						,"Architectures":[]
 						,"Platform":null
@@ -5011,20 +5013,6 @@
 							{"Name":"s_type","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 							,{"Name":"s_code","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 							,{"Name":"filler","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-						]
-						,"NestedTypes":[
-						]
-					}
-					,{
-						"Name":"_S_un_ports_e__Struct"
-						,"Architectures":[]
-						,"Platform":null
-						,"Kind":"Struct"
-						,"Size":0
-						,"PackingSize":0
-						,"Fields":[
-							{"Name":"s_srcport","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-							,{"Name":"s_dstport","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]
@@ -5237,7 +5225,7 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"FlowSpec","Type":{"Kind":"ApiRef","Name":"FLOWSPEC","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]},"Attrs":[]}
+			{"Name":"FlowSpec","Type":{"Kind":"ApiRef","Name":"FLOWSPEC","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":[]}
 			,{"Name":"NumFilters","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"FilterList","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RSVP_FILTERSPEC","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]}},"Attrs":[]}
 		]
@@ -5504,7 +5492,7 @@
 		]
 	}
 	,{
-		"Name":"tag_SIPAEVENT_VSM_IDK_RSA_INFO"
+		"Name":"SIPAEVENT_VSM_IDK_RSA_INFO"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -5520,7 +5508,7 @@
 		]
 	}
 	,{
-		"Name":"tag_SIPAEVENT_VSM_IDK_INFO_PAYLOAD"
+		"Name":"SIPAEVENT_VSM_IDK_INFO_PAYLOAD"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -5539,7 +5527,7 @@
 				,"Size":0
 				,"PackingSize":0
 				,"Fields":[
-					{"Name":"RsaKeyInfo","Type":{"Kind":"ApiRef","Name":"tag_SIPAEVENT_VSM_IDK_RSA_INFO","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]},"Attrs":[]}
+					{"Name":"RsaKeyInfo","Type":{"Kind":"ApiRef","Name":"SIPAEVENT_VSM_IDK_RSA_INFO","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]
@@ -5547,7 +5535,7 @@
 		]
 	}
 	,{
-		"Name":"tag_SIPAEVENT_SI_POLICY_PAYLOAD"
+		"Name":"SIPAEVENT_SI_POLICY_PAYLOAD"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -5564,7 +5552,7 @@
 		]
 	}
 	,{
-		"Name":"tag_SIPAEVENT_REVOCATION_LIST_PAYLOAD"
+		"Name":"SIPAEVENT_REVOCATION_LIST_PAYLOAD"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -5580,7 +5568,7 @@
 		]
 	}
 	,{
-		"Name":"tag_SIPAEVENT_KSR_SIGNATURE_PAYLOAD"
+		"Name":"SIPAEVENT_KSR_SIGNATURE_PAYLOAD"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -5595,7 +5583,7 @@
 		]
 	}
 	,{
-		"Name":"tag_SIPAEVENT_SBCP_INFO_PAYLOAD_V1"
+		"Name":"SIPAEVENT_SBCP_INFO_PAYLOAD_V1"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -5613,29 +5601,15 @@
 		,"NestedTypes":[
 		]
 	}
-	,{
-		"Name":"QOS"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"SendingFlowspec","Type":{"Kind":"ApiRef","Name":"FLOWSPEC","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]},"Attrs":[]}
-			,{"Name":"ReceivingFlowspec","Type":{"Kind":"ApiRef","Name":"FLOWSPEC","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]},"Attrs":[]}
-			,{"Name":"ProviderSpecific","Type":{"Kind":"ApiRef","Name":"WSABUF","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
 ]
 
 ,"Functions":[
 	{
 		"Name":"QOSCreateHandle"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"qwave"
+		,"DllImport":"qwave.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5648,9 +5622,10 @@
 	}
 	,{
 		"Name":"QOSCloseHandle"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"qwave"
+		,"DllImport":"qwave.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5662,9 +5637,10 @@
 	}
 	,{
 		"Name":"QOSStartTrackingClient"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"qwave"
+		,"DllImport":"qwave.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5673,14 +5649,15 @@
 		,"Params":[
 			{"Name":"QOSHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"DestAddr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SOCKADDR","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["In"]}
-			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"QOSStopTrackingClient"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"qwave"
+		,"DllImport":"qwave.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5689,14 +5666,15 @@
 		,"Params":[
 			{"Name":"QOSHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"DestAddr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SOCKADDR","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["In"]}
-			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"QOSEnumerateFlows"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"qwave"
+		,"DllImport":"qwave.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5710,9 +5688,10 @@
 	}
 	,{
 		"Name":"QOSAddSocketToFlow"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"qwave"
+		,"DllImport":"qwave.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5729,9 +5708,10 @@
 	}
 	,{
 		"Name":"QOSRemoveSocketFromFlow"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"qwave"
+		,"DllImport":"qwave.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5741,14 +5721,15 @@
 			{"Name":"QOSHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Socket","Type":{"Kind":"ApiRef","Name":"SOCKET","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"FlowId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{
 		"Name":"QOSSetFlow"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"qwave"
+		,"DllImport":"qwave.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5760,15 +5741,16 @@
 			,{"Name":"Operation","Type":{"Kind":"ApiRef","Name":"QOS_SET_FLOW","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"Buffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":3}]}
-			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["Out","Optional"]}
 		]
 	}
 	,{
 		"Name":"QOSQueryFlow"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"qwave"
+		,"DllImport":"qwave.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5786,9 +5768,10 @@
 	}
 	,{
 		"Name":"QOSNotifyFlow"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"qwave"
+		,"DllImport":"qwave.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5800,15 +5783,16 @@
 			,{"Name":"Operation","Type":{"Kind":"ApiRef","Name":"QOS_NOTIFY_FLOW","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Size","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out","Optional"]}
 			,{"Name":"Buffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out",{"Kind":"MemorySize","BytesParamIndex":3},"Optional"]}
-			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["Out","Optional"]}
 		]
 	}
 	,{
 		"Name":"QOSCancel"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"qwave"
+		,"DllImport":"qwave.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5821,9 +5805,10 @@
 	}
 	,{
 		"Name":"TcRegisterClient"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"TRAFFIC"
+		,"DllImport":"TRAFFIC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5838,9 +5823,10 @@
 	}
 	,{
 		"Name":"TcEnumerateInterfaces"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"TRAFFIC"
+		,"DllImport":"TRAFFIC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5854,9 +5840,10 @@
 	}
 	,{
 		"Name":"TcOpenInterfaceA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"TRAFFIC"
+		,"DllImport":"TRAFFIC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5871,9 +5858,10 @@
 	}
 	,{
 		"Name":"TcOpenInterfaceW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"TRAFFIC"
+		,"DllImport":"TRAFFIC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5888,9 +5876,10 @@
 	}
 	,{
 		"Name":"TcCloseInterface"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"TRAFFIC"
+		,"DllImport":"TRAFFIC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5902,9 +5891,10 @@
 	}
 	,{
 		"Name":"TcQueryInterface"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"TRAFFIC"
+		,"DllImport":"TRAFFIC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5920,9 +5910,10 @@
 	}
 	,{
 		"Name":"TcSetInterface"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"TRAFFIC"
+		,"DllImport":"TRAFFIC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5937,9 +5928,10 @@
 	}
 	,{
 		"Name":"TcQueryFlowA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"TRAFFIC"
+		,"DllImport":"TRAFFIC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5954,9 +5946,10 @@
 	}
 	,{
 		"Name":"TcQueryFlowW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"TRAFFIC"
+		,"DllImport":"TRAFFIC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5971,9 +5964,10 @@
 	}
 	,{
 		"Name":"TcSetFlowA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"TRAFFIC"
+		,"DllImport":"TRAFFIC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -5988,9 +5982,10 @@
 	}
 	,{
 		"Name":"TcSetFlowW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"TRAFFIC"
+		,"DllImport":"TRAFFIC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6005,9 +6000,10 @@
 	}
 	,{
 		"Name":"TcAddFlow"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"TRAFFIC"
+		,"DllImport":"TRAFFIC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6023,9 +6019,10 @@
 	}
 	,{
 		"Name":"TcGetFlowNameA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"TRAFFIC"
+		,"DllImport":"TRAFFIC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6039,9 +6036,10 @@
 	}
 	,{
 		"Name":"TcGetFlowNameW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"TRAFFIC"
+		,"DllImport":"TRAFFIC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6055,9 +6053,10 @@
 	}
 	,{
 		"Name":"TcModifyFlow"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"TRAFFIC"
+		,"DllImport":"TRAFFIC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6070,9 +6069,10 @@
 	}
 	,{
 		"Name":"TcAddFilter"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"TRAFFIC"
+		,"DllImport":"TRAFFIC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6086,9 +6086,10 @@
 	}
 	,{
 		"Name":"TcDeregisterClient"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"TRAFFIC"
+		,"DllImport":"TRAFFIC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6100,9 +6101,10 @@
 	}
 	,{
 		"Name":"TcDeleteFlow"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"TRAFFIC"
+		,"DllImport":"TRAFFIC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6114,9 +6116,10 @@
 	}
 	,{
 		"Name":"TcDeleteFilter"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"TRAFFIC"
+		,"DllImport":"TRAFFIC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -6128,9 +6131,10 @@
 	}
 	,{
 		"Name":"TcEnumerateFlows"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"TRAFFIC"
+		,"DllImport":"TRAFFIC.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

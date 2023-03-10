@@ -206,6 +206,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -220,9 +221,10 @@
 ,"Functions":[
 	{
 		"Name":"RmStartSession"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"rstrtmgr"
+		,"DllImport":"rstrtmgr.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -230,15 +232,16 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"pSessionHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-			,{"Name":"dwSessionFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"dwSessionFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 			,{"Name":"strSessionKey","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"RmJoinSession"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"RstrtMgr"
+		,"DllImport":"RstrtMgr.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -251,9 +254,10 @@
 	}
 	,{
 		"Name":"RmEndSession"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"rstrtmgr"
+		,"DllImport":"rstrtmgr.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -265,9 +269,10 @@
 	}
 	,{
 		"Name":"RmRegisterResources"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"rstrtmgr"
+		,"DllImport":"rstrtmgr.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -285,9 +290,10 @@
 	}
 	,{
 		"Name":"RmGetList"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"rstrtmgr"
+		,"DllImport":"rstrtmgr.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -303,9 +309,10 @@
 	}
 	,{
 		"Name":"RmShutdown"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"rstrtmgr"
+		,"DllImport":"rstrtmgr.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -319,9 +326,10 @@
 	}
 	,{
 		"Name":"RmRestart"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"rstrtmgr"
+		,"DllImport":"rstrtmgr.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -329,15 +337,16 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"dwSessionHandle","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"dwRestartFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+			,{"Name":"dwRestartFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 			,{"Name":"fnStatus","Type":{"Kind":"ApiRef","Name":"RM_WRITE_STATUS_CALLBACK","TargetKind":"FunctionPointer","Api":"System.RestartManager","Parents":[]},"Attrs":["In","Optional"]}
 		]
 	}
 	,{
 		"Name":"RmCancelCurrentTask"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"RstrtMgr"
+		,"DllImport":"RstrtMgr.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -349,9 +358,10 @@
 	}
 	,{
 		"Name":"RmAddFilter"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"RstrtMgr"
+		,"DllImport":"RstrtMgr.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -367,9 +377,10 @@
 	}
 	,{
 		"Name":"RmRemoveFilter"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"RstrtMgr"
+		,"DllImport":"RstrtMgr.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -384,9 +395,10 @@
 	}
 	,{
 		"Name":"RmGetFilterList"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"RstrtMgr"
+		,"DllImport":"RstrtMgr.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

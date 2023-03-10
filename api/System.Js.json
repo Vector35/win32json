@@ -102,6 +102,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Boolean"}
@@ -119,6 +120,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -134,6 +136,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -149,6 +152,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Boolean"}
@@ -185,6 +189,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -200,6 +205,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
@@ -217,10 +223,43 @@
 
 ,"Functions":[
 	{
-		"Name":"JsCreateRuntime"
+		"Name":"JsCreateContext"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"runtime","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			,{"Name":"debugApplication","Type":{"Kind":"ApiRef","Name":"IDebugApplication64","TargetKind":"Com","Api":"System.Diagnostics.Debug","Parents":[]},"Attrs":["In"]}
+			,{"Name":"newContext","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"JsStartDebugging"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"chakra.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"debugApplication","Type":{"Kind":"ApiRef","Name":"IDebugApplication64","TargetKind":"Com","Api":"System.Diagnostics.Debug","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"JsCreateRuntime"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -235,9 +274,10 @@
 	}
 	,{
 		"Name":"JsCollectGarbage"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -249,9 +289,10 @@
 	}
 	,{
 		"Name":"JsDisposeRuntime"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -263,9 +304,10 @@
 	}
 	,{
 		"Name":"JsGetRuntimeMemoryUsage"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -278,9 +320,10 @@
 	}
 	,{
 		"Name":"JsGetRuntimeMemoryLimit"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -293,9 +336,10 @@
 	}
 	,{
 		"Name":"JsSetRuntimeMemoryLimit"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -308,9 +352,10 @@
 	}
 	,{
 		"Name":"JsSetRuntimeMemoryAllocationCallback"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -324,9 +369,10 @@
 	}
 	,{
 		"Name":"JsSetRuntimeBeforeCollectCallback"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -340,9 +386,10 @@
 	}
 	,{
 		"Name":"JsAddRef"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -355,9 +402,10 @@
 	}
 	,{
 		"Name":"JsRelease"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -370,25 +418,27 @@
 	}
 	,{
 		"Name":"JsCreateContext"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"runtime","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
-			,{"Name":"debugApplication","Type":{"Kind":"ApiRef","Name":"IDebugApplication64","TargetKind":"Com","Api":"System.Diagnostics.Debug","Parents":[]},"Attrs":["In"]}
+			,{"Name":"debugApplication","Type":{"Kind":"ApiRef","Name":"IDebugApplication32","TargetKind":"Com","Api":"System.Diagnostics.Debug","Parents":[]},"Attrs":["In"]}
 			,{"Name":"newContext","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out"]}
 		]
 	}
 	,{
 		"Name":"JsGetCurrentContext"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -400,9 +450,10 @@
 	}
 	,{
 		"Name":"JsSetCurrentContext"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -414,9 +465,10 @@
 	}
 	,{
 		"Name":"JsGetRuntime"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -429,23 +481,25 @@
 	}
 	,{
 		"Name":"JsStartDebugging"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"debugApplication","Type":{"Kind":"ApiRef","Name":"IDebugApplication64","TargetKind":"Com","Api":"System.Diagnostics.Debug","Parents":[]},"Attrs":["In"]}
+			{"Name":"debugApplication","Type":{"Kind":"ApiRef","Name":"IDebugApplication32","TargetKind":"Com","Api":"System.Diagnostics.Debug","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"JsIdle"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -457,9 +511,10 @@
 	}
 	,{
 		"Name":"JsParseScript"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -474,9 +529,10 @@
 	}
 	,{
 		"Name":"JsRunScript"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -491,9 +547,10 @@
 	}
 	,{
 		"Name":"JsSerializeScript"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -507,9 +564,10 @@
 	}
 	,{
 		"Name":"JsParseSerializedScript"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -525,9 +583,10 @@
 	}
 	,{
 		"Name":"JsRunSerializedScript"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -543,9 +602,10 @@
 	}
 	,{
 		"Name":"JsGetPropertyIdFromName"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -558,9 +618,10 @@
 	}
 	,{
 		"Name":"JsGetPropertyNameFromId"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -573,9 +634,10 @@
 	}
 	,{
 		"Name":"JsGetUndefinedValue"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -587,9 +649,10 @@
 	}
 	,{
 		"Name":"JsGetNullValue"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -601,9 +664,10 @@
 	}
 	,{
 		"Name":"JsGetTrueValue"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -615,9 +679,10 @@
 	}
 	,{
 		"Name":"JsGetFalseValue"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -629,9 +694,10 @@
 	}
 	,{
 		"Name":"JsBoolToBoolean"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -644,9 +710,10 @@
 	}
 	,{
 		"Name":"JsBooleanToBool"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -659,9 +726,10 @@
 	}
 	,{
 		"Name":"JsConvertValueToBoolean"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -674,9 +742,10 @@
 	}
 	,{
 		"Name":"JsGetValueType"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -689,9 +758,10 @@
 	}
 	,{
 		"Name":"JsDoubleToNumber"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -704,9 +774,10 @@
 	}
 	,{
 		"Name":"JsIntToNumber"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -719,9 +790,10 @@
 	}
 	,{
 		"Name":"JsNumberToDouble"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -734,9 +806,10 @@
 	}
 	,{
 		"Name":"JsConvertValueToNumber"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -749,9 +822,10 @@
 	}
 	,{
 		"Name":"JsGetStringLength"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -764,9 +838,10 @@
 	}
 	,{
 		"Name":"JsPointerToString"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -780,9 +855,10 @@
 	}
 	,{
 		"Name":"JsStringToPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -796,9 +872,10 @@
 	}
 	,{
 		"Name":"JsConvertValueToString"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -811,9 +888,10 @@
 	}
 	,{
 		"Name":"JsVariantToValue"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -826,9 +904,10 @@
 	}
 	,{
 		"Name":"JsValueToVariant"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -841,9 +920,10 @@
 	}
 	,{
 		"Name":"JsGetGlobalObject"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -855,9 +935,10 @@
 	}
 	,{
 		"Name":"JsCreateObject"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -869,9 +950,10 @@
 	}
 	,{
 		"Name":"JsCreateExternalObject"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -885,9 +967,10 @@
 	}
 	,{
 		"Name":"JsConvertValueToObject"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -900,9 +983,10 @@
 	}
 	,{
 		"Name":"JsGetPrototype"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -915,9 +999,10 @@
 	}
 	,{
 		"Name":"JsSetPrototype"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -930,9 +1015,10 @@
 	}
 	,{
 		"Name":"JsGetExtensionAllowed"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -945,9 +1031,10 @@
 	}
 	,{
 		"Name":"JsPreventExtension"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -959,9 +1046,10 @@
 	}
 	,{
 		"Name":"JsGetProperty"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -975,9 +1063,10 @@
 	}
 	,{
 		"Name":"JsGetOwnPropertyDescriptor"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -991,9 +1080,10 @@
 	}
 	,{
 		"Name":"JsGetOwnPropertyNames"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1006,9 +1096,10 @@
 	}
 	,{
 		"Name":"JsSetProperty"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1023,9 +1114,10 @@
 	}
 	,{
 		"Name":"JsHasProperty"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1039,9 +1131,10 @@
 	}
 	,{
 		"Name":"JsDeleteProperty"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1056,9 +1149,10 @@
 	}
 	,{
 		"Name":"JsDefineProperty"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1073,9 +1167,10 @@
 	}
 	,{
 		"Name":"JsHasIndexedProperty"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1089,9 +1184,10 @@
 	}
 	,{
 		"Name":"JsGetIndexedProperty"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1105,9 +1201,10 @@
 	}
 	,{
 		"Name":"JsSetIndexedProperty"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1121,9 +1218,10 @@
 	}
 	,{
 		"Name":"JsDeleteIndexedProperty"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1136,9 +1234,10 @@
 	}
 	,{
 		"Name":"JsEquals"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1152,9 +1251,10 @@
 	}
 	,{
 		"Name":"JsStrictEquals"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1168,9 +1268,10 @@
 	}
 	,{
 		"Name":"JsHasExternalData"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1183,9 +1284,10 @@
 	}
 	,{
 		"Name":"JsGetExternalData"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1198,9 +1300,10 @@
 	}
 	,{
 		"Name":"JsSetExternalData"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1213,9 +1316,10 @@
 	}
 	,{
 		"Name":"JsCreateArray"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1228,9 +1332,10 @@
 	}
 	,{
 		"Name":"JsCallFunction"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1245,9 +1350,10 @@
 	}
 	,{
 		"Name":"JsConstructObject"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1262,9 +1368,10 @@
 	}
 	,{
 		"Name":"JsCreateFunction"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1278,9 +1385,10 @@
 	}
 	,{
 		"Name":"JsCreateError"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1293,9 +1401,10 @@
 	}
 	,{
 		"Name":"JsCreateRangeError"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1308,9 +1417,10 @@
 	}
 	,{
 		"Name":"JsCreateReferenceError"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1323,9 +1433,10 @@
 	}
 	,{
 		"Name":"JsCreateSyntaxError"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1338,9 +1449,10 @@
 	}
 	,{
 		"Name":"JsCreateTypeError"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1353,9 +1465,10 @@
 	}
 	,{
 		"Name":"JsCreateURIError"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1368,9 +1481,10 @@
 	}
 	,{
 		"Name":"JsHasException"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1382,9 +1496,10 @@
 	}
 	,{
 		"Name":"JsGetAndClearException"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1396,9 +1511,10 @@
 	}
 	,{
 		"Name":"JsSetException"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1410,9 +1526,10 @@
 	}
 	,{
 		"Name":"JsDisableRuntimeExecution"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1424,9 +1541,10 @@
 	}
 	,{
 		"Name":"JsEnableRuntimeExecution"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1438,9 +1556,10 @@
 	}
 	,{
 		"Name":"JsIsRuntimeExecutionDisabled"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1453,9 +1572,10 @@
 	}
 	,{
 		"Name":"JsStartProfiling"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1469,9 +1589,10 @@
 	}
 	,{
 		"Name":"JsStopProfiling"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1483,9 +1604,10 @@
 	}
 	,{
 		"Name":"JsEnumerateHeap"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1497,9 +1619,10 @@
 	}
 	,{
 		"Name":"JsIsEnumeratingHeap"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"chakra"
+		,"DllImport":"chakra.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -1507,36 +1630,6 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"isEnumeratingHeap","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Boolean"}},"Attrs":["Out"]}
-		]
-	}
-	,{
-		"Name":"JsCreateContext"
-		,"NoReturn":false
-		,"SetLastError":false
-		,"DllImport":"chakra"
-		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
-		,"ReturnAttrs":[]
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Attrs":[]
-		,"Params":[
-			{"Name":"runtime","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
-			,{"Name":"debugApplication","Type":{"Kind":"ApiRef","Name":"IDebugApplication32","TargetKind":"Com","Api":"System.Diagnostics.Debug","Parents":[]},"Attrs":["In"]}
-			,{"Name":"newContext","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out"]}
-		]
-	}
-	,{
-		"Name":"JsStartDebugging"
-		,"NoReturn":false
-		,"SetLastError":false
-		,"DllImport":"chakra"
-		,"ReturnType":{"Kind":"ApiRef","Name":"JsErrorCode","TargetKind":"Default","Api":"System.Js","Parents":[]}
-		,"ReturnAttrs":[]
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Attrs":[]
-		,"Params":[
-			{"Name":"debugApplication","Type":{"Kind":"ApiRef","Name":"IDebugApplication32","TargetKind":"Com","Api":"System.Diagnostics.Debug","Parents":[]},"Attrs":["In"]}
 		]
 	}
 ]

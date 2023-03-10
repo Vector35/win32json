@@ -193,7 +193,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"Key","Type":{"Kind":"ApiRef","Name":"DEVPROPKEY","TargetKind":"Default","Api":"Devices.Properties","Parents":[]},"Attrs":[]}
-			,{"Name":"Type","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Type","Type":{"Kind":"ApiRef","Name":"DEVPROPTYPE","TargetKind":"Default","Api":"Devices.Properties","Parents":[]},"Attrs":[]}
 			,{"Name":"BufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Buffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 		]
@@ -219,6 +219,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
@@ -235,9 +236,10 @@
 ,"Functions":[
 	{
 		"Name":"DevCreateObjectQuery"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-devices-query-l1-1-0"
+		,"DllImport":"api-ms-win-devices-query-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -257,9 +259,10 @@
 	}
 	,{
 		"Name":"DevCreateObjectQueryEx"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-devices-query-l1-1-1"
+		,"DllImport":"api-ms-win-devices-query-l1-1-1.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -281,9 +284,10 @@
 	}
 	,{
 		"Name":"DevCreateObjectQueryFromId"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-devices-query-l1-1-0"
+		,"DllImport":"api-ms-win-devices-query-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -304,9 +308,10 @@
 	}
 	,{
 		"Name":"DevCreateObjectQueryFromIdEx"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-devices-query-l1-1-1"
+		,"DllImport":"api-ms-win-devices-query-l1-1-1.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -329,9 +334,10 @@
 	}
 	,{
 		"Name":"DevCreateObjectQueryFromIds"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-devices-query-l1-1-0"
+		,"DllImport":"api-ms-win-devices-query-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -352,9 +358,10 @@
 	}
 	,{
 		"Name":"DevCreateObjectQueryFromIdsEx"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-devices-query-l1-1-1"
+		,"DllImport":"api-ms-win-devices-query-l1-1-1.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -377,9 +384,10 @@
 	}
 	,{
 		"Name":"DevCloseObjectQuery"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-devices-query-l1-1-0"
+		,"DllImport":"api-ms-win-devices-query-l1-1-0.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -391,9 +399,10 @@
 	}
 	,{
 		"Name":"DevGetObjects"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-devices-query-l1-1-0"
+		,"DllImport":"api-ms-win-devices-query-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -407,14 +416,15 @@
 			,{"Name":"cFilterExpressionCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pFilter","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":4,"Child":{"Kind":"ApiRef","Name":"DEVPROP_FILTER_EXPRESSION","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"pcObjectCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-			,{"Name":"ppObjects","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEV_OBJECT","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}}},"Attrs":["Out","Optional","Const"]}
+			,{"Name":"ppObjects","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEV_OBJECT","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}}},"Attrs":["Out","Const"]}
 		]
 	}
 	,{
 		"Name":"DevGetObjectsEx"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-devices-query-l1-1-1"
+		,"DllImport":"api-ms-win-devices-query-l1-1-1.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -430,14 +440,15 @@
 			,{"Name":"cExtendedParameterCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pExtendedParameters","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":6,"Child":{"Kind":"ApiRef","Name":"DEV_QUERY_PARAMETER","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"pcObjectCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-			,{"Name":"ppObjects","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEV_OBJECT","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}}},"Attrs":["Out","Optional","Const"]}
+			,{"Name":"ppObjects","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEV_OBJECT","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}}},"Attrs":["Out","Const"]}
 		]
 	}
 	,{
 		"Name":"DevFreeObjects"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-devices-query-l1-1-0"
+		,"DllImport":"api-ms-win-devices-query-l1-1-0.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -450,9 +461,10 @@
 	}
 	,{
 		"Name":"DevGetObjectProperties"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-devices-query-l1-1-0"
+		,"DllImport":"api-ms-win-devices-query-l1-1-0.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -470,9 +482,10 @@
 	}
 	,{
 		"Name":"DevGetObjectPropertiesEx"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-devices-query-l1-1-1"
+		,"DllImport":"api-ms-win-devices-query-l1-1-1.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -492,9 +505,10 @@
 	}
 	,{
 		"Name":"DevFreeObjectProperties"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-devices-query-l1-1-0"
+		,"DllImport":"api-ms-win-devices-query-l1-1-0.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -507,9 +521,10 @@
 	}
 	,{
 		"Name":"DevFindProperty"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"api-ms-win-devices-query-l1-1-0"
+		,"DllImport":"api-ms-win-devices-query-l1-1-0.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEVPROPERTY","TargetKind":"Default","Api":"Devices.Properties","Parents":[]}}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

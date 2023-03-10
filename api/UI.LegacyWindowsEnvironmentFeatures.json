@@ -2,69 +2,6 @@
 
 "Constants":[
 	{
-		"Name":"EVCF_HASSETTINGS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1
-		,"Attrs":[]
-	}
-	,{
-		"Name":"EVCF_ENABLEBYDEFAULT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2
-		,"Attrs":[]
-	}
-	,{
-		"Name":"EVCF_REMOVEFROMLIST"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":4
-		,"Attrs":[]
-	}
-	,{
-		"Name":"EVCF_ENABLEBYDEFAULT_AUTO"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":8
-		,"Attrs":[]
-	}
-	,{
-		"Name":"EVCF_DONTSHOWIFZERO"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":16
-		,"Attrs":[]
-	}
-	,{
-		"Name":"EVCF_SETTINGSMODE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":32
-		,"Attrs":[]
-	}
-	,{
-		"Name":"EVCF_OUTOFDISKSPACE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":64
-		,"Attrs":[]
-	}
-	,{
-		"Name":"EVCF_USERCONSENTOBTAINED"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":128
-		,"Attrs":[]
-	}
-	,{
-		"Name":"EVCF_SYSTEMAUTORUN"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":256
-		,"Attrs":[]
-	}
-	,{
 		"Name":"EVCCBF_LASTNOTIFICATION"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -138,6 +75,26 @@
 
 ,"Types":[
 	{
+		"Name":"EMPTY_VOLUME_CACHE_FLAGS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"EVCF_HASSETTINGS","Value":1}
+			,{"Name":"EVCF_ENABLEBYDEFAULT","Value":2}
+			,{"Name":"EVCF_REMOVEFROMLIST","Value":4}
+			,{"Name":"EVCF_ENABLEBYDEFAULT_AUTO","Value":8}
+			,{"Name":"EVCF_DONTSHOWIFZERO","Value":16}
+			,{"Name":"EVCF_SETTINGSMODE","Value":32}
+			,{"Name":"EVCF_OUTOFDISKSPACE","Value":64}
+			,{"Name":"EVCF_USERCONSENTOBTAINED","Value":128}
+			,{"Name":"EVCF_SYSTEMAUTORUN","Value":256}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
 		"Name":"IEmptyVolumeCacheCallBack"
 		,"Architectures":[]
 		,"Platform":"windows5.0"
@@ -147,6 +104,7 @@
 		,"Methods":[
 			{
 				"Name":"ScanProgress"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -162,6 +120,7 @@
 			}
 			,{
 				"Name":"PurgeProgress"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -188,6 +147,7 @@
 		,"Methods":[
 			{
 				"Name":"Initialize"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -200,11 +160,12 @@
 					,{"Name":"pcwszVolume","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 					,{"Name":"ppwszDisplayName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"ppwszDescription","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
-					,{"Name":"pdwFlags","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+					,{"Name":"pdwFlags","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"EMPTY_VOLUME_CACHE_FLAGS","TargetKind":"Default","Api":"UI.LegacyWindowsEnvironmentFeatures","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
 				"Name":"GetSpaceUsed"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -219,6 +180,7 @@
 			}
 			,{
 				"Name":"Purge"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -233,6 +195,7 @@
 			}
 			,{
 				"Name":"ShowProperties"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -246,6 +209,7 @@
 			}
 			,{
 				"Name":"Deactivate"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -254,7 +218,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pdwFlags","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+					{"Name":"pdwFlags","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"EMPTY_VOLUME_CACHE_FLAGS","TargetKind":"Default","Api":"UI.LegacyWindowsEnvironmentFeatures","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -269,6 +233,7 @@
 		,"Methods":[
 			{
 				"Name":"InitializeEx"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -283,7 +248,7 @@
 					,{"Name":"ppwszDisplayName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"ppwszDescription","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"ppwszBtnText","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
-					,{"Name":"pdwFlags","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+					,{"Name":"pdwFlags","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"EMPTY_VOLUME_CACHE_FLAGS","TargetKind":"Default","Api":"UI.LegacyWindowsEnvironmentFeatures","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -298,6 +263,7 @@
 		,"Methods":[
 			{
 				"Name":"SetAbortCallback"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -311,6 +277,7 @@
 			}
 			,{
 				"Name":"SetProgressFeedback"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -326,7 +293,7 @@
 		]
 	}
 	,{
-		"Name":"_reconcilef"
+		"Name":"RECONCILEF"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
@@ -354,6 +321,7 @@
 		,"Methods":[
 			{
 				"Name":"Reconcile"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -370,11 +338,12 @@
 					,{"Name":"rgpmkOtherInput","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":4,"Child":{"Kind":"ApiRef","Name":"IMoniker","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["In","Out"]}
 					,{"Name":"plOutIndex","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["Out"]}
 					,{"Name":"pstgNewResidues","Type":{"Kind":"ApiRef","Name":"IStorage","TargetKind":"Com","Api":"System.Com.StructuredStorage","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Reserved"]}
+					,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 				]
 			}
 			,{
 				"Name":"GetProgressFeedbackMaxEstimate"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -398,6 +367,7 @@
 		,"Methods":[
 			{
 				"Name":"IsMonikerInBriefcase"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -421,6 +391,7 @@
 		,"Methods":[
 			{
 				"Name":"SetSafeMode"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -434,6 +405,7 @@
 			}
 			,{
 				"Name":"EnsureUpdateHTML"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -446,6 +418,7 @@
 			}
 			,{
 				"Name":"SetScheme"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -460,6 +433,7 @@
 			}
 			,{
 				"Name":"GetScheme"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -485,6 +459,7 @@
 		,"Methods":[
 			{
 				"Name":"ReReadWallpaper"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -497,6 +472,7 @@
 			}
 			,{
 				"Name":"GetADObjectFlags"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -511,6 +487,7 @@
 			}
 			,{
 				"Name":"UpdateAllDesktopSubscriptions"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
@@ -523,6 +500,7 @@
 			}
 			,{
 				"Name":"MakeDynamicChanges"
+				,"CallingConvention":"Default"
 				,"NoReturn":false
 				,"SetLastError":false
 				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}

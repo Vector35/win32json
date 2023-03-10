@@ -117,7 +117,7 @@
 		"Name":"ALL_TRANSPORTS"
 		,"Type":{"Kind":"Native","Name":"String"}
 		,"ValueType":"String"
-		,"Value":"M\u0000\u0000\u0000"
+		,"Value":"M"
 		,"Attrs":[]
 	}
 	,{
@@ -620,6 +620,33 @@
 		]
 	}
 	,{
+		"Name":"NCB"
+		,"Architectures":["X86"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"ncb_command","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"ncb_retcode","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"ncb_lsn","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"ncb_num","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"ncb_buffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"ncb_length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"ncb_callname","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"ncb_name","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"ncb_rto","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"ncb_sto","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"ncb_post","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+			,{"Name":"ncb_lana_num","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"ncb_cmd_cplt","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"ncb_reserve","Type":{"Kind":"Array","Shape":{"Size":10},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"ncb_event","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
 		"Name":"ADAPTER_STATUS"
 		,"Architectures":[]
 		,"Platform":null
@@ -769,41 +796,15 @@
 		,"NestedTypes":[
 		]
 	}
-	,{
-		"Name":"NCB"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"ncb_command","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"ncb_retcode","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"ncb_lsn","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"ncb_num","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"ncb_buffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
-			,{"Name":"ncb_length","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"ncb_callname","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
-			,{"Name":"ncb_name","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
-			,{"Name":"ncb_rto","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"ncb_sto","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"ncb_post","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"ncb_lana_num","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"ncb_cmd_cplt","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"ncb_reserve","Type":{"Kind":"Array","Shape":{"Size":10},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
-			,{"Name":"ncb_event","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
 ]
 
 ,"Functions":[
 	{
 		"Name":"Netbios"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"NETAPI32"
+		,"DllImport":"NETAPI32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Byte"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]

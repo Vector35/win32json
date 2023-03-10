@@ -6680,11 +6680,163 @@
 		]
 	}
 	,{
+		"Name":"JET_OBJECTINFO"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cbStruct","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"objtyp","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dtCreate","Type":{"Kind":"Native","Name":"Double"},"Attrs":[]}
+			,{"Name":"dtUpdate","Type":{"Kind":"Native","Name":"Double"},"Attrs":[]}
+			,{"Name":"grbit","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"cRecord","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"cPage","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"JET_THREADSTATS2"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cbStruct","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"cPageReferenced","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"cPageRead","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"cPagePreread","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"cPageDirtied","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"cPageRedirtied","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"cLogRecord","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"cbLogRecord","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"cusecPageCacheMiss","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"cPageCacheMiss","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"JET_COMMIT_ID"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"signLog","Type":{"Kind":"ApiRef","Name":"JET_SIGNATURE","TargetKind":"Default","Api":"Storage.Jet","Parents":[]},"Attrs":[]}
+			,{"Name":"reserved","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+			,{"Name":"commitId","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"JET_RBSINFOMISC"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"lRBSGeneration","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+			,{"Name":"logtimeCreate","Type":{"Kind":"ApiRef","Name":"JET_LOGTIME","TargetKind":"Default","Api":"Storage.Jet","Parents":[]},"Attrs":[]}
+			,{"Name":"logtimeCreatePrevRBS","Type":{"Kind":"ApiRef","Name":"JET_LOGTIME","TargetKind":"Default","Api":"Storage.Jet","Parents":[]},"Attrs":[]}
+			,{"Name":"ulMajor","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ulMinor","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"cbLogicalFileSize","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"JET_RBSREVERTINFOMISC"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"lGenMinRevertStart","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+			,{"Name":"lGenMaxRevertStart","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+			,{"Name":"lGenMinRevertEnd","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+			,{"Name":"lGenMaxRevertEnd","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+			,{"Name":"logtimeRevertFrom","Type":{"Kind":"ApiRef","Name":"JET_LOGTIME","TargetKind":"Default","Api":"Storage.Jet","Parents":[]},"Attrs":[]}
+			,{"Name":"cSecRevert","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"cPagesReverted","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"JET_RECSIZE"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cbData","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"cbLongValueData","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"cbOverhead","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"cbLongValueOverhead","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"cNonTaggedColumns","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"cTaggedColumns","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"cLongValues","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"cMultiValues","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"JET_RECSIZE2"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cbData","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"cbLongValueData","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"cbOverhead","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"cbLongValueOverhead","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"cNonTaggedColumns","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"cTaggedColumns","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"cLongValues","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"cMultiValues","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"cCompressedColumns","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"cbDataCompressed","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"cbLongValueDataCompressed","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"JET_INDEXID"
+		,"Architectures":["X86"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cbStruct","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"rgbIndexId","Type":{"Kind":"Array","Shape":{"Size":12},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
 		"Name":"JET_PFNSTATUS"
 		,"Architectures":[]
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
@@ -6726,7 +6878,7 @@
 		]
 	}
 	,{
-		"Name":"CONVERT_A"
+		"Name":"JET_CONVERT_A"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -6767,7 +6919,7 @@
 		]
 	}
 	,{
-		"Name":"CONVERT_W"
+		"Name":"JET_CONVERT_W"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -6813,6 +6965,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
@@ -6892,11 +7045,11 @@
 	}
 	,{
 		"Name":"JET_OBJECTINFO"
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":4
 		,"Fields":[
 			{"Name":"cbStruct","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"objtyp","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -8320,11 +8473,11 @@
 	}
 	,{
 		"Name":"JET_THREADSTATS2"
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":4
 		,"Fields":[
 			{"Name":"cbStruct","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"cPageReferenced","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -8425,11 +8578,11 @@
 	}
 	,{
 		"Name":"JET_COMMIT_ID"
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":4
 		,"Fields":[
 			{"Name":"signLog","Type":{"Kind":"ApiRef","Name":"JET_SIGNATURE","TargetKind":"Default","Api":"Storage.Jet","Parents":[]},"Attrs":[]}
 			,{"Name":"reserved","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -8444,6 +8597,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
@@ -8457,11 +8611,11 @@
 	}
 	,{
 		"Name":"JET_RBSINFOMISC"
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":4
 		,"Fields":[
 			{"Name":"lRBSGeneration","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"logtimeCreate","Type":{"Kind":"ApiRef","Name":"JET_LOGTIME","TargetKind":"Default","Api":"Storage.Jet","Parents":[]},"Attrs":[]}
@@ -8475,11 +8629,11 @@
 	}
 	,{
 		"Name":"JET_RBSREVERTINFOMISC"
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":4
 		,"Fields":[
 			{"Name":"lGenMinRevertStart","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"lGenMaxRevertStart","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -8690,6 +8844,7 @@
 		,"Platform":null
 		,"NoReturn":false
 		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
@@ -8703,11 +8858,11 @@
 	}
 	,{
 		"Name":"JET_RECSIZE"
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":4
 		,"Fields":[
 			{"Name":"cbData","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"cbLongValueData","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -8723,11 +8878,11 @@
 	}
 	,{
 		"Name":"JET_RECSIZE2"
-		,"Architectures":["X64","Arm64"]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":0
+		,"PackingSize":4
 		,"Fields":[
 			{"Name":"cbData","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"cbLongValueData","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
@@ -8812,165 +8967,15 @@
 		,"NestedTypes":[
 		]
 	}
-	,{
-		"Name":"JET_INDEXID"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"cbStruct","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"rgbIndexId","Type":{"Kind":"Array","Shape":{"Size":12},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"JET_OBJECTINFO"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":4
-		,"Fields":[
-			{"Name":"cbStruct","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"objtyp","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"dtCreate","Type":{"Kind":"Native","Name":"Double"},"Attrs":[]}
-			,{"Name":"dtUpdate","Type":{"Kind":"Native","Name":"Double"},"Attrs":[]}
-			,{"Name":"grbit","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"cRecord","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"cPage","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"JET_THREADSTATS2"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":4
-		,"Fields":[
-			{"Name":"cbStruct","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"cPageReferenced","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"cPageRead","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"cPagePreread","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"cPageDirtied","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"cPageRedirtied","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"cLogRecord","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"cbLogRecord","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"cusecPageCacheMiss","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"cPageCacheMiss","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"JET_COMMIT_ID"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":4
-		,"Fields":[
-			{"Name":"signLog","Type":{"Kind":"ApiRef","Name":"JET_SIGNATURE","TargetKind":"Default","Api":"Storage.Jet","Parents":[]},"Attrs":[]}
-			,{"Name":"reserved","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"commitId","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"JET_RBSINFOMISC"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":4
-		,"Fields":[
-			{"Name":"lRBSGeneration","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"logtimeCreate","Type":{"Kind":"ApiRef","Name":"JET_LOGTIME","TargetKind":"Default","Api":"Storage.Jet","Parents":[]},"Attrs":[]}
-			,{"Name":"logtimeCreatePrevRBS","Type":{"Kind":"ApiRef","Name":"JET_LOGTIME","TargetKind":"Default","Api":"Storage.Jet","Parents":[]},"Attrs":[]}
-			,{"Name":"ulMajor","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"ulMinor","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"cbLogicalFileSize","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"JET_RBSREVERTINFOMISC"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":4
-		,"Fields":[
-			{"Name":"lGenMinRevertStart","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"lGenMaxRevertStart","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"lGenMinRevertEnd","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"lGenMaxRevertEnd","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"logtimeRevertFrom","Type":{"Kind":"ApiRef","Name":"JET_LOGTIME","TargetKind":"Default","Api":"Storage.Jet","Parents":[]},"Attrs":[]}
-			,{"Name":"cSecRevert","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"cPagesReverted","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"JET_RECSIZE"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":4
-		,"Fields":[
-			{"Name":"cbData","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"cbLongValueData","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"cbOverhead","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"cbLongValueOverhead","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"cNonTaggedColumns","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"cTaggedColumns","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"cLongValues","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"cMultiValues","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"JET_RECSIZE2"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":4
-		,"Fields":[
-			{"Name":"cbData","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"cbLongValueData","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"cbOverhead","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"cbLongValueOverhead","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"cNonTaggedColumns","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"cTaggedColumns","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"cLongValues","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"cMultiValues","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"cCompressedColumns","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"cbDataCompressed","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"cbLongValueDataCompressed","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
 ]
 
 ,"Functions":[
 	{
 		"Name":"JetInit"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8982,9 +8987,10 @@
 	}
 	,{
 		"Name":"JetInit2"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -8997,9 +9003,10 @@
 	}
 	,{
 		"Name":"JetInit3A"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9013,9 +9020,10 @@
 	}
 	,{
 		"Name":"JetInit3W"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9029,9 +9037,10 @@
 	}
 	,{
 		"Name":"JetCreateInstanceA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9044,9 +9053,10 @@
 	}
 	,{
 		"Name":"JetCreateInstanceW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9059,9 +9069,10 @@
 	}
 	,{
 		"Name":"JetCreateInstance2A"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9076,9 +9087,10 @@
 	}
 	,{
 		"Name":"JetCreateInstance2W"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9093,9 +9105,10 @@
 	}
 	,{
 		"Name":"JetGetInstanceMiscInfo"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9110,9 +9123,10 @@
 	}
 	,{
 		"Name":"JetTerm"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9124,9 +9138,10 @@
 	}
 	,{
 		"Name":"JetTerm2"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9139,9 +9154,10 @@
 	}
 	,{
 		"Name":"JetStopService"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9152,9 +9168,10 @@
 	}
 	,{
 		"Name":"JetStopServiceInstance"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9166,9 +9183,10 @@
 	}
 	,{
 		"Name":"JetStopServiceInstance2"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9181,9 +9199,10 @@
 	}
 	,{
 		"Name":"JetStopBackup"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9194,9 +9213,10 @@
 	}
 	,{
 		"Name":"JetStopBackupInstance"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9208,9 +9228,10 @@
 	}
 	,{
 		"Name":"JetSetSystemParameterA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9226,9 +9247,10 @@
 	}
 	,{
 		"Name":"JetSetSystemParameterW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9244,9 +9266,10 @@
 	}
 	,{
 		"Name":"JetGetSystemParameterA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9263,9 +9286,10 @@
 	}
 	,{
 		"Name":"JetGetSystemParameterW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9282,9 +9306,10 @@
 	}
 	,{
 		"Name":"JetEnableMultiInstanceA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9298,9 +9323,10 @@
 	}
 	,{
 		"Name":"JetEnableMultiInstanceW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9314,9 +9340,10 @@
 	}
 	,{
 		"Name":"JetGetThreadStats"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9329,9 +9356,10 @@
 	}
 	,{
 		"Name":"JetBeginSessionA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9346,9 +9374,10 @@
 	}
 	,{
 		"Name":"JetBeginSessionW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9363,9 +9392,10 @@
 	}
 	,{
 		"Name":"JetDupSession"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9378,9 +9408,10 @@
 	}
 	,{
 		"Name":"JetEndSession"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9393,9 +9424,10 @@
 	}
 	,{
 		"Name":"JetGetVersion"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9408,9 +9440,10 @@
 	}
 	,{
 		"Name":"JetIdle"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9423,9 +9456,10 @@
 	}
 	,{
 		"Name":"JetCreateDatabaseA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9441,9 +9475,10 @@
 	}
 	,{
 		"Name":"JetCreateDatabaseW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9459,9 +9494,10 @@
 	}
 	,{
 		"Name":"JetCreateDatabase2A"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9477,9 +9513,10 @@
 	}
 	,{
 		"Name":"JetCreateDatabase2W"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9495,9 +9532,10 @@
 	}
 	,{
 		"Name":"JetAttachDatabaseA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9511,9 +9549,10 @@
 	}
 	,{
 		"Name":"JetAttachDatabaseW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9527,9 +9566,10 @@
 	}
 	,{
 		"Name":"JetAttachDatabase2A"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9544,9 +9584,10 @@
 	}
 	,{
 		"Name":"JetAttachDatabase2W"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9561,9 +9602,10 @@
 	}
 	,{
 		"Name":"JetDetachDatabaseA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9576,9 +9618,10 @@
 	}
 	,{
 		"Name":"JetDetachDatabaseW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9591,9 +9634,10 @@
 	}
 	,{
 		"Name":"JetDetachDatabase2A"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9607,9 +9651,10 @@
 	}
 	,{
 		"Name":"JetDetachDatabase2W"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9623,9 +9668,10 @@
 	}
 	,{
 		"Name":"JetGetObjectInfoA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9644,9 +9690,10 @@
 	}
 	,{
 		"Name":"JetGetObjectInfoW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9665,9 +9712,10 @@
 	}
 	,{
 		"Name":"JetGetTableInfoA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9683,9 +9731,10 @@
 	}
 	,{
 		"Name":"JetGetTableInfoW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9701,9 +9750,10 @@
 	}
 	,{
 		"Name":"JetCreateTableA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9720,9 +9770,10 @@
 	}
 	,{
 		"Name":"JetCreateTableW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9739,9 +9790,10 @@
 	}
 	,{
 		"Name":"JetCreateTableColumnIndexA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9755,9 +9807,10 @@
 	}
 	,{
 		"Name":"JetCreateTableColumnIndexW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9771,9 +9824,10 @@
 	}
 	,{
 		"Name":"JetCreateTableColumnIndex2A"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9787,9 +9841,10 @@
 	}
 	,{
 		"Name":"JetCreateTableColumnIndex2W"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9803,9 +9858,10 @@
 	}
 	,{
 		"Name":"JetCreateTableColumnIndex3A"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9819,9 +9875,10 @@
 	}
 	,{
 		"Name":"JetCreateTableColumnIndex3W"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9835,9 +9892,10 @@
 	}
 	,{
 		"Name":"JetCreateTableColumnIndex4A"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9851,9 +9909,10 @@
 	}
 	,{
 		"Name":"JetCreateTableColumnIndex4W"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9867,9 +9926,10 @@
 	}
 	,{
 		"Name":"JetDeleteTableA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9883,9 +9943,10 @@
 	}
 	,{
 		"Name":"JetDeleteTableW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9899,9 +9960,10 @@
 	}
 	,{
 		"Name":"JetRenameTableA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9916,9 +9978,10 @@
 	}
 	,{
 		"Name":"JetRenameTableW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9933,9 +9996,10 @@
 	}
 	,{
 		"Name":"JetGetTableColumnInfoA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9952,9 +10016,10 @@
 	}
 	,{
 		"Name":"JetGetTableColumnInfoW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9971,9 +10036,10 @@
 	}
 	,{
 		"Name":"JetGetColumnInfoA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -9991,9 +10057,10 @@
 	}
 	,{
 		"Name":"JetGetColumnInfoW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10011,9 +10078,10 @@
 	}
 	,{
 		"Name":"JetAddColumnA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10031,9 +10099,10 @@
 	}
 	,{
 		"Name":"JetAddColumnW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10051,9 +10120,10 @@
 	}
 	,{
 		"Name":"JetDeleteColumnA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10067,9 +10137,10 @@
 	}
 	,{
 		"Name":"JetDeleteColumnW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10083,9 +10154,10 @@
 	}
 	,{
 		"Name":"JetDeleteColumn2A"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10100,9 +10172,10 @@
 	}
 	,{
 		"Name":"JetDeleteColumn2W"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10117,9 +10190,10 @@
 	}
 	,{
 		"Name":"JetRenameColumnA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10135,9 +10209,10 @@
 	}
 	,{
 		"Name":"JetRenameColumnW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10153,9 +10228,10 @@
 	}
 	,{
 		"Name":"JetSetColumnDefaultValueA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10173,9 +10249,10 @@
 	}
 	,{
 		"Name":"JetSetColumnDefaultValueW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10193,9 +10270,10 @@
 	}
 	,{
 		"Name":"JetGetTableIndexInfoA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10212,9 +10290,10 @@
 	}
 	,{
 		"Name":"JetGetTableIndexInfoW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10231,9 +10310,10 @@
 	}
 	,{
 		"Name":"JetGetIndexInfoA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10251,9 +10331,10 @@
 	}
 	,{
 		"Name":"JetGetIndexInfoW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10271,9 +10352,10 @@
 	}
 	,{
 		"Name":"JetCreateIndexA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10291,9 +10373,10 @@
 	}
 	,{
 		"Name":"JetCreateIndexW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10311,9 +10394,10 @@
 	}
 	,{
 		"Name":"JetCreateIndex2A"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10328,9 +10412,10 @@
 	}
 	,{
 		"Name":"JetCreateIndex2W"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10345,9 +10430,10 @@
 	}
 	,{
 		"Name":"JetCreateIndex3A"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10362,9 +10448,10 @@
 	}
 	,{
 		"Name":"JetCreateIndex3W"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10379,9 +10466,10 @@
 	}
 	,{
 		"Name":"JetCreateIndex4A"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10396,9 +10484,10 @@
 	}
 	,{
 		"Name":"JetCreateIndex4W"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10413,9 +10502,10 @@
 	}
 	,{
 		"Name":"JetDeleteIndexA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10429,9 +10519,10 @@
 	}
 	,{
 		"Name":"JetDeleteIndexW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10445,9 +10536,10 @@
 	}
 	,{
 		"Name":"JetBeginTransaction"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10459,9 +10551,10 @@
 	}
 	,{
 		"Name":"JetBeginTransaction2"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10474,9 +10567,10 @@
 	}
 	,{
 		"Name":"JetBeginTransaction3"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10490,9 +10584,10 @@
 	}
 	,{
 		"Name":"JetCommitTransaction"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10505,9 +10600,10 @@
 	}
 	,{
 		"Name":"JetCommitTransaction2"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10522,9 +10618,10 @@
 	}
 	,{
 		"Name":"JetRollback"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10537,9 +10634,10 @@
 	}
 	,{
 		"Name":"JetGetDatabaseInfoA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10555,9 +10653,10 @@
 	}
 	,{
 		"Name":"JetGetDatabaseInfoW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10573,9 +10672,10 @@
 	}
 	,{
 		"Name":"JetGetDatabaseFileInfoA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10590,9 +10690,10 @@
 	}
 	,{
 		"Name":"JetGetDatabaseFileInfoW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10607,9 +10708,10 @@
 	}
 	,{
 		"Name":"JetOpenDatabaseA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10625,9 +10727,10 @@
 	}
 	,{
 		"Name":"JetOpenDatabaseW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10643,9 +10746,10 @@
 	}
 	,{
 		"Name":"JetCloseDatabase"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10659,9 +10763,10 @@
 	}
 	,{
 		"Name":"JetOpenTableA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10679,9 +10784,10 @@
 	}
 	,{
 		"Name":"JetOpenTableW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10699,9 +10805,10 @@
 	}
 	,{
 		"Name":"JetSetTableSequential"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10715,9 +10822,10 @@
 	}
 	,{
 		"Name":"JetResetTableSequential"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10731,9 +10839,10 @@
 	}
 	,{
 		"Name":"JetCloseTable"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10746,9 +10855,10 @@
 	}
 	,{
 		"Name":"JetDelete"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10761,9 +10871,10 @@
 	}
 	,{
 		"Name":"JetUpdate"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10779,9 +10890,10 @@
 	}
 	,{
 		"Name":"JetUpdate2"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10798,9 +10910,10 @@
 	}
 	,{
 		"Name":"JetEscrowUpdate"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10820,9 +10933,10 @@
 	}
 	,{
 		"Name":"JetRetrieveColumn"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10841,9 +10955,10 @@
 	}
 	,{
 		"Name":"JetRetrieveColumns"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10858,9 +10973,10 @@
 	}
 	,{
 		"Name":"JetEnumerateColumns"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10881,9 +10997,10 @@
 	}
 	,{
 		"Name":"JetGetRecordSize"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10898,9 +11015,10 @@
 	}
 	,{
 		"Name":"JetGetRecordSize2"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10915,9 +11033,10 @@
 	}
 	,{
 		"Name":"JetSetColumn"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10935,9 +11054,10 @@
 	}
 	,{
 		"Name":"JetSetColumns"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10952,9 +11072,10 @@
 	}
 	,{
 		"Name":"JetPrepareUpdate"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10968,9 +11089,10 @@
 	}
 	,{
 		"Name":"JetGetRecordPosition"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -10985,9 +11107,10 @@
 	}
 	,{
 		"Name":"JetGotoPosition"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11001,9 +11124,10 @@
 	}
 	,{
 		"Name":"JetGetCursorInfo"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11019,9 +11143,10 @@
 	}
 	,{
 		"Name":"JetDupCursor"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11036,9 +11161,10 @@
 	}
 	,{
 		"Name":"JetGetCurrentIndexA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11053,9 +11179,10 @@
 	}
 	,{
 		"Name":"JetGetCurrentIndexW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11070,9 +11197,10 @@
 	}
 	,{
 		"Name":"JetSetCurrentIndexA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11086,9 +11214,10 @@
 	}
 	,{
 		"Name":"JetSetCurrentIndexW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11102,9 +11231,10 @@
 	}
 	,{
 		"Name":"JetSetCurrentIndex2A"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11119,9 +11249,10 @@
 	}
 	,{
 		"Name":"JetSetCurrentIndex2W"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11136,9 +11267,10 @@
 	}
 	,{
 		"Name":"JetSetCurrentIndex3A"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11154,9 +11286,10 @@
 	}
 	,{
 		"Name":"JetSetCurrentIndex3W"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11172,9 +11305,10 @@
 	}
 	,{
 		"Name":"JetSetCurrentIndex4A"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11191,9 +11325,10 @@
 	}
 	,{
 		"Name":"JetSetCurrentIndex4W"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11210,9 +11345,10 @@
 	}
 	,{
 		"Name":"JetMove"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11227,9 +11363,10 @@
 	}
 	,{
 		"Name":"JetSetCursorFilter"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11245,9 +11382,10 @@
 	}
 	,{
 		"Name":"JetGetLock"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11261,9 +11399,10 @@
 	}
 	,{
 		"Name":"JetMakeKey"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11279,9 +11418,10 @@
 	}
 	,{
 		"Name":"JetSeek"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11295,9 +11435,10 @@
 	}
 	,{
 		"Name":"JetPrereadKeys"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11315,9 +11456,10 @@
 	}
 	,{
 		"Name":"JetPrereadIndexRanges"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11336,9 +11478,10 @@
 	}
 	,{
 		"Name":"JetGetBookmark"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11354,9 +11497,10 @@
 	}
 	,{
 		"Name":"JetGetSecondaryIndexBookmark"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11376,9 +11520,10 @@
 	}
 	,{
 		"Name":"JetCompactA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11389,15 +11534,16 @@
 			,{"Name":"szDatabaseSrc","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"SByte"}},"Attrs":["In"]}
 			,{"Name":"szDatabaseDest","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"SByte"}},"Attrs":["In"]}
 			,{"Name":"pfnStatus","Type":{"Kind":"ApiRef","Name":"JET_PFNSTATUS","TargetKind":"FunctionPointer","Api":"Storage.Jet","Parents":[]},"Attrs":["In"]}
-			,{"Name":"pconvert","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CONVERT_A","TargetKind":"Default","Api":"Storage.Jet","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"pconvert","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"JET_CONVERT_A","TargetKind":"Default","Api":"Storage.Jet","Parents":[]}},"Attrs":["In","Optional"]}
 			,{"Name":"grbit","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"JetCompactW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11408,15 +11554,16 @@
 			,{"Name":"szDatabaseSrc","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":["In"]}
 			,{"Name":"szDatabaseDest","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":["In"]}
 			,{"Name":"pfnStatus","Type":{"Kind":"ApiRef","Name":"JET_PFNSTATUS","TargetKind":"FunctionPointer","Api":"Storage.Jet","Parents":[]},"Attrs":["In"]}
-			,{"Name":"pconvert","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CONVERT_W","TargetKind":"Default","Api":"Storage.Jet","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"pconvert","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"JET_CONVERT_W","TargetKind":"Default","Api":"Storage.Jet","Parents":[]}},"Attrs":["In","Optional"]}
 			,{"Name":"grbit","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"JetDefragmentA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11433,9 +11580,10 @@
 	}
 	,{
 		"Name":"JetDefragmentW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11452,9 +11600,10 @@
 	}
 	,{
 		"Name":"JetDefragment2A"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11472,9 +11621,10 @@
 	}
 	,{
 		"Name":"JetDefragment2W"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11492,9 +11642,10 @@
 	}
 	,{
 		"Name":"JetDefragment3A"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11513,9 +11664,10 @@
 	}
 	,{
 		"Name":"JetDefragment3W"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11534,9 +11686,10 @@
 	}
 	,{
 		"Name":"JetSetDatabaseSizeA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11551,9 +11704,10 @@
 	}
 	,{
 		"Name":"JetSetDatabaseSizeW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11568,9 +11722,10 @@
 	}
 	,{
 		"Name":"JetGrowDatabase"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11585,9 +11740,10 @@
 	}
 	,{
 		"Name":"JetResizeDatabase"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11603,9 +11759,10 @@
 	}
 	,{
 		"Name":"JetSetSessionContext"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11618,9 +11775,10 @@
 	}
 	,{
 		"Name":"JetResetSessionContext"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11632,9 +11790,10 @@
 	}
 	,{
 		"Name":"JetGotoBookmark"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11649,9 +11808,10 @@
 	}
 	,{
 		"Name":"JetGotoSecondaryIndexBookmark"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11669,9 +11829,10 @@
 	}
 	,{
 		"Name":"JetIntersectIndexes"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11687,9 +11848,10 @@
 	}
 	,{
 		"Name":"JetComputeStats"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11702,9 +11864,10 @@
 	}
 	,{
 		"Name":"JetOpenTempTable"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11721,9 +11884,10 @@
 	}
 	,{
 		"Name":"JetOpenTempTable2"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11741,9 +11905,10 @@
 	}
 	,{
 		"Name":"JetOpenTempTable3"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11761,9 +11926,10 @@
 	}
 	,{
 		"Name":"JetOpenTemporaryTable"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11776,9 +11942,10 @@
 	}
 	,{
 		"Name":"JetOpenTemporaryTable2"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11791,9 +11958,10 @@
 	}
 	,{
 		"Name":"JetBackupA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11807,9 +11975,10 @@
 	}
 	,{
 		"Name":"JetBackupW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11823,9 +11992,10 @@
 	}
 	,{
 		"Name":"JetBackupInstanceA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11840,9 +12010,10 @@
 	}
 	,{
 		"Name":"JetBackupInstanceW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11857,9 +12028,10 @@
 	}
 	,{
 		"Name":"JetRestoreA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11872,9 +12044,10 @@
 	}
 	,{
 		"Name":"JetRestoreW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11887,9 +12060,10 @@
 	}
 	,{
 		"Name":"JetRestore2A"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11903,9 +12077,10 @@
 	}
 	,{
 		"Name":"JetRestore2W"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11919,9 +12094,10 @@
 	}
 	,{
 		"Name":"JetRestoreInstanceA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11936,9 +12112,10 @@
 	}
 	,{
 		"Name":"JetRestoreInstanceW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11953,9 +12130,10 @@
 	}
 	,{
 		"Name":"JetSetIndexRange"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11969,9 +12147,10 @@
 	}
 	,{
 		"Name":"JetIndexRecordCount"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -11986,9 +12165,10 @@
 	}
 	,{
 		"Name":"JetRetrieveKey"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12005,9 +12185,10 @@
 	}
 	,{
 		"Name":"JetBeginExternalBackup"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12019,9 +12200,10 @@
 	}
 	,{
 		"Name":"JetBeginExternalBackupInstance"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12034,9 +12216,10 @@
 	}
 	,{
 		"Name":"JetGetAttachInfoA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12050,9 +12233,10 @@
 	}
 	,{
 		"Name":"JetGetAttachInfoW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12066,9 +12250,10 @@
 	}
 	,{
 		"Name":"JetGetAttachInfoInstanceA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12083,9 +12268,10 @@
 	}
 	,{
 		"Name":"JetGetAttachInfoInstanceW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12100,9 +12286,10 @@
 	}
 	,{
 		"Name":"JetOpenFileA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12117,9 +12304,10 @@
 	}
 	,{
 		"Name":"JetOpenFileW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12134,9 +12322,10 @@
 	}
 	,{
 		"Name":"JetOpenFileInstanceA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12152,9 +12341,10 @@
 	}
 	,{
 		"Name":"JetOpenFileInstanceW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12170,9 +12360,10 @@
 	}
 	,{
 		"Name":"JetReadFile"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12187,9 +12378,10 @@
 	}
 	,{
 		"Name":"JetReadFileInstance"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12205,9 +12397,10 @@
 	}
 	,{
 		"Name":"JetCloseFile"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12219,9 +12412,10 @@
 	}
 	,{
 		"Name":"JetCloseFileInstance"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12234,9 +12428,10 @@
 	}
 	,{
 		"Name":"JetGetLogInfoA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12250,9 +12445,10 @@
 	}
 	,{
 		"Name":"JetGetLogInfoW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12266,9 +12462,10 @@
 	}
 	,{
 		"Name":"JetGetLogInfoInstanceA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12283,9 +12480,10 @@
 	}
 	,{
 		"Name":"JetGetLogInfoInstanceW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12300,9 +12498,10 @@
 	}
 	,{
 		"Name":"JetGetLogInfoInstance2A"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12318,9 +12517,10 @@
 	}
 	,{
 		"Name":"JetGetLogInfoInstance2W"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12336,9 +12536,10 @@
 	}
 	,{
 		"Name":"JetGetTruncateLogInfoInstanceA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12353,9 +12554,10 @@
 	}
 	,{
 		"Name":"JetGetTruncateLogInfoInstanceW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12370,9 +12572,10 @@
 	}
 	,{
 		"Name":"JetTruncateLog"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12383,9 +12586,10 @@
 	}
 	,{
 		"Name":"JetTruncateLogInstance"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12397,9 +12601,10 @@
 	}
 	,{
 		"Name":"JetEndExternalBackup"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12410,9 +12615,10 @@
 	}
 	,{
 		"Name":"JetEndExternalBackupInstance"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12424,9 +12630,10 @@
 	}
 	,{
 		"Name":"JetEndExternalBackupInstance2"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12439,9 +12646,10 @@
 	}
 	,{
 		"Name":"JetExternalRestoreA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12460,9 +12668,10 @@
 	}
 	,{
 		"Name":"JetExternalRestoreW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12481,9 +12690,10 @@
 	}
 	,{
 		"Name":"JetExternalRestore2A"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12504,9 +12714,10 @@
 	}
 	,{
 		"Name":"JetExternalRestore2W"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12527,9 +12738,10 @@
 	}
 	,{
 		"Name":"JetRegisterCallback"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12546,9 +12758,10 @@
 	}
 	,{
 		"Name":"JetUnregisterCallback"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12563,9 +12776,10 @@
 	}
 	,{
 		"Name":"JetGetInstanceInfoA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12578,9 +12792,10 @@
 	}
 	,{
 		"Name":"JetGetInstanceInfoW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12593,9 +12808,10 @@
 	}
 	,{
 		"Name":"JetFreeBuffer"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12607,9 +12823,10 @@
 	}
 	,{
 		"Name":"JetSetLS"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12624,9 +12841,10 @@
 	}
 	,{
 		"Name":"JetGetLS"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12641,9 +12859,10 @@
 	}
 	,{
 		"Name":"JetOSSnapshotPrepare"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12656,9 +12875,10 @@
 	}
 	,{
 		"Name":"JetOSSnapshotPrepareInstance"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12672,9 +12892,10 @@
 	}
 	,{
 		"Name":"JetOSSnapshotFreezeA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12689,9 +12910,10 @@
 	}
 	,{
 		"Name":"JetOSSnapshotFreezeW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12706,9 +12928,10 @@
 	}
 	,{
 		"Name":"JetOSSnapshotThaw"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12721,9 +12944,10 @@
 	}
 	,{
 		"Name":"JetOSSnapshotAbort"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12736,9 +12960,10 @@
 	}
 	,{
 		"Name":"JetOSSnapshotTruncateLog"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12751,9 +12976,10 @@
 	}
 	,{
 		"Name":"JetOSSnapshotTruncateLogInstance"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12767,9 +12993,10 @@
 	}
 	,{
 		"Name":"JetOSSnapshotGetFreezeInfoA"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12784,9 +13011,10 @@
 	}
 	,{
 		"Name":"JetOSSnapshotGetFreezeInfoW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12801,9 +13029,10 @@
 	}
 	,{
 		"Name":"JetOSSnapshotEnd"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12816,9 +13045,10 @@
 	}
 	,{
 		"Name":"JetConfigureProcessForCrashDump"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12830,9 +13060,10 @@
 	}
 	,{
 		"Name":"JetGetErrorInfoW"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12848,9 +13079,10 @@
 	}
 	,{
 		"Name":"JetSetSessionParameter"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12865,9 +13097,10 @@
 	}
 	,{
 		"Name":"JetGetSessionParameter"
+		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"DllImport":"ESENT"
+		,"DllImport":"ESENT.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
@@ -12885,7 +13118,7 @@
 
 ,"UnicodeAliases":[
 	"JET_RSTMAP_"
-	,"CONVERT_"
+	,"JET_CONVERT_"
 	,"JET_COLUMNBASE_"
 	,"JET_COLUMNCREATE_"
 	,"JET_USERDEFINEDDEFAULT_"
