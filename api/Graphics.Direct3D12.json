@@ -1930,7 +1930,7 @@
 		"Name":"D3D12_PREVIEW_SDK_VERSION"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
-		,"Value":707
+		,"Value":710
 		,"Attrs":[]
 	}
 	,{
@@ -2406,7 +2406,7 @@
 		"Name":"D3D12_SDK_VERSION"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
-		,"Value":608
+		,"Value":610
 		,"Attrs":[]
 	}
 	,{
@@ -3075,6 +3075,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"CLSID_D3D12DSRDeviceFactory"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"7f9bdcac-f629-455e-ab13-a807fbe9aba4"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"D3D12_SHADING_RATE_X_AXIS_SHIFT"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -3310,7 +3317,7 @@
 			{"Name":"D3D12_COMMAND_QUEUE_FLAG_NONE","Value":0}
 			,{"Name":"D3D12_COMMAND_QUEUE_FLAG_DISABLE_GPU_TIMEOUT","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_COMMAND_QUEUE_PRIORITY"
@@ -3803,6 +3810,43 @@
 		]
 	}
 	,{
+		"Name":"D3D12_LINE_RASTERIZATION_MODE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"D3D12_LINE_RASTERIZATION_MODE_ALIASED","Value":0}
+			,{"Name":"D3D12_LINE_RASTERIZATION_MODE_ALPHA_ANTIALIASED","Value":1}
+			,{"Name":"D3D12_LINE_RASTERIZATION_MODE_QUADRILATERAL_WIDE","Value":2}
+			,{"Name":"D3D12_LINE_RASTERIZATION_MODE_QUADRILATERAL_NARROW","Value":3}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"D3D12_RASTERIZER_DESC2"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"FillMode","Type":{"Kind":"ApiRef","Name":"D3D12_FILL_MODE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
+			,{"Name":"CullMode","Type":{"Kind":"ApiRef","Name":"D3D12_CULL_MODE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
+			,{"Name":"FrontCounterClockwise","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"DepthBias","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+			,{"Name":"DepthBiasClamp","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+			,{"Name":"SlopeScaledDepthBias","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+			,{"Name":"DepthClipEnable","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"LineRasterizationMode","Type":{"Kind":"ApiRef","Name":"D3D12_LINE_RASTERIZATION_MODE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
+			,{"Name":"ForcedSampleCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ConservativeRaster","Type":{"Kind":"ApiRef","Name":"D3D12_CONSERVATIVE_RASTERIZATION_MODE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
 		"Name":"ID3D12Object"
 		,"Architectures":[]
 		,"Platform":null
@@ -3930,9 +3974,9 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"pSODeclaration","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"D3D12_SO_DECLARATION_ENTRY","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
+			{"Name":"pSODeclaration","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":-1,"Child":{"Kind":"ApiRef","Name":"D3D12_SO_DECLARATION_ENTRY","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"NumEntries","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"pBufferStrides","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Const"]}
+			,{"Name":"pBufferStrides","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Const"]}
 			,{"Name":"NumStrides","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"RasterizedStream","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -3947,7 +3991,7 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"pInputElementDescs","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"D3D12_INPUT_ELEMENT_DESC","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
+			{"Name":"pInputElementDescs","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":-1,"Child":{"Kind":"ApiRef","Name":"D3D12_INPUT_ELEMENT_DESC","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"NumElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
@@ -3994,7 +4038,7 @@
 			,{"Name":"D3D12_PIPELINE_STATE_FLAG_DYNAMIC_DEPTH_BIAS","Value":4}
 			,{"Name":"D3D12_PIPELINE_STATE_FLAG_DYNAMIC_INDEX_BUFFER_STRIP_CUT","Value":8}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_GRAPHICS_PIPELINE_STATE_DESC"
@@ -4109,7 +4153,8 @@
 			,{"Name":"D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_MS","Value":25}
 			,{"Name":"D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_DEPTH_STENCIL2","Value":26}
 			,{"Name":"D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_RASTERIZER1","Value":27}
-			,{"Name":"D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_MAX_VALID","Value":28}
+			,{"Name":"D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_RASTERIZER2","Value":28}
+			,{"Name":"D3D12_PIPELINE_STATE_SUBOBJECT_TYPE_MAX_VALID","Value":29}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -4157,6 +4202,9 @@
 			,{"Name":"D3D12_FEATURE_D3D12_OPTIONS14","Value":43}
 			,{"Name":"D3D12_FEATURE_D3D12_OPTIONS15","Value":44}
 			,{"Name":"D3D12_FEATURE_D3D12_OPTIONS16","Value":45}
+			,{"Name":"D3D12_FEATURE_D3D12_OPTIONS17","Value":46}
+			,{"Name":"D3D12_FEATURE_D3D12_OPTIONS18","Value":47}
+			,{"Name":"D3D12_FEATURE_D3D12_OPTIONS19","Value":48}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -4172,7 +4220,7 @@
 			,{"Name":"D3D12_SHADER_MIN_PRECISION_SUPPORT_10_BIT","Value":1}
 			,{"Name":"D3D12_SHADER_MIN_PRECISION_SUPPORT_16_BIT","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_TILED_RESOURCES_TIER"
@@ -4258,7 +4306,7 @@
 			,{"Name":"D3D12_FORMAT_SUPPORT1_VIDEO_PROCESSOR_INPUT","Value":536870912}
 			,{"Name":"D3D12_FORMAT_SUPPORT1_VIDEO_ENCODER","Value":1073741824}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_FORMAT_SUPPORT2"
@@ -4282,7 +4330,7 @@
 			,{"Name":"D3D12_FORMAT_SUPPORT2_MULTIPLANE_OVERLAY","Value":16384}
 			,{"Name":"D3D12_FORMAT_SUPPORT2_SAMPLER_FEEDBACK","Value":32768}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_MULTISAMPLE_QUALITY_LEVEL_FLAGS"
@@ -4295,7 +4343,7 @@
 			{"Name":"D3D12_MULTISAMPLE_QUALITY_LEVELS_FLAG_NONE","Value":0}
 			,{"Name":"D3D12_MULTISAMPLE_QUALITY_LEVELS_FLAG_TILED_RESOURCE","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_CROSS_NODE_SHARING_TIER"
@@ -4425,6 +4473,7 @@
 			{"Name":"D3D_ROOT_SIGNATURE_VERSION_1","Value":1}
 			,{"Name":"D3D_ROOT_SIGNATURE_VERSION_1_0","Value":1}
 			,{"Name":"D3D_ROOT_SIGNATURE_VERSION_1_1","Value":2}
+			,{"Name":"D3D_ROOT_SIGNATURE_VERSION_1_2","Value":3}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -4600,7 +4649,7 @@
 			,{"Name":"D3D12_SHADER_CACHE_SUPPORT_SHADER_CONTROL_CLEAR","Value":32}
 			,{"Name":"D3D12_SHADER_CACHE_SUPPORT_SHADER_SESSION_DELETE","Value":64}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_FEATURE_DATA_SHADER_CACHE"
@@ -4647,7 +4696,7 @@
 			,{"Name":"D3D12_COMMAND_LIST_SUPPORT_FLAG_VIDEO_PROCESS","Value":32}
 			,{"Name":"D3D12_COMMAND_LIST_SUPPORT_FLAG_VIDEO_ENCODE","Value":64}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_FEATURE_DATA_D3D12_OPTIONS3"
@@ -5052,7 +5101,56 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"DynamicDepthBiasSupported","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"Reserved","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"GPUUploadHeapSupported","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"D3D12_FEATURE_DATA_D3D12_OPTIONS17"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"NonNormalizedCoordinateSamplersSupported","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"ManualWriteTrackingResourceSupported","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"D3D12_FEATURE_DATA_D3D12_OPTIONS18"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"RenderPassesValid","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"D3D12_FEATURE_DATA_D3D12_OPTIONS19"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"MismatchingOutputDimensionsSupported","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"SupportedSampleCountsWithNoOutputs","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"PointSamplingAddressesNeverRoundUp","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"RasterizerDesc2Supported","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"NarrowQuadrilateralLinesSupported","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"AnisoFilterWithPointMipSupported","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"MaxSamplerDescriptorHeapSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"MaxSamplerDescriptorHeapSizeWithStaticSamplers","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"MaxViewDescriptorHeapSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ComputeOnlyCustomHeapSupported","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -5098,6 +5196,7 @@
 			,{"Name":"D3D12_HEAP_TYPE_UPLOAD","Value":2}
 			,{"Name":"D3D12_HEAP_TYPE_READBACK","Value":3}
 			,{"Name":"D3D12_HEAP_TYPE_CUSTOM","Value":4}
+			,{"Name":"D3D12_HEAP_TYPE_GPU_UPLOAD","Value":5}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -5167,12 +5266,13 @@
 			,{"Name":"D3D12_HEAP_FLAG_ALLOW_SHADER_ATOMICS","Value":1024}
 			,{"Name":"D3D12_HEAP_FLAG_CREATE_NOT_RESIDENT","Value":2048}
 			,{"Name":"D3D12_HEAP_FLAG_CREATE_NOT_ZEROED","Value":4096}
+			,{"Name":"D3D12_HEAP_FLAG_TOOLS_USE_MANUAL_WRITE_TRACKING","Value":8192}
 			,{"Name":"D3D12_HEAP_FLAG_ALLOW_ALL_BUFFERS_AND_TEXTURES","Value":0}
 			,{"Name":"D3D12_HEAP_FLAG_ALLOW_ONLY_BUFFERS","Value":192}
 			,{"Name":"D3D12_HEAP_FLAG_ALLOW_ONLY_NON_RT_DS_TEXTURES","Value":68}
 			,{"Name":"D3D12_HEAP_FLAG_ALLOW_ONLY_RT_DS_TEXTURES","Value":132}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_HEAP_DESC"
@@ -5240,7 +5340,7 @@
 			,{"Name":"D3D12_RESOURCE_FLAG_VIDEO_ENCODE_REFERENCE_ONLY","Value":128}
 			,{"Name":"D3D12_RESOURCE_FLAG_RAYTRACING_ACCELERATION_STRUCTURE","Value":256}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_MIP_REGION"
@@ -5507,7 +5607,7 @@
 			{"Name":"D3D12_TILE_MAPPING_FLAG_NONE","Value":0}
 			,{"Name":"D3D12_TILE_MAPPING_FLAG_NO_HAZARD","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_TILE_COPY_FLAGS"
@@ -5522,7 +5622,7 @@
 			,{"Name":"D3D12_TILE_COPY_FLAG_LINEAR_BUFFER_TO_SWIZZLED_TILED_RESOURCE","Value":2}
 			,{"Name":"D3D12_TILE_COPY_FLAG_SWIZZLED_TILED_RESOURCE_TO_LINEAR_BUFFER","Value":4}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_RESOURCE_STATES"
@@ -5560,7 +5660,7 @@
 			,{"Name":"D3D12_RESOURCE_STATE_VIDEO_ENCODE_READ","Value":2097152}
 			,{"Name":"D3D12_RESOURCE_STATE_VIDEO_ENCODE_WRITE","Value":8388608}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_RESOURCE_BARRIER_TYPE"
@@ -5631,7 +5731,7 @@
 			,{"Name":"D3D12_RESOURCE_BARRIER_FLAG_BEGIN_ONLY","Value":1}
 			,{"Name":"D3D12_RESOURCE_BARRIER_FLAG_END_ONLY","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_RESOURCE_BARRIER"
@@ -5792,7 +5892,7 @@
 			{"Name":"D3D12_VIEW_INSTANCING_FLAG_NONE","Value":0}
 			,{"Name":"D3D12_VIEW_INSTANCING_FLAG_ENABLE_VIEW_INSTANCE_MASKING","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_VIEW_INSTANCING_DESC"
@@ -5803,7 +5903,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"ViewInstanceCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"pViewInstanceLocations","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"D3D12_VIEW_INSTANCE_LOCATION","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
+			,{"Name":"pViewInstanceLocations","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":-1,"Child":{"Kind":"ApiRef","Name":"D3D12_VIEW_INSTANCE_LOCATION","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"D3D12_VIEW_INSTANCING_FLAGS","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
@@ -5837,7 +5937,7 @@
 			{"Name":"D3D12_BUFFER_SRV_FLAG_NONE","Value":0}
 			,{"Name":"D3D12_BUFFER_SRV_FLAG_RAW","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_BUFFER_SRV"
@@ -6100,6 +6200,7 @@
 			,{"Name":"D3D12_FILTER_MIN_LINEAR_MAG_POINT_MIP_LINEAR","Value":17}
 			,{"Name":"D3D12_FILTER_MIN_MAG_LINEAR_MIP_POINT","Value":20}
 			,{"Name":"D3D12_FILTER_MIN_MAG_MIP_LINEAR","Value":21}
+			,{"Name":"D3D12_FILTER_MIN_MAG_ANISOTROPIC_MIP_POINT","Value":84}
 			,{"Name":"D3D12_FILTER_ANISOTROPIC","Value":85}
 			,{"Name":"D3D12_FILTER_COMPARISON_MIN_MAG_MIP_POINT","Value":128}
 			,{"Name":"D3D12_FILTER_COMPARISON_MIN_MAG_POINT_MIP_LINEAR","Value":129}
@@ -6109,6 +6210,7 @@
 			,{"Name":"D3D12_FILTER_COMPARISON_MIN_LINEAR_MAG_POINT_MIP_LINEAR","Value":145}
 			,{"Name":"D3D12_FILTER_COMPARISON_MIN_MAG_LINEAR_MIP_POINT","Value":148}
 			,{"Name":"D3D12_FILTER_COMPARISON_MIN_MAG_MIP_LINEAR","Value":149}
+			,{"Name":"D3D12_FILTER_COMPARISON_MIN_MAG_ANISOTROPIC_MIP_POINT","Value":212}
 			,{"Name":"D3D12_FILTER_COMPARISON_ANISOTROPIC","Value":213}
 			,{"Name":"D3D12_FILTER_MINIMUM_MIN_MAG_MIP_POINT","Value":256}
 			,{"Name":"D3D12_FILTER_MINIMUM_MIN_MAG_POINT_MIP_LINEAR","Value":257}
@@ -6118,6 +6220,7 @@
 			,{"Name":"D3D12_FILTER_MINIMUM_MIN_LINEAR_MAG_POINT_MIP_LINEAR","Value":273}
 			,{"Name":"D3D12_FILTER_MINIMUM_MIN_MAG_LINEAR_MIP_POINT","Value":276}
 			,{"Name":"D3D12_FILTER_MINIMUM_MIN_MAG_MIP_LINEAR","Value":277}
+			,{"Name":"D3D12_FILTER_MINIMUM_MIN_MAG_ANISOTROPIC_MIP_POINT","Value":340}
 			,{"Name":"D3D12_FILTER_MINIMUM_ANISOTROPIC","Value":341}
 			,{"Name":"D3D12_FILTER_MAXIMUM_MIN_MAG_MIP_POINT","Value":384}
 			,{"Name":"D3D12_FILTER_MAXIMUM_MIN_MAG_POINT_MIP_LINEAR","Value":385}
@@ -6127,6 +6230,7 @@
 			,{"Name":"D3D12_FILTER_MAXIMUM_MIN_LINEAR_MAG_POINT_MIP_LINEAR","Value":401}
 			,{"Name":"D3D12_FILTER_MAXIMUM_MIN_MAG_LINEAR_MIP_POINT","Value":404}
 			,{"Name":"D3D12_FILTER_MAXIMUM_MIN_MAG_MIP_LINEAR","Value":405}
+			,{"Name":"D3D12_FILTER_MAXIMUM_MIN_MAG_ANISOTROPIC_MIP_POINT","Value":468}
 			,{"Name":"D3D12_FILTER_MAXIMUM_ANISOTROPIC","Value":469}
 		]
 		,"IntegerBase":"Int32"
@@ -6207,8 +6311,9 @@
 		,"Values":[
 			{"Name":"D3D12_SAMPLER_FLAG_NONE","Value":0}
 			,{"Name":"D3D12_SAMPLER_FLAG_UINT_BORDER_COLOR","Value":1}
+			,{"Name":"D3D12_SAMPLER_FLAG_NON_NORMALIZED_COORDINATES","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_SAMPLER_DESC2"
@@ -6258,7 +6363,7 @@
 			{"Name":"D3D12_BUFFER_UAV_FLAG_NONE","Value":0}
 			,{"Name":"D3D12_BUFFER_UAV_FLAG_RAW","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_BUFFER_UAV"
@@ -6696,7 +6801,7 @@
 			,{"Name":"D3D12_DSV_FLAG_READ_ONLY_DEPTH","Value":1}
 			,{"Name":"D3D12_DSV_FLAG_READ_ONLY_STENCIL","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_DSV_DIMENSION"
@@ -6761,7 +6866,7 @@
 			{"Name":"D3D12_CLEAR_FLAG_DEPTH","Value":1}
 			,{"Name":"D3D12_CLEAR_FLAG_STENCIL","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_FENCE_FLAGS"
@@ -6776,7 +6881,7 @@
 			,{"Name":"D3D12_FENCE_FLAG_SHARED_CROSS_ADAPTER","Value":2}
 			,{"Name":"D3D12_FENCE_FLAG_NON_MONITORED","Value":4}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_DESCRIPTOR_HEAP_TYPE"
@@ -6805,7 +6910,7 @@
 			{"Name":"D3D12_DESCRIPTOR_HEAP_FLAG_NONE","Value":0}
 			,{"Name":"D3D12_DESCRIPTOR_HEAP_FLAG_SHADER_VISIBLE","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_DESCRIPTOR_HEAP_DESC"
@@ -6864,7 +6969,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"NumDescriptorRanges","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"pDescriptorRanges","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"D3D12_DESCRIPTOR_RANGE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
+			,{"Name":"pDescriptorRanges","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":-1,"Child":{"Kind":"ApiRef","Name":"D3D12_DESCRIPTOR_RANGE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
 		]
 		,"NestedTypes":[
 		]
@@ -6985,7 +7090,7 @@
 			,{"Name":"D3D12_ROOT_SIGNATURE_FLAG_CBV_SRV_UAV_HEAP_DIRECTLY_INDEXED","Value":1024}
 			,{"Name":"D3D12_ROOT_SIGNATURE_FLAG_SAMPLER_HEAP_DIRECTLY_INDEXED","Value":2048}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_STATIC_BORDER_COLOR"
@@ -7029,6 +7134,32 @@
 		]
 	}
 	,{
+		"Name":"D3D12_STATIC_SAMPLER_DESC1"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"Filter","Type":{"Kind":"ApiRef","Name":"D3D12_FILTER","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
+			,{"Name":"AddressU","Type":{"Kind":"ApiRef","Name":"D3D12_TEXTURE_ADDRESS_MODE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
+			,{"Name":"AddressV","Type":{"Kind":"ApiRef","Name":"D3D12_TEXTURE_ADDRESS_MODE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
+			,{"Name":"AddressW","Type":{"Kind":"ApiRef","Name":"D3D12_TEXTURE_ADDRESS_MODE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
+			,{"Name":"MipLODBias","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+			,{"Name":"MaxAnisotropy","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ComparisonFunc","Type":{"Kind":"ApiRef","Name":"D3D12_COMPARISON_FUNC","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
+			,{"Name":"BorderColor","Type":{"Kind":"ApiRef","Name":"D3D12_STATIC_BORDER_COLOR","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
+			,{"Name":"MinLOD","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+			,{"Name":"MaxLOD","Type":{"Kind":"Native","Name":"Single"},"Attrs":[]}
+			,{"Name":"ShaderRegister","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"RegisterSpace","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ShaderVisibility","Type":{"Kind":"ApiRef","Name":"D3D12_SHADER_VISIBILITY","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
+			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"D3D12_SAMPLER_FLAGS","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
 		"Name":"D3D12_ROOT_SIGNATURE_DESC"
 		,"Architectures":[]
 		,"Platform":null
@@ -7037,9 +7168,9 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"NumParameters","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"pParameters","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"D3D12_ROOT_PARAMETER","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
+			,{"Name":"pParameters","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":-1,"Child":{"Kind":"ApiRef","Name":"D3D12_ROOT_PARAMETER","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"NumStaticSamplers","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"pStaticSamplers","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"D3D12_STATIC_SAMPLER_DESC","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
+			,{"Name":"pStaticSamplers","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":-1,"Child":{"Kind":"ApiRef","Name":"D3D12_STATIC_SAMPLER_DESC","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"D3D12_ROOT_SIGNATURE_FLAGS","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
@@ -7060,7 +7191,7 @@
 			,{"Name":"D3D12_DESCRIPTOR_RANGE_FLAG_DATA_STATIC","Value":8}
 			,{"Name":"D3D12_DESCRIPTOR_RANGE_FLAG_DESCRIPTORS_STATIC_KEEPING_BUFFER_BOUNDS_CHECKS","Value":65536}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_DESCRIPTOR_RANGE1"
@@ -7089,7 +7220,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"NumDescriptorRanges","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"pDescriptorRanges","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"D3D12_DESCRIPTOR_RANGE1","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
+			,{"Name":"pDescriptorRanges","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":-1,"Child":{"Kind":"ApiRef","Name":"D3D12_DESCRIPTOR_RANGE1","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
 		]
 		,"NestedTypes":[
 		]
@@ -7107,7 +7238,7 @@
 			,{"Name":"D3D12_ROOT_DESCRIPTOR_FLAG_DATA_STATIC_WHILE_SET_AT_EXECUTE","Value":4}
 			,{"Name":"D3D12_ROOT_DESCRIPTOR_FLAG_DATA_STATIC","Value":8}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_ROOT_DESCRIPTOR1"
@@ -7163,9 +7294,26 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"NumParameters","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"pParameters","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":-1,"Child":{"Kind":"ApiRef","Name":"D3D12_ROOT_PARAMETER1","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
+			,{"Name":"NumStaticSamplers","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"pStaticSamplers","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":-1,"Child":{"Kind":"ApiRef","Name":"D3D12_STATIC_SAMPLER_DESC","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
+			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"D3D12_ROOT_SIGNATURE_FLAGS","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"D3D12_ROOT_SIGNATURE_DESC2"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"NumParameters","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pParameters","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"D3D12_ROOT_PARAMETER1","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"NumStaticSamplers","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"pStaticSamplers","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"D3D12_STATIC_SAMPLER_DESC","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
+			,{"Name":"pStaticSamplers","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"D3D12_STATIC_SAMPLER_DESC1","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"D3D12_ROOT_SIGNATURE_FLAGS","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
@@ -7193,6 +7341,7 @@
 				,"Fields":[
 					{"Name":"Desc_1_0","Type":{"Kind":"ApiRef","Name":"D3D12_ROOT_SIGNATURE_DESC","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
 					,{"Name":"Desc_1_1","Type":{"Kind":"ApiRef","Name":"D3D12_ROOT_SIGNATURE_DESC1","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
+					,{"Name":"Desc_1_2","Type":{"Kind":"ApiRef","Name":"D3D12_ROOT_SIGNATURE_DESC2","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]
@@ -7730,7 +7879,7 @@
 		,"Fields":[
 			{"Name":"ByteStride","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NumArgumentDescs","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"pArgumentDescs","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"D3D12_INDIRECT_ARGUMENT_DESC","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
+			,{"Name":"pArgumentDescs","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":-1,"Child":{"Kind":"ApiRef","Name":"D3D12_INDIRECT_ARGUMENT_DESC","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"NodeMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
@@ -8729,7 +8878,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"RenderTargetView","Type":{"Kind":"ApiRef","Name":"D3D12_CPU_DESCRIPTOR_HANDLE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":["In"]}
-					,{"Name":"ColorRGBA","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Single"}},"Attrs":["In","Const"]}
+					,{"Name":"ColorRGBA","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":4,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Single"}},"Attrs":["In","Const"]}
 					,{"Name":"NumRects","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pRects","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional","Const"]}
 				]
@@ -8748,7 +8897,7 @@
 					{"Name":"ViewGPUHandleInCurrentHeap","Type":{"Kind":"ApiRef","Name":"D3D12_GPU_DESCRIPTOR_HANDLE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":["In"]}
 					,{"Name":"ViewCPUHandle","Type":{"Kind":"ApiRef","Name":"D3D12_CPU_DESCRIPTOR_HANDLE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pResource","Type":{"Kind":"ApiRef","Name":"ID3D12Resource","TargetKind":"Com","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":["In"]}
-					,{"Name":"Values","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Const"]}
+					,{"Name":"Values","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":4,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Const"]}
 					,{"Name":"NumRects","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pRects","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":4,"Child":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Const"]}
 				]
@@ -8767,7 +8916,7 @@
 					{"Name":"ViewGPUHandleInCurrentHeap","Type":{"Kind":"ApiRef","Name":"D3D12_GPU_DESCRIPTOR_HANDLE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":["In"]}
 					,{"Name":"ViewCPUHandle","Type":{"Kind":"ApiRef","Name":"D3D12_CPU_DESCRIPTOR_HANDLE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pResource","Type":{"Kind":"ApiRef","Name":"ID3D12Resource","TargetKind":"Com","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":["In"]}
-					,{"Name":"Values","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Single"}},"Attrs":["In","Const"]}
+					,{"Name":"Values","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":4,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Single"}},"Attrs":["In","Const"]}
 					,{"Name":"NumRects","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pRects","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":4,"Child":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Const"]}
 				]
@@ -10019,7 +10168,7 @@
 			,{"Name":"D3D12_MULTIPLE_FENCE_WAIT_FLAG_ANY","Value":1}
 			,{"Name":"D3D12_MULTIPLE_FENCE_WAIT_FLAG_ALL","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_RESIDENCY_PRIORITY"
@@ -10135,7 +10284,7 @@
 			{"Name":"D3D12_RESIDENCY_FLAG_NONE","Value":0}
 			,{"Name":"D3D12_RESIDENCY_FLAG_DENY_OVERBUDGET","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"ID3D12Device3"
@@ -10207,7 +10356,7 @@
 		,"Values":[
 			{"Name":"D3D12_COMMAND_LIST_FLAG_NONE","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_COMMAND_POOL_FLAGS"
@@ -10219,7 +10368,7 @@
 		,"Values":[
 			{"Name":"D3D12_COMMAND_POOL_FLAG_NONE","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_COMMAND_RECORDER_FLAGS"
@@ -10231,7 +10380,7 @@
 		,"Values":[
 			{"Name":"D3D12_COMMAND_RECORDER_FLAG_NONE","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_PROTECTED_SESSION_STATUS"
@@ -10295,7 +10444,7 @@
 			{"Name":"D3D12_PROTECTED_RESOURCE_SESSION_SUPPORT_FLAG_NONE","Value":0}
 			,{"Name":"D3D12_PROTECTED_RESOURCE_SESSION_SUPPORT_FLAG_SUPPORTED","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_FEATURE_DATA_PROTECTED_RESOURCE_SESSION_SUPPORT"
@@ -10321,7 +10470,7 @@
 		,"Values":[
 			{"Name":"D3D12_PROTECTED_RESOURCE_SESSION_FLAG_NONE","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_PROTECTED_RESOURCE_SESSION_DESC"
@@ -10634,7 +10783,7 @@
 			{"Name":"D3D12_META_COMMAND_PARAMETER_FLAG_INPUT","Value":1}
 			,{"Name":"D3D12_META_COMMAND_PARAMETER_FLAG_OUTPUT","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_META_COMMAND_PARAMETER_STAGE"
@@ -10694,7 +10843,7 @@
 			,{"Name":"D3D12_GRAPHICS_STATE_SAMPLE_POSITIONS","Value":32768}
 			,{"Name":"D3D12_GRAPHICS_STATE_VIEW_INSTANCE_MASK","Value":65536}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_META_COMMAND_DESC"
@@ -10838,7 +10987,7 @@
 			,{"Name":"D3D12_STATE_OBJECT_FLAG_ALLOW_EXTERNAL_DEPENDENCIES_ON_LOCAL_DEFINITIONS","Value":2}
 			,{"Name":"D3D12_STATE_OBJECT_FLAG_ALLOW_STATE_OBJECT_ADDITIONS","Value":4}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_STATE_OBJECT_CONFIG"
@@ -10902,7 +11051,7 @@
 		,"Values":[
 			{"Name":"D3D12_EXPORT_FLAG_NONE","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_EXPORT_DESC"
@@ -10959,7 +11108,7 @@
 		,"Fields":[
 			{"Name":"pSubobjectToAssociate","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"D3D12_STATE_SUBOBJECT","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"NumExports","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"pExports","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+			,{"Name":"pExports","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Const"]}
 		]
 		,"NestedTypes":[
 		]
@@ -10974,7 +11123,7 @@
 		,"Fields":[
 			{"Name":"SubobjectToAssociate","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"NumExports","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"pExports","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+			,{"Name":"pExports","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Const"]}
 		]
 		,"NestedTypes":[
 		]
@@ -11048,7 +11197,7 @@
 			,{"Name":"D3D12_RAYTRACING_PIPELINE_FLAG_SKIP_TRIANGLES","Value":256}
 			,{"Name":"D3D12_RAYTRACING_PIPELINE_FLAG_SKIP_PROCEDURAL_PRIMITIVES","Value":512}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_RAYTRACING_PIPELINE_CONFIG1"
@@ -11104,7 +11253,7 @@
 			,{"Name":"D3D12_RAYTRACING_GEOMETRY_FLAG_OPAQUE","Value":1}
 			,{"Name":"D3D12_RAYTRACING_GEOMETRY_FLAG_NO_DUPLICATE_ANYHIT_INVOCATION","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_RAYTRACING_GEOMETRY_TYPE"
@@ -11133,7 +11282,7 @@
 			,{"Name":"D3D12_RAYTRACING_INSTANCE_FLAG_FORCE_OPAQUE","Value":4}
 			,{"Name":"D3D12_RAYTRACING_INSTANCE_FLAG_FORCE_NON_OPAQUE","Value":8}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_GPU_VIRTUAL_ADDRESS_AND_STRIDE"
@@ -11245,7 +11394,7 @@
 			,{"Name":"D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAG_MINIMIZE_MEMORY","Value":16}
 			,{"Name":"D3D12_RAYTRACING_ACCELERATION_STRUCTURE_BUILD_FLAG_PERFORM_UPDATE","Value":32}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_RAYTRACING_ACCELERATION_STRUCTURE_COPY_MODE"
@@ -11571,7 +11720,7 @@
 			,{"Name":"D3D12_RAY_FLAG_SKIP_TRIANGLES","Value":256}
 			,{"Name":"D3D12_RAY_FLAG_SKIP_PROCEDURAL_PRIMITIVES","Value":512}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_HIT_KIND"
@@ -11776,6 +11925,7 @@
 			,{"Name":"D3D12_AUTO_BREADCRUMB_OP_DISPATCHMESH","Value":42}
 			,{"Name":"D3D12_AUTO_BREADCRUMB_OP_ENCODEFRAME","Value":43}
 			,{"Name":"D3D12_AUTO_BREADCRUMB_OP_RESOLVEENCODEROUTPUTMETADATA","Value":44}
+			,{"Name":"D3D12_AUTO_BREADCRUMB_OP_BARRIER","Value":45}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -11787,9 +11937,9 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"pCommandListDebugNameA","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+			{"Name":"pCommandListDebugNameA","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Const"]}
 			,{"Name":"pCommandListDebugNameW","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
-			,{"Name":"pCommandQueueDebugNameA","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+			,{"Name":"pCommandQueueDebugNameA","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Const"]}
 			,{"Name":"pCommandQueueDebugNameW","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"pCommandList","Type":{"Kind":"ApiRef","Name":"ID3D12GraphicsCommandList","TargetKind":"Com","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
 			,{"Name":"pCommandQueue","Type":{"Kind":"ApiRef","Name":"ID3D12CommandQueue","TargetKind":"Com","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
@@ -11823,9 +11973,9 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"pCommandListDebugNameA","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+			{"Name":"pCommandListDebugNameA","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Const"]}
 			,{"Name":"pCommandListDebugNameW","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
-			,{"Name":"pCommandQueueDebugNameA","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+			,{"Name":"pCommandQueueDebugNameA","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Const"]}
 			,{"Name":"pCommandQueueDebugNameW","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"pCommandList","Type":{"Kind":"ApiRef","Name":"ID3D12GraphicsCommandList","TargetKind":"Com","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
 			,{"Name":"pCommandQueue","Type":{"Kind":"ApiRef","Name":"ID3D12CommandQueue","TargetKind":"Com","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
@@ -11866,7 +12016,7 @@
 			,{"Name":"D3D12_DRED_FLAG_FORCE_ENABLE","Value":1}
 			,{"Name":"D3D12_DRED_FLAG_DISABLE_AUTOBREADCRUMBS","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_DRED_ENABLEMENT"
@@ -11944,7 +12094,7 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"ObjectNameA","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+			{"Name":"ObjectNameA","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Const"]}
 			,{"Name":"ObjectNameW","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"AllocationType","Type":{"Kind":"ApiRef","Name":"D3D12_DRED_ALLOCATION_TYPE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
 			,{"Name":"pNext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"D3D12_DRED_ALLOCATION_NODE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
@@ -11960,7 +12110,7 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"ObjectNameA","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+			{"Name":"ObjectNameA","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Const"]}
 			,{"Name":"ObjectNameW","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"AllocationType","Type":{"Kind":"ApiRef","Name":"D3D12_DRED_ALLOCATION_TYPE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
 			,{"Name":"pNext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"D3D12_DRED_ALLOCATION_NODE1","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
@@ -12035,7 +12185,7 @@
 		,"Values":[
 			{"Name":"D3D12_DRED_PAGE_FAULT_FLAGS_NONE","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_DRED_DEVICE_STATE"
@@ -12738,6 +12888,9 @@
 			,{"Name":"D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_PRESERVE","Value":1}
 			,{"Name":"D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_CLEAR","Value":2}
 			,{"Name":"D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_NO_ACCESS","Value":3}
+			,{"Name":"D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_PRESERVE_LOCAL_RENDER","Value":4}
+			,{"Name":"D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_PRESERVE_LOCAL_SRV","Value":5}
+			,{"Name":"D3D12_RENDER_PASS_BEGINNING_ACCESS_TYPE_PRESERVE_LOCAL_UAV","Value":6}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -12750,6 +12903,20 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"ClearValue","Type":{"Kind":"ApiRef","Name":"D3D12_CLEAR_VALUE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"D3D12_RENDER_PASS_BEGINNING_ACCESS_PRESERVE_LOCAL_PARAMETERS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"AdditionalWidth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"AdditionalHeight","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -12775,6 +12942,7 @@
 				,"PackingSize":0
 				,"Fields":[
 					{"Name":"Clear","Type":{"Kind":"ApiRef","Name":"D3D12_RENDER_PASS_BEGINNING_ACCESS_CLEAR_PARAMETERS","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
+					,{"Name":"PreserveLocal","Type":{"Kind":"ApiRef","Name":"D3D12_RENDER_PASS_BEGINNING_ACCESS_PRESERVE_LOCAL_PARAMETERS","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]
@@ -12793,6 +12961,9 @@
 			,{"Name":"D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_PRESERVE","Value":1}
 			,{"Name":"D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_RESOLVE","Value":2}
 			,{"Name":"D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_NO_ACCESS","Value":3}
+			,{"Name":"D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_PRESERVE_LOCAL_RENDER","Value":4}
+			,{"Name":"D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_PRESERVE_LOCAL_SRV","Value":5}
+			,{"Name":"D3D12_RENDER_PASS_ENDING_ACCESS_TYPE_PRESERVE_LOCAL_UAV","Value":6}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -12824,10 +12995,24 @@
 			{"Name":"pSrcResource","Type":{"Kind":"ApiRef","Name":"ID3D12Resource","TargetKind":"Com","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
 			,{"Name":"pDstResource","Type":{"Kind":"ApiRef","Name":"ID3D12Resource","TargetKind":"Com","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
 			,{"Name":"SubresourceCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"pSubresourceParameters","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_SUBRESOURCE_PARAMETERS","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
+			,{"Name":"pSubresourceParameters","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":-1,"Child":{"Kind":"ApiRef","Name":"D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_SUBRESOURCE_PARAMETERS","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"Format","Type":{"Kind":"ApiRef","Name":"DXGI_FORMAT","TargetKind":"Default","Api":"Graphics.Dxgi.Common","Parents":[]},"Attrs":[]}
 			,{"Name":"ResolveMode","Type":{"Kind":"ApiRef","Name":"D3D12_RESOLVE_MODE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
 			,{"Name":"PreserveResolveSource","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"D3D12_RENDER_PASS_ENDING_ACCESS_PRESERVE_LOCAL_PARAMETERS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"AdditionalWidth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"AdditionalHeight","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -12853,6 +13038,7 @@
 				,"PackingSize":0
 				,"Fields":[
 					{"Name":"Resolve","Type":{"Kind":"ApiRef","Name":"D3D12_RENDER_PASS_ENDING_ACCESS_RESOLVE_PARAMETERS","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
+					,{"Name":"PreserveLocal","Type":{"Kind":"ApiRef","Name":"D3D12_RENDER_PASS_ENDING_ACCESS_PRESERVE_LOCAL_PARAMETERS","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]
@@ -12903,8 +13089,10 @@
 			,{"Name":"D3D12_RENDER_PASS_FLAG_ALLOW_UAV_WRITES","Value":1}
 			,{"Name":"D3D12_RENDER_PASS_FLAG_SUSPENDING_PASS","Value":2}
 			,{"Name":"D3D12_RENDER_PASS_FLAG_RESUMING_PASS","Value":4}
+			,{"Name":"D3D12_RENDER_PASS_FLAG_BIND_READ_ONLY_DEPTH","Value":8}
+			,{"Name":"D3D12_RENDER_PASS_FLAG_BIND_READ_ONLY_STENCIL","Value":16}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"ID3D12MetaCommand"
@@ -13123,7 +13311,7 @@
 			,{"Name":"D3D12_SHADER_CACHE_FLAG_DRIVER_VERSIONED","Value":1}
 			,{"Name":"D3D12_SHADER_CACHE_FLAG_USE_WORKING_DIR","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_SHADER_CACHE_SESSION_DESC"
@@ -13219,9 +13407,9 @@
 			,{"Name":"D3D12_BARRIER_SYNC_VIDEO_ENCODE","Value":4194304}
 			,{"Name":"D3D12_BARRIER_SYNC_BUILD_RAYTRACING_ACCELERATION_STRUCTURE","Value":8388608}
 			,{"Name":"D3D12_BARRIER_SYNC_COPY_RAYTRACING_ACCELERATION_STRUCTURE","Value":16777216}
-			,{"Name":"D3D12_BARRIER_SYNC_SPLIT","Value":2147483648}
+			,{"Name":"D3D12_BARRIER_SYNC_SPLIT","Value":-2147483648}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_BARRIER_ACCESS"
@@ -13256,9 +13444,9 @@
 			,{"Name":"D3D12_BARRIER_ACCESS_VIDEO_PROCESS_WRITE","Value":1048576}
 			,{"Name":"D3D12_BARRIER_ACCESS_VIDEO_ENCODE_READ","Value":2097152}
 			,{"Name":"D3D12_BARRIER_ACCESS_VIDEO_ENCODE_WRITE","Value":4194304}
-			,{"Name":"D3D12_BARRIER_ACCESS_NO_ACCESS","Value":2147483648}
+			,{"Name":"D3D12_BARRIER_ACCESS_NO_ACCESS","Value":-2147483648}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_BARRIER_TYPE"
@@ -13285,7 +13473,7 @@
 			{"Name":"D3D12_TEXTURE_BARRIER_FLAG_NONE","Value":0}
 			,{"Name":"D3D12_TEXTURE_BARRIER_FLAG_DISCARD","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_BARRIER_SUBRESOURCE_RANGE"
@@ -13474,7 +13662,7 @@
 			,{"Name":"D3D12_SHADER_CACHE_KIND_FLAG_IMPLICIT_DRIVER_MANAGED","Value":4}
 			,{"Name":"D3D12_SHADER_CACHE_KIND_FLAG_APPLICATION_MANAGED","Value":8}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_SHADER_CACHE_CONTROL_FLAGS"
@@ -13488,7 +13676,7 @@
 			,{"Name":"D3D12_SHADER_CACHE_CONTROL_FLAG_ENABLE","Value":2}
 			,{"Name":"D3D12_SHADER_CACHE_CONTROL_FLAG_CLEAR","Value":4}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"ID3D12Device9"
@@ -13574,7 +13762,7 @@
 					,{"Name":"pOptimizedClearValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"D3D12_CLEAR_VALUE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["In","Optional","Const"]}
 					,{"Name":"pProtectedSession","Type":{"Kind":"ApiRef","Name":"ID3D12ProtectedResourceSession","TargetKind":"Com","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":["In","Optional"]}
 					,{"Name":"NumCastableFormats","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"pCastableFormats","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":6,"Child":{"Kind":"ApiRef","Name":"DXGI_FORMAT","TargetKind":"Default","Api":"Graphics.Dxgi.Common","Parents":[]}},"Attrs":["In","Optional"]}
+					,{"Name":"pCastableFormats","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":6,"Child":{"Kind":"ApiRef","Name":"DXGI_FORMAT","TargetKind":"Default","Api":"Graphics.Dxgi.Common","Parents":[]}},"Attrs":["In","Optional","Const"]}
 					,{"Name":"riidResource","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
 					,{"Name":"ppvResource","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","ComOutPtr","Optional"]}
 				]
@@ -13596,7 +13784,7 @@
 					,{"Name":"InitialLayout","Type":{"Kind":"ApiRef","Name":"D3D12_BARRIER_LAYOUT","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pOptimizedClearValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"D3D12_CLEAR_VALUE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["In","Optional","Const"]}
 					,{"Name":"NumCastableFormats","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"pCastableFormats","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":5,"Child":{"Kind":"ApiRef","Name":"DXGI_FORMAT","TargetKind":"Default","Api":"Graphics.Dxgi.Common","Parents":[]}},"Attrs":["In","Optional"]}
+					,{"Name":"pCastableFormats","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":5,"Child":{"Kind":"ApiRef","Name":"DXGI_FORMAT","TargetKind":"Default","Api":"Graphics.Dxgi.Common","Parents":[]}},"Attrs":["In","Optional","Const"]}
 					,{"Name":"riid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
 					,{"Name":"ppvResource","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","ComOutPtr","Optional"]}
 				]
@@ -13617,7 +13805,7 @@
 					,{"Name":"pOptimizedClearValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"D3D12_CLEAR_VALUE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["In","Optional","Const"]}
 					,{"Name":"pProtectedSession","Type":{"Kind":"ApiRef","Name":"ID3D12ProtectedResourceSession","TargetKind":"Com","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":["In","Optional"]}
 					,{"Name":"NumCastableFormats","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"pCastableFormats","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":4,"Child":{"Kind":"ApiRef","Name":"DXGI_FORMAT","TargetKind":"Default","Api":"Graphics.Dxgi.Common","Parents":[]}},"Attrs":["In","Optional"]}
+					,{"Name":"pCastableFormats","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":4,"Child":{"Kind":"ApiRef","Name":"DXGI_FORMAT","TargetKind":"Default","Api":"Graphics.Dxgi.Common","Parents":[]}},"Attrs":["In","Optional","Const"]}
 					,{"Name":"riid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
 					,{"Name":"ppvResource","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","ComOutPtr","Optional"]}
 				]
@@ -13645,6 +13833,35 @@
 				,"Params":[
 					{"Name":"pDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"D3D12_SAMPLER_DESC2","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["In","Const"]}
 					,{"Name":"DestDescriptor","Type":{"Kind":"ApiRef","Name":"D3D12_CPU_DESCRIPTOR_HANDLE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":["In"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"ID3D12Device12"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"5af5c532-4c91-4cd0-b541-15a405395fc5"
+		,"Interface":{"Kind":"ApiRef","Name":"ID3D12Device11","TargetKind":"Com","Api":"Graphics.Direct3D12","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"GetResourceAllocationInfo3"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"D3D12_RESOURCE_ALLOCATION_INFO","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"visibleMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"numResourceDescs","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"pResourceDescs","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"D3D12_RESOURCE_DESC1","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["In","Const"]}
+					,{"Name":"pNumCastableFormats","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Optional","Const"]}
+					,{"Name":"ppCastableFormats","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_FORMAT","TargetKind":"Default","Api":"Graphics.Dxgi.Common","Parents":[]}}},"Attrs":["In","Optional","Const"]}
+					,{"Name":"pResourceAllocationInfo1","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"D3D12_RESOURCE_ALLOCATION_INFO1","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["Out","Optional"]}
 				]
 			}
 		]
@@ -13785,7 +14002,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"D3D12_GPU_BASED_VALIDATION_FLAGS_NONE","Value":0}
@@ -13996,7 +14213,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"D3D12_RLDO_NONE","Value":0}
@@ -14025,7 +14242,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"D3D12_DEBUG_FEATURE_NONE","Value":0}
@@ -14057,7 +14274,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"D3D12_GPU_BASED_VALIDATION_PIPELINE_STATE_CREATE_FLAG_NONE","Value":0}
@@ -14598,6 +14815,31 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"guid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"ID3D12ManualWriteTrackingResource"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"86ca3b85-49ad-4b6e-aed5-eddb18540f41"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"TrackWrite"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"Native","Name":"Void"}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"Subresource","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"pWrittenRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"D3D12_RANGE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]}},"Attrs":["In","Optional","Const"]}
 				]
 			}
 		]
@@ -15579,8 +15821,18 @@
 			,{"Name":"D3D12_MESSAGE_ID_DYNAMIC_DEPTH_BIAS_NO_PIPELINE","Value":1367}
 			,{"Name":"D3D12_MESSAGE_ID_DYNAMIC_INDEX_BUFFER_STRIP_CUT_FLAG_MISSING","Value":1368}
 			,{"Name":"D3D12_MESSAGE_ID_DYNAMIC_INDEX_BUFFER_STRIP_CUT_NO_PIPELINE","Value":1369}
+			,{"Name":"D3D12_MESSAGE_ID_NONNORMALIZED_COORDINATE_SAMPLING_NOT_SUPPORTED","Value":1370}
 			,{"Name":"D3D12_MESSAGE_ID_INVALID_CAST_TARGET","Value":1371}
-			,{"Name":"D3D12_MESSAGE_ID_D3D12_MESSAGES_END","Value":1372}
+			,{"Name":"D3D12_MESSAGE_ID_RENDER_PASS_COMMANDLIST_INVALID_END_STATE","Value":1372}
+			,{"Name":"D3D12_MESSAGE_ID_RENDER_PASS_COMMANDLIST_INVALID_START_STATE","Value":1373}
+			,{"Name":"D3D12_MESSAGE_ID_RENDER_PASS_MISMATCHING_ACCESS","Value":1374}
+			,{"Name":"D3D12_MESSAGE_ID_RENDER_PASS_MISMATCHING_LOCAL_PRESERVE_PARAMETERS","Value":1375}
+			,{"Name":"D3D12_MESSAGE_ID_RENDER_PASS_LOCAL_PRESERVE_RENDER_PARAMETERS_ERROR","Value":1376}
+			,{"Name":"D3D12_MESSAGE_ID_RENDER_PASS_LOCAL_DEPTH_STENCIL_ERROR","Value":1377}
+			,{"Name":"D3D12_MESSAGE_ID_DRAW_POTENTIALLY_OUTSIDE_OF_VALID_RENDER_AREA","Value":1378}
+			,{"Name":"D3D12_MESSAGE_ID_CREATERASTERIZERSTATE_INVALID_LINERASTERIZATIONMODE","Value":1379}
+			,{"Name":"D3D12_MESSAGE_ID_CREATERESOURCE_INVALIDALIGNMENT_SMALLRESOURCE","Value":1380}
+			,{"Name":"D3D12_MESSAGE_ID_D3D12_MESSAGES_END","Value":1381}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -15595,7 +15847,7 @@
 			{"Name":"Category","Type":{"Kind":"ApiRef","Name":"D3D12_MESSAGE_CATEGORY","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
 			,{"Name":"Severity","Type":{"Kind":"ApiRef","Name":"D3D12_MESSAGE_SEVERITY","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
 			,{"Name":"ID","Type":{"Kind":"ApiRef","Name":"D3D12_MESSAGE_ID","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":[]}
-			,{"Name":"pDescription","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+			,{"Name":"pDescription","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Const"]}
 			,{"Name":"DescriptionByteLength","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 		]
 		,"NestedTypes":[
@@ -16131,7 +16383,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"D3D12_MESSAGE_CALLBACK_FLAG_NONE","Value":0}
@@ -16332,7 +16584,7 @@
 			,{"Name":"D3D12_DEVICE_FACTORY_FLAG_ALLOW_RETURNING_INCOMPATIBLE_EXISTING_DEVICE","Value":2}
 			,{"Name":"D3D12_DEVICE_FACTORY_FLAG_DISALLOW_STORING_NEW_DEVICE_AS_SINGLETON","Value":4}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"ID3D12DeviceFactory"
@@ -16468,7 +16720,7 @@
 			,{"Name":"D3D12_DEVICE_FLAG_AUTO_DEBUG_NAME_ENABLED","Value":512}
 			,{"Name":"D3D12_DEVICE_FLAG_FORCE_LEGACY_STATE_VALIDATION","Value":1024}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"D3D12_DEVICE_CONFIGURATION_DESC"
@@ -16771,6 +17023,33 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"IBStripCutValue","Type":{"Kind":"ApiRef","Name":"D3D12_INDEX_BUFFER_STRIP_CUT_VALUE","TargetKind":"Default","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":["In"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"ID3D12DSRDeviceFactory"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"51ee7783-6426-4428-b182-42f3541fca71"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"CreateDSRDevice"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"pD3D12Device","Type":{"Kind":"ApiRef","Name":"ID3D12Device","TargetKind":"Com","Api":"Graphics.Direct3D12","Parents":[]},"Attrs":["In"]}
+					,{"Name":"NodeMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"riid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
+					,{"Name":"ppvDSRDevice","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","ComOutPtr"]}
 				]
 			}
 		]

@@ -239,7 +239,7 @@
 		,"Size":0
 		,"PackingSize":1
 		,"Fields":[
-			{"Name":"nStatus","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			{"Name":"nStatus","Type":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"llSequenceNumber","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 		]
 		,"NestedTypes":[
@@ -278,6 +278,21 @@
 		,"Params":[
 			{"Name":"pRestorePtSpec","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RESTOREPOINTINFOW","TargetKind":"Default","Api":"System.Restore","Parents":[]}},"Attrs":["In"]}
 			,{"Name":"pSMgrStatus","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"STATEMGRSTATUS","TargetKind":"Default","Api":"System.Restore","Parents":[]}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"SRRemoveRestorePoint"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"SrClient.dll"
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows5.1.2600"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"dwRPNum","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
 ]

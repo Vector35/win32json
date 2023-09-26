@@ -1117,6 +1117,15 @@
 		,"FreeFunc":null
 	}
 	,{
+		"Name":"PSC_NOTIFICATION_REGISTRATION"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
 		"Name":"SERVICE_TRIGGER_CUSTOM_STATE_ID"
 		,"Architectures":[]
 		,"Platform":null
@@ -1161,7 +1170,7 @@
 						,"PackingSize":0
 						,"Fields":[
 							{"Name":"DataOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-							,{"Name":"Data","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+							,{"Name":"Data","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 						]
 						,"NestedTypes":[
 						]
@@ -1407,8 +1416,8 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"liNewTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"liOldTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			{"Name":"liNewTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"liOldTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -1934,18 +1943,6 @@
 		]
 	}
 	,{
-		"Name":"_SC_NOTIFICATION_REGISTRATION"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
 		"Name":"SERVICE_REGISTRY_STATE_TYPE"
 		,"Architectures":[]
 		,"Platform":null
@@ -2030,7 +2027,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hService","Type":{"Kind":"ApiRef","Name":"SC_HANDLE","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["In"]}
-			,{"Name":"dwServiceType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"dwServiceType","Type":{"Kind":"ApiRef","Name":"ENUM_SERVICE_TYPE","TargetKind":"Default","Api":"System.Services","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwStartType","Type":{"Kind":"ApiRef","Name":"SERVICE_START_TYPE","TargetKind":"Default","Api":"System.Services","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwErrorControl","Type":{"Kind":"ApiRef","Name":"SERVICE_ERROR","TargetKind":"Default","Api":"System.Services","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpBinaryPathName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -2055,7 +2052,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hService","Type":{"Kind":"ApiRef","Name":"SC_HANDLE","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["In"]}
-			,{"Name":"dwServiceType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"dwServiceType","Type":{"Kind":"ApiRef","Name":"ENUM_SERVICE_TYPE","TargetKind":"Default","Api":"System.Services","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwStartType","Type":{"Kind":"ApiRef","Name":"SERVICE_START_TYPE","TargetKind":"Default","Api":"System.Services","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwErrorControl","Type":{"Kind":"ApiRef","Name":"SERVICE_ERROR","TargetKind":"Default","Api":"System.Services","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpBinaryPathName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
@@ -2811,7 +2808,7 @@
 		,"Params":[
 			{"Name":"hService","Type":{"Kind":"ApiRef","Name":"SC_HANDLE","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwNumServiceArgs","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"lpServiceArgVectors","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"lpServiceArgVectors","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional","Const"]}
 		]
 	}
 	,{
@@ -2828,7 +2825,7 @@
 		,"Params":[
 			{"Name":"hService","Type":{"Kind":"ApiRef","Name":"SC_HANDLE","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwNumServiceArgs","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"lpServiceArgVectors","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"lpServiceArgVectors","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional","Const"]}
 		]
 	}
 	,{
@@ -2931,6 +2928,40 @@
 			{"Name":"hServiceStatus","Type":{"Kind":"ApiRef","Name":"SERVICE_STATUS_HANDLE","TargetKind":"Default","Api":"System.Services","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwInfoLevel","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"ppDynamicInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"SubscribeServiceChangeNotifications"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"SecHost.dll"
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hService","Type":{"Kind":"ApiRef","Name":"SC_HANDLE","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["In"]}
+			,{"Name":"eEventType","Type":{"Kind":"ApiRef","Name":"SC_EVENT_TYPE","TargetKind":"Default","Api":"System.Services","Parents":[]},"Attrs":["In"]}
+			,{"Name":"pCallback","Type":{"Kind":"ApiRef","Name":"PSC_NOTIFICATION_CALLBACK","TargetKind":"FunctionPointer","Api":"System.Services","Parents":[]},"Attrs":["In"]}
+			,{"Name":"pCallbackContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
+			,{"Name":"pSubscription","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSC_NOTIFICATION_REGISTRATION","TargetKind":"Default","Api":"System.Services","Parents":[]}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"UnsubscribeServiceChangeNotifications"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"SecHost.dll"
+		,"ReturnType":{"Kind":"Native","Name":"Void"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"pSubscription","Type":{"Kind":"ApiRef","Name":"PSC_NOTIFICATION_REGISTRATION","TargetKind":"Default","Api":"System.Services","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{

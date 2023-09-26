@@ -1,17 +1,17 @@
 {
 
 "Constants":[
+	{
+		"Name":"WDAG_CLIPBOARD_TAG"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"CrossIsolatedEnvironmentContent"
+		,"Attrs":[]
+	}
 ]
 
 ,"Types":[
 	{
-		"Name":"IsolatedAppLauncher"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"bc812430-e75e-4fd1-9641-1f9f1e2d9a1f"
-	}
-	,{
 		"Name":"IsolatedAppLauncherTelemetryParameters"
 		,"Architectures":[]
 		,"Platform":null
@@ -50,6 +50,13 @@
 				]
 			}
 		]
+	}
+	,{
+		"Name":"IsolatedAppLauncher"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"bc812430-e75e-4fd1-9641-1f9f1e2d9a1f"
 	}
 ]
 
@@ -117,6 +124,21 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"isProcessInIsolatedWindowsEnvironment","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"IsCrossIsolatedEnvironmentClipboardContent"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"IsolatedWindowsEnvironmentUtils.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"isCrossIsolatedEnvironmentClipboardContent","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{

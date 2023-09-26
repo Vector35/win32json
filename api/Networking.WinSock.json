@@ -233,6 +233,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"TCP_INITIAL_RTO_UNSPECIFIED_MAX_SYN_RETRANSMISSIONS"
+		,"Type":{"Kind":"Native","Name":"UInt16"}
+		,"ValueType":"UInt16"
+		,"Value":65535
+		,"Attrs":[]
+	}
+	,{
 		"Name":"TCP_INITIAL_RTO_DEFAULT_RTT"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -244,6 +251,13 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":0
+		,"Attrs":[]
+	}
+	,{
+		"Name":"TCP_INITIAL_RTO_NO_SYN_RETRANSMISSIONS"
+		,"Type":{"Kind":"Native","Name":"UInt16"}
+		,"ValueType":"UInt16"
+		,"Value":65534
 		,"Attrs":[]
 	}
 	,{
@@ -730,198 +744,177 @@
 		,"Attrs":[]
 	}
 	,{
-		"Name":"SOCK_STREAM"
-		,"Type":{"Kind":"Native","Name":"UInt16"}
-		,"ValueType":"UInt16"
-		,"Value":1
-		,"Attrs":[]
-	}
-	,{
-		"Name":"SOCK_DGRAM"
-		,"Type":{"Kind":"Native","Name":"UInt16"}
-		,"ValueType":"UInt16"
-		,"Value":2
-		,"Attrs":[]
-	}
-	,{
-		"Name":"SOCK_RAW"
-		,"Type":{"Kind":"Native","Name":"UInt16"}
-		,"ValueType":"UInt16"
-		,"Value":3
-		,"Attrs":[]
-	}
-	,{
-		"Name":"SOCK_RDM"
-		,"Type":{"Kind":"Native","Name":"UInt16"}
-		,"ValueType":"UInt16"
-		,"Value":4
-		,"Attrs":[]
-	}
-	,{
-		"Name":"SOCK_SEQPACKET"
-		,"Type":{"Kind":"Native","Name":"UInt16"}
-		,"ValueType":"UInt16"
-		,"Value":5
-		,"Attrs":[]
-	}
-	,{
 		"Name":"SOL_SOCKET"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":65535
 		,"Attrs":[]
 	}
 	,{
-		"Name":"SO_DEBUG"
+		"Name":"SOL_IP"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
+		,"Value":65531
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SOL_IPV6"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":65530
+		,"Attrs":[]
+	}
+	,{
+		"Name":"SO_DEBUG"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":1
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_ACCEPTCONN"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":2
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_REUSEADDR"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":4
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_KEEPALIVE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":8
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_DONTROUTE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":16
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_BROADCAST"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":32
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_USELOOPBACK"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":64
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_LINGER"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":128
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_OOBINLINE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":256
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_SNDBUF"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":4097
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_RCVBUF"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":4098
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_SNDLOWAT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":4099
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_RCVLOWAT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":4100
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_SNDTIMEO"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":4101
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_RCVTIMEO"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":4102
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_ERROR"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":4103
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_TYPE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":4104
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_BSP_STATE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":4105
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_GROUP_ID"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":8193
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_GROUP_PRIORITY"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":8194
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_MAX_MSG_SIZE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":8195
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_CONDITIONAL_ACCEPT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":12290
 		,"Attrs":[]
 	}
@@ -941,29 +934,29 @@
 	}
 	,{
 		"Name":"SO_RANDOMIZE_PORT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":12293
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_PORT_SCALABILITY"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":12294
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_REUSE_UNICASTPORT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":12295
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_REUSE_MULTICASTPORT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":12296
 		,"Attrs":[]
 	}
@@ -990,8 +983,8 @@
 	}
 	,{
 		"Name":"TCP_NODELAY"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":1
 		,"Attrs":[]
 	}
@@ -1189,13 +1182,6 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":3355443236
-		,"Attrs":[]
-	}
-	,{
-		"Name":"IPPROTO_IP"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":0
 		,"Attrs":[]
 	}
 	,{
@@ -2173,288 +2159,288 @@
 	}
 	,{
 		"Name":"IP_OPTIONS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":1
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_HDRINCL"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":2
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_TOS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":3
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_TTL"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":4
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_MULTICAST_IF"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":9
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_MULTICAST_TTL"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":10
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_MULTICAST_LOOP"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":11
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_ADD_MEMBERSHIP"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":12
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_DROP_MEMBERSHIP"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":13
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_DONTFRAGMENT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":14
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_ADD_SOURCE_MEMBERSHIP"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":15
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_DROP_SOURCE_MEMBERSHIP"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":16
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_BLOCK_SOURCE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":17
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_UNBLOCK_SOURCE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":18
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_PKTINFO"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":19
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_HOPLIMIT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":21
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_RECVTTL"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":21
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_RECEIVE_BROADCAST"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":22
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_RECVIF"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":24
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_RECVDSTADDR"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":25
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_IFLIST"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":28
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_ADD_IFLIST"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":29
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_DEL_IFLIST"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":30
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_UNICAST_IF"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":31
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_RTHDR"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":32
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_GET_IFLIST"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":33
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_RECVRTHDR"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":38
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_TCLASS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":39
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_RECVTCLASS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":40
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_RECVTOS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":40
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_ORIGINAL_ARRIVAL_IF"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":47
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_ECN"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":50
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_RECVECN"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":50
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_PKTINFO_EX"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":51
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_WFP_REDIRECT_RECORDS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":60
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_WFP_REDIRECT_CONTEXT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":70
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_MTU_DISCOVER"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":71
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_MTU"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":73
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_NRT_INTERFACE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":74
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_RECVERR"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":75
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IP_USER_MTU"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":76
 		,"Attrs":[]
 	}
@@ -2558,260 +2544,260 @@
 	}
 	,{
 		"Name":"IPV6_HOPOPTS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":1
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_HDRINCL"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":2
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_UNICAST_HOPS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":4
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_MULTICAST_IF"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":9
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_MULTICAST_HOPS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":10
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_MULTICAST_LOOP"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":11
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_ADD_MEMBERSHIP"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":12
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_JOIN_GROUP"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":12
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_DROP_MEMBERSHIP"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":13
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_LEAVE_GROUP"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":13
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_DONTFRAG"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":14
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_PKTINFO"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":19
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_HOPLIMIT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":21
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_PROTECTION_LEVEL"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":23
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_RECVIF"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":24
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_RECVDSTADDR"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":25
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_CHECKSUM"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":26
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_V6ONLY"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":27
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_IFLIST"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":28
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_ADD_IFLIST"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":29
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_DEL_IFLIST"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":30
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_UNICAST_IF"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":31
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_RTHDR"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":32
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_GET_IFLIST"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":33
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_RECVRTHDR"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":38
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_TCLASS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":39
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_RECVTCLASS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":40
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_ECN"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":50
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_RECVECN"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":50
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_PKTINFO_EX"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":51
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_WFP_REDIRECT_RECORDS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":60
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_WFP_REDIRECT_CONTEXT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":70
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_MTU_DISCOVER"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":71
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_MTU"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":72
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_NRT_INTERFACE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":74
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_RECVERR"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":75
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPV6_USER_MTU"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":76
 		,"Attrs":[]
 	}
@@ -2824,8 +2810,8 @@
 	}
 	,{
 		"Name":"IP_PROTECTION_LEVEL"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":23
 		,"Attrs":[]
 	}
@@ -2873,169 +2859,169 @@
 	}
 	,{
 		"Name":"TCP_OFFLOAD_NO_PREFERENCE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":0
 		,"Attrs":[]
 	}
 	,{
 		"Name":"TCP_OFFLOAD_NOT_PREFERRED"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":1
 		,"Attrs":[]
 	}
 	,{
 		"Name":"TCP_OFFLOAD_PREFERRED"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":2
 		,"Attrs":[]
 	}
 	,{
 		"Name":"TCP_EXPEDITED_1122"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":2
 		,"Attrs":[]
 	}
 	,{
 		"Name":"TCP_KEEPALIVE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":3
 		,"Attrs":[]
 	}
 	,{
 		"Name":"TCP_MAXSEG"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":4
 		,"Attrs":[]
 	}
 	,{
 		"Name":"TCP_MAXRT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":5
 		,"Attrs":[]
 	}
 	,{
 		"Name":"TCP_STDURG"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":6
 		,"Attrs":[]
 	}
 	,{
 		"Name":"TCP_NOURG"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":7
 		,"Attrs":[]
 	}
 	,{
 		"Name":"TCP_ATMARK"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":8
 		,"Attrs":[]
 	}
 	,{
 		"Name":"TCP_NOSYNRETRIES"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":9
 		,"Attrs":[]
 	}
 	,{
 		"Name":"TCP_TIMESTAMPS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":10
 		,"Attrs":[]
 	}
 	,{
 		"Name":"TCP_OFFLOAD_PREFERENCE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":11
 		,"Attrs":[]
 	}
 	,{
 		"Name":"TCP_CONGESTION_ALGORITHM"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":12
 		,"Attrs":[]
 	}
 	,{
 		"Name":"TCP_DELAY_FIN_ACK"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":13
 		,"Attrs":[]
 	}
 	,{
 		"Name":"TCP_MAXRTMS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":14
 		,"Attrs":[]
 	}
 	,{
 		"Name":"TCP_FASTOPEN"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":15
 		,"Attrs":[]
 	}
 	,{
 		"Name":"TCP_KEEPCNT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":16
 		,"Attrs":[]
 	}
 	,{
 		"Name":"TCP_KEEPIDLE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":3
 		,"Attrs":[]
 	}
 	,{
 		"Name":"TCP_KEEPINTVL"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":17
 		,"Attrs":[]
 	}
 	,{
 		"Name":"TCP_FAIL_CONNECT_ON_ICMP_ERROR"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":18
 		,"Attrs":[]
 	}
 	,{
 		"Name":"TCP_ICMP_ERROR_INFO"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":19
 		,"Attrs":[]
 	}
 	,{
 		"Name":"UDP_SEND_MSG_SIZE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":2
 		,"Attrs":[]
 	}
 	,{
 		"Name":"UDP_RECV_MAX_COALESCED_SIZE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":3
 		,"Attrs":[]
 	}
@@ -3090,85 +3076,85 @@
 	}
 	,{
 		"Name":"SOL_IRLMP"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":255
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IRLMP_ENUMDEVICES"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":16
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IRLMP_IAS_SET"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":17
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IRLMP_IAS_QUERY"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":18
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IRLMP_SEND_PDU_LEN"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":19
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IRLMP_EXCLUSIVE_MODE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":20
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IRLMP_IRLPT_MODE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":21
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IRLMP_9WIRE_MODE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":22
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IRLMP_TINYTP_MODE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":23
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IRLMP_PARAMETERS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":24
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IRLMP_DISCOVERY_MODE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":25
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IRLMP_SHARP_MODE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":32
 		,"Attrs":[]
 	}
@@ -3391,64 +3377,64 @@
 	}
 	,{
 		"Name":"SO_CONNDATA"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":28672
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_CONNOPT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":28673
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_DISCDATA"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":28674
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_DISCOPT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":28675
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_CONNDATALEN"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":28676
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_CONNOPTLEN"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":28677
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_DISCDATALEN"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":28678
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_DISCOPTLEN"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":28679
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_OPENTYPE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":28680
 		,"Attrs":[]
 	}
@@ -3468,43 +3454,43 @@
 	}
 	,{
 		"Name":"SO_MAXDG"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":28681
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_MAXPATHDG"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":28682
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_UPDATE_ACCEPT_CONTEXT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":28683
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_CONNECT_TIME"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":28684
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_UPDATE_CONNECT_CONTEXT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":28688
 		,"Attrs":[]
 	}
 	,{
 		"Name":"TCP_BSDURGENT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":28672
 		,"Attrs":[]
 	}
@@ -3674,6 +3660,13 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":2
+		,"Attrs":[]
+	}
+	,{
+		"Name":"NLA_NAMESPACE_GUID"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"6642243a-3ba8-4aa6-baa5-2e0bd71fdd83"
 		,"Attrs":[]
 	}
 	,{
@@ -4448,29 +4441,29 @@
 	}
 	,{
 		"Name":"SO_PROTOCOL_INFOA"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":8196
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_PROTOCOL_INFOW"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":8197
 		,"Attrs":[]
 	}
 	,{
 		"Name":"SO_PROTOCOL_INFO"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":8197
 		,"Attrs":[]
 	}
 	,{
 		"Name":"PVD_CONFIG"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":12289
 		,"Attrs":[]
 	}
@@ -4602,27 +4595,6 @@
 	}
 	,{
 		"Name":"CF_DEFER"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2
-		,"Attrs":[]
-	}
-	,{
-		"Name":"SD_RECEIVE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":0
-		,"Attrs":[]
-	}
-	,{
-		"Name":"SD_SEND"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1
-		,"Attrs":[]
-	}
-	,{
-		"Name":"SD_BOTH"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":2
@@ -5284,69 +5256,6 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":64
-		,"Attrs":[]
-	}
-	,{
-		"Name":"POLLRDNORM"
-		,"Type":{"Kind":"Native","Name":"UInt16"}
-		,"ValueType":"UInt16"
-		,"Value":256
-		,"Attrs":[]
-	}
-	,{
-		"Name":"POLLRDBAND"
-		,"Type":{"Kind":"Native","Name":"UInt16"}
-		,"ValueType":"UInt16"
-		,"Value":512
-		,"Attrs":[]
-	}
-	,{
-		"Name":"POLLPRI"
-		,"Type":{"Kind":"Native","Name":"UInt16"}
-		,"ValueType":"UInt16"
-		,"Value":1024
-		,"Attrs":[]
-	}
-	,{
-		"Name":"POLLWRNORM"
-		,"Type":{"Kind":"Native","Name":"UInt16"}
-		,"ValueType":"UInt16"
-		,"Value":16
-		,"Attrs":[]
-	}
-	,{
-		"Name":"POLLOUT"
-		,"Type":{"Kind":"Native","Name":"UInt16"}
-		,"ValueType":"UInt16"
-		,"Value":16
-		,"Attrs":[]
-	}
-	,{
-		"Name":"POLLWRBAND"
-		,"Type":{"Kind":"Native","Name":"UInt16"}
-		,"ValueType":"UInt16"
-		,"Value":32
-		,"Attrs":[]
-	}
-	,{
-		"Name":"POLLERR"
-		,"Type":{"Kind":"Native","Name":"UInt16"}
-		,"ValueType":"UInt16"
-		,"Value":1
-		,"Attrs":[]
-	}
-	,{
-		"Name":"POLLHUP"
-		,"Type":{"Kind":"Native","Name":"UInt16"}
-		,"ValueType":"UInt16"
-		,"Value":2
-		,"Attrs":[]
-	}
-	,{
-		"Name":"POLLNVAL"
-		,"Type":{"Kind":"Native","Name":"UInt16"}
-		,"ValueType":"UInt16"
-		,"Value":4
 		,"Attrs":[]
 	}
 	,{
@@ -6590,15 +6499,15 @@
 	}
 	,{
 		"Name":"UDP_NOCHECKSUM"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":1
 		,"Attrs":[]
 	}
 	,{
 		"Name":"UDP_CHECKSUM_COVERAGE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":20
 		,"Attrs":[]
 	}
@@ -6611,121 +6520,114 @@
 	}
 	,{
 		"Name":"IPX_PTYPE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":16384
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPX_FILTERPTYPE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":16385
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPX_STOPFILTERPTYPE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":16387
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPX_DSTYPE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":16386
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPX_EXTENDED_ADDRESS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":16388
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPX_RECVHDR"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":16389
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPX_MAXSIZE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":16390
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPX_ADDRESS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":16391
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPX_GETNETINFO"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":16392
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPX_GETNETINFO_NORIP"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":16393
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPX_SPXGETCONNECTIONSTATUS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":16395
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPX_ADDRESS_NOTIFY"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":16396
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPX_MAX_ADAPTER_NUM"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":16397
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPX_RERIPNETNUMBER"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":16398
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPX_RECEIVE_BROADCAST"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":16399
 		,"Attrs":[]
 	}
 	,{
 		"Name":"IPX_IMMEDIATESPXACK"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":16400
-		,"Attrs":[]
-	}
-	,{
-		"Name":"IPPROTO_RM"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":113
 		,"Attrs":[]
 	}
 	,{
@@ -6737,106 +6639,106 @@
 	}
 	,{
 		"Name":"RM_OPTIONSBASE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":1000
 		,"Attrs":[]
 	}
 	,{
 		"Name":"RM_RATE_WINDOW_SIZE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":1001
 		,"Attrs":[]
 	}
 	,{
 		"Name":"RM_SET_MESSAGE_BOUNDARY"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":1002
 		,"Attrs":[]
 	}
 	,{
 		"Name":"RM_FLUSHCACHE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":1003
 		,"Attrs":[]
 	}
 	,{
 		"Name":"RM_SENDER_WINDOW_ADVANCE_METHOD"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":1004
 		,"Attrs":[]
 	}
 	,{
 		"Name":"RM_SENDER_STATISTICS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":1005
 		,"Attrs":[]
 	}
 	,{
 		"Name":"RM_LATEJOIN"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":1006
 		,"Attrs":[]
 	}
 	,{
 		"Name":"RM_SET_SEND_IF"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":1007
 		,"Attrs":[]
 	}
 	,{
 		"Name":"RM_ADD_RECEIVE_IF"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":1008
 		,"Attrs":[]
 	}
 	,{
 		"Name":"RM_DEL_RECEIVE_IF"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":1009
 		,"Attrs":[]
 	}
 	,{
 		"Name":"RM_SEND_WINDOW_ADV_RATE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":1010
 		,"Attrs":[]
 	}
 	,{
 		"Name":"RM_USE_FEC"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":1011
 		,"Attrs":[]
 	}
 	,{
 		"Name":"RM_SET_MCAST_TTL"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":1012
 		,"Attrs":[]
 	}
 	,{
 		"Name":"RM_RECEIVER_STATISTICS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":1013
 		,"Attrs":[]
 	}
 	,{
 		"Name":"RM_HIGH_SPEED_INTRANET_OPT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":1014
 		,"Attrs":[]
 	}
@@ -7569,6 +7471,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"ICMP6_PARAMPROB_FIRSTFRAGMENT"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":3
+		,"Attrs":[]
+	}
+	,{
 		"Name":"ICMPV6_ECHO_REQUEST_FLAG_REVERSE"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -7884,13 +7793,6 @@
 		,"Attrs":[]
 	}
 	,{
-		"Name":"POLLIN"
-		,"Type":{"Kind":"Native","Name":"UInt16"}
-		,"ValueType":"UInt16"
-		,"Value":768
-		,"Attrs":[]
-	}
-	,{
 		"Name":"LM_HB_Extension"
 		,"Type":{"Kind":"Native","Name":"Int32"}
 		,"ValueType":"Int32"
@@ -8139,43 +8041,58 @@
 		,"IntegerBase":"UInt32"
 	}
 	,{
-		"Name":"RIO_BUFFERID_t"
+		"Name":"WSAPOLL_EVENT_FLAGS"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
+		,"Kind":"Enum"
+		,"Flags":true
+		,"Scoped":false
+		,"Values":[
+			{"Name":"POLLRDNORM","Value":256}
+			,{"Name":"POLLRDBAND","Value":512}
+			,{"Name":"POLLIN","Value":768}
+			,{"Name":"POLLPRI","Value":1024}
+			,{"Name":"POLLWRNORM","Value":16}
+			,{"Name":"POLLOUT","Value":16}
+			,{"Name":"POLLWRBAND","Value":32}
+			,{"Name":"POLLERR","Value":1}
+			,{"Name":"POLLHUP","Value":2}
+			,{"Name":"POLLNVAL","Value":4}
 		]
-		,"NestedTypes":[
-		]
+		,"IntegerBase":"Int16"
 	}
 	,{
-		"Name":"RIO_CQ_t"
+		"Name":"WINSOCK_SHUTDOWN_HOW"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"SD_RECEIVE","Value":0}
+			,{"Name":"SD_SEND","Value":1}
+			,{"Name":"SD_BOTH","Value":2}
 		]
-		,"NestedTypes":[
-		]
+		,"IntegerBase":"Int32"
 	}
 	,{
-		"Name":"RIO_RQ_t"
+		"Name":"WINSOCK_SOCKET_TYPE"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"SOCK_STREAM","Value":1}
+			,{"Name":"SOCK_DGRAM","Value":2}
+			,{"Name":"SOCK_RAW","Value":3}
+			,{"Name":"SOCK_RDM","Value":4}
+			,{"Name":"SOCK_SEQPACKET","Value":5}
 		]
-		,"NestedTypes":[
-		]
+		,"IntegerBase":"Int32"
 	}
 	,{
-		"Name":"HWSAEVENT"
+		"Name":"WSAEVENT"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"NativeTypedef"
@@ -8191,6 +8108,42 @@
 		,"AlsoUsableFor":null
 		,"Def":{"Kind":"Native","Name":"UIntPtr"}
 		,"FreeFunc":"closesocket"
+	}
+	,{
+		"Name":"socklen_t"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"Int32"}
+		,"FreeFunc":null
+	}
+	,{
+		"Name":"RIO_BUFFERID"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
+		"Name":"RIO_CQ"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
+		"Name":"RIO_RQ"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
 	}
 	,{
 		"Name":"FLOWSPEC"
@@ -8342,7 +8295,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"iAddressCount","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"Address","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"SOCKET_ADDRESS","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":[]}
+			,{"Name":"Address","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"SOCKET_ADDRESS","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -8453,6 +8406,8 @@
 			,{"Name":"IPPROTO_RESERVED_IPSECOFFLOAD","Value":259}
 			,{"Name":"IPPROTO_RESERVED_WNV","Value":260}
 			,{"Name":"IPPROTO_RESERVED_MAX","Value":261}
+			,{"Name":"IPPROTO_IP","Value":0}
+			,{"Name":"IPPROTO_RM","Value":113}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -9568,8 +9523,8 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"fd","Type":{"Kind":"ApiRef","Name":"SOCKET","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":[]}
-			,{"Name":"events","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"revents","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
+			,{"Name":"events","Type":{"Kind":"ApiRef","Name":"WSAPOLL_EVENT_FLAGS","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":[]}
+			,{"Name":"revents","Type":{"Kind":"ApiRef","Name":"WSAPOLL_EVENT_FLAGS","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -9829,7 +9784,7 @@
 			,{"Name":"imsf_interface","Type":{"Kind":"ApiRef","Name":"IN_ADDR","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":[]}
 			,{"Name":"imsf_fmode","Type":{"Kind":"ApiRef","Name":"MULTICAST_MODE_TYPE","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":[]}
 			,{"Name":"imsf_numsrc","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"imsf_slist","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"IN_ADDR","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":[]}
+			,{"Name":"imsf_slist","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"IN_ADDR","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -9889,7 +9844,7 @@
 			,{"Name":"gf_group","Type":{"Kind":"ApiRef","Name":"SOCKADDR_STORAGE","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":[]}
 			,{"Name":"gf_fmode","Type":{"Kind":"ApiRef","Name":"MULTICAST_MODE_TYPE","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":[]}
 			,{"Name":"gf_numsrc","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"gf_slist","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"SOCKADDR_STORAGE","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":[]}
+			,{"Name":"gf_slist","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"SOCKADDR_STORAGE","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -10223,7 +10178,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"numDevice","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Device","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"WINDOWS_IRDA_DEVICE_INFO","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":[]}
+			,{"Name":"Device","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"WINDOWS_IRDA_DEVICE_INFO","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -10237,7 +10192,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"numDevice","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Device","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"WCE_IRDA_DEVICE_INFO","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":[]}
+			,{"Name":"Device","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"WCE_IRDA_DEVICE_INFO","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -11158,7 +11113,7 @@
 			,{"Name":"UserNameStringLen","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"DomainNameStringLen","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"PasswordStringLen","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"AllStrings","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+			,{"Name":"AllStrings","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -11174,7 +11129,7 @@
 			{"Name":"SecurityProtocol","Type":{"Kind":"ApiRef","Name":"SOCKET_SECURITY_PROTOCOL","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":[]}
 			,{"Name":"PeerAddress","Type":{"Kind":"ApiRef","Name":"SOCKADDR_STORAGE","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":[]}
 			,{"Name":"PeerTargetNameStringLen","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"AllStrings","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+			,{"Name":"AllStrings","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -11312,7 +11267,7 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"BufferId","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RIO_BUFFERID_t","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":[]}
+			{"Name":"BufferId","Type":{"Kind":"ApiRef","Name":"RIO_BUFFERID","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":[]}
 			,{"Name":"Offset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -11429,7 +11384,7 @@
 		,"Fields":[
 			{"Name":"IEType","Type":{"Kind":"ApiRef","Name":"Q2931_IE_TYPE","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":[]}
 			,{"Name":"IELength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"IE","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"IE","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -11634,7 +11589,7 @@
 			{"Name":"TypeOfNetworkId","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"NetworkIdPlan","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"NetworkIdLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"NetworkId","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"NetworkId","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -11845,7 +11800,7 @@
 						,"Size":0
 						,"PackingSize":0
 						,"Fields":[
-							{"Name":"nFileOffset","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+							{"Name":"nFileOffset","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 							,{"Name":"hFile","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 						]
 						,"NestedTypes":[
@@ -12027,7 +11982,7 @@
 						,"Size":0
 						,"PackingSize":0
 						,"Fields":[
-							{"Name":"information","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+							{"Name":"information","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["FlexibleArray"]}
 						]
 						,"NestedTypes":[
 						]
@@ -12042,7 +11997,7 @@
 						,"Fields":[
 							{"Name":"dwType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"dwSpeed","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-							,{"Name":"adapterName","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+							,{"Name":"adapterName","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["FlexibleArray"]}
 						]
 						,"NestedTypes":[
 						]
@@ -12111,7 +12066,7 @@
 			{"Name":"result","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"fds","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"timeout","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"fdArray","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"WSAPOLLFD","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":[]}
+			,{"Name":"fdArray","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"WSAPOLLFD","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -12185,7 +12140,7 @@
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"SocketQueue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RIO_RQ_t","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["In"]}
+			{"Name":"SocketQueue","Type":{"Kind":"ApiRef","Name":"RIO_RQ","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pData","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"RIO_BUF","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["In"]}
 			,{"Name":"DataBufferCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -12205,7 +12160,7 @@
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"SocketQueue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RIO_RQ_t","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["In"]}
+			{"Name":"SocketQueue","Type":{"Kind":"ApiRef","Name":"RIO_RQ","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pData","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"RIO_BUF","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["In"]}
 			,{"Name":"DataBufferCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pLocalAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RIO_BUF","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["In","Optional"]}
@@ -12229,7 +12184,7 @@
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"SocketQueue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RIO_RQ_t","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["In"]}
+			{"Name":"SocketQueue","Type":{"Kind":"ApiRef","Name":"RIO_RQ","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pData","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"RIO_BUF","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["In"]}
 			,{"Name":"DataBufferCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -12249,7 +12204,7 @@
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"SocketQueue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RIO_RQ_t","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["In"]}
+			{"Name":"SocketQueue","Type":{"Kind":"ApiRef","Name":"RIO_RQ","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pData","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"RIO_BUF","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["In"]}
 			,{"Name":"DataBufferCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pLocalAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RIO_BUF","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["In","Optional"]}
@@ -12273,7 +12228,7 @@
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"CQ","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RIO_CQ_t","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["In"]}
+			{"Name":"CQ","Type":{"Kind":"ApiRef","Name":"RIO_CQ","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -12355,7 +12310,7 @@
 		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RIO_CQ_t","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}}
+		,"ReturnType":{"Kind":"ApiRef","Name":"RIO_CQ","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
@@ -12372,7 +12327,7 @@
 		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RIO_RQ_t","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}}
+		,"ReturnType":{"Kind":"ApiRef","Name":"RIO_RQ","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
@@ -12381,8 +12336,8 @@
 			,{"Name":"MaxReceiveDataBuffers","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"MaxOutstandingSend","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"MaxSendDataBuffers","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"ReceiveCQ","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RIO_CQ_t","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["In"]}
-			,{"Name":"SendCQ","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RIO_CQ_t","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"ReceiveCQ","Type":{"Kind":"ApiRef","Name":"RIO_CQ","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":["In"]}
+			,{"Name":"SendCQ","Type":{"Kind":"ApiRef","Name":"RIO_CQ","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":["In"]}
 			,{"Name":"SocketContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
 		]
 	}
@@ -12399,7 +12354,7 @@
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"CQ","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RIO_CQ_t","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["In"]}
+			{"Name":"CQ","Type":{"Kind":"ApiRef","Name":"RIO_CQ","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Array","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"RIORESULT","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["Out"]}
 			,{"Name":"ArraySize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
@@ -12417,7 +12372,7 @@
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"BufferId","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RIO_BUFFERID_t","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["In"]}
+			{"Name":"BufferId","Type":{"Kind":"ApiRef","Name":"RIO_BUFFERID","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -12433,7 +12388,7 @@
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"CQ","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RIO_CQ_t","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["In"]}
+			{"Name":"CQ","Type":{"Kind":"ApiRef","Name":"RIO_CQ","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -12445,7 +12400,7 @@
 		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":false
-		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RIO_BUFFERID_t","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}}
+		,"ReturnType":{"Kind":"ApiRef","Name":"RIO_BUFFERID","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
@@ -12466,7 +12421,7 @@
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"CQ","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RIO_CQ_t","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["In"]}
+			{"Name":"CQ","Type":{"Kind":"ApiRef","Name":"RIO_CQ","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":["In"]}
 			,{"Name":"QueueSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
@@ -12483,7 +12438,7 @@
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"RQ","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RIO_RQ_t","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["In"]}
+			{"Name":"RQ","Type":{"Kind":"ApiRef","Name":"RIO_RQ","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":["In"]}
 			,{"Name":"MaxOutstandingReceive","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"MaxOutstandingSend","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
@@ -14189,7 +14144,7 @@
 		,"Fields":[
 			{"Name":"dwTypeNameOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwValueCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Values","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"SERVICE_TYPE_VALUE","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":[]}
+			,{"Name":"Values","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"SERVICE_TYPE_VALUE","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -14204,7 +14159,7 @@
 		,"Fields":[
 			{"Name":"lpTypeName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"dwValueCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Values","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"SERVICE_TYPE_VALUE_ABSA","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":[]}
+			,{"Name":"Values","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"SERVICE_TYPE_VALUE_ABSA","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -14219,7 +14174,7 @@
 		,"Fields":[
 			{"Name":"lpTypeName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"dwValueCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Values","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"SERVICE_TYPE_VALUE_ABSW","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":[]}
+			,{"Name":"Values","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"SERVICE_TYPE_VALUE_ABSW","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -14251,7 +14206,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"dwAddressCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Addresses","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"SERVICE_ADDRESS","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":[]}
+			,{"Name":"Addresses","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"SERVICE_ADDRESS","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -15219,7 +15174,7 @@
 			,{"Name":"HardwareAddressLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"ProtocolAddressLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Opcode","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"SenderHardwareAddress","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"SenderHardwareAddress","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -16161,7 +16116,7 @@
 		,"Fields":[
 			{"Name":"Kind","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Length","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"Block","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"tcp_opt_sack_block","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":[]}
+			,{"Name":"Block","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"tcp_opt_sack_block","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 			{
@@ -16220,7 +16175,7 @@
 		,"Fields":[
 			{"Name":"Kind","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Length","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"Cookie","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"Cookie","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -16235,7 +16190,7 @@
 		,"Fields":[
 			{"Name":"CompartmentId","Type":{"Kind":"ApiRef","Name":"COMPARTMENT_ID","TargetKind":"Default","Api":"System.Kernel","Parents":[]},"Attrs":[]}
 			,{"Name":"ScopeId","Type":{"Kind":"ApiRef","Name":"SCOPE_ID","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":[]}
-			,{"Name":"IpAddress","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"IpAddress","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -16723,7 +16678,7 @@
 		"Name":"accept"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"SOCKET","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}
 		,"ReturnAttrs":[]
@@ -16740,7 +16695,7 @@
 		"Name":"bind"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -16757,7 +16712,7 @@
 		"Name":"closesocket"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -16772,7 +16727,7 @@
 		"Name":"connect"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -16789,7 +16744,7 @@
 		"Name":"ioctlsocket"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -16806,7 +16761,7 @@
 		"Name":"getpeername"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -16823,7 +16778,7 @@
 		"Name":"getsockname"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -16840,7 +16795,7 @@
 		"Name":"getsockopt"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -16859,7 +16814,7 @@
 		"Name":"htonl"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16874,7 +16829,7 @@
 		"Name":"htons"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt16"}
 		,"ReturnAttrs":[]
@@ -16889,7 +16844,7 @@
 		"Name":"inet_addr"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16904,7 +16859,7 @@
 		"Name":"inet_ntoa"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -16919,7 +16874,7 @@
 		"Name":"listen"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -16935,7 +16890,7 @@
 		"Name":"ntohl"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
@@ -16950,7 +16905,7 @@
 		"Name":"ntohs"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"UInt16"}
 		,"ReturnAttrs":[]
@@ -16965,7 +16920,7 @@
 		"Name":"recv"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -16983,7 +16938,7 @@
 		"Name":"recvfrom"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -17003,7 +16958,7 @@
 		"Name":"select"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -17022,7 +16977,7 @@
 		"Name":"send"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -17040,7 +16995,7 @@
 		"Name":"sendto"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -17060,7 +17015,7 @@
 		"Name":"setsockopt"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -17079,7 +17034,7 @@
 		"Name":"shutdown"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -17088,14 +17043,14 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"s","Type":{"Kind":"ApiRef","Name":"SOCKET","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":["In"]}
-			,{"Name":"how","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
+			,{"Name":"how","Type":{"Kind":"ApiRef","Name":"WINSOCK_SHUTDOWN_HOW","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
 		"Name":"socket"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"SOCKET","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}
 		,"ReturnAttrs":[]
@@ -17104,7 +17059,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"af","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-			,{"Name":"type","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
+			,{"Name":"type","Type":{"Kind":"ApiRef","Name":"WINSOCK_SOCKET_TYPE","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":["In"]}
 			,{"Name":"protocol","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 		]
 	}
@@ -17112,7 +17067,7 @@
 		"Name":"gethostbyaddr"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HOSTENT","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}}
 		,"ReturnAttrs":[]
@@ -17129,7 +17084,7 @@
 		"Name":"gethostbyname"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HOSTENT","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}}
 		,"ReturnAttrs":[]
@@ -17144,7 +17099,7 @@
 		"Name":"gethostname"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -17160,7 +17115,7 @@
 		"Name":"GetHostNameW"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -17176,7 +17131,7 @@
 		"Name":"getservbyport"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SERVENT","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}}
 		,"ReturnAttrs":[]
@@ -17192,7 +17147,7 @@
 		"Name":"getservbyname"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SERVENT","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}}
 		,"ReturnAttrs":[]
@@ -17208,7 +17163,7 @@
 		"Name":"getprotobynumber"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PROTOENT","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}}
 		,"ReturnAttrs":[]
@@ -17223,7 +17178,7 @@
 		"Name":"getprotobyname"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PROTOENT","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}}
 		,"ReturnAttrs":[]
@@ -17238,7 +17193,7 @@
 		"Name":"WSAStartup"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -17254,7 +17209,7 @@
 		"Name":"WSACleanup"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -17268,7 +17223,7 @@
 		"Name":"WSASetLastError"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -17283,7 +17238,7 @@
 		"Name":"WSAGetLastError"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"WSA_ERROR","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}
 		,"ReturnAttrs":[]
@@ -17297,7 +17252,7 @@
 		"Name":"WSAIsBlocking"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -17311,7 +17266,7 @@
 		"Name":"WSAUnhookBlockingHook"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -17325,7 +17280,7 @@
 		"Name":"WSASetBlockingHook"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"FARPROC","TargetKind":"FunctionPointer","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -17340,7 +17295,7 @@
 		"Name":"WSACancelBlockingCall"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -17354,7 +17309,7 @@
 		"Name":"WSAAsyncGetServByName"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -17374,7 +17329,7 @@
 		"Name":"WSAAsyncGetServByPort"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -17394,7 +17349,7 @@
 		"Name":"WSAAsyncGetProtoByName"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -17413,7 +17368,7 @@
 		"Name":"WSAAsyncGetProtoByNumber"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -17432,7 +17387,7 @@
 		"Name":"WSAAsyncGetHostByName"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -17451,7 +17406,7 @@
 		"Name":"WSAAsyncGetHostByAddr"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -17472,7 +17427,7 @@
 		"Name":"WSACancelAsyncRequest"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -17487,7 +17442,7 @@
 		"Name":"WSAAsyncSelect"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -17505,7 +17460,7 @@
 		"Name":"WSAAccept"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"SOCKET","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}
 		,"ReturnAttrs":[]
@@ -17524,7 +17479,7 @@
 		"Name":"WSACloseEvent"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -17539,7 +17494,7 @@
 		"Name":"WSAConnect"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -17560,7 +17515,7 @@
 		"Name":"WSAConnectByNameW"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -17583,7 +17538,7 @@
 		"Name":"WSAConnectByNameA"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -17606,7 +17561,7 @@
 		"Name":"WSAConnectByList"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -17628,7 +17583,7 @@
 		"Name":"WSACreateEvent"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -17642,7 +17597,7 @@
 		"Name":"WSADuplicateSocketA"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -17659,7 +17614,7 @@
 		"Name":"WSADuplicateSocketW"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -17676,7 +17631,7 @@
 		"Name":"WSAEnumNetworkEvents"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -17693,7 +17648,7 @@
 		"Name":"WSAEnumProtocolsA"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -17710,7 +17665,7 @@
 		"Name":"WSAEnumProtocolsW"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -17727,7 +17682,7 @@
 		"Name":"WSAEventSelect"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -17744,7 +17699,7 @@
 		"Name":"WSAGetOverlappedResult"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -17763,7 +17718,7 @@
 		"Name":"WSAGetQOSByName"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -17780,7 +17735,7 @@
 		"Name":"WSAHtonl"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -17797,7 +17752,7 @@
 		"Name":"WSAHtons"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -17814,7 +17769,7 @@
 		"Name":"WSAIoctl"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -17837,7 +17792,7 @@
 		"Name":"WSAJoinLeaf"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"SOCKET","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}
 		,"ReturnAttrs":[]
@@ -17859,7 +17814,7 @@
 		"Name":"WSANtohl"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -17876,7 +17831,7 @@
 		"Name":"WSANtohs"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -17893,7 +17848,7 @@
 		"Name":"WSARecv"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -17914,7 +17869,7 @@
 		"Name":"WSARecvDisconnect"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -17930,7 +17885,7 @@
 		"Name":"WSARecvFrom"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -17953,7 +17908,7 @@
 		"Name":"WSAResetEvent"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -17968,7 +17923,7 @@
 		"Name":"WSASend"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -17989,7 +17944,7 @@
 		"Name":"WSASendMsg"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -18009,7 +17964,7 @@
 		"Name":"WSASendDisconnect"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -18025,7 +17980,7 @@
 		"Name":"WSASendTo"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -18048,7 +18003,7 @@
 		"Name":"WSASetEvent"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -18063,7 +18018,7 @@
 		"Name":"WSASocketA"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"SOCKET","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}
 		,"ReturnAttrs":[]
@@ -18083,7 +18038,7 @@
 		"Name":"WSASocketW"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"SOCKET","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}
 		,"ReturnAttrs":[]
@@ -18103,9 +18058,9 @@
 		"Name":"WSAWaitForMultipleEvents"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
-		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WAIT_EVENT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows8.1"
@@ -18122,7 +18077,7 @@
 		"Name":"WSAAddressToStringA"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -18141,7 +18096,7 @@
 		"Name":"WSAAddressToStringW"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -18160,7 +18115,7 @@
 		"Name":"WSAStringToAddressA"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -18179,7 +18134,7 @@
 		"Name":"WSAStringToAddressW"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -18198,7 +18153,7 @@
 		"Name":"WSALookupServiceBeginA"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -18215,7 +18170,7 @@
 		"Name":"WSALookupServiceBeginW"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -18232,7 +18187,7 @@
 		"Name":"WSALookupServiceNextA"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -18250,7 +18205,7 @@
 		"Name":"WSALookupServiceNextW"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -18268,7 +18223,7 @@
 		"Name":"WSANSPIoctl"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -18290,7 +18245,7 @@
 		"Name":"WSALookupServiceEnd"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -18305,7 +18260,7 @@
 		"Name":"WSAInstallServiceClassA"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -18320,7 +18275,7 @@
 		"Name":"WSAInstallServiceClassW"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -18335,7 +18290,7 @@
 		"Name":"WSARemoveServiceClass"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -18350,7 +18305,7 @@
 		"Name":"WSAGetServiceClassInfoA"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -18368,7 +18323,7 @@
 		"Name":"WSAGetServiceClassInfoW"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -18386,7 +18341,7 @@
 		"Name":"WSAEnumNameSpaceProvidersA"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -18402,7 +18357,7 @@
 		"Name":"WSAEnumNameSpaceProvidersW"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -18418,7 +18373,7 @@
 		"Name":"WSAEnumNameSpaceProvidersExA"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -18434,7 +18389,7 @@
 		"Name":"WSAEnumNameSpaceProvidersExW"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -18450,7 +18405,7 @@
 		"Name":"WSAGetServiceClassNameByClassIdA"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -18467,7 +18422,7 @@
 		"Name":"WSAGetServiceClassNameByClassIdW"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -18484,7 +18439,7 @@
 		"Name":"WSASetServiceA"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -18501,7 +18456,7 @@
 		"Name":"WSASetServiceW"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -18518,7 +18473,7 @@
 		"Name":"WSAProviderConfigChange"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -18535,7 +18490,7 @@
 		"Name":"WSAPoll"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -18651,7 +18606,7 @@
 		,"Params":[
 			{"Name":"S","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"Strict","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"Terminator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"Terminator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Const"]}
 			,{"Name":"Addr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IN_ADDR","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
@@ -18687,7 +18642,7 @@
 		,"Params":[
 			{"Name":"S","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"Strict","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"Terminator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"Terminator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Const"]}
 			,{"Name":"Addr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IN_ADDR","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
@@ -18792,7 +18747,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"S","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"Terminator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"Terminator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Const"]}
 			,{"Name":"Addr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IN6_ADDR","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
@@ -18827,7 +18782,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"S","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"Terminator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"Terminator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Const"]}
 			,{"Name":"Addr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IN6_ADDR","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
@@ -18894,7 +18849,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"S","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"Terminator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"Terminator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Const"]}
 			,{"Name":"Addr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DL_EUI48","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
@@ -18911,7 +18866,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"S","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"Terminator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"Terminator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Const"]}
 			,{"Name":"Addr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DL_EUI48","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
@@ -18919,7 +18874,7 @@
 		"Name":"WSARecvEx"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"MSWSOCK.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -19262,7 +19217,7 @@
 		"Name":"WSAAdvertiseProvider"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -19278,7 +19233,7 @@
 		"Name":"WSAUnadvertiseProvider"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -19293,7 +19248,7 @@
 		"Name":"WSAProviderCompleteAsyncCall"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -19539,7 +19494,7 @@
 		"Name":"getaddrinfo"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -19705,7 +19660,7 @@
 		"Name":"freeaddrinfo"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Void"}
 		,"ReturnAttrs":[]
@@ -19765,7 +19720,7 @@
 		"Name":"getnameinfo"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -19774,7 +19729,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"pSockaddr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SOCKADDR","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":1},"Const"]}
-			,{"Name":"SockaddrLength","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
+			,{"Name":"SockaddrLength","Type":{"Kind":"ApiRef","Name":"socklen_t","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pNodeBuffer","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out","NotNullTerminated","Optional"]}
 			,{"Name":"NodeBufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pServiceBuffer","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":5,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out","NotNullTerminated","Optional"]}
@@ -19795,7 +19750,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"pSockaddr","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SOCKADDR","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":1},"Const"]}
-			,{"Name":"SockaddrLength","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
+			,{"Name":"SockaddrLength","Type":{"Kind":"ApiRef","Name":"socklen_t","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pNodeBuffer","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["Out","NotNullTerminated","Optional"]}
 			,{"Name":"NodeBufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pServiceBuffer","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":5,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["Out","NotNullTerminated","Optional"]}
@@ -19807,7 +19762,7 @@
 		"Name":"inet_pton"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -19841,7 +19796,7 @@
 		"Name":"inet_ntop"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"WS2_32.dll"
 		,"ReturnType":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
@@ -19877,7 +19832,7 @@
 		"Name":"WSASetSocketSecurity"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"fwpuclnt.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -19896,7 +19851,7 @@
 		"Name":"WSAQuerySocketSecurity"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"fwpuclnt.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -19917,7 +19872,7 @@
 		"Name":"WSASetSocketPeerTargetName"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"fwpuclnt.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -19936,7 +19891,7 @@
 		"Name":"WSADeleteSocketPeerTargetName"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"fwpuclnt.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -19955,7 +19910,7 @@
 		"Name":"WSAImpersonateSocketPeer"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"fwpuclnt.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]
@@ -19972,7 +19927,7 @@
 		"Name":"WSARevertImpersonation"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
-		,"SetLastError":false
+		,"SetLastError":true
 		,"DllImport":"fwpuclnt.dll"
 		,"ReturnType":{"Kind":"Native","Name":"Int32"}
 		,"ReturnAttrs":[]

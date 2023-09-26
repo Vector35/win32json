@@ -119,20 +119,6 @@
 		]
 	}
 	,{
-		"Name":"PrintDocumentPackageTarget"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"4842669e-9947-46ea-8ba2-d8cce432c2ca"
-	}
-	,{
-		"Name":"PrintDocumentPackageTargetFactory"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"348ef17d-6c81-4982-92b4-ee188a43867a"
-	}
-	,{
 		"Name":"IPrintDocumentPackageTarget"
 		,"Architectures":[]
 		,"Platform":"windows8.0"
@@ -182,6 +168,45 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
+				]
+			}
+		]
+	}
+	,{
+		"Name":"IPrintDocumentPackageTarget2"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"c560298a-535c-48f9-866a-632540660cb4"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"GetIsTargetIppPrinter"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"isIppPrinter","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"GetTargetIppPrintDevice"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"riid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
+					,{"Name":"ppvTarget","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","ComOutPtr"]}
 				]
 			}
 		]
@@ -270,6 +295,20 @@
 				]
 			}
 		]
+	}
+	,{
+		"Name":"PrintDocumentPackageTarget"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"4842669e-9947-46ea-8ba2-d8cce432c2ca"
+	}
+	,{
+		"Name":"PrintDocumentPackageTargetFactory"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"348ef17d-6c81-4982-92b4-ee188a43867a"
 	}
 ]
 

@@ -541,13 +541,6 @@
 		,"Attrs":[]
 	}
 	,{
-		"Name":"BCRYPT_BLOCK_PADDING"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1
-		,"Attrs":[]
-	}
-	,{
 		"Name":"BCRYPT_GENERATE_IV"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -2067,20 +2060,6 @@
 		,"Attrs":[]
 	}
 	,{
-		"Name":"BCRYPT_RNG_USE_ENTROPY_IN_BUFFER"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1
-		,"Attrs":[]
-	}
-	,{
-		"Name":"BCRYPT_USE_SYSTEM_PREFERRED_RNG"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2
-		,"Attrs":[]
-	}
-	,{
 		"Name":"BCRYPT_HASH_INTERFACE_MAJORVERSION_2"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -2617,6 +2596,13 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":2
+		,"Attrs":[]
+	}
+	,{
+		"Name":"CRYPTPROTECT_DEFAULT_PROVIDER"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"df9d8cd0-1501-11d1-8c7a-00c04fc297eb"
 		,"Attrs":[]
 	}
 	,{
@@ -3597,6 +3583,13 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":256
+		,"Attrs":[]
+	}
+	,{
+		"Name":"NCRYPT_EXTENDED_ERRORS_FLAG"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":268435456
 		,"Attrs":[]
 	}
 	,{
@@ -6393,6 +6386,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"PP_IS_PFX_EPHEMERAL"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":50
+		,"Attrs":[]
+	}
+	,{
 		"Name":"PROV_RSA_FULL"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -7251,6 +7251,20 @@
 		,"Type":{"Kind":"Native","Name":"String"}
 		,"ValueType":"String"
 		,"Value":"1.3.6.1.4.1.311.3.3.1"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"szOID_RFC3161v21_counterSign"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"1.3.6.1.4.1.311.3.3.2"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"szOID_RFC3161v21_thumbprints"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"1.3.6.1.4.1.311.3.3.3"
 		,"Attrs":[]
 	}
 	,{
@@ -10282,6 +10296,20 @@
 		,"Type":{"Kind":"Native","Name":"String"}
 		,"ValueType":"String"
 		,"Value":"1.3.6.1.4.1.311.25.1"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"szOID_NTDS_CA_SECURITY_EXT"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"1.3.6.1.4.1.311.25.2"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"szOID_NTDS_OBJECTSID"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"1.3.6.1.4.1.311.25.2.1"
 		,"Attrs":[]
 	}
 	,{
@@ -14366,10 +14394,17 @@
 		,"Attrs":[]
 	}
 	,{
-		"Name":"CERT_FIRST_RESERVED_PROP_ID"
+		"Name":"CERT_DISALLOWED_CA_FILETIME_PROP_ID"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":128
+		,"Attrs":[]
+	}
+	,{
+		"Name":"CERT_FIRST_RESERVED_PROP_ID"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":129
 		,"Attrs":[]
 	}
 	,{
@@ -14447,6 +14482,13 @@
 		,"Type":{"Kind":"Native","Name":"String"}
 		,"ValueType":"String"
 		,"Value":"1.3.6.1.4.1.311.10.11.104"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"szOID_CERT_DISALLOWED_CA_FILETIME_PROP_ID"
+		,"Type":{"Kind":"Native","Name":"String"}
+		,"ValueType":"String"
+		,"Value":"1.3.6.1.4.1.311.10.11.128"
 		,"Attrs":[]
 	}
 	,{
@@ -16456,41 +16498,6 @@
 		,"Type":{"Kind":"Native","Name":"String"}
 		,"ValueType":"String"
 		,"Value":"CryptDllImportPublicKeyInfoEx2"
-		,"Attrs":[]
-	}
-	,{
-		"Name":"CRYPT_ACQUIRE_WINDOW_HANDLE_FLAG"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":128
-		,"Attrs":[]
-	}
-	,{
-		"Name":"CRYPT_ACQUIRE_NCRYPT_KEY_FLAGS_MASK"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":458752
-		,"Attrs":[]
-	}
-	,{
-		"Name":"CRYPT_ACQUIRE_ALLOW_NCRYPT_KEY_FLAG"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":65536
-		,"Attrs":[]
-	}
-	,{
-		"Name":"CRYPT_ACQUIRE_PREFER_NCRYPT_KEY_FLAG"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":131072
-		,"Attrs":[]
-	}
-	,{
-		"Name":"CRYPT_ACQUIRE_ONLY_NCRYPT_KEY_FLAG"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":262144
 		,"Attrs":[]
 	}
 	,{
@@ -18671,6 +18678,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"CERT_TRUST_BEFORE_DISALLOWED_CA_FILETIME"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2097152
+		,"Attrs":[]
+	}
+	,{
 		"Name":"CERT_TRUST_IS_COMPLEX_CHAIN"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -18829,6 +18843,13 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":65536
+		,"Attrs":[]
+	}
+	,{
+		"Name":"CERT_CHAIN_ENABLE_DISALLOWED_CA"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":131072
 		,"Attrs":[]
 	}
 	,{
@@ -20153,7 +20174,7 @@
 			,{"Name":"CERT_RDN_UTF8_STRING","Value":13}
 			,{"Name":"CERT_RDN_VISIBLE_STRING","Value":9}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CERT_STRING_TYPE"
@@ -20217,6 +20238,22 @@
 		,"IntegerBase":"UInt32"
 	}
 	,{
+		"Name":"BCRYPT_FLAGS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":true
+		,"Scoped":false
+		,"Values":[
+			{"Name":"BCRYPT_BLOCK_PADDING","Value":1}
+			,{"Name":"BCRYPT_PAD_NONE","Value":1}
+			,{"Name":"BCRYPT_PAD_OAEP","Value":4}
+			,{"Name":"BCRYPT_PAD_PKCS1","Value":2}
+			,{"Name":"BCRYPT_PAD_PSS","Value":8}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
 		"Name":"NCRYPT_FLAGS"
 		,"Architectures":[]
 		,"Platform":null
@@ -20224,11 +20261,7 @@
 		,"Flags":true
 		,"Scoped":false
 		,"Values":[
-			{"Name":"BCRYPT_PAD_NONE","Value":1}
-			,{"Name":"BCRYPT_PAD_OAEP","Value":4}
-			,{"Name":"BCRYPT_PAD_PKCS1","Value":2}
-			,{"Name":"BCRYPT_PAD_PSS","Value":8}
-			,{"Name":"NCRYPT_SILENT_FLAG","Value":64}
+			{"Name":"NCRYPT_SILENT_FLAG","Value":64}
 			,{"Name":"NCRYPT_NO_PADDING_FLAG","Value":1}
 			,{"Name":"NCRYPT_PAD_OAEP_FLAG","Value":4}
 			,{"Name":"NCRYPT_PAD_PKCS1_FLAG","Value":2}
@@ -20337,10 +20370,15 @@
 		,"Scoped":false
 		,"Values":[
 			{"Name":"CRYPT_ACQUIRE_CACHE_FLAG","Value":1}
+			,{"Name":"CRYPT_ACQUIRE_USE_PROV_INFO_FLAG","Value":2}
 			,{"Name":"CRYPT_ACQUIRE_COMPARE_KEY_FLAG","Value":4}
 			,{"Name":"CRYPT_ACQUIRE_NO_HEALING","Value":8}
 			,{"Name":"CRYPT_ACQUIRE_SILENT_FLAG","Value":64}
-			,{"Name":"CRYPT_ACQUIRE_USE_PROV_INFO_FLAG","Value":2}
+			,{"Name":"CRYPT_ACQUIRE_WINDOW_HANDLE_FLAG","Value":128}
+			,{"Name":"CRYPT_ACQUIRE_NCRYPT_KEY_FLAGS_MASK","Value":458752}
+			,{"Name":"CRYPT_ACQUIRE_ALLOW_NCRYPT_KEY_FLAG","Value":65536}
+			,{"Name":"CRYPT_ACQUIRE_PREFER_NCRYPT_KEY_FLAG","Value":131072}
+			,{"Name":"CRYPT_ACQUIRE_ONLY_NCRYPT_KEY_FLAG","Value":262144}
 		]
 		,"IntegerBase":"UInt32"
 	}
@@ -20558,7 +20596,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"CERT_STORE_BACKUP_RESTORE_FLAG","Value":2048}
@@ -21138,6 +21176,184 @@
 		,"IntegerBase":"UInt32"
 	}
 	,{
+		"Name":"BCRYPTGENRANDOM_FLAGS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"BCRYPT_RNG_USE_ENTROPY_IN_BUFFER","Value":1}
+			,{"Name":"BCRYPT_USE_SYSTEM_PREFERRED_RNG","Value":2}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
+		"Name":"SIGNER_SIGN_FLAGS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":true
+		,"Scoped":false
+		,"Values":[
+			{"Name":"SIG_APPEND","Value":4096}
+			,{"Name":"SPC_INC_PE_RESOURCES_FLAG","Value":128}
+			,{"Name":"SPC_INC_PE_DEBUG_INFO_FLAG","Value":64}
+			,{"Name":"SPC_INC_PE_IMPORT_ADDR_TABLE_FLAG","Value":32}
+			,{"Name":"SPC_EXC_PE_PAGE_HASHES_FLAG","Value":16}
+			,{"Name":"SPC_INC_PE_PAGE_HASHES_FLAG","Value":256}
+			,{"Name":"SPC_DIGEST_GENERATE_FLAG","Value":512}
+			,{"Name":"SPC_DIGEST_SIGN_FLAG","Value":1024}
+			,{"Name":"SPC_DIGEST_SIGN_EX_FLAG","Value":16384}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
+		"Name":"SIGNER_TIMESTAMP_FLAGS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"SIGNER_TIMESTAMP_AUTHENTICODE","Value":1}
+			,{"Name":"SIGNER_TIMESTAMP_RFC3161","Value":2}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
+		"Name":"SIGNER_SUBJECT_CHOICE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"SIGNER_SUBJECT_FILE","Value":1}
+			,{"Name":"SIGNER_SUBJECT_BLOB","Value":2}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
+		"Name":"SIGNER_SIGNATURE_ATTRIBUTE_CHOICE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"SIGNER_NO_ATTR","Value":0}
+			,{"Name":"SIGNER_AUTHCODE_ATTR","Value":1}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
+		"Name":"SIGNER_PRIVATE_KEY_CHOICE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"PVK_TYPE_FILE_NAME","Value":1}
+			,{"Name":"PVK_TYPE_KEYCONTAINER","Value":2}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
+		"Name":"SIGNER_CERT_POLICY"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":true
+		,"Scoped":false
+		,"Values":[
+			{"Name":"SIGNER_CERT_POLICY_STORE","Value":1}
+			,{"Name":"SIGNER_CERT_POLICY_CHAIN","Value":2}
+			,{"Name":"SIGNER_CERT_POLICY_SPC","Value":4}
+			,{"Name":"SIGNER_CERT_POLICY_CHAIN_NO_ROOT","Value":8}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
+		"Name":"SIGNER_CERT_CHOICE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"SIGNER_CERT_SPC_FILE","Value":1}
+			,{"Name":"SIGNER_CERT_STORE","Value":2}
+			,{"Name":"SIGNER_CERT_SPC_CHAIN","Value":3}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
+		"Name":"ALG_ID"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"CALG_MD2","Value":32769}
+			,{"Name":"CALG_MD4","Value":32770}
+			,{"Name":"CALG_MD5","Value":32771}
+			,{"Name":"CALG_SHA","Value":32772}
+			,{"Name":"CALG_SHA1","Value":32772}
+			,{"Name":"CALG_MAC","Value":32773}
+			,{"Name":"CALG_RSA_SIGN","Value":9216}
+			,{"Name":"CALG_DSS_SIGN","Value":8704}
+			,{"Name":"CALG_NO_SIGN","Value":8192}
+			,{"Name":"CALG_RSA_KEYX","Value":41984}
+			,{"Name":"CALG_DES","Value":26113}
+			,{"Name":"CALG_3DES_112","Value":26121}
+			,{"Name":"CALG_3DES","Value":26115}
+			,{"Name":"CALG_DESX","Value":26116}
+			,{"Name":"CALG_RC2","Value":26114}
+			,{"Name":"CALG_RC4","Value":26625}
+			,{"Name":"CALG_SEAL","Value":26626}
+			,{"Name":"CALG_DH_SF","Value":43521}
+			,{"Name":"CALG_DH_EPHEM","Value":43522}
+			,{"Name":"CALG_AGREEDKEY_ANY","Value":43523}
+			,{"Name":"CALG_KEA_KEYX","Value":43524}
+			,{"Name":"CALG_HUGHES_MD5","Value":40963}
+			,{"Name":"CALG_SKIPJACK","Value":26122}
+			,{"Name":"CALG_TEK","Value":26123}
+			,{"Name":"CALG_CYLINK_MEK","Value":26124}
+			,{"Name":"CALG_SSL3_SHAMD5","Value":32776}
+			,{"Name":"CALG_SSL3_MASTER","Value":19457}
+			,{"Name":"CALG_SCHANNEL_MASTER_HASH","Value":19458}
+			,{"Name":"CALG_SCHANNEL_MAC_KEY","Value":19459}
+			,{"Name":"CALG_SCHANNEL_ENC_KEY","Value":19463}
+			,{"Name":"CALG_PCT1_MASTER","Value":19460}
+			,{"Name":"CALG_SSL2_MASTER","Value":19461}
+			,{"Name":"CALG_TLS1_MASTER","Value":19462}
+			,{"Name":"CALG_RC5","Value":26125}
+			,{"Name":"CALG_HMAC","Value":32777}
+			,{"Name":"CALG_TLS1PRF","Value":32778}
+			,{"Name":"CALG_HASH_REPLACE_OWF","Value":32779}
+			,{"Name":"CALG_AES_128","Value":26126}
+			,{"Name":"CALG_AES_192","Value":26127}
+			,{"Name":"CALG_AES_256","Value":26128}
+			,{"Name":"CALG_AES","Value":26129}
+			,{"Name":"CALG_SHA_256","Value":32780}
+			,{"Name":"CALG_SHA_384","Value":32781}
+			,{"Name":"CALG_SHA_512","Value":32782}
+			,{"Name":"CALG_ECDH","Value":43525}
+			,{"Name":"CALG_ECDH_EPHEM","Value":44550}
+			,{"Name":"CALG_ECMQV","Value":40961}
+			,{"Name":"CALG_ECDSA","Value":8707}
+			,{"Name":"CALG_NULLCIPHER","Value":24576}
+			,{"Name":"CALG_THIRDPARTY_KEY_EXCHANGE","Value":45056}
+			,{"Name":"CALG_THIRDPARTY_SIGNATURE","Value":12288}
+			,{"Name":"CALG_THIRDPARTY_CIPHER","Value":28672}
+			,{"Name":"CALG_THIRDPARTY_HASH","Value":36864}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
 		"Name":"HCRYPTASYNC"
 		,"Architectures":[]
 		,"Platform":null
@@ -21161,7 +21377,7 @@
 		,"Platform":null
 		,"Kind":"NativeTypedef"
 		,"AlsoUsableFor":"BCRYPT_HANDLE"
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"Def":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"FreeFunc":"BCryptCloseAlgorithmProvider"
 	}
 	,{
@@ -21170,7 +21386,7 @@
 		,"Platform":null
 		,"Kind":"NativeTypedef"
 		,"AlsoUsableFor":"BCRYPT_HANDLE"
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"Def":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"FreeFunc":"BCryptDestroyKey"
 	}
 	,{
@@ -21179,7 +21395,7 @@
 		,"Platform":null
 		,"Kind":"NativeTypedef"
 		,"AlsoUsableFor":"BCRYPT_HANDLE"
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"Def":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"FreeFunc":"BCryptDestroyHash"
 	}
 	,{
@@ -21188,26 +21404,8 @@
 		,"Platform":null
 		,"Kind":"NativeTypedef"
 		,"AlsoUsableFor":"BCRYPT_HANDLE"
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"Def":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
 		,"FreeFunc":"BCryptDestroySecret"
-	}
-	,{
-		"Name":"BCRYPT_HANDLE"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":null
-	}
-	,{
-		"Name":"NCRYPT_HANDLE"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"UIntPtr"}
-		,"FreeFunc":null
 	}
 	,{
 		"Name":"NCRYPT_PROV_HANDLE"
@@ -21226,6 +21424,24 @@
 		,"AlsoUsableFor":"NCRYPT_HANDLE"
 		,"Def":{"Kind":"Native","Name":"UIntPtr"}
 		,"FreeFunc":"NCryptFreeObject"
+	}
+	,{
+		"Name":"BCRYPT_HANDLE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
+		,"FreeFunc":null
+	}
+	,{
+		"Name":"NCRYPT_HANDLE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"UIntPtr"}
+		,"FreeFunc":null
 	}
 	,{
 		"Name":"NCRYPT_HASH_HANDLE"
@@ -21290,7 +21506,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"dwVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Algid","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Algid","Type":{"Kind":"ApiRef","Name":"ALG_ID","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
 			,{"Name":"pbOID","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"cbOID","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -21305,7 +21521,7 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"HashAlgid","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			{"Name":"HashAlgid","Type":{"Kind":"ApiRef","Name":"ALG_ID","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
 			,{"Name":"pbInnerString","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"cbInnerString","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pbOuterString","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -21323,7 +21539,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"dwUse","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Algid","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Algid","Type":{"Kind":"ApiRef","Name":"ALG_ID","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
 			,{"Name":"cBits","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwReserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -21339,7 +21555,7 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"aiAlgid","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			{"Name":"aiAlgid","Type":{"Kind":"ApiRef","Name":"ALG_ID","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
 			,{"Name":"dwBitLen","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwNameLen","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"szName","Type":{"Kind":"Array","Shape":{"Size":20},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
@@ -21355,7 +21571,7 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"aiAlgid","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			{"Name":"aiAlgid","Type":{"Kind":"ApiRef","Name":"ALG_ID","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
 			,{"Name":"dwDefaultLen","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwMinLen","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwMaxLen","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -21379,7 +21595,7 @@
 			{"Name":"bType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"bVersion","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"reserved","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"aiKeyAlg","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"aiKeyAlg","Type":{"Kind":"ApiRef","Name":"ALG_ID","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -21595,7 +21811,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"dwVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Algid","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Algid","Type":{"Kind":"ApiRef","Name":"ALG_ID","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
 			,{"Name":"pszContentEncObjId","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"PubInfo","Type":{"Kind":"ApiRef","Name":"CRYPT_INTEGER_BLOB","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
 			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
@@ -22811,7 +23027,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"pszObjId","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"dwValueType","Type":{"Kind":"ApiRef","Name":"CERT_RDN_ATTR_VALUE_TYPE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
+			,{"Name":"dwValueType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Value","Type":{"Kind":"ApiRef","Name":"CRYPT_INTEGER_BLOB","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
@@ -24831,7 +25047,7 @@
 				,"PackingSize":0
 				,"Fields":[
 					{"Name":"dwValue","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-					,{"Name":"Algid","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+					,{"Name":"Algid","Type":{"Kind":"ApiRef","Name":"ALG_ID","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
 					,{"Name":"dwLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 				]
 				,"NestedTypes":[
@@ -26215,6 +26431,20 @@
 		]
 		,"NestedTypes":[
 			{
+				"Name":"_Anonymous1_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"Fields":[
+					{"Name":"hKeyBase","Type":{"Kind":"ApiRef","Name":"HKEY","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":[]}
+					,{"Name":"pvBase","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+			,{
 				"Name":"_Anonymous2_e__Union"
 				,"Architectures":[]
 				,"Platform":null
@@ -26225,20 +26455,6 @@
 					{"Name":"pvSystemStore","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 					,{"Name":"pszSystemStore","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 					,{"Name":"pwszSystemStore","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
-				]
-				,"NestedTypes":[
-				]
-			}
-			,{
-				"Name":"_Anonymous1_e__Union"
-				,"Architectures":[]
-				,"Platform":null
-				,"Kind":"Union"
-				,"Size":0
-				,"PackingSize":0
-				,"Fields":[
-					{"Name":"hKeyBase","Type":{"Kind":"ApiRef","Name":"HKEY","TargetKind":"Default","Api":"System.Registry","Parents":[]},"Attrs":[]}
-					,{"Name":"pvBase","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]
@@ -27089,7 +27305,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"cCNGHashAlgid","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"rgpwszCNGHashAlgid","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+			,{"Name":"rgpwszCNGHashAlgid","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"dwWeakIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
@@ -28490,7 +28706,7 @@
 			,{"Name":"pNameBlob","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_INTEGER_BLOB","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In"]}
 			,{"Name":"ppbContent","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out"]}
 			,{"Name":"pcbContent","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-			,{"Name":"ppwszPassword","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"ppwszPassword","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Const"]}
 			,{"Name":"ppIdentifier","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_INTEGER_BLOB","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":["Out"]}
 		]
 	}
@@ -28702,6 +28918,380 @@
 			,{"Name":"pvCallbackCtxt","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 		]
 		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"PFN_AUTHENTICODE_DIGEST_SIGN"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"pSigningCert","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CERT_CONTEXT","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In","Const"]}
+			,{"Name":"pMetadataBlob","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_INTEGER_BLOB","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"digestAlgId","Type":{"Kind":"ApiRef","Name":"ALG_ID","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
+			,{"Name":"pbToBeSignedDigest","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"cbToBeSignedDigest","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"pSignedDigest","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_INTEGER_BLOB","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"PFN_AUTHENTICODE_DIGEST_SIGN_EX"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"pMetadataBlob","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_INTEGER_BLOB","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"digestAlgId","Type":{"Kind":"ApiRef","Name":"ALG_ID","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
+			,{"Name":"pbToBeSignedDigest","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"cbToBeSignedDigest","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"pSignedDigest","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_INTEGER_BLOB","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"ppSignerCert","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CERT_CONTEXT","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"hCertChainStore","Type":{"Kind":"ApiRef","Name":"HCERTSTORE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In","Out"]}
+		]
+	}
+	,{
+		"Name":"PFN_AUTHENTICODE_DIGEST_SIGN_EX_WITHFILEHANDLE"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"pMetadataBlob","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_INTEGER_BLOB","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"digestAlgId","Type":{"Kind":"ApiRef","Name":"ALG_ID","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
+			,{"Name":"pbToBeSignedDigest","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"cbToBeSignedDigest","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"hFile","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"pSignedDigest","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_INTEGER_BLOB","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"ppSignerCert","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CERT_CONTEXT","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"hCertChainStore","Type":{"Kind":"ApiRef","Name":"HCERTSTORE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In","Out"]}
+		]
+	}
+	,{
+		"Name":"PFN_AUTHENTICODE_DIGEST_SIGN_WITHFILEHANDLE"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"pSigningCert","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CERT_CONTEXT","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In","Const"]}
+			,{"Name":"pMetadataBlob","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_INTEGER_BLOB","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"digestAlgId","Type":{"Kind":"ApiRef","Name":"ALG_ID","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
+			,{"Name":"pbToBeSignedDigest","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"cbToBeSignedDigest","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"hFile","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"pSignedDigest","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_INTEGER_BLOB","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"SIGNER_ATTR_AUTHCODE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"fCommercial","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"fIndividual","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"pwszName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+			,{"Name":"pwszInfo","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"SIGNER_BLOB_INFO"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"pGuidSubject","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":[]}
+			,{"Name":"cbBlob","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"pbBlob","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"pwszDisplayName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"SIGNER_CERT_STORE_INFO"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"pSigningCert","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CERT_CONTEXT","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["Const"]}
+			,{"Name":"dwCertPolicy","Type":{"Kind":"ApiRef","Name":"SIGNER_CERT_POLICY","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
+			,{"Name":"hCertStore","Type":{"Kind":"ApiRef","Name":"HCERTSTORE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"SIGNER_SPC_CHAIN_INFO"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"pwszSpcFile","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+			,{"Name":"dwCertPolicy","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"hCertStore","Type":{"Kind":"ApiRef","Name":"HCERTSTORE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"SIGNER_CERT"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dwCertChoice","Type":{"Kind":"ApiRef","Name":"SIGNER_CERT_CHOICE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
+			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
+			,{"Name":"hwnd","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+			{
+				"Name":"_Anonymous_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"Fields":[
+					{"Name":"pwszSpcFile","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+					,{"Name":"pCertStoreInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_CERT_STORE_INFO","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":[]}
+					,{"Name":"pSpcChainInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_SPC_CHAIN_INFO","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+		]
+	}
+	,{
+		"Name":"SIGNER_CONTEXT"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"cbBlob","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"pbBlob","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"SIGNER_DIGEST_SIGN_INFO"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dwDigestSignChoice","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
+			,{"Name":"pMetadataBlob","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_INTEGER_BLOB","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":[]}
+			,{"Name":"dwReserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dwReserved2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dwReserved3","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+			{
+				"Name":"_Anonymous_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"Fields":[
+					{"Name":"pfnAuthenticodeDigestSign","Type":{"Kind":"ApiRef","Name":"PFN_AUTHENTICODE_DIGEST_SIGN","TargetKind":"FunctionPointer","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
+					,{"Name":"pfnAuthenticodeDigestSignWithFileHandle","Type":{"Kind":"ApiRef","Name":"PFN_AUTHENTICODE_DIGEST_SIGN_WITHFILEHANDLE","TargetKind":"FunctionPointer","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
+					,{"Name":"pfnAuthenticodeDigestSignEx","Type":{"Kind":"ApiRef","Name":"PFN_AUTHENTICODE_DIGEST_SIGN_EX","TargetKind":"FunctionPointer","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
+					,{"Name":"pfnAuthenticodeDigestSignExWithFileHandle","Type":{"Kind":"ApiRef","Name":"PFN_AUTHENTICODE_DIGEST_SIGN_EX_WITHFILEHANDLE","TargetKind":"FunctionPointer","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+		]
+	}
+	,{
+		"Name":"SIGNER_DIGEST_SIGN_INFO_V1"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"pfnAuthenticodeDigestSign","Type":{"Kind":"ApiRef","Name":"PFN_AUTHENTICODE_DIGEST_SIGN","TargetKind":"FunctionPointer","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
+			,{"Name":"pMetadataBlob","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_INTEGER_BLOB","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"SIGNER_DIGEST_SIGN_INFO_V2"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"pfnAuthenticodeDigestSign","Type":{"Kind":"ApiRef","Name":"PFN_AUTHENTICODE_DIGEST_SIGN","TargetKind":"FunctionPointer","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnAuthenticodeDigestSignEx","Type":{"Kind":"ApiRef","Name":"PFN_AUTHENTICODE_DIGEST_SIGN_EX","TargetKind":"FunctionPointer","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
+			,{"Name":"pMetadataBlob","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_INTEGER_BLOB","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"SIGNER_FILE_INFO"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"pwszFileName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+			,{"Name":"hFile","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"SIGNER_PROVIDER_INFO"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"pwszProviderName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+			,{"Name":"dwProviderType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dwKeySpec","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dwPvkChoice","Type":{"Kind":"ApiRef","Name":"SIGNER_PRIVATE_KEY_CHOICE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
+			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+			{
+				"Name":"_Anonymous_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"Fields":[
+					{"Name":"pwszPvkFileName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+					,{"Name":"pwszKeyContainer","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+		]
+	}
+	,{
+		"Name":"SIGNER_SIGNATURE_INFO"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"algidHash","Type":{"Kind":"ApiRef","Name":"ALG_ID","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
+			,{"Name":"dwAttrChoice","Type":{"Kind":"ApiRef","Name":"SIGNER_SIGNATURE_ATTRIBUTE_CHOICE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
+			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
+			,{"Name":"psAuthenticated","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_ATTRIBUTES","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":[]}
+			,{"Name":"psUnauthenticated","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_ATTRIBUTES","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+			{
+				"Name":"_Anonymous_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"Fields":[
+					{"Name":"pAttrAuthcode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_ATTR_AUTHCODE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+		]
+	}
+	,{
+		"Name":"SIGNER_SUBJECT_INFO"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"pdwIndex","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			,{"Name":"dwSubjectChoice","Type":{"Kind":"ApiRef","Name":"SIGNER_SUBJECT_CHOICE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
+			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+			{
+				"Name":"_Anonymous_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"Fields":[
+					{"Name":"pSignerFileInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_FILE_INFO","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":[]}
+					,{"Name":"pSignerBlobInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_BLOB_INFO","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
 		]
 	}
 	,{
@@ -29731,7 +30321,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"count","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"claims","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+			,{"Name":"claims","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Const"]}
 		]
 		,"NestedTypes":[
 		]
@@ -29775,44 +30365,9 @@
 		]
 	}
 	,{
-		"Name":"CCertSrvSetupKeyInformation"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"38373906-5433-4633-b0fb-29b7e78262e1"
-	}
-	,{
-		"Name":"CCertSrvSetup"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"961f180f-f55c-413d-a9b3-7d2af4d8e42f"
-	}
-	,{
-		"Name":"CMSCEPSetup"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"aa4f5c02-8e7c-49c4-94fa-67a5cc5eadb4"
-	}
-	,{
-		"Name":"CCertificateEnrollmentServerSetup"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"9902f3bc-88af-4cf8-ae62-7140531552b6"
-	}
-	,{
-		"Name":"CCertificateEnrollmentPolicyServerSetup"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"afe2fa32-41b1-459d-a5de-49add8a72182"
-	}
-	,{
 		"Name":"ICertSrvSetupKeyInformation"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"6ba73778-36da-4c39-8a85-bcfa7d000793"
 		,"Interface":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -29990,7 +30545,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -30006,7 +30561,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"varVal","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					{"Name":"varVal","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 				]
 			}
 		]
@@ -30014,7 +30569,7 @@
 	,{
 		"Name":"ICertSrvSetupKeyInformationCollection"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"e65c8b00-e58f-41f9-a9ec-a28d7427c844"
 		,"Interface":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -30047,7 +30602,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"Index","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -30114,7 +30669,7 @@
 	,{
 		"Name":"ICertSrvSetup"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"b760a1bb-4784-44c0-8f12-555f0780ff25"
 		,"Interface":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -30178,7 +30733,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"propertyId","Type":{"Kind":"ApiRef","Name":"CASetupProperty","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pPropertyValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pPropertyValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -30193,7 +30748,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"propertyId","Type":{"Kind":"ApiRef","Name":"CASetupProperty","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pPropertyValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pPropertyValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -30222,7 +30777,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pCATypes","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					{"Name":"pCATypes","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -30236,7 +30791,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -30251,7 +30806,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"bstrProviderName","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -30266,7 +30821,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"bstrProviderName","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -30281,7 +30836,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"bstrProviderName","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -30447,7 +31002,7 @@
 	,{
 		"Name":"IMSCEPSetup"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"4f7761bb-9f3b-4592-9ee0-9a73259c313e"
 		,"Interface":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -30509,7 +31064,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"propertyId","Type":{"Kind":"ApiRef","Name":"MSCEPSetupProperty","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -30524,7 +31079,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"propertyId","Type":{"Kind":"ApiRef","Name":"MSCEPSetupProperty","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pPropertyValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pPropertyValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -30568,7 +31123,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"bExchange","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -30584,7 +31139,7 @@
 				,"Params":[
 					{"Name":"bExchange","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"bstrProviderName","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -30695,7 +31250,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"propertyId","Type":{"Kind":"ApiRef","Name":"CESSetupProperty","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pPropertyValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pPropertyValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -30710,7 +31265,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"propertyId","Type":{"Kind":"ApiRef","Name":"CESSetupProperty","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pPropertyValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pPropertyValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -30752,8 +31307,8 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pCAConfig","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"pAuthentication","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
+					{"Name":"pCAConfig","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pAuthentication","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
 				]
 			}
 		]
@@ -30822,7 +31377,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"propertyId","Type":{"Kind":"ApiRef","Name":"CEPSetupProperty","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pPropertyValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pPropertyValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -30837,7 +31392,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"propertyId","Type":{"Kind":"ApiRef","Name":"CEPSetupProperty","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pPropertyValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pPropertyValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -30864,15 +31419,82 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pAuthKeyBasedRenewal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
+					{"Name":"pAuthKeyBasedRenewal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
 				]
 			}
 		]
+	}
+	,{
+		"Name":"CCertSrvSetupKeyInformation"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"38373906-5433-4633-b0fb-29b7e78262e1"
+	}
+	,{
+		"Name":"CCertSrvSetup"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"961f180f-f55c-413d-a9b3-7d2af4d8e42f"
+	}
+	,{
+		"Name":"CMSCEPSetup"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"aa4f5c02-8e7c-49c4-94fa-67a5cc5eadb4"
+	}
+	,{
+		"Name":"CCertificateEnrollmentServerSetup"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"9902f3bc-88af-4cf8-ae62-7140531552b6"
+	}
+	,{
+		"Name":"CCertificateEnrollmentPolicyServerSetup"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"afe2fa32-41b1-459d-a5de-49add8a72182"
 	}
 ]
 
 ,"Functions":[
 	{
+		"Name":"SystemPrng"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"BCryptPrimitives.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"pbRandomData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":1}]}
+			,{"Name":"cbRandomData","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"ProcessPrng"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"BCryptPrimitives.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"pbData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":1}]}
+			,{"Name":"cbData","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":["In"]}
+		]
+	}
+	,{
 		"Name":"CryptAcquireContextA"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
@@ -30939,7 +31561,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hProv","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":["In"]}
-			,{"Name":"Algid","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"Algid","Type":{"Kind":"ApiRef","Name":"ALG_ID","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"CRYPT_KEY_FLAGS","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
 			,{"Name":"phKey","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UIntPtr"}},"Attrs":["Out"]}
 		]
@@ -30957,7 +31579,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hProv","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":["In"]}
-			,{"Name":"Algid","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"Algid","Type":{"Kind":"ApiRef","Name":"ALG_ID","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
 			,{"Name":"hBaseData","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":["In"]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"phKey","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UIntPtr"}},"Attrs":["Out"]}
@@ -31217,7 +31839,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hProv","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":["In"]}
-			,{"Name":"Algid","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"Algid","Type":{"Kind":"ApiRef","Name":"ALG_ID","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
 			,{"Name":"hKey","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":["In"]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"phHash","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UIntPtr"}},"Attrs":["Out"]}
@@ -31678,7 +32300,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hObject","Type":{"Kind":"ApiRef","Name":"BCRYPT_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
+			{"Name":"hObject","Type":{"Kind":"ApiRef","Name":"BCRYPT_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In","Out"]}
 			,{"Name":"pszProperty","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"pbInput","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":3}]}
 			,{"Name":"cbInput","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -31697,7 +32319,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hAlgorithm","Type":{"Kind":"ApiRef","Name":"BCRYPT_ALG_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
+			{"Name":"hAlgorithm","Type":{"Kind":"ApiRef","Name":"BCRYPT_ALG_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In","Out"]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
@@ -31728,7 +32350,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hAlgorithm","Type":{"Kind":"ApiRef","Name":"BCRYPT_ALG_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
+			{"Name":"hAlgorithm","Type":{"Kind":"ApiRef","Name":"BCRYPT_ALG_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In","Out"]}
 			,{"Name":"phKey","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BCRYPT_KEY_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["Out"]}
 			,{"Name":"pbKeyObject","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":3},"Optional"]}
 			,{"Name":"cbKeyObject","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -31749,7 +32371,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hAlgorithm","Type":{"Kind":"ApiRef","Name":"BCRYPT_ALG_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
+			{"Name":"hAlgorithm","Type":{"Kind":"ApiRef","Name":"BCRYPT_ALG_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In","Out"]}
 			,{"Name":"phKey","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BCRYPT_KEY_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["Out"]}
 			,{"Name":"dwLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -31767,7 +32389,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hKey","Type":{"Kind":"ApiRef","Name":"BCRYPT_KEY_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
+			{"Name":"hKey","Type":{"Kind":"ApiRef","Name":"BCRYPT_KEY_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In","Out"]}
 			,{"Name":"pbInput","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":2},"Optional"]}
 			,{"Name":"cbInput","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pPaddingInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
@@ -31776,7 +32398,7 @@
 			,{"Name":"pbOutput","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":7},"Optional"]}
 			,{"Name":"cbOutput","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pcbResult","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"NCRYPT_FLAGS","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
+			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"BCRYPT_FLAGS","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -31791,7 +32413,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hKey","Type":{"Kind":"ApiRef","Name":"BCRYPT_KEY_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
+			{"Name":"hKey","Type":{"Kind":"ApiRef","Name":"BCRYPT_KEY_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In","Out"]}
 			,{"Name":"pbInput","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":2},"Optional"]}
 			,{"Name":"cbInput","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pPaddingInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
@@ -31800,7 +32422,7 @@
 			,{"Name":"pbOutput","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":7},"Optional"]}
 			,{"Name":"cbOutput","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pcbResult","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"NCRYPT_FLAGS","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
+			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"BCRYPT_FLAGS","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -31899,7 +32521,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hKey","Type":{"Kind":"ApiRef","Name":"BCRYPT_KEY_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
+			{"Name":"hKey","Type":{"Kind":"ApiRef","Name":"BCRYPT_KEY_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In","Out"]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
@@ -31915,7 +32537,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hKey","Type":{"Kind":"ApiRef","Name":"BCRYPT_KEY_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
+			{"Name":"hKey","Type":{"Kind":"ApiRef","Name":"BCRYPT_KEY_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In","Out"]}
 		]
 	}
 	,{
@@ -31930,7 +32552,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hSecret","Type":{"Kind":"ApiRef","Name":"BCRYPT_SECRET_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
+			{"Name":"hSecret","Type":{"Kind":"ApiRef","Name":"BCRYPT_SECRET_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In","Out"]}
 		]
 	}
 	,{
@@ -31952,7 +32574,7 @@
 			,{"Name":"pbOutput","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":5},"Optional"]}
 			,{"Name":"cbOutput","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pcbResult","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"NCRYPT_FLAGS","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
+			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"BCRYPT_FLAGS","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -31973,7 +32595,7 @@
 			,{"Name":"cbHash","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pbSignature","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":5}]}
 			,{"Name":"cbSignature","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"NCRYPT_FLAGS","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
+			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"BCRYPT_FLAGS","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -32047,7 +32669,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hAlgorithm","Type":{"Kind":"ApiRef","Name":"BCRYPT_ALG_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
+			{"Name":"hAlgorithm","Type":{"Kind":"ApiRef","Name":"BCRYPT_ALG_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In","Out"]}
 			,{"Name":"phHash","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BCRYPT_HASH_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["Out"]}
 			,{"Name":"pbHashObject","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":3},"Optional"]}
 			,{"Name":"cbHashObject","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -32068,7 +32690,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hHash","Type":{"Kind":"ApiRef","Name":"BCRYPT_HASH_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
+			{"Name":"hHash","Type":{"Kind":"ApiRef","Name":"BCRYPT_HASH_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In","Out"]}
 			,{"Name":"pbInput","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":2}]}
 			,{"Name":"cbInput","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -32086,7 +32708,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hHash","Type":{"Kind":"ApiRef","Name":"BCRYPT_HASH_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
+			{"Name":"hHash","Type":{"Kind":"ApiRef","Name":"BCRYPT_HASH_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In","Out"]}
 			,{"Name":"pbOutput","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":2}]}
 			,{"Name":"cbOutput","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -32104,7 +32726,7 @@
 		,"Platform":"windows8.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hAlgorithm","Type":{"Kind":"ApiRef","Name":"BCRYPT_ALG_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
+			{"Name":"hAlgorithm","Type":{"Kind":"ApiRef","Name":"BCRYPT_ALG_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In","Out"]}
 			,{"Name":"phHash","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BCRYPT_HASH_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["Out"]}
 			,{"Name":"nHashes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pbHashObject","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":4},"Optional"]}
@@ -32126,7 +32748,7 @@
 		,"Platform":"windows8.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hObject","Type":{"Kind":"ApiRef","Name":"BCRYPT_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
+			{"Name":"hObject","Type":{"Kind":"ApiRef","Name":"BCRYPT_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In","Out"]}
 			,{"Name":"operationType","Type":{"Kind":"ApiRef","Name":"BCRYPT_MULTI_OPERATION_TYPE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pOperations","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":3}]}
 			,{"Name":"cbOperations","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -32164,7 +32786,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hHash","Type":{"Kind":"ApiRef","Name":"BCRYPT_HASH_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
+			{"Name":"hHash","Type":{"Kind":"ApiRef","Name":"BCRYPT_HASH_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In","Out"]}
 		]
 	}
 	,{
@@ -32179,7 +32801,7 @@
 		,"Platform":"windows10.0.10240"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hAlgorithm","Type":{"Kind":"ApiRef","Name":"BCRYPT_ALG_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
+			{"Name":"hAlgorithm","Type":{"Kind":"ApiRef","Name":"BCRYPT_ALG_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In","Out"]}
 			,{"Name":"pbSecret","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":2},"Optional"]}
 			,{"Name":"cbSecret","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pbInput","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":4}]}
@@ -32203,7 +32825,7 @@
 			{"Name":"hAlgorithm","Type":{"Kind":"ApiRef","Name":"BCRYPT_ALG_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"pbBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":2}]}
 			,{"Name":"cbBuffer","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"BCRYPTGENRANDOM_FLAGS","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -32264,7 +32886,7 @@
 			,{"Name":"dwMode","Type":{"Kind":"ApiRef","Name":"BCRYPT_QUERY_PROVIDER_MODE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwInterface","Type":{"Kind":"ApiRef","Name":"BCRYPT_INTERFACE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pcbBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
-			,{"Name":"ppBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_PROVIDER_REG","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":["In","Out",{"Kind":"MemorySize","BytesParamIndex":3}]}
+			,{"Name":"ppBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_PROVIDER_REG","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":["Out","Optional"]}
 		]
 	}
 	,{
@@ -32280,7 +32902,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"pcbBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
-			,{"Name":"ppBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_PROVIDERS","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":["In","Out",{"Kind":"MemorySize","BytesParamIndex":0}]}
+			,{"Name":"ppBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_PROVIDERS","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":["Out","Optional"]}
 		]
 	}
 	,{
@@ -32330,7 +32952,7 @@
 		,"Params":[
 			{"Name":"dwTable","Type":{"Kind":"ApiRef","Name":"BCRYPT_TABLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pcbBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
-			,{"Name":"ppBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_CONTEXTS","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":["In","Out",{"Kind":"MemorySize","BytesParamIndex":1}]}
+			,{"Name":"ppBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_CONTEXTS","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":["Out","Optional"]}
 		]
 	}
 	,{
@@ -32365,7 +32987,7 @@
 			{"Name":"dwTable","Type":{"Kind":"ApiRef","Name":"BCRYPT_TABLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pszContext","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"pcbBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
-			,{"Name":"ppBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_CONTEXT_CONFIG","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":["In","Out",{"Kind":"MemorySize","BytesParamIndex":2}]}
+			,{"Name":"ppBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_CONTEXT_CONFIG","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":["Out","Optional"]}
 		]
 	}
 	,{
@@ -32421,7 +33043,7 @@
 			,{"Name":"pszContext","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"dwInterface","Type":{"Kind":"ApiRef","Name":"BCRYPT_INTERFACE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pcbBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
-			,{"Name":"ppBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_CONTEXT_FUNCTIONS","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":["In","Out",{"Kind":"MemorySize","BytesParamIndex":3}]}
+			,{"Name":"ppBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_CONTEXT_FUNCTIONS","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":["Out","Optional"]}
 		]
 	}
 	,{
@@ -32460,7 +33082,7 @@
 			,{"Name":"dwInterface","Type":{"Kind":"ApiRef","Name":"BCRYPT_INTERFACE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pszFunction","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"pcbBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
-			,{"Name":"ppBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_CONTEXT_FUNCTION_CONFIG","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":["In","Out",{"Kind":"MemorySize","BytesParamIndex":4}]}
+			,{"Name":"ppBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_CONTEXT_FUNCTION_CONFIG","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":["Out","Optional"]}
 		]
 	}
 	,{
@@ -32480,7 +33102,7 @@
 			,{"Name":"dwInterface","Type":{"Kind":"ApiRef","Name":"BCRYPT_INTERFACE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pszFunction","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"pcbBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
-			,{"Name":"ppBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_CONTEXT_FUNCTION_PROVIDERS","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":["In","Out",{"Kind":"MemorySize","BytesParamIndex":4}]}
+			,{"Name":"ppBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_CONTEXT_FUNCTION_PROVIDERS","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":["Out","Optional"]}
 		]
 	}
 	,{
@@ -32522,7 +33144,7 @@
 			,{"Name":"pszFunction","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"pszProperty","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"pcbValue","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
-			,{"Name":"ppbValue","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["In","Out",{"Kind":"MemorySize","BytesParamIndex":5}]}
+			,{"Name":"ppbValue","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out","Optional"]}
 		]
 	}
 	,{
@@ -32574,7 +33196,7 @@
 			,{"Name":"dwMode","Type":{"Kind":"ApiRef","Name":"BCRYPT_QUERY_PROVIDER_MODE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"BCRYPT_RESOLVE_PROVIDERS_FLAGS","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pcbBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
-			,{"Name":"ppBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_PROVIDER_REFS","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":["In","Out",{"Kind":"MemorySize","BytesParamIndex":6}]}
+			,{"Name":"ppBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_PROVIDER_REFS","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":["Out","Optional"]}
 		]
 	}
 	,{
@@ -32711,7 +33333,7 @@
 			{"Name":"hProvider","Type":{"Kind":"ApiRef","Name":"NCRYPT_PROV_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
 			,{"Name":"phKey","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"NCRYPT_KEY_HANDLE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["Out"]}
 			,{"Name":"pszKeyName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"dwLegacyKeySpec","Type":{"Kind":"ApiRef","Name":"CERT_KEY_SPEC","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"dwLegacyKeySpec","Type":{"Kind":"ApiRef","Name":"CERT_KEY_SPEC","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"NCRYPT_FLAGS","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
 		]
 	}
@@ -33225,7 +33847,7 @@
 		,"Platform":"windows5.1.2600"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hModule","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			{"Name":"hModule","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"dwEncodingType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pszFuncName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"cFuncEntry","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -33780,7 +34402,7 @@
 		,"Params":[
 			{"Name":"lpszStoreProvider","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"dwEncodingType","Type":{"Kind":"ApiRef","Name":"CERT_QUERY_ENCODING_TYPE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
-			,{"Name":"hCryptProv","Type":{"Kind":"ApiRef","Name":"HCRYPTPROV_LEGACY","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"hCryptProv","Type":{"Kind":"ApiRef","Name":"HCRYPTPROV_LEGACY","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In","Reserved","Optional"]}
 			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"CERT_OPEN_STORE_FLAGS","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pvPara","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional","Const"]}
 		]
@@ -35342,7 +35964,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hCryptProv","Type":{"Kind":"ApiRef","Name":"HCRYPTPROV_LEGACY","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In","Optional"]}
-			,{"Name":"Algid","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"Algid","Type":{"Kind":"ApiRef","Name":"ALG_ID","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pbEncoded","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":4},"Const"]}
 			,{"Name":"cbEncoded","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -35713,7 +36335,7 @@
 			{"Name":"hCryptProv","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":["In"]}
 			,{"Name":"dwCertEncodingType","Type":{"Kind":"ApiRef","Name":"CERT_QUERY_ENCODING_TYPE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CERT_PUBLIC_KEY_INFO","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In"]}
-			,{"Name":"aiKeyAlg","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"aiKeyAlg","Type":{"Kind":"ApiRef","Name":"ALG_ID","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pvAuxInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
 			,{"Name":"phKey","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UIntPtr"}},"Attrs":["Out"]}
@@ -35827,7 +36449,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hCryptProv","Type":{"Kind":"ApiRef","Name":"HCRYPTPROV_LEGACY","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In","Optional"]}
-			,{"Name":"Algid","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"Algid","Type":{"Kind":"ApiRef","Name":"ALG_ID","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"dwCertEncodingType","Type":{"Kind":"ApiRef","Name":"CERT_QUERY_ENCODING_TYPE","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CERT_PUBLIC_KEY_INFO","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In"]}
@@ -35927,7 +36549,7 @@
 			,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"pbEncoded","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":5},"Optional"]}
 			,{"Name":"pcbEncoded","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
-			,{"Name":"ppszError","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+			,{"Name":"ppszError","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional","Const"]}
 		]
 	}
 	,{
@@ -35948,7 +36570,7 @@
 			,{"Name":"pvReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 			,{"Name":"pbEncoded","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":5},"Optional"]}
 			,{"Name":"pcbEncoded","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
-			,{"Name":"ppszError","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+			,{"Name":"ppszError","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional","Const"]}
 		]
 	}
 	,{
@@ -37575,6 +38197,217 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hStream","Type":{"Kind":"ApiRef","Name":"NCRYPT_STREAM_HANDLE","TargetKind":"Default","Api":"Security","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"SignError"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"Mssign32.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+		]
+	}
+	,{
+		"Name":"SignerFreeSignerContext"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"Mssign32.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"pSignerContext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_CONTEXT","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"SignerSign"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"Mssign32.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"pSubjectInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_SUBJECT_INFO","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pSignerCert","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_CERT","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pSignatureInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_SIGNATURE_INFO","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pProviderInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_PROVIDER_INFO","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"pwszHttpTimeStamp","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
+			,{"Name":"psRequest","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_ATTRIBUTES","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"pSipData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
+		]
+	}
+	,{
+		"Name":"SignerSignEx"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"Mssign32.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"SIGNER_SIGN_FLAGS","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
+			,{"Name":"pSubjectInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_SUBJECT_INFO","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pSignerCert","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_CERT","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pSignatureInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_SIGNATURE_INFO","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pProviderInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_PROVIDER_INFO","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"pwszHttpTimeStamp","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
+			,{"Name":"psRequest","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_ATTRIBUTES","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"pSipData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
+			,{"Name":"ppSignerContext","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_CONTEXT","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"SignerSignEx2"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"Mssign32.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"SIGNER_SIGN_FLAGS","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
+			,{"Name":"pSubjectInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_SUBJECT_INFO","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pSignerCert","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_CERT","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pSignatureInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_SIGNATURE_INFO","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pProviderInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_PROVIDER_INFO","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"dwTimestampFlags","Type":{"Kind":"ApiRef","Name":"SIGNER_TIMESTAMP_FLAGS","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"pszTimestampAlgorithmOid","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
+			,{"Name":"pwszHttpTimeStamp","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
+			,{"Name":"psRequest","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_ATTRIBUTES","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"pSipData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
+			,{"Name":"ppSignerContext","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_CONTEXT","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"pCryptoPolicy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CERT_STRONG_SIGN_PARA","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
+		]
+	}
+	,{
+		"Name":"SignerSignEx3"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"Mssign32.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"SIGNER_SIGN_FLAGS","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
+			,{"Name":"pSubjectInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_SUBJECT_INFO","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pSignerCert","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_CERT","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pSignatureInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_SIGNATURE_INFO","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pProviderInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_PROVIDER_INFO","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"dwTimestampFlags","Type":{"Kind":"ApiRef","Name":"SIGNER_TIMESTAMP_FLAGS","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"pszTimestampAlgorithmOid","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
+			,{"Name":"pwszHttpTimeStamp","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
+			,{"Name":"psRequest","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_ATTRIBUTES","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"pSipData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
+			,{"Name":"ppSignerContext","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_CONTEXT","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"pCryptoPolicy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CERT_STRONG_SIGN_PARA","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"pDigestSignInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_DIGEST_SIGN_INFO","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
+		]
+	}
+	,{
+		"Name":"SignerTimeStamp"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"Mssign32.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"pSubjectInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_SUBJECT_INFO","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pwszHttpTimeStamp","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+			,{"Name":"psRequest","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_ATTRIBUTES","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"pSipData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
+		]
+	}
+	,{
+		"Name":"SignerTimeStampEx"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"Mssign32.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
+			,{"Name":"pSubjectInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_SUBJECT_INFO","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pwszHttpTimeStamp","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+			,{"Name":"psRequest","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_ATTRIBUTES","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pSipData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			,{"Name":"ppSignerContext","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_CONTEXT","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"SignerTimeStampEx2"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"Mssign32.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"SIGNER_TIMESTAMP_FLAGS","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["Reserved","Optional"]}
+			,{"Name":"pSubjectInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_SUBJECT_INFO","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pwszHttpTimeStamp","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+			,{"Name":"dwAlgId","Type":{"Kind":"ApiRef","Name":"ALG_ID","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
+			,{"Name":"psRequest","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_ATTRIBUTES","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pSipData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			,{"Name":"ppSignerContext","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_CONTEXT","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"SignerTimeStampEx3"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"Mssign32.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"SIGNER_TIMESTAMP_FLAGS","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]},"Attrs":["In"]}
+			,{"Name":"dwIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"pSubjectInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_SUBJECT_INFO","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"pwszHttpTimeStamp","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+			,{"Name":"pszAlgorithmOid","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+			,{"Name":"psRequest","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRYPT_ATTRIBUTES","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"pSipData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
+			,{"Name":"ppSignerContext","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SIGNER_CONTEXT","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"pCryptoPolicy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CERT_STRONG_SIGN_PARA","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Reserved","Optional"]}
 		]
 	}
 	,{

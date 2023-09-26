@@ -94,6 +94,8 @@
 			,{"Name":"HcsEventProcessExited","Value":65536}
 			,{"Name":"HcsEventOperationCallback","Value":16777216}
 			,{"Name":"HcsEventServiceDisconnect","Value":33554432}
+			,{"Name":"HcsEventGroupVmLifecycle","Value":-2147483646}
+			,{"Name":"HcsEventGroupOperationInfo","Value":-1073741823}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -122,8 +124,22 @@
 		,"Values":[
 			{"Name":"HcsEventOptionNone","Value":0}
 			,{"Name":"HcsEventOptionEnableOperationCallbacks","Value":1}
+			,{"Name":"HcsEventOptionEnableVmLifecycle","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"HCS_OPERATION_OPTIONS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":true
+		,"Scoped":false
+		,"Values":[
+			{"Name":"HcsOperationOptionNone","Value":0}
+			,{"Name":"HcsOperationOptionProgressUpdate","Value":1}
+		]
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"HCS_EVENT_CALLBACK"
@@ -141,6 +157,20 @@
 			{"Name":"event","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HCS_EVENT","TargetKind":"Default","Api":"System.HostComputeSystem","Parents":[]}},"Attrs":["In"]}
 			,{"Name":"context","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
 		]
+	}
+	,{
+		"Name":"HCS_RESOURCE_TYPE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"HcsResourceTypeNone","Value":0}
+			,{"Name":"HcsResourceTypeFile","Value":1}
+			,{"Name":"HcsResourceTypeJob","Value":2}
+		]
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"HCS_NOTIFICATION_FLAGS"
@@ -181,6 +211,7 @@
 			,{"Name":"HcsNotificationSystemGuestConnectionClosed","Value":14}
 			,{"Name":"HcsNotificationSystemOperationCompletion","Value":15}
 			,{"Name":"HcsNotificationSystemPassThru","Value":16}
+			,{"Name":"HcsNotificationOperationProgressUpdate","Value":256}
 			,{"Name":"HcsNotificationProcessExited","Value":65536}
 			,{"Name":"HcsNotificationServiceDisconnect","Value":16777216}
 			,{"Name":"HcsNotificationFlagsReserved","Value":-268435456}
@@ -303,6 +334,23 @@
 		,"Params":[
 			{"Name":"context","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"callback","Type":{"Kind":"ApiRef","Name":"HCS_OPERATION_COMPLETION","TargetKind":"FunctionPointer","Api":"System.HostComputeSystem","Parents":[]},"Attrs":["In","Optional"]}
+		]
+	}
+	,{
+		"Name":"HcsCreateOperationWithNotifications"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"computecore.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HCS_OPERATION","TargetKind":"Default","Api":"System.HostComputeSystem","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"eventTypes","Type":{"Kind":"ApiRef","Name":"HCS_OPERATION_OPTIONS","TargetKind":"Default","Api":"System.HostComputeSystem","Parents":[]},"Attrs":["In"]}
+			,{"Name":"context","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional","Const"]}
+			,{"Name":"callback","Type":{"Kind":"ApiRef","Name":"HCS_EVENT_CALLBACK","TargetKind":"FunctionPointer","Api":"System.HostComputeSystem","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -445,6 +493,24 @@
 		]
 	}
 	,{
+		"Name":"HcsAddResourceToOperation"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"computecore.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"operation","Type":{"Kind":"ApiRef","Name":"HCS_OPERATION","TargetKind":"Default","Api":"System.HostComputeSystem","Parents":[]},"Attrs":["In"]}
+			,{"Name":"type","Type":{"Kind":"ApiRef","Name":"HCS_RESOURCE_TYPE","TargetKind":"Default","Api":"System.HostComputeSystem","Parents":[]},"Attrs":["In"]}
+			,{"Name":"uri","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+			,{"Name":"handle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
 		"Name":"HcsGetProcessorCompatibilityFromSavedState"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
@@ -457,7 +523,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"RuntimeFileName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"ProcessorFeaturesString","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional"]}
+			,{"Name":"ProcessorFeaturesString","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Optional","Const"]}
 		]
 	}
 	,{

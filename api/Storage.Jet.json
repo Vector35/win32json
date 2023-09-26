@@ -394,6 +394,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"JET_ccolTaggedMost"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":64993
+		,"Attrs":[]
+	}
+	,{
 		"Name":"JET_EventLoggingDisable"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -1423,10 +1430,17 @@
 		,"Attrs":[]
 	}
 	,{
-		"Name":"JET_paramMaxValueInvalid"
+		"Name":"JET_paramPerfmonRefreshInterval"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":217
+		,"Attrs":[]
+	}
+	,{
+		"Name":"JET_paramMaxValueInvalid"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":218
 		,"Attrs":[]
 	}
 	,{
@@ -1461,7 +1475,7 @@
 		"Name":"JET_sesparamMaxValueInvalid"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
-		,"Value":4110
+		,"Value":4111
 		,"Attrs":[]
 	}
 	,{
@@ -3215,41 +3229,6 @@
 		,"Attrs":[]
 	}
 	,{
-		"Name":"JET_revertstateNone"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":0
-		,"Attrs":[]
-	}
-	,{
-		"Name":"JET_revertstateInProgress"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1
-		,"Attrs":[]
-	}
-	,{
-		"Name":"JET_revertstateCopingLogs"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2
-		,"Attrs":[]
-	}
-	,{
-		"Name":"JET_revertstateCompleted"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":3
-		,"Attrs":[]
-	}
-	,{
-		"Name":"JET_bitDeleteAllExistingLogs"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1
-		,"Attrs":[]
-	}
-	,{
 		"Name":"JET_coltypNil"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -3622,8 +3601,8 @@
 	}
 	,{
 		"Name":"JET_errSuccess"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
 		,"Value":0
 		,"Attrs":[]
 	}
@@ -4598,6 +4577,13 @@
 		,"Type":{"Kind":"Native","Name":"Int32"}
 		,"ValueType":"Int32"
 		,"Value":-623
+		,"Attrs":[]
+	}
+	,{
+		"Name":"JET_errDbTimeBeyondMaxRequired"
+		,"Type":{"Kind":"Native","Name":"Int32"}
+		,"ValueType":"Int32"
+		,"Value":-625
 		,"Attrs":[]
 	}
 	,{
@@ -6700,6 +6686,24 @@
 		]
 	}
 	,{
+		"Name":"JET_RECPOS2"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cbStruct","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"centriesLTDeprecated","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"centriesInRangeDeprecated","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"centriesTotalDeprecated","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"centriesLT","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"centriesTotal","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
 		"Name":"JET_THREADSTATS2"
 		,"Architectures":["X64","Arm64"]
 		,"Platform":null
@@ -6732,43 +6736,6 @@
 			{"Name":"signLog","Type":{"Kind":"ApiRef","Name":"JET_SIGNATURE","TargetKind":"Default","Api":"Storage.Jet","Parents":[]},"Attrs":[]}
 			,{"Name":"reserved","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"commitId","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"JET_RBSINFOMISC"
-		,"Architectures":["X64","Arm64"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"lRBSGeneration","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"logtimeCreate","Type":{"Kind":"ApiRef","Name":"JET_LOGTIME","TargetKind":"Default","Api":"Storage.Jet","Parents":[]},"Attrs":[]}
-			,{"Name":"logtimeCreatePrevRBS","Type":{"Kind":"ApiRef","Name":"JET_LOGTIME","TargetKind":"Default","Api":"Storage.Jet","Parents":[]},"Attrs":[]}
-			,{"Name":"ulMajor","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"ulMinor","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"cbLogicalFileSize","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"JET_RBSREVERTINFOMISC"
-		,"Architectures":["X64","Arm64"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"lGenMinRevertStart","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"lGenMaxRevertStart","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"lGenMinRevertEnd","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"lGenMaxRevertEnd","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"logtimeRevertFrom","Type":{"Kind":"ApiRef","Name":"JET_LOGTIME","TargetKind":"Default","Api":"Storage.Jet","Parents":[]},"Attrs":[]}
-			,{"Name":"cSecRevert","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"cPagesReverted","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -7979,6 +7946,24 @@
 		]
 	}
 	,{
+		"Name":"JET_RECPOS2"
+		,"Architectures":["X86"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":4
+		,"Fields":[
+			{"Name":"cbStruct","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"centriesLTDeprecated","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"centriesInRangeDeprecated","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"centriesTotalDeprecated","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"centriesLT","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"centriesTotal","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
 		"Name":"JET_RECORDLIST"
 		,"Architectures":[]
 		,"Platform":null
@@ -8610,43 +8595,6 @@
 		]
 	}
 	,{
-		"Name":"JET_RBSINFOMISC"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":4
-		,"Fields":[
-			{"Name":"lRBSGeneration","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"logtimeCreate","Type":{"Kind":"ApiRef","Name":"JET_LOGTIME","TargetKind":"Default","Api":"Storage.Jet","Parents":[]},"Attrs":[]}
-			,{"Name":"logtimeCreatePrevRBS","Type":{"Kind":"ApiRef","Name":"JET_LOGTIME","TargetKind":"Default","Api":"Storage.Jet","Parents":[]},"Attrs":[]}
-			,{"Name":"ulMajor","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"ulMinor","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"cbLogicalFileSize","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"JET_RBSREVERTINFOMISC"
-		,"Architectures":["X86"]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":4
-		,"Fields":[
-			{"Name":"lGenMinRevertStart","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"lGenMaxRevertStart","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"lGenMinRevertEnd","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"lGenMaxRevertEnd","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"logtimeRevertFrom","Type":{"Kind":"ApiRef","Name":"JET_LOGTIME","TargetKind":"Default","Api":"Storage.Jet","Parents":[]},"Attrs":[]}
-			,{"Name":"cSecRevert","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"cPagesReverted","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
 		"Name":"JET_INDEXCHECKING"
 		,"Architectures":[]
 		,"Platform":null
@@ -8807,20 +8755,6 @@
 				]
 				,"NestedTypes":[
 					{
-						"Name":"_Anonymous2_e__Struct"
-						,"Architectures":[]
-						,"Platform":null
-						,"Kind":"Struct"
-						,"Size":0
-						,"PackingSize":0
-						,"Fields":[
-							{"Name":"cbData","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-							,{"Name":"pvData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-						]
-						,"NestedTypes":[
-						]
-					}
-					,{
 						"Name":"_Anonymous1_e__Struct"
 						,"Architectures":[]
 						,"Platform":null
@@ -8830,6 +8764,20 @@
 						,"Fields":[
 							{"Name":"cEnumColumnValue","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"rgEnumColumnValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"JET_ENUMCOLUMNVALUE","TargetKind":"Default","Api":"Storage.Jet","Parents":[]}},"Attrs":[]}
+						]
+						,"NestedTypes":[
+						]
+					}
+					,{
+						"Name":"_Anonymous2_e__Struct"
+						,"Architectures":[]
+						,"Platform":null
+						,"Kind":"Struct"
+						,"Size":0
+						,"PackingSize":0
+						,"Fields":[
+							{"Name":"cbData","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+							,{"Name":"pvData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]

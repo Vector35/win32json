@@ -4563,7 +4563,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pBlendState","Type":{"Kind":"ApiRef","Name":"ID3D10BlendState","TargetKind":"Com","Api":"Graphics.Direct3D10","Parents":[]},"Attrs":["In","Optional"]}
-					,{"Name":"BlendFactor","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Single"}},"Attrs":["In","Const"]}
+					,{"Name":"BlendFactor","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":4,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Single"}},"Attrs":["In","Const"]}
 					,{"Name":"SampleMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 				]
 			}
@@ -4722,7 +4722,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pRenderTargetView","Type":{"Kind":"ApiRef","Name":"ID3D10RenderTargetView","TargetKind":"Com","Api":"Graphics.Direct3D10","Parents":[]},"Attrs":["In"]}
-					,{"Name":"ColorRGBA","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Single"}},"Attrs":["In","Const"]}
+					,{"Name":"ColorRGBA","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":4,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Single"}},"Attrs":["In","Const"]}
 				]
 			}
 			,{
@@ -5065,7 +5065,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"ppBlendState","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ID3D10BlendState","TargetKind":"Com","Api":"Graphics.Direct3D10","Parents":[]}},"Attrs":["Out","Optional"]}
-					,{"Name":"BlendFactor","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Single"}},"Attrs":["Out","Optional"]}
+					,{"Name":"BlendFactor","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":4,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Single"}},"Attrs":["Out","Optional"]}
 					,{"Name":"pSampleMask","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
 				]
 			}
@@ -8568,7 +8568,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppString","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"ppString","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Const"]}
 				]
 			}
 			,{
@@ -8582,7 +8582,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppStrings","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"ppStrings","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Const"]}
 					,{"Name":"Offset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"Count","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 				]
@@ -9905,7 +9905,6 @@
 			,{"Name":"D3D10_SHADER_DEBUG_REG_UNUSED","Value":10}
 			,{"Name":"D3D11_SHADER_DEBUG_REG_INTERFACE_POINTERS","Value":11}
 			,{"Name":"D3D11_SHADER_DEBUG_REG_UAV","Value":12}
-			,{"Name":"D3D10_SHADER_DEBUG_REG_FORCE_DWORD","Value":2147483647}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -9925,7 +9924,6 @@
 			,{"Name":"D3D10_SHADER_DEBUG_SCOPE_STATEBLOCK","Value":5}
 			,{"Name":"D3D10_SHADER_DEBUG_SCOPE_NAMESPACE","Value":6}
 			,{"Name":"D3D10_SHADER_DEBUG_SCOPE_ANNOTATION","Value":7}
-			,{"Name":"D3D10_SHADER_DEBUG_SCOPE_FORCE_DWORD","Value":2147483647}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -9939,7 +9937,6 @@
 		,"Values":[
 			{"Name":"D3D10_SHADER_DEBUG_VAR_VARIABLE","Value":0}
 			,{"Name":"D3D10_SHADER_DEBUG_VAR_FUNCTION","Value":1}
-			,{"Name":"D3D10_SHADER_DEBUG_VAR_FORCE_DWORD","Value":2147483647}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -10386,7 +10383,7 @@
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"IDXGIAdapter","TargetKind":"Com","Api":"Graphics.Dxgi","Parents":[]},"Attrs":["In"]}
 			,{"Name":"param1","Type":{"Kind":"ApiRef","Name":"D3D10_DRIVER_TYPE","TargetKind":"Default","Api":"Graphics.Direct3D10","Parents":[]},"Attrs":["In"]}
-			,{"Name":"param2","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"param3","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"param4","Type":{"Kind":"ApiRef","Name":"D3D10_FEATURE_LEVEL1","TargetKind":"Default","Api":"Graphics.Direct3D10","Parents":[]},"Attrs":["In"]}
 			,{"Name":"param5","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -10408,7 +10405,7 @@
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"IDXGIAdapter","TargetKind":"Com","Api":"Graphics.Dxgi","Parents":[]},"Attrs":["In"]}
 			,{"Name":"param1","Type":{"Kind":"ApiRef","Name":"D3D10_DRIVER_TYPE","TargetKind":"Default","Api":"Graphics.Direct3D10","Parents":[]},"Attrs":["In"]}
-			,{"Name":"param2","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"param3","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"param4","Type":{"Kind":"ApiRef","Name":"D3D10_FEATURE_LEVEL1","TargetKind":"Default","Api":"Graphics.Direct3D10","Parents":[]},"Attrs":["In"]}
 			,{"Name":"param5","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -10434,7 +10431,7 @@
 		,"Params":[
 			{"Name":"pAdapter","Type":{"Kind":"ApiRef","Name":"IDXGIAdapter","TargetKind":"Com","Api":"Graphics.Dxgi","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"DriverType","Type":{"Kind":"ApiRef","Name":"D3D10_DRIVER_TYPE","TargetKind":"Default","Api":"Graphics.Direct3D10","Parents":[]},"Attrs":["In"]}
-			,{"Name":"Software","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"Software","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"SDKVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"ppDevice","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ID3D10Device","TargetKind":"Com","Api":"Graphics.Direct3D10","Parents":[]}},"Attrs":["Out","Optional"]}
@@ -10454,7 +10451,7 @@
 		,"Params":[
 			{"Name":"pAdapter","Type":{"Kind":"ApiRef","Name":"IDXGIAdapter","TargetKind":"Com","Api":"Graphics.Dxgi","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"DriverType","Type":{"Kind":"ApiRef","Name":"D3D10_DRIVER_TYPE","TargetKind":"Default","Api":"Graphics.Direct3D10","Parents":[]},"Attrs":["In"]}
-			,{"Name":"Software","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"Software","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"SDKVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pSwapChainDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DXGI_SWAP_CHAIN_DESC","TargetKind":"Default","Api":"Graphics.Dxgi","Parents":[]}},"Attrs":["In","Optional"]}
@@ -10916,7 +10913,7 @@
 		,"Params":[
 			{"Name":"pAdapter","Type":{"Kind":"ApiRef","Name":"IDXGIAdapter","TargetKind":"Com","Api":"Graphics.Dxgi","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"DriverType","Type":{"Kind":"ApiRef","Name":"D3D10_DRIVER_TYPE","TargetKind":"Default","Api":"Graphics.Direct3D10","Parents":[]},"Attrs":["In"]}
-			,{"Name":"Software","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"Software","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"HardwareLevel","Type":{"Kind":"ApiRef","Name":"D3D10_FEATURE_LEVEL1","TargetKind":"Default","Api":"Graphics.Direct3D10","Parents":[]},"Attrs":["In"]}
 			,{"Name":"SDKVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -10937,7 +10934,7 @@
 		,"Params":[
 			{"Name":"pAdapter","Type":{"Kind":"ApiRef","Name":"IDXGIAdapter","TargetKind":"Com","Api":"Graphics.Dxgi","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"DriverType","Type":{"Kind":"ApiRef","Name":"D3D10_DRIVER_TYPE","TargetKind":"Default","Api":"Graphics.Direct3D10","Parents":[]},"Attrs":["In"]}
-			,{"Name":"Software","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"Software","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"HardwareLevel","Type":{"Kind":"ApiRef","Name":"D3D10_FEATURE_LEVEL1","TargetKind":"Default","Api":"Graphics.Direct3D10","Parents":[]},"Attrs":["In"]}
 			,{"Name":"SDKVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}

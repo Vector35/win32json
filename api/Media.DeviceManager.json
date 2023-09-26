@@ -1958,55 +1958,6 @@
 		]
 	}
 	,{
-		"Name":"MediaDevMgrClassFactory"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"50040c1d-bdbf-4924-b873-f14d6c5bfd66"
-	}
-	,{
-		"Name":"MediaDevMgr"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"25baad81-3560-11d3-8471-00c04f79dbc0"
-	}
-	,{
-		"Name":"WMDMDevice"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"807b3cdf-357a-11d3-8471-00c04f79dbc0"
-	}
-	,{
-		"Name":"WMDMStorage"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"807b3ce0-357a-11d3-8471-00c04f79dbc0"
-	}
-	,{
-		"Name":"WMDMStorageGlobal"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"807b3ce1-357a-11d3-8471-00c04f79dbc0"
-	}
-	,{
-		"Name":"WMDMDeviceEnum"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"430e35af-3971-11d3-8474-00c04f79dbc0"
-	}
-	,{
-		"Name":"WMDMStorageEnum"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"eb401a3b-3af7-11d3-8474-00c04f79dbc0"
-	}
-	,{
 		"Name":"WMDM_TAG_DATATYPE"
 		,"Architectures":[]
 		,"Platform":null
@@ -2426,7 +2377,7 @@
 				,"Params":[
 					{"Name":"pwszTagName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 					,{"Name":"pType","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WMDM_TAG_DATATYPE","TargetKind":"Default","Api":"Media.DeviceManager","Parents":[]}},"Attrs":["Out"]}
-					,{"Name":"pValue","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out"]}
+					,{"Name":"pValue","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out"]}
 					,{"Name":"pcbLength","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -2444,7 +2395,7 @@
 					{"Name":"iIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"ppwszName","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt16"}}},"Attrs":["Out"]}
 					,{"Name":"pType","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WMDM_TAG_DATATYPE","TargetKind":"Default","Api":"Media.DeviceManager","Parents":[]}},"Attrs":["Out"]}
-					,{"Name":"ppValue","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":4,"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out"]}
+					,{"Name":"ppValue","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out"]}
 					,{"Name":"pcbLength","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -2626,7 +2577,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pSerialNum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WMDMID","TargetKind":"Default","Api":"Media.DeviceManager","Parents":[]}},"Attrs":["Out"]}
-					,{"Name":"abMac","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
+					,{"Name":"abMac","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":8,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -2812,9 +2763,9 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppRights","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WMDMRIGHTS","TargetKind":"Default","Api":"Media.DeviceManager","Parents":[]}}},"Attrs":["Out"]}
+					{"Name":"ppRights","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WMDMRIGHTS","TargetKind":"Default","Api":"Media.DeviceManager","Parents":[]}}},"Attrs":["Out"]}
 					,{"Name":"pnRightsCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-					,{"Name":"abMac","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
+					,{"Name":"abMac","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":8,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -3009,7 +2960,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pdwRefs","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-					,{"Name":"pppIWMDMStorage","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IWMDMStorage","TargetKind":"Com","Api":"Media.DeviceManager","Parents":[]}}},"Attrs":["Out"]}
+					,{"Name":"pppIWMDMStorage","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IWMDMStorage","TargetKind":"Com","Api":"Media.DeviceManager","Parents":[]}}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -3024,7 +2975,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pIProgressCallback","Type":{"Kind":"ApiRef","Name":"IWMDMProgress3","TargetKind":"Com","Api":"Media.DeviceManager","Parents":[]},"Attrs":["In","Optional"]}
-					,{"Name":"ppRights","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WMDMRIGHTS","TargetKind":"Default","Api":"Media.DeviceManager","Parents":[]}}},"Attrs":["Out"]}
+					,{"Name":"ppRights","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WMDMRIGHTS","TargetKind":"Default","Api":"Media.DeviceManager","Parents":[]}}},"Attrs":["Out"]}
 					,{"Name":"pnRightsCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -3040,7 +2991,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"cProperties","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"ppwszPropNames","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"ppwszPropNames","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Const"]}
 					,{"Name":"ppMetadata","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IWMDMMetaData","TargetKind":"Com","Api":"Media.DeviceManager","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
@@ -3213,7 +3164,7 @@
 				,"Params":[
 					{"Name":"pData","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
 					,{"Name":"pdwSize","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
-					,{"Name":"abMac","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
+					,{"Name":"abMac","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":8,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -3513,7 +3464,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pSerialNumber","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WMDMID","TargetKind":"Default","Api":"Media.DeviceManager","Parents":[]}},"Attrs":["Out"]}
-					,{"Name":"abMac","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
+					,{"Name":"abMac","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":8,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -3584,9 +3535,9 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppFormatEx","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WAVEFORMATEX","TargetKind":"Default","Api":"Media.Audio","Parents":[]}}},"Attrs":["Out"]}
+					{"Name":"ppFormatEx","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WAVEFORMATEX","TargetKind":"Default","Api":"Media.Audio","Parents":[]}}},"Attrs":["Out"]}
 					,{"Name":"pnFormatCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-					,{"Name":"pppwszMimeType","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}}},"Attrs":["Out"]}
+					,{"Name":"pppwszMimeType","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}}},"Attrs":["Out"]}
 					,{"Name":"pnMimeTypeCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -3641,11 +3592,11 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"ppAudioFormatEx","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WAVEFORMATEX","TargetKind":"Default","Api":"Media.Audio","Parents":[]}}},"Attrs":["Out"]}
+					,{"Name":"ppAudioFormatEx","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WAVEFORMATEX","TargetKind":"Default","Api":"Media.Audio","Parents":[]}}},"Attrs":["Out"]}
 					,{"Name":"pnAudioFormatCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-					,{"Name":"ppVideoFormatEx","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":4,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VIDEOINFOHEADER","TargetKind":"Default","Api":"Media.MediaFoundation","Parents":[]}}},"Attrs":["Out"]}
+					,{"Name":"ppVideoFormatEx","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VIDEOINFOHEADER","TargetKind":"Default","Api":"Media.MediaFoundation","Parents":[]}}},"Attrs":["Out"]}
 					,{"Name":"pnVideoFormatCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-					,{"Name":"ppFileType","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":6,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WMFILECAPABILITIES","TargetKind":"Default","Api":"Media.DeviceManager","Parents":[]}}},"Attrs":["Out"]}
+					,{"Name":"ppFileType","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WMFILECAPABILITIES","TargetKind":"Default","Api":"Media.DeviceManager","Parents":[]}}},"Attrs":["Out"]}
 					,{"Name":"pnFileTypeCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -3661,7 +3612,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"ppSpecifyPropPages","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ISpecifyPropertyPages","TargetKind":"Com","Api":"System.Ole","Parents":[]}},"Attrs":["Out"]}
-					,{"Name":"pppUnknowns","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}}},"Attrs":["Out"]}
+					,{"Name":"pppUnknowns","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}}},"Attrs":["Out"]}
 					,{"Name":"pcUnks","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -3833,7 +3784,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"celt","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"ppDevice","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"IWMDMDevice","TargetKind":"Com","Api":"Media.DeviceManager","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"ppDevice","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"ApiRef","Name":"IWMDMDevice","TargetKind":"Com","Api":"Media.DeviceManager","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"pceltFetched","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -4020,7 +3971,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"celt","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"ppStorage","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"IWMDMStorage","TargetKind":"Com","Api":"Media.DeviceManager","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"ppStorage","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"ApiRef","Name":"IWMDMStorage","TargetKind":"Com","Api":"Media.DeviceManager","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"pceltFetched","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -4534,7 +4485,7 @@
 				,"Params":[
 					{"Name":"pwszDevicePath","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 					,{"Name":"pdwCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-					,{"Name":"pppDeviceArray","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IMDSPDevice","TargetKind":"Com","Api":"Media.DeviceManager","Parents":[]}}},"Attrs":["Out"]}
+					,{"Name":"pppDeviceArray","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IMDSPDevice","TargetKind":"Com","Api":"Media.DeviceManager","Parents":[]}}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -4583,7 +4534,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"celt","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"ppDevice","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"IMDSPDevice","TargetKind":"Com","Api":"Media.DeviceManager","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"ppDevice","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"ApiRef","Name":"IMDSPDevice","TargetKind":"Com","Api":"Media.DeviceManager","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"pceltFetched","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -4709,7 +4660,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pSerialNumber","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WMDMID","TargetKind":"Default","Api":"Media.DeviceManager","Parents":[]}},"Attrs":["Out"]}
-					,{"Name":"abMac","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
+					,{"Name":"abMac","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":8,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -4780,9 +4731,9 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pFormatEx","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WAVEFORMATEX","TargetKind":"Default","Api":"Media.Audio","Parents":[]}}},"Attrs":["Out"]}
+					{"Name":"pFormatEx","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WAVEFORMATEX","TargetKind":"Default","Api":"Media.Audio","Parents":[]}}},"Attrs":["Out"]}
 					,{"Name":"pnFormatCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-					,{"Name":"pppwszMimeType","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}}},"Attrs":["Out"]}
+					,{"Name":"pppwszMimeType","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}}},"Attrs":["Out"]}
 					,{"Name":"pnMimeTypeCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -4837,11 +4788,11 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"ppAudioFormatEx","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WAVEFORMATEX","TargetKind":"Default","Api":"Media.Audio","Parents":[]}}},"Attrs":["Out"]}
+					,{"Name":"ppAudioFormatEx","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WAVEFORMATEX","TargetKind":"Default","Api":"Media.Audio","Parents":[]}}},"Attrs":["Out"]}
 					,{"Name":"pnAudioFormatCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-					,{"Name":"ppVideoFormatEx","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":4,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VIDEOINFOHEADER","TargetKind":"Default","Api":"Media.MediaFoundation","Parents":[]}}},"Attrs":["Out"]}
+					,{"Name":"ppVideoFormatEx","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VIDEOINFOHEADER","TargetKind":"Default","Api":"Media.MediaFoundation","Parents":[]}}},"Attrs":["Out"]}
 					,{"Name":"pnVideoFormatCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-					,{"Name":"ppFileType","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":6,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WMFILECAPABILITIES","TargetKind":"Default","Api":"Media.DeviceManager","Parents":[]}}},"Attrs":["Out"]}
+					,{"Name":"ppFileType","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WMFILECAPABILITIES","TargetKind":"Default","Api":"Media.DeviceManager","Parents":[]}}},"Attrs":["Out"]}
 					,{"Name":"pnFileTypeCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -4857,7 +4808,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"ppSpecifyPropPages","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ISpecifyPropertyPages","TargetKind":"Com","Api":"System.Ole","Parents":[]}},"Attrs":["Out"]}
-					,{"Name":"pppUnknowns","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}}},"Attrs":["Out"]}
+					,{"Name":"pppUnknowns","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}}},"Attrs":["Out"]}
 					,{"Name":"pcUnks","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -5106,7 +5057,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"celt","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"ppStorage","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"IMDSPStorage","TargetKind":"Com","Api":"Media.DeviceManager","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"ppStorage","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"ApiRef","Name":"IMDSPStorage","TargetKind":"Com","Api":"Media.DeviceManager","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"pceltFetched","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -5261,9 +5212,9 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppRights","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WMDMRIGHTS","TargetKind":"Default","Api":"Media.DeviceManager","Parents":[]}}},"Attrs":["Out"]}
+					{"Name":"ppRights","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WMDMRIGHTS","TargetKind":"Default","Api":"Media.DeviceManager","Parents":[]}}},"Attrs":["Out"]}
 					,{"Name":"pnRightsCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-					,{"Name":"abMac","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
+					,{"Name":"abMac","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":8,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -5465,7 +5416,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pdwRefs","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-					,{"Name":"pppISPStorage","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IMDSPStorage","TargetKind":"Com","Api":"Media.DeviceManager","Parents":[]}}},"Attrs":["Out"]}
+					,{"Name":"pppISPStorage","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IMDSPStorage","TargetKind":"Com","Api":"Media.DeviceManager","Parents":[]}}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -5498,7 +5449,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"cProperties","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"ppwszPropNames","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"ppwszPropNames","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Const"]}
 					,{"Name":"pMetadata","Type":{"Kind":"ApiRef","Name":"IWMDMMetaData","TargetKind":"Com","Api":"Media.DeviceManager","Parents":[]},"Attrs":["In","Optional"]}
 				]
 			}
@@ -5568,7 +5519,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pSerialNum","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WMDMID","TargetKind":"Default","Api":"Media.DeviceManager","Parents":[]}},"Attrs":["Out"]}
-					,{"Name":"abMac","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
+					,{"Name":"abMac","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":8,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -5818,7 +5769,7 @@
 				,"Params":[
 					{"Name":"pData","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out"]}
 					,{"Name":"pdwSize","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
-					,{"Name":"abMac","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
+					,{"Name":"abMac","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":8,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -5834,7 +5785,7 @@
 				,"Params":[
 					{"Name":"pData","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 					,{"Name":"pdwSize","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
-					,{"Name":"abMac","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
+					,{"Name":"abMac","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":8,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -6079,7 +6030,7 @@
 					,{"Name":"pdwMinRightsData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 					,{"Name":"pdwMinExamineData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 					,{"Name":"pdwMinDecideData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-					,{"Name":"abMac","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
+					,{"Name":"abMac","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":8,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -6097,7 +6048,7 @@
 					,{"Name":"pwszExtension","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 					,{"Name":"pData","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 					,{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"abMac","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
+					,{"Name":"abMac","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":8,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -6119,7 +6070,7 @@
 					,{"Name":"dwSessionKeyLen","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pStorageGlobals","Type":{"Kind":"ApiRef","Name":"IMDSPStorageGlobals","TargetKind":"Com","Api":"Media.DeviceManager","Parents":[]},"Attrs":["In","Optional"]}
 					,{"Name":"ppExchange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ISCPSecureExchange","TargetKind":"Com","Api":"Media.DeviceManager","Parents":[]}},"Attrs":["Out"]}
-					,{"Name":"abMac","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
+					,{"Name":"abMac","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":8,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -6138,9 +6089,9 @@
 					,{"Name":"pbSPSessionKey","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 					,{"Name":"dwSessionKeyLen","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pStgGlobals","Type":{"Kind":"ApiRef","Name":"IMDSPStorageGlobals","TargetKind":"Com","Api":"Media.DeviceManager","Parents":[]},"Attrs":["In","Optional"]}
-					,{"Name":"ppRights","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":6,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WMDMRIGHTS","TargetKind":"Default","Api":"Media.DeviceManager","Parents":[]}}},"Attrs":["Out"]}
+					,{"Name":"ppRights","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WMDMRIGHTS","TargetKind":"Default","Api":"Media.DeviceManager","Parents":[]}}},"Attrs":["Out"]}
 					,{"Name":"pnRightsCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-					,{"Name":"abMac","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
+					,{"Name":"abMac","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":8,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
 				]
 			}
 		]
@@ -6181,7 +6132,7 @@
 					,{"Name":"pqwFileSize","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":["In","Out","Optional"]}
 					,{"Name":"pUnknown","Type":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In","Optional"]}
 					,{"Name":"ppExchange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ISCPSecureExchange","TargetKind":"Com","Api":"Media.DeviceManager","Parents":[]}},"Attrs":["Out"]}
-					,{"Name":"abMac","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
+					,{"Name":"abMac","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":8,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
 				]
 			}
 		]
@@ -6208,7 +6159,7 @@
 					{"Name":"pData","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 					,{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pfuReadyFlags","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-					,{"Name":"abMac","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
+					,{"Name":"abMac","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":8,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -6224,7 +6175,7 @@
 				,"Params":[
 					{"Name":"pData","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out"]}
 					,{"Name":"pdwSize","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
-					,{"Name":"abMac","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
+					,{"Name":"abMac","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":8,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -6265,7 +6216,7 @@
 					,{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pProgressCallback","Type":{"Kind":"ApiRef","Name":"IWMDMProgress3","TargetKind":"Com","Api":"Media.DeviceManager","Parents":[]},"Attrs":["In","Optional"]}
 					,{"Name":"pfuReadyFlags","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-					,{"Name":"abMac","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
+					,{"Name":"abMac","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":8,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
 				]
 			}
 		]
@@ -6408,7 +6359,7 @@
 					,{"Name":"dwSessionKeyLen","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pStgGlobals","Type":{"Kind":"ApiRef","Name":"IMDSPStorageGlobals","TargetKind":"Com","Api":"Media.DeviceManager","Parents":[]},"Attrs":["In","Optional"]}
 					,{"Name":"pProgressCallback","Type":{"Kind":"ApiRef","Name":"IWMDMProgress3","TargetKind":"Com","Api":"Media.DeviceManager","Parents":[]},"Attrs":["In","Optional"]}
-					,{"Name":"ppRights","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":7,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WMDMRIGHTS","TargetKind":"Default","Api":"Media.DeviceManager","Parents":[]}}},"Attrs":["Out"]}
+					,{"Name":"ppRights","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WMDMRIGHTS","TargetKind":"Default","Api":"Media.DeviceManager","Parents":[]}}},"Attrs":["Out"]}
 					,{"Name":"pnRightsCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -6468,7 +6419,7 @@
 					,{"Name":"dwPass","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pbDataIn","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 					,{"Name":"dwDataInLen","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"ppbDataOut","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":5,"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out"]}
+					,{"Name":"ppbDataOut","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out"]}
 					,{"Name":"pdwDataOutLen","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -6483,18 +6434,60 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"ppdwProtocols","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}}},"Attrs":["Out"]}
+					{"Name":"ppdwProtocols","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}}},"Attrs":["Out"]}
 					,{"Name":"pdwProtocolCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
 		]
 	}
 	,{
-		"Name":"WMDMLogger"
+		"Name":"MediaDevMgrClassFactory"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"ComClassID"
-		,"Guid":"110a3202-5a79-11d3-8d78-444553540000"
+		,"Guid":"50040c1d-bdbf-4924-b873-f14d6c5bfd66"
+	}
+	,{
+		"Name":"MediaDevMgr"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"25baad81-3560-11d3-8471-00c04f79dbc0"
+	}
+	,{
+		"Name":"WMDMDevice"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"807b3cdf-357a-11d3-8471-00c04f79dbc0"
+	}
+	,{
+		"Name":"WMDMStorage"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"807b3ce0-357a-11d3-8471-00c04f79dbc0"
+	}
+	,{
+		"Name":"WMDMStorageGlobal"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"807b3ce1-357a-11d3-8471-00c04f79dbc0"
+	}
+	,{
+		"Name":"WMDMDeviceEnum"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"430e35af-3971-11d3-8474-00c04f79dbc0"
+	}
+	,{
+		"Name":"WMDMStorageEnum"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"eb401a3b-3af7-11d3-8474-00c04f79dbc0"
 	}
 	,{
 		"Name":"IWMDMLogger"
@@ -6640,6 +6633,13 @@
 		]
 	}
 	,{
+		"Name":"WMDMLogger"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"110a3202-5a79-11d3-8d78-444553540000"
+	}
+	,{
 		"Name":"MTP_COMMAND_DATA_IN"
 		,"Architectures":[]
 		,"Platform":null
@@ -6652,7 +6652,7 @@
 			,{"Name":"Params","Type":{"Kind":"Array","Shape":{"Size":5},"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
 			,{"Name":"NextPhase","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"CommandWriteDataSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"CommandWriteData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"CommandWriteData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -6669,7 +6669,7 @@
 			,{"Name":"NumParams","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Params","Type":{"Kind":"Array","Shape":{"Size":5},"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
 			,{"Name":"CommandReadDataSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"CommandReadData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"CommandReadData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]

@@ -107,7 +107,7 @@
 		,"Attrs":[]
 	}
 	,{
-		"Name":"MENROLL_E_DEVICEAPREACHED"
+		"Name":"MENROLL_E_DEVICECAPREACHED"
 		,"Type":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ValueType":"Int32"
 		,"Value":-2145910765
@@ -408,13 +408,6 @@
 		,"Attrs":[]
 	}
 	,{
-		"Name":"MENROLL_E_DEVICECAPREACHED"
-		,"Type":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
-		,"Value":-2145910765
-		,"Attrs":[]
-	}
-	,{
 		"Name":"MENROLL_E_NOTSUPPORTED"
 		,"Type":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ValueType":"Int32"
@@ -648,6 +641,22 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"MDMApplicationID","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
+		]
+	}
+	,{
+		"Name":"RegisterDeviceDualEnrollMmpcUsingAADDeviceCredentials"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"MDMRegistration.DLL"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"cchEnrollmentId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"pszEnrollmentId","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["Out"]}
 		]
 	}
 	,{

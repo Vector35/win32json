@@ -82,13 +82,6 @@
 
 ,"Types":[
 	{
-		"Name":"SdoMachine"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"e9218ae7-9e91-11d1-bf60-0080c7846bc0"
-	}
-	,{
 		"Name":"ATTRIBUTEID"
 		,"Architectures":[]
 		,"Platform":null
@@ -333,6 +326,7 @@
 			,{"Name":"IAS_ATTRIBUTE_SERVER_IPv6_ADDRESS","Value":8170}
 			,{"Name":"IAS_ATTRIBUTE_RADIUS_USERNAME_ENCODING_ASCII","Value":8171}
 			,{"Name":"MS_ATTRIBUTE_RAS_ROUTING_DOMAIN_ID","Value":8172}
+			,{"Name":"MS_ATTRIBUTE_AZURE_POLICY_ID","Value":8173}
 			,{"Name":"IAS_ATTRIBUTE_CERTIFICATE_THUMBPRINT","Value":8250}
 			,{"Name":"RAS_ATTRIBUTE_ENCRYPTION_TYPE","Value":4294967206}
 			,{"Name":"RAS_ATTRIBUTE_ENCRYPTION_POLICY","Value":4294967207}
@@ -1004,7 +998,7 @@
 	,{
 		"Name":"ISdoMachine"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"479f6e75-49a2-11d2-8eca-00c04fc2f519"
 		,"Interface":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -1227,7 +1221,7 @@
 	,{
 		"Name":"ISdoServiceControl"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"479f6e74-49a2-11d2-8eca-00c04fc2f519"
 		,"Interface":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -1290,7 +1284,7 @@
 	,{
 		"Name":"ISdo"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"56bc53de-96db-11d1-bf3f-000000000000"
 		,"Interface":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -1322,7 +1316,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"Id","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"pValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1337,7 +1331,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"Id","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"pValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -1401,7 +1395,7 @@
 	,{
 		"Name":"ISdoCollection"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"56bc53e2-96db-11d1-bf3f-000000000000"
 		,"Interface":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -1503,7 +1497,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"Name","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
+					{"Name":"Name","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
 					,{"Name":"pItem","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -1585,7 +1579,7 @@
 	,{
 		"Name":"ISdoDictionaryOld"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"d432e5f4-53d8-11d2-9a3a-00c04fb998ac"
 		,"Interface":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -1601,8 +1595,8 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"Id","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In","Out"]}
-					,{"Name":"pValues","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					{"Name":"Id","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In","Out"]}
+					,{"Name":"pValues","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1617,8 +1611,8 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"Id","Type":{"Kind":"ApiRef","Name":"ATTRIBUTEID","TargetKind":"Default","Api":"NetworkManagement.NetworkPolicyServer","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pInfoIDs","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"pInfoValues","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pInfoIDs","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pInfoValues","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1633,8 +1627,8 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"Id","Type":{"Kind":"ApiRef","Name":"ATTRIBUTEID","TargetKind":"Default","Api":"NetworkManagement.NetworkPolicyServer","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pValueIds","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
-					,{"Name":"pValuesDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pValueIds","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"pValuesDesc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1668,6 +1662,13 @@
 				]
 			}
 		]
+	}
+	,{
+		"Name":"SdoMachine"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"e9218ae7-9e91-11d1-bf60-0080c7846bc0"
 	}
 	,{
 		"Name":"RADIUS_ATTRIBUTE_TYPE"
@@ -1870,7 +1871,7 @@
 			{"Name":"VendorId","Type":{"Kind":"Array","Shape":{"Size":4},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"VendorType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"VendorLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"AttributeSpecific","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"AttributeSpecific","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]

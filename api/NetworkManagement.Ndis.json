@@ -1591,6 +1591,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"OID_WWAN_UE_POLICY"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":234946894
+		,"Attrs":[]
+	}
+	,{
 		"Name":"OID_GEN_XMIT_OK"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -11363,6 +11370,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"NDIS_SUPPORT_NDIS687"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1
+		,"Attrs":[]
+	}
+	,{
 		"Name":"NDIS_SUPPORT_NDIS686"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -13356,7 +13370,7 @@
 		,"Fields":[
 			{"Name":"Oid","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"DataLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Data","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"Data","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -13372,7 +13386,7 @@
 			{"Name":"Oid","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"DataLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Data","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"Data","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -13480,7 +13494,7 @@
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"NDIS_OBJECT_HEADER","TargetKind":"Default","Api":"NetworkManagement.Ndis","Parents":[]},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"TimeoutArrayLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"TimeoutArray","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			,{"Name":"TimeoutArray","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -13577,7 +13591,7 @@
 		,"Fields":[
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NumCandidates","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"CandidateList","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"PMKID_CANDIDATE","TargetKind":"Default","Api":"NetworkManagement.Ndis","Parents":[]}},"Attrs":[]}
+			,{"Name":"CandidateList","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"PMKID_CANDIDATE","TargetKind":"Default","Api":"NetworkManagement.Ndis","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -13608,7 +13622,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"NumberOfItems","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"NetworkType","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"NDIS_802_11_NETWORK_TYPE","TargetKind":"Default","Api":"NetworkManagement.Ndis","Parents":[]}},"Attrs":[]}
+			,{"Name":"NetworkType","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"NDIS_802_11_NETWORK_TYPE","TargetKind":"Default","Api":"NetworkManagement.Ndis","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -13670,30 +13684,30 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"TransmittedFragmentCount","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"MulticastTransmittedFrameCount","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"FailedCount","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"RetryCount","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"MultipleRetryCount","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"RTSSuccessCount","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"RTSFailureCount","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"ACKFailureCount","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"FrameDuplicateCount","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"ReceivedFragmentCount","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"MulticastReceivedFrameCount","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"FCSErrorCount","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"TKIPLocalMICFailures","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"TKIPICVErrorCount","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"TKIPCounterMeasuresInvoked","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"TKIPReplays","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"CCMPFormatErrors","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"CCMPReplays","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"CCMPDecryptErrors","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"FourWayHandshakeFailures","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"WEPUndecryptableCount","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"WEPICVErrorCount","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"DecryptSuccessCount","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"DecryptFailureCount","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"TransmittedFragmentCount","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"MulticastTransmittedFrameCount","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"FailedCount","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"RetryCount","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"MultipleRetryCount","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"RTSSuccessCount","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"RTSFailureCount","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"ACKFailureCount","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"FrameDuplicateCount","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"ReceivedFragmentCount","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"MulticastReceivedFrameCount","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"FCSErrorCount","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"TKIPLocalMICFailures","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"TKIPICVErrorCount","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"TKIPCounterMeasuresInvoked","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"TKIPReplays","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"CCMPFormatErrors","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"CCMPReplays","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"CCMPDecryptErrors","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"FourWayHandshakeFailures","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"WEPUndecryptableCount","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"WEPICVErrorCount","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"DecryptSuccessCount","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"DecryptFailureCount","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -13711,7 +13725,7 @@
 			,{"Name":"KeyLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"BSSID","Type":{"Kind":"Array","Shape":{"Size":6},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"KeyRSC","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"KeyMaterial","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"KeyMaterial","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -13742,7 +13756,7 @@
 			{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"KeyIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"KeyLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"KeyMaterial","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"KeyMaterial","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -13831,7 +13845,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"NumberOfItems","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Bssid","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"NDIS_WLAN_BSSID","TargetKind":"Default","Api":"NetworkManagement.Ndis","Parents":[]}},"Attrs":[]}
+			,{"Name":"Bssid","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"NDIS_WLAN_BSSID","TargetKind":"Default","Api":"NetworkManagement.Ndis","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -13855,7 +13869,7 @@
 			,{"Name":"InfrastructureMode","Type":{"Kind":"ApiRef","Name":"NDIS_802_11_NETWORK_INFRASTRUCTURE","TargetKind":"Default","Api":"NetworkManagement.Ndis","Parents":[]},"Attrs":[]}
 			,{"Name":"SupportedRates","Type":{"Kind":"Array","Shape":{"Size":16},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"IELength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"IEs","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"IEs","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -13869,7 +13883,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"NumberOfItems","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Bssid","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"NDIS_WLAN_BSSID_EX","TargetKind":"Default","Api":"NetworkManagement.Ndis","Parents":[]}},"Attrs":[]}
+			,{"Name":"Bssid","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"NDIS_WLAN_BSSID_EX","TargetKind":"Default","Api":"NetworkManagement.Ndis","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -13899,7 +13913,7 @@
 		,"Fields":[
 			{"Name":"ElementID","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Length","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"data","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"data","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -14012,7 +14026,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"Status","Type":{"Kind":"ApiRef","Name":"NDIS_802_11_STATUS_INDICATION","TargetKind":"Default","Api":"NetworkManagement.Ndis","Parents":[]},"Attrs":[]}
-			,{"Name":"Request","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"NDIS_802_11_AUTHENTICATION_REQUEST","TargetKind":"Default","Api":"NetworkManagement.Ndis","Parents":[]}},"Attrs":[]}
+			,{"Name":"Request","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"NDIS_802_11_AUTHENTICATION_REQUEST","TargetKind":"Default","Api":"NetworkManagement.Ndis","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -14083,7 +14097,7 @@
 		,"Fields":[
 			{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"BSSIDInfoCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"BSSIDInfo","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"BSSID_INFO","TargetKind":"Default","Api":"NetworkManagement.Ndis","Parents":[]}},"Attrs":[]}
+			,{"Name":"BSSIDInfo","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"BSSID_INFO","TargetKind":"Default","Api":"NetworkManagement.Ndis","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -14114,7 +14128,7 @@
 			,{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NoOfPMKIDs","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NoOfAuthEncryptPairsSupported","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"AuthenticationEncryptionSupported","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"NDIS_802_11_AUTHENTICATION_ENCRYPTION","TargetKind":"Default","Api":"NetworkManagement.Ndis","Parents":[]}},"Attrs":[]}
+			,{"Name":"AuthenticationEncryptionSupported","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"NDIS_802_11_AUTHENTICATION_ENCRYPTION","TargetKind":"Default","Api":"NetworkManagement.Ndis","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -14128,7 +14142,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"NumberOfItems","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Non_Bcast_Ssid","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"NDIS_802_11_SSID","TargetKind":"Default","Api":"NetworkManagement.Ndis","Parents":[]}},"Attrs":[]}
+			,{"Name":"Non_Bcast_Ssid","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"NDIS_802_11_SSID","TargetKind":"Default","Api":"NetworkManagement.Ndis","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -14287,7 +14301,7 @@
 			,{"Name":"SecAssoc","Type":{"Kind":"Array","Shape":{"Size":3},"Child":{"Kind":"ApiRef","Name":"OFFLOAD_SECURITY_ASSOCIATION","TargetKind":"Default","Api":"NetworkManagement.Ndis","Parents":[]}},"Attrs":[]}
 			,{"Name":"OffloadHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"KeyLen","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"KeyMat","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"KeyMat","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -14356,7 +14370,7 @@
 			,{"Name":"EncapTypeEntry","Type":{"Kind":"ApiRef","Name":"OFFLOAD_IPSEC_UDPESP_ENCAPTYPE_ENTRY","TargetKind":"Default","Api":"NetworkManagement.Ndis","Parents":[]},"Attrs":[]}
 			,{"Name":"EncapTypeEntryOffldHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"KeyLen","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"KeyMat","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"KeyMat","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -14464,7 +14478,7 @@
 		,"Fields":[
 			{"Name":"AddressLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"AddressType","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"Address","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"Address","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -14479,7 +14493,7 @@
 		,"Fields":[
 			{"Name":"AddressCount","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"AddressType","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"Address","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"NETWORK_ADDRESS","TargetKind":"Default","Api":"NetworkManagement.Ndis","Parents":[]}},"Attrs":[]}
+			,{"Name":"Address","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"NETWORK_ADDRESS","TargetKind":"Default","Api":"NetworkManagement.Ndis","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -15665,7 +15679,7 @@
 			,{"Name":"IfIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NetLuid","Type":{"Kind":"ApiRef","Name":"NET_LUID_LH","TargetKind":"Default","Api":"NetworkManagement.Ndis","Parents":[]},"Attrs":[]}
 			,{"Name":"DeviceNameLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"DeviceName","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+			,{"Name":"DeviceName","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -15829,7 +15843,7 @@
 			,{"Name":"NumberOfPorts","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"OffsetFirstPort","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ElementSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Ports","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"NDIS_PORT_CHARACTERISTICS","TargetKind":"Default","Api":"NetworkManagement.Ndis","Parents":[]}},"Attrs":[]}
+			,{"Name":"Ports","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"NDIS_PORT_CHARACTERISTICS","TargetKind":"Default","Api":"NetworkManagement.Ndis","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]

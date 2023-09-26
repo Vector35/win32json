@@ -413,62 +413,6 @@
 		]
 	}
 	,{
-		"Name":"UPnPDeviceFinder"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"e2085f28-feb7-404a-b8e7-e659bdeaaa02"
-	}
-	,{
-		"Name":"UPnPDevices"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"b9e84ffd-ad3c-40a4-b835-0882ebcbaaa8"
-	}
-	,{
-		"Name":"UPnPDevice"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"a32552c5-ba61-457a-b59a-a2561e125e33"
-	}
-	,{
-		"Name":"UPnPServices"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"c0bc4b4a-a406-4efc-932f-b8546b8100cc"
-	}
-	,{
-		"Name":"UPnPService"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"c624ba95-fbcb-4409-8c03-8cceec533ef1"
-	}
-	,{
-		"Name":"UPnPDescriptionDocument"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"1d8a9b47-3a28-4ce2-8a4b-bd34e45bceeb"
-	}
-	,{
-		"Name":"UPnPDeviceFinderEx"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"181b54fc-380b-4a75-b3f1-4ac45e9605b0"
-	}
-	,{
-		"Name":"UPnPDescriptionDocumentEx"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"33fd0563-d81a-4393-83cc-0195b1da2f91"
-	}
-	,{
 		"Name":"IUPnPDeviceFinder"
 		,"Architectures":[]
 		,"Platform":"windows5.1.2600"
@@ -747,7 +691,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"bstrVariableName","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -762,9 +706,9 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"bstrActionName","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"vInActionArgs","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pvOutActionArgs","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In","Out"]}
-					,{"Name":"pvRetVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"vInActionArgs","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
+					,{"Name":"pvOutActionArgs","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In","Out"]}
+					,{"Name":"pvRetVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -875,7 +819,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"bstrActionName","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"vInActionArgs","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"vInActionArgs","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pAsyncResult","Type":{"Kind":"ApiRef","Name":"IUPnPAsyncResult","TargetKind":"Com","Api":"Devices.Enumeration.Pnp","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pullRequestID","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":["Out"]}
 				]
@@ -892,8 +836,8 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"ullRequestID","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":["In"]}
-					,{"Name":"pvOutActionArgs","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In","Out"]}
-					,{"Name":"pvRetVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In","Out"]}
+					,{"Name":"pvOutActionArgs","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In","Out"]}
+					,{"Name":"pvRetVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -924,7 +868,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"ullRequestID","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":["In"]}
-					,{"Name":"pValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In","Out"]}
+					,{"Name":"pValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -1024,7 +968,7 @@
 				,"Params":[
 					{"Name":"pus","Type":{"Kind":"ApiRef","Name":"IUPnPService","TargetKind":"Com","Api":"Devices.Enumeration.Pnp","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pcwszStateVarName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-					,{"Name":"vaValue","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"vaValue","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -1690,18 +1634,60 @@
 		]
 	}
 	,{
-		"Name":"UPnPRegistrar"
+		"Name":"UPnPDeviceFinder"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"ComClassID"
-		,"Guid":"204810b9-73b2-11d4-bf42-00b0d0118b56"
+		,"Guid":"e2085f28-feb7-404a-b8e7-e659bdeaaa02"
 	}
 	,{
-		"Name":"UPnPRemoteEndpointInfo"
+		"Name":"UPnPDevices"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"ComClassID"
-		,"Guid":"2e5e84e9-4049-4244-b728-2d24227157c7"
+		,"Guid":"b9e84ffd-ad3c-40a4-b835-0882ebcbaaa8"
+	}
+	,{
+		"Name":"UPnPDevice"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"a32552c5-ba61-457a-b59a-a2561e125e33"
+	}
+	,{
+		"Name":"UPnPServices"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"c0bc4b4a-a406-4efc-932f-b8546b8100cc"
+	}
+	,{
+		"Name":"UPnPService"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"c624ba95-fbcb-4409-8c03-8cceec533ef1"
+	}
+	,{
+		"Name":"UPnPDescriptionDocument"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"1d8a9b47-3a28-4ce2-8a4b-bd34e45bceeb"
+	}
+	,{
+		"Name":"UPnPDeviceFinderEx"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"181b54fc-380b-4a75-b3f1-4ac45e9605b0"
+	}
+	,{
+		"Name":"UPnPDescriptionDocumentEx"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"33fd0563-d81a-4393-83cc-0195b1da2f91"
 	}
 	,{
 		"Name":"IUPnPEventSink"
@@ -1737,7 +1723,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"varsadispidChanges","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					{"Name":"varsadispidChanges","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 				]
 			}
 		]
@@ -2098,6 +2084,20 @@
 			}
 		]
 	}
+	,{
+		"Name":"UPnPRegistrar"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"204810b9-73b2-11d4-bf42-00b0d0118b56"
+	}
+	,{
+		"Name":"UPnPRemoteEndpointInfo"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"2e5e84e9-4049-4244-b728-2d24227157c7"
+	}
 ]
 
 ,"Functions":[
@@ -2120,7 +2120,7 @@
 			,{"Name":"pProperties","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"ApiRef","Name":"DEVPROPERTY","TargetKind":"Default","Api":"Devices.Properties","Parents":[]}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"pCallback","Type":{"Kind":"ApiRef","Name":"SW_DEVICE_CREATE_CALLBACK","TargetKind":"FunctionPointer","Api":"Devices.Enumeration.Pnp","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
-			,{"Name":"phSwDevice","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"IntPtr"}},"Attrs":["Out"]}
+			,{"Name":"phSwDevice","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HSWDEVICE","TargetKind":"Default","Api":"Devices.Enumeration.Pnp","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{

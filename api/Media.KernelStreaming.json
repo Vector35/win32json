@@ -1222,14 +1222,14 @@
 	,{
 		"Name":"RT_STRING"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":6
 		,"Attrs":[]
 	}
 	,{
 		"Name":"RT_RCDATA"
 		,"Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ValueType":"Int32"
+		,"ValueType":"UInt16"
 		,"Value":10
 		,"Attrs":[]
 	}
@@ -1306,22 +1306,22 @@
 	,{
 		"Name":"DEVPKEY_KsAudio_PacketSize_Constraints"
 		,"Type":{"Kind":"ApiRef","Name":"DEVPROPKEY","TargetKind":"Default","Api":"Devices.Properties","Parents":[]}
-		,"ValueType":"PropertyKey"
-		,"Value":{"Fmtid":"13e004d6-b066-43bd-913b-a415cd13da87","Pid":2}
+		,"ValueType":"ConstantAttribute"
+		,"Value":"True"
 		,"Attrs":[]
 	}
 	,{
 		"Name":"DEVPKEY_KsAudio_Controller_DeviceInterface_Path"
 		,"Type":{"Kind":"ApiRef","Name":"DEVPROPKEY","TargetKind":"Default","Api":"Devices.Properties","Parents":[]}
-		,"ValueType":"PropertyKey"
-		,"Value":{"Fmtid":"13e004d6-b066-43bd-913b-a415cd13da87","Pid":3}
+		,"ValueType":"ConstantAttribute"
+		,"Value":"True"
 		,"Attrs":[]
 	}
 	,{
 		"Name":"DEVPKEY_KsAudio_PacketSize_Constraints2"
 		,"Type":{"Kind":"ApiRef","Name":"DEVPROPKEY","TargetKind":"Default","Api":"Devices.Properties","Parents":[]}
-		,"ValueType":"PropertyKey"
-		,"Value":{"Fmtid":"9404f781-7191-409b-8b0b-80bf6ec229ae","Pid":2}
+		,"ValueType":"ConstantAttribute"
+		,"Value":"True"
 		,"Attrs":[]
 	}
 	,{
@@ -4097,6 +4097,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"KSCAMERA_EXTENDEDPROP_EYEGAZECORRECTION_STARE"
+		,"Type":{"Kind":"Native","Name":"UInt64"}
+		,"ValueType":"UInt64"
+		,"Value":2
+		,"Attrs":[]
+	}
+	,{
 		"Name":"KSCAMERA_EXTENDEDPROP_BACKGROUNDSEGMENTATION_OFF"
 		,"Type":{"Kind":"Native","Name":"UInt64"}
 		,"ValueType":"UInt64"
@@ -4115,6 +4122,13 @@
 		,"Type":{"Kind":"Native","Name":"UInt64"}
 		,"ValueType":"UInt64"
 		,"Value":2
+		,"Attrs":[]
+	}
+	,{
+		"Name":"KSCAMERA_EXTENDEDPROP_BACKGROUNDSEGMENTATION_SHALLOWFOCUS"
+		,"Type":{"Kind":"Native","Name":"UInt64"}
+		,"ValueType":"UInt64"
+		,"Value":4
 		,"Attrs":[]
 	}
 	,{
@@ -4485,39 +4499,246 @@
 
 ,"Types":[
 	{
-		"Name":"IKsPin"
+		"Name":"IKsPropertySet"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
+		,"Kind":"Com"
+		,"Guid":"31efac30-515c-11d0-a9aa-00aa0061be93"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"Set"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"guidPropSet","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
+					,{"Name":"dwPropID","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"pInstanceData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":3}]}
+					,{"Name":"cbInstanceData","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"pPropData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":5}]}
+					,{"Name":"cbPropData","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"Get"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"guidPropSet","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
+					,{"Name":"dwPropID","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"pInstanceData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":3}]}
+					,{"Name":"cbInstanceData","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"pPropData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":5}]}
+					,{"Name":"cbPropData","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"pcbReturned","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"QuerySupported"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"guidPropSet","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
+					,{"Name":"dwPropID","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"pTypeSupport","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+				]
+			}
 		]
 	}
 	,{
-		"Name":"IKsAllocator"
+		"Name":"IKsTopologyInfo"
 		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
+		,"Platform":"windows5.1.2600"
+		,"Kind":"Com"
+		,"Guid":"720d4ac0-7533-11d0-a5d6-28db04c10000"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"get_NumCategories"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[
+					"SpecialName"
+				]
+				,"Params":[
+					{"Name":"pdwNumCategories","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"get_Category"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"dwIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"pCategory","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"get_NumConnections"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[
+					"SpecialName"
+				]
+				,"Params":[
+					{"Name":"pdwNumConnections","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"get_ConnectionInfo"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"dwIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"pConnectionInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"KSTOPOLOGY_CONNECTION","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"get_NodeName"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"dwNodeId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"pwchNodeName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":2},"Optional"]}
+					,{"Name":"dwBufSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"pdwNameLen","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"get_NumNodes"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[
+					"SpecialName"
+				]
+				,"Params":[
+					{"Name":"pdwNumNodes","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"get_NodeType"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"dwNodeId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"pNodeType","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"CreateNodeInstance"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"dwNodeId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"iid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
+					,{"Name":"ppvObject","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out"]}
+				]
+			}
 		]
 	}
 	,{
-		"Name":"IKsAllocatorEx"
+		"Name":"IKsNodeControl"
 		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
+		,"Platform":"windows5.1.2600"
+		,"Kind":"Com"
+		,"Guid":"11737c14-24a7-4bb5-81a0-0d003813b0c4"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"put_NodeId"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[
+					"SpecialName"
+				]
+				,"Params":[
+					{"Name":"dwNodeId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"put_KsControl"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[
+					"SpecialName"
+				]
+				,"Params":[
+					{"Name":"pKsControl","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+				]
+			}
 		]
 	}
 	,{
@@ -4748,6 +4969,45 @@
 				,"Params":[
 					{"Name":"nJack","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pDescription2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"KSJACK_DESCRIPTION2","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"IKsJackDescription3"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"e3f6778b-6660-4cc8-a291-ecc4192d9967"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"GetJackCount"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"pcJacks","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"GetJackDescription3"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"nJack","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"pDescription3","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"KSJACK_DESCRIPTION3","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -5986,7 +6246,7 @@
 		,"Fields":[
 			{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Pin","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"SymbolicLinkName","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+			,{"Name":"SymbolicLinkName","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -6292,7 +6552,7 @@
 			,{"Name":"PinFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"OutputCompression","Type":{"Kind":"ApiRef","Name":"KS_COMPRESSION","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":[]}
 			,{"Name":"PinWeight","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"FramingItem","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"KS_FRAMING_ITEM","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":[]}
+			,{"Name":"FramingItem","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"KS_FRAMING_ITEM","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -7689,7 +7949,7 @@
 			,{"Name":"PacketSizeFileAlignment","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NumProcessingModeConstraints","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"ProcessingModeConstraints","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"KSAUDIO_PACKETSIZE_PROCESSINGMODE_CONSTRAINT","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":[]}
+			,{"Name":"ProcessingModeConstraints","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"KSAUDIO_PACKETSIZE_PROCESSINGMODE_CONSTRAINT","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -7706,7 +7966,7 @@
 			,{"Name":"PacketSizeFileAlignment","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"MaxPacketSizeInBytes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NumProcessingModeConstraints","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"ProcessingModeConstraints","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"KSAUDIO_PACKETSIZE_PROCESSINGMODE_CONSTRAINT","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":[]}
+			,{"Name":"ProcessingModeConstraints","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"KSAUDIO_PACKETSIZE_PROCESSINGMODE_CONSTRAINT","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -7778,7 +8038,7 @@
 			,{"Name":"usFrequencyBandLo","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"usFrequencyBandHi","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"usNumberOfMicrophones","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"KsMicCoord","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"KSAUDIO_MICROPHONE_COORDINATES","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":[]}
+			,{"Name":"KsMicCoord","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"KSAUDIO_MICROPHONE_COORDINATES","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -8874,7 +9134,7 @@
 		,"Fields":[
 			{"Name":"InputChannels","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"OutputChannels","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Capabilities","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"KSAUDIO_MIX_CAPS","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":[]}
+			,{"Name":"Capabilities","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"KSAUDIO_MIX_CAPS","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -8887,10 +9147,10 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"TimerFrequency","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"TimeStamp1","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			{"Name":"TimerFrequency","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"TimeStamp1","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"Position","Type":{"Kind":"ApiRef","Name":"KSAUDIO_POSITION","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":[]}
-			,{"Name":"TimeStamp2","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"TimeStamp2","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -10807,7 +11067,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"BusKey","Type":{"Kind":"Array","Shape":{"Size":5},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
-			,{"Name":"Reserved","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"Reserved","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -11392,7 +11652,7 @@
 			{"Name":"hdr","Type":{"Kind":"ApiRef","Name":"KS_VIDEOINFOHEADER","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":[]}
 			,{"Name":"dwStartTimeCode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"cbSequenceHeader","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"bSequenceHeader","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"bSequenceHeader","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -11411,7 +11671,7 @@
 			,{"Name":"dwProfile","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwLevel","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"bSequenceHeader","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			,{"Name":"bSequenceHeader","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -13876,7 +14136,7 @@
 					{"Name":"dbl","Type":{"Kind":"Native","Name":"Double"},"Attrs":[]}
 					,{"Name":"ull","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 					,{"Name":"ul","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-					,{"Name":"ratio","Type":{"Kind":"ApiRef","Name":"ULARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+					,{"Name":"ratio","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 					,{"Name":"l","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 					,{"Name":"ll","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 				]
@@ -14503,7 +14763,7 @@
 			,{"Name":"MaskCoverageBoundingBox","Type":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"MaskResolution","Type":{"Kind":"ApiRef","Name":"SIZE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"ForegroundBoundingBox","Type":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"MaskData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"MaskData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -14886,7 +15146,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"Header","Type":{"Kind":"ApiRef","Name":"KSCAMERA_METADATA_ITEMHEADER","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":[]}
-			,{"Name":"EventFilter","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+			,{"Name":"EventFilter","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -15702,7 +15962,7 @@
 			{"Name":"PelsWidth","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"PelsHeight","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"BitsPerPel","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"DeviceID","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+			,{"Name":"DeviceID","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -16242,6 +16502,7 @@
 			,{"Name":"KSPROPERTY_JACK_DESCRIPTION2","Value":2}
 			,{"Name":"KSPROPERTY_JACK_SINK_INFO","Value":3}
 			,{"Name":"KSPROPERTY_JACK_CONTAINERID","Value":4}
+			,{"Name":"KSPROPERTY_JACK_DESCRIPTION3","Value":5}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -16394,6 +16655,19 @@
 		]
 	}
 	,{
+		"Name":"KSJACK_DESCRIPTION3"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"ConfigId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
 		"Name":"KSPROPSETID_AudioPosture"
 		,"Architectures":[]
 		,"Platform":null
@@ -16458,6 +16732,7 @@
 			,{"Name":"KSPROPERTY_AUDIOENGINE_BUFFER_SIZE_RANGE","Value":7}
 			,{"Name":"KSPROPERTY_AUDIOENGINE_LOOPBACK_PROTECTION","Value":8}
 			,{"Name":"KSPROPERTY_AUDIOENGINE_VOLUMELEVEL","Value":9}
+			,{"Name":"KSPROPERTY_AUDIOENGINE_DEVICECONTROLS","Value":10}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -16514,6 +16789,35 @@
 			{"Name":"TargetVolume","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"CurveType","Type":{"Kind":"ApiRef","Name":"AUDIO_CURVE_TYPE","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":[]}
 			,{"Name":"CurveDuration","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"EDeviceControlUseType"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"eDeviceControlUseMissing","Value":0}
+			,{"Name":"eDeviceControlUsePrimary","Value":1}
+			,{"Name":"eDeviceControlUseSecondary","Value":2}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"KSAUDIOENGINE_DEVICECONTROLS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"Volume","Type":{"Kind":"ApiRef","Name":"EDeviceControlUseType","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":[]}
+			,{"Name":"Mute","Type":{"Kind":"ApiRef","Name":"EDeviceControlUseType","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":[]}
+			,{"Name":"PeakMeter","Type":{"Kind":"ApiRef","Name":"EDeviceControlUseType","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -17075,13 +17379,979 @@
 			,{"Name":"AllocatorPlace","Type":{"Kind":"ApiRef","Name":"PIPE_ALLOCATOR_PLACE","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":[]}
 			,{"Name":"Dimensions","Type":{"Kind":"ApiRef","Name":"PIPE_DIMENSIONS","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":[]}
 			,{"Name":"PhysicalRange","Type":{"Kind":"ApiRef","Name":"KS_FRAMING_RANGE","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":[]}
-			,{"Name":"PrevSegment","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IKsAllocatorEx","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":[]}
+			,{"Name":"PrevSegment","Type":{"Kind":"ApiRef","Name":"IKsAllocatorEx","TargetKind":"Com","Api":"Media.KernelStreaming","Parents":[]},"Attrs":[]}
 			,{"Name":"CountNextSegments","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"NextSegments","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IKsAllocatorEx","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}}},"Attrs":[]}
+			,{"Name":"NextSegments","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IKsAllocatorEx","TargetKind":"Com","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":[]}
 			,{"Name":"InsideFactors","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NumberPins","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"IKsClockPropertySet"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"5c5cbd84-e755-11d0-ac18-00a0c9223196"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"KsGetTime"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"Time","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int64"}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"KsSetTime"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"Time","Type":{"Kind":"Native","Name":"Int64"},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"KsGetPhysicalTime"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"Time","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int64"}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"KsSetPhysicalTime"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"Time","Type":{"Kind":"Native","Name":"Int64"},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"KsGetCorrelatedTime"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"CorrelatedTime","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"KSCORRELATED_TIME","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"KsSetCorrelatedTime"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"CorrelatedTime","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"KSCORRELATED_TIME","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"KsGetCorrelatedPhysicalTime"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"CorrelatedTime","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"KSCORRELATED_TIME","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"KsSetCorrelatedPhysicalTime"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"CorrelatedTime","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"KSCORRELATED_TIME","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"KsGetResolution"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"Resolution","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"KSRESOLUTION","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"KsGetState"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"State","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"KSSTATE","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"IKsAllocator"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"8da64899-c0d9-11d0-8413-0000f822fe8a"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"KsGetAllocatorHandle"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+				]
+			}
+			,{
+				"Name":"KsGetAllocatorMode"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"KSALLOCATORMODE","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+				]
+			}
+			,{
+				"Name":"KsGetAllocatorStatus"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"AllocatorStatus","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"KSSTREAMALLOCATOR_STATUS","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"KsSetAllocatorMode"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"Native","Name":"Void"}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"Mode","Type":{"Kind":"ApiRef","Name":"KSALLOCATORMODE","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":["In"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"IKsAllocatorEx"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"091bb63a-603f-11d1-b067-00a0c9062802"
+		,"Interface":{"Kind":"ApiRef","Name":"IKsAllocator","TargetKind":"Com","Api":"Media.KernelStreaming","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"KsGetProperties"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ALLOCATOR_PROPERTIES_EX","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+				]
+			}
+			,{
+				"Name":"KsSetProperties"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"Native","Name":"Void"}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ALLOCATOR_PROPERTIES_EX","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"KsSetAllocatorHandle"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"Native","Name":"Void"}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"AllocatorHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"KsCreateAllocatorAndGetHandle"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"KsPin","Type":{"Kind":"ApiRef","Name":"IKsPin","TargetKind":"Com","Api":"Media.KernelStreaming","Parents":[]},"Attrs":["In"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"KSPEEKOPERATION"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"KsPeekOperation_PeekOnly","Value":0}
+			,{"Name":"KsPeekOperation_AddRef","Value":1}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"IKsPin"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"b61178d1-a2d9-11cf-9e53-00aa00a216a1"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"KsQueryMediums"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"MediumList","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"KSMULTIPLE_ITEM","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"KsQueryInterfaces"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"InterfaceList","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"KSMULTIPLE_ITEM","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"KsCreateSinkPinHandle"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"Interface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"KSIDENTIFIER","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"Medium","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"KSIDENTIFIER","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"KsGetCurrentCommunication"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"Communication","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"KSPIN_COMMUNICATION","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"Interface","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"KSIDENTIFIER","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":["Out","Optional"]}
+					,{"Name":"Medium","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"KSIDENTIFIER","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":["Out","Optional"]}
+				]
+			}
+			,{
+				"Name":"KsPropagateAcquire"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+				]
+			}
+			,{
+				"Name":"KsDeliver"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"Sample","Type":{"Kind":"ApiRef","Name":"IMediaSample","TargetKind":"Com","Api":"Media.DirectShow","Parents":[]},"Attrs":["In"]}
+					,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"KsMediaSamplesCompleted"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"StreamSegment","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"KSSTREAM_SEGMENT","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"KsPeekAllocator"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"IMemAllocator","TargetKind":"Com","Api":"Media.DirectShow","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"Operation","Type":{"Kind":"ApiRef","Name":"KSPEEKOPERATION","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"KsReceiveAllocator"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"MemAllocator","Type":{"Kind":"ApiRef","Name":"IMemAllocator","TargetKind":"Com","Api":"Media.DirectShow","Parents":[]},"Attrs":["In","Optional"]}
+				]
+			}
+			,{
+				"Name":"KsRenegotiateAllocator"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+				]
+			}
+			,{
+				"Name":"KsIncrementPendingIoCount"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"Native","Name":"Int32"}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+				]
+			}
+			,{
+				"Name":"KsDecrementPendingIoCount"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"Native","Name":"Int32"}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+				]
+			}
+			,{
+				"Name":"KsQualityNotify"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"Proportion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"TimeDelta","Type":{"Kind":"Native","Name":"Int64"},"Attrs":["In"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"IKsPinEx"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"7bb38260-d19c-11d2-b38a-00a0c95ec22e"
+		,"Interface":{"Kind":"ApiRef","Name":"IKsPin","TargetKind":"Com","Api":"Media.KernelStreaming","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"KsNotifyError"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"Native","Name":"Void"}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"Sample","Type":{"Kind":"ApiRef","Name":"IMediaSample","TargetKind":"Com","Api":"Media.DirectShow","Parents":[]},"Attrs":["In"]}
+					,{"Name":"hr","Type":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"IKsPinPipe"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"e539cd90-a8b4-11d1-8189-00a0c9062802"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"KsGetPinFramingCache"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"FramingEx","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"KSALLOCATOR_FRAMING_EX","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}}},"Attrs":["Out"]}
+					,{"Name":"FramingProp","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FRAMING_PROP","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"Option","Type":{"Kind":"ApiRef","Name":"FRAMING_CACHE_OPS","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"KsSetPinFramingCache"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"FramingEx","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"KSALLOCATOR_FRAMING_EX","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"FramingProp","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FRAMING_PROP","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"Option","Type":{"Kind":"ApiRef","Name":"FRAMING_CACHE_OPS","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"KsGetConnectedPin"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"IPin","TargetKind":"Com","Api":"Media.DirectShow","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+				]
+			}
+			,{
+				"Name":"KsGetPipe"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"IKsAllocatorEx","TargetKind":"Com","Api":"Media.KernelStreaming","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"Operation","Type":{"Kind":"ApiRef","Name":"KSPEEKOPERATION","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"KsSetPipe"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"KsAllocator","Type":{"Kind":"ApiRef","Name":"IKsAllocatorEx","TargetKind":"Com","Api":"Media.KernelStreaming","Parents":[]},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"KsGetPipeAllocatorFlag"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+				]
+			}
+			,{
+				"Name":"KsSetPipeAllocatorFlag"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"Flag","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"KsGetPinBusCache"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"Native","Name":"Guid"}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+				]
+			}
+			,{
+				"Name":"KsSetPinBusCache"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"Bus","Type":{"Kind":"Native","Name":"Guid"},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"KsGetPinName"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+				]
+			}
+			,{
+				"Name":"KsGetFilterName"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+				]
+			}
+		]
+	}
+	,{
+		"Name":"IKsPinFactory"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"cd5ebe6b-8b6e-11d1-8ae0-00a0c9223196"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"KsPinFactory"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"PinFactory","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"KSIOOPERATION"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"KsIoOperation_Write","Value":0}
+			,{"Name":"KsIoOperation_Read","Value":1}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"IKsDataTypeHandler"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"5ffbaa02-49a3-11d0-9f36-00aa00a216a1"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"KsCompleteIoOperation"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"Sample","Type":{"Kind":"ApiRef","Name":"IMediaSample","TargetKind":"Com","Api":"Media.DirectShow","Parents":[]},"Attrs":["In"]}
+					,{"Name":"StreamHeader","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out"]}
+					,{"Name":"IoOperation","Type":{"Kind":"ApiRef","Name":"KSIOOPERATION","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":["In"]}
+					,{"Name":"Cancelled","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"KsIsMediaTypeInRanges"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"DataRanges","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"KsPrepareIoOperation"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"Sample","Type":{"Kind":"ApiRef","Name":"IMediaSample","TargetKind":"Com","Api":"Media.DirectShow","Parents":[]},"Attrs":["In"]}
+					,{"Name":"StreamHeader","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out"]}
+					,{"Name":"IoOperation","Type":{"Kind":"ApiRef","Name":"KSIOOPERATION","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"KsQueryExtendedSize"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"ExtendedSize","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"KsSetMediaType"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"AmMediaType","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"AM_MEDIA_TYPE","TargetKind":"Default","Api":"Media.MediaFoundation","Parents":[]}},"Attrs":["In","Const"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"IKsDataTypeCompletion"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"827d1a0e-0f73-11d2-b27a-00a0c9223196"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"KsCompleteMediaType"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"FilterHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+					,{"Name":"PinFactoryId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"AmMediaType","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"AM_MEDIA_TYPE","TargetKind":"Default","Api":"Media.MediaFoundation","Parents":[]}},"Attrs":["In","Out"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"IKsInterfaceHandler"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"d3abc7e0-9a61-11d0-a40d-00a0c9223196"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"KsSetPin"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"KsPin","Type":{"Kind":"ApiRef","Name":"IKsPin","TargetKind":"Com","Api":"Media.KernelStreaming","Parents":[]},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"KsProcessMediaSamples"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"KsDataTypeHandler","Type":{"Kind":"ApiRef","Name":"IKsDataTypeHandler","TargetKind":"Com","Api":"Media.KernelStreaming","Parents":[]},"Attrs":["In"]}
+					,{"Name":"SampleList","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"IMediaSample","TargetKind":"Com","Api":"Media.DirectShow","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"SampleCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["In","Out"]}
+					,{"Name":"IoOperation","Type":{"Kind":"ApiRef","Name":"KSIOOPERATION","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":["In"]}
+					,{"Name":"StreamSegment","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"KSSTREAM_SEGMENT","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"KsCompleteIo"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"StreamSegment","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"KSSTREAM_SEGMENT","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":["In","Out"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"KSSTREAM_SEGMENT"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"KsInterfaceHandler","Type":{"Kind":"ApiRef","Name":"IKsInterfaceHandler","TargetKind":"Com","Api":"Media.KernelStreaming","Parents":[]},"Attrs":[]}
+			,{"Name":"KsDataTypeHandler","Type":{"Kind":"ApiRef","Name":"IKsDataTypeHandler","TargetKind":"Com","Api":"Media.KernelStreaming","Parents":[]},"Attrs":[]}
+			,{"Name":"IoOperation","Type":{"Kind":"ApiRef","Name":"KSIOOPERATION","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]},"Attrs":[]}
+			,{"Name":"CompletionEvent","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"IKsObject"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"423c13a2-2070-11d0-9ef7-00aa00a216a1"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"KsGetObjectHandle"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+				]
+			}
+		]
+	}
+	,{
+		"Name":"IKsQualityForwarder"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"97ebaacb-95bd-11d0-a3ea-00a0c9223196"
+		,"Interface":{"Kind":"ApiRef","Name":"IKsObject","TargetKind":"Com","Api":"Media.KernelStreaming","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"KsFlushClient"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"Native","Name":"Void"}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"Pin","Type":{"Kind":"ApiRef","Name":"IKsPin","TargetKind":"Com","Api":"Media.KernelStreaming","Parents":[]},"Attrs":["In"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"IKsNotifyEvent"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"412bd695-f84b-46c1-ac73-54196dbc8fa7"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"KsNotifyEvent"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"Event","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"lParam1","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":["In"]}
+					,{"Name":"lParam2","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":["In"]}
+				]
+			}
 		]
 	}
 	,{
@@ -17090,71 +18360,6 @@
 		,"Platform":null
 		,"Kind":"ComClassID"
 		,"Guid":"17cca71b-ecd7-11d0-b908-00a0c9223196"
-	}
-	,{
-		"Name":"IKsPropertySet"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Com"
-		,"Guid":"31efac30-515c-11d0-a9aa-00aa0061be93"
-		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
-		,"Methods":[
-			{
-				"Name":"Set"
-				,"CallingConvention":"Default"
-				,"NoReturn":false
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-					{"Name":"PropSet","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
-					,{"Name":"Id","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"InstanceData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":3}]}
-					,{"Name":"InstanceLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"PropertyData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":5}]}
-					,{"Name":"DataLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-				]
-			}
-			,{
-				"Name":"Get"
-				,"CallingConvention":"Default"
-				,"NoReturn":false
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-					{"Name":"PropSet","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
-					,{"Name":"Id","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"InstanceData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":3}]}
-					,{"Name":"InstanceLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"PropertyData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":5}]}
-					,{"Name":"DataLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"BytesReturned","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-				]
-			}
-			,{
-				"Name":"QuerySupported"
-				,"CallingConvention":"Default"
-				,"NoReturn":false
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-					{"Name":"PropSet","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
-					,{"Name":"Id","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"TypeSupport","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-				]
-			}
-		]
 	}
 	,{
 		"Name":"IKsAggregateControl"
@@ -17364,6 +18569,113 @@
 			,{"Name":"NodeCreate","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"KSNODE_CREATE","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":["In"]}
 			,{"Name":"DesiredAccess","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"NodeHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"KsResolveRequiredAttributes"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"ksproxy.ax"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"DataRange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"KSDATAFORMAT","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"Attributes","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"KSMULTIPLE_ITEM","TargetKind":"Default","Api":"Media.KernelStreaming","Parents":[]}},"Attrs":["In","Optional"]}
+		]
+	}
+	,{
+		"Name":"KsOpenDefaultDevice"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"ksproxy.ax"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"Category","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
+			,{"Name":"Access","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"DeviceHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"KsSynchronousDeviceControl"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"ksproxy.ax"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"Handle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"IoControl","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"InBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":3},"Optional"]}
+			,{"Name":"InLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"OutBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":5},"Optional"]}
+			,{"Name":"OutLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"BytesReturned","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out","Optional"]}
+		]
+	}
+	,{
+		"Name":"KsGetMultiplePinFactoryItems"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"ksproxy.ax"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"FilterHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"PinFactoryId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"PropertyId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"Items","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"KsGetMediaTypeCount"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"ksproxy.ax"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"FilterHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"PinFactoryId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"MediaTypeCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"KsGetMediaType"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"ksproxy.ax"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"Position","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
+			,{"Name":"AmMediaType","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"AM_MEDIA_TYPE","TargetKind":"Default","Api":"Media.MediaFoundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"FilterHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"PinFactoryId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
 ]

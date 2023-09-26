@@ -6029,6 +6029,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"DOC_INFO_INTERNAL_LEVEL"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":100
+		,"Attrs":[]
+	}
+	,{
 		"Name":"FILL_WITH_DEFAULTS"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -6593,6 +6600,13 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":9
+		,"Attrs":[]
+	}
+	,{
+		"Name":"JOB_CONTROL_SEND_TOAST"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":10
 		,"Attrs":[]
 	}
 	,{
@@ -9796,6 +9810,740 @@
 		,"IntegerBase":"UInt32"
 	}
 	,{
+		"Name":"PFN_PRINTING_ENUMPORTS"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out","Optional"]}
+			,{"Name":"param3","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param4","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+			,{"Name":"param5","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_OPENPORT"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_OPENPORTEX"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param3","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"param4","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MONITOR2","TargetKind":"Default","Api":"Graphics.Printing","Parents":[]}},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_STARTDOCPORT"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param3","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param4","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_WRITEPORT"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param3","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_READPORT"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out","Optional"]}
+			,{"Name":"param2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param3","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_ENDDOCPORT"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_CLOSEPORT"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_ADDPORT"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_ADDPORTEX"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param3","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_CONFIGUREPORT"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_DELETEPORT"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_GETPRINTERDATAFROMPORT"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param3","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param4","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param5","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param6","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param7","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_SETPORTTIMEOUTS"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"COMMTIMEOUTS","TargetKind":"Default","Api":"Devices.Communication","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_XCVOPENPORT"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+			,{"Name":"param1","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_XCVDATAPORT"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param3","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param4","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out","Optional"]}
+			,{"Name":"param5","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param6","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_XCVCLOSEPORT"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_ENUMPORTS2"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param3","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out","Optional"]}
+			,{"Name":"param4","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param5","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+			,{"Name":"param6","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_OPENPORT2"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_OPENPORTEX2"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param3","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param4","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"param5","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"MONITOR2","TargetKind":"Default","Api":"Graphics.Printing","Parents":[]}},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_STARTDOCPORT2"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param3","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param4","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_WRITEPORT2"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param3","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_READPORT2"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out","Optional"]}
+			,{"Name":"param2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param3","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_ENDDOCPORT2"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_CLOSEPORT2"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_ADDPORT2"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param3","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_ADDPORTEX2"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param3","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param4","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_CONFIGUREPORT2"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param3","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_DELETEPORT2"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param3","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_GETPRINTERDATAFROMPORT2"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param3","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param4","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param5","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param6","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param7","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_SETPORTTIMEOUTS2"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"COMMTIMEOUTS","TargetKind":"Default","Api":"Devices.Communication","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In","Reserved"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_XCVOPENPORT2"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+			,{"Name":"param2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param3","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_XCVDATAPORT2"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
+			,{"Name":"param3","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param4","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out","Optional"]}
+			,{"Name":"param5","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param6","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_XCVCLOSEPORT2"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_SHUTDOWN2"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"Void"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_SENDRECVBIDIDATAFROMPORT2"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+			,{"Name":"param3","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BIDI_REQUEST_CONTAINER","TargetKind":"Default","Api":"Graphics.Printing","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"param4","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BIDI_RESPONSE_CONTAINER","TargetKind":"Default","Api":"Graphics.Printing","Parents":[]}}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_NOTIFYUSEDPORTS2"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_NOTIFYUNUSEDPORTS2"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+		]
+	}
+	,{
+		"Name":"PFN_PRINTING_POWEREVENT2"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"POWERBROADCAST_SETTING","TargetKind":"Default","Api":"System.Power","Parents":[]}},"Attrs":["In","Optional"]}
+		]
+	}
+	,{
 		"Name":"SPLCLIENT_INFO_2_WINXP"
 		,"Architectures":["X64","Arm64"]
 		,"Platform":null
@@ -9807,27 +10555,6 @@
 		]
 		,"NestedTypes":[
 		]
-	}
-	,{
-		"Name":"BidiRequest"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"b9162a23-45f9-47cc-80f5-fe0fe9b9e1a2"
-	}
-	,{
-		"Name":"BidiRequestContainer"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"fc5b8a24-db05-4a01-8388-22edf6c2bbba"
-	}
-	,{
-		"Name":"BidiSpl"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"2a614240-a4c5-4c33-bd87-1bc709331639"
 	}
 	,{
 		"Name":"IBidiRequest"
@@ -10102,6 +10829,27 @@
 				]
 			}
 		]
+	}
+	,{
+		"Name":"BidiRequest"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"b9162a23-45f9-47cc-80f5-fe0fe9b9e1a2"
+	}
+	,{
+		"Name":"BidiRequestContainer"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"fc5b8a24-db05-4a01-8388-22edf6c2bbba"
+	}
+	,{
+		"Name":"BidiSpl"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"2a614240-a4c5-4c33-bd87-1bc709331639"
 	}
 	,{
 		"Name":"ImgErrorInfo"
@@ -10517,7 +11265,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pszName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-					,{"Name":"pVar","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In","Const"]}
+					,{"Name":"pVar","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In","Const"]}
 				]
 			}
 			,{
@@ -10532,7 +11280,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pszName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-					,{"Name":"pVar","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"pVar","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -13270,7 +14018,7 @@
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Count","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"aData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"PRINTER_NOTIFY_INFO_DATA","TargetKind":"Default","Api":"Graphics.Printing","Parents":[]}},"Attrs":[]}
+			,{"Name":"aData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"PRINTER_NOTIFY_INFO_DATA","TargetKind":"Default","Api":"Graphics.Printing","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -13346,7 +14094,7 @@
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Count","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"aData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"BIDI_REQUEST_DATA","TargetKind":"Default","Api":"Graphics.Printing","Parents":[]}},"Attrs":[]}
+			,{"Name":"aData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"BIDI_REQUEST_DATA","TargetKind":"Default","Api":"Graphics.Printing","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -13378,7 +14126,7 @@
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Count","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"aData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"BIDI_RESPONSE_DATA","TargetKind":"Default","Api":"Graphics.Printing","Parents":[]}},"Attrs":[]}
+			,{"Name":"aData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"BIDI_RESPONSE_DATA","TargetKind":"Default","Api":"Graphics.Printing","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -13482,7 +14230,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"PRINTER_OPTION_FLAGS","TargetKind":"Default","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -13496,7 +14244,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"PRINTER_OPTION_FLAGS","TargetKind":"Default","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -13772,7 +14520,7 @@
 		,"PackingSize":1
 		,"Fields":[
 			{"Name":"cbOutput","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"wszData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+			,{"Name":"wszData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -13786,7 +14534,7 @@
 		,"PackingSize":1
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"bData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"bData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -13824,7 +14572,7 @@
 			,{"Name":"dwResourceType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"szUri","Type":{"Kind":"Array","Shape":{"Size":260},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"dwDataSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"bData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"bData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -13838,7 +14586,7 @@
 		,"PackingSize":1
 		,"Fields":[
 			{"Name":"dwDataSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"bData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"bData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -13991,7 +14739,7 @@
 			,{"Name":"cElementsAllocated","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"cElementsNeeded","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"cElementsReturned","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"aDocEventCall","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			,{"Name":"aDocEventCall","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -14468,7 +15216,7 @@
 					{"Name":"pDevmode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEVMODEA","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":1},"Optional","Const"]}
 					,{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pszFeatureRequested","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-					,{"Name":"ppszOption","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"ppszOption","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","Const"]}
 				]
 			}
 			,{
@@ -14505,7 +15253,7 @@
 					{"Name":"pDevmode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEVMODEA","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["In","Const"]}
 					,{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pszFeatureKeyword","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-					,{"Name":"pConstrainedOptionList","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}}}},"Attrs":["In","Out"]}
+					,{"Name":"pConstrainedOptionList","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}}}},"Attrs":["In","Const"]}
 					,{"Name":"pdwNumOptions","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
 				]
 			}
@@ -14539,7 +15287,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pFeatureList","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}}}},"Attrs":["Out"]}
+					{"Name":"pFeatureList","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}}}},"Attrs":["Out","Const"]}
 					,{"Name":"pdwNumFeatures","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -14555,7 +15303,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pszFeatureKeyword","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-					,{"Name":"pOptionList","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}}}},"Attrs":["Out"]}
+					,{"Name":"pOptionList","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}}}},"Attrs":["Out","Const"]}
 					,{"Name":"pdwNumOptions","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -14571,7 +15319,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pszTrueTypeFontName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-					,{"Name":"ppszDevFontName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
+					,{"Name":"ppszDevFontName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Const"]}
 				]
 			}
 			,{
@@ -15569,34 +16317,6 @@
 		]
 	}
 	,{
-		"Name":"PrinterQueue"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"eb54c230-798c-4c9e-b461-29fad04039b1"
-	}
-	,{
-		"Name":"PrinterQueueView"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"eb54c231-798c-4c9e-b461-29fad04039b1"
-	}
-	,{
-		"Name":"PrintSchemaAsyncOperation"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"43b2f83d-10f2-48ab-831b-55fdbdbd34a4"
-	}
-	,{
-		"Name":"PrinterExtensionManager"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"331b60da-9e90-4dd0-9c84-eac4e659b61f"
-	}
-	,{
 		"Name":"IPrintSchemaElement"
 		,"Architectures":[]
 		,"Platform":null
@@ -16212,7 +16932,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pVar","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					{"Name":"pVar","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -16228,7 +16948,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pVar","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
+					{"Name":"pVar","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
 				]
 			}
 		]
@@ -17897,6 +18617,34 @@
 		]
 	}
 	,{
+		"Name":"PrinterQueue"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"eb54c230-798c-4c9e-b461-29fad04039b1"
+	}
+	,{
+		"Name":"PrinterQueueView"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"eb54c231-798c-4c9e-b461-29fad04039b1"
+	}
+	,{
+		"Name":"PrintSchemaAsyncOperation"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"43b2f83d-10f2-48ab-831b-55fdbdbd34a4"
+	}
+	,{
+		"Name":"PrinterExtensionManager"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"331b60da-9e90-4dd0-9c84-eac4e659b61f"
+	}
+	,{
 		"Name":"PrintAsyncNotifyUserFilter"
 		,"Architectures":[]
 		,"Platform":null
@@ -18673,7 +19421,7 @@
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwRunNum","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"WidthRun","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"WIDTHRUN","TargetKind":"Default","Api":"Graphics.Printing","Parents":[]}},"Attrs":[]}
+			,{"Name":"WidthRun","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"WIDTHRUN","TargetKind":"Default","Api":"Graphics.Printing","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -18688,7 +19436,7 @@
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwKernPairNum","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"KernPair","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"FD_KERNINGPAIR","TargetKind":"Default","Api":"Devices.Display","Parents":[]}},"Attrs":[]}
+			,{"Name":"KernPair","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"FD_KERNINGPAIR","TargetKind":"Default","Api":"Devices.Display","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -18785,7 +19533,7 @@
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwGlyphNum","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Trans","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"TRANSDATA","TargetKind":"Default","Api":"Graphics.Printing","Parents":[]}},"Attrs":[]}
+			,{"Name":"Trans","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"TRANSDATA","TargetKind":"Default","Api":"Graphics.Printing","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -18931,7 +19679,7 @@
 		,"Fields":[
 			{"Name":"dwVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"cPortData","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"pPortData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"PORT_DATA_2","TargetKind":"Default","Api":"Graphics.Printing","Parents":[]}},"Attrs":[]}
+			,{"Name":"pPortData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"PORT_DATA_2","TargetKind":"Default","Api":"Graphics.Printing","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -19133,7 +19881,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"cJobDataEntries","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"JobData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"BranchOfficeJobData","TargetKind":"Default","Api":"Graphics.Printing","Parents":[]}},"Attrs":[]}
+			,{"Name":"JobData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"BranchOfficeJobData","TargetKind":"Default","Api":"Graphics.Printing","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -19207,6 +19955,23 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"hSplPrinter","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DOC_INFO_INTERNAL"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"pDocName","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"SByte"}},"Attrs":[]}
+			,{"Name":"pOutputFile","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"SByte"}},"Attrs":[]}
+			,{"Name":"pDatatype","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"SByte"}},"Attrs":[]}
+			,{"Name":"bLowILJob","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"hTokenLowIL","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -19332,6 +20097,7 @@
 			,{"Name":"fpEnumAndLogProvidorObjects","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
 			,{"Name":"fpInternalGetPrinterDriver","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
 			,{"Name":"fpFindCompatibleDriver","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+			,{"Name":"fpInstallPrinterDriverPackageFromConnection","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
 			,{"Name":"fpGetJobNamedPropertyValue","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
 			,{"Name":"fpSetJobNamedProperty","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
 			,{"Name":"fpDeleteJobNamedProperty","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
@@ -19347,6 +20113,7 @@
 			,{"Name":"fpIppSetJobAttributes","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
 			,{"Name":"fpIppGetPrinterAttributes","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
 			,{"Name":"fpIppSetPrinterAttributes","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+			,{"Name":"fpIppCreateJobOnPrinterWithAttributes","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -19419,23 +20186,23 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"pfnEnumPorts","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnOpenPort","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnOpenPortEx","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnStartDocPort","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnWritePort","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnReadPort","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnEndDocPort","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnClosePort","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnAddPort","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnAddPortEx","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnConfigurePort","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnDeletePort","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnGetPrinterDataFromPort","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnSetPortTimeOuts","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnXcvOpenPort","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnXcvDataPort","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnXcvClosePort","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+			{"Name":"pfnEnumPorts","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_ENUMPORTS","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnOpenPort","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_OPENPORT","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnOpenPortEx","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_OPENPORTEX","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnStartDocPort","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_STARTDOCPORT","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnWritePort","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_WRITEPORT","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnReadPort","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_READPORT","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnEndDocPort","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_ENDDOCPORT","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnClosePort","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_CLOSEPORT","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnAddPort","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_ADDPORT","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnAddPortEx","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_ADDPORTEX","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnConfigurePort","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_CONFIGUREPORT","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnDeletePort","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_DELETEPORT","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnGetPrinterDataFromPort","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_GETPRINTERDATAFROMPORT","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnSetPortTimeOuts","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_SETPORTTIMEOUTS","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnXcvOpenPort","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_XCVOPENPORT","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnXcvDataPort","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_XCVDATAPORT","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnXcvClosePort","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_XCVCLOSEPORT","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -19463,28 +20230,28 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"pfnEnumPorts","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnOpenPort","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnOpenPortEx","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnStartDocPort","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnWritePort","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnReadPort","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnEndDocPort","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnClosePort","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnAddPort","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnAddPortEx","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnConfigurePort","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnDeletePort","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnGetPrinterDataFromPort","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnSetPortTimeOuts","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnXcvOpenPort","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnXcvDataPort","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnXcvClosePort","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnShutdown","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnSendRecvBidiDataFromPort","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnNotifyUsedPorts","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnNotifyUnusedPorts","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"pfnPowerEvent","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+			,{"Name":"pfnEnumPorts","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_ENUMPORTS2","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnOpenPort","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_OPENPORT2","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnOpenPortEx","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_OPENPORTEX2","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnStartDocPort","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_STARTDOCPORT2","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnWritePort","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_WRITEPORT2","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnReadPort","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_READPORT2","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnEndDocPort","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_ENDDOCPORT2","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnClosePort","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_CLOSEPORT2","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnAddPort","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_ADDPORT2","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnAddPortEx","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_ADDPORTEX2","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnConfigurePort","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_CONFIGUREPORT2","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnDeletePort","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_DELETEPORT2","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnGetPrinterDataFromPort","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_GETPRINTERDATAFROMPORT2","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnSetPortTimeOuts","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_SETPORTTIMEOUTS2","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnXcvOpenPort","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_XCVOPENPORT2","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnXcvDataPort","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_XCVDATAPORT2","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnXcvClosePort","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_XCVCLOSEPORT2","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnShutdown","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_SHUTDOWN2","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnSendRecvBidiDataFromPort","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_SENDRECVBIDIDATAFROMPORT2","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnNotifyUsedPorts","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_NOTIFYUSEDPORTS2","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnNotifyUnusedPorts","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_NOTIFYUNUSEDPORTS2","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
+			,{"Name":"pfnPowerEvent","Type":{"Kind":"ApiRef","Name":"PFN_PRINTING_POWEREVENT2","TargetKind":"FunctionPointer","Api":"Graphics.Printing","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]

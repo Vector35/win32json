@@ -16,17 +16,17 @@
 		,"Attrs":[]
 	}
 	,{
-		"Name":"HVSOCKET_CONTAINER_PASSTHRU"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2
-		,"Attrs":[]
-	}
-	,{
 		"Name":"HVSOCKET_CONNECTED_SUSPEND"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":4
+		,"Attrs":[]
+	}
+	,{
+		"Name":"HVSOCKET_HIGH_VTL"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":8
 		,"Attrs":[]
 	}
 	,{
@@ -430,7 +430,7 @@
 				,"PackingSize":0
 				,"Fields":[
 					{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"System.Hypervisor","Parents":["_Anonymous_e__Union"]},"Attrs":[]}
-					,{"Name":"AsUINT64","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":[]}
+					,{"Name":"AsUINT64","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":["FlexibleArray"]}
 				]
 				,"NestedTypes":[
 					{
@@ -743,7 +743,7 @@
 			{"Name":"WHvX64CpuidResult2FlagSubleafSpecific","Value":1}
 			,{"Name":"WHvX64CpuidResult2FlagVpSpecific","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WHV_CPUID_OUTPUT"
@@ -907,7 +907,7 @@
 			,{"Name":"WHvMapGpaRangeFlagExecute","Value":4}
 			,{"Name":"WHvMapGpaRangeFlagTrackDirtyPages","Value":8}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WHV_TRANSLATE_GVA_FLAGS"
@@ -926,7 +926,7 @@
 			,{"Name":"WHvTranslateGvaFlagEnforceSmap","Value":256}
 			,{"Name":"WHvTranslateGvaFlagOverrideSmap","Value":512}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WHV_TRANSLATE_GVA_RESULT_CODE"
@@ -2557,7 +2557,7 @@
 			{"Name":"WHvAllocateVpciResourceFlagNone","Value":0}
 			,{"Name":"WHvAllocateVpciResourceFlagAllowDirectP2P","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WHV_SRIOV_RESOURCE_DESCRIPTOR"
@@ -2629,7 +2629,7 @@
 			,{"Name":"WHvCreateVpciDeviceFlagPhysicallyBacked","Value":1}
 			,{"Name":"WHvCreateVpciDeviceFlagUseLogicalInterrupts","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WHV_VPCI_DEVICE_PROPERTY_CODE"
@@ -2689,7 +2689,7 @@
 			{"Name":"WHvVpciMmioRangeFlagReadAccess","Value":1}
 			,{"Name":"WHvVpciMmioRangeFlagWriteAccess","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WHV_VPCI_DEVICE_REGISTER_SPACE"
@@ -2752,7 +2752,7 @@
 			{"Name":"WHvVpciInterruptTargetFlagNone","Value":0}
 			,{"Name":"WHvVpciInterruptTargetFlagMulticast","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WHV_VPCI_INTERRUPT_TARGET"
@@ -2765,7 +2765,7 @@
 			{"Name":"Vector","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"WHV_VPCI_INTERRUPT_TARGET_FLAGS","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":[]}
 			,{"Name":"ProcessorCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Processors","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			,{"Name":"Processors","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -3169,6 +3169,19 @@
 		,"IntegerBase":"Int32"
 	}
 	,{
+		"Name":"HDV_DEVICE_HOST_FLAGS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":true
+		,"Scoped":false
+		,"Values":[
+			{"Name":"HdvDeviceHostFlagNone","Value":0}
+			,{"Name":"HdvDeviceHostFlagInitializeComSecurity","Value":1}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
 		"Name":"HDV_PCI_PNP_ID"
 		,"Architectures":[]
 		,"Platform":null
@@ -3234,7 +3247,7 @@
 			,{"Name":"HdvMmioMappingFlagWriteable","Value":1}
 			,{"Name":"HdvMmioMappingFlagExecutable","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"HDV_PCI_DEVICE_INITIALIZE"
@@ -5290,6 +5303,23 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"computeSystem","Type":{"Kind":"ApiRef","Name":"HCS_SYSTEM","TargetKind":"Default","Api":"System.HostComputeSystem","Parents":[]},"Attrs":["In"]}
+			,{"Name":"deviceHostHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"HdvInitializeDeviceHostEx"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"vmdevicehost.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"computeSystem","Type":{"Kind":"ApiRef","Name":"HCS_SYSTEM","TargetKind":"Default","Api":"System.HostComputeSystem","Parents":[]},"Attrs":["In"]}
+			,{"Name":"flags","Type":{"Kind":"ApiRef","Name":"HDV_DEVICE_HOST_FLAGS","TargetKind":"Default","Api":"System.Hypervisor","Parents":[]},"Attrs":["In"]}
 			,{"Name":"deviceHostHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out"]}
 		]
 	}

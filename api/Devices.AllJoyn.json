@@ -733,18 +733,6 @@
 		,"IntegerBase":"Int32"
 	}
 	,{
-		"Name":"_alljoyn_abouticon_handle"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
 		"Name":"alljoyn_applicationstate"
 		,"Architectures":[]
 		,"Platform":null
@@ -1881,30 +1869,6 @@
 		]
 	}
 	,{
-		"Name":"_alljoyn_abouticonobj_handle"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"_alljoyn_abouticonproxy_handle"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
 		"Name":"alljoyn_aboutdatalistener_getaboutdata_ptr"
 		,"Architectures":[]
 		,"Platform":null
@@ -2062,6 +2026,33 @@
 	}
 	,{
 		"Name":"alljoyn_aboutdatalistener"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
+		"Name":"alljoyn_abouticon"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
+		"Name":"alljoyn_abouticonobj"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
+		"Name":"alljoyn_abouticonproxy"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"NativeTypedef"
@@ -4507,7 +4498,7 @@
 		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"MSAJApi.dll"
-		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_alljoyn_abouticon_handle","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}}
+		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_abouticon","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":null
@@ -4527,7 +4518,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"icon","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_alljoyn_abouticon_handle","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"icon","Type":{"Kind":"ApiRef","Name":"alljoyn_abouticon","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -4542,7 +4533,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"icon","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_alljoyn_abouticon_handle","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"icon","Type":{"Kind":"ApiRef","Name":"alljoyn_abouticon","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]},"Attrs":["In"]}
 			,{"Name":"data","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["In","Const"]}
 			,{"Name":"size","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UIntPtr"}},"Attrs":["In","Out"]}
 		]
@@ -4559,7 +4550,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"icon","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_alljoyn_abouticon_handle","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"icon","Type":{"Kind":"ApiRef","Name":"alljoyn_abouticon","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]},"Attrs":["In"]}
 			,{"Name":"type","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"data","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Out"]}
 			,{"Name":"csize","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":["In"]}
@@ -4578,7 +4569,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"icon","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_alljoyn_abouticon_handle","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"icon","Type":{"Kind":"ApiRef","Name":"alljoyn_abouticon","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]},"Attrs":["In"]}
 			,{"Name":"type","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"SByte"}}},"Attrs":["In","Const"]}
 			,{"Name":"url","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"SByte"}}},"Attrs":["In","Const"]}
 		]
@@ -4595,7 +4586,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"icon","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_alljoyn_abouticon_handle","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"icon","Type":{"Kind":"ApiRef","Name":"alljoyn_abouticon","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]},"Attrs":["In"]}
 			,{"Name":"type","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"url","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 		]
@@ -4612,7 +4603,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"icon","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_alljoyn_abouticon_handle","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"icon","Type":{"Kind":"ApiRef","Name":"alljoyn_abouticon","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -4627,7 +4618,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"icon","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_alljoyn_abouticon_handle","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"icon","Type":{"Kind":"ApiRef","Name":"alljoyn_abouticon","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]},"Attrs":["In"]}
 			,{"Name":"arg","Type":{"Kind":"ApiRef","Name":"alljoyn_msgarg","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]},"Attrs":["In","Const"]}
 		]
 	}
@@ -9835,14 +9826,14 @@
 		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"MSAJApi.dll"
-		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_alljoyn_abouticonobj_handle","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}}
+		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_abouticonobj","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"bus","Type":{"Kind":"ApiRef","Name":"alljoyn_busattachment","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]},"Attrs":["In"]}
-			,{"Name":"icon","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_alljoyn_abouticon_handle","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"icon","Type":{"Kind":"ApiRef","Name":"alljoyn_abouticon","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -9857,7 +9848,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"icon","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_alljoyn_abouticonobj_handle","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"icon","Type":{"Kind":"ApiRef","Name":"alljoyn_abouticonobj","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -9866,7 +9857,7 @@
 		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"MSAJApi.dll"
-		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_alljoyn_abouticonproxy_handle","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}}
+		,"ReturnType":{"Kind":"ApiRef","Name":"alljoyn_abouticonproxy","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":null
@@ -9889,7 +9880,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"proxy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_alljoyn_abouticonproxy_handle","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"proxy","Type":{"Kind":"ApiRef","Name":"alljoyn_abouticonproxy","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -9904,8 +9895,8 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"proxy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_alljoyn_abouticonproxy_handle","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}},"Attrs":["In","Out"]}
-			,{"Name":"icon","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_alljoyn_abouticon_handle","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"proxy","Type":{"Kind":"ApiRef","Name":"alljoyn_abouticonproxy","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]},"Attrs":["In"]}
+			,{"Name":"icon","Type":{"Kind":"ApiRef","Name":"alljoyn_abouticon","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -9920,7 +9911,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"proxy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_alljoyn_abouticonproxy_handle","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"proxy","Type":{"Kind":"ApiRef","Name":"alljoyn_abouticonproxy","TargetKind":"Default","Api":"Devices.AllJoyn","Parents":[]},"Attrs":["In"]}
 			,{"Name":"version","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":["In","Out"]}
 		]
 	}

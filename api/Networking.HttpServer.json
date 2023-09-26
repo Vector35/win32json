@@ -331,6 +331,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"HTTP_LOG_FIELD_FAULT_CODE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2147483648
+		,"Attrs":[]
+	}
+	,{
 		"Name":"HTTP_LOGGING_FLAG_LOCAL_TIME_ROLLOVER"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -643,6 +650,13 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":8192
+		,"Attrs":[]
+	}
+	,{
+		"Name":"HTTP_SERVICE_CONFIG_SSL_FLAG_DISABLE_SESSION_ID"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":16384
 		,"Attrs":[]
 	}
 	,{
@@ -1216,8 +1230,8 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"StartingOffset","Type":{"Kind":"ApiRef","Name":"ULARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"Length","Type":{"Kind":"ApiRef","Name":"ULARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			{"Name":"StartingOffset","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -2560,7 +2574,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"AddrCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"AddrList","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"SOCKADDR_STORAGE","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":[]}
+			,{"Name":"AddrList","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"SOCKADDR_STORAGE","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -2813,6 +2827,26 @@
 		]
 	}
 	,{
+		"Name":"HTTP_QUIC_STREAM_REQUEST_STATS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"StreamWaitStart","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"StreamWaitEnd","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"RequestHeadersCompressionStart","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"RequestHeadersCompressionEnd","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"ResponseHeadersDecompressionStart","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"ResponseHeadersDecompressionEnd","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"RequestHeadersCompressedSize","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"ResponseHeadersCompressedSize","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
 		"Name":"HTTP_FEATURE_ID"
 		,"Architectures":[]
 		,"Platform":null
@@ -2825,6 +2859,7 @@
 			,{"Name":"HttpFeatureApiTimings","Value":2}
 			,{"Name":"HttpFeatureDelegateEx","Value":3}
 			,{"Name":"HttpFeatureHttp3","Value":4}
+			,{"Name":"HttpFeatureLast","Value":5}
 			,{"Name":"HttpFeaturemax","Value":-1}
 		]
 		,"IntegerBase":"Int32"

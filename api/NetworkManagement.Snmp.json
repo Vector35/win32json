@@ -786,7 +786,7 @@
 			,{"Name":"SNMP_LOG_TRACE","Value":4}
 			,{"Name":"SNMP_LOG_VERBOSE","Value":5}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"SNMP_ERROR"
@@ -820,7 +820,7 @@
 	}
 	,{
 		"Name":"AsnOctetString"
-		,"Architectures":[]
+		,"Architectures":["X64","Arm64"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
@@ -835,11 +835,54 @@
 	}
 	,{
 		"Name":"AsnObjectIdentifier"
-		,"Architectures":[]
+		,"Architectures":["X64","Arm64"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":4
+		,"Fields":[
+			{"Name":"idLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ids","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"SnmpVarBindList"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":4
+		,"Fields":[
+			{"Name":"list","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SnmpVarBind","TargetKind":"Default","Api":"NetworkManagement.Snmp","Parents":[]}},"Attrs":[]}
+			,{"Name":"len","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"AsnOctetString"
+		,"Architectures":["X86"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"stream","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"dynamic","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"AsnObjectIdentifier"
+		,"Architectures":["X86"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
 		,"Fields":[
 			{"Name":"idLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ids","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
@@ -869,7 +912,7 @@
 				,"Fields":[
 					{"Name":"number","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 					,{"Name":"unsigned32","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-					,{"Name":"counter64","Type":{"Kind":"ApiRef","Name":"ULARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+					,{"Name":"counter64","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 					,{"Name":"string","Type":{"Kind":"ApiRef","Name":"AsnOctetString","TargetKind":"Default","Api":"NetworkManagement.Snmp","Parents":[]},"Attrs":[]}
 					,{"Name":"bits","Type":{"Kind":"ApiRef","Name":"AsnOctetString","TargetKind":"Default","Api":"NetworkManagement.Snmp","Parents":[]},"Attrs":[]}
 					,{"Name":"object","Type":{"Kind":"ApiRef","Name":"AsnObjectIdentifier","TargetKind":"Default","Api":"NetworkManagement.Snmp","Parents":[]},"Attrs":[]}
@@ -901,11 +944,11 @@
 	}
 	,{
 		"Name":"SnmpVarBindList"
-		,"Architectures":[]
+		,"Architectures":["X86"]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
-		,"PackingSize":4
+		,"PackingSize":0
 		,"Fields":[
 			{"Name":"list","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SnmpVarBind","TargetKind":"Default","Api":"NetworkManagement.Snmp","Parents":[]}},"Attrs":[]}
 			,{"Name":"len","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1573,7 +1616,7 @@
 		,"Platform":"windows5.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"nLogType","Type":{"Kind":"ApiRef","Name":"SNMP_OUTPUT_LOG_TYPE","TargetKind":"Default","Api":"NetworkManagement.Snmp","Parents":[]},"Attrs":["In"]}
+			{"Name":"nLogType","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 		]
 	}
 	,{

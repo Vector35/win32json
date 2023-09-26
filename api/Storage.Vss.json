@@ -1274,18 +1274,6 @@
 		,"IntegerBase":"Int32"
 	}
 	,{
-		"Name":"IVssExamineWriterMetadata"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
 		"Name":"IVssWMFiledesc"
 		,"Architectures":[]
 		,"Platform":null
@@ -2419,325 +2407,6 @@
 		]
 	}
 	,{
-		"Name":"IVssWriterImpl"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Com"
-		,"Guid":null
-		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
-		,"Methods":[
-			{
-				"Name":"Initialize"
-				,"CallingConvention":"ThisCall"
-				,"NoReturn":false
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-					{"Name":"writerId","Type":{"Kind":"Native","Name":"Guid"},"Attrs":["In"]}
-					,{"Name":"wszWriterName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-					,{"Name":"wszWriterInstanceName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
-					,{"Name":"dwMajorVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"dwMinorVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"ut","Type":{"Kind":"ApiRef","Name":"VSS_USAGE_TYPE","TargetKind":"Default","Api":"Storage.Vss","Parents":[]},"Attrs":["In"]}
-					,{"Name":"st","Type":{"Kind":"ApiRef","Name":"VSS_SOURCE_TYPE","TargetKind":"Default","Api":"Storage.Vss","Parents":[]},"Attrs":["In"]}
-					,{"Name":"nLevel","Type":{"Kind":"ApiRef","Name":"VSS_APPLICATION_LEVEL","TargetKind":"Default","Api":"Storage.Vss","Parents":[]},"Attrs":["In"]}
-					,{"Name":"dwTimeout","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"aws","Type":{"Kind":"ApiRef","Name":"VSS_ALTERNATE_WRITER_STATE","TargetKind":"Default","Api":"Storage.Vss","Parents":[]},"Attrs":["In"]}
-					,{"Name":"bIOThrottlingOnly","Type":{"Kind":"Native","Name":"Byte"},"Attrs":["In"]}
-				]
-			}
-			,{
-				"Name":"Subscribe"
-				,"CallingConvention":"ThisCall"
-				,"NoReturn":false
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-					{"Name":"dwSubscribeTimeout","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"dwEventFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-				]
-			}
-			,{
-				"Name":"Unsubscribe"
-				,"CallingConvention":"ThisCall"
-				,"NoReturn":false
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-				]
-			}
-			,{
-				"Name":"Uninitialize"
-				,"CallingConvention":"ThisCall"
-				,"NoReturn":false
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"Native","Name":"Void"}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-				]
-			}
-			,{
-				"Name":"GetCurrentVolumeArray"
-				,"CallingConvention":"ThisCall"
-				,"NoReturn":false
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-				]
-			}
-			,{
-				"Name":"GetCurrentVolumeCount"
-				,"CallingConvention":"ThisCall"
-				,"NoReturn":false
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"Native","Name":"UInt32"}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-				]
-			}
-			,{
-				"Name":"GetSnapshotDeviceName"
-				,"CallingConvention":"ThisCall"
-				,"NoReturn":false
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-					{"Name":"wszOriginalVolume","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-					,{"Name":"ppwszSnapshotDevice","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
-				]
-			}
-			,{
-				"Name":"GetCurrentSnapshotSetId"
-				,"CallingConvention":"ThisCall"
-				,"NoReturn":false
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"Native","Name":"Guid"}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-				]
-			}
-			,{
-				"Name":"GetContext"
-				,"CallingConvention":"ThisCall"
-				,"NoReturn":false
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"Native","Name":"Int32"}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-				]
-			}
-			,{
-				"Name":"GetCurrentLevel"
-				,"CallingConvention":"ThisCall"
-				,"NoReturn":false
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"VSS_APPLICATION_LEVEL","TargetKind":"Default","Api":"Storage.Vss","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-				]
-			}
-			,{
-				"Name":"IsPathAffected"
-				,"CallingConvention":"ThisCall"
-				,"NoReturn":false
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"Native","Name":"Boolean"}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-					{"Name":"wszPath","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-				]
-			}
-			,{
-				"Name":"IsBootableSystemStateBackedUp"
-				,"CallingConvention":"ThisCall"
-				,"NoReturn":false
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"Native","Name":"Boolean"}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-				]
-			}
-			,{
-				"Name":"AreComponentsSelected"
-				,"CallingConvention":"ThisCall"
-				,"NoReturn":false
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"Native","Name":"Boolean"}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-				]
-			}
-			,{
-				"Name":"GetBackupType"
-				,"CallingConvention":"ThisCall"
-				,"NoReturn":false
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"VSS_BACKUP_TYPE","TargetKind":"Default","Api":"Storage.Vss","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-				]
-			}
-			,{
-				"Name":"GetRestoreType"
-				,"CallingConvention":"ThisCall"
-				,"NoReturn":false
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"VSS_RESTORE_TYPE","TargetKind":"Default","Api":"Storage.Vss","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-				]
-			}
-			,{
-				"Name":"SetWriterFailure"
-				,"CallingConvention":"ThisCall"
-				,"NoReturn":false
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-					{"Name":"hr","Type":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-				]
-			}
-			,{
-				"Name":"IsPartialFileSupportEnabled"
-				,"CallingConvention":"ThisCall"
-				,"NoReturn":false
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"Native","Name":"Boolean"}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-				]
-			}
-			,{
-				"Name":"InstallAlternateWriter"
-				,"CallingConvention":"ThisCall"
-				,"NoReturn":false
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-					{"Name":"idWriter","Type":{"Kind":"Native","Name":"Guid"},"Attrs":["In"]}
-					,{"Name":"clsid","Type":{"Kind":"Native","Name":"Guid"},"Attrs":["In"]}
-				]
-			}
-			,{
-				"Name":"GetIdentityInformation"
-				,"CallingConvention":"ThisCall"
-				,"NoReturn":false
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IVssExamineWriterMetadata","TargetKind":"Default","Api":"Storage.Vss","Parents":[]}}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-				]
-			}
-			,{
-				"Name":"SetWriterFailureEx"
-				,"CallingConvention":"ThisCall"
-				,"NoReturn":false
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-					{"Name":"hr","Type":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"hrApplication","Type":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"wszApplicationMessage","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-				]
-			}
-			,{
-				"Name":"GetSessionId"
-				,"CallingConvention":"ThisCall"
-				,"NoReturn":false
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-					{"Name":"idSession","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["Out"]}
-				]
-			}
-			,{
-				"Name":"IsWriterShuttingDown"
-				,"CallingConvention":"ThisCall"
-				,"NoReturn":false
-				,"SetLastError":false
-				,"ReturnType":{"Kind":"Native","Name":"Boolean"}
-				,"ReturnAttrs":[]
-				,"Architectures":[]
-				,"Platform":null
-				,"Attrs":[]
-				,"Params":[
-				]
-			}
-		]
-	}
-	,{
 		"Name":"IVssCreateExpressWriterMetadata"
 		,"Architectures":[]
 		,"Platform":null
@@ -2942,13 +2611,6 @@
 				]
 			}
 		]
-	}
-	,{
-		"Name":"VssSnapshotMgmt"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"0b5a2c52-3eb9-470a-96e2-6c6d4570e40f"
 	}
 	,{
 		"Name":"VSS_MGMT_OBJECT_TYPE"
@@ -3512,11 +3174,11 @@
 		]
 	}
 	,{
-		"Name":"VSSCoordinator"
+		"Name":"VssSnapshotMgmt"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"ComClassID"
-		,"Guid":"e579ab5f-1cc4-44b4-bed9-de0991ff0623"
+		,"Guid":"0b5a2c52-3eb9-470a-96e2-6c6d4570e40f"
 	}
 	,{
 		"Name":"IVssAdmin"
@@ -3642,6 +3304,13 @@
 				]
 			}
 		]
+	}
+	,{
+		"Name":"VSSCoordinator"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"e579ab5f-1cc4-44b4-bed9-de0991ff0623"
 	}
 	,{
 		"Name":"IVssSoftwareSnapshotProvider"
@@ -3776,7 +3445,7 @@
 				,"Params":[
 					{"Name":"SnapshotId","Type":{"Kind":"Native","Name":"Guid"},"Attrs":["In"]}
 					,{"Name":"eSnapshotPropertyId","Type":{"Kind":"ApiRef","Name":"VSS_SNAPSHOT_PROPERTY_ID","TargetKind":"Default","Api":"Storage.Vss","Parents":[]},"Attrs":["In"]}
-					,{"Name":"vProperty","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"vProperty","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -3960,7 +3629,7 @@
 	,{
 		"Name":"IVssHardwareSnapshotProvider"
 		,"Architectures":[]
-		,"Platform":"windowsServer2003"
+		,"Platform":"windowsserver2003"
 		,"Kind":"Com"
 		,"Guid":"9593a157-44e9-4344-bbeb-44fbf9b06b10"
 		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
@@ -4070,7 +3739,7 @@
 	,{
 		"Name":"IVssHardwareSnapshotProviderEx"
 		,"Architectures":[]
-		,"Platform":"windowsServer2008"
+		,"Platform":"windowsserver2008"
 		,"Kind":"Com"
 		,"Guid":"7f5ba925-cdb1-4d11-a71f-339eb7e709fd"
 		,"Interface":{"Kind":"ApiRef","Name":"IVssHardwareSnapshotProvider","TargetKind":"Com","Api":"Storage.Vss","Parents":[]}
@@ -4275,7 +3944,7 @@
 				,"Params":[
 					{"Name":"SnapshotId","Type":{"Kind":"Native","Name":"Guid"},"Attrs":["In"]}
 					,{"Name":"eSnapshotPropertyId","Type":{"Kind":"ApiRef","Name":"VSS_SNAPSHOT_PROPERTY_ID","TargetKind":"Default","Api":"Storage.Vss","Parents":[]},"Attrs":["In"]}
-					,{"Name":"vProperty","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"vProperty","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 				]
 			}
 		]

@@ -3306,6 +3306,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"MD_APPPOOL_EMULATION_ON_WINARM64"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":9043
+		,"Attrs":[]
+	}
+	,{
 		"Name":"MD_APP_POOL_PROCESSMODEL_IDLE_TIMEOUT"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -6508,11 +6515,89 @@
 
 ,"Types":[
 	{
-		"Name":"FtpProvider"
+		"Name":"PFN_IIS_GETSERVERVARIABLE"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"70bdc667-33b2-45f0-ac52-c3ca46f7a656"
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HCONN","TargetKind":"Default","Api":"System.Iis","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out"]}
+			,{"Name":"param3","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
+		]
+	}
+	,{
+		"Name":"PFN_IIS_WRITECLIENT"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HCONN","TargetKind":"Default","Api":"System.Iis","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out"]}
+			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
+			,{"Name":"param3","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"PFN_IIS_READCLIENT"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HCONN","TargetKind":"Default","Api":"System.Iis","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out"]}
+			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
+		]
+	}
+	,{
+		"Name":"PFN_IIS_SERVERSUPPORTFUNCTION"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"ApiRef","Name":"HCONN","TargetKind":"Default","Api":"System.Iis","Parents":[]},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out"]}
+			,{"Name":"param3","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
+			,{"Name":"param4","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
+		]
+	}
+	,{
+		"Name":"HCONN"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
+		,"FreeFunc":null
 	}
 	,{
 		"Name":"CONFIGURATION_ENTRY"
@@ -7131,6 +7216,13 @@
 				]
 			}
 		]
+	}
+	,{
+		"Name":"FtpProvider"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"70bdc667-33b2-45f0-ac52-c3ca46f7a656"
 	}
 	,{
 		"Name":"IADMEXT"
@@ -7816,18 +7908,6 @@
 		]
 	}
 	,{
-		"Name":"_IIS_CRYPTO_BLOB"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
 		"Name":"IMSAdminBase2W"
 		,"Architectures":[]
 		,"Platform":null
@@ -8123,7 +8203,7 @@
 		,"Fields":[
 			{"Name":"cbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"ConnID","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+			,{"Name":"ConnID","Type":{"Kind":"ApiRef","Name":"HCONN","TargetKind":"Default","Api":"System.Iis","Parents":[]},"Attrs":[]}
 			,{"Name":"dwHttpStatusCode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"lpszLogData","Type":{"Kind":"Array","Shape":{"Size":80},"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 			,{"Name":"lpszMethod","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -8134,10 +8214,10 @@
 			,{"Name":"cbAvailable","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"lpbData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"lpszContentType","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"GetServerVariable","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"WriteClient","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"ReadClient","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"ServerSupportFunction","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+			,{"Name":"GetServerVariable","Type":{"Kind":"ApiRef","Name":"PFN_IIS_GETSERVERVARIABLE","TargetKind":"FunctionPointer","Api":"System.Iis","Parents":[]},"Attrs":[]}
+			,{"Name":"WriteClient","Type":{"Kind":"ApiRef","Name":"PFN_IIS_WRITECLIENT","TargetKind":"FunctionPointer","Api":"System.Iis","Parents":[]},"Attrs":[]}
+			,{"Name":"ReadClient","Type":{"Kind":"ApiRef","Name":"PFN_IIS_READCLIENT","TargetKind":"FunctionPointer","Api":"System.Iis","Parents":[]},"Attrs":[]}
+			,{"Name":"ServerSupportFunction","Type":{"Kind":"ApiRef","Name":"PFN_IIS_SERVERSUPPORTFUNCTION","TargetKind":"FunctionPointer","Api":"System.Iis","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]

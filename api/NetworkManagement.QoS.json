@@ -2424,6 +2424,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"SIPAEV_EFI_VARIABLE_BOOT2"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2147483660
+		,"Attrs":[]
+	}
+	,{
 		"Name":"SIPAEV_EFI_HCRTM_EVENT"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -3187,6 +3194,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"SIPAEVENT_MODULE_HSP"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":458764
+		,"Attrs":[]
+	}
+	,{
 		"Name":"SIPAEVENT_ELAM_KEYNAME"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -3474,6 +3488,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"OSDEVICE_TYPE_CIMFS"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":393216
+		,"Attrs":[]
+	}
+	,{
 		"Name":"SIPAHDRSIGNATURE"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -3604,6 +3625,20 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":128
+		,"Attrs":[]
+	}
+	,{
+		"Name":"MAX_HSP_UPGRADE_FILENAME_LENGTH"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":64
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WBCL_MAX_HSP_UPGRADE_HASH_LEN"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":64
 		,"Attrs":[]
 	}
 	,{
@@ -3903,7 +3938,7 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"scopl_ipaddr","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"IN_ADDR","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":[]}
+			{"Name":"scopl_ipaddr","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"IN_ADDR","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -4757,7 +4792,7 @@
 		,"Fields":[
 			{"Name":"ObjectHdr","Type":{"Kind":"ApiRef","Name":"QOS_OBJECT_HDR","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]},"Attrs":[]}
 			,{"Name":"DSFieldCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"DiffservRule","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"DiffservRule","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -4953,7 +4988,7 @@
 			{"Name":"SendingFlowspec","Type":{"Kind":"ApiRef","Name":"FLOWSPEC","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":[]}
 			,{"Name":"ReceivingFlowspec","Type":{"Kind":"ApiRef","Name":"FLOWSPEC","TargetKind":"Default","Api":"Networking.WinSock","Parents":[]},"Attrs":[]}
 			,{"Name":"TcObjectsLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"TcObjects","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"QOS_OBJECT_HDR","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]}},"Attrs":[]}
+			,{"Name":"TcObjects","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"QOS_OBJECT_HDR","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -5064,7 +5099,7 @@
 			,{"Name":"FlowName","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"pFlow","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TC_GEN_FLOW","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]}},"Attrs":[]}
 			,{"Name":"NumberOfFilters","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"GenericFilter","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"TC_GEN_FILTER","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]}},"Attrs":[]}
+			,{"Name":"GenericFilter","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"TC_GEN_FILTER","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -5257,7 +5292,7 @@
 		,"Fields":[
 			{"Name":"ObjectHdr","Type":{"Kind":"ApiRef","Name":"QOS_OBJECT_HDR","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]},"Attrs":[]}
 			,{"Name":"NumPolicyElement","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"PolicyElement","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"RSVP_POLICY","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]}},"Attrs":[]}
+			,{"Name":"PolicyElement","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"RSVP_POLICY","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -5354,7 +5389,7 @@
 		,"Fields":[
 			{"Name":"ParameterId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Buffer","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"Buffer","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -5382,7 +5417,7 @@
 				,"PackingSize":0
 				,"Fields":[
 					{"Name":"Guaranteed","Type":{"Kind":"ApiRef","Name":"AD_GUARANTEED","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]},"Attrs":[]}
-					,{"Name":"ParamBuffer","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"PARAM_BUFFER","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]}},"Attrs":[]}
+					,{"Name":"ParamBuffer","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"PARAM_BUFFER","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]}},"Attrs":["FlexibleArray"]}
 				]
 				,"NestedTypes":[
 				]
@@ -5400,7 +5435,7 @@
 			{"Name":"ObjectHdr","Type":{"Kind":"ApiRef","Name":"QOS_OBJECT_HDR","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]},"Attrs":[]}
 			,{"Name":"GeneralParams","Type":{"Kind":"ApiRef","Name":"AD_GENERAL_PARAMS","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]},"Attrs":[]}
 			,{"Name":"NumberOfServices","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Services","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"CONTROL_SERVICE","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]}},"Attrs":[]}
+			,{"Name":"Services","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"CONTROL_SERVICE","TargetKind":"Default","Api":"NetworkManagement.QoS","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -5444,6 +5479,22 @@
 		]
 	}
 	,{
+		"Name":"HSP_UPGRADE_IMAGEDATA"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":1
+		,"Fields":[
+			{"Name":"hashAlgID","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"digestSize","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"digest","Type":{"Kind":"Array","Shape":{"Size":64},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"fileName","Type":{"Kind":"Array","Shape":{"Size":64},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
 		"Name":"TCG_PCClientPCREventStruct"
 		,"Architectures":[]
 		,"Platform":null
@@ -5455,7 +5506,7 @@
 			,{"Name":"eventType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"digest","Type":{"Kind":"Array","Shape":{"Size":20},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"eventDataSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"event","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"event","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -5470,7 +5521,7 @@
 		,"Fields":[
 			{"Name":"EventID","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"EventDataSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"EventData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"EventData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -5502,7 +5553,7 @@
 			{"Name":"KeyBitLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"PublicExpLengthBytes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ModulusSizeBytes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"PublicKeyData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"PublicKeyData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -5546,7 +5597,7 @@
 			,{"Name":"PolicyNameLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"HashAlgID","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"DigestLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"VarLengthData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"VarLengthData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -5562,7 +5613,7 @@
 			{"Name":"CreationTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"DigestLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"HashAlgID","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"Digest","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"Digest","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -5577,7 +5628,7 @@
 		,"Fields":[
 			{"Name":"SignAlgID","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"SignatureLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Signature","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"Signature","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -5596,7 +5647,7 @@
 			,{"Name":"DigestLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"Options","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"SignersCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"VarData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"VarData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]

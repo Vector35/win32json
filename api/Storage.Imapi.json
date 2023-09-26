@@ -2028,109 +2028,13 @@
 		,"IntegerBase":"UInt32"
 	}
 	,{
-		"Name":"MsftDiscMaster2"
+		"Name":"LPMSGSESS"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"2735412e-7f64-5b0f-8f00-5d77afbe261e"
-	}
-	,{
-		"Name":"MsftDiscRecorder2"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"2735412d-7f64-5b0f-8f00-5d77afbe261e"
-	}
-	,{
-		"Name":"MsftWriteEngine2"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"2735412c-7f64-5b0f-8f00-5d77afbe261e"
-	}
-	,{
-		"Name":"MsftDiscFormat2Erase"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"2735412b-7f64-5b0f-8f00-5d77afbe261e"
-	}
-	,{
-		"Name":"MsftDiscFormat2Data"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"2735412a-7f64-5b0f-8f00-5d77afbe261e"
-	}
-	,{
-		"Name":"MsftDiscFormat2TrackAtOnce"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"27354129-7f64-5b0f-8f00-5d77afbe261e"
-	}
-	,{
-		"Name":"MsftDiscFormat2RawCD"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"27354128-7f64-5b0f-8f00-5d77afbe261e"
-	}
-	,{
-		"Name":"MsftStreamZero"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"27354127-7f64-5b0f-8f00-5d77afbe261e"
-	}
-	,{
-		"Name":"MsftStreamPrng001"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"27354126-7f64-5b0f-8f00-5d77afbe261e"
-	}
-	,{
-		"Name":"MsftStreamConcatenate"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"27354125-7f64-5b0f-8f00-5d77afbe261e"
-	}
-	,{
-		"Name":"MsftStreamInterleave"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"27354124-7f64-5b0f-8f00-5d77afbe261e"
-	}
-	,{
-		"Name":"MsftWriteSpeedDescriptor"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"27354123-7f64-5b0f-8f00-5d77afbe261e"
-	}
-	,{
-		"Name":"MsftMultisessionSequential"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"27354122-7f64-5b0f-8f00-5d77afbe261e"
-	}
-	,{
-		"Name":"MsftMultisessionRandomWrite"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"b507ca24-2204-11dd-966a-001aa01bbc58"
-	}
-	,{
-		"Name":"MsftRawCDImageCreator"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"25983561-9d65-49ce-b335-40630d901227"
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
 	}
 	,{
 		"Name":"IMAPI_MEDIA_PHYSICAL_TYPE"
@@ -2643,7 +2547,7 @@
 					,{"Name":"CdbSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"SenseBuffer","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":18,"CountParamIndex":-1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out"]}
 					,{"Name":"Timeout","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"Buffer","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":6,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out"]}
+					,{"Name":"Buffer","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":5,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out"]}
 					,{"Name":"BufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"BufferFetched","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
@@ -2663,7 +2567,7 @@
 					,{"Name":"address","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"layer","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"agid","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"data","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":5,"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out"]}
+					,{"Name":"data","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out"]}
 					,{"Name":"count","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -2694,7 +2598,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"data","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out"]}
+					{"Name":"data","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out"]}
 					,{"Name":"byteSize","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -2709,7 +2613,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"data","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out"]}
+					{"Name":"data","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out"]}
 					,{"Name":"byteSize","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -2724,7 +2628,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"discInformation","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out"]}
+					{"Name":"discInformation","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out"]}
 					,{"Name":"byteSize","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -2741,7 +2645,7 @@
 				,"Params":[
 					{"Name":"address","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"addressType","Type":{"Kind":"ApiRef","Name":"IMAPI_READ_TRACK_ADDRESS_TYPE","TargetKind":"Default","Api":"Storage.Imapi","Parents":[]},"Attrs":["In"]}
-					,{"Name":"trackInformation","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out"]}
+					,{"Name":"trackInformation","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out"]}
 					,{"Name":"byteSize","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -2758,7 +2662,7 @@
 				,"Params":[
 					{"Name":"requestedFeature","Type":{"Kind":"ApiRef","Name":"IMAPI_FEATURE_PAGE_TYPE","TargetKind":"Default","Api":"Storage.Imapi","Parents":[]},"Attrs":["In"]}
 					,{"Name":"currentFeatureOnly","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"featureData","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out"]}
+					,{"Name":"featureData","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out"]}
 					,{"Name":"byteSize","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -2775,7 +2679,7 @@
 				,"Params":[
 					{"Name":"requestedModePage","Type":{"Kind":"ApiRef","Name":"IMAPI_MODE_PAGE_TYPE","TargetKind":"Default","Api":"Storage.Imapi","Parents":[]},"Attrs":["In"]}
 					,{"Name":"requestType","Type":{"Kind":"ApiRef","Name":"IMAPI_MODE_PAGE_REQUEST_TYPE","TargetKind":"Default","Api":"Storage.Imapi","Parents":[]},"Attrs":["In"]}
-					,{"Name":"modePageData","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out"]}
+					,{"Name":"modePageData","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out"]}
 					,{"Name":"byteSize","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -2807,7 +2711,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"currentFeatureOnly","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"featureData","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IMAPI_FEATURE_PAGE_TYPE","TargetKind":"Default","Api":"Storage.Imapi","Parents":[]}}},"Attrs":["Out"]}
+					,{"Name":"featureData","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IMAPI_FEATURE_PAGE_TYPE","TargetKind":"Default","Api":"Storage.Imapi","Parents":[]}}},"Attrs":["Out"]}
 					,{"Name":"byteSize","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -2823,7 +2727,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"currentOnly","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"profileTypes","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IMAPI_PROFILE_TYPE","TargetKind":"Default","Api":"Storage.Imapi","Parents":[]}}},"Attrs":["Out"]}
+					,{"Name":"profileTypes","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IMAPI_PROFILE_TYPE","TargetKind":"Default","Api":"Storage.Imapi","Parents":[]}}},"Attrs":["Out"]}
 					,{"Name":"validProfiles","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -2839,7 +2743,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"requestType","Type":{"Kind":"ApiRef","Name":"IMAPI_MODE_PAGE_REQUEST_TYPE","TargetKind":"Default","Api":"Storage.Imapi","Parents":[]},"Attrs":["In"]}
-					,{"Name":"modePageTypes","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IMAPI_MODE_PAGE_TYPE","TargetKind":"Default","Api":"Storage.Imapi","Parents":[]}}},"Attrs":["Out"]}
+					,{"Name":"modePageTypes","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IMAPI_MODE_PAGE_TYPE","TargetKind":"Default","Api":"Storage.Imapi","Parents":[]}}},"Attrs":["Out"]}
 					,{"Name":"validPages","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -6507,102 +6411,109 @@
 		]
 	}
 	,{
-		"Name":"BootOptions"
+		"Name":"MsftDiscMaster2"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"ComClassID"
-		,"Guid":"2c941fce-975b-59be-a960-9a2a262853a5"
+		,"Guid":"2735412e-7f64-5b0f-8f00-5d77afbe261e"
 	}
 	,{
-		"Name":"FsiStream"
+		"Name":"MsftDiscRecorder2"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"ComClassID"
-		,"Guid":"2c941fcd-975b-59be-a960-9a2a262853a5"
+		,"Guid":"2735412d-7f64-5b0f-8f00-5d77afbe261e"
 	}
 	,{
-		"Name":"FileSystemImageResult"
+		"Name":"MsftWriteEngine2"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"ComClassID"
-		,"Guid":"2c941fcc-975b-59be-a960-9a2a262853a5"
+		,"Guid":"2735412c-7f64-5b0f-8f00-5d77afbe261e"
 	}
 	,{
-		"Name":"ProgressItem"
+		"Name":"MsftDiscFormat2Erase"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"ComClassID"
-		,"Guid":"2c941fcb-975b-59be-a960-9a2a262853a5"
+		,"Guid":"2735412b-7f64-5b0f-8f00-5d77afbe261e"
 	}
 	,{
-		"Name":"EnumProgressItems"
+		"Name":"MsftDiscFormat2Data"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"ComClassID"
-		,"Guid":"2c941fca-975b-59be-a960-9a2a262853a5"
+		,"Guid":"2735412a-7f64-5b0f-8f00-5d77afbe261e"
 	}
 	,{
-		"Name":"ProgressItems"
+		"Name":"MsftDiscFormat2TrackAtOnce"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"ComClassID"
-		,"Guid":"2c941fc9-975b-59be-a960-9a2a262853a5"
+		,"Guid":"27354129-7f64-5b0f-8f00-5d77afbe261e"
 	}
 	,{
-		"Name":"FsiDirectoryItem"
+		"Name":"MsftDiscFormat2RawCD"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"ComClassID"
-		,"Guid":"2c941fc8-975b-59be-a960-9a2a262853a5"
+		,"Guid":"27354128-7f64-5b0f-8f00-5d77afbe261e"
 	}
 	,{
-		"Name":"FsiFileItem"
+		"Name":"MsftStreamZero"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"ComClassID"
-		,"Guid":"2c941fc7-975b-59be-a960-9a2a262853a5"
+		,"Guid":"27354127-7f64-5b0f-8f00-5d77afbe261e"
 	}
 	,{
-		"Name":"EnumFsiItems"
+		"Name":"MsftStreamPrng001"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"ComClassID"
-		,"Guid":"2c941fc6-975b-59be-a960-9a2a262853a5"
+		,"Guid":"27354126-7f64-5b0f-8f00-5d77afbe261e"
 	}
 	,{
-		"Name":"FsiNamedStreams"
+		"Name":"MsftStreamConcatenate"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"ComClassID"
-		,"Guid":"c6b6f8ed-6d19-44b4-b539-b159b793a32d"
+		,"Guid":"27354125-7f64-5b0f-8f00-5d77afbe261e"
 	}
 	,{
-		"Name":"MsftFileSystemImage"
+		"Name":"MsftStreamInterleave"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"ComClassID"
-		,"Guid":"2c941fc5-975b-59be-a960-9a2a262853a5"
+		,"Guid":"27354124-7f64-5b0f-8f00-5d77afbe261e"
 	}
 	,{
-		"Name":"MsftIsoImageManager"
+		"Name":"MsftWriteSpeedDescriptor"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"ComClassID"
-		,"Guid":"ceee3b62-8f56-4056-869b-ef16917e3efc"
+		,"Guid":"27354123-7f64-5b0f-8f00-5d77afbe261e"
 	}
 	,{
-		"Name":"BlockRange"
+		"Name":"MsftMultisessionSequential"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"ComClassID"
-		,"Guid":"b507ca27-2204-11dd-966a-001aa01bbc58"
+		,"Guid":"27354122-7f64-5b0f-8f00-5d77afbe261e"
 	}
 	,{
-		"Name":"BlockRangeList"
+		"Name":"MsftMultisessionRandomWrite"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"ComClassID"
-		,"Guid":"b507ca28-2204-11dd-966a-001aa01bbc58"
+		,"Guid":"b507ca24-2204-11dd-966a-001aa01bbc58"
+	}
+	,{
+		"Name":"MsftRawCDImageCreator"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"25983561-9d65-49ce-b335-40630d901227"
 	}
 	,{
 		"Name":"FsiItemType"
@@ -8920,25 +8831,102 @@
 		]
 	}
 	,{
-		"Name":"MSDiscRecorderObj"
+		"Name":"BootOptions"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"ComClassID"
-		,"Guid":"520cca61-51a5-11d3-9144-00104ba11c5e"
+		,"Guid":"2c941fce-975b-59be-a960-9a2a262853a5"
 	}
 	,{
-		"Name":"MSDiscMasterObj"
+		"Name":"FsiStream"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"ComClassID"
-		,"Guid":"520cca63-51a5-11d3-9144-00104ba11c5e"
+		,"Guid":"2c941fcd-975b-59be-a960-9a2a262853a5"
 	}
 	,{
-		"Name":"MSEnumDiscRecordersObj"
+		"Name":"FileSystemImageResult"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"ComClassID"
-		,"Guid":"8a03567a-63cb-4ba8-baf6-52119816d1ef"
+		,"Guid":"2c941fcc-975b-59be-a960-9a2a262853a5"
+	}
+	,{
+		"Name":"ProgressItem"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"2c941fcb-975b-59be-a960-9a2a262853a5"
+	}
+	,{
+		"Name":"EnumProgressItems"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"2c941fca-975b-59be-a960-9a2a262853a5"
+	}
+	,{
+		"Name":"ProgressItems"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"2c941fc9-975b-59be-a960-9a2a262853a5"
+	}
+	,{
+		"Name":"FsiDirectoryItem"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"2c941fc8-975b-59be-a960-9a2a262853a5"
+	}
+	,{
+		"Name":"FsiFileItem"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"2c941fc7-975b-59be-a960-9a2a262853a5"
+	}
+	,{
+		"Name":"EnumFsiItems"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"2c941fc6-975b-59be-a960-9a2a262853a5"
+	}
+	,{
+		"Name":"FsiNamedStreams"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"c6b6f8ed-6d19-44b4-b539-b159b793a32d"
+	}
+	,{
+		"Name":"MsftFileSystemImage"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"2c941fc5-975b-59be-a960-9a2a262853a5"
+	}
+	,{
+		"Name":"MsftIsoImageManager"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"ceee3b62-8f56-4056-869b-ef16917e3efc"
+	}
+	,{
+		"Name":"BlockRange"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"b507ca27-2204-11dd-966a-001aa01bbc58"
+	}
+	,{
+		"Name":"BlockRangeList"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"b507ca28-2204-11dd-966a-001aa01bbc58"
 	}
 	,{
 		"Name":"MEDIA_TYPES"
@@ -9233,7 +9221,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"cRecorders","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"ppRecorder","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"IDiscRecorder","TargetKind":"Com","Api":"Storage.Imapi","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"ppRecorder","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"ApiRef","Name":"IDiscRecorder","TargetKind":"Com","Api":"Storage.Imapi","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"pcFetched","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -9300,7 +9288,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"cFormats","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"lpiidFormatID","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["Out"]}
+					,{"Name":"lpiidFormatID","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":0,"Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["Out"]}
 					,{"Name":"pcFetched","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -9881,16 +9869,25 @@
 		]
 	}
 	,{
-		"Name":"_MSGSESS"
+		"Name":"MSDiscRecorderObj"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
+		,"Kind":"ComClassID"
+		,"Guid":"520cca61-51a5-11d3-9144-00104ba11c5e"
+	}
+	,{
+		"Name":"MSDiscMasterObj"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"520cca63-51a5-11d3-9144-00104ba11c5e"
+	}
+	,{
+		"Name":"MSEnumDiscRecordersObj"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"8a03567a-63cb-4ba8-baf6-52119816d1ef"
 	}
 	,{
 		"Name":"MSGCALLRELEASE"
@@ -9918,7 +9915,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"cValues","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"aPropAttr","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			,{"Name":"aPropAttr","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -10184,7 +10181,7 @@
 		,"Params":[
 			{"Name":"lpMalloc","Type":{"Kind":"ApiRef","Name":"IMalloc","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
 			,{"Name":"ulFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"lppMsgSess","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_MSGSESS","TargetKind":"Default","Api":"Storage.Imapi","Parents":[]}}},"Attrs":["In","Out"]}
+			,{"Name":"lppMsgSess","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LPMSGSESS","TargetKind":"Default","Api":"Storage.Imapi","Parents":[]}},"Attrs":["In","Out"]}
 		]
 	}
 	,{
@@ -10199,7 +10196,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"lpMsgSess","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_MSGSESS","TargetKind":"Default","Api":"Storage.Imapi","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"lpMsgSess","Type":{"Kind":"ApiRef","Name":"LPMSGSESS","TargetKind":"Default","Api":"Storage.Imapi","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -10214,7 +10211,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"lpMsgSess","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"_MSGSESS","TargetKind":"Default","Api":"Storage.Imapi","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"lpMsgSess","Type":{"Kind":"ApiRef","Name":"LPMSGSESS","TargetKind":"Default","Api":"Storage.Imapi","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpAllocateBuffer","Type":{"Kind":"ApiRef","Name":"LPALLOCATEBUFFER","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpAllocateMore","Type":{"Kind":"ApiRef","Name":"LPALLOCATEMORE","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In"]}
 			,{"Name":"lpFreeBuffer","Type":{"Kind":"ApiRef","Name":"LPFREEBUFFER","TargetKind":"FunctionPointer","Api":"System.AddressBook","Parents":[]},"Attrs":["In"]}

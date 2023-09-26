@@ -32,29 +32,29 @@
 	,{
 		"Name":"DEVPKEY_IndirectDisplay"
 		,"Type":{"Kind":"ApiRef","Name":"DEVPROPKEY","TargetKind":"Default","Api":"Devices.Properties","Parents":[]}
-		,"ValueType":"PropertyKey"
-		,"Value":{"Fmtid":"c50a3f10-aa5c-4247-b830-d6a6f8eaa310","Pid":1}
+		,"ValueType":"ConstantAttribute"
+		,"Value":"True"
 		,"Attrs":[]
 	}
 	,{
 		"Name":"DEVPKEY_Device_TerminalLuid"
 		,"Type":{"Kind":"ApiRef","Name":"DEVPROPKEY","TargetKind":"Default","Api":"Devices.Properties","Parents":[]}
-		,"ValueType":"PropertyKey"
-		,"Value":{"Fmtid":"c50a3f10-aa5c-4247-b830-d6a6f8eaa310","Pid":2}
+		,"ValueType":"ConstantAttribute"
+		,"Value":"True"
 		,"Attrs":[]
 	}
 	,{
 		"Name":"DEVPKEY_Device_AdapterLuid"
 		,"Type":{"Kind":"ApiRef","Name":"DEVPROPKEY","TargetKind":"Default","Api":"Devices.Properties","Parents":[]}
-		,"ValueType":"PropertyKey"
-		,"Value":{"Fmtid":"c50a3f10-aa5c-4247-b830-d6a6f8eaa310","Pid":3}
+		,"ValueType":"ConstantAttribute"
+		,"Value":"True"
 		,"Attrs":[]
 	}
 	,{
 		"Name":"DEVPKEY_Device_ActivityId"
 		,"Type":{"Kind":"ApiRef","Name":"DEVPROPKEY","TargetKind":"Default","Api":"Devices.Properties","Parents":[]}
-		,"ValueType":"PropertyKey"
-		,"Value":{"Fmtid":"c50a3f10-aa5c-4247-b830-d6a6f8eaa310","Pid":4}
+		,"ValueType":"ConstantAttribute"
+		,"Value":"True"
 		,"Attrs":[]
 	}
 	,{
@@ -545,6 +545,13 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":2296856
+		,"Attrs":[]
+	}
+	,{
+		"Name":"IOCTL_PANEL_GET_MANUFACTURING_MODE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2296860
 		,"Attrs":[]
 	}
 	,{
@@ -5343,7 +5350,6 @@
 			,{"Name":"DISPLAYCONFIG_OUTPUT_TECHNOLOGY_INDIRECT_VIRTUAL","Value":17}
 			,{"Name":"DISPLAYCONFIG_OUTPUT_TECHNOLOGY_DISPLAYPORT_USB_TUNNEL","Value":18}
 			,{"Name":"DISPLAYCONFIG_OUTPUT_TECHNOLOGY_INTERNAL","Value":-2147483648}
-			,{"Name":"DISPLAYCONFIG_OUTPUT_TECHNOLOGY_FORCE_UINT32","Value":-1}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -5360,7 +5366,6 @@
 			,{"Name":"DISPLAYCONFIG_SCANLINE_ORDERING_INTERLACED","Value":2}
 			,{"Name":"DISPLAYCONFIG_SCANLINE_ORDERING_INTERLACED_UPPERFIELDFIRST","Value":2}
 			,{"Name":"DISPLAYCONFIG_SCANLINE_ORDERING_INTERLACED_LOWERFIELDFIRST","Value":3}
-			,{"Name":"DISPLAYCONFIG_SCANLINE_ORDERING_FORCE_UINT32","Value":-1}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -5438,7 +5443,6 @@
 			,{"Name":"DISPLAYCONFIG_SCALING_ASPECTRATIOCENTEREDMAX","Value":4}
 			,{"Name":"DISPLAYCONFIG_SCALING_CUSTOM","Value":5}
 			,{"Name":"DISPLAYCONFIG_SCALING_PREFERRED","Value":128}
-			,{"Name":"DISPLAYCONFIG_SCALING_FORCE_UINT32","Value":-1}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -5454,7 +5458,6 @@
 			,{"Name":"DISPLAYCONFIG_ROTATION_ROTATE90","Value":2}
 			,{"Name":"DISPLAYCONFIG_ROTATION_ROTATE180","Value":3}
 			,{"Name":"DISPLAYCONFIG_ROTATION_ROTATE270","Value":4}
-			,{"Name":"DISPLAYCONFIG_ROTATION_FORCE_UINT32","Value":-1}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -5469,7 +5472,6 @@
 			{"Name":"DISPLAYCONFIG_MODE_INFO_TYPE_SOURCE","Value":1}
 			,{"Name":"DISPLAYCONFIG_MODE_INFO_TYPE_TARGET","Value":2}
 			,{"Name":"DISPLAYCONFIG_MODE_INFO_TYPE_DESKTOP_IMAGE","Value":3}
-			,{"Name":"DISPLAYCONFIG_MODE_INFO_TYPE_FORCE_UINT32","Value":-1}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -5486,7 +5488,6 @@
 			,{"Name":"DISPLAYCONFIG_PIXELFORMAT_24BPP","Value":3}
 			,{"Name":"DISPLAYCONFIG_PIXELFORMAT_32BPP","Value":4}
 			,{"Name":"DISPLAYCONFIG_PIXELFORMAT_NONGDI","Value":5}
-			,{"Name":"DISPLAYCONFIG_PIXELFORMAT_FORCE_UINT32","Value":-1}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -5684,7 +5685,6 @@
 			,{"Name":"DISPLAYCONFIG_TOPOLOGY_CLONE","Value":2}
 			,{"Name":"DISPLAYCONFIG_TOPOLOGY_EXTEND","Value":4}
 			,{"Name":"DISPLAYCONFIG_TOPOLOGY_EXTERNAL","Value":8}
-			,{"Name":"DISPLAYCONFIG_TOPOLOGY_FORCE_UINT32","Value":-1}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -5709,7 +5709,6 @@
 			,{"Name":"DISPLAYCONFIG_DEVICE_INFO_GET_SDR_WHITE_LEVEL","Value":11}
 			,{"Name":"DISPLAYCONFIG_DEVICE_INFO_GET_MONITOR_SPECIALIZATION","Value":12}
 			,{"Name":"DISPLAYCONFIG_DEVICE_INFO_SET_MONITOR_SPECIALIZATION","Value":13}
-			,{"Name":"DISPLAYCONFIG_DEVICE_INFO_FORCE_UINT32","Value":-1}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -6258,7 +6257,7 @@
 		,"Fields":[
 			{"Name":"sourceId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"numTargets","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"aTargets","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			,{"Name":"aTargets","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -6273,7 +6272,7 @@
 		,"Fields":[
 			{"Name":"AdapterName","Type":{"Kind":"Array","Shape":{"Size":128},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"numSources","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"sources","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"Sources","TargetKind":"Default","Api":"Devices.Display","Parents":[]}},"Attrs":[]}
+			,{"Name":"sources","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"Sources","TargetKind":"Default","Api":"Devices.Display","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -6287,7 +6286,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"numAdapters","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"adapter","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"Adapter","TargetKind":"Default","Api":"Devices.Display","Parents":[]}},"Attrs":[]}
+			,{"Name":"adapter","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"Adapter","TargetKind":"Default","Api":"Devices.Display","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -6315,7 +6314,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"numDisplayModes","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"displayMode","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"DisplayMode","TargetKind":"Default","Api":"Devices.Display","Parents":[]}},"Attrs":[]}
+			,{"Name":"displayMode","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"DisplayMode","TargetKind":"Default","Api":"Devices.Display","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -6807,7 +6806,7 @@
 			,{"Name":"lMinA","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"lMinC","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"lMinD","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"alReserved","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Int32"}},"Attrs":[]}
+			,{"Name":"alReserved","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -6823,7 +6822,7 @@
 			{"Name":"culSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pwsz","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"chglyph","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"ahglyph","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			,{"Name":"ahglyph","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -6839,7 +6838,7 @@
 			{"Name":"culThis","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ulType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"cLigatures","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"alig","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"LIGATURE","TargetKind":"Default","Api":"Devices.Display","Parents":[]}},"Attrs":[]}
+			,{"Name":"alig","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"LIGATURE","TargetKind":"Default","Api":"Devices.Display","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -6852,8 +6851,8 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"x","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"y","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			{"Name":"x","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"y","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -6885,7 +6884,7 @@
 			,{"Name":"flAccel","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"cGlyphsSupported","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"cRuns","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"awcrun","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"WCRUN","TargetKind":"Default","Api":"Devices.Display","Parents":[]}},"Attrs":[]}
+			,{"Name":"awcrun","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"WCRUN","TargetKind":"Default","Api":"Devices.Display","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -6901,7 +6900,7 @@
 			{"Name":"cjThis","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"cGlyphs","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"iMode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"aGlyphAttr","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"aGlyphAttr","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -7041,7 +7040,7 @@
 			,{"Name":"cig","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dpDesignVector","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"dpAxesInfoW","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"aulReserved","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			,{"Name":"aulReserved","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -7475,7 +7474,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"c","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"arcl","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"RECTL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+			,{"Name":"arcl","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"RECTL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -7490,7 +7489,7 @@
 		,"Fields":[
 			{"Name":"ptlOrigin","Type":{"Kind":"ApiRef","Name":"POINTL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"sizlBitmap","Type":{"Kind":"ApiRef","Name":"SIZE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"aj","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"aj","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -7623,7 +7622,7 @@
 			,{"Name":"ptfxB","Type":{"Kind":"ApiRef","Name":"POINTFIX","TargetKind":"Default","Api":"Devices.Display","Parents":[]},"Attrs":[]}
 			,{"Name":"lStyleState","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"c","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"arun","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"RUN","TargetKind":"Default","Api":"Devices.Display","Parents":[]}},"Attrs":[]}
+			,{"Name":"arun","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"RUN","TargetKind":"Default","Api":"Devices.Display","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -9729,7 +9728,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"DescriptorSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Descriptor","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"Descriptor","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -9980,7 +9979,7 @@
 			{"Name":"WidthInPixels","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"HeightInPixels","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"FontSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Font","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"Font","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -9995,7 +9994,7 @@
 		,"Fields":[
 			{"Name":"NumEntries","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"FirstEntry","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"Colors","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":[]}
+			,{"Name":"Colors","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -10026,7 +10025,7 @@
 		,"Fields":[
 			{"Name":"NumEntries","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"FirstEntry","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"LookupTable","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"Devices.Display","Parents":[]}},"Attrs":[]}
+			,{"Name":"LookupTable","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"Devices.Display","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 			{
@@ -10106,7 +10105,7 @@
 			,{"Name":"Enable","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Column","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
 			,{"Name":"Row","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"Pixels","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"Pixels","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -10318,7 +10317,7 @@
 		,"Fields":[
 			{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"LutDataFormat","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"LutData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"LutData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -10377,7 +10376,7 @@
 		,"Fields":[
 			{"Name":"DefaultToBiosPolicy","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"LevelCount","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"Level","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Display","Parents":[]}},"Attrs":[]}
+			,{"Name":"Level","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"_Anonymous_e__Struct","TargetKind":"Default","Api":"Devices.Display","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 			{
@@ -11230,7 +11229,6 @@
 			,{"Name":"OUTPUT_COLOR_ENCODING_YCBCR422","Value":2}
 			,{"Name":"OUTPUT_COLOR_ENCODING_YCBCR420","Value":3}
 			,{"Name":"OUTPUT_COLOR_ENCODING_INTENSITY","Value":4}
-			,{"Name":"OUTPUT_COLOR_ENCODING_FORCE_UINT32","Value":-1}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -11333,7 +11331,7 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"ColorProfileName","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+			{"Name":"ColorProfileName","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -11469,7 +11467,7 @@
 			,{"Name":"FinalCommandExtraPayload","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"MipiErrors","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"HostErrors","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"Packets","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"MIPI_DSI_PACKET","TargetKind":"Default","Api":"Devices.Display","Parents":[]}},"Attrs":[]}
+			,{"Name":"Packets","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"MIPI_DSI_PACKET","TargetKind":"Default","Api":"Devices.Display","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 			{
@@ -11533,7 +11531,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"AR_ENABLED","Value":0}
@@ -11553,7 +11551,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"ORIENTATION_PREFERENCE_NONE","Value":0}
@@ -13536,7 +13534,7 @@
 			,{"Name":"pathArray","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"DISPLAYCONFIG_PATH_INFO","TargetKind":"Default","Api":"Devices.Display","Parents":[]}},"Attrs":["Out"]}
 			,{"Name":"numModeInfoArrayElements","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
 			,{"Name":"modeInfoArray","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"ApiRef","Name":"DISPLAYCONFIG_MODE_INFO","TargetKind":"Default","Api":"Devices.Display","Parents":[]}},"Attrs":["Out"]}
-			,{"Name":"currentTopologyId","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DISPLAYCONFIG_TOPOLOGY_ID","TargetKind":"Default","Api":"Devices.Display","Parents":[]}},"Attrs":["Out","Optional"]}
+			,{"Name":"currentTopologyId","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DISPLAYCONFIG_TOPOLOGY_ID","TargetKind":"Default","Api":"Devices.Display","Parents":[]}},"Attrs":["In","Out","Optional"]}
 		]
 	}
 	,{

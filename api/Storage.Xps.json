@@ -612,7 +612,7 @@
 		,"IntegerBase":"UInt32"
 	}
 	,{
-		"Name":"DEVICE_CAPABILITIES"
+		"Name":"PRINTER_DEVICE_CAPABILITIES"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
@@ -815,20 +815,6 @@
 		]
 		,"NestedTypes":[
 		]
-	}
-	,{
-		"Name":"XpsOMObjectFactory"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"e974d26d-3d9b-4d47-88cc-3872f2dc3585"
-	}
-	,{
-		"Name":"XpsOMThumbnailGenerator"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"7e4a23e2-b969-4761-be35-1a8ced58e323"
 	}
 	,{
 		"Name":"XPS_TILE_MODE"
@@ -8390,6 +8376,20 @@
 		]
 	}
 	,{
+		"Name":"XpsOMObjectFactory"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"e974d26d-3d9b-4d47-88cc-3872f2dc3585"
+	}
+	,{
+		"Name":"XpsOMThumbnailGenerator"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"7e4a23e2-b969-4761-be35-1a8ced58e323"
+	}
+	,{
 		"Name":"XPS_DOCUMENT_TYPE"
 		,"Architectures":[]
 		,"Platform":null
@@ -8891,13 +8891,6 @@
 		]
 	}
 	,{
-		"Name":"XpsSignatureManager"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"b0c43320-2315-44a2-b70a-0943a140a8ee"
-	}
-	,{
 		"Name":"XPS_SIGNATURE_STATUS"
 		,"Architectures":[]
 		,"Platform":null
@@ -8918,7 +8911,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"XPS_SIGN_POLICY_NONE","Value":0}
@@ -8935,7 +8928,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"XPS_SIGN_FLAGS_NONE","Value":0}
@@ -9966,6 +9959,13 @@
 			}
 		]
 	}
+	,{
+		"Name":"XpsSignatureManager"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"b0c43320-2315-44a2-b70a-0943a140a8ee"
+	}
 ]
 
 ,"Functions":[
@@ -9983,7 +9983,7 @@
 		,"Params":[
 			{"Name":"pDevice","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"pPort","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
-			,{"Name":"fwCapability","Type":{"Kind":"ApiRef","Name":"DEVICE_CAPABILITIES","TargetKind":"Default","Api":"Storage.Xps","Parents":[]},"Attrs":["In"]}
+			,{"Name":"fwCapability","Type":{"Kind":"ApiRef","Name":"PRINTER_DEVICE_CAPABILITIES","TargetKind":"Default","Api":"Storage.Xps","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pOutput","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Out","Optional"]}
 			,{"Name":"pDevMode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEVMODEA","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["In","Optional","Const"]}
 		]
@@ -10002,7 +10002,7 @@
 		,"Params":[
 			{"Name":"pDevice","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"pPort","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
-			,{"Name":"fwCapability","Type":{"Kind":"ApiRef","Name":"DEVICE_CAPABILITIES","TargetKind":"Default","Api":"Storage.Xps","Parents":[]},"Attrs":["In"]}
+			,{"Name":"fwCapability","Type":{"Kind":"ApiRef","Name":"PRINTER_DEVICE_CAPABILITIES","TargetKind":"Default","Api":"Storage.Xps","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pOutput","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Out","Optional"]}
 			,{"Name":"pDevMode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEVMODEW","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]}},"Attrs":["In","Optional","Const"]}
 		]

@@ -3823,10 +3823,62 @@
 		,"Value":2150859262
 		,"Attrs":[]
 	}
+	,{
+		"Name":"ERROR_WSMAN_EVENTING_PUSH_SUBSCRIPTION_NOACTIVATE_EVENTSOURCE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2150859263
+		,"Attrs":[]
+	}
 ]
 
 ,"Types":[
 	{
+		"Name":"WSMAN_API_HANDLE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
+		"Name":"WSMAN_COMMAND_HANDLE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
+		"Name":"WSMAN_OPERATION_HANDLE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
+		"Name":"WSMAN_SESSION_HANDLE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
+		"Name":"WSMAN_SHELL_HANDLE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
 		"Name":"WSMAN_DATA_TEXT"
 		,"Architectures":[]
 		,"Platform":null
@@ -4017,7 +4069,7 @@
 			{"Name":"optionsCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"options","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_OPTION","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":[]}
 			,{"Name":"optionsMustUnderstand","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"optionTypes","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+			,{"Name":"optionTypes","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Const"]}
 		]
 		,"NestedTypes":[
 		]
@@ -4116,18 +4168,6 @@
 		]
 	}
 	,{
-		"Name":"WSMAN_API"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
 		"Name":"WSManProxyAccessType"
 		,"Architectures":[]
 		,"Platform":null
@@ -4152,18 +4192,6 @@
 		,"Fields":[
 			{"Name":"accessType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"authenticationCredentials","Type":{"Kind":"ApiRef","Name":"WSMAN_AUTHENTICATION_CREDENTIALS","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"WSMAN_SESSION"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
 		]
 		,"NestedTypes":[
 		]
@@ -4203,18 +4231,6 @@
 		,"IntegerBase":"Int32"
 	}
 	,{
-		"Name":"WSMAN_OPERATION"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
 		"Name":"WSManCallbackFlags"
 		,"Architectures":[]
 		,"Platform":null
@@ -4236,30 +4252,6 @@
 		,"IntegerBase":"Int32"
 	}
 	,{
-		"Name":"WSMAN_SHELL"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"WSMAN_COMMAND"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
 		"Name":"WSMAN_STREAM_ID_SET"
 		,"Architectures":[]
 		,"Platform":null
@@ -4268,7 +4260,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"streamIDsCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"streamIDs","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+			,{"Name":"streamIDs","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Const"]}
 		]
 		,"NestedTypes":[
 		]
@@ -4434,9 +4426,9 @@
 			{"Name":"operationContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"error","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_ERROR","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In"]}
-			,{"Name":"shell","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In"]}
-			,{"Name":"command","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_COMMAND","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Optional"]}
-			,{"Name":"operationHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_OPERATION","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"shell","Type":{"Kind":"ApiRef","Name":"WSMAN_SHELL_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In"]}
+			,{"Name":"command","Type":{"Kind":"ApiRef","Name":"WSMAN_COMMAND_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"operationHandle","Type":{"Kind":"ApiRef","Name":"WSMAN_OPERATION_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"data","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_RESPONSE_DATA","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Optional"]}
 		]
 	}
@@ -4463,7 +4455,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"argsCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"args","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+			,{"Name":"args","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Const"]}
 		]
 		,"NestedTypes":[
 		]
@@ -4513,7 +4505,7 @@
 			,{"Name":"locale","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"resourceUri","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"operationInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_OPERATION_INFO","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":[]}
-			,{"Name":"shutdownNotification","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+			,{"Name":"shutdownNotification","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"shutdownNotificationHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"dataLocale","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 		]
@@ -4799,20 +4791,6 @@
 		,"Params":[
 			{"Name":"userAuthorizationContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
 		]
-	}
-	,{
-		"Name":"WSMan"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"bced617b-ec03-420b-8508-977dc7a686bd"
-	}
-	,{
-		"Name":"WSManInternal"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"7de087a5-5dcb-4df7-bb12-0924ad8fbd9a"
 	}
 	,{
 		"Name":"WSManSessionFlags"
@@ -5632,7 +5610,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"resourceUri","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					{"Name":"resourceUri","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 					,{"Name":"flags","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"resource","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
@@ -5648,7 +5626,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"resourceUri","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					{"Name":"resourceUri","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 					,{"Name":"resource","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"flags","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"resultResource","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
@@ -5665,7 +5643,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"resourceUri","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					{"Name":"resourceUri","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 					,{"Name":"resource","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"flags","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"newUri","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
@@ -5682,7 +5660,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"resourceUri","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					{"Name":"resourceUri","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 					,{"Name":"flags","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 				]
 			}
@@ -5698,7 +5676,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"actionUri","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"resourceUri","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"resourceUri","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 					,{"Name":"parameters","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"flags","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"result","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
@@ -5715,7 +5693,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"resourceUri","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					{"Name":"resourceUri","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 					,{"Name":"filter","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"dialect","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"flags","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
@@ -5927,7 +5905,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"resourceSelName","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"selValue","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"selValue","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -6019,7 +5997,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"OptionName","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"OptionValue","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"OptionValue","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 					,{"Name":"mustComply","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
@@ -6097,6 +6075,13 @@
 		]
 	}
 	,{
+		"Name":"WSMan"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"bced617b-ec03-420b-8508-977dc7a686bd"
+	}
+	,{
 		"Name":"IWSManInternal"
 		,"Architectures":[]
 		,"Platform":null
@@ -6116,12 +6101,19 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"session","Type":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
-					,{"Name":"resourceUri","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"resourceUri","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 					,{"Name":"flags","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"resource","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
+	}
+	,{
+		"Name":"WSManInternal"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"7de087a5-5dcb-4df7-bb12-0924ad8fbd9a"
 	}
 ]
 
@@ -6139,7 +6131,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"apiHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_API","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"apiHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_API_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -6154,7 +6146,7 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"apiHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_API","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Out","Optional"]}
+			{"Name":"apiHandle","Type":{"Kind":"ApiRef","Name":"WSMAN_API_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
@@ -6170,7 +6162,7 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"apiHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_API","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In"]}
+			{"Name":"apiHandle","Type":{"Kind":"ApiRef","Name":"WSMAN_API_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In"]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
 			,{"Name":"languageCode","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 			,{"Name":"errorCode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
@@ -6191,12 +6183,12 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"apiHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_API","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In"]}
+			{"Name":"apiHandle","Type":{"Kind":"ApiRef","Name":"WSMAN_API_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In"]}
 			,{"Name":"connection","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"serverAuthenticationCredentials","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_AUTHENTICATION_CREDENTIALS","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Optional"]}
 			,{"Name":"proxyInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_PROXY_INFO","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Optional"]}
-			,{"Name":"session","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SESSION","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"session","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SESSION_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -6211,7 +6203,7 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"session","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SESSION","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Out","Optional"]}
+			{"Name":"session","Type":{"Kind":"ApiRef","Name":"WSMAN_SESSION_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
@@ -6227,7 +6219,7 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"session","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SESSION","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In"]}
+			{"Name":"session","Type":{"Kind":"ApiRef","Name":"WSMAN_SESSION_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In"]}
 			,{"Name":"option","Type":{"Kind":"ApiRef","Name":"WSManSessionOption","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In"]}
 			,{"Name":"data","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_DATA","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In"]}
 		]
@@ -6244,7 +6236,7 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"session","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SESSION","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In"]}
+			{"Name":"session","Type":{"Kind":"ApiRef","Name":"WSMAN_SESSION_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In"]}
 			,{"Name":"option","Type":{"Kind":"ApiRef","Name":"WSManSessionOption","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In"]}
 			,{"Name":"value","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
 		]
@@ -6261,7 +6253,7 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"session","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SESSION","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In"]}
+			{"Name":"session","Type":{"Kind":"ApiRef","Name":"WSMAN_SESSION_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In"]}
 			,{"Name":"option","Type":{"Kind":"ApiRef","Name":"WSManSessionOption","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In"]}
 			,{"Name":"stringLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"string","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["Out","Optional"]}
@@ -6280,7 +6272,7 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"operationHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_OPERATION","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Out","Optional"]}
+			{"Name":"operationHandle","Type":{"Kind":"ApiRef","Name":"WSMAN_OPERATION_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
@@ -6296,14 +6288,14 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"session","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SESSION","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"session","Type":{"Kind":"ApiRef","Name":"WSMAN_SESSION_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In"]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"resourceUri","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"startupInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL_STARTUP_INFO_V11","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Optional"]}
 			,{"Name":"options","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_OPTION_SET","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Optional"]}
 			,{"Name":"createXml","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_DATA","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Optional"]}
 			,{"Name":"async","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL_ASYNC","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In"]}
-			,{"Name":"shell","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"shell","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -6318,13 +6310,13 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"shell","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"shell","Type":{"Kind":"ApiRef","Name":"WSMAN_SHELL_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In"]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"commandLine","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"args","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_COMMAND_ARG_SET","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Optional"]}
 			,{"Name":"options","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_OPTION_SET","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Optional"]}
 			,{"Name":"async","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL_ASYNC","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In"]}
-			,{"Name":"command","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_COMMAND","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"command","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_COMMAND_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -6339,12 +6331,12 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"shell","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In"]}
-			,{"Name":"command","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_COMMAND","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Optional"]}
+			{"Name":"shell","Type":{"Kind":"ApiRef","Name":"WSMAN_SHELL_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In"]}
+			,{"Name":"command","Type":{"Kind":"ApiRef","Name":"WSMAN_COMMAND_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"code","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"async","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL_ASYNC","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In"]}
-			,{"Name":"signalOperation","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_OPERATION","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"signalOperation","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_OPERATION_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -6359,12 +6351,12 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"shell","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Out"]}
-			,{"Name":"command","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_COMMAND","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Optional"]}
+			{"Name":"shell","Type":{"Kind":"ApiRef","Name":"WSMAN_SHELL_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In"]}
+			,{"Name":"command","Type":{"Kind":"ApiRef","Name":"WSMAN_COMMAND_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"desiredStreamSet","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_STREAM_ID_SET","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Optional"]}
 			,{"Name":"async","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL_ASYNC","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In"]}
-			,{"Name":"receiveOperation","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_OPERATION","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"receiveOperation","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_OPERATION_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -6379,14 +6371,14 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"shell","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In"]}
-			,{"Name":"command","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_COMMAND","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Optional"]}
+			{"Name":"shell","Type":{"Kind":"ApiRef","Name":"WSMAN_SHELL_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In"]}
+			,{"Name":"command","Type":{"Kind":"ApiRef","Name":"WSMAN_COMMAND_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"streamId","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"streamData","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_DATA","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In"]}
 			,{"Name":"endOfStream","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"async","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL_ASYNC","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In"]}
-			,{"Name":"sendOperation","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_OPERATION","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"sendOperation","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_OPERATION_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -6401,7 +6393,7 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"commandHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_COMMAND","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Out","Optional"]}
+			{"Name":"commandHandle","Type":{"Kind":"ApiRef","Name":"WSMAN_COMMAND_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"async","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL_ASYNC","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In"]}
 		]
@@ -6418,7 +6410,7 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"shellHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Out","Optional"]}
+			{"Name":"shellHandle","Type":{"Kind":"ApiRef","Name":"WSMAN_SHELL_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"async","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL_ASYNC","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In"]}
 		]
@@ -6435,7 +6427,7 @@
 		,"Platform":"windows8.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"session","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SESSION","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"session","Type":{"Kind":"ApiRef","Name":"WSMAN_SESSION_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In"]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"resourceUri","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"shellId","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
@@ -6443,7 +6435,7 @@
 			,{"Name":"options","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_OPTION_SET","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Optional"]}
 			,{"Name":"createXml","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_DATA","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Optional"]}
 			,{"Name":"async","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL_ASYNC","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In"]}
-			,{"Name":"shell","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"shell","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -6458,14 +6450,14 @@
 		,"Platform":"windows8.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"shell","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"shell","Type":{"Kind":"ApiRef","Name":"WSMAN_SHELL_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In"]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"commandId","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"commandLine","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"args","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_COMMAND_ARG_SET","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Optional"]}
 			,{"Name":"options","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_OPTION_SET","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Optional"]}
 			,{"Name":"async","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL_ASYNC","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In"]}
-			,{"Name":"command","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_COMMAND","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"command","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_COMMAND_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -6480,7 +6472,7 @@
 		,"Platform":"windows8.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"shell","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"shell","Type":{"Kind":"ApiRef","Name":"WSMAN_SHELL_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In"]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"disconnectInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL_DISCONNECT_INFO","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In"]}
 			,{"Name":"async","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL_ASYNC","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In"]}
@@ -6498,7 +6490,7 @@
 		,"Platform":"windows8.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"shell","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"shell","Type":{"Kind":"ApiRef","Name":"WSMAN_SHELL_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In"]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"async","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL_ASYNC","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In"]}
 		]
@@ -6515,7 +6507,7 @@
 		,"Platform":"windows8.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"commandHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_COMMAND","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"commandHandle","Type":{"Kind":"ApiRef","Name":"WSMAN_COMMAND_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In"]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"async","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL_ASYNC","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In"]}
 		]
@@ -6532,14 +6524,14 @@
 		,"Platform":"windows8.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"session","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SESSION","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"session","Type":{"Kind":"ApiRef","Name":"WSMAN_SESSION_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In"]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"resourceUri","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"shellID","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"options","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_OPTION_SET","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Optional"]}
 			,{"Name":"connectXml","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_DATA","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Optional"]}
 			,{"Name":"async","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL_ASYNC","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In"]}
-			,{"Name":"shell","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"shell","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -6554,13 +6546,13 @@
 		,"Platform":"windows8.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"shell","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"shell","Type":{"Kind":"ApiRef","Name":"WSMAN_SHELL_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]},"Attrs":["In"]}
 			,{"Name":"flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"commandID","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"options","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_OPTION_SET","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Optional"]}
 			,{"Name":"connectXml","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_DATA","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In","Optional"]}
 			,{"Name":"async","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_SHELL_ASYNC","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["In"]}
-			,{"Name":"command","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_COMMAND","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"command","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WSMAN_COMMAND_HANDLE","TargetKind":"Default","Api":"System.RemoteManagement","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{

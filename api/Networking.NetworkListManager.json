@@ -110,13 +110,6 @@
 
 ,"Types":[
 	{
-		"Name":"NetworkListManager"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"dcb00c01-570f-4a9b-8d69-199fdba5723b"
-	}
-	,{
 		"Name":"NLM_CONNECTION_COST"
 		,"Architectures":[]
 		,"Platform":null
@@ -257,6 +250,20 @@
 			{"Name":"NLM_DOMAIN_TYPE_NON_DOMAIN_NETWORK","Value":0}
 			,{"Name":"NLM_DOMAIN_TYPE_DOMAIN_NETWORK","Value":1}
 			,{"Name":"NLM_DOMAIN_TYPE_DOMAIN_AUTHENTICATED","Value":2}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"NLM_DOMAIN_AUTHENTICATION_KIND"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"NLM_DOMAIN_AUTHENTICATION_KIND_NONE","Value":0}
+			,{"Name":"NLM_DOMAIN_AUTHENTICATION_KIND_LDAP","Value":1}
+			,{"Name":"NLM_DOMAIN_AUTHENTICATION_KIND_TLS","Value":2}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -654,6 +661,31 @@
 		]
 	}
 	,{
+		"Name":"INetwork2"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"b5550abb-3391-4310-804f-25dcc325ed81"
+		,"Interface":{"Kind":"ApiRef","Name":"INetwork","TargetKind":"Com","Api":"Networking.NetworkListManager","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"IsDomainAuthenticatedBy"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"domainAuthenticationKind","Type":{"Kind":"ApiRef","Name":"NLM_DOMAIN_AUTHENTICATION_KIND","TargetKind":"Default","Api":"Networking.NetworkListManager","Parents":[]},"Attrs":["In"]}
+					,{"Name":"pValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
+				]
+			}
+		]
+	}
+	,{
 		"Name":"IEnumNetworks"
 		,"Architectures":[]
 		,"Platform":"windows6.0.6000"
@@ -928,6 +960,31 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pDomainType","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"NLM_DOMAIN_TYPE","TargetKind":"Default","Api":"Networking.NetworkListManager","Parents":[]}},"Attrs":["Out","RetVal"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"INetworkConnection2"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"00e676ed-5a35-4738-92eb-8581738d0f0a"
+		,"Interface":{"Kind":"ApiRef","Name":"INetworkConnection","TargetKind":"Com","Api":"Networking.NetworkListManager","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"IsDomainAuthenticatedBy"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"domainAuthenticationKind","Type":{"Kind":"ApiRef","Name":"NLM_DOMAIN_AUTHENTICATION_KIND","TargetKind":"Default","Api":"Networking.NetworkListManager","Parents":[]},"Attrs":["In"]}
+					,{"Name":"pValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -1238,6 +1295,13 @@
 				]
 			}
 		]
+	}
+	,{
+		"Name":"NetworkListManager"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"dcb00c01-570f-4a9b-8d69-199fdba5723b"
 	}
 ]
 

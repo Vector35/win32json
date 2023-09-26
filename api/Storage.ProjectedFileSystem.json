@@ -149,7 +149,7 @@
 			{"Name":"PRJ_FLAG_NONE","Value":0}
 			,{"Name":"PRJ_FLAG_USE_NEGATIVE_PATH_CACHE","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"PRJ_STARTVIRTUALIZING_OPTIONS"
@@ -218,10 +218,10 @@
 		,"Fields":[
 			{"Name":"IsDirectory","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"FileSize","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
-			,{"Name":"CreationTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"LastAccessTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"LastWriteTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"ChangeTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"CreationTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"LastAccessTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"LastWriteTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"ChangeTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"FileAttributes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
@@ -240,7 +240,7 @@
 			,{"Name":"SecurityInformation","Type":{"Kind":"ApiRef","Name":"_SecurityInformation_e__Struct","TargetKind":"Default","Api":"Storage.ProjectedFileSystem","Parents":[]},"Attrs":[]}
 			,{"Name":"StreamsInformation","Type":{"Kind":"ApiRef","Name":"_StreamsInformation_e__Struct","TargetKind":"Default","Api":"Storage.ProjectedFileSystem","Parents":[]},"Attrs":[]}
 			,{"Name":"VersionInfo","Type":{"Kind":"ApiRef","Name":"PRJ_PLACEHOLDER_VERSION_INFO","TargetKind":"Default","Api":"Storage.ProjectedFileSystem","Parents":[]},"Attrs":[]}
-			,{"Name":"VariableData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"VariableData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 			{
@@ -304,7 +304,7 @@
 			,{"Name":"PRJ_UPDATE_ALLOW_READ_ONLY","Value":32}
 			,{"Name":"PRJ_UPDATE_MAX_VAL","Value":64}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"PRJ_UPDATE_FAILURE_CAUSES"
@@ -320,7 +320,7 @@
 			,{"Name":"PRJ_UPDATE_FAILURE_CAUSE_TOMBSTONE","Value":4}
 			,{"Name":"PRJ_UPDATE_FAILURE_CAUSE_READ_ONLY","Value":8}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"PRJ_FILE_STATE"
@@ -336,7 +336,7 @@
 			,{"Name":"PRJ_FILE_STATE_FULL","Value":8}
 			,{"Name":"PRJ_FILE_STATE_TOMBSTONE","Value":16}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"PRJ_CALLBACK_DATA_FLAGS"

@@ -2,6 +2,13 @@
 
 "Constants":[
 	{
+		"Name":"ALL_PROCESSOR_GROUPS"
+		,"Type":{"Kind":"Native","Name":"UInt16"}
+		,"ValueType":"UInt16"
+		,"Value":65535
+		,"Attrs":[]
+	}
+	,{
 		"Name":"FLS_OUT_OF_INDEXES"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -181,6 +188,13 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":4
+		,"Attrs":[]
+	}
+	,{
+		"Name":"INFINITE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":4294967295
 		,"Attrs":[]
 	}
 	,{
@@ -447,34 +461,52 @@
 		,"Flags":false
 		,"Scoped":false
 		,"Values":[
-			{"Name":"PF_ARM_64BIT_LOADSTORE_ATOMIC","Value":25}
-			,{"Name":"PF_ARM_DIVIDE_INSTRUCTION_AVAILABLE","Value":24}
-			,{"Name":"PF_ARM_EXTERNAL_CACHE_AVAILABLE","Value":26}
-			,{"Name":"PF_ARM_FMAC_INSTRUCTIONS_AVAILABLE","Value":27}
-			,{"Name":"PF_ARM_VFP_32_REGISTERS_AVAILABLE","Value":18}
-			,{"Name":"PF_3DNOW_INSTRUCTIONS_AVAILABLE","Value":7}
-			,{"Name":"PF_CHANNELS_ENABLED","Value":16}
+			{"Name":"PF_FLOATING_POINT_PRECISION_ERRATA","Value":0}
+			,{"Name":"PF_FLOATING_POINT_EMULATED","Value":1}
 			,{"Name":"PF_COMPARE_EXCHANGE_DOUBLE","Value":2}
+			,{"Name":"PF_MMX_INSTRUCTIONS_AVAILABLE","Value":3}
+			,{"Name":"PF_PPC_MOVEMEM_64BIT_OK","Value":4}
+			,{"Name":"PF_ALPHA_BYTE_INSTRUCTIONS","Value":5}
+			,{"Name":"PF_XMMI_INSTRUCTIONS_AVAILABLE","Value":6}
+			,{"Name":"PF_3DNOW_INSTRUCTIONS_AVAILABLE","Value":7}
+			,{"Name":"PF_RDTSC_INSTRUCTION_AVAILABLE","Value":8}
+			,{"Name":"PF_PAE_ENABLED","Value":9}
+			,{"Name":"PF_XMMI64_INSTRUCTIONS_AVAILABLE","Value":10}
+			,{"Name":"PF_SSE_DAZ_MODE_AVAILABLE","Value":11}
+			,{"Name":"PF_NX_ENABLED","Value":12}
+			,{"Name":"PF_SSE3_INSTRUCTIONS_AVAILABLE","Value":13}
 			,{"Name":"PF_COMPARE_EXCHANGE128","Value":14}
 			,{"Name":"PF_COMPARE64_EXCHANGE128","Value":15}
-			,{"Name":"PF_FASTFAIL_AVAILABLE","Value":23}
-			,{"Name":"PF_FLOATING_POINT_EMULATED","Value":1}
-			,{"Name":"PF_FLOATING_POINT_PRECISION_ERRATA","Value":0}
-			,{"Name":"PF_MMX_INSTRUCTIONS_AVAILABLE","Value":3}
-			,{"Name":"PF_NX_ENABLED","Value":12}
-			,{"Name":"PF_PAE_ENABLED","Value":9}
-			,{"Name":"PF_RDTSC_INSTRUCTION_AVAILABLE","Value":8}
-			,{"Name":"PF_RDWRFSGSBASE_AVAILABLE","Value":22}
-			,{"Name":"PF_SECOND_LEVEL_ADDRESS_TRANSLATION","Value":20}
-			,{"Name":"PF_SSE3_INSTRUCTIONS_AVAILABLE","Value":13}
-			,{"Name":"PF_VIRT_FIRMWARE_ENABLED","Value":21}
-			,{"Name":"PF_XMMI_INSTRUCTIONS_AVAILABLE","Value":6}
-			,{"Name":"PF_XMMI64_INSTRUCTIONS_AVAILABLE","Value":10}
+			,{"Name":"PF_CHANNELS_ENABLED","Value":16}
 			,{"Name":"PF_XSAVE_ENABLED","Value":17}
+			,{"Name":"PF_ARM_VFP_32_REGISTERS_AVAILABLE","Value":18}
+			,{"Name":"PF_ARM_NEON_INSTRUCTIONS_AVAILABLE","Value":19}
+			,{"Name":"PF_SECOND_LEVEL_ADDRESS_TRANSLATION","Value":20}
+			,{"Name":"PF_VIRT_FIRMWARE_ENABLED","Value":21}
+			,{"Name":"PF_RDWRFSGSBASE_AVAILABLE","Value":22}
+			,{"Name":"PF_FASTFAIL_AVAILABLE","Value":23}
+			,{"Name":"PF_ARM_DIVIDE_INSTRUCTION_AVAILABLE","Value":24}
+			,{"Name":"PF_ARM_64BIT_LOADSTORE_ATOMIC","Value":25}
+			,{"Name":"PF_ARM_EXTERNAL_CACHE_AVAILABLE","Value":26}
+			,{"Name":"PF_ARM_FMAC_INSTRUCTIONS_AVAILABLE","Value":27}
+			,{"Name":"PF_RDRAND_INSTRUCTION_AVAILABLE","Value":28}
 			,{"Name":"PF_ARM_V8_INSTRUCTIONS_AVAILABLE","Value":29}
 			,{"Name":"PF_ARM_V8_CRYPTO_INSTRUCTIONS_AVAILABLE","Value":30}
 			,{"Name":"PF_ARM_V8_CRC32_INSTRUCTIONS_AVAILABLE","Value":31}
+			,{"Name":"PF_RDTSCP_INSTRUCTION_AVAILABLE","Value":32}
+			,{"Name":"PF_RDPID_INSTRUCTION_AVAILABLE","Value":33}
 			,{"Name":"PF_ARM_V81_ATOMIC_INSTRUCTIONS_AVAILABLE","Value":34}
+			,{"Name":"PF_MONITORX_INSTRUCTION_AVAILABLE","Value":35}
+			,{"Name":"PF_SSSE3_INSTRUCTIONS_AVAILABLE","Value":36}
+			,{"Name":"PF_SSE4_1_INSTRUCTIONS_AVAILABLE","Value":37}
+			,{"Name":"PF_SSE4_2_INSTRUCTIONS_AVAILABLE","Value":38}
+			,{"Name":"PF_AVX_INSTRUCTIONS_AVAILABLE","Value":39}
+			,{"Name":"PF_AVX2_INSTRUCTIONS_AVAILABLE","Value":40}
+			,{"Name":"PF_AVX512F_INSTRUCTIONS_AVAILABLE","Value":41}
+			,{"Name":"PF_ERMS_AVAILABLE","Value":42}
+			,{"Name":"PF_ARM_V82_DP_INSTRUCTIONS_AVAILABLE","Value":43}
+			,{"Name":"PF_ARM_V83_JSCVT_INSTRUCTIONS_AVAILABLE","Value":44}
+			,{"Name":"PF_ARM_V83_LRCPC_INSTRUCTIONS_AVAILABLE","Value":45}
 		]
 		,"IntegerBase":"UInt32"
 	}
@@ -624,6 +656,24 @@
 		,"IntegerBase":"UInt32"
 	}
 	,{
+		"Name":"PROCESS_BASIC_INFORMATION"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"ExitStatus","Type":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"PebBaseAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PEB","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":[]}
+			,{"Name":"AffinityMask","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
+			,{"Name":"BasePriority","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
+			,{"Name":"UniqueProcessId","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
+			,{"Name":"InheritedFromUniqueProcessId","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
 		"Name":"PROCESS_CREATION_FLAGS"
 		,"Architectures":[]
 		,"Platform":null
@@ -698,15 +748,6 @@
 		,"IntegerBase":"UInt32"
 	}
 	,{
-		"Name":"TimerQueueHandle"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":"DeleteTimerQueueEx"
-	}
-	,{
 		"Name":"PTP_POOL"
 		,"Architectures":[]
 		,"Platform":null
@@ -716,22 +757,22 @@
 		,"FreeFunc":"CloseThreadpool"
 	}
 	,{
-		"Name":"NamespaceHandle"
+		"Name":"PTP_CLEANUP_GROUP"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"NativeTypedef"
 		,"AlsoUsableFor":null
 		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":"ClosePrivateNamespace"
+		,"FreeFunc":"CloseThreadpoolCleanupGroup"
 	}
 	,{
-		"Name":"BoundaryDescriptorHandle"
+		"Name":"LPPROC_THREAD_ATTRIBUTE_LIST"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"NativeTypedef"
 		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":"DeleteBoundaryDescriptor"
+		,"Def":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
+		,"FreeFunc":null
 	}
 	,{
 		"Name":"PTP_IO"
@@ -779,15 +820,6 @@
 		,"FreeFunc":null
 	}
 	,{
-		"Name":"LPPROC_THREAD_ATTRIBUTE_LIST"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}
-		,"FreeFunc":null
-	}
-	,{
 		"Name":"REASON_CONTEXT"
 		,"Architectures":[]
 		,"Platform":null
@@ -820,7 +852,7 @@
 						,"Size":0
 						,"PackingSize":0
 						,"Fields":[
-							{"Name":"LocalizedReasonModule","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+							{"Name":"LocalizedReasonModule","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 							,{"Name":"LocalizedReasonId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"ReasonStringCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 							,{"Name":"ReasonStrings","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
@@ -861,7 +893,7 @@
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"InitOnce","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_RUN_ONCE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"InitOnce","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"INIT_ONCE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
 			,{"Name":"Parameter","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Optional"]}
 			,{"Name":"Context","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","Optional"]}
 		]
@@ -970,6 +1002,7 @@
 		,"Values":[
 			{"Name":"QUEUE_USER_APC_FLAGS_NONE","Value":0}
 			,{"Name":"QUEUE_USER_APC_FLAGS_SPECIAL_USER_APC","Value":1}
+			,{"Name":"QUEUE_USER_APC_CALLBACK_DATA_CONTEXT","Value":65536}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -1067,7 +1100,7 @@
 			,{"Name":"KernelEnabled","Value":2}
 			,{"Name":"Wow64Container","Value":4}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"PROCESS_MACHINE_INFORMATION"
@@ -1193,6 +1226,212 @@
 		,"IntegerBase":"Int32"
 	}
 	,{
+		"Name":"RTWQPERIODICCALLBACK"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"Void"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"context","Type":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"RTWQ_WORKQUEUE_TYPE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"RTWQ_STANDARD_WORKQUEUE","Value":0}
+			,{"Name":"RTWQ_WINDOW_WORKQUEUE","Value":1}
+			,{"Name":"RTWQ_MULTITHREADED_WORKQUEUE","Value":2}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"IRtwqAsyncResult"
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Kind":"Com"
+		,"Guid":"ac6b7889-0740-4d51-8619-905994a55cc6"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"GetState"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"ppunkState","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"GetStatus"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+				]
+			}
+			,{
+				"Name":"SetStatus"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"hrStatus","Type":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"GetObject"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"ppObject","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"GetStateNoAddRef"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+				]
+			}
+		]
+	}
+	,{
+		"Name":"IRtwqAsyncCallback"
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Kind":"Com"
+		,"Guid":"a27003cf-2354-4f2a-8d6a-ab7cff15437e"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"GetParameters"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"pdwFlags","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+					,{"Name":"pdwQueue","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"Invoke"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"pAsyncResult","Type":{"Kind":"ApiRef","Name":"IRtwqAsyncResult","TargetKind":"Com","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"RTWQASYNCRESULT"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":null
+		,"Interface":{"Kind":"ApiRef","Name":"IRtwqAsyncResult","TargetKind":"Com","Api":"System.Threading","Parents":[]}
+		,"Methods":[
+		]
+	}
+	,{
+		"Name":"IRtwqPlatformEvents"
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Kind":"Com"
+		,"Guid":"63d9255a-7ff1-4b61-8faf-ed6460dacf2b"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"InitializationComplete"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+				]
+			}
+			,{
+				"Name":"ShutdownStart"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+				]
+			}
+			,{
+				"Name":"ShutdownComplete"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+				]
+			}
+		]
+	}
+	,{
 		"Name":"PROCESS_DYNAMIC_EH_CONTINUATION_TARGET"
 		,"Architectures":[]
 		,"Platform":null
@@ -1296,12 +1535,14 @@
 			,{"Name":"ProcessSideChannelIsolationPolicy","Value":14}
 			,{"Name":"ProcessUserShadowStackPolicy","Value":15}
 			,{"Name":"ProcessRedirectionTrustPolicy","Value":16}
-			,{"Name":"MaxProcessMitigationPolicy","Value":17}
+			,{"Name":"ProcessUserPointerAuthPolicy","Value":17}
+			,{"Name":"ProcessSEHOPPolicy","Value":18}
+			,{"Name":"MaxProcessMitigationPolicy","Value":19}
 		]
 		,"IntegerBase":"Int32"
 	}
 	,{
-		"Name":"RTL_RUN_ONCE"
+		"Name":"INIT_ONCE"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Union"
@@ -1314,7 +1555,7 @@
 		]
 	}
 	,{
-		"Name":"RTL_BARRIER"
+		"Name":"SYNCHRONIZATION_BARRIER"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -1331,7 +1572,7 @@
 		]
 	}
 	,{
-		"Name":"RTL_UMS_THREAD_INFO_CLASS"
+		"Name":"UMS_THREAD_INFO_CLASS"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
@@ -1368,7 +1609,7 @@
 		]
 	}
 	,{
-		"Name":"RTL_CRITICAL_SECTION_DEBUG"
+		"Name":"CRITICAL_SECTION_DEBUG"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -1377,26 +1618,26 @@
 		,"Fields":[
 			{"Name":"Type","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"CreatorBackTraceIndex","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"CriticalSection","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_CRITICAL_SECTION","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":[]}
+			,{"Name":"CriticalSection","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRITICAL_SECTION","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":[]}
 			,{"Name":"ProcessLocksList","Type":{"Kind":"ApiRef","Name":"LIST_ENTRY","TargetKind":"Default","Api":"System.Kernel","Parents":[]},"Attrs":[]}
 			,{"Name":"EntryCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ContentionCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"CreatorBackTraceIndexHigh","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"SpareWORD","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"Identifier","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
 	}
 	,{
-		"Name":"RTL_CRITICAL_SECTION"
+		"Name":"CRITICAL_SECTION"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"DebugInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_CRITICAL_SECTION_DEBUG","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":[]}
+			{"Name":"DebugInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRITICAL_SECTION_DEBUG","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":[]}
 			,{"Name":"LockCount","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"RecursionCount","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"OwningThread","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -1407,7 +1648,7 @@
 		]
 	}
 	,{
-		"Name":"RTL_SRWLOCK"
+		"Name":"SRWLOCK"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -1420,7 +1661,7 @@
 		]
 	}
 	,{
-		"Name":"RTL_CONDITION_VARIABLE"
+		"Name":"CONDITION_VARIABLE"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
@@ -1447,6 +1688,40 @@
 		,"Params":[
 			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out"]}
 			,{"Name":"param1","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"WORKERCALLBACKFUNC"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"Void"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out"]}
+		]
+	}
+	,{
+		"Name":"APC_CALLBACK_FUNCTION"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"Void"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"param0","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"param1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out"]}
+			,{"Name":"param2","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out"]}
 		]
 	}
 	,{
@@ -1539,7 +1814,7 @@
 		,"Fields":[
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Pool","Type":{"Kind":"ApiRef","Name":"PTP_POOL","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":[]}
-			,{"Name":"CleanupGroup","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+			,{"Name":"CleanupGroup","Type":{"Kind":"ApiRef","Name":"PTP_CLEANUP_GROUP","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":[]}
 			,{"Name":"CleanupGroupCancelCallback","Type":{"Kind":"ApiRef","Name":"PTP_CLEANUP_GROUP_CANCEL_CALLBACK","TargetKind":"FunctionPointer","Api":"System.Threading","Parents":[]},"Attrs":[]}
 			,{"Name":"RaceDll","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 			,{"Name":"ActivationContext","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
@@ -1574,18 +1849,6 @@
 						,"NestedTypes":[
 						]
 					}
-				]
-			}
-			,{
-				"Name":"_ACTIVATION_CONTEXT"
-				,"Architectures":[]
-				,"Platform":null
-				,"Kind":"Struct"
-				,"Size":0
-				,"PackingSize":0
-				,"Fields":[
-				]
-				,"NestedTypes":[
 				]
 			}
 		]
@@ -1774,6 +2037,7 @@
 			,{"Name":"ProcThreadAttributeMachineType","Value":25}
 			,{"Name":"ProcThreadAttributeComponentFilter","Value":26}
 			,{"Name":"ProcThreadAttributeEnableOptionalXStateFeatures","Value":27}
+			,{"Name":"ProcThreadAttributeTrustedApp","Value":29}
 		]
 		,"IntegerBase":"UInt32"
 	}
@@ -1855,55 +2119,73 @@
 		]
 	}
 	,{
-		"Name":"PROCESS_BASIC_INFORMATION"
+		"Name":"TEB"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Struct"
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"Reserved1","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-			,{"Name":"PebBaseAddress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PEB","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":[]}
-			,{"Name":"Reserved2","Type":{"Kind":"Array","Shape":{"Size":2},"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":[]}
-			,{"Name":"UniqueProcessId","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
-			,{"Name":"Reserved3","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+			{"Name":"Reserved1","Type":{"Kind":"Array","Shape":{"Size":12},"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":[]}
+			,{"Name":"ProcessEnvironmentBlock","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PEB","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":[]}
+			,{"Name":"Reserved2","Type":{"Kind":"Array","Shape":{"Size":399},"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":[]}
+			,{"Name":"Reserved3","Type":{"Kind":"Array","Shape":{"Size":1952},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"TlsSlots","Type":{"Kind":"Array","Shape":{"Size":64},"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":[]}
+			,{"Name":"Reserved4","Type":{"Kind":"Array","Shape":{"Size":8},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"Reserved5","Type":{"Kind":"Array","Shape":{"Size":26},"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":[]}
+			,{"Name":"ReservedForOle","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+			,{"Name":"Reserved6","Type":{"Kind":"Array","Shape":{"Size":4},"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":[]}
+			,{"Name":"TlsExpansionSlots","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
-	}
-	,{
-		"Name":"PROCESSINFOCLASS"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Enum"
-		,"Flags":false
-		,"Scoped":false
-		,"Values":[
-			{"Name":"ProcessBasicInformation","Value":0}
-			,{"Name":"ProcessDebugPort","Value":7}
-			,{"Name":"ProcessWow64Information","Value":26}
-			,{"Name":"ProcessImageFileName","Value":27}
-			,{"Name":"ProcessBreakOnTermination","Value":29}
-		]
-		,"IntegerBase":"Int32"
-	}
-	,{
-		"Name":"THREADINFOCLASS"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Enum"
-		,"Flags":false
-		,"Scoped":false
-		,"Values":[
-			{"Name":"ThreadIsIoPending","Value":16}
-			,{"Name":"ThreadNameInformation","Value":38}
-		]
-		,"IntegerBase":"Int32"
 	}
 ]
 
 ,"Functions":[
 	{
+		"Name":"GetCurrentProcessToken"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"FORCEINLINE"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+		]
+	}
+	,{
+		"Name":"GetCurrentThreadToken"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"FORCEINLINE"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+		]
+	}
+	,{
+		"Name":"GetCurrentThreadEffectiveToken"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"FORCEINLINE"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+		]
+	}
+	,{
 		"Name":"GetProcessWorkingSetSize"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
@@ -2024,7 +2306,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"SRWLock","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_SRWLOCK","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["Out"]}
+			{"Name":"SRWLock","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SRWLOCK","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -2039,7 +2321,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"SRWLock","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_SRWLOCK","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"SRWLock","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SRWLOCK","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
 		]
 	}
 	,{
@@ -2054,7 +2336,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"SRWLock","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_SRWLOCK","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"SRWLock","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SRWLOCK","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
 		]
 	}
 	,{
@@ -2069,7 +2351,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"SRWLock","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_SRWLOCK","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"SRWLock","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SRWLOCK","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
 		]
 	}
 	,{
@@ -2084,7 +2366,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"SRWLock","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_SRWLOCK","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"SRWLock","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SRWLOCK","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
 		]
 	}
 	,{
@@ -2099,7 +2381,7 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"SRWLock","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_SRWLOCK","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"SRWLock","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SRWLOCK","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
 		]
 	}
 	,{
@@ -2114,7 +2396,7 @@
 		,"Platform":"windows6.1"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"SRWLock","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_SRWLOCK","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"SRWLock","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SRWLOCK","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
 		]
 	}
 	,{
@@ -2129,7 +2411,7 @@
 		,"Platform":"windows5.1.2600"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"lpCriticalSection","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_CRITICAL_SECTION","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["Out"]}
+			{"Name":"lpCriticalSection","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRITICAL_SECTION","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -2144,7 +2426,7 @@
 		,"Platform":"windows5.1.2600"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"lpCriticalSection","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_CRITICAL_SECTION","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"lpCriticalSection","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRITICAL_SECTION","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
 		]
 	}
 	,{
@@ -2159,7 +2441,7 @@
 		,"Platform":"windows5.1.2600"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"lpCriticalSection","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_CRITICAL_SECTION","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"lpCriticalSection","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRITICAL_SECTION","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
 		]
 	}
 	,{
@@ -2174,7 +2456,7 @@
 		,"Platform":"windows5.1.2600"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"lpCriticalSection","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_CRITICAL_SECTION","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["Out"]}
+			{"Name":"lpCriticalSection","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRITICAL_SECTION","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["Out"]}
 			,{"Name":"dwSpinCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
@@ -2190,7 +2472,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"lpCriticalSection","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_CRITICAL_SECTION","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["Out"]}
+			{"Name":"lpCriticalSection","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRITICAL_SECTION","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["Out"]}
 			,{"Name":"dwSpinCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
@@ -2207,7 +2489,7 @@
 		,"Platform":"windows5.1.2600"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"lpCriticalSection","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_CRITICAL_SECTION","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"lpCriticalSection","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRITICAL_SECTION","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
 			,{"Name":"dwSpinCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
@@ -2223,7 +2505,7 @@
 		,"Platform":"windows5.1.2600"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"lpCriticalSection","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_CRITICAL_SECTION","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"lpCriticalSection","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRITICAL_SECTION","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
 		]
 	}
 	,{
@@ -2238,7 +2520,7 @@
 		,"Platform":"windows5.1.2600"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"lpCriticalSection","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_CRITICAL_SECTION","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"lpCriticalSection","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRITICAL_SECTION","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
 		]
 	}
 	,{
@@ -2253,7 +2535,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"InitOnce","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_RUN_ONCE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["Out"]}
+			{"Name":"InitOnce","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"INIT_ONCE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -2268,7 +2550,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"InitOnce","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_RUN_ONCE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"InitOnce","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"INIT_ONCE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
 			,{"Name":"InitFn","Type":{"Kind":"ApiRef","Name":"PINIT_ONCE_FN","TargetKind":"FunctionPointer","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Parameter","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Optional"]}
 			,{"Name":"Context","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","Optional"]}
@@ -2286,7 +2568,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"lpInitOnce","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_RUN_ONCE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"lpInitOnce","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"INIT_ONCE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"fPending","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 			,{"Name":"lpContext","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out","Optional"]}
@@ -2304,7 +2586,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"lpInitOnce","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_RUN_ONCE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"lpInitOnce","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"INIT_ONCE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"lpContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
 		]
@@ -2321,7 +2603,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"ConditionVariable","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_CONDITION_VARIABLE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["Out"]}
+			{"Name":"ConditionVariable","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CONDITION_VARIABLE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -2336,7 +2618,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"ConditionVariable","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_CONDITION_VARIABLE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"ConditionVariable","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CONDITION_VARIABLE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
 		]
 	}
 	,{
@@ -2351,7 +2633,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"ConditionVariable","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_CONDITION_VARIABLE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"ConditionVariable","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CONDITION_VARIABLE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
 		]
 	}
 	,{
@@ -2366,8 +2648,8 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"ConditionVariable","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_CONDITION_VARIABLE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
-			,{"Name":"CriticalSection","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_CRITICAL_SECTION","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"ConditionVariable","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CONDITION_VARIABLE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"CriticalSection","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRITICAL_SECTION","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
 			,{"Name":"dwMilliseconds","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
@@ -2383,8 +2665,8 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"ConditionVariable","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_CONDITION_VARIABLE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
-			,{"Name":"SRWLock","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_SRWLOCK","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"ConditionVariable","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CONDITION_VARIABLE","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"SRWLock","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SRWLOCK","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
 			,{"Name":"dwMilliseconds","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
@@ -2457,7 +2739,7 @@
 		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32.dll"
-		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WAIT_EVENT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows5.1.2600"
@@ -2489,7 +2771,7 @@
 		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32.dll"
-		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WAIT_EVENT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows5.1.2600"
@@ -2506,7 +2788,7 @@
 		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32.dll"
-		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WAIT_EVENT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows5.1.2600"
@@ -2687,7 +2969,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hTimer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"lpDueTime","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Const"]}
+			,{"Name":"lpDueTime","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int64"}},"Attrs":["In","Const"]}
 			,{"Name":"lPeriod","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"pfnCompletionRoutine","Type":{"Kind":"ApiRef","Name":"PTIMERAPCROUTINE","TargetKind":"FunctionPointer","Api":"System.Threading","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpArgToCompletionRoutine","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
@@ -2708,7 +2990,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"hTimer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"lpDueTime","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Const"]}
+			,{"Name":"lpDueTime","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int64"}},"Attrs":["In","Const"]}
 			,{"Name":"lPeriod","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"pfnCompletionRoutine","Type":{"Kind":"ApiRef","Name":"PTIMERAPCROUTINE","TargetKind":"FunctionPointer","Api":"System.Threading","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"lpArgToCompletionRoutine","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
@@ -2852,7 +3134,7 @@
 		,"Platform":"windows8.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"lpBarrier","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_BARRIER","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"lpBarrier","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SYNCHRONIZATION_BARRIER","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
@@ -2868,7 +3150,7 @@
 		,"Platform":"windows8.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"lpBarrier","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_BARRIER","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["Out"]}
+			{"Name":"lpBarrier","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SYNCHRONIZATION_BARRIER","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["Out"]}
 			,{"Name":"lTotalThreads","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"lSpinCount","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 		]
@@ -2885,7 +3167,7 @@
 		,"Platform":"windows8.0"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"lpBarrier","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_BARRIER","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"lpBarrier","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SYNCHRONIZATION_BARRIER","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
 		]
 	}
 	,{
@@ -2957,7 +3239,7 @@
 		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32.dll"
-		,"ReturnType":{"Kind":"ApiRef","Name":"WIN32_ERROR","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnType":{"Kind":"ApiRef","Name":"WAIT_EVENT","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows5.1.2600"
@@ -4789,7 +5071,7 @@
 		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32.dll"
-		,"ReturnType":{"Kind":"Native","Name":"IntPtr"}
+		,"ReturnType":{"Kind":"ApiRef","Name":"PTP_CLEANUP_GROUP","TargetKind":"Default","Api":"System.Threading","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.0.6000"
@@ -4809,7 +5091,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"ptpcg","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+			{"Name":"ptpcg","Type":{"Kind":"ApiRef","Name":"PTP_CLEANUP_GROUP","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 			,{"Name":"fCancelPendingCallbacks","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pvCleanupContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out","Optional"]}
 		]
@@ -4826,7 +5108,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"ptpcg","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":["In"]}
+			{"Name":"ptpcg","Type":{"Kind":"ApiRef","Name":"PTP_CLEANUP_GROUP","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -4891,7 +5173,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"pci","Type":{"Kind":"ApiRef","Name":"PTP_CALLBACK_INSTANCE","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
-			,{"Name":"pcs","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RTL_CRITICAL_SECTION","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"pcs","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CRITICAL_SECTION","TargetKind":"Default","Api":"System.Threading","Parents":[]}},"Attrs":["In","Out"]}
 		]
 	}
 	,{
@@ -4907,7 +5189,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"pci","Type":{"Kind":"ApiRef","Name":"PTP_CALLBACK_INSTANCE","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
-			,{"Name":"mod","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"mod","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -5350,7 +5632,7 @@
 		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"KERNEL32.dll"
-		,"ReturnType":{"Kind":"ApiRef","Name":"NamespaceHandle","TargetKind":"Default","Api":"System.Threading","Parents":[]}
+		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":null
@@ -5367,7 +5649,7 @@
 		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"KERNEL32.dll"
-		,"ReturnType":{"Kind":"ApiRef","Name":"NamespaceHandle","TargetKind":"Default","Api":"System.Threading","Parents":[]}
+		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":null
@@ -5389,7 +5671,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"Handle","Type":{"Kind":"ApiRef","Name":"NamespaceHandle","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
+			{"Name":"Handle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Flags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
@@ -5399,7 +5681,7 @@
 		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"KERNEL32.dll"
-		,"ReturnType":{"Kind":"ApiRef","Name":"BoundaryDescriptorHandle","TargetKind":"Default","Api":"System.Threading","Parents":[]}
+		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":null
@@ -5437,7 +5719,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"BoundaryDescriptor","Type":{"Kind":"ApiRef","Name":"BoundaryDescriptorHandle","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
+			{"Name":"BoundaryDescriptor","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -5665,9 +5947,9 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"Context","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
-			,{"Name":"Period","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"Period","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int64"}},"Attrs":["In"]}
 			,{"Name":"ThreadOrderingGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Out"]}
-			,{"Name":"Timeout","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"Timeout","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int64"}},"Attrs":["In","Optional"]}
 		]
 	}
 	,{
@@ -5683,9 +5965,9 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"Context","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
-			,{"Name":"Period","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"Period","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int64"}},"Attrs":["In"]}
 			,{"Name":"ThreadOrderingGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Out"]}
-			,{"Name":"Timeout","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"Timeout","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int64"}},"Attrs":["In","Optional"]}
 			,{"Name":"TaskName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 		]
 	}
@@ -5702,9 +5984,9 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"Context","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
-			,{"Name":"Period","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"Period","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int64"}},"Attrs":["In"]}
 			,{"Name":"ThreadOrderingGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Out"]}
-			,{"Name":"Timeout","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"Timeout","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int64"}},"Attrs":["In","Optional"]}
 			,{"Name":"TaskName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 		]
 	}
@@ -5784,6 +6066,536 @@
 		,"Params":[
 			{"Name":"AvrtHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"SystemResponsivenessValue","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"RtwqStartup"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Attrs":[]
+		,"Params":[
+		]
+	}
+	,{
+		"Name":"RtwqShutdown"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Attrs":[]
+		,"Params":[
+		]
+	}
+	,{
+		"Name":"RtwqLockWorkQueue"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"workQueueId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"RtwqUnlockWorkQueue"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"workQueueId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"RtwqLockSharedWorkQueue"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"usageClass","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+			,{"Name":"basePriority","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
+			,{"Name":"taskId","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
+			,{"Name":"id","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"RtwqJoinWorkQueue"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"workQueueId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"hFile","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"out","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"RtwqUnjoinWorkQueue"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"workQueueId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"hFile","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"RtwqCreateAsyncResult"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"appObject","Type":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+			,{"Name":"callback","Type":{"Kind":"ApiRef","Name":"IRtwqAsyncCallback","TargetKind":"Com","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
+			,{"Name":"appState","Type":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+			,{"Name":"asyncResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IRtwqAsyncResult","TargetKind":"Com","Api":"System.Threading","Parents":[]}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"RtwqInvokeCallback"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"result","Type":{"Kind":"ApiRef","Name":"IRtwqAsyncResult","TargetKind":"Com","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"RtwqLockPlatform"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Attrs":[]
+		,"Params":[
+		]
+	}
+	,{
+		"Name":"RtwqUnlockPlatform"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Attrs":[]
+		,"Params":[
+		]
+	}
+	,{
+		"Name":"RtwqRegisterPlatformWithMMCSS"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"usageClass","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+			,{"Name":"taskId","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
+			,{"Name":"lPriority","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"RtwqUnregisterPlatformFromMMCSS"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Attrs":[]
+		,"Params":[
+		]
+	}
+	,{
+		"Name":"RtwqPutWorkItem"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"dwQueue","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"lPriority","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
+			,{"Name":"result","Type":{"Kind":"ApiRef","Name":"IRtwqAsyncResult","TargetKind":"Com","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"RtwqPutWaitingWorkItem"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hEvent","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"lPriority","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
+			,{"Name":"result","Type":{"Kind":"ApiRef","Name":"IRtwqAsyncResult","TargetKind":"Com","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
+			,{"Name":"key","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":["Out","Optional"]}
+		]
+	}
+	,{
+		"Name":"RtwqAllocateSerialWorkQueue"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"workQueueIdIn","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"workQueueIdOut","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"RtwqScheduleWorkItem"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"result","Type":{"Kind":"ApiRef","Name":"IRtwqAsyncResult","TargetKind":"Com","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
+			,{"Name":"Timeout","Type":{"Kind":"Native","Name":"Int64"},"Attrs":["In"]}
+			,{"Name":"key","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":["Out","Optional"]}
+		]
+	}
+	,{
+		"Name":"RtwqAddPeriodicCallback"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"Callback","Type":{"Kind":"ApiRef","Name":"RTWQPERIODICCALLBACK","TargetKind":"FunctionPointer","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
+			,{"Name":"context","Type":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+			,{"Name":"key","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
+		]
+	}
+	,{
+		"Name":"RtwqRemovePeriodicCallback"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"dwKey","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"RtwqCancelWorkItem"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"Key","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"RtwqAllocateWorkQueue"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"WorkQueueType","Type":{"Kind":"ApiRef","Name":"RTWQ_WORKQUEUE_TYPE","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
+			,{"Name":"workQueueId","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"RtwqBeginRegisterWorkQueueWithMMCSS"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"workQueueId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"usageClass","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+			,{"Name":"dwTaskId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"lPriority","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
+			,{"Name":"doneCallback","Type":{"Kind":"ApiRef","Name":"IRtwqAsyncCallback","TargetKind":"Com","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
+			,{"Name":"doneState","Type":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"RtwqBeginUnregisterWorkQueueWithMMCSS"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"workQueueId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"doneCallback","Type":{"Kind":"ApiRef","Name":"IRtwqAsyncCallback","TargetKind":"Com","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
+			,{"Name":"doneState","Type":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"RtwqEndRegisterWorkQueueWithMMCSS"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"result","Type":{"Kind":"ApiRef","Name":"IRtwqAsyncResult","TargetKind":"Com","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
+			,{"Name":"taskId","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"RtwqGetWorkQueueMMCSSClass"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"workQueueId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"usageClass","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["Out","Optional"]}
+			,{"Name":"usageClassLength","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
+		]
+	}
+	,{
+		"Name":"RtwqGetWorkQueueMMCSSTaskId"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"workQueueId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"taskId","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"RtwqGetWorkQueueMMCSSPriority"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"workQueueId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"priority","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"RtwqRegisterPlatformEvents"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"platformEvents","Type":{"Kind":"ApiRef","Name":"IRtwqPlatformEvents","TargetKind":"Com","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"RtwqUnregisterPlatformEvents"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"platformEvents","Type":{"Kind":"ApiRef","Name":"IRtwqPlatformEvents","TargetKind":"Com","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"RtwqSetLongRunning"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows8.1"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"workQueueId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"enable","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"RtwqSetDeadline"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows10.0.10240"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"workQueueId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"deadlineInHNS","Type":{"Kind":"Native","Name":"Int64"},"Attrs":["In"]}
+			,{"Name":"pRequest","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"RtwqSetDeadline2"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows10.0.10240"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"workQueueId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"deadlineInHNS","Type":{"Kind":"Native","Name":"Int64"},"Attrs":["In"]}
+			,{"Name":"preDeadlineInHNS","Type":{"Kind":"Native","Name":"Int64"},"Attrs":["In"]}
+			,{"Name":"pRequest","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"RtwqCancelDeadline"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"RTWorkQ.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"pRequest","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -6160,7 +6972,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"UmsThread","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
-			,{"Name":"UmsThreadInfoClass","Type":{"Kind":"ApiRef","Name":"RTL_UMS_THREAD_INFO_CLASS","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
+			,{"Name":"UmsThreadInfoClass","Type":{"Kind":"ApiRef","Name":"UMS_THREAD_INFO_CLASS","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 			,{"Name":"UmsThreadInformation","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":3}]}
 			,{"Name":"UmsThreadInformationLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"ReturnLength","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
@@ -6179,7 +6991,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"UmsThread","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
-			,{"Name":"UmsThreadInfoClass","Type":{"Kind":"ApiRef","Name":"RTL_UMS_THREAD_INFO_CLASS","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
+			,{"Name":"UmsThreadInfoClass","Type":{"Kind":"ApiRef","Name":"UMS_THREAD_INFO_CLASS","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
 			,{"Name":"UmsThreadInformation","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
 			,{"Name":"UmsThreadInformationLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
@@ -6325,6 +7137,24 @@
 		]
 	}
 	,{
+		"Name":"SignalObjectAndWait"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":true
+		,"DllImport":"KERNEL32.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"WAIT_EVENT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":"windows5.1.2600"
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hObjectToSignal","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"hObjectToWaitOn","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"dwMilliseconds","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"bAlertable","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
 		"Name":"CreateSemaphoreA"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
@@ -6340,6 +7170,40 @@
 			,{"Name":"lInitialCount","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"lMaximumCount","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"lpName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
+		]
+	}
+	,{
+		"Name":"CreateWaitableTimerA"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"KERNEL32.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"lpTimerAttributes","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_ATTRIBUTES","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"bManualReset","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"lpTimerName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
+		]
+	}
+	,{
+		"Name":"OpenWaitableTimerA"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"KERNEL32.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"dwDesiredAccess","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"bInheritHandle","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"lpTimerName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 		]
 	}
 	,{
@@ -6359,6 +7223,24 @@
 			,{"Name":"lMaximumCount","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"lpName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["Reserved","Optional"]}
+			,{"Name":"dwDesiredAccess","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"CreateWaitableTimerExA"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"KERNEL32.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"lpTimerAttributes","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SECURITY_ATTRIBUTES","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"lpTimerName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
+			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"dwDesiredAccess","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
@@ -6517,12 +7399,28 @@
 		]
 	}
 	,{
+		"Name":"CancelTimerQueueTimer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"KERNEL32.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"TimerQueue","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"Timer","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
 		"Name":"CreatePrivateNamespaceA"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32.dll"
-		,"ReturnType":{"Kind":"ApiRef","Name":"NamespaceHandle","TargetKind":"Default","Api":"System.Threading","Parents":[]}
+		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.0.6000"
@@ -6539,7 +7437,7 @@
 		,"NoReturn":false
 		,"SetLastError":false
 		,"DllImport":"KERNEL32.dll"
-		,"ReturnType":{"Kind":"ApiRef","Name":"NamespaceHandle","TargetKind":"Default","Api":"System.Threading","Parents":[]}
+		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.0.6000"
@@ -6555,7 +7453,7 @@
 		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"KERNEL32.dll"
-		,"ReturnType":{"Kind":"ApiRef","Name":"BoundaryDescriptorHandle","TargetKind":"Default","Api":"System.Threading","Parents":[]}
+		,"ReturnType":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.0.6000"
@@ -6751,62 +7649,6 @@
 			,{"Name":"NodeNumber","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out"]}
 		]
 	}
-	,{
-		"Name":"NtQueryInformationProcess"
-		,"CallingConvention":"Default"
-		,"NoReturn":false
-		,"SetLastError":false
-		,"DllImport":"ntdll.dll"
-		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ReturnAttrs":[]
-		,"Architectures":[]
-		,"Platform":null
-		,"Attrs":[]
-		,"Params":[
-			{"Name":"ProcessHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"ProcessInformationClass","Type":{"Kind":"ApiRef","Name":"PROCESSINFOCLASS","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
-			,{"Name":"ProcessInformation","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out"]}
-			,{"Name":"ProcessInformationLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"ReturnLength","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
-		]
-	}
-	,{
-		"Name":"NtQueryInformationThread"
-		,"CallingConvention":"Default"
-		,"NoReturn":false
-		,"SetLastError":false
-		,"DllImport":"ntdll.dll"
-		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ReturnAttrs":[]
-		,"Architectures":[]
-		,"Platform":null
-		,"Attrs":[]
-		,"Params":[
-			{"Name":"ThreadHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"ThreadInformationClass","Type":{"Kind":"ApiRef","Name":"THREADINFOCLASS","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
-			,{"Name":"ThreadInformation","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Out"]}
-			,{"Name":"ThreadInformationLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"ReturnLength","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
-		]
-	}
-	,{
-		"Name":"NtSetInformationThread"
-		,"CallingConvention":"Default"
-		,"NoReturn":false
-		,"SetLastError":false
-		,"DllImport":"ntdll.dll"
-		,"ReturnType":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]}
-		,"ReturnAttrs":[]
-		,"Architectures":[]
-		,"Platform":null
-		,"Attrs":[]
-		,"Params":[
-			{"Name":"ThreadHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"ThreadInformationClass","Type":{"Kind":"ApiRef","Name":"THREADINFOCLASS","TargetKind":"Default","Api":"System.Threading","Parents":[]},"Attrs":["In"]}
-			,{"Name":"ThreadInformation","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":3}]}
-			,{"Name":"ThreadInformationLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-		]
-	}
 ]
 
 ,"UnicodeAliases":[
@@ -6815,10 +7657,13 @@
 	,"CreateMutex"
 	,"CreateEvent"
 	,"OpenEvent"
+	,"OpenWaitableTimer"
 	,"CreateMutexEx"
 	,"CreateEventEx"
 	,"CreateSemaphoreEx"
+	,"CreateWaitableTimerEx"
 	,"CreateSemaphore"
+	,"CreateWaitableTimer"
 	,"CreateProcess"
 	,"GetStartupInfo"
 	,"CreateProcessAsUser"

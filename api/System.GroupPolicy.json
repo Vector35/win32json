@@ -352,6 +352,34 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"REGISTRY_EXTENSION_GUID"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"35378eac-683f-11d2-a89a-00c04fbbcfa2"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"GROUP_POLICY_TRIGGER_EVENT_PROVIDER_GUID"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"bd2f4252-5e1e-49fc-9a30-f3978ad89ee2"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"MACHINE_POLICY_PRESENT_TRIGGER_GUID"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"659fcae6-5bdb-4da9-b1ff-ca2a178d46e0"
+		,"Attrs":[]
+	}
+	,{
+		"Name":"USER_POLICY_PRESENT_TRIGGER_GUID"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"54fb46c8-f089-464c-b1fd-59d1b62c3b50"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"FLAG_NO_GPO_FILTER"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -583,6 +611,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"ADMXCOMMENTS_EXTENSION_GUID"
+		,"Type":{"Kind":"Native","Name":"Guid"}
+		,"ValueType":"String"
+		,"Value":"6c5a2a86-9eb3-42b9-aa83-a7371ba011b9"
+		,"Attrs":[]
+	}
+	,{
 		"Name":"CLSID_RSOPSnapIn"
 		,"Type":{"Kind":"Native","Name":"Guid"}
 		,"ValueType":"String"
@@ -615,55 +650,6 @@
 		,"Type":{"Kind":"Native","Name":"Guid"}
 		,"ValueType":"String"
 		,"Value":"e52c5ce3-fd27-4402-84de-d9a5f2858910"
-		,"Attrs":[]
-	}
-	,{
-		"Name":"GPO_SECTION_ROOT"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":0
-		,"Attrs":[]
-	}
-	,{
-		"Name":"GPO_SECTION_USER"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1
-		,"Attrs":[]
-	}
-	,{
-		"Name":"GPO_SECTION_MACHINE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2
-		,"Attrs":[]
-	}
-	,{
-		"Name":"GPO_OPEN_LOAD_REGISTRY"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1
-		,"Attrs":[]
-	}
-	,{
-		"Name":"GPO_OPEN_READ_ONLY"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2
-		,"Attrs":[]
-	}
-	,{
-		"Name":"GPO_OPTION_DISABLE_USER"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1
-		,"Attrs":[]
-	}
-	,{
-		"Name":"GPO_OPTION_DISABLE_MACHINE"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2
 		,"Attrs":[]
 	}
 	,{
@@ -726,251 +712,44 @@
 
 ,"Types":[
 	{
-		"Name":"CriticalPolicySectionHandle"
+		"Name":"GPO_OPEN_FLAGS"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":"LeaveCriticalPolicySection"
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"GPO_OPEN_LOAD_REGISTRY","Value":1}
+			,{"Name":"GPO_OPEN_READ_ONLY","Value":2}
+		]
+		,"IntegerBase":"UInt32"
 	}
 	,{
-		"Name":"GPM"
+		"Name":"GPO_OPTIONS"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"f5694708-88fe-4b35-babf-e56162d5fbc8"
+		,"Kind":"Enum"
+		,"Flags":true
+		,"Scoped":false
+		,"Values":[
+			{"Name":"GPO_OPTION_DISABLE_USER","Value":1}
+			,{"Name":"GPO_OPTION_DISABLE_MACHINE","Value":2}
+		]
+		,"IntegerBase":"UInt32"
 	}
 	,{
-		"Name":"GPMDomain"
+		"Name":"GPO_SECTION"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"710901be-1050-4cb1-838a-c5cff259e183"
-	}
-	,{
-		"Name":"GPMSitesContainer"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"229f5c42-852c-4b30-945f-c522be9bd386"
-	}
-	,{
-		"Name":"GPMBackupDir"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"fce4a59d-0f21-4afa-b859-e6d0c62cd10c"
-	}
-	,{
-		"Name":"GPMSOM"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"32d93fac-450e-44cf-829c-8b22ff6bdae1"
-	}
-	,{
-		"Name":"GPMSearchCriteria"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"17aaca26-5ce0-44fa-8cc0-5259e6483566"
-	}
-	,{
-		"Name":"GPMPermission"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"5871a40a-e9c0-46ec-913e-944ef9225a94"
-	}
-	,{
-		"Name":"GPMSecurityInfo"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"547a5e8f-9162-4516-a4df-9ddb9686d846"
-	}
-	,{
-		"Name":"GPMBackup"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"ed1a54b8-5efa-482a-93c0-8ad86f0d68c3"
-	}
-	,{
-		"Name":"GPMBackupCollection"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"eb8f035b-70db-4a9f-9676-37c25994e9dc"
-	}
-	,{
-		"Name":"GPMSOMCollection"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"24c1f147-3720-4f5b-a9c3-06b4e4f931d2"
-	}
-	,{
-		"Name":"GPMWMIFilter"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"626745d8-0dea-4062-bf60-cfc5b1ca1286"
-	}
-	,{
-		"Name":"GPMWMIFilterCollection"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"74dc6d28-e820-47d6-a0b8-f08d93d7fa33"
-	}
-	,{
-		"Name":"GPMRSOP"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"489b0caf-9ec2-4eb7-91f5-b6f71d43da8c"
-	}
-	,{
-		"Name":"GPMGPO"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"d2ce2994-59b5-4064-b581-4d68486a16c4"
-	}
-	,{
-		"Name":"GPMGPOCollection"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"7a057325-832d-4de3-a41f-c780436a4e09"
-	}
-	,{
-		"Name":"GPMGPOLink"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"c1df9880-5303-42c6-8a3c-0488e1bf7364"
-	}
-	,{
-		"Name":"GPMGPOLinksCollection"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"f6ed581a-49a5-47e2-b771-fd8dc02b6259"
-	}
-	,{
-		"Name":"GPMAsyncCancel"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"372796a9-76ec-479d-ad6c-556318ed5f9d"
-	}
-	,{
-		"Name":"GPMStatusMsgCollection"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"2824e4be-4bcc-4cac-9e60-0e3ed7f12496"
-	}
-	,{
-		"Name":"GPMStatusMessage"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"4b77cc94-d255-409b-bc62-370881715a19"
-	}
-	,{
-		"Name":"GPMTrustee"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"c54a700d-19b6-4211-bcb0-e8e2475e471e"
-	}
-	,{
-		"Name":"GPMClientSideExtension"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"c1a2e70e-659c-4b1a-940b-f88b0af9c8a4"
-	}
-	,{
-		"Name":"GPMCSECollection"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"cf92b828-2d44-4b61-b10a-b327afd42da8"
-	}
-	,{
-		"Name":"GPMConstants"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"3855e880-cd9e-4d0c-9eaf-1579283a1888"
-	}
-	,{
-		"Name":"GPMResult"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"92101ac0-9287-4206-a3b2-4bdb73d225f6"
-	}
-	,{
-		"Name":"GPMMapEntryCollection"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"0cf75d5b-a3a1-4c55-b4fe-9e149c41f66d"
-	}
-	,{
-		"Name":"GPMMapEntry"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"8c975253-5431-4471-b35d-0626c928258a"
-	}
-	,{
-		"Name":"GPMMigrationTable"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"55af4043-2a06-4f72-abef-631b44079c76"
-	}
-	,{
-		"Name":"GPMBackupDirEx"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"e8c0988a-cf03-4c5b-8be2-2aa9ad32aada"
-	}
-	,{
-		"Name":"GPMStarterGPOBackupCollection"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"e75ea59d-1aeb-4cb5-a78a-281daa582406"
-	}
-	,{
-		"Name":"GPMStarterGPOBackup"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"389e400a-d8ef-455b-a861-5f9ca34a6a02"
-	}
-	,{
-		"Name":"GPMTemplate"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"ecf1d454-71da-4e2f-a8c0-8185465911d9"
-	}
-	,{
-		"Name":"GPMStarterGPOCollection"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"82f8aa8b-49ba-43b2-956e-3397f9b94c3a"
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"GPO_SECTION_ROOT","Value":0}
+			,{"Name":"GPO_SECTION_USER","Value":1}
+			,{"Name":"GPO_SECTION_MACHINE","Value":2}
+		]
+		,"IntegerBase":"UInt32"
 	}
 	,{
 		"Name":"GPMRSOPMode"
@@ -1411,8 +1190,8 @@
 				,"Params":[
 					{"Name":"pIGPMBackup","Type":{"Kind":"ApiRef","Name":"IGPMBackup","TargetKind":"Com","Api":"System.GroupPolicy","Parents":[]},"Attrs":["In"]}
 					,{"Name":"lDCFlags","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"pvarGPMProgress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"pvarGPMCancel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"pvarGPMProgress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pvarGPMCancel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"ppIGPMResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IGPMResult","TargetKind":"Com","Api":"System.GroupPolicy","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -1643,7 +1422,7 @@
 				,"Params":[
 					{"Name":"searchProperty","Type":{"Kind":"ApiRef","Name":"GPMSearchProperty","TargetKind":"Default","Api":"System.GroupPolicy","Parents":[]},"Attrs":["In"]}
 					,{"Name":"searchOperation","Type":{"Kind":"ApiRef","Name":"GPMSearchOperation","TargetKind":"Default","Api":"System.GroupPolicy","Parents":[]},"Attrs":["In"]}
-					,{"Name":"varValue","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"varValue","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 				]
 			}
 		]
@@ -1864,7 +1643,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"lIndex","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2072,8 +1851,8 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"gpmReportType","Type":{"Kind":"ApiRef","Name":"GPMReportType","TargetKind":"Default","Api":"System.GroupPolicy","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pvarGPMProgress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"pvarGPMCancel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"pvarGPMProgress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pvarGPMCancel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"ppIGPMResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IGPMResult","TargetKind":"Com","Api":"System.GroupPolicy","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -2131,7 +1910,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"lIndex","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2364,7 +2143,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"lIndex","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2484,7 +2263,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pQryList","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					{"Name":"pQryList","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2553,7 +2332,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"lIndex","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2883,7 +2662,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"varVal","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					{"Name":"varVal","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -2899,7 +2678,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"varVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					{"Name":"varVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2915,7 +2694,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"varVal","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					{"Name":"varVal","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -2931,7 +2710,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"varVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					{"Name":"varVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -3011,7 +2790,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"varVal","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					{"Name":"varVal","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -3027,7 +2806,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"varVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					{"Name":"varVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -3043,7 +2822,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"varVal","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					{"Name":"varVal","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -3059,7 +2838,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"varVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					{"Name":"varVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -3073,7 +2852,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"varVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					{"Name":"varVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -3114,8 +2893,8 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"gpmReportType","Type":{"Kind":"ApiRef","Name":"GPMReportType","TargetKind":"Default","Api":"System.GroupPolicy","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pvarGPMProgress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"pvarGPMCancel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"pvarGPMProgress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pvarGPMCancel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"ppIGPMResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IGPMResult","TargetKind":"Com","Api":"System.GroupPolicy","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -3459,8 +3238,8 @@
 				,"Params":[
 					{"Name":"bstrBackupDir","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"bstrComment","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pvarGPMProgress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"pvarGPMCancel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"pvarGPMProgress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pvarGPMCancel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"ppIGPMResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IGPMResult","TargetKind":"Com","Api":"System.GroupPolicy","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -3477,9 +3256,9 @@
 				,"Params":[
 					{"Name":"lFlags","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"pIGPMBackup","Type":{"Kind":"ApiRef","Name":"IGPMBackup","TargetKind":"Com","Api":"System.GroupPolicy","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pvarMigrationTable","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"pvarGPMProgress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"pvarGPMCancel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"pvarMigrationTable","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pvarGPMProgress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pvarGPMCancel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"ppIGPMResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IGPMResult","TargetKind":"Com","Api":"System.GroupPolicy","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -3495,8 +3274,8 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"gpmReportType","Type":{"Kind":"ApiRef","Name":"GPMReportType","TargetKind":"Default","Api":"System.GroupPolicy","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pvarGPMProgress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"pvarGPMCancel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"pvarGPMProgress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pvarGPMCancel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"ppIGPMResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IGPMResult","TargetKind":"Com","Api":"System.GroupPolicy","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -3529,10 +3308,10 @@
 				,"Params":[
 					{"Name":"lFlags","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"pIGPMDomain","Type":{"Kind":"ApiRef","Name":"IGPMDomain","TargetKind":"Com","Api":"System.GroupPolicy","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pvarNewDisplayName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"pvarMigrationTable","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"pvarGPMProgress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"pvarGPMCancel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"pvarNewDisplayName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pvarMigrationTable","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pvarGPMProgress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pvarGPMCancel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"ppIGPMResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IGPMResult","TargetKind":"Com","Api":"System.GroupPolicy","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -3631,7 +3410,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"lIndex","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -3839,7 +3618,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"lIndex","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -3896,7 +3675,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"lIndex","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -4032,7 +3811,7 @@
 					{"Name":"lProgressNumerator","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"lProgressDenominator","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"hrStatus","Type":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
 					,{"Name":"ppIGPMStatusMsgCollection","Type":{"Kind":"ApiRef","Name":"IGPMStatusMsgCollection","TargetKind":"Com","Api":"System.GroupPolicy","Parents":[]},"Attrs":["In"]}
 				]
 			}
@@ -4074,7 +3853,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"lIndex","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -5203,7 +4982,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pvarResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					{"Name":"pvarResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -5257,7 +5036,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"lIndex","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -5386,7 +5165,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"lFlags","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"var","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"var","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -5402,7 +5181,7 @@
 				,"Params":[
 					{"Name":"bstrSource","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"gpmEntryType","Type":{"Kind":"ApiRef","Name":"GPMEntryType","TargetKind":"Default","Api":"System.GroupPolicy","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pvarDestination","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pvarDestination","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
 					,{"Name":"ppEntry","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IGPMMapEntry","TargetKind":"Com","Api":"System.GroupPolicy","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -5447,7 +5226,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"bstrSource","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pvarDestination","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pvarDestination","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
 					,{"Name":"ppEntry","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IGPMMapEntry","TargetKind":"Com","Api":"System.GroupPolicy","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -5559,7 +5338,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"bstrID","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pvarBackup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pvarBackup","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -5574,7 +5353,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pIGPMSearchCriteria","Type":{"Kind":"ApiRef","Name":"IGPMSearchCriteria","TargetKind":"Com","Api":"System.GroupPolicy","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pvarBackupCollection","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pvarBackupCollection","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -5615,7 +5394,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"lIndex","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -5797,8 +5576,8 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"gpmReportType","Type":{"Kind":"ApiRef","Name":"GPMReportType","TargetKind":"Default","Api":"System.GroupPolicy","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pvarGPMProgress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"pvarGPMCancel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"pvarGPMProgress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pvarGPMCancel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"ppIGPMResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IGPMResult","TargetKind":"Com","Api":"System.GroupPolicy","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -6104,13 +5883,13 @@
 					{"Name":"bstrSaveFile","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"bOverwrite","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"bSaveAsSystem","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"bstrLanguage","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"bstrAuthor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"bstrProduct","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"bstrUniqueID","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"bstrVersion","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"pvarGPMProgress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"pvarGPMCancel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"bstrLanguage","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"bstrAuthor","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"bstrProduct","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"bstrUniqueID","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"bstrVersion","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pvarGPMProgress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pvarGPMCancel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"ppIGPMResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IGPMResult","TargetKind":"Com","Api":"System.GroupPolicy","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -6127,8 +5906,8 @@
 				,"Params":[
 					{"Name":"bstrBackupDir","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"bstrComment","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pvarGPMProgress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"pvarGPMCancel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"pvarGPMProgress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pvarGPMCancel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"ppIGPMResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IGPMResult","TargetKind":"Com","Api":"System.GroupPolicy","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -6143,9 +5922,9 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"pvarNewDisplayName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"pvarGPMProgress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"pvarGPMCancel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
+					{"Name":"pvarNewDisplayName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pvarGPMProgress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pvarGPMCancel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
 					,{"Name":"ppIGPMResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IGPMResult","TargetKind":"Com","Api":"System.GroupPolicy","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -6161,8 +5940,8 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"gpmReportType","Type":{"Kind":"ApiRef","Name":"GPMReportType","TargetKind":"Default","Api":"System.GroupPolicy","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pvarGPMProgress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"pvarGPMCancel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pvarGPMProgress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pvarGPMCancel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
 					,{"Name":"ppIGPMResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IGPMResult","TargetKind":"Com","Api":"System.GroupPolicy","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -6248,7 +6027,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"lIndex","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -6349,8 +6128,8 @@
 				,"Params":[
 					{"Name":"bstrLoadFile","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"bOverwrite","Type":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pvarGPMProgress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"pvarGPMCancel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"pvarGPMProgress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pvarGPMCancel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"ppIGPMResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IGPMResult","TargetKind":"Com","Api":"System.GroupPolicy","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -6366,8 +6145,8 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pIGPMTmplBackup","Type":{"Kind":"ApiRef","Name":"IGPMStarterGPOBackup","TargetKind":"Com","Api":"System.GroupPolicy","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pvarGPMProgress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"pvarGPMCancel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"pvarGPMProgress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pvarGPMCancel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"ppIGPMResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IGPMResult","TargetKind":"Com","Api":"System.GroupPolicy","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -6685,8 +6464,8 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"gpmReportType","Type":{"Kind":"ApiRef","Name":"GPMReportType","TargetKind":"Default","Api":"System.GroupPolicy","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pvarGPMProgress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In"]}
-					,{"Name":"pvarGPMCancel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"pvarGPMProgress","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In"]}
+					,{"Name":"pvarGPMCancel","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"ppIGPMResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IGPMResult","TargetKind":"Com","Api":"System.GroupPolicy","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -6797,6 +6576,244 @@
 				]
 			}
 		]
+	}
+	,{
+		"Name":"GPM"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"f5694708-88fe-4b35-babf-e56162d5fbc8"
+	}
+	,{
+		"Name":"GPMDomain"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"710901be-1050-4cb1-838a-c5cff259e183"
+	}
+	,{
+		"Name":"GPMSitesContainer"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"229f5c42-852c-4b30-945f-c522be9bd386"
+	}
+	,{
+		"Name":"GPMBackupDir"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"fce4a59d-0f21-4afa-b859-e6d0c62cd10c"
+	}
+	,{
+		"Name":"GPMSOM"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"32d93fac-450e-44cf-829c-8b22ff6bdae1"
+	}
+	,{
+		"Name":"GPMSearchCriteria"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"17aaca26-5ce0-44fa-8cc0-5259e6483566"
+	}
+	,{
+		"Name":"GPMPermission"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"5871a40a-e9c0-46ec-913e-944ef9225a94"
+	}
+	,{
+		"Name":"GPMSecurityInfo"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"547a5e8f-9162-4516-a4df-9ddb9686d846"
+	}
+	,{
+		"Name":"GPMBackup"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"ed1a54b8-5efa-482a-93c0-8ad86f0d68c3"
+	}
+	,{
+		"Name":"GPMBackupCollection"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"eb8f035b-70db-4a9f-9676-37c25994e9dc"
+	}
+	,{
+		"Name":"GPMSOMCollection"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"24c1f147-3720-4f5b-a9c3-06b4e4f931d2"
+	}
+	,{
+		"Name":"GPMWMIFilter"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"626745d8-0dea-4062-bf60-cfc5b1ca1286"
+	}
+	,{
+		"Name":"GPMWMIFilterCollection"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"74dc6d28-e820-47d6-a0b8-f08d93d7fa33"
+	}
+	,{
+		"Name":"GPMRSOP"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"489b0caf-9ec2-4eb7-91f5-b6f71d43da8c"
+	}
+	,{
+		"Name":"GPMGPO"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"d2ce2994-59b5-4064-b581-4d68486a16c4"
+	}
+	,{
+		"Name":"GPMGPOCollection"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"7a057325-832d-4de3-a41f-c780436a4e09"
+	}
+	,{
+		"Name":"GPMGPOLink"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"c1df9880-5303-42c6-8a3c-0488e1bf7364"
+	}
+	,{
+		"Name":"GPMGPOLinksCollection"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"f6ed581a-49a5-47e2-b771-fd8dc02b6259"
+	}
+	,{
+		"Name":"GPMAsyncCancel"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"372796a9-76ec-479d-ad6c-556318ed5f9d"
+	}
+	,{
+		"Name":"GPMStatusMsgCollection"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"2824e4be-4bcc-4cac-9e60-0e3ed7f12496"
+	}
+	,{
+		"Name":"GPMStatusMessage"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"4b77cc94-d255-409b-bc62-370881715a19"
+	}
+	,{
+		"Name":"GPMTrustee"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"c54a700d-19b6-4211-bcb0-e8e2475e471e"
+	}
+	,{
+		"Name":"GPMClientSideExtension"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"c1a2e70e-659c-4b1a-940b-f88b0af9c8a4"
+	}
+	,{
+		"Name":"GPMCSECollection"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"cf92b828-2d44-4b61-b10a-b327afd42da8"
+	}
+	,{
+		"Name":"GPMConstants"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"3855e880-cd9e-4d0c-9eaf-1579283a1888"
+	}
+	,{
+		"Name":"GPMResult"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"92101ac0-9287-4206-a3b2-4bdb73d225f6"
+	}
+	,{
+		"Name":"GPMMapEntryCollection"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"0cf75d5b-a3a1-4c55-b4fe-9e149c41f66d"
+	}
+	,{
+		"Name":"GPMMapEntry"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"8c975253-5431-4471-b35d-0626c928258a"
+	}
+	,{
+		"Name":"GPMMigrationTable"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"55af4043-2a06-4f72-abef-631b44079c76"
+	}
+	,{
+		"Name":"GPMBackupDirEx"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"e8c0988a-cf03-4c5b-8be2-2aa9ad32aada"
+	}
+	,{
+		"Name":"GPMStarterGPOBackupCollection"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"e75ea59d-1aeb-4cb5-a78a-281daa582406"
+	}
+	,{
+		"Name":"GPMStarterGPOBackup"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"389e400a-d8ef-455b-a861-5f9ca34a6a02"
+	}
+	,{
+		"Name":"GPMTemplate"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"ecf1d454-71da-4e2f-a8c0-8185465911d9"
+	}
+	,{
+		"Name":"GPMStarterGPOCollection"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"82f8aa8b-49ba-43b2-956e-3397f9b94c3a"
 	}
 	,{
 		"Name":"GPO_LINK"
@@ -7347,7 +7364,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pszPath","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"GPO_OPEN_FLAGS","TargetKind":"Default","Api":"System.GroupPolicy","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -7361,7 +7378,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"GPO_OPEN_FLAGS","TargetKind":"Default","Api":"System.GroupPolicy","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -7376,7 +7393,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pszComputerName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"GPO_OPEN_FLAGS","TargetKind":"Default","Api":"System.GroupPolicy","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -7511,7 +7528,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"dwSection","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					{"Name":"dwSection","Type":{"Kind":"ApiRef","Name":"GPO_SECTION","TargetKind":"Default","Api":"System.GroupPolicy","Parents":[]},"Attrs":["In"]}
 					,{"Name":"hKey","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HKEY","TargetKind":"Default","Api":"System.Registry","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
@@ -7526,7 +7543,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"dwOptions","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
+					{"Name":"dwOptions","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"GPO_OPTIONS","TargetKind":"Default","Api":"System.GroupPolicy","Parents":[]}},"Attrs":["In","Out"]}
 				]
 			}
 			,{
@@ -7540,7 +7557,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"dwOptions","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					{"Name":"dwOptions","Type":{"Kind":"ApiRef","Name":"GPO_OPTIONS","TargetKind":"Default","Api":"System.GroupPolicy","Parents":[]},"Attrs":["In"]}
 					,{"Name":"dwMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 				]
 			}
@@ -7931,7 +7948,7 @@
 			,{"Name":"pPrivilegeSet","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PRIVILEGE_SET","TargetKind":"Default","Api":"Security","Parents":[]}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":8},"Optional"]}
 			,{"Name":"pdwPrivilegeSetLength","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Optional"]}
 			,{"Name":"pdwGrantedAccessMask","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-			,{"Name":"pbAccessStatus","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["Out"]}
+			,{"Name":"pbAccessStatus","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -7950,7 +7967,7 @@
 			,{"Name":"pRsopToken","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
 			,{"Name":"dwDesiredAccessMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pdwGrantedAccessMask","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-			,{"Name":"pbAccessStatus","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["Out"]}
+			,{"Name":"pbAccessStatus","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{

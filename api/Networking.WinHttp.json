@@ -2,6 +2,48 @@
 
 "Constants":[
 	{
+		"Name":"HTTPREQUEST_PROXYSETTING_DEFAULT"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":0
+		,"Attrs":[]
+	}
+	,{
+		"Name":"HTTPREQUEST_PROXYSETTING_PRECONFIG"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":0
+		,"Attrs":[]
+	}
+	,{
+		"Name":"HTTPREQUEST_PROXYSETTING_DIRECT"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"HTTPREQUEST_PROXYSETTING_PROXY"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2
+		,"Attrs":[]
+	}
+	,{
+		"Name":"HTTPREQUEST_SETCREDENTIALS_FOR_SERVER"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":0
+		,"Attrs":[]
+	}
+	,{
+		"Name":"HTTPREQUEST_SETCREDENTIALS_FOR_PROXY"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1
+		,"Attrs":[]
+	}
+	,{
 		"Name":"INTERNET_DEFAULT_PORT"
 		,"Type":{"Kind":"Native","Name":"UInt16"}
 		,"ValueType":"UInt16"
@@ -37,6 +79,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"WINHTTP_FLAG_AUTOMATIC_CHUNKING"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":512
+		,"Attrs":[]
+	}
+	,{
 		"Name":"SECURITY_FLAG_IGNORE_UNKNOWN_CA"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -44,10 +93,10 @@
 		,"Attrs":[]
 	}
 	,{
-		"Name":"SECURITY_FLAG_IGNORE_CERT_DATE_INVALID"
+		"Name":"SECURITY_FLAG_IGNORE_CERT_WRONG_USAGE"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
-		,"Value":8192
+		,"Value":512
 		,"Attrs":[]
 	}
 	,{
@@ -58,10 +107,10 @@
 		,"Attrs":[]
 	}
 	,{
-		"Name":"SECURITY_FLAG_IGNORE_CERT_WRONG_USAGE"
+		"Name":"SECURITY_FLAG_IGNORE_CERT_DATE_INVALID"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
-		,"Value":512
+		,"Value":8192
 		,"Attrs":[]
 	}
 	,{
@@ -111,6 +160,13 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":1024
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_AUTOPROXY_USE_INTERFACE_CONFIG"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2048
 		,"Attrs":[]
 	}
 	,{
@@ -667,6 +723,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"WINHTTP_OPTION_NETWORK_INTERFACE_AFFINITY"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":105
+		,"Attrs":[]
+	}
+	,{
 		"Name":"WINHTTP_OPTION_SERVER_SPN_USED"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -898,20 +961,6 @@
 		,"Attrs":[]
 	}
 	,{
-		"Name":"WINHTTP_OPTION_SOURCE_ADDRESS"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":156
-		,"Attrs":[]
-	}
-	,{
-		"Name":"WINHTTP_OPTION_HEAP_EXTENSION"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":157
-		,"Attrs":[]
-	}
-	,{
 		"Name":"WINHTTP_OPTION_TLS_PROTOCOL_INSECURE_FALLBACK"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -944,13 +993,6 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":162
-		,"Attrs":[]
-	}
-	,{
-		"Name":"WINHTTP_OPTION_SET_GLOBAL_CALLBACK"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":163
 		,"Attrs":[]
 	}
 	,{
@@ -1024,27 +1066,6 @@
 		,"Attrs":[]
 	}
 	,{
-		"Name":"WINHTTP_OPTION_ENABLE_TEST_SIGNING"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":174
-		,"Attrs":[]
-	}
-	,{
-		"Name":"WINHTTP_OPTION_NTSERVICE_FLAG_TEST"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":175
-		,"Attrs":[]
-	}
-	,{
-		"Name":"WINHTTP_OPTION_DISABLE_PROXY_LINK_LOCAL_NAME_RESOLUTION"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":176
-		,"Attrs":[]
-	}
-	,{
 		"Name":"WINHTTP_OPTION_TCP_PRIORITY_STATUS"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -1066,27 +1087,6 @@
 		,"Attrs":[]
 	}
 	,{
-		"Name":"WINHTTP_OPTION_PROXY_CONFIG_INFO"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":180
-		,"Attrs":[]
-	}
-	,{
-		"Name":"WINHTTP_OPTION_AGGREGATE_PROXY_CONFIG"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":181
-		,"Attrs":[]
-	}
-	,{
-		"Name":"WINHTTP_OPTION_SELECTED_PROXY_CONFIG_INFO"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":182
-		,"Attrs":[]
-	}
-	,{
 		"Name":"WINHTTP_OPTION_HTTP2_RECEIVE_WINDOW"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -1094,10 +1094,87 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"WINHTTP_OPTION_FEATURE_SUPPORTED"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":184
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_OPTION_QUIC_STATS"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":185
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_OPTION_HTTP3_KEEPALIVE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":188
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_OPTION_HTTP3_HANDSHAKE_TIMEOUT"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":189
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_OPTION_HTTP3_INITIAL_RTT"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":190
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_OPTION_HTTP3_STREAM_ERROR_CODE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":191
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_OPTION_REQUEST_ANNOTATION"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":192
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_OPTION_DISABLE_PROXY_AUTH_SCHEMES"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":193
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_OPTION_REVERT_IMPERSONATION_SERVER_CERT"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":194
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_OPTION_DISABLE_GLOBAL_POOLING"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":195
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_OPTION_USE_SESSION_SCH_CRED"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":196
+		,"Attrs":[]
+	}
+	,{
 		"Name":"WINHTTP_LAST_OPTION"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
-		,"Value":183
+		,"Value":196
 		,"Attrs":[]
 	}
 	,{
@@ -1185,6 +1262,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"WINHTTP_OPTION_REQUEST_ANNOTATION_MAX_LENGTH"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":64000
+		,"Attrs":[]
+	}
+	,{
 		"Name":"WINHTTP_AUTOLOGON_SECURITY_LEVEL_MEDIUM"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -1206,10 +1290,24 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"WINHTTP_AUTOLOGON_SECURITY_LEVEL_PROXY_ONLY"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":3
+		,"Attrs":[]
+	}
+	,{
 		"Name":"WINHTTP_AUTOLOGON_SECURITY_LEVEL_DEFAULT"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":0
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_AUTOLOGON_SECURITY_LEVEL_MAX"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":3
 		,"Attrs":[]
 	}
 	,{
@@ -1273,6 +1371,48 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":1073741824
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_PROXY_DISABLE_SCHEME_BASIC"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_PROXY_DISABLE_SCHEME_DIGEST"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_PROXY_DISABLE_SCHEME_NTLM"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":4
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_PROXY_DISABLE_SCHEME_KERBEROS"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":8
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_PROXY_DISABLE_SCHEME_NEGOTIATE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":16
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_PROXY_DISABLE_AUTH_LOCAL_SERVICE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":256
 		,"Attrs":[]
 	}
 	,{
@@ -1357,6 +1497,20 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":3
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_HANDLE_TYPE_PROXY_RESOLVER"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":4
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_HANDLE_TYPE_WEBSOCKET"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":5
 		,"Attrs":[]
 	}
 	,{
@@ -1689,6 +1843,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"WINHTTP_CALLBACK_STATUS_GETPROXYSETTINGS_COMPLETE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":134217728
+		,"Attrs":[]
+	}
+	,{
 		"Name":"WINHTTP_CALLBACK_STATUS_SETTINGS_WRITE_COMPLETE"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -1742,6 +1903,13 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":6
+		,"Attrs":[]
+	}
+	,{
+		"Name":"API_GET_PROXY_SETTINGS"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":7
 		,"Attrs":[]
 	}
 	,{
@@ -1819,6 +1987,13 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":16777216
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_CALLBACK_FLAG_GETPROXYSETTINGS_COMPLETE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":134217728
 		,"Attrs":[]
 	}
 	,{
@@ -3298,6 +3473,454 @@
 		,"Value":15000
 		,"Attrs":[]
 	}
+	,{
+		"Name":"WINHTTP_PROXY_NOTIFY_CHANGE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_DISABLE_STREAM_QUEUE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_IPV6_FAST_FALLBACK"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_CONNECTION_STATS_V0"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":3
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_REQUEST_TIMES"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":4
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_EXPIRE_CONNECTION"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":5
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_DISABLE_SECURE_PROTOCOL_FALLBACK"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":6
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_HTTP_PROTOCOL_REQUIRED"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":7
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_REQUEST_STATS"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":8
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_SERVER_CERT_CHAIN_CONTEXT"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":9
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_CONNECTION_STATS_V1"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":12
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_SECURITY_INFO"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":13
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_TCP_KEEPALIVE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":14
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_TCP_FAST_OPEN"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":15
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_TLS_FALSE_START"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":16
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_IGNORE_CERT_REVOCATION_OFFLINE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":17
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_TLS_PROTOCOL_INSECURE_FALLBACK"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":20
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_STREAM_ERROR_CODE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":21
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_REQUIRE_STREAM_END"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":22
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_ENABLE_HTTP2_PLUS_CLIENT_CERT"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":23
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_FAILED_CONNECTION_RETRIES"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":24
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_HTTP2_KEEPALIVE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":26
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_RESOLUTION_HOSTNAME"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":27
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_SET_TOKEN_BINDING"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":28
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_TOKEN_BINDING_PUBLIC_KEY"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":29
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_REFERER_TOKEN_BINDING_HOSTNAME"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":30
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_HTTP2_PLUS_TRANSFER_ENCODING"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":31
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_RESOLVER_CACHE_CONFIG"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":32
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_DISABLE_CERT_CHAIN_BUILDING"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":33
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_BACKGROUND_CONNECTIONS"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":34
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_FIRST_AVAILABLE_CONNECTION"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":35
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_TCP_PRIORITY_STATUS"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":37
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_CONNECTION_GUID"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":38
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_MATCH_CONNECTION_GUID"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":39
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_HTTP2_RECEIVE_WINDOW"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":43
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_IS_FEATURE_SUPPORTED"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":44
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_ADD_REQUEST_HEADERS_EX"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":46
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_SET_PROXY_SETINGS_PER_USER"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":47
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_READ_DATA_EX"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":48
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_QUERY_HEADERS_EX"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":49
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_QUERY_CONNECTION_GROUP"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":50
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_FREE_QUERY_CONNECTION_GROUP_RESULT"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":51
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_SECURITY_FLAG_IGNORE_ALL_CERT_ERRORS"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":52
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_FLAG_SECURE_DEFAULTS"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":53
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_EXTENDED_HEADER_FLAG_UNICODE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":54
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_QUERY_FLAG_TRAILERS"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":55
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_QUERY_FLAG_WIRE_ENCODING"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":56
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_RESOLVER_CACHE_CONFIG_FLAG_SOFT_LIMIT"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":57
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_RESOLVER_CACHE_CONFIG_FLAG_BYPASS_CACHE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":58
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_FLAG_AUTOMATIC_CHUNKING"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":59
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_QUERY_CONNECTION_GROUP_FLAG_INSECURE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":60
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_MATCH_CONNECTION_GUID_FLAG_REQUIRE_MARKED_CONNECTION"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":61
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_QUERY_EX_ALL_HEADERS"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":62
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_READ_DATA_EX_FLAG_FILL_BUFFER"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":63
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_RESOLVER_CACHE_CONFIG_FLAG_USE_DNS_TTL"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":64
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_RESOLVER_CACHE_CONFIG_FLAG_CONN_USE_TTL"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":65
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_QUIC_STATS"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":66
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_HTTP3_KEEPALIVE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":69
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_HTTP3_HANDSHAKE_TIMEOUT"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":70
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_HTTP3_INITIAL_RTT"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":71
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_HTTP3_STREAM_ERROR_CODE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":72
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_REQUEST_ANNOTATION"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":73
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_DISABLE_PROXY_AUTH_SCHEMES"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":74
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WINHTTP_FEATURE_REVERT_IMPERSONATION_SERVER_CERT"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":75
+		,"Attrs":[]
+	}
 ]
 
 ,"Types":[
@@ -3375,7 +3998,7 @@
 			,{"Name":"WINHTTP_INTERNET_SCHEME_FTP","Value":3}
 			,{"Name":"WINHTTP_INTERNET_SCHEME_SOCKS","Value":4}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"WINHTTP_CONNECTION_INFO"
@@ -3450,6 +4073,42 @@
 			,{"Name":"SecureDnsSetting","Type":{"Kind":"ApiRef","Name":"WINHTTP_SECURE_DNS_SETTING","TargetKind":"Default","Api":"Networking.WinHttp","Parents":[]},"Attrs":[]}
 			,{"Name":"ullConnResolutionWaitTime","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"ullFlags","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"WINHTTP_PROXY_SETTINGS_EX"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"ullGenerationId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"ullFlags","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"pcwszAutoconfigUrl","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+			,{"Name":"pcwszProxy","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+			,{"Name":"pcwszSecureProxy","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+			,{"Name":"cProxyBypasses","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"rgpcwszProxyBypasses","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Const"]}
+			,{"Name":"dwInterfaceIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"pcwszConnectionName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"WINHTTP_PROXY_SETTINGS_PARAM"
+		,"Architectures":["X64","Arm64"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"ullFlags","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"pcwszConnectionName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+			,{"Name":"pcwszProbeHost","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 		]
 		,"NestedTypes":[
 		]
@@ -3800,20 +4459,6 @@
 		]
 		,"NestedTypes":[
 			{
-				"Name":"_Anonymous1_e__Union"
-				,"Architectures":[]
-				,"Platform":null
-				,"Kind":"Union"
-				,"Size":0
-				,"PackingSize":0
-				,"Fields":[
-					{"Name":"pwszName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
-					,{"Name":"pszName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
-				]
-				,"NestedTypes":[
-				]
-			}
-			,{
 				"Name":"_Anonymous2_e__Union"
 				,"Architectures":[]
 				,"Platform":null
@@ -3823,6 +4468,20 @@
 				,"Fields":[
 					{"Name":"pwszValue","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 					,{"Name":"pszValue","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+				]
+				,"NestedTypes":[
+				]
+			}
+			,{
+				"Name":"_Anonymous1_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"Fields":[
+					{"Name":"pwszName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+					,{"Name":"pszName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 				]
 				,"NestedTypes":[
 				]
@@ -4102,6 +4761,524 @@
 		]
 		,"NestedTypes":[
 		]
+	}
+	,{
+		"Name":"WINHTTP_PROXY_CHANGE_CALLBACK"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"Void"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"ullFlags","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":["In"]}
+			,{"Name":"pvContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"WINHTTP_PROXY_SETTINGS_TYPE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"WinHttpProxySettingsTypeUnknown","Value":0}
+			,{"Name":"WinHttpProxySettingsTypeWsl","Value":1}
+			,{"Name":"WinHttpProxySettingsTypeWsa","Value":2}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"WINHTTP_PROXY_SETTINGS_EX"
+		,"Architectures":["X86"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":4
+		,"Fields":[
+			{"Name":"ullGenerationId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"ullFlags","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"pcwszAutoconfigUrl","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+			,{"Name":"pcwszProxy","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+			,{"Name":"pcwszSecureProxy","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+			,{"Name":"cProxyBypasses","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"rgpcwszProxyBypasses","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Const"]}
+			,{"Name":"dwInterfaceIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"pcwszConnectionName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"WINHTTP_PROXY_SETTINGS_PARAM"
+		,"Architectures":["X86"]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":4
+		,"Fields":[
+			{"Name":"ullFlags","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"pcwszConnectionName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+			,{"Name":"pcwszProbeHost","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"WinHttpRequestOption"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"WinHttpRequestOption_UserAgentString","Value":0}
+			,{"Name":"WinHttpRequestOption_URL","Value":1}
+			,{"Name":"WinHttpRequestOption_URLCodePage","Value":2}
+			,{"Name":"WinHttpRequestOption_EscapePercentInURL","Value":3}
+			,{"Name":"WinHttpRequestOption_SslErrorIgnoreFlags","Value":4}
+			,{"Name":"WinHttpRequestOption_SelectCertificate","Value":5}
+			,{"Name":"WinHttpRequestOption_EnableRedirects","Value":6}
+			,{"Name":"WinHttpRequestOption_UrlEscapeDisable","Value":7}
+			,{"Name":"WinHttpRequestOption_UrlEscapeDisableQuery","Value":8}
+			,{"Name":"WinHttpRequestOption_SecureProtocols","Value":9}
+			,{"Name":"WinHttpRequestOption_EnableTracing","Value":10}
+			,{"Name":"WinHttpRequestOption_RevertImpersonationOverSsl","Value":11}
+			,{"Name":"WinHttpRequestOption_EnableHttpsToHttpRedirects","Value":12}
+			,{"Name":"WinHttpRequestOption_EnablePassportAuthentication","Value":13}
+			,{"Name":"WinHttpRequestOption_MaxAutomaticRedirects","Value":14}
+			,{"Name":"WinHttpRequestOption_MaxResponseHeaderSize","Value":15}
+			,{"Name":"WinHttpRequestOption_MaxResponseDrainSize","Value":16}
+			,{"Name":"WinHttpRequestOption_EnableHttp1_1","Value":17}
+			,{"Name":"WinHttpRequestOption_EnableCertificateRevocationCheck","Value":18}
+			,{"Name":"WinHttpRequestOption_RejectUserpwd","Value":19}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"WinHttpRequestAutoLogonPolicy"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"AutoLogonPolicy_Always","Value":0}
+			,{"Name":"AutoLogonPolicy_OnlyIfBypassProxy","Value":1}
+			,{"Name":"AutoLogonPolicy_Never","Value":2}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"WinHttpRequestSslErrorFlags"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"SslErrorFlag_UnknownCA","Value":256}
+			,{"Name":"SslErrorFlag_CertWrongUsage","Value":512}
+			,{"Name":"SslErrorFlag_CertCNInvalid","Value":4096}
+			,{"Name":"SslErrorFlag_CertDateInvalid","Value":8192}
+			,{"Name":"SslErrorFlag_Ignore_All","Value":13056}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"WinHttpRequestSecureProtocols"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"SecureProtocol_SSL2","Value":8}
+			,{"Name":"SecureProtocol_SSL3","Value":32}
+			,{"Name":"SecureProtocol_TLS1","Value":128}
+			,{"Name":"SecureProtocol_TLS1_1","Value":512}
+			,{"Name":"SecureProtocol_TLS1_2","Value":2048}
+			,{"Name":"SecureProtocol_ALL","Value":168}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"IWinHttpRequest"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"016fe2ec-b2c8-45f8-b23b-39e53a75396b"
+		,"Interface":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"SetProxy"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"ProxySetting","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
+					,{"Name":"ProxyServer","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
+					,{"Name":"BypassList","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"SetCredentials"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"UserName","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+					,{"Name":"Password","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+					,{"Name":"Flags","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"Open"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"Method","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+					,{"Name":"Url","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+					,{"Name":"Async","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"SetRequestHeader"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"Header","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+					,{"Name":"Value","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"GetResponseHeader"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"Header","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+					,{"Name":"Value","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
+				]
+			}
+			,{
+				"Name":"GetAllResponseHeaders"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"Headers","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
+				]
+			}
+			,{
+				"Name":"Send"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"Body","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"get_Status"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[
+					"SpecialName"
+				]
+				,"Params":[
+					{"Name":"Status","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["Out","RetVal"]}
+				]
+			}
+			,{
+				"Name":"get_StatusText"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[
+					"SpecialName"
+				]
+				,"Params":[
+					{"Name":"Status","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
+				]
+			}
+			,{
+				"Name":"get_ResponseText"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[
+					"SpecialName"
+				]
+				,"Params":[
+					{"Name":"Body","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
+				]
+			}
+			,{
+				"Name":"get_ResponseBody"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[
+					"SpecialName"
+				]
+				,"Params":[
+					{"Name":"Body","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
+				]
+			}
+			,{
+				"Name":"get_ResponseStream"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[
+					"SpecialName"
+				]
+				,"Params":[
+					{"Name":"Body","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
+				]
+			}
+			,{
+				"Name":"get_Option"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"Option","Type":{"Kind":"ApiRef","Name":"WinHttpRequestOption","TargetKind":"Default","Api":"Networking.WinHttp","Parents":[]},"Attrs":["In"]}
+					,{"Name":"Value","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
+				]
+			}
+			,{
+				"Name":"put_Option"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"Option","Type":{"Kind":"ApiRef","Name":"WinHttpRequestOption","TargetKind":"Default","Api":"Networking.WinHttp","Parents":[]},"Attrs":["In"]}
+					,{"Name":"Value","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"WaitForResponse"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"Timeout","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
+					,{"Name":"Succeeded","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT_BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
+				]
+			}
+			,{
+				"Name":"Abort"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+				]
+			}
+			,{
+				"Name":"SetTimeouts"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"ResolveTimeout","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
+					,{"Name":"ConnectTimeout","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
+					,{"Name":"SendTimeout","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
+					,{"Name":"ReceiveTimeout","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"SetClientCertificate"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"ClientCertificate","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"SetAutoLogonPolicy"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"AutoLogonPolicy","Type":{"Kind":"ApiRef","Name":"WinHttpRequestAutoLogonPolicy","TargetKind":"Default","Api":"Networking.WinHttp","Parents":[]},"Attrs":["In"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"IWinHttpRequestEvents"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"f97f4e15-b787-4212-80d1-d380cbbf982e"
+		,"Interface":{"Kind":"ApiRef","Name":"IUnknown","TargetKind":"Com","Api":"System.Com","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"OnResponseStart"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"Native","Name":"Void"}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"Status","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
+					,{"Name":"ContentType","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"OnResponseDataAvailable"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"Native","Name":"Void"}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"Data","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SAFEARRAY","TargetKind":"Default","Api":"System.Com","Parents":[]}}},"Attrs":["In"]}
+				]
+			}
+			,{
+				"Name":"OnResponseFinished"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"Native","Name":"Void"}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+				]
+			}
+			,{
+				"Name":"OnError"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"Native","Name":"Void"}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"ErrorNumber","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
+					,{"Name":"ErrorDescription","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"WinHttpRequest"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"2087c2f4-2cef-4953-a8ab-66779b670495"
 	}
 ]
 
@@ -4433,7 +5610,7 @@
 			,{"Name":"pwszObjectName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"pwszVersion","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"pwszReferrer","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-			,{"Name":"ppwszAcceptTypes","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"ppwszAcceptTypes","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Const"]}
 			,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"WINHTTP_OPEN_REQUEST_FLAGS","TargetKind":"Default","Api":"Networking.WinHttp","Parents":[]},"Attrs":["In"]}
 		]
 	}
@@ -4998,6 +6175,89 @@
 			,{"Name":"pvReason","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":3},"Optional"]}
 			,{"Name":"dwReasonLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"pdwReasonLengthConsumed","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
+		]
+	}
+	,{
+		"Name":"WinHttpRegisterProxyChangeNotification"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"WINHTTP.dll"
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"ullFlags","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":["In"]}
+			,{"Name":"pfnCallback","Type":{"Kind":"ApiRef","Name":"WINHTTP_PROXY_CHANGE_CALLBACK","TargetKind":"FunctionPointer","Api":"Networking.WinHttp","Parents":[]},"Attrs":["In"]}
+			,{"Name":"pvContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			,{"Name":"hRegistration","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"WinHttpUnregisterProxyChangeNotification"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"WINHTTP.dll"
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hRegistration","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"WinHttpGetProxySettingsEx"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"WINHTTP.dll"
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hResolver","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			,{"Name":"ProxySettingsType","Type":{"Kind":"ApiRef","Name":"WINHTTP_PROXY_SETTINGS_TYPE","TargetKind":"Default","Api":"Networking.WinHttp","Parents":[]},"Attrs":["In"]}
+			,{"Name":"pProxySettingsParam","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WINHTTP_PROXY_SETTINGS_PARAM","TargetKind":"Default","Api":"Networking.WinHttp","Parents":[]}},"Attrs":["In","Optional"]}
+			,{"Name":"pContext","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":["In","Optional"]}
+		]
+	}
+	,{
+		"Name":"WinHttpGetProxySettingsResultEx"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"WINHTTP.dll"
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"hResolver","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
+			,{"Name":"pProxySettingsEx","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"WinHttpFreeProxySettingsEx"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"WINHTTP.dll"
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"ProxySettingsType","Type":{"Kind":"ApiRef","Name":"WINHTTP_PROXY_SETTINGS_TYPE","TargetKind":"Default","Api":"Networking.WinHttp","Parents":[]},"Attrs":["In"]}
+			,{"Name":"pProxySettingsEx","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In"]}
 		]
 	}
 ]

@@ -599,29 +599,29 @@
 	,{
 		"Name":"PKEY_WCN_DeviceType_Category"
 		,"Type":{"Kind":"ApiRef","Name":"PROPERTYKEY","TargetKind":"Default","Api":"UI.Shell.PropertiesSystem","Parents":[]}
-		,"ValueType":"PropertyKey"
-		,"Value":{"Fmtid":"88190b8b-4684-11da-a26a-0002b3988e81","Pid":16}
+		,"ValueType":"ConstantAttribute"
+		,"Value":"True"
 		,"Attrs":[]
 	}
 	,{
 		"Name":"PKEY_WCN_DeviceType_SubCategoryOUI"
 		,"Type":{"Kind":"ApiRef","Name":"PROPERTYKEY","TargetKind":"Default","Api":"UI.Shell.PropertiesSystem","Parents":[]}
-		,"ValueType":"PropertyKey"
-		,"Value":{"Fmtid":"88190b8b-4684-11da-a26a-0002b3988e81","Pid":17}
+		,"ValueType":"ConstantAttribute"
+		,"Value":"True"
 		,"Attrs":[]
 	}
 	,{
 		"Name":"PKEY_WCN_DeviceType_SubCategory"
 		,"Type":{"Kind":"ApiRef","Name":"PROPERTYKEY","TargetKind":"Default","Api":"UI.Shell.PropertiesSystem","Parents":[]}
-		,"ValueType":"PropertyKey"
-		,"Value":{"Fmtid":"88190b8b-4684-11da-a26a-0002b3988e81","Pid":18}
+		,"ValueType":"ConstantAttribute"
+		,"Value":"True"
 		,"Attrs":[]
 	}
 	,{
 		"Name":"PKEY_WCN_SSID"
 		,"Type":{"Kind":"ApiRef","Name":"PROPERTYKEY","TargetKind":"Default","Api":"UI.Shell.PropertiesSystem","Parents":[]}
-		,"ValueType":"PropertyKey"
-		,"Value":{"Fmtid":"88190b8b-4684-11da-a26a-0002b3988e81","Pid":32}
+		,"ValueType":"ConstantAttribute"
+		,"Value":"True"
 		,"Attrs":[]
 	}
 ]
@@ -1002,13 +1002,6 @@
 		]
 	}
 	,{
-		"Name":"WCNDeviceObject"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"c100bea7-d33a-4a4b-bf23-bbef4663d017"
-	}
-	,{
 		"Name":"WCN_PASSWORD_TYPE"
 		,"Architectures":[]
 		,"Platform":null
@@ -1105,7 +1098,7 @@
 				,"Params":[
 					{"Name":"AttributeType","Type":{"Kind":"ApiRef","Name":"WCN_ATTRIBUTE_TYPE","TargetKind":"Default","Api":"NetworkManagement.WindowsConnectNow","Parents":[]},"Attrs":["In"]}
 					,{"Name":"dwMaxBufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"pbBuffer","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out"]}
+					,{"Name":"pbBuffer","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out"]}
 					,{"Name":"pdwBufferUsed","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -1182,7 +1175,7 @@
 				,"Params":[
 					{"Name":"pVendorExtSpec","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WCN_VENDOR_EXTENSION_SPEC","TargetKind":"Default","Api":"NetworkManagement.WindowsConnectNow","Parents":[]}},"Attrs":["In","Const"]}
 					,{"Name":"dwMaxBufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"pbBuffer","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":3,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out"]}
+					,{"Name":"pbBuffer","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out"]}
 					,{"Name":"pdwBufferUsed","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -1274,6 +1267,13 @@
 				]
 			}
 		]
+	}
+	,{
+		"Name":"WCNDeviceObject"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"c100bea7-d33a-4a4b-bf23-bbef4663d017"
 	}
 ]
 

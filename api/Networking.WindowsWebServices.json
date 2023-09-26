@@ -23,10 +23,17 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"WEBAUTHN_API_VERSION_4"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":4
+		,"Attrs":[]
+	}
+	,{
 		"Name":"WEBAUTHN_API_CURRENT_VERSION"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
-		,"Value":3
+		,"Value":4
 		,"Attrs":[]
 	}
 	,{
@@ -209,6 +216,41 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WEBAUTHN_CREDENTIAL_DETAILS_VERSION_1"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WEBAUTHN_CREDENTIAL_DETAILS_CURRENT_VERSION"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WEBAUTHN_GET_CREDENTIALS_OPTIONS_VERSION_1"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WEBAUTHN_GET_CREDENTIALS_OPTIONS_CURRENT_VERSION"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WEBAUTHN_CTAP_ONE_HMAC_SECRET_LENGTH"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":32
 		,"Attrs":[]
 	}
 	,{
@@ -422,10 +464,17 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"WEBAUTHN_AUTHENTICATOR_MAKE_CREDENTIAL_OPTIONS_VERSION_5"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":5
+		,"Attrs":[]
+	}
+	,{
 		"Name":"WEBAUTHN_AUTHENTICATOR_MAKE_CREDENTIAL_OPTIONS_CURRENT_VERSION"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
-		,"Value":4
+		,"Value":5
 		,"Attrs":[]
 	}
 	,{
@@ -492,10 +541,24 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"WEBAUTHN_AUTHENTICATOR_GET_ASSERTION_OPTIONS_VERSION_6"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":6
+		,"Attrs":[]
+	}
+	,{
 		"Name":"WEBAUTHN_AUTHENTICATOR_GET_ASSERTION_OPTIONS_CURRENT_VERSION"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
-		,"Value":5
+		,"Value":6
+		,"Attrs":[]
+	}
+	,{
+		"Name":"WEBAUTHN_AUTHENTICATOR_HMAC_SECRET_VALUES_FLAG"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1048576
 		,"Attrs":[]
 	}
 	,{
@@ -674,10 +737,17 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"WEBAUTHN_ASSERTION_VERSION_3"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":3
+		,"Attrs":[]
+	}
+	,{
 		"Name":"WEBAUTHN_ASSERTION_CURRENT_VERSION"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
-		,"Value":2
+		,"Value":3
 		,"Attrs":[]
 	}
 	,{
@@ -971,184 +1041,139 @@
 
 ,"Types":[
 	{
-		"Name":"WS_XML_READER"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"WS_XML_WRITER"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"WS_XML_BUFFER"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
 		"Name":"WS_CHANNEL"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"WS_OPERATION_CONTEXT"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
 	}
 	,{
 		"Name":"WS_ERROR"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
 	}
 	,{
 		"Name":"WS_HEAP"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
 	}
 	,{
 		"Name":"WS_LISTENER"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
 	}
 	,{
 		"Name":"WS_MESSAGE"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"WS_SECURITY_TOKEN"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"WS_SECURITY_CONTEXT"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"WS_SERVICE_HOST"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
-		"Name":"WS_SERVICE_PROXY"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
 	}
 	,{
 		"Name":"WS_METADATA"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
+		"Name":"WS_OPERATION_CONTEXT"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
 	}
 	,{
 		"Name":"WS_POLICY"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
+		"Name":"WS_SECURITY_CONTEXT"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
+		"Name":"WS_SECURITY_TOKEN"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
+		"Name":"WS_SERVICE_HOST"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
+		"Name":"WS_SERVICE_PROXY"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
+		"Name":"WS_XML_BUFFER"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
+		"Name":"WS_XML_READER"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
+		"Name":"WS_XML_WRITER"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
 	}
 	,{
 		"Name":"WS_XML_READER_PROPERTY_ID"
@@ -8342,6 +8367,99 @@
 		]
 	}
 	,{
+		"Name":"WEBAUTHN_CREDENTIAL_DETAILS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"dwVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"cbCredentialID","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"pbCredentialID","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"pRpInformation","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WEBAUTHN_RP_ENTITY_INFORMATION","TargetKind":"Default","Api":"Networking.WindowsWebServices","Parents":[]}},"Attrs":[]}
+			,{"Name":"pUserInformation","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WEBAUTHN_USER_ENTITY_INFORMATION","TargetKind":"Default","Api":"Networking.WindowsWebServices","Parents":[]}},"Attrs":[]}
+			,{"Name":"bRemovable","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"WEBAUTHN_CREDENTIAL_DETAILS_LIST"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cCredentialDetails","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"ppCredentialDetails","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WEBAUTHN_CREDENTIAL_DETAILS","TargetKind":"Default","Api":"Networking.WindowsWebServices","Parents":[]}}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"WEBAUTHN_GET_CREDENTIALS_OPTIONS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"dwVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"pwszRpId","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+			,{"Name":"bBrowserInPrivateMode","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"WEBAUTHN_HMAC_SECRET_SALT"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cbFirst","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"pbFirst","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"cbSecond","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"pbSecond","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"WEBAUTHN_CRED_WITH_HMAC_SECRET_SALT"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cbCredID","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"pbCredID","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"pHmacSecretSalt","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WEBAUTHN_HMAC_SECRET_SALT","TargetKind":"Default","Api":"Networking.WindowsWebServices","Parents":[]}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"WEBAUTHN_HMAC_SECRET_SALT_VALUES"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"pGlobalHmacSalt","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WEBAUTHN_HMAC_SECRET_SALT","TargetKind":"Default","Api":"Networking.WindowsWebServices","Parents":[]}},"Attrs":[]}
+			,{"Name":"cCredWithHmacSecretSaltList","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"pCredWithHmacSecretSaltList","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WEBAUTHN_CRED_WITH_HMAC_SECRET_SALT","TargetKind":"Default","Api":"Networking.WindowsWebServices","Parents":[]}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
 		"Name":"WEBAUTHN_CRED_PROTECT_EXTENSION_IN"
 		,"Architectures":[]
 		,"Platform":null
@@ -8420,6 +8538,7 @@
 			,{"Name":"dwEnterpriseAttestation","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwLargeBlobSupport","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"bPreferResidentKey","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"bBrowserInPrivateMode","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -8446,6 +8565,8 @@
 			,{"Name":"dwCredLargeBlobOperation","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"cbCredLargeBlob","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pbCredLargeBlob","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"pHmacSecretSaltValues","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WEBAUTHN_HMAC_SECRET_SALT_VALUES","TargetKind":"Default","Api":"Networking.WindowsWebServices","Parents":[]}},"Attrs":[]}
+			,{"Name":"bBrowserInPrivateMode","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -8537,6 +8658,7 @@
 			,{"Name":"cbCredLargeBlob","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pbCredLargeBlob","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"dwCredLargeBlobStatus","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"pHmacSecret","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WEBAUTHN_HMAC_SECRET_SALT","TargetKind":"Default","Api":"Networking.WindowsWebServices","Parents":[]}},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -12228,6 +12350,53 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"pCancellationId","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":["In","Const"]}
+		]
+	}
+	,{
+		"Name":"WebAuthNGetPlatformCredentialList"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"webauthn.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"pGetCredentialsOptions","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WEBAUTHN_GET_CREDENTIALS_OPTIONS","TargetKind":"Default","Api":"Networking.WindowsWebServices","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"ppCredentialDetailsList","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WEBAUTHN_CREDENTIAL_DETAILS_LIST","TargetKind":"Default","Api":"Networking.WindowsWebServices","Parents":[]}}},"Attrs":["Out"]}
+		]
+	}
+	,{
+		"Name":"WebAuthNFreePlatformCredentialList"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"webauthn.dll"
+		,"ReturnType":{"Kind":"Native","Name":"Void"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"pCredentialDetailsList","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"WEBAUTHN_CREDENTIAL_DETAILS_LIST","TargetKind":"Default","Api":"Networking.WindowsWebServices","Parents":[]}},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"WebAuthNDeletePlatformCredential"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"webauthn.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"cbCredentialId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"pbCredentialId","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":0},"Const"]}
 		]
 	}
 	,{

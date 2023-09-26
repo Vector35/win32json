@@ -23,6 +23,62 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"CDN_INITDONE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":4294966695
+		,"Attrs":[]
+	}
+	,{
+		"Name":"CDN_SELCHANGE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":4294966694
+		,"Attrs":[]
+	}
+	,{
+		"Name":"CDN_FOLDERCHANGE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":4294966693
+		,"Attrs":[]
+	}
+	,{
+		"Name":"CDN_SHAREVIOLATION"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":4294966692
+		,"Attrs":[]
+	}
+	,{
+		"Name":"CDN_HELP"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":4294966691
+		,"Attrs":[]
+	}
+	,{
+		"Name":"CDN_FILEOK"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":4294966690
+		,"Attrs":[]
+	}
+	,{
+		"Name":"CDN_TYPECHANGE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":4294966689
+		,"Attrs":[]
+	}
+	,{
+		"Name":"CDN_INCLUDEITEM"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":4294966688
+		,"Attrs":[]
+	}
+	,{
 		"Name":"CDM_FIRST"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -83,34 +139,6 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":1130
-		,"Attrs":[]
-	}
-	,{
-		"Name":"FR_RAW"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":131072
-		,"Attrs":[]
-	}
-	,{
-		"Name":"FR_SHOWWRAPAROUND"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":262144
-		,"Attrs":[]
-	}
-	,{
-		"Name":"FR_NOWRAPAROUND"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":524288
-		,"Attrs":[]
-	}
-	,{
-		"Name":"FR_WRAPAROUND"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":1048576
 		,"Attrs":[]
 	}
 	,{
@@ -872,23 +900,30 @@
 		,"Flags":true
 		,"Scoped":false
 		,"Values":[
-			{"Name":"FR_DIALOGTERM","Value":64}
-			,{"Name":"FR_DOWN","Value":1}
+			{"Name":"FR_DOWN","Value":1}
+			,{"Name":"FR_WHOLEWORD","Value":2}
+			,{"Name":"FR_MATCHCASE","Value":4}
+			,{"Name":"FR_FINDNEXT","Value":8}
+			,{"Name":"FR_REPLACE","Value":16}
+			,{"Name":"FR_REPLACEALL","Value":32}
+			,{"Name":"FR_DIALOGTERM","Value":64}
+			,{"Name":"FR_SHOWHELP","Value":128}
 			,{"Name":"FR_ENABLEHOOK","Value":256}
 			,{"Name":"FR_ENABLETEMPLATE","Value":512}
+			,{"Name":"FR_NOUPDOWN","Value":1024}
+			,{"Name":"FR_NOMATCHCASE","Value":2048}
+			,{"Name":"FR_NOWHOLEWORD","Value":4096}
 			,{"Name":"FR_ENABLETEMPLATEHANDLE","Value":8192}
-			,{"Name":"FR_FINDNEXT","Value":8}
 			,{"Name":"FR_HIDEUPDOWN","Value":16384}
 			,{"Name":"FR_HIDEMATCHCASE","Value":32768}
 			,{"Name":"FR_HIDEWHOLEWORD","Value":65536}
-			,{"Name":"FR_MATCHCASE","Value":4}
-			,{"Name":"FR_NOMATCHCASE","Value":2048}
-			,{"Name":"FR_NOUPDOWN","Value":1024}
-			,{"Name":"FR_NOWHOLEWORD","Value":4096}
-			,{"Name":"FR_REPLACE","Value":16}
-			,{"Name":"FR_REPLACEALL","Value":32}
-			,{"Name":"FR_SHOWHELP","Value":128}
-			,{"Name":"FR_WHOLEWORD","Value":2}
+			,{"Name":"FR_RAW","Value":131072}
+			,{"Name":"FR_SHOWWRAPAROUND","Value":262144}
+			,{"Name":"FR_NOWRAPAROUND","Value":524288}
+			,{"Name":"FR_WRAPAROUND","Value":1048576}
+			,{"Name":"FR_MATCHDIAC","Value":536870912}
+			,{"Name":"FR_MATCHKASHIDA","Value":1073741824}
+			,{"Name":"FR_MATCHALEFHAMZA","Value":2147483648}
 		]
 		,"IntegerBase":"UInt32"
 	}
@@ -947,27 +982,6 @@
 			,{"Name":"SIMULATED_FONTTYPE","Value":32768}
 		]
 		,"IntegerBase":"UInt16"
-	}
-	,{
-		"Name":"COMMON_DIALOG_NOTIFICATION"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Enum"
-		,"Flags":false
-		,"Scoped":false
-		,"Values":[
-			{"Name":"CDN_FIRST","Value":-601}
-			,{"Name":"CDN_LAST","Value":-699}
-			,{"Name":"CDN_INITDONE","Value":-601}
-			,{"Name":"CDN_SELCHANGE","Value":-602}
-			,{"Name":"CDN_FOLDERCHANGE","Value":-603}
-			,{"Name":"CDN_SHAREVIOLATION","Value":-604}
-			,{"Name":"CDN_HELP","Value":-605}
-			,{"Name":"CDN_FILEOK","Value":-606}
-			,{"Name":"CDN_TYPECHANGE","Value":-607}
-			,{"Name":"CDN_INCLUDEITEM","Value":-608}
-		]
-		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"OPENFILENAME_NT4A"
@@ -1319,8 +1333,8 @@
 		,"Fields":[
 			{"Name":"lStructSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"hwndOwner","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"hDevMode","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"hDevNames","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+			,{"Name":"hDevMode","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"hDevNames","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"hDC","Type":{"Kind":"ApiRef","Name":"HDC","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"PRINTDLGEX_FLAGS","TargetKind":"Default","Api":"UI.Controls.Dialogs","Parents":[]},"Attrs":[]}
 			,{"Name":"nFromPage","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1334,8 +1348,8 @@
 			,{"Name":"lpfnSetupHook","Type":{"Kind":"ApiRef","Name":"LPSETUPHOOKPROC","TargetKind":"FunctionPointer","Api":"UI.Controls.Dialogs","Parents":[]},"Attrs":[]}
 			,{"Name":"lpPrintTemplateName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"lpSetupTemplateName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
-			,{"Name":"hPrintTemplate","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"hSetupTemplate","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+			,{"Name":"hPrintTemplate","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"hSetupTemplate","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -1350,8 +1364,8 @@
 		,"Fields":[
 			{"Name":"lStructSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"hwndOwner","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"hDevMode","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"hDevNames","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+			,{"Name":"hDevMode","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"hDevNames","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"hDC","Type":{"Kind":"ApiRef","Name":"HDC","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"PRINTDLGEX_FLAGS","TargetKind":"Default","Api":"UI.Controls.Dialogs","Parents":[]},"Attrs":[]}
 			,{"Name":"nFromPage","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1365,8 +1379,8 @@
 			,{"Name":"lpfnSetupHook","Type":{"Kind":"ApiRef","Name":"LPSETUPHOOKPROC","TargetKind":"FunctionPointer","Api":"UI.Controls.Dialogs","Parents":[]},"Attrs":[]}
 			,{"Name":"lpPrintTemplateName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"lpSetupTemplateName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
-			,{"Name":"hPrintTemplate","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"hSetupTemplate","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+			,{"Name":"hPrintTemplate","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"hSetupTemplate","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -1395,8 +1409,8 @@
 		,"Fields":[
 			{"Name":"lStructSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"hwndOwner","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"hDevMode","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"hDevNames","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+			,{"Name":"hDevMode","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"hDevNames","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"hDC","Type":{"Kind":"ApiRef","Name":"HDC","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"PRINTDLGEX_FLAGS","TargetKind":"Default","Api":"UI.Controls.Dialogs","Parents":[]},"Attrs":[]}
 			,{"Name":"Flags2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1428,8 +1442,8 @@
 		,"Fields":[
 			{"Name":"lStructSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"hwndOwner","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"hDevMode","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"hDevNames","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+			,{"Name":"hDevMode","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"hDevNames","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"hDC","Type":{"Kind":"ApiRef","Name":"HDC","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"PRINTDLGEX_FLAGS","TargetKind":"Default","Api":"UI.Controls.Dialogs","Parents":[]},"Attrs":[]}
 			,{"Name":"Flags2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -1477,8 +1491,8 @@
 		,"Fields":[
 			{"Name":"lStructSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"hwndOwner","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"hDevMode","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"hDevNames","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+			,{"Name":"hDevMode","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"hDevNames","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"PAGESETUPDLG_FLAGS","TargetKind":"Default","Api":"UI.Controls.Dialogs","Parents":[]},"Attrs":[]}
 			,{"Name":"ptPaperSize","Type":{"Kind":"ApiRef","Name":"POINT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"rtMinMargin","Type":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -1488,7 +1502,7 @@
 			,{"Name":"lpfnPageSetupHook","Type":{"Kind":"ApiRef","Name":"LPPAGESETUPHOOK","TargetKind":"FunctionPointer","Api":"UI.Controls.Dialogs","Parents":[]},"Attrs":[]}
 			,{"Name":"lpfnPagePaintHook","Type":{"Kind":"ApiRef","Name":"LPPAGEPAINTHOOK","TargetKind":"FunctionPointer","Api":"UI.Controls.Dialogs","Parents":[]},"Attrs":[]}
 			,{"Name":"lpPageSetupTemplateName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
-			,{"Name":"hPageSetupTemplate","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+			,{"Name":"hPageSetupTemplate","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -1503,8 +1517,8 @@
 		,"Fields":[
 			{"Name":"lStructSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"hwndOwner","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"hDevMode","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"hDevNames","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+			,{"Name":"hDevMode","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"hDevNames","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"PAGESETUPDLG_FLAGS","TargetKind":"Default","Api":"UI.Controls.Dialogs","Parents":[]},"Attrs":[]}
 			,{"Name":"ptPaperSize","Type":{"Kind":"ApiRef","Name":"POINT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"rtMinMargin","Type":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -1514,7 +1528,7 @@
 			,{"Name":"lpfnPageSetupHook","Type":{"Kind":"ApiRef","Name":"LPPAGESETUPHOOK","TargetKind":"FunctionPointer","Api":"UI.Controls.Dialogs","Parents":[]},"Attrs":[]}
 			,{"Name":"lpfnPagePaintHook","Type":{"Kind":"ApiRef","Name":"LPPAGEPAINTHOOK","TargetKind":"FunctionPointer","Api":"UI.Controls.Dialogs","Parents":[]},"Attrs":[]}
 			,{"Name":"lpPageSetupTemplateName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
-			,{"Name":"hPageSetupTemplate","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+			,{"Name":"hPageSetupTemplate","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -1983,8 +1997,8 @@
 		,"Fields":[
 			{"Name":"lStructSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"hwndOwner","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"hDevMode","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"hDevNames","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+			,{"Name":"hDevMode","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"hDevNames","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"hDC","Type":{"Kind":"ApiRef","Name":"HDC","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"PRINTDLGEX_FLAGS","TargetKind":"Default","Api":"UI.Controls.Dialogs","Parents":[]},"Attrs":[]}
 			,{"Name":"nFromPage","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -1998,8 +2012,8 @@
 			,{"Name":"lpfnSetupHook","Type":{"Kind":"ApiRef","Name":"LPSETUPHOOKPROC","TargetKind":"FunctionPointer","Api":"UI.Controls.Dialogs","Parents":[]},"Attrs":[]}
 			,{"Name":"lpPrintTemplateName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"lpSetupTemplateName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
-			,{"Name":"hPrintTemplate","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"hSetupTemplate","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+			,{"Name":"hPrintTemplate","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"hSetupTemplate","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -2014,8 +2028,8 @@
 		,"Fields":[
 			{"Name":"lStructSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"hwndOwner","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"hDevMode","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"hDevNames","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+			,{"Name":"hDevMode","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"hDevNames","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"hDC","Type":{"Kind":"ApiRef","Name":"HDC","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"PRINTDLGEX_FLAGS","TargetKind":"Default","Api":"UI.Controls.Dialogs","Parents":[]},"Attrs":[]}
 			,{"Name":"nFromPage","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
@@ -2029,8 +2043,8 @@
 			,{"Name":"lpfnSetupHook","Type":{"Kind":"ApiRef","Name":"LPSETUPHOOKPROC","TargetKind":"FunctionPointer","Api":"UI.Controls.Dialogs","Parents":[]},"Attrs":[]}
 			,{"Name":"lpPrintTemplateName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"lpSetupTemplateName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
-			,{"Name":"hPrintTemplate","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"hSetupTemplate","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+			,{"Name":"hPrintTemplate","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"hSetupTemplate","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -2168,8 +2182,8 @@
 		,"Fields":[
 			{"Name":"lStructSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"hwndOwner","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"hDevMode","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"hDevNames","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+			,{"Name":"hDevMode","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"hDevNames","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"hDC","Type":{"Kind":"ApiRef","Name":"HDC","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"PRINTDLGEX_FLAGS","TargetKind":"Default","Api":"UI.Controls.Dialogs","Parents":[]},"Attrs":[]}
 			,{"Name":"Flags2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2201,8 +2215,8 @@
 		,"Fields":[
 			{"Name":"lStructSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"hwndOwner","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"hDevMode","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"hDevNames","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+			,{"Name":"hDevMode","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"hDevNames","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"hDC","Type":{"Kind":"ApiRef","Name":"HDC","TargetKind":"Default","Api":"Graphics.Gdi","Parents":[]},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"PRINTDLGEX_FLAGS","TargetKind":"Default","Api":"UI.Controls.Dialogs","Parents":[]},"Attrs":[]}
 			,{"Name":"Flags2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -2288,8 +2302,8 @@
 		,"Fields":[
 			{"Name":"lStructSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"hwndOwner","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"hDevMode","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"hDevNames","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+			,{"Name":"hDevMode","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"hDevNames","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"PAGESETUPDLG_FLAGS","TargetKind":"Default","Api":"UI.Controls.Dialogs","Parents":[]},"Attrs":[]}
 			,{"Name":"ptPaperSize","Type":{"Kind":"ApiRef","Name":"POINT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"rtMinMargin","Type":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -2299,7 +2313,7 @@
 			,{"Name":"lpfnPageSetupHook","Type":{"Kind":"ApiRef","Name":"LPPAGESETUPHOOK","TargetKind":"FunctionPointer","Api":"UI.Controls.Dialogs","Parents":[]},"Attrs":[]}
 			,{"Name":"lpfnPagePaintHook","Type":{"Kind":"ApiRef","Name":"LPPAGEPAINTHOOK","TargetKind":"FunctionPointer","Api":"UI.Controls.Dialogs","Parents":[]},"Attrs":[]}
 			,{"Name":"lpPageSetupTemplateName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
-			,{"Name":"hPageSetupTemplate","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+			,{"Name":"hPageSetupTemplate","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -2314,8 +2328,8 @@
 		,"Fields":[
 			{"Name":"lStructSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"hwndOwner","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"hDevMode","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
-			,{"Name":"hDevNames","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+			,{"Name":"hDevMode","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"hDevNames","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"PAGESETUPDLG_FLAGS","TargetKind":"Default","Api":"UI.Controls.Dialogs","Parents":[]},"Attrs":[]}
 			,{"Name":"ptPaperSize","Type":{"Kind":"ApiRef","Name":"POINT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"rtMinMargin","Type":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -2325,7 +2339,7 @@
 			,{"Name":"lpfnPageSetupHook","Type":{"Kind":"ApiRef","Name":"LPPAGESETUPHOOK","TargetKind":"FunctionPointer","Api":"UI.Controls.Dialogs","Parents":[]},"Attrs":[]}
 			,{"Name":"lpfnPagePaintHook","Type":{"Kind":"ApiRef","Name":"LPPAGEPAINTHOOK","TargetKind":"FunctionPointer","Api":"UI.Controls.Dialogs","Parents":[]},"Attrs":[]}
 			,{"Name":"lpPageSetupTemplateName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
-			,{"Name":"hPageSetupTemplate","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+			,{"Name":"hPageSetupTemplate","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]

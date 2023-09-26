@@ -719,13 +719,6 @@
 
 ,"Types":[
 	{
-		"Name":"OpcFactory"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"6b2d6ba0-9f3e-4f27-920b-313cc426a39e"
-	}
-	,{
 		"Name":"IOpcUri"
 		,"Architectures":[]
 		,"Platform":"windows6.1"
@@ -744,7 +737,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"relationshipPartUri","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"relationshipPartUri","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -758,8 +751,8 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"targetPartUri","Type":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In","Optional"]}
-					,{"Name":"relativeUri","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUri","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"targetPartUri","Type":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In"]}
+					,{"Name":"relativeUri","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUri","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -773,8 +766,8 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"relativeUri","Type":{"Kind":"ApiRef","Name":"IUri","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In","Optional"]}
-					,{"Name":"combinedUri","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"relativeUri","Type":{"Kind":"ApiRef","Name":"IUri","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"combinedUri","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -798,8 +791,8 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"partUri","Type":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In","Optional"]}
-					,{"Name":"comparisonResult","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["Out"]}
+					{"Name":"partUri","Type":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In"]}
+					,{"Name":"comparisonResult","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -813,7 +806,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"sourceUri","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"sourceUri","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -827,7 +820,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"isRelationshipUri","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"isRelationshipUri","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -886,7 +879,7 @@
 			,{"Name":"OPC_VALIDATE_ON_LOAD","Value":1}
 			,{"Name":"OPC_CACHE_ON_ACCESS","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"OPC_WRITE_FLAGS"
@@ -899,7 +892,7 @@
 			{"Name":"OPC_WRITE_DEFAULT","Value":0}
 			,{"Name":"OPC_WRITE_FORCE_ZIP32","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"OPC_SIGNATURE_VALIDATION_RESULT"
@@ -1004,7 +997,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"partSet","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcPartSet","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"partSet","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcPartSet","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1018,7 +1011,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"relationshipSet","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcRelationshipSet","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"relationshipSet","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcRelationshipSet","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -1042,7 +1035,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"relationshipSet","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcRelationshipSet","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"relationshipSet","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcRelationshipSet","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1056,7 +1049,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"stream","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IStream","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"stream","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IStream","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1070,7 +1063,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"name","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"name","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1084,7 +1077,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"contentType","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"contentType","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1098,7 +1091,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"compressionOptions","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OPC_COMPRESSION_OPTIONS","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"compressionOptions","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OPC_COMPRESSION_OPTIONS","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -1122,7 +1115,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"relationshipIdentifier","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"relationshipIdentifier","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1136,7 +1129,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"relationshipType","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"relationshipType","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1150,7 +1143,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"sourceUri","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"sourceUri","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1164,7 +1157,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"targetUri","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUri","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"targetUri","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUri","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1178,7 +1171,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"targetMode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OPC_URI_TARGET_MODE","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"targetMode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OPC_URI_TARGET_MODE","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -1202,8 +1195,8 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"name","Type":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In","Optional"]}
-					,{"Name":"part","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcPart","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"name","Type":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In"]}
+					,{"Name":"part","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcPart","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1217,10 +1210,10 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"name","Type":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In","Optional"]}
+					{"Name":"name","Type":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In"]}
 					,{"Name":"contentType","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 					,{"Name":"compressionOptions","Type":{"Kind":"ApiRef","Name":"OPC_COMPRESSION_OPTIONS","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In"]}
-					,{"Name":"part","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcPart","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"part","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcPart","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1234,7 +1227,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"name","Type":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In","Optional"]}
+					{"Name":"name","Type":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -1248,8 +1241,8 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"name","Type":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In","Optional"]}
-					,{"Name":"partExists","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"name","Type":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In"]}
+					,{"Name":"partExists","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1263,7 +1256,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"partEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcPartEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"partEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcPartEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -1288,7 +1281,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"relationshipIdentifier","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-					,{"Name":"relationship","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcRelationship","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"relationship","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcRelationship","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1302,11 +1295,11 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"relationshipIdentifier","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
+					{"Name":"relationshipIdentifier","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 					,{"Name":"relationshipType","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-					,{"Name":"targetUri","Type":{"Kind":"ApiRef","Name":"IUri","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In","Optional"]}
+					,{"Name":"targetUri","Type":{"Kind":"ApiRef","Name":"IUri","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
 					,{"Name":"targetMode","Type":{"Kind":"ApiRef","Name":"OPC_URI_TARGET_MODE","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In"]}
-					,{"Name":"relationship","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcRelationship","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"relationship","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcRelationship","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1335,7 +1328,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"relationshipIdentifier","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-					,{"Name":"relationshipExists","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"relationshipExists","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1349,7 +1342,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"relationshipEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcRelationshipEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"relationshipEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcRelationshipEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1364,7 +1357,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"relationshipType","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-					,{"Name":"relationshipEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcRelationshipEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"relationshipEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcRelationshipEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1378,7 +1371,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"contents","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IStream","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"contents","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IStream","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -1402,7 +1395,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"hasNext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"hasNext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1416,7 +1409,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"hasPrevious","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"hasPrevious","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1430,7 +1423,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"part","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcPart","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"part","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcPart","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1444,7 +1437,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"copy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcPartEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"copy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcPartEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -1468,7 +1461,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"hasNext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"hasNext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1482,7 +1475,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"hasPrevious","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"hasPrevious","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1496,7 +1489,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"relationship","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcRelationship","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"relationship","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcRelationship","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1510,7 +1503,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"copy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcRelationshipEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"copy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcRelationshipEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -1534,7 +1527,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"partName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"partName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1548,7 +1541,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"contentType","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"contentType","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1562,7 +1555,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"digestMethod","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"digestMethod","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1591,7 +1584,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"transformMethod","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OPC_CANONICALIZATION_METHOD","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"transformMethod","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OPC_CANONICALIZATION_METHOD","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -1615,7 +1608,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"sourceUri","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"sourceUri","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1629,7 +1622,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"digestMethod","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"digestMethod","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1658,7 +1651,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"transformMethod","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OPC_CANONICALIZATION_METHOD","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"transformMethod","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OPC_CANONICALIZATION_METHOD","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1672,7 +1665,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"relationshipSigningOption","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OPC_RELATIONSHIPS_SIGNING_OPTION","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"relationshipSigningOption","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OPC_RELATIONSHIPS_SIGNING_OPTION","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1686,7 +1679,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"selectorEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcRelationshipSelectorEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"selectorEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcRelationshipSelectorEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -1710,7 +1703,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"selector","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OPC_RELATIONSHIP_SELECTOR","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"selector","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OPC_RELATIONSHIP_SELECTOR","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1724,7 +1717,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"selectionCriterion","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"selectionCriterion","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -1748,7 +1741,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"referenceId","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"referenceId","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1762,7 +1755,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"referenceUri","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUri","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"referenceUri","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUri","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1776,7 +1769,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"type","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"type","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1790,7 +1783,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"transformMethod","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OPC_CANONICALIZATION_METHOD","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"transformMethod","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OPC_CANONICALIZATION_METHOD","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1804,7 +1797,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"digestMethod","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"digestMethod","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1868,9 +1861,9 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"prefixes","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}}},"Attrs":["Out"]}
-					,{"Name":"namespaces","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}}},"Attrs":["Out"]}
-					,{"Name":"count","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
+					{"Name":"prefixes","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}}},"Attrs":["Out"]}
+					,{"Name":"namespaces","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}}},"Attrs":["Out"]}
+					,{"Name":"count","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -1898,7 +1891,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"signaturePartName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"signaturePartName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1926,7 +1919,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"canonicalizationMethod","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OPC_CANONICALIZATION_METHOD","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["In","Out"]}
+					{"Name":"canonicalizationMethod","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OPC_CANONICALIZATION_METHOD","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1940,8 +1933,8 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"signatureValue","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out"]}
-					,{"Name":"count","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
+					{"Name":"signatureValue","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out"]}
+					,{"Name":"count","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
 			,{
@@ -1955,7 +1948,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"partReferenceEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignaturePartReferenceEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"partReferenceEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignaturePartReferenceEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1969,7 +1962,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"relationshipReferenceEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureRelationshipReferenceEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"relationshipReferenceEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureRelationshipReferenceEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -1997,7 +1990,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"timeFormat","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OPC_SIGNATURE_TIME_FORMAT","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["In","Out"]}
+					{"Name":"timeFormat","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OPC_SIGNATURE_TIME_FORMAT","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2011,7 +2004,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"packageObjectReference","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureReference","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"packageObjectReference","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureReference","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2025,7 +2018,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"certificateEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcCertificateEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"certificateEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcCertificateEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2039,7 +2032,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"customReferenceEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureReferenceEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"customReferenceEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureReferenceEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2053,7 +2046,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"customObjectEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureCustomObjectEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"customObjectEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureCustomObjectEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2067,8 +2060,8 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"signatureXml","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["In","Out"]}
-					,{"Name":"count","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
+					{"Name":"signatureXml","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out"]}
+					,{"Name":"count","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
 		]
@@ -2092,7 +2085,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"signatureId","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"signatureId","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2120,7 +2113,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"signatureMethod","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"signatureMethod","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2148,7 +2141,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"digestMethod","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"digestMethod","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2176,7 +2169,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"embeddingOption","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OPC_CERTIFICATE_EMBEDDING_OPTION","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"embeddingOption","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OPC_CERTIFICATE_EMBEDDING_OPTION","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2204,7 +2197,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"timeFormat","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OPC_SIGNATURE_TIME_FORMAT","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"timeFormat","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OPC_SIGNATURE_TIME_FORMAT","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2232,7 +2225,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"partReferenceSet","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignaturePartReferenceSet","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"partReferenceSet","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignaturePartReferenceSet","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2246,7 +2239,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"relationshipReferenceSet","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureRelationshipReferenceSet","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"relationshipReferenceSet","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureRelationshipReferenceSet","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2260,7 +2253,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"customObjectSet","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureCustomObjectSet","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"customObjectSet","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureCustomObjectSet","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2274,7 +2267,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"customReferenceSet","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureReferenceSet","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"customReferenceSet","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureReferenceSet","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2288,7 +2281,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"certificateSet","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcCertificateSet","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"certificateSet","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcCertificateSet","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2302,7 +2295,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"signaturePartName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"signaturePartName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2316,7 +2309,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"signaturePartName","Type":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In","Optional"]}
+					{"Name":"signaturePartName","Type":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In"]}
 				]
 			}
 		]
@@ -2340,7 +2333,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"signatureOriginPartName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"signatureOriginPartName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2368,7 +2361,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"signatureEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcDigitalSignatureEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"signatureEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcDigitalSignatureEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2396,7 +2389,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"signingOptions","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSigningOptions","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"signingOptions","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSigningOptions","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2412,7 +2405,7 @@
 				,"Params":[
 					{"Name":"signature","Type":{"Kind":"ApiRef","Name":"IOpcDigitalSignature","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In"]}
 					,{"Name":"certificate","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CERT_CONTEXT","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In","Const"]}
-					,{"Name":"validationResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OPC_SIGNATURE_VALIDATION_RESULT","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["In","Out"]}
+					,{"Name":"validationResult","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OPC_SIGNATURE_VALIDATION_RESULT","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2428,7 +2421,7 @@
 				,"Params":[
 					{"Name":"certificate","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CERT_CONTEXT","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}},"Attrs":["In","Const"]}
 					,{"Name":"signingOptions","Type":{"Kind":"ApiRef","Name":"IOpcSigningOptions","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In"]}
-					,{"Name":"digitalSignature","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcDigitalSignature","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"digitalSignature","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcDigitalSignature","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2443,9 +2436,9 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"signaturePartName","Type":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In"]}
-					,{"Name":"newSignatureXml","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Const"]}
+					,{"Name":"newSignatureXml","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Const"]}
 					,{"Name":"count","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"digitalSignature","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcDigitalSignature","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"digitalSignature","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcDigitalSignature","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -2469,7 +2462,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"hasNext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"hasNext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2483,7 +2476,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"hasPrevious","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"hasPrevious","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2497,7 +2490,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"partReference","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignaturePartReference","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"partReference","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignaturePartReference","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2511,7 +2504,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"copy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignaturePartReferenceEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"copy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignaturePartReferenceEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -2535,7 +2528,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"hasNext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"hasNext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2549,7 +2542,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"hasPrevious","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"hasPrevious","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2563,7 +2556,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"relationshipReference","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureRelationshipReference","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"relationshipReference","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureRelationshipReference","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2577,7 +2570,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"copy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureRelationshipReferenceEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"copy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureRelationshipReferenceEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -2601,7 +2594,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"hasNext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"hasNext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2615,7 +2608,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"hasPrevious","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"hasPrevious","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2629,7 +2622,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"relationshipSelector","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcRelationshipSelector","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"relationshipSelector","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcRelationshipSelector","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2643,7 +2636,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"copy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcRelationshipSelectorEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"copy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcRelationshipSelectorEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -2667,7 +2660,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"hasNext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"hasNext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2681,7 +2674,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"hasPrevious","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"hasPrevious","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2695,7 +2688,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"reference","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureReference","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"reference","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureReference","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2709,7 +2702,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"copy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureReferenceEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"copy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureReferenceEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -2733,7 +2726,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"hasNext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"hasNext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2747,7 +2740,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"hasPrevious","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"hasPrevious","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2761,7 +2754,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"customObject","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureCustomObject","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"customObject","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureCustomObject","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2775,7 +2768,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"copy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureCustomObjectEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"copy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureCustomObjectEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -2799,7 +2792,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"hasNext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
+					{"Name":"hasNext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2813,7 +2806,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"hasPrevious","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Out"]}
+					{"Name":"hasPrevious","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2827,7 +2820,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"certificate","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CERT_CONTEXT","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":["In","Const"]}
+					{"Name":"certificate","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CERT_CONTEXT","TargetKind":"Default","Api":"Security.Cryptography","Parents":[]}}},"Attrs":["Out","RetVal","Const"]}
 				]
 			}
 			,{
@@ -2841,7 +2834,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"copy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcCertificateEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"copy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcCertificateEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -2865,7 +2858,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"hasNext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"hasNext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2879,7 +2872,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"hasPrevious","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"hasPrevious","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2893,7 +2886,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"digitalSignature","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcDigitalSignature","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"digitalSignature","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcDigitalSignature","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2907,7 +2900,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"copy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcDigitalSignatureEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"copy","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcDigitalSignatureEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -2931,10 +2924,10 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"partUri","Type":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In","Optional"]}
-					,{"Name":"digestMethod","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
+					{"Name":"partUri","Type":{"Kind":"ApiRef","Name":"IOpcPartUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In"]}
+					,{"Name":"digestMethod","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 					,{"Name":"transformMethod","Type":{"Kind":"ApiRef","Name":"OPC_CANONICALIZATION_METHOD","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In"]}
-					,{"Name":"partReference","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignaturePartReference","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"partReference","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignaturePartReference","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -2948,7 +2941,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"partReference","Type":{"Kind":"ApiRef","Name":"IOpcSignaturePartReference","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In","Optional"]}
+					{"Name":"partReference","Type":{"Kind":"ApiRef","Name":"IOpcSignaturePartReference","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -2962,7 +2955,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"partReferenceEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignaturePartReferenceEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"partReferenceEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignaturePartReferenceEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -2986,12 +2979,12 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"sourceUri","Type":{"Kind":"ApiRef","Name":"IOpcUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In","Optional"]}
-					,{"Name":"digestMethod","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
+					{"Name":"sourceUri","Type":{"Kind":"ApiRef","Name":"IOpcUri","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In"]}
+					,{"Name":"digestMethod","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 					,{"Name":"relationshipSigningOption","Type":{"Kind":"ApiRef","Name":"OPC_RELATIONSHIPS_SIGNING_OPTION","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In"]}
-					,{"Name":"selectorSet","Type":{"Kind":"ApiRef","Name":"IOpcRelationshipSelectorSet","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In","Optional"]}
+					,{"Name":"selectorSet","Type":{"Kind":"ApiRef","Name":"IOpcRelationshipSelectorSet","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In"]}
 					,{"Name":"transformMethod","Type":{"Kind":"ApiRef","Name":"OPC_CANONICALIZATION_METHOD","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In"]}
-					,{"Name":"relationshipReference","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureRelationshipReference","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"relationshipReference","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureRelationshipReference","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -3019,7 +3012,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"relationshipReference","Type":{"Kind":"ApiRef","Name":"IOpcSignatureRelationshipReference","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In","Optional"]}
+					{"Name":"relationshipReference","Type":{"Kind":"ApiRef","Name":"IOpcSignatureRelationshipReference","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -3033,7 +3026,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"relationshipReferenceEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureRelationshipReferenceEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"relationshipReferenceEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureRelationshipReferenceEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -3059,7 +3052,7 @@
 				,"Params":[
 					{"Name":"selector","Type":{"Kind":"ApiRef","Name":"OPC_RELATIONSHIP_SELECTOR","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In"]}
 					,{"Name":"selectionCriterion","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
-					,{"Name":"relationshipSelector","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcRelationshipSelector","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"relationshipSelector","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcRelationshipSelector","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -3073,7 +3066,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"relationshipSelector","Type":{"Kind":"ApiRef","Name":"IOpcRelationshipSelector","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In","Optional"]}
+					{"Name":"relationshipSelector","Type":{"Kind":"ApiRef","Name":"IOpcRelationshipSelector","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -3087,7 +3080,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"relationshipSelectorEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcRelationshipSelectorEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"relationshipSelectorEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcRelationshipSelectorEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -3111,12 +3104,12 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"referenceUri","Type":{"Kind":"ApiRef","Name":"IUri","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In","Optional"]}
-					,{"Name":"referenceId","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
-					,{"Name":"type","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
-					,{"Name":"digestMethod","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
+					{"Name":"referenceUri","Type":{"Kind":"ApiRef","Name":"IUri","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"referenceId","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+					,{"Name":"type","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+					,{"Name":"digestMethod","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 					,{"Name":"transformMethod","Type":{"Kind":"ApiRef","Name":"OPC_CANONICALIZATION_METHOD","TargetKind":"Default","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In"]}
-					,{"Name":"reference","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureReference","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"reference","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureReference","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -3130,7 +3123,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"reference","Type":{"Kind":"ApiRef","Name":"IOpcSignatureReference","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In","Optional"]}
+					{"Name":"reference","Type":{"Kind":"ApiRef","Name":"IOpcSignatureReference","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -3144,7 +3137,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"referenceEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureReferenceEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"referenceEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureReferenceEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -3170,7 +3163,7 @@
 				,"Params":[
 					{"Name":"xmlMarkup","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Const"]}
 					,{"Name":"count","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"customObject","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureCustomObject","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"customObject","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureCustomObject","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -3184,7 +3177,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"customObject","Type":{"Kind":"ApiRef","Name":"IOpcSignatureCustomObject","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In","Optional"]}
+					{"Name":"customObject","Type":{"Kind":"ApiRef","Name":"IOpcSignatureCustomObject","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -3198,7 +3191,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"customObjectEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureCustomObjectEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"customObjectEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcSignatureCustomObjectEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -3250,7 +3243,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"certificateEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcCertificateEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"certificateEnumerator","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IOpcCertificateEnumerator","TargetKind":"Com","Api":"Storage.Packaging.Opc","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -3372,6 +3365,13 @@
 				]
 			}
 		]
+	}
+	,{
+		"Name":"OpcFactory"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"6b2d6ba0-9f3e-4f27-920b-313cc426a39e"
 	}
 ]
 

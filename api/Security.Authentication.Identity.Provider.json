@@ -118,7 +118,7 @@
 			,{"Name":"IDENTITY_CONNECTED","Value":64}
 			,{"Name":"IDENTITY_DISCONNECTED","Value":128}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"IIdentityAdvise"
@@ -139,7 +139,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"dwIdentityUpdateEvents","Type":{"Kind":"ApiRef","Name":"IdentityUpdateEvent","TargetKind":"Default","Api":"Security.Authentication.Identity.Provider","Parents":[]},"Attrs":["In"]}
+					{"Name":"dwIdentityUpdateEvents","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"lpszUniqueID","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 				]
 			}
@@ -294,7 +294,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pIdentityAdvise","Type":{"Kind":"ApiRef","Name":"IIdentityAdvise","TargetKind":"Com","Api":"Security.Authentication.Identity.Provider","Parents":[]},"Attrs":["In","Optional"]}
-					,{"Name":"dwIdentityUpdateEvents","Type":{"Kind":"ApiRef","Name":"IdentityUpdateEvent","TargetKind":"Default","Api":"Security.Authentication.Identity.Provider","Parents":[]},"Attrs":["In"]}
+					,{"Name":"dwIdentityUpdateEvents","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pdwCookie","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
 			}
@@ -793,7 +793,7 @@
 				,"Params":[
 					{"Name":"Identifier","Type":{"Kind":"ApiRef","Name":"IDENTITY_URL","TargetKind":"Default","Api":"Security.Authentication.Identity.Provider","Parents":[]},"Attrs":["In"]}
 					,{"Name":"Context","Type":{"Kind":"ApiRef","Name":"IBindCtx","TargetKind":"Com","Api":"System.Com","Parents":[]},"Attrs":["In","Optional"]}
-					,{"Name":"PostData","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"PostData","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"Url","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
@@ -928,7 +928,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"PostData","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+					{"Name":"PostData","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"Url","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
@@ -1069,20 +1069,6 @@
 				]
 			}
 		]
-	}
-	,{
-		"Name":"CoClassIdentityStore"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"30d49246-d217-465f-b00b-ac9ddd652eb7"
-	}
-	,{
-		"Name":"CIdentityProfileHandler"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"ecf5bf46-e3b6-449a-b56b-43f58f867814"
 	}
 	,{
 		"Name":"IIdentityStore"
@@ -1477,6 +1463,20 @@
 				]
 			}
 		]
+	}
+	,{
+		"Name":"CoClassIdentityStore"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"30d49246-d217-465f-b00b-ac9ddd652eb7"
+	}
+	,{
+		"Name":"CIdentityProfileHandler"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"ecf5bf46-e3b6-449a-b56b-43f58f867814"
 	}
 ]
 

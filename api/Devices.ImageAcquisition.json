@@ -8699,27 +8699,6 @@
 
 ,"Types":[
 	{
-		"Name":"WiaDevMgr"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"a1f4e726-8cf1-11d1-bf92-0060081ed811"
-	}
-	,{
-		"Name":"WiaDevMgr2"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"b6c292bc-7c88-41ee-8b54-8ec92617e599"
-	}
-	,{
-		"Name":"WiaLog"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"a1e75357-881a-419e-83e2-bb16db197c68"
-	}
-	,{
 		"Name":"WIA_DITHER_PATTERN_DATA"
 		,"Architectures":[]
 		,"Platform":null
@@ -8812,7 +8791,7 @@
 			,{"Name":"YOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Rotation","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Text","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+			,{"Name":"Text","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -8829,7 +8808,7 @@
 			,{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Count","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Barcodes","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"WIA_BARCODE_INFO","TargetKind":"Default","Api":"Devices.ImageAcquisition","Parents":[]}},"Attrs":[]}
+			,{"Name":"Barcodes","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"WIA_BARCODE_INFO","TargetKind":"Default","Api":"Devices.ImageAcquisition","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -8859,7 +8838,7 @@
 			,{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Count","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"PatchCodes","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"WIA_PATCH_CODE_INFO","TargetKind":"Default","Api":"Devices.ImageAcquisition","Parents":[]}},"Attrs":[]}
+			,{"Name":"PatchCodes","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"WIA_PATCH_CODE_INFO","TargetKind":"Default","Api":"Devices.ImageAcquisition","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -8875,7 +8854,7 @@
 			{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Page","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Length","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Text","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+			,{"Name":"Text","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -8894,7 +8873,7 @@
 			,{"Name":"Placeholder","Type":{"Kind":"Native","Name":"Char"},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"Count","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Micr","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"WIA_MICR_INFO","TargetKind":"Default","Api":"Devices.ImageAcquisition","Parents":[]}},"Attrs":[]}
+			,{"Name":"Micr","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"WIA_MICR_INFO","TargetKind":"Default","Api":"Devices.ImageAcquisition","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -10293,7 +10272,7 @@
 					{"Name":"dwEscapeCode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"lpInData","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In"]}
 					,{"Name":"cbInDataSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"pOutData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out"]}
+					,{"Name":"pOutData","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":4,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["Out"]}
 					,{"Name":"dwOutDataSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"pdwActualDataSize","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 				]
@@ -11187,6 +11166,27 @@
 		]
 	}
 	,{
+		"Name":"WiaDevMgr"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"a1f4e726-8cf1-11d1-bf92-0060081ed811"
+	}
+	,{
+		"Name":"WiaDevMgr2"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"b6c292bc-7c88-41ee-8b54-8ec92617e599"
+	}
+	,{
+		"Name":"WiaLog"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"a1e75357-881a-419e-83e2-bb16db197c68"
+	}
+	,{
 		"Name":"MINIDRV_TRANSFER_CONTEXT"
 		,"Architectures":[]
 		,"Platform":null
@@ -11817,7 +11817,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"lAccessFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"vt","Type":{"Kind":"ApiRef","Name":"VARENUM","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":[]}
+			,{"Name":"vt","Type":{"Kind":"ApiRef","Name":"VARENUM","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":[]}
 			,{"Name":"ValidVal","Type":{"Kind":"ApiRef","Name":"_ValidVal_e__Union","TargetKind":"Default","Api":"Devices.ImageAcquisition","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
@@ -12079,13 +12079,6 @@
 		]
 	}
 	,{
-		"Name":"WiaVideo"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"3908c3cd-4478-4536-af2f-10c25d4ef89a"
-	}
-	,{
 		"Name":"WIAVIDEO_STATE"
 		,"Architectures":[]
 		,"Platform":null
@@ -12307,6 +12300,13 @@
 				]
 			}
 		]
+	}
+	,{
+		"Name":"WiaVideo"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"3908c3cd-4478-4536-af2f-10c25d4ef89a"
 	}
 	,{
 		"Name":"DEVICEDIALOGDATA2"
@@ -12552,7 +12552,7 @@
 			,{"Name":"dblVal","Type":{"Kind":"Native","Name":"Double"},"Attrs":[]}
 			,{"Name":"pGuid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":[]}
 			,{"Name":"pScanInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"SCANINFO","TargetKind":"Default","Api":"Devices.ImageAcquisition","Parents":[]}},"Attrs":[]}
-			,{"Name":"handle","Type":{"Kind":"Native","Name":"IntPtr"},"Attrs":[]}
+			,{"Name":"handle","Type":{"Kind":"ApiRef","Name":"HGLOBAL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"ppButtonNames","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt16"}}},"Attrs":[]}
 			,{"Name":"pHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
 			,{"Name":"lReserved","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
@@ -12576,7 +12576,7 @@
 			,{"Name":"lRC","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"lCC","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"lDataSize","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"Data","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"Data","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]

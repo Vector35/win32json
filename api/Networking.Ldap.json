@@ -2259,6 +2259,15 @@
 
 ,"Types":[
 	{
+		"Name":"PLDAPSearch"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
 		"Name":"LDAP_RETCODE"
 		,"Architectures":[]
 		,"Platform":null
@@ -2625,18 +2634,6 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"Format","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","NotNullTerminated","Const"]}
-		]
-	}
-	,{
-		"Name":"LDAPSearch"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
 		]
 	}
 	,{
@@ -6402,7 +6399,7 @@
 		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"WLDAP32.dll"
-		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPSearch","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}}
+		,"ReturnType":{"Kind":"ApiRef","Name":"PLDAPSearch","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.0.6000"
@@ -6427,7 +6424,7 @@
 		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"WLDAP32.dll"
-		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPSearch","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}}
+		,"ReturnType":{"Kind":"ApiRef","Name":"PLDAPSearch","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.0.6000"
@@ -6452,7 +6449,7 @@
 		,"NoReturn":false
 		,"SetLastError":true
 		,"DllImport":"WLDAP32.dll"
-		,"ReturnType":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPSearch","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}}
+		,"ReturnType":{"Kind":"ApiRef","Name":"PLDAPSearch","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
 		,"Platform":"windows6.0.6000"
@@ -6484,7 +6481,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ExternalHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAP","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}},"Attrs":["In","Out"]}
-			,{"Name":"SearchHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPSearch","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"SearchHandle","Type":{"Kind":"ApiRef","Name":"PLDAPSearch","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]},"Attrs":["In"]}
 			,{"Name":"PageSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"MessageNumber","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
 		]
@@ -6502,7 +6499,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ExternalHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAP","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}},"Attrs":["In","Out"]}
-			,{"Name":"SearchHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPSearch","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"SearchHandle","Type":{"Kind":"ApiRef","Name":"PLDAPSearch","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]},"Attrs":["In"]}
 			,{"Name":"timeout","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAP_TIMEVAL","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}},"Attrs":["In","Out"]}
 			,{"Name":"PageSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"TotalCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
@@ -6522,7 +6519,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ExternalHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAP","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}},"Attrs":["In","Out"]}
-			,{"Name":"SearchBlock","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPSearch","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"SearchBlock","Type":{"Kind":"ApiRef","Name":"PLDAPSearch","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]},"Attrs":["In"]}
 			,{"Name":"TotalCount","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["In","Out"]}
 			,{"Name":"Results","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPMessage","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}},"Attrs":["In","Out"]}
 		]
@@ -6540,7 +6537,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ExternalHandle","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAP","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}},"Attrs":["In","Out"]}
-			,{"Name":"SearchBlock","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LDAPSearch","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"SearchBlock","Type":{"Kind":"ApiRef","Name":"PLDAPSearch","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -6915,7 +6912,7 @@
 		,"Platform":"windows6.0.6000"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"LdapError","Type":{"Kind":"ApiRef","Name":"LDAP_RETCODE","TargetKind":"Default","Api":"Networking.Ldap","Parents":[]},"Attrs":["In"]}
+			{"Name":"LdapError","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
 	,{

@@ -57,7 +57,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"BasicInfo","Type":{"Kind":"ApiRef","Name":"FILE_BASIC_INFO","TargetKind":"Default","Api":"Storage.FileSystem","Parents":[]},"Attrs":[]}
-			,{"Name":"FileSize","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"FileSize","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -76,7 +76,7 @@
 			,{"Name":"CF_PLACEHOLDER_CREATE_FLAG_SUPERSEDE","Value":4}
 			,{"Name":"CF_PLACEHOLDER_CREATE_FLAG_ALWAYS_FULL","Value":8}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_PLACEHOLDER_CREATE_INFO"
@@ -166,7 +166,7 @@
 			,{"Name":"CF_REGISTER_FLAG_DISABLE_ON_DEMAND_POPULATION_ON_ROOT","Value":2}
 			,{"Name":"CF_REGISTER_FLAG_MARK_IN_SYNC_ON_ROOT","Value":4}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_HYDRATION_POLICY_PRIMARY"
@@ -182,19 +182,6 @@
 			,{"Name":"CF_HYDRATION_POLICY_ALWAYS_FULL","Value":3}
 		]
 		,"IntegerBase":"UInt16"
-	}
-	,{
-		"Name":"CF_HYDRATION_POLICY_PRIMARY_USHORT"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"us","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
 	}
 	,{
 		"Name":"CF_HYDRATION_POLICY_MODIFIER"
@@ -213,19 +200,6 @@
 		,"IntegerBase":"UInt16"
 	}
 	,{
-		"Name":"CF_HYDRATION_POLICY_MODIFIER_USHORT"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"us","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
 		"Name":"CF_HYDRATION_POLICY"
 		,"Architectures":[]
 		,"Platform":null
@@ -233,8 +207,8 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"Primary","Type":{"Kind":"ApiRef","Name":"CF_HYDRATION_POLICY_PRIMARY_USHORT","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
-			,{"Name":"Modifier","Type":{"Kind":"ApiRef","Name":"CF_HYDRATION_POLICY_MODIFIER_USHORT","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
+			{"Name":"Primary","Type":{"Kind":"ApiRef","Name":"CF_HYDRATION_POLICY_PRIMARY","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
+			,{"Name":"Modifier","Type":{"Kind":"ApiRef","Name":"CF_HYDRATION_POLICY_MODIFIER","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -254,19 +228,6 @@
 		,"IntegerBase":"UInt16"
 	}
 	,{
-		"Name":"CF_POPULATION_POLICY_PRIMARY_USHORT"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"us","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
 		"Name":"CF_POPULATION_POLICY_MODIFIER"
 		,"Architectures":[]
 		,"Platform":null
@@ -279,19 +240,6 @@
 		,"IntegerBase":"UInt16"
 	}
 	,{
-		"Name":"CF_POPULATION_POLICY_MODIFIER_USHORT"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"us","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
 		"Name":"CF_POPULATION_POLICY"
 		,"Architectures":[]
 		,"Platform":null
@@ -299,8 +247,8 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"Primary","Type":{"Kind":"ApiRef","Name":"CF_POPULATION_POLICY_PRIMARY_USHORT","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
-			,{"Name":"Modifier","Type":{"Kind":"ApiRef","Name":"CF_POPULATION_POLICY_MODIFIER_USHORT","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
+			{"Name":"Primary","Type":{"Kind":"ApiRef","Name":"CF_POPULATION_POLICY_PRIMARY","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
+			,{"Name":"Modifier","Type":{"Kind":"ApiRef","Name":"CF_POPULATION_POLICY_MODIFIER","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -357,7 +305,7 @@
 			{"Name":"CF_HARDLINK_POLICY_NONE","Value":0}
 			,{"Name":"CF_HARDLINK_POLICY_ALLOWED","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_SYNC_POLICIES"
@@ -411,19 +359,19 @@
 			,{"Name":"VolumeGuidName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"VolumeDosName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"VolumeSerialNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"SyncRootFileId","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"SyncRootFileId","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"SyncRootIdentity","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Const"]}
 			,{"Name":"SyncRootIdentityLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"FileId","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"FileSize","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"FileId","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"FileSize","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"FileIdentity","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Const"]}
 			,{"Name":"FileIdentityLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NormalizedPath","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
-			,{"Name":"TransferKey","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"TransferKey","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"PriorityHint","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"CorrelationVector","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CORRELATION_VECTOR","TargetKind":"Default","Api":"System.CorrelationVector","Parents":[]}},"Attrs":[]}
 			,{"Name":"ProcessInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CF_PROCESS_INFO","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]}},"Attrs":[]}
-			,{"Name":"RequestKey","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"RequestKey","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -440,7 +388,7 @@
 			,{"Name":"CF_CALLBACK_CANCEL_FLAG_IO_TIMEOUT","Value":1}
 			,{"Name":"CF_CALLBACK_CANCEL_FLAG_IO_ABORTED","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_CALLBACK_FETCH_DATA_FLAGS"
@@ -454,7 +402,7 @@
 			,{"Name":"CF_CALLBACK_FETCH_DATA_FLAG_RECOVERY","Value":1}
 			,{"Name":"CF_CALLBACK_FETCH_DATA_FLAG_EXPLICIT_HYDRATION","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_CALLBACK_VALIDATE_DATA_FLAGS"
@@ -467,7 +415,7 @@
 			{"Name":"CF_CALLBACK_VALIDATE_DATA_FLAG_NONE","Value":0}
 			,{"Name":"CF_CALLBACK_VALIDATE_DATA_FLAG_EXPLICIT_HYDRATION","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_CALLBACK_FETCH_PLACEHOLDERS_FLAGS"
@@ -479,7 +427,7 @@
 		,"Values":[
 			{"Name":"CF_CALLBACK_FETCH_PLACEHOLDERS_FLAG_NONE","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_CALLBACK_OPEN_COMPLETION_FLAGS"
@@ -493,7 +441,7 @@
 			,{"Name":"CF_CALLBACK_OPEN_COMPLETION_FLAG_PLACEHOLDER_UNKNOWN","Value":1}
 			,{"Name":"CF_CALLBACK_OPEN_COMPLETION_FLAG_PLACEHOLDER_UNSUPPORTED","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_CALLBACK_CLOSE_COMPLETION_FLAGS"
@@ -506,7 +454,7 @@
 			{"Name":"CF_CALLBACK_CLOSE_COMPLETION_FLAG_NONE","Value":0}
 			,{"Name":"CF_CALLBACK_CLOSE_COMPLETION_FLAG_DELETED","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_CALLBACK_DEHYDRATE_FLAGS"
@@ -519,7 +467,7 @@
 			{"Name":"CF_CALLBACK_DEHYDRATE_FLAG_NONE","Value":0}
 			,{"Name":"CF_CALLBACK_DEHYDRATE_FLAG_BACKGROUND","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_CALLBACK_DEHYDRATE_COMPLETION_FLAGS"
@@ -533,7 +481,7 @@
 			,{"Name":"CF_CALLBACK_DEHYDRATE_COMPLETION_FLAG_BACKGROUND","Value":1}
 			,{"Name":"CF_CALLBACK_DEHYDRATE_COMPLETION_FLAG_DEHYDRATED","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_CALLBACK_DELETE_FLAGS"
@@ -547,7 +495,7 @@
 			,{"Name":"CF_CALLBACK_DELETE_FLAG_IS_DIRECTORY","Value":1}
 			,{"Name":"CF_CALLBACK_DELETE_FLAG_IS_UNDELETE","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_CALLBACK_DELETE_COMPLETION_FLAGS"
@@ -559,7 +507,7 @@
 		,"Values":[
 			{"Name":"CF_CALLBACK_DELETE_COMPLETION_FLAG_NONE","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_CALLBACK_RENAME_FLAGS"
@@ -574,7 +522,7 @@
 			,{"Name":"CF_CALLBACK_RENAME_FLAG_SOURCE_IN_SCOPE","Value":2}
 			,{"Name":"CF_CALLBACK_RENAME_FLAG_TARGET_IN_SCOPE","Value":4}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_CALLBACK_RENAME_COMPLETION_FLAGS"
@@ -586,7 +534,7 @@
 		,"Values":[
 			{"Name":"CF_CALLBACK_RENAME_COMPLETION_FLAG_NONE","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_CALLBACK_DEHYDRATION_REASON"
@@ -639,70 +587,88 @@
 				]
 				,"NestedTypes":[
 					{
-						"Name":"_Rename_e__Struct"
+						"Name":"_RenameCompletion_e__Struct"
 						,"Architectures":[]
 						,"Platform":null
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
 						,"Fields":[
-							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_CALLBACK_RENAME_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
-							,{"Name":"TargetPath","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_CALLBACK_RENAME_COMPLETION_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
+							,{"Name":"SourcePath","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 						]
 						,"NestedTypes":[
 						]
 					}
 					,{
-						"Name":"_Delete_e__Struct"
+						"Name":"_DeleteCompletion_e__Struct"
 						,"Architectures":[]
 						,"Platform":null
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
 						,"Fields":[
-							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_CALLBACK_DELETE_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
+							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_CALLBACK_DELETE_COMPLETION_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]
 					}
 					,{
-						"Name":"_Dehydrate_e__Struct"
+						"Name":"_DehydrateCompletion_e__Struct"
 						,"Architectures":[]
 						,"Platform":null
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
 						,"Fields":[
-							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_CALLBACK_DEHYDRATE_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
+							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_CALLBACK_DEHYDRATE_COMPLETION_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
 							,{"Name":"Reason","Type":{"Kind":"ApiRef","Name":"CF_CALLBACK_DEHYDRATION_REASON","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]
 					}
 					,{
-						"Name":"_OpenCompletion_e__Struct"
+						"Name":"_CloseCompletion_e__Struct"
 						,"Architectures":[]
 						,"Platform":null
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
 						,"Fields":[
-							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_CALLBACK_OPEN_COMPLETION_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
+							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_CALLBACK_CLOSE_COMPLETION_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]
 					}
 					,{
-						"Name":"_ValidateData_e__Struct"
+						"Name":"_FetchPlaceholders_e__Struct"
 						,"Architectures":[]
 						,"Platform":null
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
 						,"Fields":[
-							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_CALLBACK_VALIDATE_DATA_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
-							,{"Name":"RequiredFileOffset","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-							,{"Name":"RequiredLength","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_CALLBACK_FETCH_PLACEHOLDERS_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
+							,{"Name":"Pattern","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+						]
+						,"NestedTypes":[
+						]
+					}
+					,{
+						"Name":"_FetchData_e__Struct"
+						,"Architectures":[]
+						,"Platform":null
+						,"Kind":"Struct"
+						,"Size":0
+						,"PackingSize":0
+						,"Fields":[
+							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_CALLBACK_FETCH_DATA_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
+							,{"Name":"RequiredFileOffset","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+							,{"Name":"RequiredLength","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+							,{"Name":"OptionalFileOffset","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+							,{"Name":"OptionalLength","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+							,{"Name":"LastDehydrationTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+							,{"Name":"LastDehydrationReason","Type":{"Kind":"ApiRef","Name":"CF_CALLBACK_DEHYDRATION_REASON","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]
@@ -738,8 +704,8 @@
 										,"Size":0
 										,"PackingSize":0
 										,"Fields":[
-											{"Name":"FileOffset","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-											,{"Name":"Length","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+											{"Name":"FileOffset","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+											,{"Name":"Length","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 										]
 										,"NestedTypes":[
 										]
@@ -749,88 +715,70 @@
 						]
 					}
 					,{
-						"Name":"_RenameCompletion_e__Struct"
+						"Name":"_Rename_e__Struct"
 						,"Architectures":[]
 						,"Platform":null
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
 						,"Fields":[
-							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_CALLBACK_RENAME_COMPLETION_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
-							,{"Name":"SourcePath","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_CALLBACK_RENAME_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
+							,{"Name":"TargetPath","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 						]
 						,"NestedTypes":[
 						]
 					}
 					,{
-						"Name":"_DehydrateCompletion_e__Struct"
+						"Name":"_Dehydrate_e__Struct"
 						,"Architectures":[]
 						,"Platform":null
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
 						,"Fields":[
-							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_CALLBACK_DEHYDRATE_COMPLETION_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
+							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_CALLBACK_DEHYDRATE_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
 							,{"Name":"Reason","Type":{"Kind":"ApiRef","Name":"CF_CALLBACK_DEHYDRATION_REASON","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]
 					}
 					,{
-						"Name":"_FetchPlaceholders_e__Struct"
+						"Name":"_ValidateData_e__Struct"
 						,"Architectures":[]
 						,"Platform":null
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
 						,"Fields":[
-							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_CALLBACK_FETCH_PLACEHOLDERS_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
-							,{"Name":"Pattern","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
+							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_CALLBACK_VALIDATE_DATA_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
+							,{"Name":"RequiredFileOffset","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+							,{"Name":"RequiredLength","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]
 					}
 					,{
-						"Name":"_DeleteCompletion_e__Struct"
+						"Name":"_Delete_e__Struct"
 						,"Architectures":[]
 						,"Platform":null
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
 						,"Fields":[
-							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_CALLBACK_DELETE_COMPLETION_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
+							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_CALLBACK_DELETE_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]
 					}
 					,{
-						"Name":"_FetchData_e__Struct"
+						"Name":"_OpenCompletion_e__Struct"
 						,"Architectures":[]
 						,"Platform":null
 						,"Kind":"Struct"
 						,"Size":0
 						,"PackingSize":0
 						,"Fields":[
-							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_CALLBACK_FETCH_DATA_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
-							,{"Name":"RequiredFileOffset","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-							,{"Name":"RequiredLength","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-							,{"Name":"OptionalFileOffset","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-							,{"Name":"OptionalLength","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-							,{"Name":"LastDehydrationTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-							,{"Name":"LastDehydrationReason","Type":{"Kind":"ApiRef","Name":"CF_CALLBACK_DEHYDRATION_REASON","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
-						]
-						,"NestedTypes":[
-						]
-					}
-					,{
-						"Name":"_CloseCompletion_e__Struct"
-						,"Architectures":[]
-						,"Platform":null
-						,"Kind":"Struct"
-						,"Size":0
-						,"PackingSize":0
-						,"Fields":[
-							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_CALLBACK_CLOSE_COMPLETION_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
+							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_CALLBACK_OPEN_COMPLETION_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]
@@ -908,7 +856,7 @@
 			,{"Name":"CF_CONNECT_FLAG_REQUIRE_FULL_FILE_PATH","Value":4}
 			,{"Name":"CF_CONNECT_FLAG_BLOCK_SELF_IMPLICIT_HYDRATION","Value":8}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_OPERATION_TYPE"
@@ -958,10 +906,10 @@
 			{"Name":"StructSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Type","Type":{"Kind":"ApiRef","Name":"CF_OPERATION_TYPE","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
 			,{"Name":"ConnectionKey","Type":{"Kind":"ApiRef","Name":"CF_CONNECTION_KEY","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
-			,{"Name":"TransferKey","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"TransferKey","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"CorrelationVector","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CORRELATION_VECTOR","TargetKind":"Default","Api":"System.CorrelationVector","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"SyncStatus","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CF_SYNC_STATUS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]}},"Attrs":["Const"]}
-			,{"Name":"RequestKey","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"RequestKey","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -976,7 +924,7 @@
 		,"Values":[
 			{"Name":"CF_OPERATION_TRANSFER_DATA_FLAG_NONE","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_OPERATION_RETRIEVE_DATA_FLAGS"
@@ -988,7 +936,7 @@
 		,"Values":[
 			{"Name":"CF_OPERATION_RETRIEVE_DATA_FLAG_NONE","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_OPERATION_ACK_DATA_FLAGS"
@@ -1000,7 +948,7 @@
 		,"Values":[
 			{"Name":"CF_OPERATION_ACK_DATA_FLAG_NONE","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_OPERATION_RESTART_HYDRATION_FLAGS"
@@ -1013,7 +961,7 @@
 			{"Name":"CF_OPERATION_RESTART_HYDRATION_FLAG_NONE","Value":0}
 			,{"Name":"CF_OPERATION_RESTART_HYDRATION_FLAG_MARK_IN_SYNC","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_OPERATION_TRANSFER_PLACEHOLDERS_FLAGS"
@@ -1027,7 +975,7 @@
 			,{"Name":"CF_OPERATION_TRANSFER_PLACEHOLDERS_FLAG_STOP_ON_ERROR","Value":1}
 			,{"Name":"CF_OPERATION_TRANSFER_PLACEHOLDERS_FLAG_DISABLE_ON_DEMAND_POPULATION","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_OPERATION_ACK_DEHYDRATE_FLAGS"
@@ -1039,7 +987,7 @@
 		,"Values":[
 			{"Name":"CF_OPERATION_ACK_DEHYDRATE_FLAG_NONE","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_OPERATION_ACK_RENAME_FLAGS"
@@ -1051,7 +999,7 @@
 		,"Values":[
 			{"Name":"CF_OPERATION_ACK_RENAME_FLAG_NONE","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_OPERATION_ACK_DELETE_FLAGS"
@@ -1063,7 +1011,7 @@
 		,"Values":[
 			{"Name":"CF_OPERATION_ACK_DELETE_FLAG_NONE","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_OPERATION_PARAMETERS"
@@ -1096,71 +1044,6 @@
 				]
 				,"NestedTypes":[
 					{
-						"Name":"_AckRename_e__Struct"
-						,"Architectures":[]
-						,"Platform":null
-						,"Kind":"Struct"
-						,"Size":0
-						,"PackingSize":0
-						,"Fields":[
-							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_OPERATION_ACK_RENAME_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
-							,{"Name":"CompletionStatus","Type":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-						]
-						,"NestedTypes":[
-						]
-					}
-					,{
-						"Name":"_TransferPlaceholders_e__Struct"
-						,"Architectures":[]
-						,"Platform":null
-						,"Kind":"Struct"
-						,"Size":0
-						,"PackingSize":0
-						,"Fields":[
-							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_OPERATION_TRANSFER_PLACEHOLDERS_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
-							,{"Name":"CompletionStatus","Type":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-							,{"Name":"PlaceholderTotalCount","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-							,{"Name":"PlaceholderArray","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CF_PLACEHOLDER_CREATE_INFO","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]}},"Attrs":[]}
-							,{"Name":"PlaceholderCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-							,{"Name":"EntriesProcessed","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-						]
-						,"NestedTypes":[
-						]
-					}
-					,{
-						"Name":"_AckData_e__Struct"
-						,"Architectures":[]
-						,"Platform":null
-						,"Kind":"Struct"
-						,"Size":0
-						,"PackingSize":0
-						,"Fields":[
-							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_OPERATION_ACK_DATA_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
-							,{"Name":"CompletionStatus","Type":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-							,{"Name":"Offset","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-							,{"Name":"Length","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-						]
-						,"NestedTypes":[
-						]
-					}
-					,{
-						"Name":"_TransferData_e__Struct"
-						,"Architectures":[]
-						,"Platform":null
-						,"Kind":"Struct"
-						,"Size":0
-						,"PackingSize":0
-						,"Fields":[
-							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_OPERATION_TRANSFER_DATA_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
-							,{"Name":"CompletionStatus","Type":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-							,{"Name":"Buffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Const"]}
-							,{"Name":"Offset","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-							,{"Name":"Length","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-						]
-						,"NestedTypes":[
-						]
-					}
-					,{
 						"Name":"_AckDelete_e__Struct"
 						,"Architectures":[]
 						,"Platform":null
@@ -1170,22 +1053,6 @@
 						,"Fields":[
 							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_OPERATION_ACK_DELETE_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
 							,{"Name":"CompletionStatus","Type":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-						]
-						,"NestedTypes":[
-						]
-					}
-					,{
-						"Name":"_RestartHydration_e__Struct"
-						,"Architectures":[]
-						,"Platform":null
-						,"Kind":"Struct"
-						,"Size":0
-						,"PackingSize":0
-						,"Fields":[
-							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_OPERATION_RESTART_HYDRATION_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
-							,{"Name":"FsMetadata","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CF_FS_METADATA","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]}},"Attrs":["Const"]}
-							,{"Name":"FileIdentity","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Const"]}
-							,{"Name":"FileIdentityLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]
@@ -1207,6 +1074,22 @@
 						]
 					}
 					,{
+						"Name":"_RestartHydration_e__Struct"
+						,"Architectures":[]
+						,"Platform":null
+						,"Kind":"Struct"
+						,"Size":0
+						,"PackingSize":0
+						,"Fields":[
+							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_OPERATION_RESTART_HYDRATION_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
+							,{"Name":"FsMetadata","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CF_FS_METADATA","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]}},"Attrs":["Const"]}
+							,{"Name":"FileIdentity","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Const"]}
+							,{"Name":"FileIdentityLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+						]
+						,"NestedTypes":[
+						]
+					}
+					,{
 						"Name":"_RetrieveData_e__Struct"
 						,"Architectures":[]
 						,"Platform":null
@@ -1216,9 +1099,74 @@
 						,"Fields":[
 							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_OPERATION_RETRIEVE_DATA_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
 							,{"Name":"Buffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-							,{"Name":"Offset","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-							,{"Name":"Length","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-							,{"Name":"ReturnedLength","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+							,{"Name":"Offset","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+							,{"Name":"Length","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+							,{"Name":"ReturnedLength","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+						]
+						,"NestedTypes":[
+						]
+					}
+					,{
+						"Name":"_AckRename_e__Struct"
+						,"Architectures":[]
+						,"Platform":null
+						,"Kind":"Struct"
+						,"Size":0
+						,"PackingSize":0
+						,"Fields":[
+							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_OPERATION_ACK_RENAME_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
+							,{"Name":"CompletionStatus","Type":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+						]
+						,"NestedTypes":[
+						]
+					}
+					,{
+						"Name":"_AckData_e__Struct"
+						,"Architectures":[]
+						,"Platform":null
+						,"Kind":"Struct"
+						,"Size":0
+						,"PackingSize":0
+						,"Fields":[
+							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_OPERATION_ACK_DATA_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
+							,{"Name":"CompletionStatus","Type":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+							,{"Name":"Offset","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+							,{"Name":"Length","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+						]
+						,"NestedTypes":[
+						]
+					}
+					,{
+						"Name":"_TransferPlaceholders_e__Struct"
+						,"Architectures":[]
+						,"Platform":null
+						,"Kind":"Struct"
+						,"Size":0
+						,"PackingSize":0
+						,"Fields":[
+							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_OPERATION_TRANSFER_PLACEHOLDERS_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
+							,{"Name":"CompletionStatus","Type":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+							,{"Name":"PlaceholderTotalCount","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+							,{"Name":"PlaceholderArray","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"CF_PLACEHOLDER_CREATE_INFO","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]}},"Attrs":[]}
+							,{"Name":"PlaceholderCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+							,{"Name":"EntriesProcessed","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+						]
+						,"NestedTypes":[
+						]
+					}
+					,{
+						"Name":"_TransferData_e__Struct"
+						,"Architectures":[]
+						,"Platform":null
+						,"Kind":"Struct"
+						,"Size":0
+						,"PackingSize":0
+						,"Fields":[
+							{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"CF_OPERATION_TRANSFER_DATA_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
+							,{"Name":"CompletionStatus","Type":{"Kind":"ApiRef","Name":"NTSTATUS","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+							,{"Name":"Buffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Const"]}
+							,{"Name":"Offset","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+							,{"Name":"Length","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 						]
 						,"NestedTypes":[
 						]
@@ -1238,7 +1186,7 @@
 			{"Name":"CF_CREATE_FLAG_NONE","Value":0}
 			,{"Name":"CF_CREATE_FLAG_STOP_ON_ERROR","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_OPEN_FILE_FLAGS"
@@ -1254,7 +1202,7 @@
 			,{"Name":"CF_OPEN_FILE_FLAG_DELETE_ACCESS","Value":4}
 			,{"Name":"CF_OPEN_FILE_FLAG_FOREGROUND","Value":8}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_FILE_RANGE"
@@ -1264,8 +1212,8 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"StartingOffset","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"Length","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			{"Name":"StartingOffset","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"Length","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -1285,7 +1233,7 @@
 			,{"Name":"CF_CONVERT_FLAG_ALWAYS_FULL","Value":8}
 			,{"Name":"CF_CONVERT_FLAG_FORCE_CONVERT_TO_CLOUD_FILE","Value":16}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_UPDATE_FLAGS"
@@ -1308,7 +1256,7 @@
 			,{"Name":"CF_UPDATE_FLAG_ALWAYS_FULL","Value":512}
 			,{"Name":"CF_UPDATE_FLAG_ALLOW_PARTIAL","Value":1024}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_REVERT_FLAGS"
@@ -1320,7 +1268,7 @@
 		,"Values":[
 			{"Name":"CF_REVERT_FLAG_NONE","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_HYDRATE_FLAGS"
@@ -1332,7 +1280,7 @@
 		,"Values":[
 			{"Name":"CF_HYDRATE_FLAG_NONE","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_DEHYDRATE_FLAGS"
@@ -1345,7 +1293,7 @@
 			{"Name":"CF_DEHYDRATE_FLAG_NONE","Value":0}
 			,{"Name":"CF_DEHYDRATE_FLAG_BACKGROUND","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_PIN_STATE"
@@ -1376,7 +1324,7 @@
 			,{"Name":"CF_SET_PIN_FLAG_RECURSE_ONLY","Value":2}
 			,{"Name":"CF_SET_PIN_FLAG_RECURSE_STOP_ON_ERROR","Value":4}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_IN_SYNC_STATE"
@@ -1401,7 +1349,7 @@
 		,"Values":[
 			{"Name":"CF_SET_IN_SYNC_FLAG_NONE","Value":0}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"CF_PLACEHOLDER_STATE"
@@ -1445,10 +1393,10 @@
 		,"Fields":[
 			{"Name":"PinState","Type":{"Kind":"ApiRef","Name":"CF_PIN_STATE","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
 			,{"Name":"InSyncState","Type":{"Kind":"ApiRef","Name":"CF_IN_SYNC_STATE","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
-			,{"Name":"FileId","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"SyncRootFileId","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"FileId","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"SyncRootFileId","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"FileIdentityLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"FileIdentity","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"FileIdentity","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -1461,16 +1409,16 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"OnDiskDataSize","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"ValidatedDataSize","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"ModifiedDataSize","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"PropertiesSize","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			{"Name":"OnDiskDataSize","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"ValidatedDataSize","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"ModifiedDataSize","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"PropertiesSize","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"PinState","Type":{"Kind":"ApiRef","Name":"CF_PIN_STATE","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
 			,{"Name":"InSyncState","Type":{"Kind":"ApiRef","Name":"CF_IN_SYNC_STATE","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
-			,{"Name":"FileId","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"SyncRootFileId","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"FileId","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"SyncRootFileId","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"FileIdentityLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"FileIdentity","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"FileIdentity","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -1497,7 +1445,7 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"SyncRootFileId","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			{"Name":"SyncRootFileId","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -1525,7 +1473,7 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"SyncRootFileId","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			{"Name":"SyncRootFileId","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"HydrationPolicy","Type":{"Kind":"ApiRef","Name":"CF_HYDRATION_POLICY","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
 			,{"Name":"PopulationPolicy","Type":{"Kind":"ApiRef","Name":"CF_POPULATION_POLICY","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
 			,{"Name":"InSyncPolicy","Type":{"Kind":"ApiRef","Name":"CF_INSYNC_POLICY","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":[]}
@@ -1534,7 +1482,7 @@
 			,{"Name":"ProviderName","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"ProviderVersion","Type":{"Kind":"Array","Shape":{"Size":256},"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
 			,{"Name":"SyncRootIdentityLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"SyncRootIdentity","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"SyncRootIdentity","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -1651,7 +1599,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"FileHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"TransferKey","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"TransferKey","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int64"}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -1667,7 +1615,7 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"FileHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"TransferKey","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"TransferKey","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int64"}},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -1903,8 +1851,8 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"FileHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"StartingOffset","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"Length","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"StartingOffset","Type":{"Kind":"Native","Name":"Int64"},"Attrs":["In"]}
+			,{"Name":"Length","Type":{"Kind":"Native","Name":"Int64"},"Attrs":["In"]}
 			,{"Name":"HydrateFlags","Type":{"Kind":"ApiRef","Name":"CF_HYDRATE_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Out","Optional"]}
 		]
@@ -1922,8 +1870,8 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"FileHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"StartingOffset","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"Length","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"StartingOffset","Type":{"Kind":"Native","Name":"Int64"},"Attrs":["In"]}
+			,{"Name":"Length","Type":{"Kind":"Native","Name":"Int64"},"Attrs":["In"]}
 			,{"Name":"DehydrateFlags","Type":{"Kind":"ApiRef","Name":"CF_DEHYDRATE_FLAGS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":["In"]}
 			,{"Name":"Overlapped","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"OVERLAPPED","TargetKind":"Default","Api":"System.IO","Parents":[]}},"Attrs":["In","Out","Optional"]}
 		]
@@ -2114,11 +2062,34 @@
 		,"Params":[
 			{"Name":"FileHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"InfoClass","Type":{"Kind":"ApiRef","Name":"CF_PLACEHOLDER_RANGE_INFO_CLASS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":["In"]}
-			,{"Name":"StartingOffset","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"Length","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"StartingOffset","Type":{"Kind":"Native","Name":"Int64"},"Attrs":["In"]}
+			,{"Name":"Length","Type":{"Kind":"Native","Name":"Int64"},"Attrs":["In"]}
 			,{"Name":"InfoBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":5}]}
 			,{"Name":"InfoBufferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"ReturnedLength","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
+		]
+	}
+	,{
+		"Name":"CfGetPlaceholderRangeInfoForHydration"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"cldapi.dll"
+		,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"ConnectionKey","Type":{"Kind":"ApiRef","Name":"CF_CONNECTION_KEY","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":["In"]}
+			,{"Name":"TransferKey","Type":{"Kind":"Native","Name":"Int64"},"Attrs":["In"]}
+			,{"Name":"FileId","Type":{"Kind":"Native","Name":"Int64"},"Attrs":["In"]}
+			,{"Name":"InfoClass","Type":{"Kind":"ApiRef","Name":"CF_PLACEHOLDER_RANGE_INFO_CLASS","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":["In"]}
+			,{"Name":"StartingOffset","Type":{"Kind":"Native","Name":"Int64"},"Attrs":["In"]}
+			,{"Name":"RangeLength","Type":{"Kind":"Native","Name":"Int64"},"Attrs":["In"]}
+			,{"Name":"InfoBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":7}]}
+			,{"Name":"InfoBufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"InfoBufferWritten","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out","Optional"]}
 		]
 	}
 	,{
@@ -2134,9 +2105,9 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ConnectionKey","Type":{"Kind":"ApiRef","Name":"CF_CONNECTION_KEY","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":["In"]}
-			,{"Name":"TransferKey","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"ProviderProgressTotal","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"ProviderProgressCompleted","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"TransferKey","Type":{"Kind":"Native","Name":"Int64"},"Attrs":["In"]}
+			,{"Name":"ProviderProgressTotal","Type":{"Kind":"Native","Name":"Int64"},"Attrs":["In"]}
+			,{"Name":"ProviderProgressCompleted","Type":{"Kind":"Native","Name":"Int64"},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -2152,10 +2123,10 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ConnectionKey","Type":{"Kind":"ApiRef","Name":"CF_CONNECTION_KEY","TargetKind":"Default","Api":"Storage.CloudFilters","Parents":[]},"Attrs":["In"]}
-			,{"Name":"TransferKey","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"RequestKey","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"ProviderProgressTotal","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-			,{"Name":"ProviderProgressCompleted","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
+			,{"Name":"TransferKey","Type":{"Kind":"Native","Name":"Int64"},"Attrs":["In"]}
+			,{"Name":"RequestKey","Type":{"Kind":"Native","Name":"Int64"},"Attrs":["In"]}
+			,{"Name":"ProviderProgressTotal","Type":{"Kind":"Native","Name":"Int64"},"Attrs":["In"]}
+			,{"Name":"ProviderProgressCompleted","Type":{"Kind":"Native","Name":"Int64"},"Attrs":["In"]}
 			,{"Name":"TargetSessionId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}

@@ -2690,6 +2690,41 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"NERR_CannotUpdateAadHostName"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2728
+		,"Attrs":[]
+	}
+	,{
+		"Name":"NERR_DuplicateHostName"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2729
+		,"Attrs":[]
+	}
+	,{
+		"Name":"NERR_HostNameTooLong"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2730
+		,"Attrs":[]
+	}
+	,{
+		"Name":"NERR_TooManyHostNames"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2731
+		,"Attrs":[]
+	}
+	,{
+		"Name":"NERR_AccountReuseBlockedByPolicy"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":2732
+		,"Attrs":[]
+	}
+	,{
 		"Name":"MAX_NERR"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -6124,6 +6159,48 @@
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
 		,"Value":5831
+		,"Attrs":[]
+	}
+	,{
+		"Name":"NETLOG_PassThruFilterError_Summary_AdminOverride"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":5832
+		,"Attrs":[]
+	}
+	,{
+		"Name":"NETLOG_PassThruFilterError_Summary_Blocked"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":5833
+		,"Attrs":[]
+	}
+	,{
+		"Name":"NETLOG_PassThruFilterError_Request_AdminOverride"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":5834
+		,"Attrs":[]
+	}
+	,{
+		"Name":"NETLOG_PassThruFilterError_Request_Blocked"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":5835
+		,"Attrs":[]
+	}
+	,{
+		"Name":"NETLOG_NetlogonRpcBacklogLimitSet"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":5836
+		,"Attrs":[]
+	}
+	,{
+		"Name":"NETLOG_NetlogonRpcBacklogLimitFailure"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":5837
 		,"Attrs":[]
 	}
 	,{
@@ -14387,6 +14464,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"ALIGN_SHIFT"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":7
+		,"Attrs":[]
+	}
+	,{
 		"Name":"RTR_INFO_BLOCK_VERSION"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -14534,7 +14618,7 @@
 			,{"Name":"SUPPORTS_UNICODE","Value":16}
 			,{"Name":"SUPPORTS_LOCAL","Value":32}
 		]
-		,"IntegerBase":"Int32"
+		,"IntegerBase":"UInt32"
 	}
 	,{
 		"Name":"FORCE_LEVEL_FLAGS"
@@ -14720,7 +14804,7 @@
 			{"Name":"SV_VISIBLE","Value":0}
 			,{"Name":"SV_HIDDEN","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"USER_MODALS_ROLES"
@@ -19363,11 +19447,11 @@
 			,{"Name":"lpMachineAccountOU","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"lpDcName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["Const"]}
 			,{"Name":"dwProvisionOptions","Type":{"Kind":"ApiRef","Name":"NETSETUP_PROVISION","TargetKind":"Default","Api":"NetworkManagement.NetManagement","Parents":[]},"Attrs":[]}
-			,{"Name":"aCertTemplateNames","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+			,{"Name":"aCertTemplateNames","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"cCertTemplateNames","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"aMachinePolicyNames","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+			,{"Name":"aMachinePolicyNames","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"cMachinePolicyNames","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"aMachinePolicyPaths","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+			,{"Name":"aMachinePolicyPaths","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"cMachinePolicyPaths","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"lpNetbiosName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"lpSiteName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -19436,7 +19520,7 @@
 		,"Fields":[
 			{"Name":"MaximumLength","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
 			,{"Name":"Length","Type":{"Kind":"Native","Name":"Int16"},"Attrs":[]}
-			,{"Name":"Buffer","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+			,{"Name":"Buffer","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -20874,7 +20958,7 @@
 					,{"Name":"pahpspPrivate","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out"]}
 					,{"Name":"pcPages","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 					,{"Name":"hwndParent","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pszStartPage","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional"]}
+					,{"Name":"pszStartPage","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional","Const"]}
 				]
 			}
 			,{
@@ -21071,7 +21155,7 @@
 				,"Params":[
 					{"Name":"pAdapter","Type":{"Kind":"ApiRef","Name":"INetCfgComponent","TargetKind":"Com","Api":"NetworkManagement.NetManagement","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pdwNumInterfaces","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-					,{"Name":"ppguidInterfaceIds","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}}},"Attrs":["Out","Optional"]}
+					,{"Name":"ppguidInterfaceIds","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}}},"Attrs":["Out","Optional"]}
 				]
 			}
 			,{
@@ -21250,13 +21334,6 @@
 		]
 	}
 	,{
-		"Name":"NetProvisioning"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"2aa2b5fe-b846-4d07-810c-b21ee45320e3"
-	}
-	,{
 		"Name":"IProvisioningDomain"
 		,"Architectures":[]
 		,"Platform":null
@@ -21325,6 +21402,13 @@
 		]
 	}
 	,{
+		"Name":"NetProvisioning"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"2aa2b5fe-b846-4d07-810c-b21ee45320e3"
+	}
+	,{
 		"Name":"RTR_TOC_ENTRY"
 		,"Architectures":[]
 		,"Platform":null
@@ -21351,7 +21435,7 @@
 			{"Name":"Version","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"TocEntriesCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"TocEntry","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"RTR_TOC_ENTRY","TargetKind":"Default","Api":"NetworkManagement.NetManagement","Parents":[]}},"Attrs":[]}
+			,{"Name":"TocEntry","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"RTR_TOC_ENTRY","TargetKind":"Default","Api":"NetworkManagement.NetManagement","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -22130,7 +22214,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2003"
+		,"Platform":"windowsserver2003"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"ServerName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
@@ -22149,7 +22233,7 @@
 		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
 		,"ReturnAttrs":[]
 		,"Architectures":[]
-		,"Platform":"windowsServer2003"
+		,"Platform":"windowsserver2003"
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"OutputArg","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}}},"Attrs":["In","Out"]}
@@ -22977,7 +23061,7 @@
 			{"Name":"servername","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
 			,{"Name":"service","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 			,{"Name":"argc","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"argv","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"argv","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Const"]}
 			,{"Name":"bufptr","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}}},"Attrs":["Out"]}
 		]
 	}

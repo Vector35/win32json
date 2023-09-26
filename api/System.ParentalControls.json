@@ -726,27 +726,6 @@
 
 ,"Types":[
 	{
-		"Name":"WpcSettingsProvider"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"355dffaa-3b9f-435c-b428-5d44290bc5f2"
-	}
-	,{
-		"Name":"WpcProviderSupport"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"bb18c7a0-2186-4be0-97d8-04847b628e02"
-	}
-	,{
-		"Name":"WindowsParentalControls"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"e77cc89b-7401-4c04-8ced-149db35add04"
-	}
-	,{
 		"Name":"IWPCProviderState"
 		,"Architectures":[]
 		,"Platform":"windows6.1"
@@ -845,7 +824,7 @@
 				,"Params":[
 					{"Name":"hWnd","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 					,{"Name":"bstrPath","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"dwFlags","Type":{"Kind":"ApiRef","Name":"WPCFLAG_RESTRICTION","TargetKind":"Default","Api":"System.ParentalControls","Parents":[]},"Attrs":["In"]}
+					,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 				]
 			}
 		]
@@ -995,7 +974,7 @@
 					{"Name":"hWnd","Type":{"Kind":"ApiRef","Name":"HWND","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 					,{"Name":"pcszURL","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
 					,{"Name":"cURLs","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-					,{"Name":"ppcszSubURLs","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional"]}
+					,{"Name":"ppcszSubURLs","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Optional","Const"]}
 					,{"Name":"pfChanged","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
@@ -1131,6 +1110,27 @@
 				]
 			}
 		]
+	}
+	,{
+		"Name":"WpcSettingsProvider"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"355dffaa-3b9f-435c-b428-5d44290bc5f2"
+	}
+	,{
+		"Name":"WpcProviderSupport"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"bb18c7a0-2186-4be0-97d8-04847b628e02"
+	}
+	,{
+		"Name":"WindowsParentalControls"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"e77cc89b-7401-4c04-8ced-149db35add04"
 	}
 	,{
 		"Name":"WPCFLAG_ISBLOCKED"

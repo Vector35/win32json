@@ -50,6 +50,13 @@
 		,"Value":-2003283952
 		,"Attrs":[]
 	}
+	,{
+		"Name":"DWRITE_STANDARD_FONT_AXIS_COUNT"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":5
+		,"Attrs":[]
+	}
 ]
 
 ,"Types":[
@@ -117,7 +124,7 @@
 			,{"Name":"DWRITE_GLYPH_IMAGE_FORMATS_TIFF","Value":64}
 			,{"Name":"DWRITE_GLYPH_IMAGE_FORMATS_PREMULTIPLIED_B8G8R8A8","Value":128}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"DWRITE_FONT_FILE_TYPE"
@@ -171,7 +178,7 @@
 			,{"Name":"DWRITE_FONT_SIMULATIONS_BOLD","Value":1}
 			,{"Name":"DWRITE_FONT_SIMULATIONS_OBLIQUE","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"DWRITE_FONT_WEIGHT"
@@ -2104,7 +2111,7 @@
 			{"Name":"DWRITE_SCRIPT_SHAPES_DEFAULT","Value":0}
 			,{"Name":"DWRITE_SCRIPT_SHAPES_NO_VISUAL","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"DWRITE_SCRIPT_ANALYSIS"
@@ -8722,7 +8729,7 @@
 			{"Name":"DWRITE_AUTOMATIC_FONT_AXES_NONE","Value":0}
 			,{"Name":"DWRITE_AUTOMATIC_FONT_AXES_OPTICAL_SIZE","Value":1}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"DWRITE_FONT_AXIS_ATTRIBUTES"
@@ -8736,7 +8743,7 @@
 			,{"Name":"DWRITE_FONT_AXIS_ATTRIBUTES_VARIABLE","Value":1}
 			,{"Name":"DWRITE_FONT_AXIS_ATTRIBUTES_HIDDEN","Value":2}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"IDWriteFactory6"
@@ -9972,6 +9979,54 @@
 				,"Params":[
 					{"Name":"fontFamilyModel","Type":{"Kind":"ApiRef","Name":"DWRITE_FONT_FAMILY_MODEL","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":["In"]}
 					,{"Name":"names","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDWriteLocalizedStrings","TargetKind":"Com","Api":"Graphics.DirectWrite","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
+				]
+			}
+		]
+	}
+	,{
+		"Name":"IDWriteFontSet4"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Com"
+		,"Guid":"eec175fc-bea9-4c86-8b53-ccbdd7df0c82"
+		,"Interface":{"Kind":"ApiRef","Name":"IDWriteFontSet3","TargetKind":"Com","Api":"Graphics.DirectWrite","Parents":[]}
+		,"Methods":[
+			{
+				"Name":"ConvertWeightStretchStyleToFontAxisValues"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"inputAxisValues","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"ApiRef","Name":"DWRITE_FONT_AXIS_VALUE","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]}},"Attrs":["In","Optional","Const"]}
+					,{"Name":"inputAxisCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"fontWeight","Type":{"Kind":"ApiRef","Name":"DWRITE_FONT_WEIGHT","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":["In"]}
+					,{"Name":"fontStretch","Type":{"Kind":"ApiRef","Name":"DWRITE_FONT_STRETCH","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":["In"]}
+					,{"Name":"fontStyle","Type":{"Kind":"ApiRef","Name":"DWRITE_FONT_STYLE","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":["In"]}
+					,{"Name":"fontSize","Type":{"Kind":"Native","Name":"Single"},"Attrs":["In"]}
+					,{"Name":"outputAxisValues","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":5,"CountParamIndex":-1,"Child":{"Kind":"ApiRef","Name":"DWRITE_FONT_AXIS_VALUE","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]}},"Attrs":["Out"]}
+				]
+			}
+			,{
+				"Name":"GetMatchingFonts"
+				,"CallingConvention":"Default"
+				,"NoReturn":false
+				,"SetLastError":false
+				,"ReturnType":{"Kind":"ApiRef","Name":"HRESULT","TargetKind":"Default","Api":"Foundation","Parents":[]}
+				,"ReturnAttrs":[]
+				,"Architectures":[]
+				,"Platform":null
+				,"Attrs":[]
+				,"Params":[
+					{"Name":"familyName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+					,{"Name":"fontAxisValues","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"DWRITE_FONT_AXIS_VALUE","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]}},"Attrs":["In","Const"]}
+					,{"Name":"fontAxisValueCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+					,{"Name":"allowedSimulations","Type":{"Kind":"ApiRef","Name":"DWRITE_FONT_SIMULATIONS","TargetKind":"Default","Api":"Graphics.DirectWrite","Parents":[]},"Attrs":["In"]}
+					,{"Name":"matchingFonts","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDWriteFontSet4","TargetKind":"Com","Api":"Graphics.DirectWrite","Parents":[]}},"Attrs":["Out","ComOutPtr"]}
 				]
 			}
 		]

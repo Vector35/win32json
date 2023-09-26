@@ -5,6 +5,15 @@
 
 ,"Types":[
 	{
+		"Name":"HDEVQUERY"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
 		"Name":"DEVPROP_OPERATOR"
 		,"Architectures":[]
 		,"Platform":null
@@ -201,19 +210,6 @@
 		]
 	}
 	,{
-		"Name":"HDEVQUERY__"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-			{"Name":"unused","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
 		"Name":"PDEV_QUERY_RESULT_CALLBACK"
 		,"Architectures":[]
 		,"Platform":null
@@ -226,7 +222,7 @@
 		,"ReturnAttrs":[]
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hDevQuery","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HDEVQUERY__","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}},"Attrs":["In"]}
+			{"Name":"hDevQuery","Type":{"Kind":"ApiRef","Name":"HDEVQUERY","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
 			,{"Name":"pActionData","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DEV_QUERY_RESULT_ACTION_DATA","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}},"Attrs":["In","Const"]}
 		]
@@ -254,7 +250,7 @@
 			,{"Name":"pFilter","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":4,"Child":{"Kind":"ApiRef","Name":"DEVPROP_FILTER_EXPRESSION","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"pCallback","Type":{"Kind":"ApiRef","Name":"PDEV_QUERY_RESULT_CALLBACK","TargetKind":"FunctionPointer","Api":"Devices.DeviceQuery","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
-			,{"Name":"phDevQuery","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HDEVQUERY__","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"phDevQuery","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HDEVQUERY","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -279,7 +275,7 @@
 			,{"Name":"pExtendedParameters","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":6,"Child":{"Kind":"ApiRef","Name":"DEV_QUERY_PARAMETER","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"pCallback","Type":{"Kind":"ApiRef","Name":"PDEV_QUERY_RESULT_CALLBACK","TargetKind":"FunctionPointer","Api":"Devices.DeviceQuery","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
-			,{"Name":"phDevQuery","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HDEVQUERY__","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"phDevQuery","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HDEVQUERY","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -303,7 +299,7 @@
 			,{"Name":"pFilter","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":5,"Child":{"Kind":"ApiRef","Name":"DEVPROP_FILTER_EXPRESSION","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"pCallback","Type":{"Kind":"ApiRef","Name":"PDEV_QUERY_RESULT_CALLBACK","TargetKind":"FunctionPointer","Api":"Devices.DeviceQuery","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
-			,{"Name":"phDevQuery","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HDEVQUERY__","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"phDevQuery","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HDEVQUERY","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -329,7 +325,7 @@
 			,{"Name":"pExtendedParameters","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":7,"Child":{"Kind":"ApiRef","Name":"DEV_QUERY_PARAMETER","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"pCallback","Type":{"Kind":"ApiRef","Name":"PDEV_QUERY_RESULT_CALLBACK","TargetKind":"FunctionPointer","Api":"Devices.DeviceQuery","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
-			,{"Name":"phDevQuery","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HDEVQUERY__","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"phDevQuery","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HDEVQUERY","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -353,7 +349,7 @@
 			,{"Name":"pFilter","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":5,"Child":{"Kind":"ApiRef","Name":"DEVPROP_FILTER_EXPRESSION","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"pCallback","Type":{"Kind":"ApiRef","Name":"PDEV_QUERY_RESULT_CALLBACK","TargetKind":"FunctionPointer","Api":"Devices.DeviceQuery","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
-			,{"Name":"phDevQuery","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HDEVQUERY__","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"phDevQuery","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HDEVQUERY","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -379,7 +375,7 @@
 			,{"Name":"pExtendedParameters","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":7,"Child":{"Kind":"ApiRef","Name":"DEV_QUERY_PARAMETER","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}},"Attrs":["In","Optional","Const"]}
 			,{"Name":"pCallback","Type":{"Kind":"ApiRef","Name":"PDEV_QUERY_RESULT_CALLBACK","TargetKind":"FunctionPointer","Api":"Devices.DeviceQuery","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
-			,{"Name":"phDevQuery","Type":{"Kind":"PointerTo","Child":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HDEVQUERY__","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}}},"Attrs":["Out"]}
+			,{"Name":"phDevQuery","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HDEVQUERY","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -394,7 +390,7 @@
 		,"Platform":null
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"hDevQuery","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HDEVQUERY__","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]}},"Attrs":["In"]}
+			{"Name":"hDevQuery","Type":{"Kind":"ApiRef","Name":"HDEVQUERY","TargetKind":"Default","Api":"Devices.DeviceQuery","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{

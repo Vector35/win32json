@@ -842,6 +842,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"FIRMWARE_REQUEST_FLAG_REPLACE_EXISTING_IMAGE"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":1073741824
+		,"Attrs":[]
+	}
+	,{
 		"Name":"FIRMWARE_REQUEST_FLAG_SWITCH_TO_EXISTING_FIRMWARE"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -1275,13 +1282,10 @@
 		"Name":"_ADAPTER_OBJECT"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
 	}
 	,{
 		"Name":"SCSI_PASS_THROUGH32"
@@ -1356,7 +1360,7 @@
 			,{"Name":"DataInTransferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"DataOutBufferOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"DataInBufferOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Cdb","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"Cdb","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -1384,7 +1388,7 @@
 			,{"Name":"DataInTransferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"DataOutBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 			,{"Name":"DataInBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-			,{"Name":"Cdb","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"Cdb","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -1582,7 +1586,7 @@
 			,{"Name":"DataInTransferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"DataOutBufferOffset","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
 			,{"Name":"DataInBufferOffset","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":[]}
-			,{"Name":"Cdb","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"Cdb","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -1610,7 +1614,7 @@
 			,{"Name":"DataInTransferLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"DataOutBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 			,{"Name":"DataInBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-			,{"Name":"Cdb","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"Cdb","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -1777,7 +1781,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"NumberOfBuses","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"BusData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"SCSI_BUS_DATA","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]}},"Attrs":[]}
+			,{"Name":"BusData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"SCSI_BUS_DATA","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -1796,7 +1800,7 @@
 			,{"Name":"DeviceClaimed","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"InquiryDataLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NextInquiryDataOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"InquiryData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"InquiryData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -1990,7 +1994,7 @@
 			,{"Name":"ProviderId","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"BufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"DataBuffer","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"DataBuffer","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -2023,7 +2027,7 @@
 			,{"Name":"DataSetProfile","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Array","Shape":{"Size":3},"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
 			,{"Name":"DataSetRangesCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"DataSetRanges","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"MP_DEVICE_DATA_SET_RANGE","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]}},"Attrs":[]}
+			,{"Name":"DataSetRanges","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"MP_DEVICE_DATA_SET_RANGE","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -2130,7 +2134,7 @@
 					,{"Name":"DirtyThresholdLow","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"DirtyThresholdHigh","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"SupportedCommands","Type":{"Kind":"ApiRef","Name":"_SupportedCommands_e__Struct","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":["_Priorities_e__Struct"]},"Attrs":[]}
-					,{"Name":"Priority","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"NVCACHE_PRIORITY_LEVEL_DESCRIPTOR","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]}},"Attrs":[]}
+					,{"Name":"Priority","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"NVCACHE_PRIORITY_LEVEL_DESCRIPTOR","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]}},"Attrs":["FlexibleArray"]}
 				]
 				,"NestedTypes":[
 					{
@@ -2280,7 +2284,7 @@
 			,{"Name":"ActiveSlot","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"PendingActivateSlot","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Slot","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"STORAGE_FIRMWARE_SLOT_INFO","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]}},"Attrs":[]}
+			,{"Name":"Slot","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"STORAGE_FIRMWARE_SLOT_INFO","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -2303,7 +2307,7 @@
 			,{"Name":"Reserved","Type":{"Kind":"Array","Shape":{"Size":3},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"ImagePayloadAlignment","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ImagePayloadMaxSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Slot","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"STORAGE_FIRMWARE_SLOT_INFO_V2","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]}},"Attrs":[]}
+			,{"Name":"Slot","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"STORAGE_FIRMWARE_SLOT_INFO_V2","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -2320,7 +2324,7 @@
 			,{"Name":"Size","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Offset","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"BufferSize","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"ImageBuffer","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"ImageBuffer","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -2340,7 +2344,7 @@
 			,{"Name":"Slot","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Array","Shape":{"Size":3},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"ImageSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"ImageBuffer","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"ImageBuffer","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -2440,7 +2444,7 @@
 			,{"Name":"MappedRegisterBase","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 			,{"Name":"DumpData","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
 			,{"Name":"CommonBufferVa","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
-			,{"Name":"CommonBufferPa","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"CommonBufferPa","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"CommonBufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"AllocateCommonBuffers","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"UseDiskDump","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
@@ -2858,7 +2862,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"Count","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Portals","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"ISCSI_TARGET_PORTALW","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]}},"Attrs":[]}
+			,{"Name":"Portals","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"ISCSI_TARGET_PORTALW","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -2872,7 +2876,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"Count","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Portals","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"ISCSI_TARGET_PORTALA","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]}},"Attrs":[]}
+			,{"Name":"Portals","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"ISCSI_TARGET_PORTALA","TargetKind":"Default","Api":"Storage.IscsiDisc","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]

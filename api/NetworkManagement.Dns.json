@@ -457,6 +457,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"DNS_RCLASS_MDNS_CACHE_FLUSH"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":128
+		,"Attrs":[]
+	}
+	,{
 		"Name":"DNS_RTYPE_A"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -1311,6 +1318,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"DDR_MAX_IP_HINTS"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":4
+		,"Attrs":[]
+	}
+	,{
 		"Name":"DNSREC_SECTION"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -1686,6 +1700,8 @@
 			,{"Name":"DNS_TYPE_NSEC3","Value":50}
 			,{"Name":"DNS_TYPE_NSEC3PARAM","Value":51}
 			,{"Name":"DNS_TYPE_TLSA","Value":52}
+			,{"Name":"DNS_TYPE_SVCB","Value":64}
+			,{"Name":"DNS_TYPE_HTTPS","Value":65}
 			,{"Name":"DNS_TYPE_UINFO","Value":100}
 			,{"Name":"DNS_TYPE_UID","Value":101}
 			,{"Name":"DNS_TYPE_GID","Value":102}
@@ -1744,15 +1760,6 @@
 		,"IntegerBase":"UInt32"
 	}
 	,{
-		"Name":"DnsContextHandle"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":"DnsReleaseContextHandle"
-	}
-	,{
 		"Name":"IP6_ADDRESS"
 		,"Architectures":["X64","Arm64"]
 		,"Platform":null
@@ -1777,7 +1784,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"AddrCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"AddrArray","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			,{"Name":"AddrArray","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -1841,7 +1848,7 @@
 			,{"Name":"MatchFlag","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Reserved1","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Reserved2","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"AddrArray","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"DNS_ADDR","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]}},"Attrs":[]}
+			,{"Name":"AddrArray","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"DNS_ADDR","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -2084,7 +2091,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"dwStringCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"pStringArray","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+			,{"Name":"pStringArray","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -2098,7 +2105,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"dwStringCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"pStringArray","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+			,{"Name":"pStringArray","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -2112,7 +2119,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"dwByteCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"Data","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"Data","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -2127,7 +2134,7 @@
 		,"Fields":[
 			{"Name":"IpAddress","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"chProtocol","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
-			,{"Name":"BitMask","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"BitMask","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -2162,7 +2169,7 @@
 			,{"Name":"wKeyTag","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"wSignatureLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"pNameSigner","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"Signature","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"Signature","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -2184,7 +2191,7 @@
 			,{"Name":"wKeyTag","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"wSignatureLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"pNameSigner","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"Signature","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"Signature","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -2202,7 +2209,7 @@
 			,{"Name":"chAlgorithm","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"wKeyLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"wPad","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"Key","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"Key","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -2216,7 +2223,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"dwByteCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"DHCID","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"DHCID","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -2232,7 +2239,7 @@
 			{"Name":"pNextDomainName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"wTypeBitMapsLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"wPad","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"TypeBitMaps","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"TypeBitMaps","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -2248,7 +2255,7 @@
 			{"Name":"pNextDomainName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"wTypeBitMapsLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"wPad","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"TypeBitMaps","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"TypeBitMaps","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -2267,7 +2274,7 @@
 			,{"Name":"bSaltLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"bHashLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"wTypeBitMapsLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"chData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"chData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -2285,7 +2292,7 @@
 			,{"Name":"wIterations","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"bSaltLength","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"bPad","Type":{"Kind":"Array","Shape":{"Size":3},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
-			,{"Name":"pbSalt","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"pbSalt","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -2303,7 +2310,7 @@
 			,{"Name":"bMatchingType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"bCertificateAssociationDataLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"bPad","Type":{"Kind":"Array","Shape":{"Size":3},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
-			,{"Name":"bCertificateAssociationData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"bCertificateAssociationData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -2321,7 +2328,7 @@
 			,{"Name":"chDigestType","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"wDigestLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"wPad","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"Digest","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"Digest","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -2336,7 +2343,7 @@
 		,"Fields":[
 			{"Name":"wDataLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"wPad","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"Data","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"Data","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -2370,7 +2377,7 @@
 		,"Fields":[
 			{"Name":"pNameNext","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"wNumTypes","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"wTypes","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":[]}
+			,{"Name":"wTypes","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -2385,7 +2392,7 @@
 		,"Fields":[
 			{"Name":"pNameNext","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"wNumTypes","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"wTypes","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":[]}
+			,{"Name":"wTypes","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -2579,7 +2586,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"dwByteCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"bData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"bData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -2596,7 +2603,7 @@
 			,{"Name":"dwLookupTimeout","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwCacheTimeout","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"cWinsServerCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"WinsServers","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			,{"Name":"WinsServers","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -2629,6 +2636,161 @@
 			,{"Name":"dwLookupTimeout","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwCacheTimeout","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pNameResultDomain","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DNS_SVCB_PARAM_TYPE"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"DnsSvcbParamMandatory","Value":0}
+			,{"Name":"DnsSvcbParamAlpn","Value":1}
+			,{"Name":"DnsSvcbParamNoDefaultAlpn","Value":2}
+			,{"Name":"DnsSvcbParamPort","Value":3}
+			,{"Name":"DnsSvcbParamIpv4Hint","Value":4}
+			,{"Name":"DnsSvcbParamEch","Value":5}
+			,{"Name":"DnsSvcbParamIpv6Hint","Value":6}
+			,{"Name":"DnsSvcbParamDohPath","Value":7}
+			,{"Name":"DnsSvcbParamDohPathQuad9","Value":65380}
+			,{"Name":"DnsSvcbParamDohPathOpenDns","Value":65432}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"DNS_SVCB_PARAM_MANDATORY"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cMandatoryKeys","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"rgwMandatoryKeys","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":["FlexibleArray"]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DNS_SVCB_PARAM_ALPN_ID"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cBytes","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
+			,{"Name":"pbId","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DNS_SVCB_PARAM_ALPN"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cIds","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"rgIds","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"DNS_SVCB_PARAM_ALPN_ID","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]}},"Attrs":["FlexibleArray"]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DNS_SVCB_PARAM_IPV4"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cIps","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"rgIps","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["FlexibleArray"]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DNS_SVCB_PARAM_IPV6"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cIps","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"rgIps","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"IP6_ADDRESS","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]}},"Attrs":["FlexibleArray"]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DNS_SVCB_PARAM_UNKNOWN"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"cBytes","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"pbSvcParamValue","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"DNS_SVCB_PARAM"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"wSvcParamKey","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]},"Attrs":[]}
+		]
+		,"NestedTypes":[
+			{
+				"Name":"_Anonymous_e__Union"
+				,"Architectures":[]
+				,"Platform":null
+				,"Kind":"Union"
+				,"Size":0
+				,"PackingSize":0
+				,"Fields":[
+					{"Name":"pIpv4Hints","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DNS_SVCB_PARAM_IPV4","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]}},"Attrs":[]}
+					,{"Name":"pIpv6Hints","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DNS_SVCB_PARAM_IPV6","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]}},"Attrs":[]}
+					,{"Name":"pMandatory","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DNS_SVCB_PARAM_MANDATORY","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]}},"Attrs":[]}
+					,{"Name":"pAlpn","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DNS_SVCB_PARAM_ALPN","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]}},"Attrs":[]}
+					,{"Name":"wPort","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+					,{"Name":"pUnknown","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DNS_SVCB_PARAM_UNKNOWN","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]}},"Attrs":[]}
+					,{"Name":"pszDohPath","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+					,{"Name":"pReserved","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+				]
+				,"NestedTypes":[
+				]
+			}
+		]
+	}
+	,{
+		"Name":"DNS_SVCB_DATA"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"wSvcPriority","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"pszTargetName","Type":{"Kind":"ApiRef","Name":"PSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"cSvcParams","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"pSvcParams","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DNS_SVCB_PARAM","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]}},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -2782,6 +2944,8 @@
 					,{"Name":"Nsec3Param","Type":{"Kind":"ApiRef","Name":"DNS_NSEC3PARAM_DATA","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]},"Attrs":[]}
 					,{"Name":"TLSA","Type":{"Kind":"ApiRef","Name":"DNS_TLSA_DATA","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]},"Attrs":[]}
 					,{"Name":"Tlsa","Type":{"Kind":"ApiRef","Name":"DNS_TLSA_DATA","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]},"Attrs":[]}
+					,{"Name":"SVCB","Type":{"Kind":"ApiRef","Name":"DNS_SVCB_DATA","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]},"Attrs":[]}
+					,{"Name":"Svcb","Type":{"Kind":"ApiRef","Name":"DNS_SVCB_DATA","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]},"Attrs":[]}
 					,{"Name":"UNKNOWN","Type":{"Kind":"ApiRef","Name":"DNS_UNKNOWN_DATA","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]},"Attrs":[]}
 					,{"Name":"Unknown","Type":{"Kind":"ApiRef","Name":"DNS_UNKNOWN_DATA","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]},"Attrs":[]}
 					,{"Name":"pDataPtr","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -2961,6 +3125,8 @@
 					,{"Name":"Nsec3Param","Type":{"Kind":"ApiRef","Name":"DNS_NSEC3PARAM_DATA","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]},"Attrs":[]}
 					,{"Name":"TLSA","Type":{"Kind":"ApiRef","Name":"DNS_TLSA_DATA","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]},"Attrs":[]}
 					,{"Name":"Tlsa","Type":{"Kind":"ApiRef","Name":"DNS_TLSA_DATA","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]},"Attrs":[]}
+					,{"Name":"SVCB","Type":{"Kind":"ApiRef","Name":"DNS_SVCB_DATA","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]},"Attrs":[]}
+					,{"Name":"Svcb","Type":{"Kind":"ApiRef","Name":"DNS_SVCB_DATA","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]},"Attrs":[]}
 					,{"Name":"UNKNOWN","Type":{"Kind":"ApiRef","Name":"DNS_UNKNOWN_DATA","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]},"Attrs":[]}
 					,{"Name":"Unknown","Type":{"Kind":"ApiRef","Name":"DNS_UNKNOWN_DATA","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]},"Attrs":[]}
 					,{"Name":"pDataPtr","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
@@ -3283,7 +3449,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"MessageHead","Type":{"Kind":"ApiRef","Name":"DNS_HEADER","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]},"Attrs":[]}
-			,{"Name":"MessageBody","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+			,{"Name":"MessageBody","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"CHAR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -3495,7 +3661,7 @@
 			,{"Name":"cbAppSid","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pbAppSid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
 			,{"Name":"nConnections","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"ppwszConnections","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+			,{"Name":"ppwszConnections","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Const"]}
 			,{"Name":"dwPolicyEntryFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
@@ -4021,7 +4187,7 @@
 		,"Params":[
 			{"Name":"CredentialFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"Credentials","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
-			,{"Name":"pContext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DnsContextHandle","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"pContext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -4038,7 +4204,7 @@
 		,"Params":[
 			{"Name":"CredentialFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"Credentials","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
-			,{"Name":"pContext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DnsContextHandle","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"pContext","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -4381,6 +4547,26 @@
 		]
 	}
 	,{
+		"Name":"DnsConnectionGetProxyInfoForHostUrlEx"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"DNSAPI.dll"
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"pwszHostUrl","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+			,{"Name":"pSelectionContext","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Optional"]}
+			,{"Name":"dwSelectionContextLength","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"dwExplicitInterfaceIndex","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"pwszConnectionName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional","Const"]}
+			,{"Name":"pProxyInfoEx","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"DNS_CONNECTION_PROXY_INFO_EX","TargetKind":"Default","Api":"NetworkManagement.Dns","Parents":[]}},"Attrs":["Out"]}
+		]
+	}
+	,{
 		"Name":"DnsConnectionFreeProxyInfoEx"
 		,"CallingConvention":"Default"
 		,"NoReturn":false
@@ -4587,8 +4773,8 @@
 			,{"Name":"wPriority","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":["In"]}
 			,{"Name":"wWeight","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":["In"]}
 			,{"Name":"dwPropertiesCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"keys","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":7,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In"]}
-			,{"Name":"values","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":7,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In"]}
+			,{"Name":"keys","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":7,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Const"]}
+			,{"Name":"values","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":7,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In","Const"]}
 		]
 	}
 	,{

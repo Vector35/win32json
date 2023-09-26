@@ -1318,6 +1318,13 @@
 		,"Attrs":[]
 	}
 	,{
+		"Name":"EVENT_TRACE_TYPE_CONFIG_PHYSICALDISK_EX"
+		,"Type":{"Kind":"Native","Name":"UInt32"}
+		,"ValueType":"UInt32"
+		,"Value":19
+		,"Attrs":[]
+	}
+	,{
 		"Name":"EVENT_TRACE_TYPE_CONFIG_IRQ"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -3474,28 +3481,41 @@
 		"Name":"PROCESSTRACE_HANDLE"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"UInt64"}
 		,"FreeFunc":"CloseTrace"
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"Value","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
 	}
 	,{
 		"Name":"CONTROLTRACE_HANDLE"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"UInt64"}
-		,"FreeFunc":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"Value","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
 	}
 	,{
 		"Name":"RELOGSTREAM_HANDLE"
 		,"Architectures":[]
 		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"UInt64"}
-		,"FreeFunc":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"Value","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
 	}
 	,{
 		"Name":"WNODE_HEADER"
@@ -3524,7 +3544,7 @@
 				,"Fields":[
 					{"Name":"CountLost","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 					,{"Name":"KernelHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-					,{"Name":"TimeStamp","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+					,{"Name":"TimeStamp","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 				]
 				,"NestedTypes":[
 				]
@@ -3816,7 +3836,7 @@
 			,{"Name":"Anonymous2","Type":{"Kind":"ApiRef","Name":"_Anonymous2_e__Union","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 			,{"Name":"ThreadId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ProcessId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"TimeStamp","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"TimeStamp","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"Anonymous3","Type":{"Kind":"ApiRef","Name":"_Anonymous3_e__Union","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 			,{"Name":"Anonymous4","Type":{"Kind":"ApiRef","Name":"_Anonymous4_e__Union","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 		]
@@ -3950,7 +3970,7 @@
 			,{"Name":"Anonymous2","Type":{"Kind":"ApiRef","Name":"_Anonymous2_e__Union","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 			,{"Name":"ThreadId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ProcessId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"TimeStamp","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"TimeStamp","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"RegHandle","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"InstanceId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ParentInstanceId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4087,7 +4107,7 @@
 			,{"Name":"Anonymous1","Type":{"Kind":"ApiRef","Name":"_Anonymous1_e__Union","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 			,{"Name":"ProviderVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NumberOfProcessors","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"EndTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"EndTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"TimerResolution","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"MaximumFileSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"LogFileMode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4096,9 +4116,9 @@
 			,{"Name":"LoggerName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"LogFileName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"TimeZone","Type":{"Kind":"ApiRef","Name":"TIME_ZONE_INFORMATION","TargetKind":"Default","Api":"System.Time","Parents":[]},"Attrs":[]}
-			,{"Name":"BootTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"PerfFreq","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"StartTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"BootTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"PerfFreq","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"StartTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"ReservedFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"BuffersLost","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -4177,7 +4197,7 @@
 			,{"Name":"Anonymous1","Type":{"Kind":"ApiRef","Name":"_Anonymous1_e__Union","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 			,{"Name":"ProviderVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NumberOfProcessors","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"EndTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"EndTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"TimerResolution","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"MaximumFileSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"LogFileMode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4186,9 +4206,9 @@
 			,{"Name":"LoggerName","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"LogFileName","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"TimeZone","Type":{"Kind":"ApiRef","Name":"TIME_ZONE_INFORMATION","TargetKind":"Default","Api":"System.Time","Parents":[]},"Attrs":[]}
-			,{"Name":"BootTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"PerfFreq","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"StartTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"BootTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"PerfFreq","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"StartTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"ReservedFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"BuffersLost","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -4267,7 +4287,7 @@
 			,{"Name":"Anonymous1","Type":{"Kind":"ApiRef","Name":"_Anonymous1_e__Union","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 			,{"Name":"ProviderVersion","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NumberOfProcessors","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"EndTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"EndTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"TimerResolution","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"MaximumFileSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"LogFileMode","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
@@ -4276,9 +4296,9 @@
 			,{"Name":"LoggerName","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"LogFileName","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
 			,{"Name":"TimeZone","Type":{"Kind":"ApiRef","Name":"TIME_ZONE_INFORMATION","TargetKind":"Default","Api":"System.Time","Parents":[]},"Attrs":[]}
-			,{"Name":"BootTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"PerfFreq","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
-			,{"Name":"StartTime","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"BootTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"PerfFreq","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"StartTime","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"ReservedFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"BuffersLost","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
@@ -4642,7 +4662,7 @@
 			,{"Name":"MinInterval","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"MaxInterval","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"Description","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+			,{"Name":"Description","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -4687,7 +4707,24 @@
 		,"Fields":[
 			{"Name":"ProcessorNumber","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NumberOfCounters","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"CounterOwners","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"ETW_PMC_COUNTER_OWNER","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":[]}
+			,{"Name":"CounterOwners","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"ETW_PMC_COUNTER_OWNER","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":["FlexibleArray"]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"ETW_PMC_SESSION_INFO"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"NextEntryOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"LoggerId","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
+			,{"Name":"ProfileSourceCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"HookIdCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -4787,6 +4824,106 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"EventRecord","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"EVENT_RECORD","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":["In","Out"]}
+		]
+	}
+	,{
+		"Name":"ETW_BUFFER_HEADER"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"Reserved1","Type":{"Kind":"Array","Shape":{"Size":4},"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			,{"Name":"TimeStamp","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
+			,{"Name":"Reserved2","Type":{"Kind":"Array","Shape":{"Size":4},"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			,{"Name":"ClientContext","Type":{"Kind":"ApiRef","Name":"ETW_BUFFER_CONTEXT","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
+			,{"Name":"Reserved3","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"FilledBytes","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+			,{"Name":"Reserved4","Type":{"Kind":"Array","Shape":{"Size":5},"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"ETW_BUFFER_CALLBACK_INFORMATION"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"TraceHandle","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
+			,{"Name":"LogfileHeader","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TRACE_LOGFILE_HEADER","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":["Const"]}
+			,{"Name":"BuffersRead","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"PETW_BUFFER_CALLBACK"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"Buffer","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ETW_BUFFER_HEADER","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":1},"Const"]}
+			,{"Name":"BufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
+			,{"Name":"ConsumerInfo","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ETW_BUFFER_CALLBACK_INFORMATION","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":["In","Const"]}
+			,{"Name":"CallbackContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
+		]
+	}
+	,{
+		"Name":"ETW_PROCESS_TRACE_MODES"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"ETW_PROCESS_TRACE_MODE_NONE","Value":0}
+			,{"Name":"ETW_PROCESS_TRACE_MODE_RAW_TIMESTAMP","Value":1}
+		]
+		,"IntegerBase":"Int32"
+	}
+	,{
+		"Name":"ETW_OPEN_TRACE_OPTIONS"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Struct"
+		,"Size":0
+		,"PackingSize":0
+		,"Fields":[
+			{"Name":"ProcessTraceModes","Type":{"Kind":"ApiRef","Name":"ETW_PROCESS_TRACE_MODES","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
+			,{"Name":"EventCallback","Type":{"Kind":"ApiRef","Name":"PEVENT_RECORD_CALLBACK","TargetKind":"FunctionPointer","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
+			,{"Name":"EventCallbackContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+			,{"Name":"BufferCallback","Type":{"Kind":"ApiRef","Name":"PETW_BUFFER_CALLBACK","TargetKind":"FunctionPointer","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
+			,{"Name":"BufferCallbackContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":[]}
+		]
+		,"NestedTypes":[
+		]
+	}
+	,{
+		"Name":"PETW_BUFFER_COMPLETION_CALLBACK"
+		,"Architectures":[]
+		,"Platform":null
+		,"NoReturn":false
+		,"Kind":"FunctionPointer"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"ReturnType":{"Kind":"Native","Name":"Void"}
+		,"ReturnAttrs":[]
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"Buffer","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ETW_BUFFER_HEADER","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":["In","Const"]}
+			,{"Name":"CallbackContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
 		]
 	}
 	,{
@@ -4986,7 +5123,8 @@
 			,{"Name":"TraceStackCachingInfo","Value":24}
 			,{"Name":"TracePmcCounterOwners","Value":25}
 			,{"Name":"TraceUnifiedStackCachingInfo","Value":26}
-			,{"Name":"MaxTraceSetInfoClass","Value":27}
+			,{"Name":"TracePmcSessionInformation","Value":27}
+			,{"Name":"MaxTraceSetInfoClass","Value":28}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -5074,7 +5212,8 @@
 			{"Name":"EtwQueryPartitionInformation","Value":1}
 			,{"Name":"EtwQueryPartitionInformationV2","Value":2}
 			,{"Name":"EtwQueryLastDroppedTimes","Value":3}
-			,{"Name":"EtwQueryProcessHandleInfoMax","Value":4}
+			,{"Name":"EtwQueryLogFileHeader","Value":4}
+			,{"Name":"EtwQueryProcessHandleInfoMax","Value":5}
 		]
 		,"IntegerBase":"Int32"
 	}
@@ -5217,7 +5356,7 @@
 			{"Name":"FilterIn","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"Count","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"Events","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":[]}
+			,{"Name":"Events","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt16"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -5235,7 +5374,7 @@
 			,{"Name":"Level","Type":{"Kind":"Native","Name":"Byte"},"Attrs":[]}
 			,{"Name":"FilterIn","Type":{"Kind":"ApiRef","Name":"BOOLEAN","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"NameCount","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"Names","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"Names","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -5374,7 +5513,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"MatchId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"Address","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			,{"Name":"Address","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -5388,7 +5527,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"MatchId","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":[]}
-			,{"Name":"Address","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":[]}
+			,{"Name":"Address","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -5443,7 +5582,7 @@
 		,"Size":0
 		,"PackingSize":0
 		,"Fields":[
-			{"Name":"Counter","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":[]}
+			{"Name":"Counter","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt64"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -5488,7 +5627,7 @@
 			,{"Name":"EventProperty","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
 			,{"Name":"ThreadId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"ProcessId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"TimeStamp","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"TimeStamp","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"ProviderId","Type":{"Kind":"Native","Name":"Guid"},"Attrs":[]}
 			,{"Name":"EventDescriptor","Type":{"Kind":"ApiRef","Name":"EVENT_DESCRIPTOR","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
@@ -5645,7 +5784,7 @@
 			,{"Name":"Flag","Type":{"Kind":"ApiRef","Name":"MAP_FLAGS","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
 			,{"Name":"EntryCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Anonymous","Type":{"Kind":"ApiRef","Name":"_Anonymous_e__Union","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
-			,{"Name":"MapEntryArray","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"EVENT_MAP_ENTRY","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":[]}
+			,{"Name":"MapEntryArray","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"EVENT_MAP_ENTRY","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 			{
@@ -5973,7 +6112,7 @@
 			,{"Name":"PropertyCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"TopLevelPropertyCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Anonymous3","Type":{"Kind":"ApiRef","Name":"_Anonymous3_e__Union","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
-			,{"Name":"EventPropertyInfoArray","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"EVENT_PROPERTY_INFO","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":[]}
+			,{"Name":"EventPropertyInfoArray","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"EVENT_PROPERTY_INFO","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 			{
@@ -6101,7 +6240,7 @@
 			,{"Name":"MessageOffset","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"PropertyCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"EventPropertyInfoArray","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"EVENT_PROPERTY_INFO","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":[]}
+			,{"Name":"EventPropertyInfoArray","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"EVENT_PROPERTY_INFO","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -6148,7 +6287,7 @@
 		,"Fields":[
 			{"Name":"NumberOfElements","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"FieldType","Type":{"Kind":"ApiRef","Name":"EVENT_FIELD_TYPE","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":[]}
-			,{"Name":"FieldInfoArray","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"PROVIDER_FIELD_INFO","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":[]}
+			,{"Name":"FieldInfoArray","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"PROVIDER_FIELD_INFO","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -6178,7 +6317,7 @@
 		,"Fields":[
 			{"Name":"NumberOfProviders","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"TraceProviderInfoArray","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"TRACE_PROVIDER_INFO","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":[]}
+			,{"Name":"TraceProviderInfoArray","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"TRACE_PROVIDER_INFO","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -6193,7 +6332,7 @@
 		,"Fields":[
 			{"Name":"NumberOfEvents","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"Reserved","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"EventDescriptorsArray","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"EVENT_DESCRIPTOR","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":[]}
+			,{"Name":"EventDescriptorsArray","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"EVENT_DESCRIPTOR","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -6229,13 +6368,6 @@
 		]
 		,"NestedTypes":[
 		]
-	}
-	,{
-		"Name":"CTraceRelogger"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"7b40792d-05ff-44c4-9058-f440c71f17d4"
 	}
 	,{
 		"Name":"ITraceEvent"
@@ -6398,7 +6530,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"TimeStamp","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["In"]}
+					{"Name":"TimeStamp","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int64"}},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -6610,6 +6742,13 @@
 				]
 			}
 		]
+	}
+	,{
+		"Name":"CTraceRelogger"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"7b40792d-05ff-44c4-9058-f440c71f17d4"
 	}
 ]
 
@@ -7192,6 +7331,124 @@
 		,"Attrs":[]
 		,"Params":[
 			{"Name":"TraceHandle","Type":{"Kind":"ApiRef","Name":"PROCESSTRACE_HANDLE","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":["In"]}
+		]
+	}
+	,{
+		"Name":"OpenTraceFromBufferStream"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"ADVAPI32.dll"
+		,"ReturnType":{"Kind":"Native","Name":"UInt64"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"Options","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ETW_OPEN_TRACE_OPTIONS","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":["In","Const"]}
+			,{"Name":"BufferCompletionCallback","Type":{"Kind":"ApiRef","Name":"PETW_BUFFER_COMPLETION_CALLBACK","TargetKind":"FunctionPointer","Api":"System.Diagnostics.Etw","Parents":[]},"Attrs":["In"]}
+			,{"Name":"BufferCompletionContext","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["In","Optional"]}
+		]
+	}
+	,{
+		"Name":"OpenTraceFromRealTimeLogger"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"ADVAPI32.dll"
+		,"ReturnType":{"Kind":"Native","Name":"UInt64"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"LoggerName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+			,{"Name":"Options","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ETW_OPEN_TRACE_OPTIONS","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":["In","Const"]}
+			,{"Name":"LogFileHeader","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TRACE_LOGFILE_HEADER","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":["Out","Optional"]}
+		]
+	}
+	,{
+		"Name":"OpenTraceFromRealTimeLoggerWithAllocationOptions"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"ADVAPI32.dll"
+		,"ReturnType":{"Kind":"Native","Name":"UInt64"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"LoggerName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+			,{"Name":"Options","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ETW_OPEN_TRACE_OPTIONS","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":["In","Const"]}
+			,{"Name":"AllocationSize","Type":{"Kind":"Native","Name":"UIntPtr"},"Attrs":["In"]}
+			,{"Name":"MemoryPartitionHandle","Type":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"LogFileHeader","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TRACE_LOGFILE_HEADER","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":["Out","Optional"]}
+		]
+	}
+	,{
+		"Name":"OpenTraceFromFile"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"ADVAPI32.dll"
+		,"ReturnType":{"Kind":"Native","Name":"UInt64"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"LogFileName","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Const"]}
+			,{"Name":"Options","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ETW_OPEN_TRACE_OPTIONS","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":["In","Const"]}
+			,{"Name":"LogFileHeader","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"TRACE_LOGFILE_HEADER","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":["Out","Optional"]}
+		]
+	}
+	,{
+		"Name":"ProcessTraceBufferIncrementReference"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"ADVAPI32.dll"
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"TraceHandle","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":["In"]}
+			,{"Name":"Buffer","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ETW_BUFFER_HEADER","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":["In","Const"]}
+		]
+	}
+	,{
+		"Name":"ProcessTraceBufferDecrementReference"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"ADVAPI32.dll"
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"Buffer","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ETW_BUFFER_HEADER","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":["In","Const"]}
+		]
+	}
+	,{
+		"Name":"ProcessTraceAddBufferToBufferStream"
+		,"CallingConvention":"Default"
+		,"NoReturn":false
+		,"SetLastError":false
+		,"DllImport":"ADVAPI32.dll"
+		,"ReturnType":{"Kind":"Native","Name":"UInt32"}
+		,"ReturnAttrs":[]
+		,"Architectures":[]
+		,"Platform":null
+		,"Attrs":[]
+		,"Params":[
+			{"Name":"TraceHandle","Type":{"Kind":"Native","Name":"UInt64"},"Attrs":["In"]}
+			,{"Name":"Buffer","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ETW_BUFFER_HEADER","TargetKind":"Default","Api":"System.Diagnostics.Etw","Parents":[]}},"Attrs":["In",{"Kind":"MemorySize","BytesParamIndex":2},"Const"]}
+			,{"Name":"BufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 		]
 	}
 	,{

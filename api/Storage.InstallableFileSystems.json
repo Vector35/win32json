@@ -625,42 +625,6 @@
 		,"FreeFunc":"FilterInstanceClose"
 	}
 	,{
-		"Name":"FilterFindHandle"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":"FilterFindClose"
-	}
-	,{
-		"Name":"FilterVolumeFindHandle"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":"FilterVolumeFindClose"
-	}
-	,{
-		"Name":"FilterInstanceFindHandle"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":"FilterInstanceFindClose"
-	}
-	,{
-		"Name":"FilterVolumeInstanceFindHandle"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"NativeTypedef"
-		,"AlsoUsableFor":null
-		,"Def":{"Kind":"Native","Name":"IntPtr"}
-		,"FreeFunc":"FilterVolumeInstanceFindClose"
-	}
-	,{
 		"Name":"FLT_FILESYSTEM_TYPE"
 		,"Architectures":[]
 		,"Platform":null
@@ -728,7 +692,7 @@
 			,{"Name":"FrameID","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"NumberOfInstances","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"FilterNameLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"FilterNameBuffer","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+			,{"Name":"FilterNameBuffer","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -881,7 +845,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"FilterVolumeNameLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"FilterVolumeName","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+			,{"Name":"FilterVolumeName","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -899,7 +863,7 @@
 			,{"Name":"FrameID","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"FileSystemType","Type":{"Kind":"ApiRef","Name":"FLT_FILESYSTEM_TYPE","TargetKind":"Default","Api":"Storage.InstallableFileSystems","Parents":[]},"Attrs":[]}
 			,{"Name":"FilterVolumeNameLength","Type":{"Kind":"Native","Name":"UInt16"},"Attrs":[]}
-			,{"Name":"FilterVolumeName","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":[]}
+			,{"Name":"FilterVolumeName","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Char"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -1242,7 +1206,7 @@
 			,{"Name":"lpBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":2}]}
 			,{"Name":"dwBufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"lpBytesReturned","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-			,{"Name":"lpFilterFind","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FilterFindHandle","TargetKind":"Default","Api":"Storage.InstallableFileSystems","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"lpFilterFind","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -1295,7 +1259,7 @@
 			,{"Name":"lpBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":2}]}
 			,{"Name":"dwBufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"lpBytesReturned","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-			,{"Name":"lpVolumeFind","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FilterVolumeFindHandle","TargetKind":"Default","Api":"Storage.InstallableFileSystems","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"lpVolumeFind","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -1349,7 +1313,7 @@
 			,{"Name":"lpBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":3}]}
 			,{"Name":"dwBufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"lpBytesReturned","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-			,{"Name":"lpFilterInstanceFind","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FilterInstanceFindHandle","TargetKind":"Default","Api":"Storage.InstallableFileSystems","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"lpFilterInstanceFind","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -1403,7 +1367,7 @@
 			,{"Name":"lpBuffer","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Void"}},"Attrs":["Out",{"Kind":"MemorySize","BytesParamIndex":3}]}
 			,{"Name":"dwBufferSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"lpBytesReturned","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-			,{"Name":"lpVolumeInstanceFind","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"FilterVolumeInstanceFindHandle","TargetKind":"Default","Api":"Storage.InstallableFileSystems","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"lpVolumeInstanceFind","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HANDLE","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{

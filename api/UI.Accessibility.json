@@ -3722,18 +3722,6 @@
 
 ,"Types":[
 	{
-		"Name":"UIA_CHANGE_ID"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Enum"
-		,"Flags":false
-		,"Scoped":false
-		,"Values":[
-			{"Name":"UIA_SummaryChangeId","Value":90000}
-		]
-		,"IntegerBase":"UInt32"
-	}
-	,{
 		"Name":"STICKYKEYS_FLAGS"
 		,"Architectures":[]
 		,"Platform":null
@@ -3967,7 +3955,7 @@
 			,{"Name":"UIA_NotificationEventId","Value":20035}
 			,{"Name":"UIA_ActiveTextPositionChangedEventId","Value":20036}
 		]
-		,"IntegerBase":"UInt32"
+		,"IntegerBase":"Int32"
 	}
 	,{
 		"Name":"UIA_PROPERTY_ID"
@@ -4364,6 +4352,18 @@
 		,"IntegerBase":"UInt32"
 	}
 	,{
+		"Name":"UIA_CHANGE_ID"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"Enum"
+		,"Flags":false
+		,"Scoped":false
+		,"Values":[
+			{"Name":"UIA_SummaryChangeId","Value":90000}
+		]
+		,"IntegerBase":"UInt32"
+	}
+	,{
 		"Name":"UIA_METADATA_ID"
 		,"Architectures":[]
 		,"Platform":null
@@ -4419,13 +4419,6 @@
 		,"AlsoUsableFor":null
 		,"Def":{"Kind":"Native","Name":"IntPtr"}
 		,"FreeFunc":null
-	}
-	,{
-		"Name":"CAccPropServices"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"b5f8350b-0548-48b1-a6ee-88bd00b4a5e7"
 	}
 	,{
 		"Name":"LPFNLRESULTFROMOBJECT"
@@ -4498,7 +4491,7 @@
 		,"Params":[
 			{"Name":"ptScreen","Type":{"Kind":"ApiRef","Name":"POINT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"ppacc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IAccessible","TargetKind":"Com","Api":"UI.Accessibility","Parents":[]}},"Attrs":["Out"]}
-			,{"Name":"pvarChild","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"pvarChild","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In","Out"]}
 		]
 	}
 	,{
@@ -4536,7 +4529,7 @@
 			{"Name":"paccContainer","Type":{"Kind":"ApiRef","Name":"IAccessible","TargetKind":"Com","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
 			,{"Name":"iChildStart","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"cChildren","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-			,{"Name":"rgvarChildren","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"rgvarChildren","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In","Out"]}
 			,{"Name":"pcObtained","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["In","Out"]}
 		]
 	}
@@ -4606,7 +4599,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"varChild","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					{"Name":"varChild","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 					,{"Name":"ppdispChild","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IDispatch","TargetKind":"Com","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -4621,7 +4614,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"varChild","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					{"Name":"varChild","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pszName","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -4636,7 +4629,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"varChild","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					{"Name":"varChild","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pszValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -4651,7 +4644,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"varChild","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					{"Name":"varChild","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pszDescription","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -4666,8 +4659,8 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"varChild","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pvarRole","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					{"Name":"varChild","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
+					,{"Name":"pvarRole","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -4681,8 +4674,8 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"varChild","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pvarState","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					{"Name":"varChild","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
+					,{"Name":"pvarState","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -4696,7 +4689,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"varChild","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					{"Name":"varChild","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pszHelp","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -4712,7 +4705,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pszHelpFile","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
-					,{"Name":"varChild","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"varChild","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pidTopic","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -4727,7 +4720,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"varChild","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					{"Name":"varChild","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pszKeyboardShortcut","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -4744,7 +4737,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pvarChild","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					{"Name":"pvarChild","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -4760,7 +4753,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"pvarChildren","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					{"Name":"pvarChildren","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -4774,7 +4767,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"varChild","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					{"Name":"varChild","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pszDefaultAction","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -4790,7 +4783,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"flagsSelect","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"varChild","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"varChild","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -4808,7 +4801,7 @@
 					,{"Name":"pyTop","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["Out"]}
 					,{"Name":"pcxWidth","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["Out"]}
 					,{"Name":"pcyHeight","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["Out"]}
-					,{"Name":"varChild","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"varChild","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -4823,8 +4816,8 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"navDir","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"varStart","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pvarEndUpAt","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"varStart","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
+					,{"Name":"pvarEndUpAt","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -4840,7 +4833,7 @@
 				,"Params":[
 					{"Name":"xLeft","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"yTop","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-					,{"Name":"pvarChild","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pvarChild","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -4854,7 +4847,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"varChild","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					{"Name":"varChild","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -4868,7 +4861,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"varChild","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					{"Name":"varChild","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 					,{"Name":"szName","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
@@ -4883,7 +4876,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"varChild","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					{"Name":"varChild","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 					,{"Name":"szValue","Type":{"Kind":"ApiRef","Name":"BSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
 			}
@@ -5046,7 +5039,7 @@
 					{"Name":"pIDString","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Const"]}
 					,{"Name":"dwIDStringLen","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"idProp","Type":{"Kind":"Native","Name":"Guid"},"Attrs":["In"]}
-					,{"Name":"pvarValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+					,{"Name":"pvarValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out"]}
 					,{"Name":"pfHasProp","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out"]}
 				]
 			}
@@ -5074,7 +5067,7 @@
 					{"Name":"pIDString","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":1,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["In","Const"]}
 					,{"Name":"dwIDStringLen","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"idProp","Type":{"Kind":"Native","Name":"Guid"},"Attrs":["In"]}
-					,{"Name":"var","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"var","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -5128,7 +5121,7 @@
 					,{"Name":"idObject","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"idChild","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"idProp","Type":{"Kind":"Native","Name":"Guid"},"Attrs":["In"]}
-					,{"Name":"var","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"var","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -5237,7 +5230,7 @@
 					{"Name":"hmenu","Type":{"Kind":"ApiRef","Name":"HMENU","TargetKind":"Default","Api":"UI.WindowsAndMessaging","Parents":[]},"Attrs":["In"]}
 					,{"Name":"idChild","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 					,{"Name":"idProp","Type":{"Kind":"Native","Name":"Guid"},"Attrs":["In"]}
-					,{"Name":"var","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"var","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -5330,25 +5323,11 @@
 		]
 	}
 	,{
-		"Name":"CUIAutomation"
+		"Name":"CAccPropServices"
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"ComClassID"
-		,"Guid":"ff48dba4-60ef-4201-aa87-54103eef594e"
-	}
-	,{
-		"Name":"CUIAutomation8"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"e22ad333-b25f-460c-83d0-0581107395c9"
-	}
-	,{
-		"Name":"CUIAutomationRegistrar"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"6e29fabf-9977-42d1-8d0e-ca7e61ad87e6"
+		,"Guid":"b5f8350b-0548-48b1-a6ee-88bd00b4a5e7"
 	}
 	,{
 		"Name":"NavigateDirection"
@@ -5371,7 +5350,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"ProviderOptions_ClientSideProvider","Value":1}
@@ -5528,7 +5507,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"SynchronizedInputType_KeyUp","Value":1}
@@ -5946,8 +5925,8 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"uiaId","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"payload","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":[]}
-			,{"Name":"extraInfo","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":[]}
+			,{"Name":"payload","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":[]}
+			,{"Name":"extraInfo","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -5957,7 +5936,7 @@
 		,"Architectures":[]
 		,"Platform":null
 		,"Kind":"Enum"
-		,"Flags":false
+		,"Flags":true
 		,"Scoped":false
 		,"Values":[
 			{"Name":"UIAutomationType_Int","Value":1}
@@ -6049,7 +6028,7 @@
 			,{"Name":"cInParameters","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"cOutParameters","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"pParameterTypes","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"UIAutomationType","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]}},"Attrs":[]}
-			,{"Name":"pParameterNames","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+			,{"Name":"pParameterNames","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Const"]}
 		]
 		,"NestedTypes":[
 		]
@@ -6128,7 +6107,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"propertyId","Type":{"Kind":"ApiRef","Name":"UIA_PROPERTY_ID","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pRetVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pRetVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -6262,7 +6241,7 @@
 				,"Params":[
 					{"Name":"targetId","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"metadataId","Type":{"Kind":"ApiRef","Name":"UIA_METADATA_ID","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
-					,{"Name":"returnVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"returnVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -6491,7 +6470,7 @@
 				,"Params":[
 					{"Name":"pProvider","Type":{"Kind":"ApiRef","Name":"IRawElementProviderSimple","TargetKind":"Com","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
 					,{"Name":"id","Type":{"Kind":"ApiRef","Name":"UIA_PROPERTY_ID","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
-					,{"Name":"newValue","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"newValue","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 				]
 			}
 			,{
@@ -8197,7 +8176,7 @@
 				,"Params":[
 					{"Name":"pStartAfter","Type":{"Kind":"ApiRef","Name":"IRawElementProviderSimple","TargetKind":"Com","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
 					,{"Name":"propertyId","Type":{"Kind":"ApiRef","Name":"UIA_PROPERTY_ID","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
-					,{"Name":"value","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"value","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pFound","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IRawElementProviderSimple","TargetKind":"Com","Api":"UI.Accessibility","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -8837,7 +8816,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"attributeId","Type":{"Kind":"ApiRef","Name":"UIA_TEXTATTRIBUTE_ID","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
-					,{"Name":"val","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"val","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 					,{"Name":"backward","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pRetVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"ITextRangeProvider","TargetKind":"Com","Api":"UI.Accessibility","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
@@ -8871,7 +8850,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"attributeId","Type":{"Kind":"ApiRef","Name":"UIA_TEXTATTRIBUTE_ID","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
-					,{"Name":"pRetVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"pRetVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -9449,6 +9428,13 @@
 		]
 	}
 	,{
+		"Name":"CUIAutomationRegistrar"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"6e29fabf-9977-42d1-8d0e-ca7e61ad87e6"
+	}
+	,{
 		"Name":"TreeScope"
 		,"Architectures":[]
 		,"Platform":null
@@ -9675,7 +9661,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"propertyId","Type":{"Kind":"ApiRef","Name":"UIA_PROPERTY_ID","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
-					,{"Name":"retVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"retVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -9691,7 +9677,7 @@
 				,"Params":[
 					{"Name":"propertyId","Type":{"Kind":"ApiRef","Name":"UIA_PROPERTY_ID","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
 					,{"Name":"ignoreDefaultValue","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"retVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"retVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -9706,7 +9692,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"propertyId","Type":{"Kind":"ApiRef","Name":"UIA_PROPERTY_ID","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
-					,{"Name":"retVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"retVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -9722,7 +9708,7 @@
 				,"Params":[
 					{"Name":"propertyId","Type":{"Kind":"ApiRef","Name":"UIA_PROPERTY_ID","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
 					,{"Name":"ignoreDefaultValue","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"retVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"retVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -10970,7 +10956,7 @@
 					"SpecialName"
 				]
 				,"Params":[
-					{"Name":"propertyValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					{"Name":"propertyValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -11531,7 +11517,7 @@
 				,"Params":[
 					{"Name":"sender","Type":{"Kind":"ApiRef","Name":"IUIAutomationElement","TargetKind":"Com","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
 					,{"Name":"propertyId","Type":{"Kind":"ApiRef","Name":"UIA_PROPERTY_ID","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
-					,{"Name":"newValue","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"newValue","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 				]
 			}
 		]
@@ -13838,7 +13824,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"attr","Type":{"Kind":"ApiRef","Name":"UIA_TEXTATTRIBUTE_ID","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
-					,{"Name":"val","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"val","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 					,{"Name":"backward","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"found","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUIAutomationTextRange","TargetKind":"Com","Api":"UI.Accessibility","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
@@ -13872,7 +13858,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"attr","Type":{"Kind":"ApiRef","Name":"UIA_TEXTATTRIBUTE_ID","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
-					,{"Name":"value","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"value","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -14786,7 +14772,7 @@
 				,"Params":[
 					{"Name":"pStartAfter","Type":{"Kind":"ApiRef","Name":"IUIAutomationElement","TargetKind":"Com","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
 					,{"Name":"propertyId","Type":{"Kind":"ApiRef","Name":"UIA_PROPERTY_ID","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
-					,{"Name":"value","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"value","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 					,{"Name":"pFound","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUIAutomationElement","TargetKind":"Com","Api":"UI.Accessibility","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -16330,7 +16316,7 @@
 				,"Params":[
 					{"Name":"targetId","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"metadataId","Type":{"Kind":"ApiRef","Name":"UIA_METADATA_ID","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
-					,{"Name":"returnVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"returnVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 		]
@@ -17272,7 +17258,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"propertyId","Type":{"Kind":"ApiRef","Name":"UIA_PROPERTY_ID","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
-					,{"Name":"value","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"value","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 					,{"Name":"newCondition","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUIAutomationCondition","TargetKind":"Com","Api":"UI.Accessibility","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -17288,7 +17274,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"propertyId","Type":{"Kind":"ApiRef","Name":"UIA_PROPERTY_ID","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
-					,{"Name":"value","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					,{"Name":"value","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 					,{"Name":"flags","Type":{"Kind":"ApiRef","Name":"PropertyConditionFlags","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
 					,{"Name":"newCondition","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IUIAutomationCondition","TargetKind":"Com","Api":"UI.Accessibility","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
@@ -17606,7 +17592,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"rc","Type":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
-					,{"Name":"var","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out","RetVal"]}
+					,{"Name":"var","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
 			,{
@@ -17620,7 +17606,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"var","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					{"Name":"var","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 					,{"Name":"rc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"RECT","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -17744,7 +17730,7 @@
 				,"Platform":null
 				,"Attrs":[]
 				,"Params":[
-					{"Name":"value","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+					{"Name":"value","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 					,{"Name":"isNotSupported","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["Out","RetVal"]}
 				]
 			}
@@ -18201,6 +18187,20 @@
 		]
 	}
 	,{
+		"Name":"CUIAutomation"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"ff48dba4-60ef-4201-aa87-54103eef594e"
+	}
+	,{
+		"Name":"CUIAutomation8"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"e22ad333-b25f-460c-83d0-0581107395c9"
+	}
+	,{
 		"Name":"ConditionType"
 		,"Architectures":[]
 		,"Platform":null
@@ -18240,7 +18240,7 @@
 		,"Fields":[
 			{"Name":"ConditionType","Type":{"Kind":"ApiRef","Name":"ConditionType","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]},"Attrs":[]}
 			,{"Name":"PropertyId","Type":{"Kind":"ApiRef","Name":"UIA_PROPERTY_ID","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]},"Attrs":[]}
-			,{"Name":"Value","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":[]}
+			,{"Name":"Value","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":[]}
 			,{"Name":"Flags","Type":{"Kind":"ApiRef","Name":"PropertyConditionFlags","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
@@ -18435,8 +18435,8 @@
 			{"Name":"Type","Type":{"Kind":"ApiRef","Name":"EventArgsType","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]},"Attrs":[]}
 			,{"Name":"EventId","Type":{"Kind":"ApiRef","Name":"UIA_EVENT_ID","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]},"Attrs":[]}
 			,{"Name":"PropertyId","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
-			,{"Name":"OldValue","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":[]}
-			,{"Name":"NewValue","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":[]}
+			,{"Name":"OldValue","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":[]}
+			,{"Name":"NewValue","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -18908,7 +18908,7 @@
 			,{"Name":"dwId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"dwChildId","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"ppacc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IAccessible","TargetKind":"Com","Api":"UI.Accessibility","Parents":[]}},"Attrs":["Out"]}
-			,{"Name":"pvarChild","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"pvarChild","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -18925,7 +18925,7 @@
 		,"Params":[
 			{"Name":"ptScreen","Type":{"Kind":"ApiRef","Name":"POINT","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"ppacc","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IAccessible","TargetKind":"Com","Api":"UI.Accessibility","Parents":[]}},"Attrs":["Out"]}
-			,{"Name":"pvarChild","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"pvarChild","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -18943,7 +18943,7 @@
 			{"Name":"paccContainer","Type":{"Kind":"ApiRef","Name":"IAccessible","TargetKind":"Com","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
 			,{"Name":"iChildStart","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 			,{"Name":"cChildren","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-			,{"Name":"rgvarChildren","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"rgvarChildren","Type":{"Kind":"LPArray","NullNullTerm":false,"CountConst":-1,"CountParamIndex":2,"Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out"]}
 			,{"Name":"pcObtained","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int32"}},"Attrs":["Out"]}
 		]
 	}
@@ -19148,7 +19148,7 @@
 		,"Platform":"windows5.1.2600"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"pvar","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"pvar","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In","Out"]}
 			,{"Name":"phnode","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HUIANODE","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]}},"Attrs":["In","Out"]}
 		]
 	}
@@ -19164,7 +19164,7 @@
 		,"Platform":"windows5.1.2600"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"pvar","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"pvar","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In","Out"]}
 			,{"Name":"phobj","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HUIAPATTERNOBJECT","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]}},"Attrs":["In","Out"]}
 		]
 	}
@@ -19180,7 +19180,7 @@
 		,"Platform":"windows5.1.2600"
 		,"Attrs":[]
 		,"Params":[
-			{"Name":"pvar","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In","Out"]}
+			{"Name":"pvar","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In","Out"]}
 			,{"Name":"phtextrange","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HUIATEXTRANGE","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]}},"Attrs":["In","Out"]}
 		]
 	}
@@ -19213,7 +19213,7 @@
 		,"Params":[
 			{"Name":"hnode","Type":{"Kind":"ApiRef","Name":"HUIANODE","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
 			,{"Name":"propertyId","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-			,{"Name":"pValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"pValue","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In","Out"]}
 		]
 	}
 	,{
@@ -19496,8 +19496,8 @@
 		,"Params":[
 			{"Name":"pProvider","Type":{"Kind":"ApiRef","Name":"IRawElementProviderSimple","TargetKind":"Com","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
 			,{"Name":"id","Type":{"Kind":"ApiRef","Name":"UIA_PROPERTY_ID","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
-			,{"Name":"oldValue","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
-			,{"Name":"newValue","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+			,{"Name":"oldValue","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
+			,{"Name":"newValue","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 		]
 	}
 	,{
@@ -20220,7 +20220,7 @@
 		,"Params":[
 			{"Name":"hobj","Type":{"Kind":"ApiRef","Name":"HUIATEXTRANGE","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
 			,{"Name":"attributeId","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-			,{"Name":"pRetVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["In","Out"]}
+			,{"Name":"pRetVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["In","Out"]}
 		]
 	}
 	,{
@@ -20237,7 +20237,7 @@
 		,"Params":[
 			{"Name":"hobj","Type":{"Kind":"ApiRef","Name":"HUIATEXTRANGE","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
 			,{"Name":"attributeId","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-			,{"Name":"val","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+			,{"Name":"val","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 			,{"Name":"backward","Type":{"Kind":"ApiRef","Name":"BOOL","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pRetVal","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HUIATEXTRANGE","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]}},"Attrs":["In","Out"]}
 		]
@@ -20457,7 +20457,7 @@
 			{"Name":"hobj","Type":{"Kind":"ApiRef","Name":"HUIAPATTERNOBJECT","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
 			,{"Name":"hnodeStartAfter","Type":{"Kind":"ApiRef","Name":"HUIANODE","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
 			,{"Name":"propertyId","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
-			,{"Name":"value","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]},"Attrs":["In"]}
+			,{"Name":"value","Type":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]},"Attrs":["In"]}
 			,{"Name":"pFound","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HUIANODE","TargetKind":"Default","Api":"UI.Accessibility","Parents":[]}},"Attrs":["In","Out"]}
 		]
 	}
@@ -20667,7 +20667,7 @@
 			{"Name":"pProvider","Type":{"Kind":"ApiRef","Name":"IRawElementProviderSimple","TargetKind":"Com","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
 			,{"Name":"dwFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"ppAccessible","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"IAccessible","TargetKind":"Com","Api":"UI.Accessibility","Parents":[]}},"Attrs":["Out"]}
-			,{"Name":"pvarChild","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Com","Parents":[]}},"Attrs":["Out"]}
+			,{"Name":"pvarChild","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"VARIANT","TargetKind":"Default","Api":"System.Variant","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{
@@ -20829,7 +20829,7 @@
 		,"Params":[
 			{"Name":"eventMin","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"eventMax","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
-			,{"Name":"hmodWinEventProc","Type":{"Kind":"ApiRef","Name":"HINSTANCE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
+			,{"Name":"hmodWinEventProc","Type":{"Kind":"ApiRef","Name":"HMODULE","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In","Optional"]}
 			,{"Name":"pfnWinEventProc","Type":{"Kind":"ApiRef","Name":"WINEVENTPROC","TargetKind":"FunctionPointer","Api":"UI.Accessibility","Parents":[]},"Attrs":["In"]}
 			,{"Name":"idProcess","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"idThread","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}

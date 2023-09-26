@@ -1780,13 +1780,6 @@
 		,"Attrs":[]
 	}
 	,{
-		"Name":"IME_SYSINFO_WOW16"
-		,"Type":{"Kind":"Native","Name":"UInt32"}
-		,"ValueType":"UInt32"
-		,"Value":2
-		,"Attrs":[]
-	}
-	,{
 		"Name":"INIT_STATUSWNDPOS"
 		,"Type":{"Kind":"Native","Name":"UInt32"}
 		,"ValueType":"UInt32"
@@ -4480,7 +4473,7 @@
 			,{"Name":"dwSelection","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwPageStart","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwPageSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"dwOffset","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			,{"Name":"dwOffset","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -5746,7 +5739,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"uMsgCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"TransMsg","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"TRANSMSG","TargetKind":"Default","Api":"UI.Input.Ime","Parents":[]}},"Attrs":[]}
+			,{"Name":"TransMsg","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"TRANSMSG","TargetKind":"Default","Api":"UI.Input.Ime","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -5867,7 +5860,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"uCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"lpwstr","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+			,{"Name":"lpwstr","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -5896,7 +5889,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"uCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"imeItem","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"IMEITEM","TargetKind":"Default","Api":"UI.Input.Ime","Parents":[]}},"Attrs":[]}
+			,{"Name":"imeItem","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"IMEITEM","TargetKind":"Default","Api":"UI.Input.Ime","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -5925,7 +5918,7 @@
 		,"Fields":[
 			{"Name":"dwSize","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"dwType","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"dwData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			,{"Name":"dwData","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -5943,7 +5936,7 @@
 			,{"Name":"fInfoMask","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"iSelIndex","Type":{"Kind":"Native","Name":"Int32"},"Attrs":[]}
 			,{"Name":"uCount","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"lpwstr","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+			,{"Name":"lpwstr","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -6167,7 +6160,7 @@
 				,"Attrs":[]
 				,"Params":[
 					{"Name":"pIImePadApplet","Type":{"Kind":"ApiRef","Name":"IImePadApplet","TargetKind":"Com","Api":"UI.Input.Ime","Parents":[]},"Attrs":["In"]}
-					,{"Name":"reqId","Type":{"Kind":"ApiRef","Name":"IME_PAD_REQUEST_FLAGS","TargetKind":"Default","Api":"UI.Input.Ime","Parents":[]},"Attrs":["In"]}
+					,{"Name":"reqId","Type":{"Kind":"Native","Name":"Int32"},"Attrs":["In"]}
 					,{"Name":"wParam","Type":{"Kind":"ApiRef","Name":"WPARAM","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 					,{"Name":"lParam","Type":{"Kind":"ApiRef","Name":"LPARAM","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":["In"]}
 				]
@@ -6213,13 +6206,6 @@
 				]
 			}
 		]
-	}
-	,{
-		"Name":"CActiveIMM"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"ComClassID"
-		,"Guid":"4955dd33-b159-11d0-8fcf-00aa006bcc59"
 	}
 	,{
 		"Name":"IEnumRegisterWordA"
@@ -9429,6 +9415,13 @@
 			}
 		]
 	}
+	,{
+		"Name":"CActiveIMM"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"ComClassID"
+		,"Guid":"4955dd33-b159-11d0-8fcf-00aa006bcc59"
+	}
 ]
 
 ,"Functions":[
@@ -10536,7 +10529,7 @@
 			{"Name":"param0","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":["In"]}
 			,{"Name":"lpuModifiers","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
 			,{"Name":"lpuVKey","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["Out"]}
-			,{"Name":"phKL","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"IntPtr"}},"Attrs":["Out"]}
+			,{"Name":"phKL","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"HKL","TargetKind":"Default","Api":"UI.TextServices","Parents":[]}},"Attrs":["Out"]}
 		]
 	}
 	,{

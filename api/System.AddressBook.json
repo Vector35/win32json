@@ -1531,6 +1531,15 @@
 
 ,"Types":[
 	{
+		"Name":"LPWABACTIONITEM"
+		,"Architectures":[]
+		,"Platform":null
+		,"Kind":"NativeTypedef"
+		,"AlsoUsableFor":null
+		,"Def":{"Kind":"Native","Name":"IntPtr"}
+		,"FreeFunc":null
+	}
+	,{
 		"Name":"ENTRYID"
 		,"Architectures":[]
 		,"Platform":null
@@ -1539,7 +1548,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"abFlags","Type":{"Kind":"Array","Shape":{"Size":4},"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
-			,{"Name":"ab","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"ab","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -1566,7 +1575,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"cValues","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"aulPropTag","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			,{"Name":"aulPropTag","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -1650,7 +1659,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"cValues","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"lpli","Type":{"Kind":"PointerTo","Child":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]}},"Attrs":[]}
+			,{"Name":"lpli","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Int64"}},"Attrs":[]}
 		]
 		,"NestedTypes":[
 		]
@@ -1774,7 +1783,7 @@
 			,{"Name":"bin","Type":{"Kind":"ApiRef","Name":"SBinary","TargetKind":"Default","Api":"System.AddressBook","Parents":[]},"Attrs":[]}
 			,{"Name":"lpszW","Type":{"Kind":"ApiRef","Name":"PWSTR","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
 			,{"Name":"lpguid","Type":{"Kind":"PointerTo","Child":{"Kind":"Native","Name":"Guid"}},"Attrs":[]}
-			,{"Name":"li","Type":{"Kind":"ApiRef","Name":"LARGE_INTEGER","TargetKind":"Default","Api":"Foundation","Parents":[]},"Attrs":[]}
+			,{"Name":"li","Type":{"Kind":"Native","Name":"Int64"},"Attrs":[]}
 			,{"Name":"MVi","Type":{"Kind":"ApiRef","Name":"SShortArray","TargetKind":"Default","Api":"System.AddressBook","Parents":[]},"Attrs":[]}
 			,{"Name":"MVl","Type":{"Kind":"ApiRef","Name":"SLongArray","TargetKind":"Default","Api":"System.AddressBook","Parents":[]},"Attrs":[]}
 			,{"Name":"MVflt","Type":{"Kind":"ApiRef","Name":"SRealArray","TargetKind":"Default","Api":"System.AddressBook","Parents":[]},"Attrs":[]}
@@ -1832,7 +1841,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"cProblem","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"aProblem","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"SPropProblem","TargetKind":"Default","Api":"System.AddressBook","Parents":[]}},"Attrs":[]}
+			,{"Name":"aProblem","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"SPropProblem","TargetKind":"Default","Api":"System.AddressBook","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -1846,7 +1855,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"cb","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"abEntry","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"abEntry","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -1861,7 +1870,7 @@
 		,"Fields":[
 			{"Name":"cEntries","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"cbEntries","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"abEntries","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"abEntries","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -1875,7 +1884,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"cb","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"ab","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"ab","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -1890,7 +1899,7 @@
 		,"Fields":[
 			{"Name":"cMTSIDs","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"cbMTSIDs","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"abMTSIDs","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"abMTSIDs","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -1919,7 +1928,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"cEntries","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"aEntries","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"ADRENTRY","TargetKind":"Default","Api":"System.AddressBook","Parents":[]}},"Attrs":[]}
+			,{"Name":"aEntries","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"ADRENTRY","TargetKind":"Default","Api":"System.AddressBook","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -1948,7 +1957,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"cRows","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"aRow","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"SRow","TargetKind":"Default","Api":"System.AddressBook","Parents":[]}},"Attrs":[]}
+			,{"Name":"aRow","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"SRow","TargetKind":"Default","Api":"System.AddressBook","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -2540,7 +2549,7 @@
 			{"Name":"cSorts","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"cCategories","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
 			,{"Name":"cExpanded","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"aSort","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"SSortOrder","TargetKind":"Default","Api":"System.AddressBook","Parents":[]}},"Attrs":[]}
+			,{"Name":"aSort","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"ApiRef","Name":"SSortOrder","TargetKind":"Default","Api":"System.AddressBook","Parents":[]}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -3294,7 +3303,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"cFlags","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"ulFlag","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":[]}
+			,{"Name":"ulFlag","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"UInt32"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
@@ -5152,18 +5161,6 @@
 		]
 	}
 	,{
-		"Name":"_WABACTIONITEM"
-		,"Architectures":[]
-		,"Platform":null
-		,"Kind":"Struct"
-		,"Size":0
-		,"PackingSize":0
-		,"Fields":[
-		]
-		,"NestedTypes":[
-		]
-	}
-	,{
 		"Name":"IWABObject"
 		,"Architectures":[]
 		,"Platform":"windows5.0"
@@ -5563,7 +5560,7 @@
 		,"PackingSize":0
 		,"Fields":[
 			{"Name":"cb","Type":{"Kind":"Native","Name":"UInt32"},"Attrs":[]}
-			,{"Name":"ab","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":[]}
+			,{"Name":"ab","Type":{"Kind":"Array","Shape":null,"Child":{"Kind":"Native","Name":"Byte"}},"Attrs":["FlexibleArray"]}
 		]
 		,"NestedTypes":[
 		]
